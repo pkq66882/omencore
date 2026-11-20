@@ -163,7 +163,16 @@ namespace OmenCore.ViewModels
         public bool IsSystemControlLoaded => _systemControl != null;
         public SystemControlViewModel? LoadedSystemControl => _systemControl;
         public bool IsGpuPowerTrayLikelyAvailable => DetectedCapabilities?.ShowGpuPowerBoost ?? true;
-        public string RpmReadbackLabel => Hardware.RpmReadbackLabel.Describe(DetectedCapabilities?.ModelConfig?.SupportsRpmReadback ?? true, FanTelemetry?.Select(t => t.RpmSource));
+        public string RpmReadbackLabel
+        {
+            get
+            {
+                var label = Hardware.RpmReadbackLabel.Describe(DetectedCapabilities?.ModelConfig?.SupportsRpmReadback ?? true, FanTelemetry?.Select(t => t.RpmSource));
+                if (label == "✓ Supported") return Strings.DiagnosticsView_Supported;
+                if (label == "✗ Estimated from fan level") return Strings.DiagnosticsView_EstimatedFromFanLevel;
+                return label;
+            }
+        }
         public string PowerLimitReadbackLabel => Hardware.PowerLimitReadbackLabel.Describe(DetectedCapabilities?.ModelConfig?.SupportsPowerLimits ?? false, _systemControl?.CpuPowerLimitsStatus?.StartsWith("MSR package limits unavailable", StringComparison.Ordinal) == true);
 
         public SystemControlViewModel? SystemControl

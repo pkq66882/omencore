@@ -510,7 +510,7 @@ namespace OmenCore.Controls
                     ThermalStatusValue.Text = GetThermalStatus(avgTemp);
                     ThermalStatusValue.Foreground = GetTemperatureBrush(avgTemp);
                 }
-                if (ThermalEfficiency != null) ThermalEfficiency.Text = $"Fan: {CalculateFanEfficiency(sample):F0}% efficient";
+                if (ThermalEfficiency != null) ThermalEfficiency.Text = string.Format(Strings.Monitor_FanEfficientFormat, CalculateFanEfficiency(sample).ToString("F0"));
 
 
             }
@@ -751,34 +751,34 @@ namespace OmenCore.Controls
 
         private string GetBatteryHealthStatus(double percentage)
         {
-            if (percentage >= 90) return "Excellent";
-            if (percentage >= 80) return "Good";
-            if (percentage >= 70) return "Fair";
-            return "Poor";
+            if (percentage >= 90) return Strings.Monitor_QualityExcellent;
+            if (percentage >= 80) return Strings.Monitor_QualityGood;
+            if (percentage >= 70) return Strings.Monitor_QualityFair;
+            return Strings.Monitor_QualityPoor;
         }
 
         private string GetTemperatureStatus(double temperature)
         {
-            if (temperature < 60) return "Normal";
-            if (temperature < 80) return "Warm";
-            if (temperature < 90) return "Hot";
-            return "Critical";
+            if (temperature < 60) return Strings.Monitor_TempNormal;
+            if (temperature < 80) return Strings.Monitor_TempWarm;
+            if (temperature < 90) return Strings.Monitor_TempHot;
+            return Strings.Monitor_TempCritical;
         }
 
         private string GetEfficiencyRating(double efficiency)
         {
-            if (efficiency >= 85) return "Excellent";
-            if (efficiency >= 75) return "Good";
-            if (efficiency >= 65) return "Fair";
-            return "Poor";
+            if (efficiency >= 85) return Strings.Monitor_QualityExcellent;
+            if (efficiency >= 75) return Strings.Monitor_QualityGood;
+            if (efficiency >= 65) return Strings.Monitor_QualityFair;
+            return Strings.Monitor_QualityPoor;
         }
 
         private string GetThermalStatus(double avgTemp)
         {
-            if (avgTemp < 50) return "Cool";
-            if (avgTemp < 65) return "Optimal";
-            if (avgTemp < 80) return "Warm";
-            return "Hot";
+            if (avgTemp < 50) return Strings.Monitor_ThermalCool;
+            if (avgTemp < 65) return Strings.Monitor_ThermalOptimal;
+            if (avgTemp < 80) return Strings.Monitor_TempWarm;
+            return Strings.Monitor_TempHot;
         }
 
         private async Task RefreshAllChartsAsync()
@@ -940,7 +940,7 @@ namespace OmenCore.Controls
             // Enhanced stats with more information
             var avgValue = data.Average(p => p.Value);
             var trend = data.Count > 10 ? data[data.Count - 1].Value - data[data.Count - 10].Value : 0;
-            var trendLabel = Math.Abs(trend) < 0.1 ? "flat" : trend > 0 ? "up" : "down";
+            var trendLabel = Math.Abs(trend) < 0.1 ? Strings.Monitor_TrendFlat : trend > 0 ? Strings.Monitor_TrendUp : Strings.Monitor_TrendDown;
             
             statsBlock.Text = string.Format(Strings.HardwareMonitoringDashboard_StatsFormat, minValue.ToString("F1"), maxValue.ToString("F1"), avgValue.ToString("F1"), data.Count, unit, trendLabel, trend.ToString("+0.0;-0.0;0.0"));
             statsBlock.Foreground = ChartMutedTextBrush;

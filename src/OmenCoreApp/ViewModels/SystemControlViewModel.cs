@@ -396,9 +396,9 @@ namespace OmenCore.ViewModels
         public string UndervoltSecondChannelLabel => IsAmdCpu ? "iGPU" : "Cache";
 
         /// <summary>Header on the second offset slider. "L3 Cache" is not what AMD writes here.</summary>
-        public string UndervoltSecondChannelHeader => IsAmdCpu ? "IGPU OFFSET" : "CACHE OFFSET";
+        public string UndervoltSecondChannelHeader => IsAmdCpu ? Strings.SystemControlViewModel_IgpuOffset : Strings.SystemControlViewModel_CacheOffset;
 
-        public string UndervoltSecondChannelSubtitle => IsAmdCpu ? "Radeon graphics" : "L3 Cache";
+        public string UndervoltSecondChannelSubtitle => IsAmdCpu ? Strings.SystemControlViewModel_RadeonGraphics : Strings.SystemControlViewModel_L3Cache;
 
         public string UndervoltRequestedChipText =>
             $"Requested: Core {RequestedCoreOffset:+0;-0;0} mV | {UndervoltSecondChannelLabel} {RequestedCacheOffset:+0;-0;0} mV";
@@ -2597,7 +2597,7 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string CurrentPl1Text => $"Current: {CurrentPl1Watts:F0}W";
+        public string CurrentPl1Text => string.Format(Strings.SystemControlViewModel_CurrentFormat, CurrentPl1Watts.ToString("F0"));
 
         private double _currentPl2Watts;
         public double CurrentPl2Watts
@@ -2614,7 +2614,7 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string CurrentPl2Text => $"Current: {CurrentPl2Watts:F0}W";
+        public string CurrentPl2Text => string.Format(Strings.SystemControlViewModel_CurrentFormat, CurrentPl2Watts.ToString("F0"));
 
         public string CpuPl1Description => "Sustained power limit (PL1) - Long-term sustained TDP";
         public string CpuPl2Description => "Burst power limit (PL2) - Short-term turbo boost power";

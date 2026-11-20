@@ -5176,4 +5176,13 @@
   <data name="TempSourceDiag_CheckSources" xml:space="preserve">
     <value>检查温度来源</value>
   </data>
+  <data name="Monitor_FanEfficientFormat" xml:space="preserve">
+    <value>风扇: {0}% 效率</value>
+  </data>
+  <data name="Monitor_QualityExcellent" xml:space="preserve">
+    <value>优秀</value>
+  </data>
+  <data name="Monitor_TrendFlat" xml:space="preserve">
+    <value>平稳</value>
+  </data>
 </root>

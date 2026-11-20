@@ -2021,5 +2021,50 @@ namespace OmenCore.Localization
 
     // Auto-extracted literals from TuningView.xaml
 
+    // Auto-extracted literals from 
+    public static string DashboardViewModel_MonitoringSourceSelfSustaining => Get(nameof(DashboardViewModel_MonitoringSourceSelfSustaining));
+    public static string MainViewModel_RpmReadbackLabel => Get(nameof(MainViewModel_RpmReadbackLabel));
+    public static string Monitor_FanEfficientFormat => Get(nameof(Monitor_FanEfficientFormat));
+    public static string Monitor_QualityExcellent => Get(nameof(Monitor_QualityExcellent));
+    public static string Monitor_TrendFlat => Get(nameof(Monitor_TrendFlat));
+    public static string SystemControlViewModel_CurrentPl1 => Get(nameof(SystemControlViewModel_CurrentPl1));
+    public static string SystemControlViewModel_CurrentPl2 => Get(nameof(SystemControlViewModel_CurrentPl2));
+    public static string SystemControlViewModel_SecondChannelHeaderCache => Get(nameof(SystemControlViewModel_SecondChannelHeaderCache));
+    public static string SystemControlViewModel_SecondChannelSubtitleCache => Get(nameof(SystemControlViewModel_SecondChannelSubtitleCache));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    public static string DashboardViewModel_SourceWmiNvapiSelfSustaining => Get(nameof(DashboardViewModel_SourceWmiNvapiSelfSustaining));
+    public static string DashboardViewModel_SourceWmiSelfSustaining => Get(nameof(DashboardViewModel_SourceWmiSelfSustaining));
+    public static string DiagnosticsView_EstimatedFromFanLevel => Get(nameof(DiagnosticsView_EstimatedFromFanLevel));
+    public static string Monitor_QualityFair => Get(nameof(Monitor_QualityFair));
+    public static string Monitor_QualityGood => Get(nameof(Monitor_QualityGood));
+    public static string Monitor_QualityPoor => Get(nameof(Monitor_QualityPoor));
+    public static string Monitor_TempCritical => Get(nameof(Monitor_TempCritical));
+    public static string Monitor_TempHot => Get(nameof(Monitor_TempHot));
+    public static string Monitor_TempNormal => Get(nameof(Monitor_TempNormal));
+    public static string Monitor_TempWarm => Get(nameof(Monitor_TempWarm));
+    public static string Monitor_ThermalCool => Get(nameof(Monitor_ThermalCool));
+    public static string Monitor_ThermalOptimal => Get(nameof(Monitor_ThermalOptimal));
+    public static string Monitor_TrendDown => Get(nameof(Monitor_TrendDown));
+    public static string Monitor_TrendUp => Get(nameof(Monitor_TrendUp));
+    public static string SystemControlViewModel_CacheOffset => Get(nameof(SystemControlViewModel_CacheOffset));
+    public static string SystemControlViewModel_CurrentFormat => Get(nameof(SystemControlViewModel_CurrentFormat));
+    public static string SystemControlViewModel_IgpuOffset => Get(nameof(SystemControlViewModel_IgpuOffset));
+    public static string SystemControlViewModel_L3Cache => Get(nameof(SystemControlViewModel_L3Cache));
+    public static string SystemControlViewModel_RadeonGraphics => Get(nameof(SystemControlViewModel_RadeonGraphics));
+
     }
 }

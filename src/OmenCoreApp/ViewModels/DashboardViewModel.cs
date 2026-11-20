@@ -938,7 +938,9 @@ namespace OmenCore.ViewModels
         /// <summary>
         /// Monitoring source label for UI display.
         /// </summary>
-        public string MonitoringSourceText => _monitoringService.MonitoringSource;
+        public string MonitoringSourceText => (_monitoringService.MonitoringSource ?? string.Empty)
+            .Replace("WMI BIOS + NVAPI (Self-Sustaining)", Strings.DashboardViewModel_SourceWmiNvapiSelfSustaining)
+            .Replace("WMI BIOS (Self-Sustaining)", Strings.DashboardViewModel_SourceWmiSelfSustaining);
         
         /// <summary>
         /// Color for health status indicator.
