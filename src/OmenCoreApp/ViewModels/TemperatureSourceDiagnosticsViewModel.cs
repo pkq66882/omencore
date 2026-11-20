@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -45,7 +46,7 @@ namespace OmenCore.ViewModels
 
         public ICommand RunComparisonCommand { get; }
 
-        public string RunButtonLabel => IsRunning ? "Checking..." : "Check Temperature Sources";
+        public string RunButtonLabel => IsRunning ? Strings.TempSourceDiag_Checking : Strings.TempSourceDiag_CheckSources;
 
         public TemperatureSourceDiagnosticsViewModel(ICpuTemperatureSourceComparer? comparer, LoggingService logging)
         {

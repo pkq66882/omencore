@@ -66,8 +66,17 @@ namespace OmenCoreApp.Tests.Services
         [Fact]
         public void UnavailableMessage_ForBacklightOnly_DoesNotReadLikeAFault()
         {
-            LightingViewModel.BuildKeyboardUnavailableMessage(true).Should().Contain("single-colour").And.Contain("Fn");
-            LightingViewModel.BuildKeyboardUnavailableMessage(false).Should().Contain("not available");
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                LightingViewModel.BuildKeyboardUnavailableMessage(true).Should().Contain("single-colour").And.Contain("Fn");
+                LightingViewModel.BuildKeyboardUnavailableMessage(false).Should().Contain("not available");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
     }
 }

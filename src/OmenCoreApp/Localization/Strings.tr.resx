@@ -5056,4 +5056,124 @@
   <data name="SystemControlViewModel_ConflictNone" xml:space="preserve">
     <value>yok</value>
   </data>
+  <data name="SettingsViewModel_AuditFailed" xml:space="preserve">
+    <value>Denetim başarısız: {0}</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceHigh" xml:space="preserve">
+    <value>Yüksek</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceLow" xml:space="preserve">
+    <value>Düşük</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceMedium" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="SettingsViewModel_NoRecentResumeActivity" xml:space="preserve">
+    <value>Yakın zamanda devam etme etkinliği yok</value>
+  </data>
+  <data name="SettingsViewModel_NoRecentResumeEvent" xml:space="preserve">
+    <value>Yakın zamanda devam etme olayı yok</value>
+  </data>
+  <data name="SettingsViewModel_NoTimelineRecorded" xml:space="preserve">
+    <value>Henüz zaman çizelgesi kaydedilmedi.</value>
+  </data>
+  <data name="SettingsViewModel_NoTimelineSummary" xml:space="preserve">
+    <value>Askıya alma/devam etme kurtarma zaman çizelgesi henüz kaydedilmedi.</value>
+  </data>
+  <data name="SettingsViewModel_SourceDefaultFallback" xml:space="preserve">
+    <value>Varsayılan geri dönüş</value>
+  </data>
+  <data name="SettingsViewModel_SourceNoDatabaseMatch" xml:space="preserve">
+    <value>Veritabanı eşleşmesi yok</value>
+  </data>
+  <data name="SettingsViewModel_StandaloneFully" xml:space="preserve">
+    <value>OmenCore, HP bağımlılığı olmadan tamamen bağımsız çalışıyor</value>
+  </data>
+  <data name="SettingsViewModel_StandaloneOptionalDegradation" xml:space="preserve">
+    <value>İsteğe bağlı düşürme: tamamen bağımsız çalışıyor, ancak {0} isteğe bağlı bileşen kullanılamıyor (OGH ve HP-SEU temel çalışma için gerekli değil)</value>
+  </data>
+  <data name="SettingsViewModel_StatusDegraded" xml:space="preserve">
+    <value>Düşürülmüş</value>
+  </data>
+  <data name="SettingsViewModel_StatusError" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="SettingsViewModel_StatusHealthy" xml:space="preserve">
+    <value>Sağlıklı</value>
+  </data>
+  <data name="SettingsViewModel_ValueUnknown" xml:space="preserve">
+    <value>Bilinmiyor</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardNoMatch" xml:space="preserve">
+    <value>Klavye profili geçerli ProductId veya WMI modelinden eşleştirilemedi.</value>
+  </data>
+  <data name="SettingsViewModel_WarnNoModelMatch" xml:space="preserve">
+    <value>Birebir model veya aile girdisi eşleşmedi; varsayılan yetenekler kullanılıyor.</value>
+  </data>
+  <data name="SystemControlViewModel_NoRecovery" xml:space="preserve">
+    <value>Bu oturumda başlangıç geri yüklemesi yok</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiReady" xml:space="preserve">
+    <value>NVIDIA API hazır</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiUnavailable" xml:space="preserve">
+    <value>NVIDIA API kullanılamıyor</value>
+  </data>
+  <data name="SystemControlViewModel_RecoveryApplied" xml:space="preserve">
+    <value>Başlangıç geri yüklemesi uygulandı</value>
+  </data>
+  <data name="DashboardViewModel_HealthDegraded" xml:space="preserve">
+    <value>⚠ Düşürülmüş</value>
+  </data>
+  <data name="DashboardViewModel_HealthHealthy" xml:space="preserve">
+    <value>✓ Sağlıklı</value>
+  </data>
+  <data name="DashboardViewModel_HealthStale" xml:space="preserve">
+    <value>⛔ Bayat</value>
+  </data>
+  <data name="DashboardViewModel_HealthUnknown" xml:space="preserve">
+    <value>? Bilinmiyor</value>
+  </data>
+  <data name="DashboardViewModel_JustNow" xml:space="preserve">
+    <value>Az önce</value>
+  </data>
+  <data name="DashboardViewModel_MinutesAgo" xml:space="preserve">
+    <value>{0} dk önce</value>
+  </data>
+  <data name="DashboardViewModel_NoData" xml:space="preserve">
+    <value>Veri yok</value>
+  </data>
+  <data name="DashboardViewModel_SecondsAgo" xml:space="preserve">
+    <value>{0} sn önce</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StatsFormat" xml:space="preserve">
+    <value>{0}-{1} {4} | Ort {2} {4} | {3} örnek | Eğilim {5} {6} {4}</value>
+  </data>
+  <data name="LightingViewModel_KeyboardLightingUnavailable" xml:space="preserve">
+    <value>Bu sistemde klavye aydınlatma kontrolü kullanılamıyor.</value>
+  </data>
+  <data name="MainViewModel_OverrideActive" xml:space="preserve">
+    <value>Model geçersiz kılma etkin (GitHub #78): {0} için çalışan CPU sensörü öncelikli</value>
+  </data>
+  <data name="MainViewModel_OverrideInactive" xml:space="preserve">
+    <value>Model geçersiz kılma etkin değil: standart WMI/ACPI CPU sıcaklık yolu</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_GameAwareOff" xml:space="preserve">
+    <value>Kapalı: Oyun ön plandayken Akıllı Temizlik tam güvenli temizlik profilini çalıştırabilir.</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_GameAwareOn" xml:space="preserve">
+    <value>Açık: Tam ekran ve çerçevesiz oyunlarda bellek baskısı kritik değilken hafif çalışma kümesi kırpma yapılır.</value>
+  </data>
+  <data name="SystemControlViewModel_ApplyCurveOptimizer" xml:space="preserve">
+    <value>Curve Optimizer Uygula</value>
+  </data>
+  <data name="SystemControlViewModel_ApplyUndervolt" xml:space="preserve">
+    <value>Undervolt Uygula</value>
+  </data>
+  <data name="TempSourceDiag_Checking" xml:space="preserve">
+    <value>Denetleniyor…</value>
+  </data>
+  <data name="TempSourceDiag_CheckSources" xml:space="preserve">
+    <value>Sıcaklık kaynaklarını denetle</value>
+  </data>
 </root>

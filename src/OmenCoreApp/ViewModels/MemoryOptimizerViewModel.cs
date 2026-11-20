@@ -590,9 +590,8 @@ namespace OmenCore.ViewModels
         }
 
         public string GameAwareQuietWindowSummary => GameAwareQuietWindowEnabled
-            ? "On: fullscreen and borderless games get light working-set trims unless memory pressure is critical."
-            : "Off: Smart Clean can run the full safe cleanup profile while a game is in the foreground.";
-
+            ? Strings.MemoryOptimizerViewModel_GameAwareOn
+            : Strings.MemoryOptimizerViewModel_GameAwareOff;
         public bool MemoryCompressionSupported
         {
             get => _memoryCompressionSupported;

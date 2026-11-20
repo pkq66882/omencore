@@ -272,7 +272,7 @@ namespace OmenCore.ViewModels
 
         public string UndervoltSectionTitle => IsAmdCpu ? Strings.SystemControlViewModel_CurveOptimizerTitle : Strings.SystemControlViewModel_UndervoltingTitle;
 
-        public string UndervoltActionLabel => IsAmdCpu ? "Apply Curve Optimizer" : "Apply Undervolt";
+        public string UndervoltActionLabel => IsAmdCpu ? Strings.SystemControlViewModel_ApplyCurveOptimizer : Strings.SystemControlViewModel_ApplyUndervolt;
 
         public string UndervoltGuidanceText => IsAmdCpu
             ? "AMD uses Curve Optimizer (CO) instead of direct mV offset writes. More negative values are stronger CO undervolt."
@@ -1232,8 +1232,8 @@ namespace OmenCore.ViewModels
             {
                 // The rollback status has its own line under this one on the Tuning page; repeating it here printed
                 // "Safe rollback has not been run this session" twice.
-                var startupRecovery = StartupRecoveryNoticeVisible ? "Startup recovery applied" : "No startup recovery this session";
-                var gpuBackend = GpuNvapiAvailable ? "NVIDIA API ready" : "NVIDIA API not available";
+                var startupRecovery = StartupRecoveryNoticeVisible ? Strings.SystemControlViewModel_RecoveryApplied : Strings.SystemControlViewModel_NoRecovery;
+                var gpuBackend = GpuNvapiAvailable ? Strings.SystemControlViewModel_NvapiReady : Strings.SystemControlViewModel_NvapiUnavailable;
                 return $"{startupRecovery}  ·  {gpuBackend}";
             }
         }

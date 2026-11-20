@@ -905,10 +905,10 @@ namespace OmenCore.ViewModels
         /// </summary>
         public string MonitoringHealthStatusText => _monitoringService.HealthStatus switch
         {
-            MonitoringHealthStatus.Healthy => "✓ Healthy",
-            MonitoringHealthStatus.Degraded => "⚠ Degraded",
-            MonitoringHealthStatus.Stale => "⛔ Stale",
-            _ => "? Unknown"
+            MonitoringHealthStatus.Healthy => Strings.DashboardViewModel_HealthHealthy,
+            MonitoringHealthStatus.Degraded => Strings.DashboardViewModel_HealthDegraded,
+            MonitoringHealthStatus.Stale => Strings.DashboardViewModel_HealthStale,
+            _ => Strings.DashboardViewModel_HealthUnknown
         };
 
         public string MonitoringVisualState => _monitoringService.HealthStatus switch
@@ -991,10 +991,10 @@ namespace OmenCore.ViewModels
             get
             {
                 var age = _monitoringService.LastSampleAge;
-                if (age == TimeSpan.MaxValue) return "No data";
-                if (age.TotalSeconds < 2) return "Just now";
-                if (age.TotalSeconds < 60) return $"{age.TotalSeconds:F0}s ago";
-                return $"{age.TotalMinutes:F0}m ago";
+                if (age == TimeSpan.MaxValue) return Strings.DashboardViewModel_NoData;
+                if (age.TotalSeconds < 2) return Strings.DashboardViewModel_JustNow;
+                if (age.TotalSeconds < 60) return string.Format(Strings.DashboardViewModel_SecondsAgo, age.TotalSeconds.ToString("F0"));
+                return string.Format(Strings.DashboardViewModel_MinutesAgo, age.TotalMinutes.ToString("F0"));
             }
         }
         

@@ -1751,13 +1751,13 @@
     <value>风扇以最大转速运转，不受当前性能方案影响</value>
   </data>
   <data name="GeneralView_FanModeProfileControlledAutomatic" xml:space="preserve">
-    <value>风扇模式：跟随性能方案（自动）</value>
+    <value>风扇模式：智能调速（自动）</value>
   </data>
   <data name="GeneralView_FansFollowTheActivePerformanceProfileBiosA" xml:space="preserve">
     <value>风扇跟随当前性能方案 / BIOS 自动曲线</value>
   </data>
   <data name="GeneralView_ProfileControlledAuto" xml:space="preserve">
-    <value>跟随性能方案（自动）</value>
+    <value>智能调速（自动）</value>
   </data>
   <data name="GeneralView_FanModeCustom" xml:space="preserve">
     <value>风扇模式：自定义</value>
@@ -5055,5 +5055,125 @@
   </data>
   <data name="SystemControlViewModel_ConflictNone" xml:space="preserve">
     <value>无</value>
+  </data>
+  <data name="SettingsViewModel_AuditFailed" xml:space="preserve">
+    <value>审计失败：{0}</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceHigh" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceLow" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceMedium" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="SettingsViewModel_NoRecentResumeActivity" xml:space="preserve">
+    <value>近期无唤醒恢复活动</value>
+  </data>
+  <data name="SettingsViewModel_NoRecentResumeEvent" xml:space="preserve">
+    <value>近期无唤醒事件</value>
+  </data>
+  <data name="SettingsViewModel_NoTimelineRecorded" xml:space="preserve">
+    <value>尚未记录时间线。</value>
+  </data>
+  <data name="SettingsViewModel_NoTimelineSummary" xml:space="preserve">
+    <value>尚未记录挂起/唤醒恢复时间线。</value>
+  </data>
+  <data name="SettingsViewModel_SourceDefaultFallback" xml:space="preserve">
+    <value>默认回退</value>
+  </data>
+  <data name="SettingsViewModel_SourceNoDatabaseMatch" xml:space="preserve">
+    <value>无数据库匹配</value>
+  </data>
+  <data name="SettingsViewModel_StandaloneFully" xml:space="preserve">
+    <value>OmenCore 正在完全独立运行，无 HP 依赖</value>
+  </data>
+  <data name="SettingsViewModel_StandaloneOptionalDegradation" xml:space="preserve">
+    <value>可选降级：完全独立运行，但有 {0} 个可选组件不可用（OGH 与 HP-SEU 并非核心运行所必需）</value>
+  </data>
+  <data name="SettingsViewModel_StatusDegraded" xml:space="preserve">
+    <value>已降级</value>
+  </data>
+  <data name="SettingsViewModel_StatusError" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="SettingsViewModel_StatusHealthy" xml:space="preserve">
+    <value>健康</value>
+  </data>
+  <data name="SettingsViewModel_ValueUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardNoMatch" xml:space="preserve">
+    <value>无法从当前 ProductId 或 WMI 机型匹配键盘方案。</value>
+  </data>
+  <data name="SettingsViewModel_WarnNoModelMatch" xml:space="preserve">
+    <value>未匹配到精确的机型或系列条目；正在使用默认能力配置。</value>
+  </data>
+  <data name="SystemControlViewModel_NoRecovery" xml:space="preserve">
+    <value>本次会话无启动恢复</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiReady" xml:space="preserve">
+    <value>NVIDIA API 就绪</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiUnavailable" xml:space="preserve">
+    <value>NVIDIA API 不可用</value>
+  </data>
+  <data name="SystemControlViewModel_RecoveryApplied" xml:space="preserve">
+    <value>启动恢复已应用</value>
+  </data>
+  <data name="DashboardViewModel_HealthDegraded" xml:space="preserve">
+    <value>⚠ 已降级</value>
+  </data>
+  <data name="DashboardViewModel_HealthHealthy" xml:space="preserve">
+    <value>✓ 健康</value>
+  </data>
+  <data name="DashboardViewModel_HealthStale" xml:space="preserve">
+    <value>⛔ 过期</value>
+  </data>
+  <data name="DashboardViewModel_HealthUnknown" xml:space="preserve">
+    <value>? 未知</value>
+  </data>
+  <data name="DashboardViewModel_JustNow" xml:space="preserve">
+    <value>刚刚</value>
+  </data>
+  <data name="DashboardViewModel_MinutesAgo" xml:space="preserve">
+    <value>{0} 分钟前</value>
+  </data>
+  <data name="DashboardViewModel_NoData" xml:space="preserve">
+    <value>暂无数据</value>
+  </data>
+  <data name="DashboardViewModel_SecondsAgo" xml:space="preserve">
+    <value>{0} 秒前</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StatsFormat" xml:space="preserve">
+    <value>{0}-{1} {4} | 平均 {2} {4} | {3} 个采样 | 趋势 {5} {6} {4}</value>
+  </data>
+  <data name="LightingViewModel_KeyboardLightingUnavailable" xml:space="preserve">
+    <value>此系统上键盘灯效控制不可用。</value>
+  </data>
+  <data name="MainViewModel_OverrideActive" xml:space="preserve">
+    <value>机型覆盖已激活（GitHub #78）：工作进程 CPU 传感器优先用于 {0}</value>
+  </data>
+  <data name="MainViewModel_OverrideInactive" xml:space="preserve">
+    <value>机型覆盖未激活：标准 WMI/ACPI CPU 温度路径</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_GameAwareOff" xml:space="preserve">
+    <value>关：智能清理可在游戏处于前台时运行完整的安全清理配置。</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_GameAwareOn" xml:space="preserve">
+    <value>开：全屏和无边框窗口游戏在内存压力不紧迫时只做轻度工作集修剪。</value>
+  </data>
+  <data name="SystemControlViewModel_ApplyCurveOptimizer" xml:space="preserve">
+    <value>应用 Curve Optimizer</value>
+  </data>
+  <data name="SystemControlViewModel_ApplyUndervolt" xml:space="preserve">
+    <value>应用降压</value>
+  </data>
+  <data name="TempSourceDiag_Checking" xml:space="preserve">
+    <value>检查中…</value>
+  </data>
+  <data name="TempSourceDiag_CheckSources" xml:space="preserve">
+    <value>检查温度来源</value>
   </data>
 </root>

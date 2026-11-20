@@ -726,7 +726,7 @@ namespace OmenCore.ViewModels
 
         internal static string BuildKeyboardUnavailableMessage(bool backlightOnly) => backlightOnly
             ? "This laptop has a single-colour backlit keyboard, so there are no colours to set (the firmware and OmenCore's model database agree). Use the Fn keys to adjust brightness."
-            : "Keyboard lighting control is not available on this system.";
+            : Strings.LightingViewModel_KeyboardLightingUnavailable;
 
         public bool IsPerKeyLightingAvailable => _keyboardLightingService?.IsPerKey ?? false;
 

@@ -129,13 +129,22 @@ namespace OmenCoreApp.Tests.ViewModels
         public async Task RunButtonLabel_ReflectsRunningState()
         {
             var comparer = new FakeComparer();
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
             var vm = new TemperatureSourceDiagnosticsViewModel(comparer, _logging);
 
-            vm.RunButtonLabel.Should().Be("Check Temperature Sources");
+            try
+            {
+                vm.RunButtonLabel.Should().Be("Check Temperature Sources");
 
-            await vm.RunComparisonAsync();
+                await vm.RunComparisonAsync();
 
-            vm.RunButtonLabel.Should().Be("Check Temperature Sources", "the command completes synchronously against the fake, so it should be back to idle");
+                vm.RunButtonLabel.Should().Be("Check Temperature Sources", "the command completes synchronously against the fake, so it should be back to idle");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]

@@ -572,8 +572,8 @@ namespace OmenCore.ViewModels
         /// Monitoring diagnostics line indicating whether a model-specific CPU temperature override is active.
         /// </summary>
         public string CpuTempOverrideDiagnosticText => _wmiBiosMonitor?.IsModelCpuTempOverrideActive == true
-            ? $"Model override active (GitHub #78): worker CPU sensor prioritized for {_wmiBiosMonitor.ModelName}"
-            : "Model override inactive: standard WMI/ACPI CPU temperature path";
+            ? string.Format(Strings.MainViewModel_OverrideActive, _wmiBiosMonitor.ModelName)
+            : Strings.MainViewModel_OverrideInactive;
 
         /// <summary>
         /// Power automation service for AC/Battery profile switching.

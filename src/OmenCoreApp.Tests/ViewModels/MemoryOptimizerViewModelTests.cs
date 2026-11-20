@@ -79,8 +79,17 @@ namespace OmenCoreApp.Tests.ViewModels
                 using var logger = new LoggingService();
                 using var vm = new MemoryOptimizerViewModel(logger, configService);
 
-                vm.GameAwareQuietWindowEnabled.Should().BeFalse();
-                vm.GameAwareQuietWindowSummary.Should().Contain("full safe cleanup");
+                var original = System.Globalization.CultureInfo.CurrentUICulture;
+                System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+                try
+                {
+                    vm.GameAwareQuietWindowEnabled.Should().BeFalse();
+                    vm.GameAwareQuietWindowSummary.Should().Contain("full safe cleanup");
+                }
+                finally
+                {
+                    System.Globalization.CultureInfo.CurrentUICulture = original;
+                }
                 vm.AutoCleanCooldownMinutes.Should().Be(12);
                 vm.AutoCleanCooldownText.Should().Be("12 min");
 
@@ -89,7 +98,16 @@ namespace OmenCoreApp.Tests.ViewModels
 
                 configService.Config.MemoryGameAwareQuietWindowEnabled.Should().BeTrue();
                 configService.Config.MemoryAutoCleanCooldownMinutes.Should().Be(0);
-                vm.GameAwareQuietWindowSummary.Should().Contain("working-set trims");
+                var original2 = System.Globalization.CultureInfo.CurrentUICulture;
+                System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+                try
+                {
+                    vm.GameAwareQuietWindowSummary.Should().Contain("working-set trims");
+                }
+                finally
+                {
+                    System.Globalization.CultureInfo.CurrentUICulture = original2;
+                }
                 vm.AutoCleanCooldownText.Should().Contain("Profile default");
             }
             finally

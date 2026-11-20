@@ -1949,5 +1949,77 @@ namespace OmenCore.Localization
 
     // Auto-extracted literals from TuningView.xaml
 
+    // Auto-extracted literals from 
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+    public static string SettingsViewModel_AuditFailed => Get(nameof(SettingsViewModel_AuditFailed));
+    public static string SettingsViewModel_ConfidenceHigh => Get(nameof(SettingsViewModel_ConfidenceHigh));
+    public static string SettingsViewModel_ConfidenceLow => Get(nameof(SettingsViewModel_ConfidenceLow));
+    public static string SettingsViewModel_ConfidenceMedium => Get(nameof(SettingsViewModel_ConfidenceMedium));
+    public static string SettingsViewModel_NoRecentResumeActivity => Get(nameof(SettingsViewModel_NoRecentResumeActivity));
+    public static string SettingsViewModel_NoRecentResumeEvent => Get(nameof(SettingsViewModel_NoRecentResumeEvent));
+    public static string SettingsViewModel_NoTimelineRecorded => Get(nameof(SettingsViewModel_NoTimelineRecorded));
+    public static string SettingsViewModel_NoTimelineSummary => Get(nameof(SettingsViewModel_NoTimelineSummary));
+    public static string SettingsViewModel_SourceDefaultFallback => Get(nameof(SettingsViewModel_SourceDefaultFallback));
+    public static string SettingsViewModel_SourceNoDatabaseMatch => Get(nameof(SettingsViewModel_SourceNoDatabaseMatch));
+    public static string SettingsViewModel_StandaloneFully => Get(nameof(SettingsViewModel_StandaloneFully));
+    public static string SettingsViewModel_StandaloneOptionalDegradation => Get(nameof(SettingsViewModel_StandaloneOptionalDegradation));
+    public static string SettingsViewModel_StatusDegraded => Get(nameof(SettingsViewModel_StatusDegraded));
+    public static string SettingsViewModel_StatusError => Get(nameof(SettingsViewModel_StatusError));
+    public static string SettingsViewModel_StatusHealthy => Get(nameof(SettingsViewModel_StatusHealthy));
+    public static string SettingsViewModel_ValueUnknown => Get(nameof(SettingsViewModel_ValueUnknown));
+    public static string SettingsViewModel_WarnKeyboardNoMatch => Get(nameof(SettingsViewModel_WarnKeyboardNoMatch));
+    public static string SettingsViewModel_WarnNoModelMatch => Get(nameof(SettingsViewModel_WarnNoModelMatch));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+    public static string SystemControlViewModel_NoRecovery => Get(nameof(SystemControlViewModel_NoRecovery));
+    public static string SystemControlViewModel_NvapiReady => Get(nameof(SystemControlViewModel_NvapiReady));
+    public static string SystemControlViewModel_NvapiUnavailable => Get(nameof(SystemControlViewModel_NvapiUnavailable));
+    public static string SystemControlViewModel_RecoveryApplied => Get(nameof(SystemControlViewModel_RecoveryApplied));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+    public static string DashboardViewModel_HealthDegraded => Get(nameof(DashboardViewModel_HealthDegraded));
+    public static string DashboardViewModel_HealthHealthy => Get(nameof(DashboardViewModel_HealthHealthy));
+    public static string DashboardViewModel_HealthStale => Get(nameof(DashboardViewModel_HealthStale));
+    public static string DashboardViewModel_HealthUnknown => Get(nameof(DashboardViewModel_HealthUnknown));
+    public static string DashboardViewModel_JustNow => Get(nameof(DashboardViewModel_JustNow));
+    public static string DashboardViewModel_MinutesAgo => Get(nameof(DashboardViewModel_MinutesAgo));
+    public static string DashboardViewModel_NoData => Get(nameof(DashboardViewModel_NoData));
+    public static string DashboardViewModel_SecondsAgo => Get(nameof(DashboardViewModel_SecondsAgo));
+    public static string HardwareMonitoringDashboard_StatsFormat => Get(nameof(HardwareMonitoringDashboard_StatsFormat));
+    public static string LightingViewModel_KeyboardLightingUnavailable => Get(nameof(LightingViewModel_KeyboardLightingUnavailable));
+    public static string MainViewModel_OverrideActive => Get(nameof(MainViewModel_OverrideActive));
+    public static string MainViewModel_OverrideInactive => Get(nameof(MainViewModel_OverrideInactive));
+    public static string MemoryOptimizerViewModel_GameAwareOff => Get(nameof(MemoryOptimizerViewModel_GameAwareOff));
+    public static string MemoryOptimizerViewModel_GameAwareOn => Get(nameof(MemoryOptimizerViewModel_GameAwareOn));
+    public static string SystemControlViewModel_ApplyCurveOptimizer => Get(nameof(SystemControlViewModel_ApplyCurveOptimizer));
+    public static string SystemControlViewModel_ApplyUndervolt => Get(nameof(SystemControlViewModel_ApplyUndervolt));
+    public static string TempSourceDiag_Checking => Get(nameof(TempSourceDiag_Checking));
+    public static string TempSourceDiag_CheckSources => Get(nameof(TempSourceDiag_CheckSources));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
     }
 }

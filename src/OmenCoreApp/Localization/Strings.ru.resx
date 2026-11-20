@@ -5056,4 +5056,124 @@
   <data name="SystemControlViewModel_ConflictNone" xml:space="preserve">
     <value>нет</value>
   </data>
+  <data name="SettingsViewModel_AuditFailed" xml:space="preserve">
+    <value>Сбой аудита: {0}</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceHigh" xml:space="preserve">
+    <value>Высокая</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceLow" xml:space="preserve">
+    <value>Низкая</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceMedium" xml:space="preserve">
+    <value>Средняя</value>
+  </data>
+  <data name="SettingsViewModel_NoRecentResumeActivity" xml:space="preserve">
+    <value>Недавней активности пробуждения нет</value>
+  </data>
+  <data name="SettingsViewModel_NoRecentResumeEvent" xml:space="preserve">
+    <value>Недавних событий пробуждения нет</value>
+  </data>
+  <data name="SettingsViewModel_NoTimelineRecorded" xml:space="preserve">
+    <value>Хронология пока не записана.</value>
+  </data>
+  <data name="SettingsViewModel_NoTimelineSummary" xml:space="preserve">
+    <value>Хронология приостановки/пробуждения пока не записана.</value>
+  </data>
+  <data name="SettingsViewModel_SourceDefaultFallback" xml:space="preserve">
+    <value>Откат по умолчанию</value>
+  </data>
+  <data name="SettingsViewModel_SourceNoDatabaseMatch" xml:space="preserve">
+    <value>Нет совпадения в базе</value>
+  </data>
+  <data name="SettingsViewModel_StandaloneFully" xml:space="preserve">
+    <value>OmenCore работает полностью автономно, без зависимостей от HP</value>
+  </data>
+  <data name="SettingsViewModel_StandaloneOptionalDegradation" xml:space="preserve">
+    <value>Опциональное снижение: полностью автономная работа, но {0} необязательных компонентов недоступно (OGH и HP-SEU не требуются для базовой работы)</value>
+  </data>
+  <data name="SettingsViewModel_StatusDegraded" xml:space="preserve">
+    <value>Снижено</value>
+  </data>
+  <data name="SettingsViewModel_StatusError" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="SettingsViewModel_StatusHealthy" xml:space="preserve">
+    <value>Здорово</value>
+  </data>
+  <data name="SettingsViewModel_ValueUnknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardNoMatch" xml:space="preserve">
+    <value>Профиль клавиатуры не удалось сопоставить с текущим ProductId или моделью WMI.</value>
+  </data>
+  <data name="SettingsViewModel_WarnNoModelMatch" xml:space="preserve">
+    <value>Точное совпадение с моделью или семейством не найдено; используются возможности по умолчанию.</value>
+  </data>
+  <data name="SystemControlViewModel_NoRecovery" xml:space="preserve">
+    <value>В этом сеансе восстановления при запуске не было</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiReady" xml:space="preserve">
+    <value>NVIDIA API готов</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiUnavailable" xml:space="preserve">
+    <value>NVIDIA API недоступна</value>
+  </data>
+  <data name="SystemControlViewModel_RecoveryApplied" xml:space="preserve">
+    <value>Восстановление при запуске применено</value>
+  </data>
+  <data name="DashboardViewModel_HealthDegraded" xml:space="preserve">
+    <value>⚠ Снижено</value>
+  </data>
+  <data name="DashboardViewModel_HealthHealthy" xml:space="preserve">
+    <value>✓ Здорово</value>
+  </data>
+  <data name="DashboardViewModel_HealthStale" xml:space="preserve">
+    <value>⛔ Устарело</value>
+  </data>
+  <data name="DashboardViewModel_HealthUnknown" xml:space="preserve">
+    <value>? Неизвестно</value>
+  </data>
+  <data name="DashboardViewModel_JustNow" xml:space="preserve">
+    <value>Только что</value>
+  </data>
+  <data name="DashboardViewModel_MinutesAgo" xml:space="preserve">
+    <value>{0} мин назад</value>
+  </data>
+  <data name="DashboardViewModel_NoData" xml:space="preserve">
+    <value>Нет данных</value>
+  </data>
+  <data name="DashboardViewModel_SecondsAgo" xml:space="preserve">
+    <value>{0} с назад</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StatsFormat" xml:space="preserve">
+    <value>{0}-{1} {4} | Среднее {2} {4} | {3} замеров | Тренд {5} {6} {4}</value>
+  </data>
+  <data name="LightingViewModel_KeyboardLightingUnavailable" xml:space="preserve">
+    <value>Управление подсветкой клавиатуры на этой системе недоступно.</value>
+  </data>
+  <data name="MainViewModel_OverrideActive" xml:space="preserve">
+    <value>Переопределение модели активно (GitHub #78): приоритет датчика CPU воркера для {0}</value>
+  </data>
+  <data name="MainViewModel_OverrideInactive" xml:space="preserve">
+    <value>Переопределение модели неактивно: стандартный путь температуры CPU WMI/ACPI</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_GameAwareOff" xml:space="preserve">
+    <value>Выкл: умная очистка может выполнять полный безопасный профиль очистки, пока игра на переднем плане.</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_GameAwareOn" xml:space="preserve">
+    <value>Вкл: в полноэкранных и безрамочных играх при нехватке памяти выполняется лёгкая обрезка рабочих наборов.</value>
+  </data>
+  <data name="SystemControlViewModel_ApplyCurveOptimizer" xml:space="preserve">
+    <value>Применить Curve Optimizer</value>
+  </data>
+  <data name="SystemControlViewModel_ApplyUndervolt" xml:space="preserve">
+    <value>Применить недовольт</value>
+  </data>
+  <data name="TempSourceDiag_Checking" xml:space="preserve">
+    <value>Проверка…</value>
+  </data>
+  <data name="TempSourceDiag_CheckSources" xml:space="preserve">
+    <value>Проверить источники температуры</value>
+  </data>
 </root>

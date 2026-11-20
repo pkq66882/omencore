@@ -5060,4 +5060,124 @@
   <data name="SystemControlViewModel_ConflictNone" xml:space="preserve">
     <value>none</value>
   </data>
+  <data name="SettingsViewModel_AuditFailed" xml:space="preserve">
+    <value>Audit failed: {0}</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceHigh" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceLow" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="SettingsViewModel_ConfidenceMedium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="SettingsViewModel_NoRecentResumeActivity" xml:space="preserve">
+    <value>No recent resume activity</value>
+  </data>
+  <data name="SettingsViewModel_NoRecentResumeEvent" xml:space="preserve">
+    <value>No recent resume event</value>
+  </data>
+  <data name="SettingsViewModel_NoTimelineRecorded" xml:space="preserve">
+    <value>No timeline recorded yet.</value>
+  </data>
+  <data name="SettingsViewModel_NoTimelineSummary" xml:space="preserve">
+    <value>No suspend/resume recovery timeline recorded yet.</value>
+  </data>
+  <data name="SettingsViewModel_SourceDefaultFallback" xml:space="preserve">
+    <value>Default fallback</value>
+  </data>
+  <data name="SettingsViewModel_SourceNoDatabaseMatch" xml:space="preserve">
+    <value>No database match</value>
+  </data>
+  <data name="SettingsViewModel_StandaloneFully" xml:space="preserve">
+    <value>OmenCore is running fully standalone without HP dependencies</value>
+  </data>
+  <data name="SettingsViewModel_StandaloneOptionalDegradation" xml:space="preserve">
+    <value>Optional degradation: fully standalone, but {0} optional component(s) unavailable (OGH and HP-SEU are not required for core operation)</value>
+  </data>
+  <data name="SettingsViewModel_StatusDegraded" xml:space="preserve">
+    <value>Degraded</value>
+  </data>
+  <data name="SettingsViewModel_StatusError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="SettingsViewModel_StatusHealthy" xml:space="preserve">
+    <value>Healthy</value>
+  </data>
+  <data name="SettingsViewModel_ValueUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardNoMatch" xml:space="preserve">
+    <value>Keyboard profile could not be matched from the current ProductId or WMI model.</value>
+  </data>
+  <data name="SettingsViewModel_WarnNoModelMatch" xml:space="preserve">
+    <value>No exact model or family entry matched; default capabilities are in use.</value>
+  </data>
+  <data name="SystemControlViewModel_NoRecovery" xml:space="preserve">
+    <value>No startup recovery this session</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiReady" xml:space="preserve">
+    <value>NVIDIA API ready</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiUnavailable" xml:space="preserve">
+    <value>NVIDIA API not available</value>
+  </data>
+  <data name="SystemControlViewModel_RecoveryApplied" xml:space="preserve">
+    <value>Startup recovery applied</value>
+  </data>
+  <data name="DashboardViewModel_HealthDegraded" xml:space="preserve">
+    <value>⚠ Degraded</value>
+  </data>
+  <data name="DashboardViewModel_HealthHealthy" xml:space="preserve">
+    <value>✓ Healthy</value>
+  </data>
+  <data name="DashboardViewModel_HealthStale" xml:space="preserve">
+    <value>⛔ Stale</value>
+  </data>
+  <data name="DashboardViewModel_HealthUnknown" xml:space="preserve">
+    <value>? Unknown</value>
+  </data>
+  <data name="DashboardViewModel_JustNow" xml:space="preserve">
+    <value>Just now</value>
+  </data>
+  <data name="DashboardViewModel_MinutesAgo" xml:space="preserve">
+    <value>{0}m ago</value>
+  </data>
+  <data name="DashboardViewModel_NoData" xml:space="preserve">
+    <value>No data</value>
+  </data>
+  <data name="DashboardViewModel_SecondsAgo" xml:space="preserve">
+    <value>{0}s ago</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StatsFormat" xml:space="preserve">
+    <value>{0}-{1} {4} | Avg {2} {4} | {3} samples | Trend {5} {6} {4}</value>
+  </data>
+  <data name="LightingViewModel_KeyboardLightingUnavailable" xml:space="preserve">
+    <value>Keyboard lighting control is not available on this system.</value>
+  </data>
+  <data name="MainViewModel_OverrideActive" xml:space="preserve">
+    <value>Model override active (GitHub #78): worker CPU sensor prioritized for {0}</value>
+  </data>
+  <data name="MainViewModel_OverrideInactive" xml:space="preserve">
+    <value>Model override inactive: standard WMI/ACPI CPU temperature path</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_GameAwareOff" xml:space="preserve">
+    <value>Off: Smart Clean can run the full safe cleanup profile while a game is in the foreground.</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_GameAwareOn" xml:space="preserve">
+    <value>On: fullscreen and borderless games get light working-set trims unless memory pressure is critical.</value>
+  </data>
+  <data name="SystemControlViewModel_ApplyCurveOptimizer" xml:space="preserve">
+    <value>Apply Curve Optimizer</value>
+  </data>
+  <data name="SystemControlViewModel_ApplyUndervolt" xml:space="preserve">
+    <value>Apply Undervolt</value>
+  </data>
+  <data name="TempSourceDiag_Checking" xml:space="preserve">
+    <value>Checking...</value>
+  </data>
+  <data name="TempSourceDiag_CheckSources" xml:space="preserve">
+    <value>Check Temperature Sources</value>
+  </data>
 </root>

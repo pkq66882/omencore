@@ -942,7 +942,7 @@ namespace OmenCore.Controls
             var trend = data.Count > 10 ? data[data.Count - 1].Value - data[data.Count - 10].Value : 0;
             var trendLabel = Math.Abs(trend) < 0.1 ? "flat" : trend > 0 ? "up" : "down";
             
-            statsBlock.Text = $"{minValue:F1}-{maxValue:F1} {unit} | Avg {avgValue:F1} {unit} | {data.Count} samples | Trend {trendLabel} {trend:+0.0;-0.0;0.0} {unit}";
+            statsBlock.Text = string.Format(Strings.HardwareMonitoringDashboard_StatsFormat, minValue.ToString("F1"), maxValue.ToString("F1"), avgValue.ToString("F1"), data.Count, unit, trendLabel, trend.ToString("+0.0;-0.0;0.0"));
             statsBlock.Foreground = ChartMutedTextBrush;
         }
 

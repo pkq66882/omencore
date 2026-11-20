@@ -3003,16 +3003,28 @@ namespace OmenCore.ViewModels
                 _systemInfoService.ClearAuditCache();
                 var audit = _systemInfoService.PerformDependencyAudit();
                 DependencyAudit = audit;
-                StandaloneStatus = audit.StatusText;
+                StandaloneStatus = audit.StatusText switch
+                {
+                    "Degraded" => Strings.SettingsViewModel_StatusDegraded,
+                    "Healthy" => Strings.SettingsViewModel_StatusHealthy,
+                    _ => audit.StatusText
+                };
                 StandaloneStatusColor = audit.StatusColor;
-                StandaloneStatusSummary = audit.Summary;
+                StandaloneStatusSummary = audit.Summary switch
+                {
+                    var s when s.StartsWith("Optional degradation: fully standalone, but ") && s.EndsWith(" optional component(s) unavailable (OGH and HP-SEU are not required for core operation)") =>
+                        string.Format(Strings.SettingsViewModel_StandaloneOptionalDegradation,
+                            s.Substring("Optional degradation: fully standalone, but ".Length, s.Length - "Optional degradation: fully standalone, but ".Length - " optional component(s) unavailable (OGH and HP-SEU are not required for core operation)".Length)),
+                    "OmenCore is running fully standalone without HP dependencies" => Strings.SettingsViewModel_StandaloneFully,
+                    _ => audit.Summary
+                };
             }
             catch (Exception ex)
             {
                 _logging.Error($"Failed to perform dependency audit: {ex.Message}", ex);
-                StandaloneStatus = "Error";
+                StandaloneStatus = Strings.SettingsViewModel_StatusError;
                 StandaloneStatusColor = "#FF6B6B";
-                StandaloneStatusSummary = $"Audit failed: {ex.Message}";
+                StandaloneStatusSummary = string.Format(Strings.SettingsViewModel_AuditFailed, ex.Message);
             }
         }
 
@@ -3023,10 +3035,19 @@ namespace OmenCore.ViewModels
                 return;
             }
 
-            ResumeRecoveryStatus = _resumeRecoveryDiagnostics.Status;
-            ResumeRecoverySummary = _resumeRecoveryDiagnostics.Summary;
-            ResumeRecoveryTimeline = _resumeRecoveryDiagnostics.TimelineText;
-            ResumeRecoveryLastUpdated = _resumeRecoveryDiagnostics.LastUpdatedText;
+            var statusMap = new System.Collections.Generic.Dictionary<string, string>
+            {
+                ["No recent resume activity"] = Strings.SettingsViewModel_NoRecentResumeActivity,
+                ["No recent resume event"] = Strings.SettingsViewModel_NoRecentResumeEvent
+            };
+            ResumeRecoveryStatus = statusMap.TryGetValue(_resumeRecoveryDiagnostics.Status, out var st) ? st : _resumeRecoveryDiagnostics.Status;
+            ResumeRecoverySummary = _resumeRecoveryDiagnostics.Summary == "No suspend/resume recovery timeline recorded yet."
+                ? Strings.SettingsViewModel_NoTimelineSummary
+                : _resumeRecoveryDiagnostics.Summary;
+            ResumeRecoveryTimeline = _resumeRecoveryDiagnostics.TimelineText == "No timeline recorded yet."
+                ? Strings.SettingsViewModel_NoTimelineRecorded
+                : _resumeRecoveryDiagnostics.TimelineText;
+            ResumeRecoveryLastUpdated = statusMap.TryGetValue(_resumeRecoveryDiagnostics.LastUpdatedText, out var lu) ? lu : _resumeRecoveryDiagnostics.LastUpdatedText;
         }
 
         public void RefreshModelIdentityStatus()
@@ -3036,26 +3057,45 @@ namespace OmenCore.ViewModels
                 var systemInfo = _systemInfoService.GetSystemInfo();
                 var summary = ModelIdentityResolutionService.Build(systemInfo, _detectedCapabilities, _logging);
 
+                string LocalizeConfidence(string c) => c switch
+                {
+                    "Low" => Strings.SettingsViewModel_ConfidenceLow,
+                    "Medium" => Strings.SettingsViewModel_ConfidenceMedium,
+                    "High" => Strings.SettingsViewModel_ConfidenceHigh,
+                    _ => c
+                };
+                string LocalizeSource(string s) => s switch
+                {
+                    "Default fallback" => Strings.SettingsViewModel_SourceDefaultFallback,
+                    "No database match" => Strings.SettingsViewModel_SourceNoDatabaseMatch,
+                    _ => s
+                };
+                string LocalizeModelValue(string v) => v == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : v;
+
                 ModelIdentitySummary = summary.Summary;
-                ModelIdentityResolvedModel = summary.ResolvedModel;
-                ModelIdentityResolutionSource = summary.ResolutionSource;
-                ModelIdentityConfidence = summary.Confidence;
+                ModelIdentityResolvedModel = summary.ResolvedModel == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : summary.ResolvedModel;
+                ModelIdentityResolutionSource = LocalizeSource(summary.ResolutionSource);
+                ModelIdentityConfidence = LocalizeConfidence(summary.Confidence);
                 ModelIdentityBadgeText = summary.BadgeText;
                 ModelIdentityBadgeTone = summary.BadgeTone;
-                ModelIdentityKeyboardModel = summary.KeyboardModel;
-                ModelIdentityKeyboardSource = summary.KeyboardResolutionSource;
-                ModelIdentityKeyboardConfidence = summary.KeyboardConfidence;
+                ModelIdentityKeyboardModel = LocalizeModelValue(summary.KeyboardModel);
+                ModelIdentityKeyboardSource = LocalizeSource(summary.KeyboardResolutionSource);
+                ModelIdentityKeyboardConfidence = LocalizeConfidence(summary.KeyboardConfidence);
                 ModelIdentityRawSummary = summary.RawIdentitySummary;
                 ModelIdentityCopySummary = summary.ClipboardSummary;
 
                 var warningParts = new List<string>();
                 if (!string.IsNullOrWhiteSpace(summary.WarningText))
                 {
-                    warningParts.Add(summary.WarningText);
+                    warningParts.Add(summary.WarningText == "No exact model or family entry matched; default capabilities are in use."
+                        ? Strings.SettingsViewModel_WarnNoModelMatch
+                        : summary.WarningText);
                 }
                 if (!string.IsNullOrWhiteSpace(summary.KeyboardWarningText))
                 {
-                    warningParts.Add(summary.KeyboardWarningText);
+                    warningParts.Add(summary.KeyboardWarningText == "Keyboard profile could not be matched from the current ProductId or WMI model."
+                        ? Strings.SettingsViewModel_WarnKeyboardNoMatch
+                        : summary.KeyboardWarningText);
                 }
 
                 ModelIdentityWarningText = string.Join(Environment.NewLine, warningParts);
