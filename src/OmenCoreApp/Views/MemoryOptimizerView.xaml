@@ -720,19 +720,16 @@
                     <Border Style="{StaticResource Omen.Card.Utility}">
                         <StackPanel>
                             <TextBlock Foreground="#9CA3AF" FontSize="12" TextWrapping="Wrap" LineHeight="20">
-                                <Run FontWeight="SemiBold" Foreground="#00C8C8">Smart Clean</Run>
+                                <Run FontWeight="SemiBold" Foreground="#00C8C8" Text="{x:Static loc:Strings.MemoryOptimizerView_SmartClean}"/>
                                 <Run Text="{x:Static loc:Strings.MemoryOptimizerView_TrimsProcessWorkingSetsPurgesLowPrioritySt}"/>
                             </TextBlock>
 
                             <TextBlock Foreground="#9CA3AF" FontSize="12" TextWrapping="Wrap" LineHeight="20" Margin="0,8,0,0">
-                                <Run FontWeight="SemiBold" Foreground="#A78BFA">Deep Clean</Run>
+                                <Run FontWeight="SemiBold" Foreground="#A78BFA" Text="{x:Static loc:Strings.MemoryOptimizerView_DeepClean}"/>
                                 <Run Text="{x:Static loc:Strings.MemoryOptimizerView_AdditionallyPurgesAllStandbyPagesFlushesTh}"/>
                             </TextBlock>
 
-                            <TextBlock Foreground="#6B7280" FontSize="11" TextWrapping="Wrap" Margin="0,12,0,0">
-                                Memory is cleaned using Windows Native API (NtSetSystemInformation). 
-                                Requires administrator privileges. Stats refresh every 2 seconds.
-                            </TextBlock>
+                            <TextBlock Foreground="#6B7280" FontSize="11" TextWrapping="Wrap" Margin="0,12,0,0" Text="{x:Static loc:Strings.MemoryOptimizerView_NativeApiNote}"/>
                         </StackPanel>
                     </Border>
                 </StackPanel>

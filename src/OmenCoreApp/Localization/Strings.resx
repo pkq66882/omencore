@@ -5189,4 +5189,67 @@
   <data name="Monitor_TrendFlat" xml:space="preserve">
     <value>flat</value>
   </data>
+  <data name="Monitor_QualityGood" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_QualityFair" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_QualityPoor" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_TempNormal" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_TempWarm" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_TempHot" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_TempCritical" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_ThermalCool" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_ThermalOptimal" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_TrendUp" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Monitor_TrendDown" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SystemControlViewModel_CurrentFormat" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SystemControlViewModel_IgpuOffset" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SystemControlViewModel_CacheOffset" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SystemControlViewModel_RadeonGraphics" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SystemControlViewModel_L3Cache" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DiagnosticsView_EstimatedFromFanLevel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DashboardViewModel_SourceWmiSelfSustaining" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DashboardViewModel_SourceWmiNvapiSelfSustaining" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MemoryOptimizerView_NativeApiNote" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
+    <value></value>
+  </data>
 </root>

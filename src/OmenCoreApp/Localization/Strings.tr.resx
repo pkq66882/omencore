@@ -5185,4 +5185,67 @@
   <data name="Monitor_TrendFlat" xml:space="preserve">
     <value>kararlı</value>
   </data>
+  <data name="Monitor_QualityGood" xml:space="preserve">
+    <value>İyi</value>
+  </data>
+  <data name="Monitor_QualityFair" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="Monitor_QualityPoor" xml:space="preserve">
+    <value>Kötü</value>
+  </data>
+  <data name="Monitor_TempNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Monitor_TempWarm" xml:space="preserve">
+    <value>Ilık</value>
+  </data>
+  <data name="Monitor_TempHot" xml:space="preserve">
+    <value>Sıcak</value>
+  </data>
+  <data name="Monitor_TempCritical" xml:space="preserve">
+    <value>Kritik</value>
+  </data>
+  <data name="Monitor_ThermalCool" xml:space="preserve">
+    <value>Serin</value>
+  </data>
+  <data name="Monitor_ThermalOptimal" xml:space="preserve">
+    <value>Optimal</value>
+  </data>
+  <data name="Monitor_TrendUp" xml:space="preserve">
+    <value>yükseliyor</value>
+  </data>
+  <data name="Monitor_TrendDown" xml:space="preserve">
+    <value>düşüyor</value>
+  </data>
+  <data name="SystemControlViewModel_CurrentFormat" xml:space="preserve">
+    <value>Geçerli: {0}W</value>
+  </data>
+  <data name="SystemControlViewModel_IgpuOffset" xml:space="preserve">
+    <value>IGPU OFSETİ</value>
+  </data>
+  <data name="SystemControlViewModel_CacheOffset" xml:space="preserve">
+    <value>ÖNBELLEK OFSETİ</value>
+  </data>
+  <data name="SystemControlViewModel_RadeonGraphics" xml:space="preserve">
+    <value>Radeon grafikleri</value>
+  </data>
+  <data name="SystemControlViewModel_L3Cache" xml:space="preserve">
+    <value>L3 Önbelleği</value>
+  </data>
+  <data name="DiagnosticsView_EstimatedFromFanLevel" xml:space="preserve">
+    <value>✗ Fan seviyesinden tahmin</value>
+  </data>
+  <data name="DashboardViewModel_SourceWmiSelfSustaining" xml:space="preserve">
+    <value>WMI BIOS (kendini sürdürme)</value>
+  </data>
+  <data name="DashboardViewModel_SourceWmiNvapiSelfSustaining" xml:space="preserve">
+    <value>WMI BIOS + NVAPI (kendini sürdürme)</value>
+  </data>
+  <data name="MemoryOptimizerView_NativeApiNote" xml:space="preserve">
+    <value>Bellek temizliği Windows yerel API'sini (NtSetSystemInformation) kullanır. Yönetici hakları gerekir. İstatistikler her 2 saniyede bir yenilenir.</value>
+  </data>
+  <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
+    <value>• Ön ayarlar uygulanmadan önce bir sistem geri yükleme noktası oluşturulur • Bazı değişiklikler etkili olması için yeniden başlatma gerektirebilir • Orta/Yüksek riskli optimizasyonlar sistem kararlılığını veya özellikleri etkileyebilir • Orijinal ayarlara dönmek için her an "Tümünü Geri Al"ı kullanın</value>
+  </data>
 </root>

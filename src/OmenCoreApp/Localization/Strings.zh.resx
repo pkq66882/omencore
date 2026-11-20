@@ -5185,4 +5185,67 @@
   <data name="Monitor_TrendFlat" xml:space="preserve">
     <value>平稳</value>
   </data>
+  <data name="Monitor_QualityGood" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="Monitor_QualityFair" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="Monitor_QualityPoor" xml:space="preserve">
+    <value>较差</value>
+  </data>
+  <data name="Monitor_TempNormal" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="Monitor_TempWarm" xml:space="preserve">
+    <value>偏热</value>
+  </data>
+  <data name="Monitor_TempHot" xml:space="preserve">
+    <value>热</value>
+  </data>
+  <data name="Monitor_TempCritical" xml:space="preserve">
+    <value>过热</value>
+  </data>
+  <data name="Monitor_ThermalCool" xml:space="preserve">
+    <value>凉爽</value>
+  </data>
+  <data name="Monitor_ThermalOptimal" xml:space="preserve">
+    <value>最佳</value>
+  </data>
+  <data name="Monitor_TrendUp" xml:space="preserve">
+    <value>上升</value>
+  </data>
+  <data name="Monitor_TrendDown" xml:space="preserve">
+    <value>下降</value>
+  </data>
+  <data name="SystemControlViewModel_CurrentFormat" xml:space="preserve">
+    <value>当前: {0}W</value>
+  </data>
+  <data name="SystemControlViewModel_IgpuOffset" xml:space="preserve">
+    <value>IGPU 偏移</value>
+  </data>
+  <data name="SystemControlViewModel_CacheOffset" xml:space="preserve">
+    <value>缓存偏移</value>
+  </data>
+  <data name="SystemControlViewModel_RadeonGraphics" xml:space="preserve">
+    <value>Radeon 核显</value>
+  </data>
+  <data name="SystemControlViewModel_L3Cache" xml:space="preserve">
+    <value>L3 缓存</value>
+  </data>
+  <data name="DiagnosticsView_EstimatedFromFanLevel" xml:space="preserve">
+    <value>✗ 按风扇档位估算</value>
+  </data>
+  <data name="DashboardViewModel_SourceWmiSelfSustaining" xml:space="preserve">
+    <value>WMI BIOS（自维持）</value>
+  </data>
+  <data name="DashboardViewModel_SourceWmiNvapiSelfSustaining" xml:space="preserve">
+    <value>WMI BIOS + NVAPI（自维持）</value>
+  </data>
+  <data name="MemoryOptimizerView_NativeApiNote" xml:space="preserve">
+    <value>内存清理使用 Windows 原生 API（NtSetSystemInformation）。需要管理员权限。统计每 2 秒刷新一次。</value>
+  </data>
+  <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
+    <value>• 应用预设前会创建系统还原点 • 部分更改可能需要重启才能生效 • 中/高风险优化可能影响系统稳定性或功能 • 随时可以使用“全部还原”恢复原始设置</value>
+  </data>
 </root>

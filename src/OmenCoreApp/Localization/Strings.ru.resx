@@ -5185,4 +5185,67 @@
   <data name="Monitor_TrendFlat" xml:space="preserve">
     <value>стабильно</value>
   </data>
+  <data name="Monitor_QualityGood" xml:space="preserve">
+    <value>Хорошо</value>
+  </data>
+  <data name="Monitor_QualityFair" xml:space="preserve">
+    <value>Удовлетворительно</value>
+  </data>
+  <data name="Monitor_QualityPoor" xml:space="preserve">
+    <value>Плохо</value>
+  </data>
+  <data name="Monitor_TempNormal" xml:space="preserve">
+    <value>Норма</value>
+  </data>
+  <data name="Monitor_TempWarm" xml:space="preserve">
+    <value>Тепло</value>
+  </data>
+  <data name="Monitor_TempHot" xml:space="preserve">
+    <value>Жарко</value>
+  </data>
+  <data name="Monitor_TempCritical" xml:space="preserve">
+    <value>Критично</value>
+  </data>
+  <data name="Monitor_ThermalCool" xml:space="preserve">
+    <value>Прохладно</value>
+  </data>
+  <data name="Monitor_ThermalOptimal" xml:space="preserve">
+    <value>Оптимально</value>
+  </data>
+  <data name="Monitor_TrendUp" xml:space="preserve">
+    <value>вверх</value>
+  </data>
+  <data name="Monitor_TrendDown" xml:space="preserve">
+    <value>вниз</value>
+  </data>
+  <data name="SystemControlViewModel_CurrentFormat" xml:space="preserve">
+    <value>Текущее: {0} Вт</value>
+  </data>
+  <data name="SystemControlViewModel_IgpuOffset" xml:space="preserve">
+    <value>СМЕЩЕНИЕ IGPU</value>
+  </data>
+  <data name="SystemControlViewModel_CacheOffset" xml:space="preserve">
+    <value>СМЕЩЕНИЕ КЭША</value>
+  </data>
+  <data name="SystemControlViewModel_RadeonGraphics" xml:space="preserve">
+    <value>Графика Radeon</value>
+  </data>
+  <data name="SystemControlViewModel_L3Cache" xml:space="preserve">
+    <value>Кэш L3</value>
+  </data>
+  <data name="DiagnosticsView_EstimatedFromFanLevel" xml:space="preserve">
+    <value>✗ Оценка по уровню вентилятора</value>
+  </data>
+  <data name="DashboardViewModel_SourceWmiSelfSustaining" xml:space="preserve">
+    <value>WMI BIOS (самообеспечение)</value>
+  </data>
+  <data name="DashboardViewModel_SourceWmiNvapiSelfSustaining" xml:space="preserve">
+    <value>WMI BIOS + NVAPI (самообеспечение)</value>
+  </data>
+  <data name="MemoryOptimizerView_NativeApiNote" xml:space="preserve">
+    <value>Очистка памяти использует нативный Windows API (NtSetSystemInformation). Требуются права администратора. Статистика обновляется каждые 2 секунды.</value>
+  </data>
+  <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
+    <value>• Перед применением пресетов создаётся точка восстановления системы • Некоторые изменения могут потребовать перезагрузку • Оптимизации со средним/высоким риском могут повлиять на стабильность системы • Используйте «Откатить всё», чтобы в любой момент вернуть исходные настройки</value>
+  </data>
 </root>

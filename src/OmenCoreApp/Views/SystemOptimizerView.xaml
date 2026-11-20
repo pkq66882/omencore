@@ -468,12 +468,7 @@
                             <Path Data="{StaticResource IconAbout}" Width="14" Height="14" Fill="{StaticResource WarningBrush}" Stretch="Uniform" VerticalAlignment="Center" Margin="0,0,8,0"/>
                             <TextBlock Text="{x:Static loc:Strings.SystemOptimizerView_ImportantNotes}" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource WarningBrush}"/>
                         </StackPanel>
-                        <TextBlock Foreground="{StaticResource TextSecondaryBrush}" FontSize="12" TextWrapping="Wrap">
-                            • A system restore point is created before applying presets&#x0a;
-                            • Some changes may require a restart to take effect&#x0a;
-                            • Medium/High risk optimizations may affect system stability or features&#x0a;
-                            • Use "Revert All" to restore original settings at any time
-                        </TextBlock>
+                        <TextBlock Foreground="{StaticResource TextSecondaryBrush}" FontSize="12" TextWrapping="Wrap" Text="{x:Static loc:Strings.SystemOptimizerView_ImportantNotesBody}"/>
                     </StackPanel>
                 </Border>
             </StackPanel>

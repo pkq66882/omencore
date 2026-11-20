@@ -2066,5 +2066,8 @@ namespace OmenCore.Localization
     public static string SystemControlViewModel_L3Cache => Get(nameof(SystemControlViewModel_L3Cache));
     public static string SystemControlViewModel_RadeonGraphics => Get(nameof(SystemControlViewModel_RadeonGraphics));
 
+    public static string MemoryOptimizerView_NativeApiNote => Get(nameof(MemoryOptimizerView_NativeApiNote));
+    public static string SystemOptimizerView_ImportantNotesBody => Get(nameof(SystemOptimizerView_ImportantNotesBody));
+
     }
 }
