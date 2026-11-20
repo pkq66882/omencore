@@ -2096,5 +2096,9 @@ namespace OmenCore.Localization
 
     // Auto-extracted literals from TuningView.xaml
 
+    public static string MemoryOptimizerViewModel_Disabled => Get(nameof(MemoryOptimizerViewModel_Disabled));
+    public static string MemoryOptimizerViewModel_Enabled => Get(nameof(MemoryOptimizerViewModel_Enabled));
+    public static string MemoryOptimizerViewModel_StateUnavailable => Get(nameof(MemoryOptimizerViewModel_StateUnavailable));
+
     }
 }
