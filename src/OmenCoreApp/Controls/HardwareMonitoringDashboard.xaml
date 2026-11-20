@@ -1,6 +1,7 @@
 <UserControl x:Class="OmenCore.Controls.HardwareMonitoringDashboard"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:loc="clr-namespace:OmenCore.Localization"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:OmenCore.Controls"
@@ -99,8 +100,8 @@
                 <Thickness>1</Thickness>
             </Border.BorderThickness>
             <StackPanel Margin="20,18">
-                <TextBlock Text="Hardware Monitoring Dashboard" FontSize="22" FontWeight="Bold" Foreground="#F5F7FF" Margin="0,0,0,8"/>
-                <TextBlock Text="Real-time monitoring of power consumption, battery capacity, and system performance with historical trends and alerts." FontSize="13" Foreground="#8B92A8" TextWrapping="Wrap"/>
+                <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_HardwareMonitoringDashboard}" FontSize="22" FontWeight="Bold" Foreground="#F5F7FF" Margin="0,0,0,8"/>
+                <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_RealTimeMonitoringOfPowerConsumptionBatter}" FontSize="13" Foreground="#8B92A8" TextWrapping="Wrap"/>
             </StackPanel>
         </Border>
 
@@ -109,33 +110,33 @@
             <StackPanel Margin="0,0,0,10">
 
                 <!-- Current Metrics Row -->
-                <TextBlock Text="Current Metrics" FontSize="16" FontWeight="Bold" Foreground="#F5F7FF" Margin="0,0,0,14"/>
+                <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_CurrentMetrics}" FontSize="16" FontWeight="Bold" Foreground="#F5F7FF" Margin="0,0,0,14"/>
 
                 <UniformGrid Columns="4" Margin="0,0,0,20">
                     <!-- Power Consumption -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="POWER CONSUMPTION" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_PowerConsumption}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="PowerConsumptionValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#FF9800"/>
                             <TextBlock Text="Watts" Style="{StaticResource MetricUnitStyle}"/>
-                            <TextBlock x:Name="PowerConsumptionTrend" Text="→ Stable" FontSize="12" FontWeight="Medium" Foreground="#6B7394"/>
+                            <TextBlock x:Name="PowerConsumptionTrend" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Stable}" FontSize="12" FontWeight="Medium" Foreground="#6B7394"/>
                         </StackPanel>
                     </Border>
 
                     <!-- Battery Capacity -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="BATTERY CAPACITY" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_BatteryCapacity}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="BatteryHealthValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#4CAF50"/>
                             <TextBlock Text="%" Style="{StaticResource MetricUnitStyle}"/>
-                            <TextBlock x:Name="BatteryHealthStatus" Text="Unavailable" FontSize="12" FontWeight="Medium" Foreground="#66BB6A"/>
+                            <TextBlock x:Name="BatteryHealthStatus" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Unavailable}" FontSize="12" FontWeight="Medium" Foreground="#66BB6A"/>
                         </StackPanel>
                     </Border>
 
                     <!-- CPU Temperature -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="CPU TEMPERATURE" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_CpuTemperature}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="CpuTempValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#FF6B6B"/>
                             <TextBlock Text="°C" Style="{StaticResource MetricUnitStyle}"/>
                             <TextBlock x:Name="CpuTempStatus" Text="Normal" FontSize="12" FontWeight="Medium" Foreground="#66BB6A"/>
@@ -145,7 +146,7 @@
                     <!-- GPU Temperature -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="GPU TEMPERATURE" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_GpuTemperature}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="GpuTempValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#45C7FF"/>
                             <TextBlock Text="°C" Style="{StaticResource MetricUnitStyle}"/>
                             <TextBlock x:Name="GpuTempStatus" Text="Normal" FontSize="12" FontWeight="Medium" Foreground="#66BB6A"/>
@@ -154,13 +155,13 @@
                 </UniformGrid>
 
                 <!-- System Load & Clock Speeds Row -->
-                <TextBlock Text="System Activity" FontSize="16" FontWeight="Bold" Foreground="#F5F7FF" Margin="0,8,0,14"/>
+                <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_SystemActivity}" FontSize="16" FontWeight="Bold" Foreground="#F5F7FF" Margin="0,8,0,14"/>
                 
                 <UniformGrid Columns="4" Margin="0,0,0,20">
                     <!-- CPU Load -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="CPU LOAD" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_CpuLoad}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="CpuLoadValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#FF005C"/>
                             <TextBlock Text="%" Style="{StaticResource MetricUnitStyle}"/>
                             <ProgressBar x:Name="CpuLoadBar" Height="6" Background="#1A1D2E" Foreground="#FF005C" Margin="0,8,0,0">
@@ -184,7 +185,7 @@
                     <!-- GPU Load -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="GPU LOAD" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_GpuLoad}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="GpuLoadValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#45C7FF"/>
                             <TextBlock Text="%" Style="{StaticResource MetricUnitStyle}"/>
                             <ProgressBar x:Name="GpuLoadBar" Height="6" Background="#1A1D2E" Foreground="#45C7FF" Margin="0,8,0,0">
@@ -208,38 +209,38 @@
                     <!-- CPU Clock Speed -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="CPU CLOCK" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_CpuClock}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="CpuClockValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#FFD700"/>
                             <TextBlock Text="MHz" Style="{StaticResource MetricUnitStyle}"/>
-                            <TextBlock Text="Average core clock" FontSize="11" Foreground="#6B7394"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_AverageCoreClock}" FontSize="11" Foreground="#6B7394"/>
                         </StackPanel>
                     </Border>
 
                     <!-- RAM Usage -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="RAM USAGE" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_RamUsage}" Style="{StaticResource MetricTitleStyle}"/>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                 <TextBlock x:Name="RamUsageValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#9C27B0"/>
                                 <TextBlock Text=" GB" FontSize="16" FontWeight="SemiBold" Foreground="#9C27B0" VerticalAlignment="Bottom" Margin="4,0,0,8"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock x:Name="RamUsagePercent" Text="--" FontSize="13" FontWeight="Medium" Foreground="#6B7394"/>
-                                <TextBlock Text="% used" FontSize="13" Foreground="#6B7394"/>
+                                <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Used}" FontSize="13" Foreground="#6B7394"/>
                             </StackPanel>
                         </StackPanel>
                     </Border>
                 </UniformGrid>
 
                 <!-- Charts Section -->
-                <TextBlock Text="Historical Trends" FontSize="16" FontWeight="Bold" Foreground="#F5F7FF" Margin="0,8,0,14"/>
+                <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_HistoricalTrends}" FontSize="16" FontWeight="Bold" Foreground="#F5F7FF" Margin="0,8,0,14"/>
 
                 <!-- Auto-display Charts Grid -->
                 <UniformGrid x:Name="ChartsGrid" Columns="2" Rows="2" Margin="0,0,0,10">
                     <!-- Power Chart -->
                     <Border x:Name="PowerChartBorder" Style="{StaticResource MetricCardStyle}" MinHeight="200">
                         <StackPanel>
-                            <TextBlock Text="⚡ Power Consumption" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_PowerConsumption_2}" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
                             <Canvas x:Name="PowerChartCanvas" Height="150" Background="{DynamicResource BackgroundDarkBrush}"/>
                             <TextBlock x:Name="PowerChartStats" FontSize="10" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,5,0,0"/>
                         </StackPanel>
@@ -248,7 +249,7 @@
                     <!-- Temperature Chart -->
                     <Border x:Name="TempChartBorder" Style="{StaticResource MetricCardStyle}" MinHeight="200">
                         <StackPanel>
-                            <TextBlock Text="🌡️ Temperature" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Temperature}" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
                             <Canvas x:Name="TempChartCanvas" Height="150" Background="{DynamicResource BackgroundDarkBrush}"/>
                             <TextBlock x:Name="TempChartStats" FontSize="10" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,5,0,0"/>
                         </StackPanel>
@@ -257,7 +258,7 @@
                     <!-- Battery Chart -->
                     <Border x:Name="BatteryChartBorder" Style="{StaticResource MetricCardStyle}" MinHeight="200">
                         <StackPanel>
-                            <TextBlock Text="🔋 Battery Charge" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_BatteryCharge}" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
                             <Canvas x:Name="BatteryChartCanvas" Height="150" Background="{DynamicResource BackgroundDarkBrush}"/>
                             <TextBlock x:Name="BatteryChartStats" FontSize="10" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,5,0,0"/>
                         </StackPanel>
@@ -266,7 +267,7 @@
                     <!-- Fan Chart -->
                     <Border x:Name="FanChartBorder" Style="{StaticResource MetricCardStyle}" MinHeight="200">
                         <StackPanel>
-                            <TextBlock Text="🌀 Fan Speeds" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_FanSpeeds}" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
                             <Canvas x:Name="FanChartCanvas" Height="150" Background="{DynamicResource BackgroundDarkBrush}"/>
                             <TextBlock x:Name="FanChartStats" FontSize="10" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,5,0,0"/>
                         </StackPanel>
@@ -276,17 +277,17 @@
                 <!-- Chart Controls (for export/refresh) -->
                 <Border Background="{DynamicResource SurfaceDarkBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="8" Margin="0,0,0,10">
                     <StackPanel Orientation="Horizontal" Margin="15" HorizontalAlignment="Center">
-                        <Button x:Name="RefreshDataButton" Content="🔄 Refresh Charts" Style="{StaticResource ChartButtonStyle}" Click="RefreshDataButton_Click" Margin="5,0" ToolTip="Refresh all hardware monitoring charts"/>
-                        <Button x:Name="ExportDataButton" Content="💾 Export Data" Style="{StaticResource ChartButtonStyle}" Click="ExportDataButton_Click" Margin="5,0" ToolTip="Export sensor history to a CSV file"/>
+                        <Button x:Name="RefreshDataButton" Content="{x:Static loc:Strings.HardwareMonitoringDashboard_RefreshCharts}" Style="{StaticResource ChartButtonStyle}" Click="RefreshDataButton_Click" Margin="5,0" ToolTip="{x:Static loc:Strings.HardwareMonitoringDashboard_RefreshAllHardwareMonitoringCharts}"/>
+                        <Button x:Name="ExportDataButton" Content="{x:Static loc:Strings.HardwareMonitoringDashboard_ExportData}" Style="{StaticResource ChartButtonStyle}" Click="ExportDataButton_Click" Margin="5,0" ToolTip="{x:Static loc:Strings.HardwareMonitoringDashboard_ExportSensorHistoryToACsvFile}"/>
                     </StackPanel>
                 </Border>
 
                 <!-- Alerts Section -->
-                <TextBlock Text="System Alerts" FontSize="16" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+                <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_SystemAlerts}" FontSize="16" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,10"/>
 
                 <Border Background="{DynamicResource SurfaceDarkBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="8" Margin="0,0,0,10">
                     <StackPanel Margin="15">
-                        <TextBlock Text="Active Alerts" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+                        <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_ActiveAlerts}" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,10"/>
                         <ListBox x:Name="AlertsListBox" Height="120" Background="Transparent" BorderThickness="0">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
@@ -303,18 +304,18 @@
                                 </DataTemplate>
                             </ListBox.ItemTemplate>
                         </ListBox>
-                        <TextBlock x:Name="NoAlertsText" Text="No active alerts" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,20"/>
+                        <TextBlock x:Name="NoAlertsText" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_NoActiveAlerts}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,20"/>
                     </StackPanel>
                 </Border>
 
                 <!-- Efficiency Metrics -->
-                <TextBlock Text="Efficiency Metrics" FontSize="16" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,10"/>
+                <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_EfficiencyMetrics}" FontSize="16" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,10"/>
 
                 <UniformGrid Columns="3" Margin="0,0,0,20">
                     <!-- Power Efficiency -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="Power Efficiency" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_PowerEfficiency}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="PowerEfficiencyValue" Text="85.2" Style="{StaticResource MetricValueStyle}"/>
                             <TextBlock Text="%" Style="{StaticResource MetricUnitStyle}"/>
                             <TextBlock x:Name="PowerEfficiencyRating" Text="Good" FontSize="11" Foreground="{DynamicResource SuccessBrush}"/>
@@ -324,20 +325,20 @@
                     <!-- Thermal Status -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="Thermal Status" Style="{StaticResource MetricTitleStyle}"/>
-                            <TextBlock x:Name="ThermalStatusValue" Text="Optimal" Style="{StaticResource MetricValueStyle}" FontSize="20"/>
-                            <TextBlock Text="condition" Style="{StaticResource MetricUnitStyle}"/>
-                            <TextBlock x:Name="ThermalEfficiency" Text="Fan: 68% efficient" FontSize="10" Foreground="{DynamicResource InfoBrush}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_ThermalStatus}" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock x:Name="ThermalStatusValue" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Optimal}" Style="{StaticResource MetricValueStyle}" FontSize="20"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Condition}" Style="{StaticResource MetricUnitStyle}"/>
+                            <TextBlock x:Name="ThermalEfficiency" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Fan68Efficient}" FontSize="10" Foreground="{DynamicResource InfoBrush}"/>
                         </StackPanel>
                     </Border>
 
                     <!-- Battery Status -->
                     <Border Style="{StaticResource MetricCardStyle}">
                         <StackPanel>
-                            <TextBlock Text="Battery Status" Style="{StaticResource MetricTitleStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_BatteryStatus}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="BatteryCyclesValue" Text="--" Style="{StaticResource MetricValueStyle}"/>
                             <TextBlock Text="cycles" Style="{StaticResource MetricUnitStyle}"/>
-                            <TextBlock x:Name="BatteryLifeEstimate" Text="3.0 years remaining" FontSize="10" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                            <TextBlock x:Name="BatteryLifeEstimate" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_N30YearsRemaining}" FontSize="10" Foreground="{DynamicResource TextSecondaryBrush}"/>
                         </StackPanel>
                     </Border>
                 </UniformGrid>

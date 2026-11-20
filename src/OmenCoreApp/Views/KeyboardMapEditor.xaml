@@ -1,6 +1,7 @@
 <UserControl x:Class="OmenCore.Views.KeyboardMapEditor"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:loc="clr-namespace:OmenCore.Localization"
              mc:Ignorable="d"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
@@ -26,11 +27,11 @@
             <StackPanel>
                 <TextBlock Text="{Binding DynamicLightingWarning}" FontSize="11" Foreground="#8CC8F0"
                            TextWrapping="Wrap"/>
-                <Button Content="Open Dynamic Lighting settings"
+                <Button Content="{x:Static loc:Strings.KeyboardMapEditor_OpenDynamicLightingSettings}"
                         Command="{Binding OpenDynamicLightingSettingsCommand}"
                         Style="{StaticResource ModernButton}" Padding="12,4" Margin="0,8,0,0"
                         HorizontalAlignment="Left" FontSize="11"
-                        AutomationProperties.Name="Open the Windows Dynamic Lighting settings page"/>
+                        AutomationProperties.Name="{x:Static loc:Strings.KeyboardMapEditor_OpenTheWindowsDynamicLightingSettingsPage}"/>
             </StackPanel>
         </Border>
 
@@ -45,14 +46,14 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="0" Text="Brush:" FontSize="12" Foreground="#B0B0B0"
+            <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.KeyboardMapEditor_Brush}" FontSize="12" Foreground="#B0B0B0"
                        VerticalAlignment="Center" Margin="0,0,8,0"/>
 
             <!-- The swatch is the picker button. Clicking a colour to change it is the gesture
                  people try first, so the hex box stays for typing an exact value. -->
             <Button Grid.Column="1" Command="{Binding PickColorCommand}" Cursor="Hand"
                     Padding="0" BorderThickness="0" Background="Transparent" Margin="0,0,8,0"
-                    ToolTip="Choose a colour" AutomationProperties.Name="Choose brush colour">
+                    ToolTip="{x:Static loc:Strings.KeyboardMapEditor_ChooseAColour}" AutomationProperties.Name="{x:Static loc:Strings.KeyboardMapEditor_ChooseBrushColour}">
                 <Border Width="26" Height="26" CornerRadius="4"
                         Background="{Binding BrushColorBrush}" BorderBrush="#666" BorderThickness="1"/>
             </Button>
@@ -65,15 +66,15 @@
                  default - white text on light grey, unreadable against this theme, which is what
                  shipped in the first cut of this control. -->
             <StackPanel Grid.Column="3" Orientation="Horizontal">
-                <Button Content="Pick colour…" Command="{Binding PickColorCommand}"
+                <Button Content="{x:Static loc:Strings.KeyboardMapEditor_PickColour}" Command="{Binding PickColorCommand}"
                         Style="{StaticResource ModernButton}" Padding="12,6" Margin="0,0,6,0"/>
-                <Button Content="Paint selected" Command="{Binding PaintSelectionCommand}"
+                <Button Content="{x:Static loc:Strings.KeyboardMapEditor_PaintSelected}" Command="{Binding PaintSelectionCommand}"
                         Style="{StaticResource AccentButton}" Padding="12,6" Margin="0,0,6,0"/>
-                <Button Content="Select all" Command="{Binding SelectAllCommand}"
+                <Button Content="{x:Static loc:Strings.KeyboardMapEditor_SelectAll}" Command="{Binding SelectAllCommand}"
                         Style="{StaticResource ModernButton}" Padding="12,6" Margin="0,0,6,0"/>
-                <Button Content="Clear selection" Command="{Binding ClearSelectionCommand}"
+                <Button Content="{x:Static loc:Strings.KeyboardMapEditor_ClearSelection}" Command="{Binding ClearSelectionCommand}"
                         Style="{StaticResource ModernButton}" Padding="12,6" Margin="0,0,6,0"/>
-                <Button Content="All black" Command="{Binding ClearAllColorsCommand}"
+                <Button Content="{x:Static loc:Strings.KeyboardMapEditor_AllBlack}" Command="{Binding ClearAllColorsCommand}"
                         Style="{StaticResource ModernButton}" Padding="12,6" Margin="0,0,6,0"/>
             </StackPanel>
 
@@ -81,13 +82,13 @@
                  because it is the one to press while painting - the flash write belongs at the end
                  of the job, once, and it is styled as the quieter of the two for that reason. -->
             <StackPanel Grid.Column="5" Orientation="Horizontal">
-                <Button Content="Apply to keyboard" Command="{Binding ApplyCommand}"
+                <Button Content="{x:Static loc:Strings.KeyboardMapEditor_ApplyToKeyboard}" Command="{Binding ApplyCommand}"
                         Style="{StaticResource AccentButton}" Padding="16,6" FontWeight="SemiBold"
-                        AutomationProperties.Name="Apply per-key colours to the keyboard"/>
-                <Button Content="Save to keyboard" Command="{Binding SaveToKeyboardCommand}"
+                        AutomationProperties.Name="{x:Static loc:Strings.KeyboardMapEditor_ApplyPerKeyColoursToTheKeyboard}"/>
+                <Button Content="{x:Static loc:Strings.KeyboardMapEditor_SaveToKeyboard}" Command="{Binding SaveToKeyboardCommand}"
                         Style="{StaticResource ModernButton}" Padding="16,6" Margin="8,0,0,0"
-                        AutomationProperties.Name="Save the picture into the keyboard so it survives a power cycle"
-                        ToolTip="Applies the picture, then stores it in the keyboard's own memory so it survives a power cycle and shows with OmenCore closed. This writes to the keyboard's flash, so use it when you have finished rather than after every change."/>
+                        AutomationProperties.Name="{x:Static loc:Strings.KeyboardMapEditor_SaveThePictureIntoTheKeyboardSoItSurvivesA}"
+                        ToolTip="{x:Static loc:Strings.KeyboardMapEditor_AppliesThePictureThenStoresItInTheKeyboard}"/>
             </StackPanel>
         </Grid>
 
@@ -112,22 +113,22 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="0" Text="Whole keyboard:" FontSize="12" Foreground="#B0B0B0"
+            <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.KeyboardMapEditor_WholeKeyboard}" FontSize="12" Foreground="#B0B0B0"
                        VerticalAlignment="Center" Margin="0,0,8,0"/>
             <Slider Grid.Column="1" Minimum="0" Maximum="100" VerticalAlignment="Center"
                     Value="{Binding Brightness, Mode=TwoWay}"
-                    AutomationProperties.Name="Master brightness for the whole keyboard and light bar"/>
+                    AutomationProperties.Name="{x:Static loc:Strings.KeyboardMapEditor_MasterBrightnessForTheWholeKeyboardAndLigh}"/>
             <TextBlock Grid.Column="2" Text="{Binding Brightness}" FontSize="12" Width="34"
                        Foreground="#E0E0E0" VerticalAlignment="Center" Margin="8,0,0,0"/>
 
             <!-- Disabled rather than hidden with nothing selected: a control that vanishes is
                  harder to find again than one that greys out, and the label says what to do. -->
-            <TextBlock Grid.Column="3" Text="Selected:" FontSize="12" Foreground="#B0B0B0"
+            <TextBlock Grid.Column="3" Text="{x:Static loc:Strings.KeyboardMapEditor_Selected}" FontSize="12" Foreground="#B0B0B0"
                        VerticalAlignment="Center" Margin="16,0,8,0"/>
             <Slider Grid.Column="4" Minimum="0" Maximum="100" VerticalAlignment="Center"
                     Value="{Binding SelectionBrightness, Mode=TwoWay}"
                     IsEnabled="{Binding HasSelection}"
-                    AutomationProperties.Name="Brightness of the selected keys and light bar zones"/>
+                    AutomationProperties.Name="{x:Static loc:Strings.KeyboardMapEditor_BrightnessOfTheSelectedKeysAndLightBarZone}"/>
             <TextBlock Grid.Column="5" Text="{Binding SelectionBrightness}" FontSize="12" Width="34"
                        Foreground="#E0E0E0" VerticalAlignment="Center" Margin="8,0,0,0"/>
 
@@ -214,6 +215,6 @@
         <TextBlock Text="{Binding Status}" FontSize="11" Foreground="#909090"
                    Margin="2,8,0,0" TextWrapping="Wrap"/>
         <TextBlock FontSize="11" Foreground="#707070" Margin="2,2,0,0" TextWrapping="Wrap"
-                   Text="Click a key to select or deselect it. Drag a box to select a region — it can span the keyboard and the light bar. Hold Ctrl or Shift while dragging to add to the selection."/>
+                   Text="{x:Static loc:Strings.KeyboardMapEditor_ClickAKeyToSelectOrDeselectItDragABoxToSel}"/>
     </StackPanel>
 </UserControl>

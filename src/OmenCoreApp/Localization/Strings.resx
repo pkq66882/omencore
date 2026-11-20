@@ -173,4 +173,4165 @@
   <data name="SettingsTelemetryHelp" xml:space="preserve">
     <value>Share anonymous, aggregated counts of Corsair PID success/failure to help us improve device coverage. No device-identifying data is collected.</value>
   </data>
+  <data name="DiagnosticExportControl_DiagnosticExport" xml:space="preserve">
+    <value>Diagnostic Export</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportSystemDiagnosticsAndLogsToHelpTroubl" xml:space="preserve">
+    <value>Export system diagnostics and logs to help troubleshoot issues. This creates a comprehensive report that can be attached to GitHub issues or shared with support.</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportOptions" xml:space="preserve">
+    <value>Export Options</value>
+  </data>
+  <data name="DiagnosticExportControl_SystemInformationOsHardwareDrivers" xml:space="preserve">
+    <value>System Information (OS, hardware, drivers)</value>
+  </data>
+  <data name="DiagnosticExportControl_HardwareMonitoringDataTemperaturesFanSpeed" xml:space="preserve">
+    <value>Hardware Monitoring Data (temperatures, fan speeds, power)</value>
+  </data>
+  <data name="DiagnosticExportControl_ApplicationLogsLast1000Entries" xml:space="preserve">
+    <value>Application Logs (last 1000 entries)</value>
+  </data>
+  <data name="DiagnosticExportControl_SettingsConfiguration" xml:space="preserve">
+    <value>Settings &amp; Configuration</value>
+  </data>
+  <data name="DiagnosticExportControl_PerformanceModeData" xml:space="preserve">
+    <value>Performance Mode Data</value>
+  </data>
+  <data name="DiagnosticExportControl_FanCalibrationDataIfAvailable" xml:space="preserve">
+    <value>Fan Calibration Data (if available)</value>
+  </data>
+  <data name="DiagnosticExportControl_FanMaxVerificationRunsAQuickVerificationOf" xml:space="preserve">
+    <value>Fan Max Verification (runs a quick verification of 'Max' preset)</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportFormat" xml:space="preserve">
+    <value>Export Format</value>
+  </data>
+  <data name="DiagnosticExportControl_JsonFormatStructuredMachineReadable" xml:space="preserve">
+    <value>JSON Format (structured, machine-readable)</value>
+  </data>
+  <data name="DiagnosticExportControl_TextFormatHumanReadable" xml:space="preserve">
+    <value>Text Format (human-readable)</value>
+  </data>
+  <data name="DiagnosticExportControl_CompressedZipSmallerFileSize" xml:space="preserve">
+    <value>Compressed ZIP (smaller file size)</value>
+  </data>
+  <data name="DiagnosticExportControl_PrivacySecurity" xml:space="preserve">
+    <value>Privacy &amp; Security</value>
+  </data>
+  <data name="DiagnosticExportControl_AnonymizeSensitiveDataRemoveUsernamesPaths" xml:space="preserve">
+    <value>Anonymize sensitive data (remove usernames, paths, etc.)</value>
+  </data>
+  <data name="DiagnosticExportControl_NoteDiagnosticDataIncludesSystemInformatio" xml:space="preserve">
+    <value>Note: Diagnostic data includes system information but no personal files or credentials.</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportProgress" xml:space="preserve">
+    <value>Export Progress</value>
+  </data>
+  <data name="DiagnosticExportControl_PreparingDiagnosticData" xml:space="preserve">
+    <value>Preparing diagnostic data...</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportResults" xml:space="preserve">
+    <value>Export Results</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportCompletedSuccessfully" xml:space="preserve">
+    <value>Export completed successfully</value>
+  </data>
+  <data name="DiagnosticExportControl_FileSavedTo" xml:space="preserve">
+    <value>File saved to: </value>
+  </data>
+  <data name="DiagnosticExportControl_FileSize" xml:space="preserve">
+    <value>File size: </value>
+  </data>
+  <data name="DiagnosticExportControl_ContainsSystemInfoHardwareDataLogsSettings" xml:space="preserve">
+    <value>Contains: system info, hardware data, logs, settings</value>
+  </data>
+  <data name="DiagnosticExportControl_GithubIssueIntegration" xml:space="preserve">
+    <value>GitHub Issue Integration</value>
+  </data>
+  <data name="DiagnosticExportControl_QuickGithubIssueCreation" xml:space="preserve">
+    <value>Quick GitHub Issue Creation:</value>
+  </data>
+  <data name="DiagnosticExportControl_N1ExportDiagnosticsUsingTheButtonBelow" xml:space="preserve">
+    <value>1. Export diagnostics using the button below</value>
+  </data>
+  <data name="DiagnosticExportControl_N2ClickCreateGithubIssueToOpenAPreFilledIss" xml:space="preserve">
+    <value>2. Click 'Create GitHub Issue' to open a pre-filled issue</value>
+  </data>
+  <data name="DiagnosticExportControl_N3AttachTheExportedDiagnosticFileToTheIssue" xml:space="preserve">
+    <value>3. Attach the exported diagnostic file to the issue</value>
+  </data>
+  <data name="DiagnosticExportControl_CreateGithubIssue" xml:space="preserve">
+    <value>Create GitHub Issue</value>
+  </data>
+  <data name="DiagnosticExportControl_WhatGetsExported" xml:space="preserve">
+    <value>ℹ️ What gets exported:</value>
+  </data>
+  <data name="DiagnosticExportControl_SystemInformationOsVersionHardwareSpecsDri" xml:space="preserve">
+    <value>• System information (OS version, hardware specs, driver versions)</value>
+  </data>
+  <data name="DiagnosticExportControl_HardwareMonitoringDataTemperaturesFanSpeed_2" xml:space="preserve">
+    <value>• Hardware monitoring data (temperatures, fan speeds, power consumption)</value>
+  </data>
+  <data name="DiagnosticExportControl_ApplicationLogsAndErrorMessages" xml:space="preserve">
+    <value>• Application logs and error messages</value>
+  </data>
+  <data name="DiagnosticExportControl_CurrentSettingsAndConfiguration" xml:space="preserve">
+    <value>• Current settings and configuration</value>
+  </data>
+  <data name="DiagnosticExportControl_PerformanceModeAndFanCalibrationData" xml:space="preserve">
+    <value>• Performance mode and fan calibration data</value>
+  </data>
+  <data name="DiagnosticExportControl_NoPersonalFilesCredentialsOrSensitiveInfor" xml:space="preserve">
+    <value>No personal files, credentials, or sensitive information is included.</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportDiagnostics" xml:space="preserve">
+    <value>Export Diagnostics</value>
+  </data>
+  <data name="DiagnosticExportControl_OpenFolder" xml:space="preserve">
+    <value>Open Folder</value>
+  </data>
+  <data name="DiagnosticExportControl_CopyPath" xml:space="preserve">
+    <value>Copy Path</value>
+  </data>
+  <data name="FanCalibrationControl_FanCalibration" xml:space="preserve">
+    <value>Fan Calibration</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrateFanRpmCurvesForAccurateSpeedContr" xml:space="preserve">
+    <value>Calibrate fan RPM curves for accurate speed control on your specific laptop model.</value>
+  </data>
+  <data name="FanCalibrationControl_ThisProcessWillTestFanSpeedsFrom0To100AndM" xml:space="preserve">
+    <value>This process will test fan speeds from 0% to 100% and may take several minutes.</value>
+  </data>
+  <data name="FanCalibrationControl_ModelInformation" xml:space="preserve">
+    <value>Model Information</value>
+  </data>
+  <data name="FanCalibrationControl_DetectingLaptopModel" xml:space="preserve">
+    <value>Detecting laptop model...</value>
+  </data>
+  <data name="FanCalibrationControl_NoCalibrationDataFound" xml:space="preserve">
+    <value>No calibration data found</value>
+  </data>
+  <data name="FanCalibrationControl_FanSelection" xml:space="preserve">
+    <value>Fan Selection</value>
+  </data>
+  <data name="FanCalibrationControl_SelectWhichFanToCalibrate" xml:space="preserve">
+    <value>Select which fan to calibrate:</value>
+  </data>
+  <data name="FanCalibrationControl_CpuFanFan0" xml:space="preserve">
+    <value>CPU Fan (Fan 0)</value>
+  </data>
+  <data name="FanCalibrationControl_GpuFanFan1" xml:space="preserve">
+    <value>GPU Fan (Fan 1)</value>
+  </data>
+  <data name="FanCalibrationControl_SelectAFanToSeeCurrentStatus" xml:space="preserve">
+    <value>Select a fan to see current status</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationProgress" xml:space="preserve">
+    <value>Calibration Progress</value>
+  </data>
+  <data name="FanCalibrationControl_PreparingCalibration" xml:space="preserve">
+    <value>Preparing calibration...</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationResults" xml:space="preserve">
+    <value>Calibration Results</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationCompletedSuccessfully" xml:space="preserve">
+    <value>Calibration completed successfully</value>
+  </data>
+  <data name="FanCalibrationControl_Target" xml:space="preserve">
+    <value>Target %</value>
+  </data>
+  <data name="FanCalibrationControl_AppliedLevel" xml:space="preserve">
+    <value>Applied Level</value>
+  </data>
+  <data name="FanCalibrationControl_MeasuredRpm" xml:space="preserve">
+    <value>Measured RPM</value>
+  </data>
+  <data name="FanCalibrationControl_RpmRange" xml:space="preserve">
+    <value>RPM Range</value>
+  </data>
+  <data name="FanCalibrationControl_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="FanCalibrationControl_ImportantNotes" xml:space="preserve">
+    <value>⚠️ Important Notes:</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationMayTake510MinutesPerFan" xml:space="preserve">
+    <value>• Calibration may take 5-10 minutes per fan</value>
+  </data>
+  <data name="FanCalibrationControl_FansWillRunAtVariousSpeedsEnsureProperVent" xml:space="preserve">
+    <value>• Fans will run at various speeds - ensure proper ventilation</value>
+  </data>
+  <data name="FanCalibrationControl_DoNotInterruptTheCalibrationProcess" xml:space="preserve">
+    <value>• Do not interrupt the calibration process</value>
+  </data>
+  <data name="FanCalibrationControl_OmencoreRestoresBiosAutoFanControlWhenCali" xml:space="preserve">
+    <value>• OmenCore restores BIOS auto fan control when calibration ends; use Restore Auto if fans still sound pinned high</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationDataIsStoredLocallyAndCanBeShar" xml:space="preserve">
+    <value>• Calibration data is stored locally and can be shared with the community</value>
+  </data>
+  <data name="FanCalibrationControl_StartCalibration" xml:space="preserve">
+    <value>Start Calibration</value>
+  </data>
+  <data name="FanCalibrationControl_LoadExisting" xml:space="preserve">
+    <value>Load Existing</value>
+  </data>
+  <data name="FanCalibrationControl_SaveResults" xml:space="preserve">
+    <value>Save Results</value>
+  </data>
+  <data name="FanCalibrationControl_RestoreAuto" xml:space="preserve">
+    <value>Restore Auto</value>
+  </data>
+  <data name="FanCalibrationControl_ReleaseCalibrationManualFanOwnershipAndRet" xml:space="preserve">
+    <value>Release calibration/manual fan ownership and return fans to BIOS automatic control</value>
+  </data>
+  <data name="FanCalibrationControl_ClearData" xml:space="preserve">
+    <value>Clear Data</value>
+  </data>
+  <data name="FanCurveChart_FanSpeedVsTemperature" xml:space="preserve">
+    <value>Fan Speed vs Temperature</value>
+  </data>
+  <data name="FanCurveChart_LoadingFanCurveData" xml:space="preserve">
+    <value>Loading fan curve data...</value>
+  </data>
+  <data name="FanCurveEditor_ClickToAddCurvePointsDragToAdjust" xml:space="preserve">
+    <value>Click to add curve points, drag to adjust</value>
+  </data>
+  <data name="FanCurveEditor_TemperatureC" xml:space="preserve">
+    <value>🌡️ Temperature (°C)</value>
+  </data>
+  <data name="FanCurveEditor_FanSpeed" xml:space="preserve">
+    <value>💨 Fan Speed (%)</value>
+  </data>
+  <data name="FanCurveEditor_DragPointsToAdjust" xml:space="preserve">
+    <value> • Drag points to adjust</value>
+  </data>
+  <data name="GpuVcChart_GpuVoltage" xml:space="preserve">
+    <value>GPU Voltage</value>
+  </data>
+  <data name="GpuVcChart_GpuCurrent" xml:space="preserve">
+    <value>GPU Current</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_HardwareMonitoringDashboard" xml:space="preserve">
+    <value>Hardware Monitoring Dashboard</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_RealTimeMonitoringOfPowerConsumptionBatter" xml:space="preserve">
+    <value>Real-time monitoring of power consumption, battery capacity, and system performance with historical trends and alerts.</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_CurrentMetrics" xml:space="preserve">
+    <value>Current Metrics</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_PowerConsumption" xml:space="preserve">
+    <value>POWER CONSUMPTION</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Stable" xml:space="preserve">
+    <value>→ Stable</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryCapacity" xml:space="preserve">
+    <value>BATTERY CAPACITY</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Unavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_CpuTemperature" xml:space="preserve">
+    <value>CPU TEMPERATURE</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_GpuTemperature" xml:space="preserve">
+    <value>GPU TEMPERATURE</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_SystemActivity" xml:space="preserve">
+    <value>System Activity</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_CpuLoad" xml:space="preserve">
+    <value>CPU LOAD</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_GpuLoad" xml:space="preserve">
+    <value>GPU LOAD</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_CpuClock" xml:space="preserve">
+    <value>CPU CLOCK</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_AverageCoreClock" xml:space="preserve">
+    <value>Average core clock</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_RamUsage" xml:space="preserve">
+    <value>RAM USAGE</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Used" xml:space="preserve">
+    <value>% used</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_HistoricalTrends" xml:space="preserve">
+    <value>Historical Trends</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_PowerConsumption_2" xml:space="preserve">
+    <value>⚡ Power Consumption</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Temperature" xml:space="preserve">
+    <value>🌡️ Temperature</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryCharge" xml:space="preserve">
+    <value>🔋 Battery Charge</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_FanSpeeds" xml:space="preserve">
+    <value>🌀 Fan Speeds</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_RefreshCharts" xml:space="preserve">
+    <value>🔄 Refresh Charts</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_RefreshAllHardwareMonitoringCharts" xml:space="preserve">
+    <value>Refresh all hardware monitoring charts</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_ExportData" xml:space="preserve">
+    <value>💾 Export Data</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_ExportSensorHistoryToACsvFile" xml:space="preserve">
+    <value>Export sensor history to a CSV file</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_SystemAlerts" xml:space="preserve">
+    <value>System Alerts</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_ActiveAlerts" xml:space="preserve">
+    <value>Active Alerts</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_NoActiveAlerts" xml:space="preserve">
+    <value>No active alerts</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_EfficiencyMetrics" xml:space="preserve">
+    <value>Efficiency Metrics</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_PowerEfficiency" xml:space="preserve">
+    <value>Power Efficiency</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_ThermalStatus" xml:space="preserve">
+    <value>Thermal Status</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Optimal" xml:space="preserve">
+    <value>Optimal</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Condition" xml:space="preserve">
+    <value>condition</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Fan68Efficient" xml:space="preserve">
+    <value>Fan: 68% efficient</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryStatus" xml:space="preserve">
+    <value>Battery Status</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_N30YearsRemaining" xml:space="preserve">
+    <value>3.0 years remaining</value>
+  </data>
+  <data name="LoadChart_CpuUsage" xml:space="preserve">
+    <value>CPU Usage</value>
+  </data>
+  <data name="LoadChart_GpuUsage" xml:space="preserve">
+    <value>GPU Usage</value>
+  </data>
+  <data name="LoadingOverlay_ThisMayTakeAFewMoments" xml:space="preserve">
+    <value>This may take a few moments</value>
+  </data>
+  <data name="ThermalChart_LoadingTemperatureHistory" xml:space="preserve">
+    <value>Loading temperature history...</value>
+  </data>
+  <data name="AboutWindow_AboutOmencore" xml:space="preserve">
+    <value>About OmenCore</value>
+  </data>
+  <data name="AboutWindow_GamingLaptopAndDesktopControlCenter" xml:space="preserve">
+    <value>Gaming Laptop and Desktop Control Center</value>
+  </data>
+  <data name="AboutWindow_CloseEsc" xml:space="preserve">
+    <value>Close (Esc)</value>
+  </data>
+  <data name="AboutWindow_Version300" xml:space="preserve">
+    <value>Version 3.0.0</value>
+  </data>
+  <data name="AboutWindow_AdvancedThermalPowerAndRgbControlForHpOmen" xml:space="preserve">
+    <value>Advanced thermal, power, and RGB control for HP OMEN gaming laptops and desktops.</value>
+  </data>
+  <data name="AboutWindow_WmiEcFanControlWithCustomCurves" xml:space="preserve">
+    <value>✓ WMI/EC Fan Control with Custom Curves</value>
+  </data>
+  <data name="AboutWindow_CpuUndervoltIntelCurveOptimizerAmd" xml:space="preserve">
+    <value>✓ CPU Undervolt (Intel) &amp; Curve Optimizer (AMD)</value>
+  </data>
+  <data name="AboutWindow_GpuDynamicBoostTgpPpab" xml:space="preserve">
+    <value>✓ GPU Dynamic Boost (TGP/PPAB)</value>
+  </data>
+  <data name="AboutWindow_DriverFreeMonitoringWmiBiosNvapiPawnio" xml:space="preserve">
+    <value>✓ Driver-Free Monitoring (WMI BIOS + NVAPI + PawnIO)</value>
+  </data>
+  <data name="AboutWindow_PerGameProfileAutoSwitching" xml:space="preserve">
+    <value>✓ Per-Game Profile Auto-Switching</value>
+  </data>
+  <data name="AboutWindow_V2KeyboardEnginePerKeyEcWmiLighting" xml:space="preserve">
+    <value>✓ V2 Keyboard Engine (Per-Key EC &amp; WMI Lighting)</value>
+  </data>
+  <data name="AboutWindow_GuidedFanDiagnostics" xml:space="preserve">
+    <value>✓ Guided Fan Diagnostics</value>
+  </data>
+  <data name="AboutWindow_MemoryOptimizer" xml:space="preserve">
+    <value>✓ Memory Optimizer</value>
+  </data>
+  <data name="AboutWindow_HeadlessModeTrayOnlyNoWindow" xml:space="preserve">
+    <value>✓ Headless Mode (Tray-Only, No Window)</value>
+  </data>
+  <data name="AboutWindow_RealTimeHardwareMonitoring" xml:space="preserve">
+    <value>✓ Real-Time Hardware Monitoring</value>
+  </data>
+  <data name="AboutWindow_CheckForUpdates" xml:space="preserve">
+    <value>⟳ Check for Updates</value>
+  </data>
+  <data name="AboutWindow_CheckGithubForNewReleases" xml:space="preserve">
+    <value>Check GitHub for new releases</value>
+  </data>
+  <data name="AboutWindow_CloseThisWindowEsc" xml:space="preserve">
+    <value>Close this window (Esc)</value>
+  </data>
+  <data name="AdvancedView_OmenControls" xml:space="preserve">
+    <value>OMEN CONTROLS</value>
+  </data>
+  <data name="AdvancedView_HpOmenSpecificFeaturesPerformanceModesFanC" xml:space="preserve">
+    <value>HP OMEN-specific features: Performance modes, fan curves, GPU switching</value>
+  </data>
+  <data name="AdvancedView_PerformanceMode" xml:space="preserve">
+    <value>PERFORMANCE MODE</value>
+  </data>
+  <data name="AdvancedView_SystemPowerAndCoolingProfile" xml:space="preserve">
+    <value>System power and cooling profile</value>
+  </data>
+  <data name="AdvancedView_QuietPerformanceModeSilentOperationLowPowe" xml:space="preserve">
+    <value>Quiet performance mode: silent operation, low power</value>
+  </data>
+  <data name="AdvancedView_SilentOperation" xml:space="preserve">
+    <value>SILENT OPERATION</value>
+  </data>
+  <data name="AdvancedView_LowPower" xml:space="preserve">
+    <value>Low Power</value>
+  </data>
+  <data name="AdvancedView_SilentFans" xml:space="preserve">
+    <value>Silent Fans</value>
+  </data>
+  <data name="AdvancedView_BalancedPerformanceModeRecommendedAutomati" xml:space="preserve">
+    <value>Balanced performance mode: recommended, automatic power and fan control</value>
+  </data>
+  <data name="AdvancedView_Balanced" xml:space="preserve">
+    <value>Balanced</value>
+  </data>
+  <data name="AdvancedView_Recommended" xml:space="preserve">
+    <value>RECOMMENDED</value>
+  </data>
+  <data name="AdvancedView_AutoPower" xml:space="preserve">
+    <value>Auto Power</value>
+  </data>
+  <data name="AdvancedView_SmartFans" xml:space="preserve">
+    <value>Smart Fans</value>
+  </data>
+  <data name="AdvancedView_PerformanceModeMaximumPowerHighFanSpeed" xml:space="preserve">
+    <value>Performance mode: maximum power, high fan speed</value>
+  </data>
+  <data name="AdvancedView_Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="AdvancedView_MaximumPower" xml:space="preserve">
+    <value>MAXIMUM POWER</value>
+  </data>
+  <data name="AdvancedView_MaxPower" xml:space="preserve">
+    <value>Max Power</value>
+  </data>
+  <data name="AdvancedView_HighFans" xml:space="preserve">
+    <value>High Fans</value>
+  </data>
+  <data name="AdvancedView_ThisModeRemembers" xml:space="preserve">
+    <value>THIS MODE REMEMBERS</value>
+  </data>
+  <data name="AdvancedView_RememberCurrentState" xml:space="preserve">
+    <value>Remember current state</value>
+  </data>
+  <data name="AdvancedView_RememberTheCurrentFanGpuBoostRefreshRateLi" xml:space="preserve">
+    <value>Remember the current fan, GPU boost, refresh rate, lighting and charge limit settings in this selected performance mode</value>
+  </data>
+  <data name="AdvancedView_CustomFanCurve" xml:space="preserve">
+    <value>Custom Fan Curve</value>
+  </data>
+  <data name="AdvancedView_BoostActive" xml:space="preserve">
+    <value>BOOST ACTIVE</value>
+  </data>
+  <data name="AdvancedView_GpuPowerBoostTgpDynamicBoost" xml:space="preserve">
+    <value>GPU Power Boost (TGP/Dynamic Boost)</value>
+  </data>
+  <data name="AdvancedView_ControlGpuTotalGraphicsPowerTgpAndDynamicB" xml:space="preserve">
+    <value>Control GPU Total Graphics Power (TGP) and Dynamic Boost (PPAB). Higher settings enable more GPU wattage. Extended option is for RTX 5080 and newer GPUs that may support +25W boost.</value>
+  </data>
+  <data name="AdvancedView_FirmwareDeterminedCeiling" xml:space="preserve">
+    <value>⚠ Firmware-Determined Ceiling: </value>
+  </data>
+  <data name="AdvancedView_TheseLevelsAreRelativeBoostRequestsSentToT" xml:space="preserve">
+    <value>these levels are relative boost requests sent to the same GPU firmware handler OMEN Gaming Hub uses, not an absolute wattage guarantee. The actual ceiling can be affected by GPU firmware/EC state left over from other power-control software - if the wattage you see doesn't match a level's description, try fully closing OMEN Gaming Hub first.</value>
+  </data>
+  <data name="AdvancedView_CurrentPowerMode" xml:space="preserve">
+    <value>CURRENT POWER MODE</value>
+  </data>
+  <data name="AdvancedView_ExtraPower" xml:space="preserve">
+    <value>EXTRA POWER</value>
+  </data>
+  <data name="AdvancedView_PowerLevel" xml:space="preserve">
+    <value>Power Level:</value>
+  </data>
+  <data name="AdvancedView_GpuPowerBoostLevel" xml:space="preserve">
+    <value>GPU power boost level</value>
+  </data>
+  <data name="AdvancedView_ApplyGpuPowerBoostLevel" xml:space="preserve">
+    <value>Apply GPU power boost level</value>
+  </data>
+  <data name="AdvancedView_GpuSwitchingAdvancedOptimus" xml:space="preserve">
+    <value>GPU Switching (Advanced Optimus)</value>
+  </data>
+  <data name="AdvancedView_SwitchBetweenIntegratedAndDiscreteGpuForOp" xml:space="preserve">
+    <value>Switch between integrated and discrete GPU for optimal performance or battery life.</value>
+  </data>
+  <data name="AdvancedView_HardwareLimitation" xml:space="preserve">
+    <value>⚠ Hardware Limitation: </value>
+  </data>
+  <data name="AdvancedView_GpuModeSwitchingRequiresASystemRebootSomeO" xml:space="preserve">
+    <value>GPU mode switching requires a system reboot. Some OMEN models only support this via BIOS settings.</value>
+  </data>
+  <data name="AdvancedView_CurrentMode" xml:space="preserve">
+    <value>Current Mode:</value>
+  </data>
+  <data name="AdvancedView_SwitchTo" xml:space="preserve">
+    <value>Switch To:</value>
+  </data>
+  <data name="AdvancedView_SwitchGpuModeTo" xml:space="preserve">
+    <value>Switch GPU mode to</value>
+  </data>
+  <data name="AdvancedView_ApplyRequiresRestart" xml:space="preserve">
+    <value>Apply (Requires Restart)</value>
+  </data>
+  <data name="AdvancedView_ApplyGpuModeSwitchRequiresRestart" xml:space="preserve">
+    <value>Apply GPU mode switch, requires restart</value>
+  </data>
+  <data name="AdvancedView_WhyGpuModeSwitchingIsUnavailable" xml:space="preserve">
+    <value>Why GPU mode switching is unavailable</value>
+  </data>
+  <data name="AdvancedView_HpTelemetryBackgroundServices" xml:space="preserve">
+    <value>HP TELEMETRY &amp; BACKGROUND SERVICES</value>
+  </data>
+  <data name="AdvancedView_StopsAndDisablesHpSAnalyticsAndDiagnostics" xml:space="preserve">
+    <value>Stops and disables HP's analytics and diagnostics services. Reversible: the original start type of each service is saved and Restore puts it back. Needs administrator rights. Nothing OmenCore depends on is touched.</value>
+  </data>
+  <data name="AdvancedView_DisableHpTelemetry" xml:space="preserve">
+    <value>Disable HP telemetry</value>
+  </data>
+  <data name="AdvancedView_DisableHpTelemetryServices" xml:space="preserve">
+    <value>Disable HP telemetry services</value>
+  </data>
+  <data name="AdvancedView_Restore" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="AdvancedView_RestoreHpTelemetryServices" xml:space="preserve">
+    <value>Restore HP telemetry services</value>
+  </data>
+  <data name="AdvancedView_DisplayOverdrive" xml:space="preserve">
+    <value>DISPLAY OVERDRIVE</value>
+  </data>
+  <data name="AdvancedView_ReducesPanelResponseTimeForLessMotionBlurD" xml:space="preserve">
+    <value>Reduces panel response time for less motion blur during fast-paced gaming. May cause slight overshoot artifacts on some displays.</value>
+  </data>
+  <data name="AdvancedView_PanelOverdrive" xml:space="preserve">
+    <value>Panel Overdrive</value>
+  </data>
+  <data name="AdvancedView_ImprovesPixelResponseTimeOn165hzDisplays" xml:space="preserve">
+    <value>Improves pixel response time on 165Hz+ displays</value>
+  </data>
+  <data name="BloatwareManagerView_BloatwareManager" xml:space="preserve">
+    <value>Bloatware Manager</value>
+  </data>
+  <data name="BloatwareManagerView_RemovePreInstalledBloatwareToImproveSystem" xml:space="preserve">
+    <value>Remove pre-installed bloatware to improve system performance and reduce clutter. Low-risk items are safe to remove.</value>
+  </data>
+  <data name="BloatwareManagerView_Detected" xml:space="preserve">
+    <value>Detected</value>
+  </data>
+  <data name="BloatwareManagerView_Removed" xml:space="preserve">
+    <value>Removed</value>
+  </data>
+  <data name="BloatwareManagerView_LowRisk" xml:space="preserve">
+    <value>Low Risk</value>
+  </data>
+  <data name="BloatwareManagerView_ScanForBloatware" xml:space="preserve">
+    <value>Scan for Bloatware</value>
+  </data>
+  <data name="BloatwareManagerView_RemoveAllLowRiskItems" xml:space="preserve">
+    <value>Remove All Low-Risk Items</value>
+  </data>
+  <data name="BloatwareManagerView_RemoveLowRisk" xml:space="preserve">
+    <value>Remove Low-Risk</value>
+  </data>
+  <data name="BloatwareManagerView_ExportBloatwareDryRunReport" xml:space="preserve">
+    <value>Export Bloatware Dry Run Report</value>
+  </data>
+  <data name="BloatwareManagerView_DryRun" xml:space="preserve">
+    <value>Dry Run</value>
+  </data>
+  <data name="BloatwareManagerView_CancelBulkOperation" xml:space="preserve">
+    <value>Cancel Bulk Operation</value>
+  </data>
+  <data name="BloatwareManagerView_SearchAppsPublishers" xml:space="preserve">
+    <value>Search apps, publishers...</value>
+  </data>
+  <data name="BloatwareManagerView_Risk" xml:space="preserve">
+    <value>Risk:</value>
+  </data>
+  <data name="BloatwareManagerView_RemoveSelectedItem" xml:space="preserve">
+    <value>Remove Selected Item</value>
+  </data>
+  <data name="BloatwareManagerView_RestoreSelectedItem" xml:space="preserve">
+    <value>Restore Selected Item</value>
+  </data>
+  <data name="BloatwareManagerView_DependencyHint" xml:space="preserve">
+    <value>Dependency Hint</value>
+  </data>
+  <data name="BloatwareManagerView_ToggleAll" xml:space="preserve">
+    <value>Toggle All</value>
+  </data>
+  <data name="BloatwareManagerView_RemoveSelected" xml:space="preserve">
+    <value>Remove Selected</value>
+  </data>
+  <data name="BloatwareManagerView_NoBloatwareDetected" xml:space="preserve">
+    <value>No bloatware detected</value>
+  </data>
+  <data name="BloatwareManagerView_ClickScanToSearchForBloatware" xml:space="preserve">
+    <value>Click 'Scan' to search for bloatware</value>
+  </data>
+  <data name="BloatwareManagerView_ResultDetail" xml:space="preserve">
+    <value>Result Detail</value>
+  </data>
+  <data name="BloatwareManagerView_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="BloatwareManagerView_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="BloatwareManagerView_Publisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="BloatwareManagerView_ExportRemovalResultsToALogFile" xml:space="preserve">
+    <value>Export removal results to a log file</value>
+  </data>
+  <data name="BloatwareManagerView_ExportRemovalLog" xml:space="preserve">
+    <value>Export Removal Log</value>
+  </data>
+  <data name="BloatwareManagerView_ExportLog" xml:space="preserve">
+    <value>Export Log</value>
+  </data>
+  <data name="BloatwareManagerView_OpenTheMostRecentRemovalReport" xml:space="preserve">
+    <value>Open the most recent removal report</value>
+  </data>
+  <data name="BloatwareManagerView_ViewLastRemovalReport" xml:space="preserve">
+    <value>View Last Removal Report</value>
+  </data>
+  <data name="BloatwareManagerView_ViewReport" xml:space="preserve">
+    <value>View Report</value>
+  </data>
+  <data name="BloatwareManagerView_SomeRemovalsMayRequireARestart" xml:space="preserve">
+    <value>Some removals may require a restart</value>
+  </data>
+  <data name="ColorPickerDialog_SelectColor" xml:space="preserve">
+    <value>Select Color</value>
+  </data>
+  <data name="ColorPickerDialog_SelectZoneColor" xml:space="preserve">
+    <value>Select Zone Color</value>
+  </data>
+  <data name="ColorPickerDialog_Zone1Left" xml:space="preserve">
+    <value>Zone 1 - Left</value>
+  </data>
+  <data name="ColorPickerDialog_CancelEsc" xml:space="preserve">
+    <value>Cancel (Esc)</value>
+  </data>
+  <data name="ColorPickerDialog_Hex" xml:space="preserve">
+    <value>Hex:</value>
+  </data>
+  <data name="DashboardView_SystemOverview" xml:space="preserve">
+    <value>System Overview</value>
+  </data>
+  <data name="DashboardView_RealTimeHardwareTelemetry" xml:space="preserve">
+    <value>Real-time hardware telemetry</value>
+  </data>
+  <data name="DashboardView_Throttling" xml:space="preserve">
+    <value>THROTTLING</value>
+  </data>
+  <data name="DashboardView_RefreshDashboardReadings" xml:space="preserve">
+    <value>Refresh dashboard readings</value>
+  </data>
+  <data name="DashboardView_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="DashboardView_CpuPeak" xml:space="preserve">
+    <value>CPU Peak:</value>
+  </data>
+  <data name="DashboardView_GpuPeak" xml:space="preserve">
+    <value>GPU Peak:</value>
+  </data>
+  <data name="DashboardView_FanMode" xml:space="preserve">
+    <value>FAN MODE</value>
+  </data>
+  <data name="DashboardView_CpuTemperatureAndUtilizationGreenOkYellowW" xml:space="preserve">
+    <value>CPU temperature and utilization. Green = OK, Yellow = Warm, Orange = Hot, Red = Critical</value>
+  </data>
+  <data name="DashboardView_Processor" xml:space="preserve">
+    <value>PROCESSOR</value>
+  </data>
+  <data name="DashboardView_GpuTemperatureLoadAndVramUsageGpusCanSafel" xml:space="preserve">
+    <value>GPU temperature, load, and VRAM usage. GPUs can safely run hotter than CPUs.</value>
+  </data>
+  <data name="DashboardView_Graphics" xml:space="preserve">
+    <value>GRAPHICS</value>
+  </data>
+  <data name="DashboardView_TemperatureStatus" xml:space="preserve">
+    <value>Temperature status</value>
+  </data>
+  <data name="DashboardView_SystemRamUsageHighUsageMayCauseSlowdownsCo" xml:space="preserve">
+    <value>System RAM usage. High usage may cause slowdowns - consider closing unused applications.</value>
+  </data>
+  <data name="DashboardView_MemoryUsageIndicator" xml:space="preserve">
+    <value>Memory usage indicator</value>
+  </data>
+  <data name="DashboardView_SsdTemperatureAndDiskActivityOptimalSsdTem" xml:space="preserve">
+    <value>SSD temperature and disk activity. Optimal SSD temp is below 45°C.</value>
+  </data>
+  <data name="DashboardView_Storage" xml:space="preserve">
+    <value>STORAGE</value>
+  </data>
+  <data name="DashboardView_SsdTemperatureIndicator" xml:space="preserve">
+    <value>SSD temperature indicator</value>
+  </data>
+  <data name="DashboardView_BatteryChargeLevelAndPowerStatusKeepBatter" xml:space="preserve">
+    <value>Battery charge level and power status. Keep battery between 20-80% for longevity.</value>
+  </data>
+  <data name="DashboardView_Battery" xml:space="preserve">
+    <value>BATTERY</value>
+  </data>
+  <data name="DashboardView_BatteryLevelIndicator" xml:space="preserve">
+    <value>Battery level indicator</value>
+  </data>
+  <data name="DashboardView_SystemPowerConsumptionFromCpuAndGpuHigherV" xml:space="preserve">
+    <value>System power consumption from CPU and GPU. Higher values indicate more intensive workloads.</value>
+  </data>
+  <data name="DashboardView_TotalSystemPower" xml:space="preserve">
+    <value>Total system power</value>
+  </data>
+  <data name="DashboardView_LiveFanCurveShowingTemperatureVsFanSpeedRe" xml:space="preserve">
+    <value>Live fan curve showing temperature vs fan speed relationship.</value>
+  </data>
+  <data name="DashboardView_FanCurve" xml:space="preserve">
+    <value>FAN CURVE</value>
+  </data>
+  <data name="DashboardView_CurrentFanSpeeds" xml:space="preserve">
+    <value>Current fan speeds</value>
+  </data>
+  <data name="DashboardView_History" xml:space="preserve">
+    <value>History:</value>
+  </data>
+  <data name="DashboardView_ShowLast1MinuteOfHistory" xml:space="preserve">
+    <value>Show last 1 minute of history</value>
+  </data>
+  <data name="DashboardView_ShowLast5MinutesOfHistory" xml:space="preserve">
+    <value>Show last 5 minutes of history</value>
+  </data>
+  <data name="DashboardView_ShowLast15MinutesOfHistory" xml:space="preserve">
+    <value>Show last 15 minutes of history</value>
+  </data>
+  <data name="DashboardView_ShowLast30MinutesOfHistory" xml:space="preserve">
+    <value>Show last 30 minutes of history</value>
+  </data>
+  <data name="DashboardView_Utilization" xml:space="preserve">
+    <value>UTILIZATION</value>
+  </data>
+  <data name="DashboardView_CpuFrequencies" xml:space="preserve">
+    <value>CPU FREQUENCIES</value>
+  </data>
+  <data name="DashboardView_GpuVoltageCurrent" xml:space="preserve">
+    <value>GPU VOLTAGE &amp; CURRENT</value>
+  </data>
+  <data name="DashboardView_Voltage" xml:space="preserve">
+    <value>VOLTAGE</value>
+  </data>
+  <data name="DashboardView_Current" xml:space="preserve">
+    <value>CURRENT</value>
+  </data>
+  <data name="DashboardView_CpuFan" xml:space="preserve">
+    <value>CPU FAN</value>
+  </data>
+  <data name="DashboardView_GpuFan" xml:space="preserve">
+    <value>GPU FAN</value>
+  </data>
+  <data name="DashboardView_ReducedCpuUsageMode" xml:space="preserve">
+    <value>Reduced CPU Usage Mode</value>
+  </data>
+  <data name="DashboardView_LiveChartsAreDisabledToMinimizeMonitoringO" xml:space="preserve">
+    <value>Live charts are disabled to minimize monitoring overhead.</value>
+  </data>
+  <data name="DashboardView_HardwareSummaryInformationIsStillAvailable" xml:space="preserve">
+    <value>Hardware summary information is still available above.</value>
+  </data>
+  <data name="DiagnosticsView_SystemDiagnostics" xml:space="preserve">
+    <value>System Diagnostics</value>
+  </data>
+  <data name="DiagnosticsView_HardwareTestingAndValidationTools" xml:space="preserve">
+    <value>Hardware testing and validation tools</value>
+  </data>
+  <data name="DiagnosticsView_FanDiagnostics" xml:space="preserve">
+    <value>Fan Diagnostics</value>
+  </data>
+  <data name="DiagnosticsView_KeyboardLightingDiagnostics" xml:space="preserve">
+    <value>Keyboard Lighting Diagnostics</value>
+  </data>
+  <data name="DiagnosticsView_MonitoringDiagnostics" xml:space="preserve">
+    <value>Monitoring Diagnostics</value>
+  </data>
+  <data name="DiagnosticsView_Health" xml:space="preserve">
+    <value>Health:</value>
+  </data>
+  <data name="DiagnosticsView_Source" xml:space="preserve">
+    <value>Source:</value>
+  </data>
+  <data name="DiagnosticsView_LastSampleAge" xml:space="preserve">
+    <value>Last sample age:</value>
+  </data>
+  <data name="DiagnosticsView_ConsecutiveTimeouts" xml:space="preserve">
+    <value>Consecutive timeouts:</value>
+  </data>
+  <data name="DiagnosticsView_CpuTempOverride" xml:space="preserve">
+    <value>CPU temp override:</value>
+  </data>
+  <data name="DiagnosticsView_SaveTheFullCoreControlReadinessReportToAFi" xml:space="preserve">
+    <value>Save the full core-control-readiness report to a file for troubleshooting or a bug report</value>
+  </data>
+  <data name="DiagnosticsView_ExportFullDiagnosticsReport" xml:space="preserve">
+    <value>Export full diagnostics report</value>
+  </data>
+  <data name="DiagnosticsView_ExportTelemetry" xml:space="preserve">
+    <value>Export telemetry</value>
+  </data>
+  <data name="DiagnosticsView_CreateACopyOfTheTelemetryJsonForUpload" xml:space="preserve">
+    <value>Create a copy of the telemetry JSON for upload</value>
+  </data>
+  <data name="DiagnosticsView_ExportTelemetryJson" xml:space="preserve">
+    <value>Export telemetry JSON</value>
+  </data>
+  <data name="DiagnosticsView_ReportModel" xml:space="preserve">
+    <value>Report model</value>
+  </data>
+  <data name="DiagnosticsView_CreateDiagnosticsBundleAndCopyModelInfoToC" xml:space="preserve">
+    <value>Create diagnostics bundle and copy model info to clipboard</value>
+  </data>
+  <data name="DiagnosticsView_ReportThisModelToTheMaintainer" xml:space="preserve">
+    <value>Report this model to the maintainer</value>
+  </data>
+  <data name="DiagnosticsView_Backend" xml:space="preserve">
+    <value>Backend:</value>
+  </data>
+  <data name="DiagnosticsView_WorkerTimeouts" xml:space="preserve">
+    <value>Worker timeouts:</value>
+  </data>
+  <data name="DiagnosticsView_QuickActions" xml:space="preserve">
+    <value>Quick actions</value>
+  </data>
+  <data name="DiagnosticsView_OpenAppLogsFolder" xml:space="preserve">
+    <value>Open app logs folder</value>
+  </data>
+  <data name="DiagnosticsView_OpenTheFolderContainingOmencoreSLogFilesIn" xml:space="preserve">
+    <value>Open the folder containing OmenCore's log files in File Explorer</value>
+  </data>
+  <data name="DiagnosticsView_OpenOmencoreDataFolder" xml:space="preserve">
+    <value>Open OmenCore data folder</value>
+  </data>
+  <data name="DiagnosticsView_OpenTheFolderContainingOmencoreSConfigAndS" xml:space="preserve">
+    <value>Open the folder containing OmenCore's config and saved data in File Explorer</value>
+  </data>
+  <data name="DiagnosticsView_TemperatureSourceComparison" xml:space="preserve">
+    <value>Temperature Source Comparison</value>
+  </data>
+  <data name="DiagnosticsView_ReadsEveryCpuTemperatureSourceOmencoreKnow" xml:space="preserve">
+    <value>Reads every CPU temperature source OmenCore knows about at once and reports whether they agree. Doesn't change which source is trusted — read-only.</value>
+  </data>
+  <data name="DiagnosticsView_ReadWmiBiosAcpiAndLibrehardwaremonitorCpuT" xml:space="preserve">
+    <value>Read WMI BIOS, ACPI, and LibreHardwareMonitor CPU temperature sources side by side. Read-only, does not change anything.</value>
+  </data>
+  <data name="DiagnosticsView_RunTemperatureSourceComparison" xml:space="preserve">
+    <value>Run temperature source comparison</value>
+  </data>
+  <data name="DiagnosticsView_PowerAdapter" xml:space="preserve">
+    <value>Power Adapter</value>
+  </data>
+  <data name="DiagnosticsView_ConnectedAdapter" xml:space="preserve">
+    <value>Connected adapter</value>
+  </data>
+  <data name="DiagnosticsView_ShippedWith" xml:space="preserve">
+    <value>Shipped with</value>
+  </data>
+  <data name="DiagnosticsView_CurrentGpuPowerLimit" xml:space="preserve">
+    <value>Current GPU power limit</value>
+  </data>
+  <data name="DiagnosticsView_ReadTheGpuSCurrentPowerLimitDirectlyFromTh" xml:space="preserve">
+    <value>Read the GPU's current power limit directly from the driver. Read-only, does not change anything.</value>
+  </data>
+  <data name="DiagnosticsView_CheckCurrentGpuPowerLimit" xml:space="preserve">
+    <value>Check current GPU power limit</value>
+  </data>
+  <data name="DiagnosticsView_DropTheAdapterPowerClamp" xml:space="preserve">
+    <value>Drop the adapter power clamp</value>
+  </data>
+  <data name="DiagnosticsView_TheFirmwareTellsTheGpuDriverAboutTheAdapte" xml:space="preserve">
+    <value>The firmware tells the GPU driver about the adapter once, when it evaluates it, and the driver has no way to ask. A driver that has just started has not been told, so restarting the device clears the clamp - and only another notification puts it back. Changing supply does that, and so does a reboot.</value>
+  </data>
+  <data name="DiagnosticsView_TheSameSupplyClampsTheCpuByADifferentRoute" xml:space="preserve">
+    <value>The same supply clamps the CPU by a different route: three of the four AMD SMU power limits pinned low, which no device restart touches. Those are written directly, and put back after a resume or a change of supply - the events that take them away.</value>
+  </data>
+  <data name="DiagnosticsView_YourScreensWillGoBlackForAFewSecondsAndAny" xml:space="preserve">
+    <value>Your screens will go black for a few seconds and anything using the GPU will lose it. Do not do this with a game or a render running.</value>
+  </data>
+  <data name="DiagnosticsView_DropTheClamp" xml:space="preserve">
+    <value>Drop the clamp</value>
+  </data>
+  <data name="DiagnosticsView_RestartsTheGpuDeviceToForceTheDriverToReRe" xml:space="preserve">
+    <value>Restarts the GPU device to force the driver to re-read your adapter's power capability. Screens go black for a few seconds - do not use this with a game or render running.</value>
+  </data>
+  <data name="DiagnosticsView_StopHoldingTheCpuLimits" xml:space="preserve">
+    <value>Stop holding the CPU limits</value>
+  </data>
+  <data name="DiagnosticsView_ReleaseTheAmdSmuPowerLimitsOmencoreIsCurre" xml:space="preserve">
+    <value>Release the AMD SMU power limits OmenCore is currently holding pinned low to work around the adapter clamp</value>
+  </data>
+  <data name="DiagnosticsView_StopHoldingTheCpuPowerLimits" xml:space="preserve">
+    <value>Stop holding the CPU power limits</value>
+  </data>
+  <data name="DiagnosticsView_DoThisOnItsOwn" xml:space="preserve">
+    <value>Do this on its own</value>
+  </data>
+  <data name="DiagnosticsView_KeepTheCpuPowerLimitsRaised" xml:space="preserve">
+    <value>Keep the CPU power limits raised</value>
+  </data>
+  <data name="DiagnosticsView_AppliedAtStartupAfterAResumeAndWhenTheSupp" xml:space="preserve">
+    <value>Applied at startup, after a resume, and when the supply changes - the events that take these limits away. Nothing is written in between, and nothing is taken away from anything that is running.</value>
+  </data>
+  <data name="DiagnosticsView_RestartTheGpuToDropItsClampButOnlyWhileItI" xml:space="preserve">
+    <value>Restart the GPU to drop its clamp - but only while it is asleep</value>
+  </data>
+  <data name="DiagnosticsView_OnlyWhenTheDriverHasParkedTheGpuAndTheDisp" xml:space="preserve">
+    <value>Only when the driver has parked the GPU and the display is running on the integrated one, so there is nothing to interrupt and no screen to black out. If it is awake when the moment comes, it is left alone and you are told - use the button above instead.</value>
+  </data>
+  <data name="DiagnosticsView_ReadFromTheBiosEachTimeThisTabIsOpenedThis" xml:space="preserve">
+    <value>Read from the BIOS each time this tab is opened. This is the machine's own view of the supply attached to it, not a measurement.</value>
+  </data>
+  <data name="DiagnosticsView_GpuPowerUnlockExperimentalBoard8d87Only" xml:space="preserve">
+    <value>GPU power unlock (experimental, board 8D87 only)</value>
+  </data>
+  <data name="DiagnosticsView_ThisBoardSGpuIsHeldUnderItsFull175WRatingB" xml:space="preserve">
+    <value>This board's GPU is held under its full 175 W rating by two firmware gates that OMEN Gaming Hub normally holds open. This pins them open for one moment and asks the driver to re-read them - not an overclock, and not persistent: the firmware takes both gates back on the next resume, adapter change, or reboot.</value>
+  </data>
+  <data name="DiagnosticsView_NotConfirmedOnRealHardwareForcingThisOnAnU" xml:space="preserve">
+    <value>Not confirmed on real hardware. Forcing this on an undersized power adapter has been observed, during the investigation this is built from, to leave the GPU in a degraded state that only cleared after a reboot - on a machine with a history of GPU-driver crashes. This is why it only offers itself on an adapter well above this machine's rated requirement.</value>
+  </data>
+  <data name="DiagnosticsView_TryTheGpuPowerUnlock" xml:space="preserve">
+    <value>Try the GPU power unlock</value>
+  </data>
+  <data name="DiagnosticsView_ExperimentalPinsTwoEcBitsAndFiresOneWmiCom" xml:space="preserve">
+    <value>Experimental. Pins two EC bits and fires one WMI command, then verifies by measured GPU power. Not confirmed on real hardware - see the text above.</value>
+  </data>
+  <data name="DiagnosticsView_TryTheGpuPowerUnlockExperimental" xml:space="preserve">
+    <value>Try the GPU power unlock (experimental)</value>
+  </data>
+  <data name="DiagnosticsView_ModelCapabilities" xml:space="preserve">
+    <value>Model Capabilities</value>
+  </data>
+  <data name="DiagnosticsView_ProductId" xml:space="preserve">
+    <value>Product ID: </value>
+  </data>
+  <data name="DiagnosticsView_UserVerifiedProfile" xml:space="preserve">
+    <value>✓ User-verified profile</value>
+  </data>
+  <data name="DiagnosticsView_InferredNotYetVerified" xml:space="preserve">
+    <value>⚠ Inferred, not yet verified</value>
+  </data>
+  <data name="DiagnosticsView_ThisReflectsWhatOmencoreSModelDatabaseKnow" xml:space="preserve">
+    <value>This reflects what OmenCore's model database knows about the specific board detected on this machine — a feature showing "Not supported" may be a real hardware/firmware limitation rather than an OmenCore bug. These entries describe advanced features (custom curves, independent zones, GPU power boost); basic Auto/Performance/Max fan modes on the General tab are controlled separately and aren't affected by this list. If your model shows unverified and something below looks wrong, please report it.</value>
+  </data>
+  <data name="DiagnosticsView_CustomFanCurves" xml:space="preserve">
+    <value>Custom fan curves</value>
+  </data>
+  <data name="DiagnosticsView_Supported" xml:space="preserve">
+    <value>✓ Supported</value>
+  </data>
+  <data name="DiagnosticsView_NotSupported" xml:space="preserve">
+    <value>✗ Not supported</value>
+  </data>
+  <data name="DiagnosticsView_IndependentCpuGpuFanCurves" xml:space="preserve">
+    <value>Independent CPU/GPU fan curves</value>
+  </data>
+  <data name="DiagnosticsView_RealFanRpmReadback" xml:space="preserve">
+    <value>Real fan RPM readback</value>
+  </data>
+  <data name="DiagnosticsView_GpuMuxSwitch" xml:space="preserve">
+    <value>GPU MUX switch</value>
+  </data>
+  <data name="DiagnosticsView_Present" xml:space="preserve">
+    <value>✓ Present</value>
+  </data>
+  <data name="DiagnosticsView_NotPresent" xml:space="preserve">
+    <value>✗ Not present</value>
+  </data>
+  <data name="DiagnosticsView_GpuPowerBoostTgp" xml:space="preserve">
+    <value>GPU power boost (TGP)</value>
+  </data>
+  <data name="DiagnosticsView_AdvancedOptimusGpuSwitching" xml:space="preserve">
+    <value>Advanced Optimus GPU switching</value>
+  </data>
+  <data name="DiagnosticsView_N4ZoneKeyboardRgb" xml:space="preserve">
+    <value>4-zone keyboard RGB</value>
+  </data>
+  <data name="DiagnosticsView_PerKeyRgb" xml:space="preserve">
+    <value>Per-key RGB</value>
+  </data>
+  <data name="DiagnosticsView_LightBar" xml:space="preserve">
+    <value>Light bar</value>
+  </data>
+  <data name="DiagnosticsView_CpuUndervolting" xml:space="preserve">
+    <value>CPU undervolting</value>
+  </data>
+  <data name="DiagnosticsView_PowerLimitPl1Pl2Adjustment" xml:space="preserve">
+    <value>Power limit (PL1/PL2) adjustment</value>
+  </data>
+  <data name="DiagnosticsView_OverboostMode" xml:space="preserve">
+    <value>Overboost mode</value>
+  </data>
+  <data name="DiagnosticsView_AboutDiagnostics" xml:space="preserve">
+    <value>ℹ️ About Diagnostics</value>
+  </data>
+  <data name="DiagnosticsView_FanDiagnostics_2" xml:space="preserve">
+    <value>Fan Diagnostics:</value>
+  </data>
+  <data name="DiagnosticsView_VerifyFanControlResponsivenessTestDifferen" xml:space="preserve">
+    <value> Verify fan control responsiveness, test different speed levels, and validate RPM readings</value>
+  </data>
+  <data name="DiagnosticsView_KeyboardDiagnostics" xml:space="preserve">
+    <value>Keyboard Diagnostics:</value>
+  </data>
+  <data name="DiagnosticsView_TestIndividualKeyBacklightingVerifyRgbZone" xml:space="preserve">
+    <value> Test individual key backlighting, verify RGB zones, and troubleshoot keyboard lighting issues</value>
+  </data>
+  <data name="DiagnosticsView_DiagnosticToolsAreForTroubleshootingOnlyTh" xml:space="preserve">
+    <value>Diagnostic tools are for troubleshooting only - they temporarily override your normal settings</value>
+  </data>
+  <data name="FanControlView_FanThermalControl" xml:space="preserve">
+    <value>FAN &amp; THERMAL CONTROL</value>
+  </data>
+  <data name="FanControlView_ManageYourLaptopSCoolingPerformanceAllFanC" xml:space="preserve">
+    <value>Manage your laptop's cooling performance. All fan control uses your laptop's standard firmware interface (WMI BIOS). Software commands cannot damage hardware.</value>
+  </data>
+  <data name="FanControlView_CurveActive" xml:space="preserve">
+    <value>CURVE ACTIVE</value>
+  </data>
+  <data name="FanControlView_FanPerformanceDecouplingIsNowTheDefault" xml:space="preserve">
+    <value>Fan/performance decoupling is now the default</value>
+  </data>
+  <data name="FanControlView_DismissFanPerformanceDecouplingNotice" xml:space="preserve">
+    <value>Dismiss fan/performance decoupling notice</value>
+  </data>
+  <data name="FanControlView_Dismiss" xml:space="preserve">
+    <value>Dismiss</value>
+  </data>
+  <data name="FanControlView_PossibleFanHardwareIssueDetected" xml:space="preserve">
+    <value>Possible Fan Hardware Issue Detected</value>
+  </data>
+  <data name="FanControlView_OmencoreUsesYourLaptopSStandardFirmwareInt" xml:space="preserve">
+    <value>OmenCore uses your laptop's standard firmware interface (WMI BIOS). Software commands cannot damage hardware. If the issue persists, contact HP support or check your fans physically.</value>
+  </data>
+  <data name="FanControlView_DismissFanHardwareIssueWarning" xml:space="preserve">
+    <value>Dismiss fan hardware issue warning</value>
+  </data>
+  <data name="FanControlView_FanProfiles" xml:space="preserve">
+    <value>FAN PROFILES</value>
+  </data>
+  <data name="FanControlView_ClearOmencoreFanOwnershipAndReturnControlT" xml:space="preserve">
+    <value>Clear OmenCore fan ownership and return control to firmware auto mode</value>
+  </data>
+  <data name="FanControlView_RestoreOemAutoFanControl" xml:space="preserve">
+    <value>Restore OEM auto fan control</value>
+  </data>
+  <data name="FanControlView_RestoreOemAuto" xml:space="preserve">
+    <value>Restore OEM Auto</value>
+  </data>
+  <data name="FanControlView_ForcesAllFansToMaximumRpmUseForHeavyGaming" xml:space="preserve">
+    <value>Forces all fans to maximum RPM. Use for heavy gaming or stress tests.</value>
+  </data>
+  <data name="FanControlView_MaxFanPresetForcesAllFansTo100" xml:space="preserve">
+    <value>Max fan preset: forces all fans to 100%</value>
+  </data>
+  <data name="FanControlView_DirectFixedFanLevelPreset" xml:space="preserve">
+    <value>Direct fixed fan level preset</value>
+  </data>
+  <data name="FanControlView_HighestNonMaxCoolingCurveReserves100FanDut" xml:space="preserve">
+    <value>Highest non-Max cooling curve. Reserves 100% fan duty for hotter operation; use Max for immediate full RPM.</value>
+  </data>
+  <data name="FanControlView_ExtremeFanPresetHighestNonMaxCoolingCurve" xml:space="preserve">
+    <value>Extreme fan preset: highest non-Max cooling curve</value>
+  </data>
+  <data name="FanControlView_Extreme" xml:space="preserve">
+    <value>Extreme</value>
+  </data>
+  <data name="FanControlView_AggressiveFanCurveThatRampsUpQuicklyGoodFo" xml:space="preserve">
+    <value>Aggressive fan curve that ramps up quickly. Good for gaming sessions.</value>
+  </data>
+  <data name="FanControlView_GamingFanPresetAggressiveRampUpCurve" xml:space="preserve">
+    <value>Gaming fan preset: aggressive ramp-up curve</value>
+  </data>
+  <data name="FanControlView_BiosControlledBalancedCurveRecommendedForE" xml:space="preserve">
+    <value>BIOS-controlled balanced curve. Recommended for everyday use.</value>
+  </data>
+  <data name="FanControlView_AutoFanPresetBiosControlledBalancedCurve" xml:space="preserve">
+    <value>Auto fan preset: BIOS-controlled balanced curve</value>
+  </data>
+  <data name="FanControlView_PrioritizesQuietOperationFansStayLowUntilT" xml:space="preserve">
+    <value>Prioritizes quiet operation. Fans stay low until temps rise significantly.</value>
+  </data>
+  <data name="FanControlView_SilentFanPresetPrioritizesQuietOperation" xml:space="preserve">
+    <value>Silent fan preset: prioritizes quiet operation</value>
+  </data>
+  <data name="FanControlView_CustomFanPresetUserDefinedCurve" xml:space="preserve">
+    <value>Custom fan preset: user-defined curve</value>
+  </data>
+  <data name="FanControlView_DirectFanLevel" xml:space="preserve">
+    <value>DIRECT FAN LEVEL</value>
+  </data>
+  <data name="FanControlView_DragToRequestAFixedFanLevel" xml:space="preserve">
+    <value>Drag to request a fixed fan level</value>
+  </data>
+  <data name="FanControlView_DirectFanLevelPercentage" xml:space="preserve">
+    <value>Direct fan level percentage</value>
+  </data>
+  <data name="FanControlView_ApplyTheSelectedDirectFanLevelNow" xml:space="preserve">
+    <value>Apply the selected direct fan level now</value>
+  </data>
+  <data name="FanControlView_ApplyDirectFanLevel" xml:space="preserve">
+    <value>Apply direct fan level</value>
+  </data>
+  <data name="FanControlView_NameForYourCustomPreset" xml:space="preserve">
+    <value>Name for your custom preset</value>
+  </data>
+  <data name="FanControlView_CustomPresetName" xml:space="preserve">
+    <value>Custom preset name</value>
+  </data>
+  <data name="FanControlView_SaveCurrentCurveAsACustomPreset" xml:space="preserve">
+    <value>Save current curve as a custom preset</value>
+  </data>
+  <data name="FanControlView_SaveCustomPreset" xml:space="preserve">
+    <value>Save custom preset</value>
+  </data>
+  <data name="FanControlView_Saved" xml:space="preserve">
+    <value>Saved:</value>
+  </data>
+  <data name="FanControlView_SelectASavedCustomPresetToLoad" xml:space="preserve">
+    <value>Select a saved custom preset to load</value>
+  </data>
+  <data name="FanControlView_SavedCustomPresets" xml:space="preserve">
+    <value>Saved custom presets</value>
+  </data>
+  <data name="FanControlView_DeleteTheSelectedCustomPreset" xml:space="preserve">
+    <value>Delete the selected custom preset</value>
+  </data>
+  <data name="FanControlView_DeleteSelectedPreset" xml:space="preserve">
+    <value>Delete selected preset</value>
+  </data>
+  <data name="FanControlView_ImportPresetsFromAJsonFile" xml:space="preserve">
+    <value>Import presets from a JSON file</value>
+  </data>
+  <data name="FanControlView_ImportPresetsFromFile" xml:space="preserve">
+    <value>Import presets from file</value>
+  </data>
+  <data name="FanControlView_ExportPresetsToAJsonFile" xml:space="preserve">
+    <value>Export presets to a JSON file</value>
+  </data>
+  <data name="FanControlView_ExportPresetsToFile" xml:space="preserve">
+    <value>Export presets to file</value>
+  </data>
+  <data name="FanControlView_ThisWonTSurviveARestartYet" xml:space="preserve">
+    <value>This won't survive a restart yet</value>
+  </data>
+  <data name="FanControlView_DismissStartupRestoreHint" xml:space="preserve">
+    <value>Dismiss startup restore hint</value>
+  </data>
+  <data name="FanControlView_InstantApply" xml:space="preserve">
+    <value>Instant apply</value>
+  </data>
+  <data name="FanControlView_BypassSmoothingOnSaveApply" xml:space="preserve">
+    <value>Bypass smoothing on Save/Apply</value>
+  </data>
+  <data name="FanControlView_Smoothing" xml:space="preserve">
+    <value>Smoothing:</value>
+  </data>
+  <data name="FanControlView_SmoothingDurationInMilliseconds" xml:space="preserve">
+    <value>Smoothing duration in milliseconds</value>
+  </data>
+  <data name="FanControlView_Step" xml:space="preserve">
+    <value>Step:</value>
+  </data>
+  <data name="FanControlView_SmoothingStepInMilliseconds" xml:space="preserve">
+    <value>Smoothing step in milliseconds</value>
+  </data>
+  <data name="FanControlView_IndependentCpuGpu" xml:space="preserve">
+    <value>Independent CPU/GPU</value>
+  </data>
+  <data name="FanControlView_GpuFanWritesAreModelDependentUnifiedCurveM" xml:space="preserve">
+    <value>GPU fan writes are model-dependent; unified curve mode remains the safe default</value>
+  </data>
+  <data name="FanControlView_GpuFanCurveSupportStatus" xml:space="preserve">
+    <value>GPU fan curve support status</value>
+  </data>
+  <data name="FanControlView_VisualCurveEditor" xml:space="preserve">
+    <value>VISUAL CURVE EDITOR</value>
+  </data>
+  <data name="FanControlView_AddANewCurvePointMax10Points" xml:space="preserve">
+    <value>Add a new curve point (max 10 points)</value>
+  </data>
+  <data name="FanControlView_AddCurvePoint" xml:space="preserve">
+    <value>Add curve point</value>
+  </data>
+  <data name="FanControlView_Remove" xml:space="preserve">
+    <value>− Remove</value>
+  </data>
+  <data name="FanControlView_RemoveTheLastCurvePointMin2Points" xml:space="preserve">
+    <value>Remove the last curve point (min 2 points)</value>
+  </data>
+  <data name="FanControlView_RemoveLastCurvePoint" xml:space="preserve">
+    <value>Remove last curve point</value>
+  </data>
+  <data name="FanControlView_Reset" xml:space="preserve">
+    <value>↺ Reset</value>
+  </data>
+  <data name="FanControlView_ResetCurveToDefault" xml:space="preserve">
+    <value>Reset curve to default</value>
+  </data>
+  <data name="FanControlView_CopyCode" xml:space="preserve">
+    <value>📋 Copy Code</value>
+  </data>
+  <data name="FanControlView_CopyThisCurveAsAShareCodeYouCanPasteIntoDi" xml:space="preserve">
+    <value>Copy this curve as a share code you can paste into Discord, Reddit, or a GitHub comment</value>
+  </data>
+  <data name="FanControlView_CopyCurveAsShareCode" xml:space="preserve">
+    <value>Copy curve as share code</value>
+  </data>
+  <data name="FanControlView_PasteCode" xml:space="preserve">
+    <value>📥 Paste Code</value>
+  </data>
+  <data name="FanControlView_ImportAFanCurveFromAShareCodeOnTheClipboar" xml:space="preserve">
+    <value>Import a fan curve from a share code on the clipboard</value>
+  </data>
+  <data name="FanControlView_ImportCurveFromClipboardShareCode" xml:space="preserve">
+    <value>Import curve from clipboard share code</value>
+  </data>
+  <data name="FanControlView_HowToUse" xml:space="preserve">
+    <value>💡 How to Use:</value>
+  </data>
+  <data name="FanControlView_DragPointsToAdjustTemperatureFanSpeedMappi" xml:space="preserve">
+    <value>• Drag points to adjust temperature/fan speed mapping</value>
+  </data>
+  <data name="FanControlView_ClickEmptyAreaToAddNewPoints" xml:space="preserve">
+    <value>• Click empty area to add new points</value>
+  </data>
+  <data name="FanControlView_RightClickAPointToRemoveIt" xml:space="preserve">
+    <value>• Right-click a point to remove it</value>
+  </data>
+  <data name="FanControlView_BlueLineShowsCurrentTemperatureMaxOfCpuGpu" xml:space="preserve">
+    <value>• Blue line shows current temperature (max of CPU/GPU)</value>
+  </data>
+  <data name="FanControlView_LivePreview" xml:space="preserve">
+    <value>Live Preview:</value>
+  </data>
+  <data name="FanControlView_CurrentPoints" xml:space="preserve">
+    <value>Current Points:</value>
+  </data>
+  <data name="FanControlView_FanCurveByCpuTemp" xml:space="preserve">
+    <value>FAN CURVE (by CPU temp)</value>
+  </data>
+  <data name="FanControlView_AddCpuCurvePoint" xml:space="preserve">
+    <value>Add CPU curve point</value>
+  </data>
+  <data name="FanControlView_RemoveLastCpuCurvePoint" xml:space="preserve">
+    <value>Remove last CPU curve point</value>
+  </data>
+  <data name="FanControlView_ResetCpuCurveToDefault" xml:space="preserve">
+    <value>Reset CPU curve to default</value>
+  </data>
+  <data name="FanControlView_FanCurveByGpuTemp" xml:space="preserve">
+    <value>FAN CURVE (by GPU temp)</value>
+  </data>
+  <data name="FanControlView_CopyCpuCurveToGpu" xml:space="preserve">
+    <value>Copy CPU curve to GPU</value>
+  </data>
+  <data name="FanControlView_AddGpuCurvePoint" xml:space="preserve">
+    <value>Add GPU curve point</value>
+  </data>
+  <data name="FanControlView_RemoveLastGpuCurvePoint" xml:space="preserve">
+    <value>Remove last GPU curve point</value>
+  </data>
+  <data name="FanControlView_ResetGpuCurveToDefault" xml:space="preserve">
+    <value>Reset GPU curve to default</value>
+  </data>
+  <data name="FanControlView_TemperatureHistory" xml:space="preserve">
+    <value>TEMPERATURE HISTORY</value>
+  </data>
+  <data name="FanControlView_RealTimeStatus" xml:space="preserve">
+    <value>REAL-TIME STATUS</value>
+  </data>
+  <data name="FanControlView_ThermalProtectionActive" xml:space="preserve">
+    <value>Thermal Protection Active</value>
+  </data>
+  <data name="FanControlView_FanControlOwner" xml:space="preserve">
+    <value>FAN CONTROL OWNER</value>
+  </data>
+  <data name="FanControlView_CalibrationWizard" xml:space="preserve">
+    <value>CALIBRATION WIZARD</value>
+  </data>
+  <data name="FanControlView_OpenFanCalibrationWizard" xml:space="preserve">
+    <value>Open fan calibration wizard</value>
+  </data>
+  <data name="FanControlView_Cpu" xml:space="preserve">
+    <value>CPU: </value>
+  </data>
+  <data name="FanControlView_Gpu" xml:space="preserve">
+    <value>GPU: </value>
+  </data>
+  <data name="FanDiagnosticsView_SelectedFan" xml:space="preserve">
+    <value>Selected Fan</value>
+  </data>
+  <data name="FanDiagnosticsView_TargetPercent" xml:space="preserve">
+    <value>Target Percent</value>
+  </data>
+  <data name="FanDiagnosticsView_ApplyVerify" xml:space="preserve">
+    <value>Apply &amp; Verify</value>
+  </data>
+  <data name="FanDiagnosticsView_CurrentState" xml:space="preserve">
+    <value>Current State</value>
+  </data>
+  <data name="FanDiagnosticsView_Rpm" xml:space="preserve">
+    <value>RPM:</value>
+  </data>
+  <data name="FanDiagnosticsView_SourceOfRpmDataEcDirectEcReadHwmonLibrehar" xml:space="preserve">
+    <value>Source of RPM data: EC=Direct EC read, HWMon=LibreHardwareMonitor, MAB=MSI Afterburner, Est=Estimated</value>
+  </data>
+  <data name="FanDiagnosticsView_Level" xml:space="preserve">
+    <value>Level:</value>
+  </data>
+  <data name="FanDiagnosticsView_GuidedFanVerification" xml:space="preserve">
+    <value>Guided Fan Verification</value>
+  </data>
+  <data name="FanDiagnosticsView_Tests3060100" xml:space="preserve">
+    <value>Tests: 30% → 60% → 100%</value>
+  </data>
+  <data name="FanDiagnosticsView_RunGuidedFanVerification" xml:space="preserve">
+    <value>Run Guided Fan Verification</value>
+  </data>
+  <data name="FanDiagnosticsView_VerificationResults" xml:space="preserve">
+    <value>Verification Results</value>
+  </data>
+  <data name="FanDiagnosticsView_CopyResults" xml:space="preserve">
+    <value>Copy Results</value>
+  </data>
+  <data name="FanDiagnosticsView_History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="FanDiagnosticsView_Requested" xml:space="preserve">
+    <value>Requested: </value>
+  </data>
+  <data name="FanDiagnosticsView_Readback" xml:space="preserve">
+    <value>%  , Readback: </value>
+  </data>
+  <data name="FanDiagnosticsView_Evidence" xml:space="preserve">
+    <value>Evidence: </value>
+  </data>
+  <data name="GameLibraryView_GameLibrary" xml:space="preserve">
+    <value>🎮 Game Library</value>
+  </data>
+  <data name="GameLibraryView_AutomaticallyDetectedGamesFromSteamEpicGog" xml:space="preserve">
+    <value>Automatically detected games from Steam, Epic, GOG, and more</value>
+  </data>
+  <data name="GameLibraryView_SearchGames" xml:space="preserve">
+    <value>Search games...</value>
+  </data>
+  <data name="GameLibraryView_RescanAllGamePlatforms" xml:space="preserve">
+    <value>Rescan all game platforms</value>
+  </data>
+  <data name="GameLibraryView_ManuallyAddAGameExecutable" xml:space="preserve">
+    <value>Manually add a game executable</value>
+  </data>
+  <data name="GameLibraryView_AddGame" xml:space="preserve">
+    <value>Add Game</value>
+  </data>
+  <data name="GameLibraryView_ScanningGameLibraries" xml:space="preserve">
+    <value>Scanning game libraries...</value>
+  </data>
+  <data name="GameLibraryView_LaunchSelectedGame" xml:space="preserve">
+    <value>Launch selected game</value>
+  </data>
+  <data name="GameLibraryView_CreatePerformanceProfileForSelectedGame" xml:space="preserve">
+    <value>Create performance profile for selected game</value>
+  </data>
+  <data name="GameLibraryView_CreateProfile" xml:space="preserve">
+    <value>Create Profile</value>
+  </data>
+  <data name="GameLibraryView_EditExistingProfile" xml:space="preserve">
+    <value>Edit existing profile</value>
+  </data>
+  <data name="GameLibraryView_EditProfile" xml:space="preserve">
+    <value>Edit Profile</value>
+  </data>
+  <data name="GameProfileManagerView_GameProfileManager" xml:space="preserve">
+    <value>Game Profile Manager</value>
+  </data>
+  <data name="GameProfileManagerView_AutomaticallySwitchSettingsWhenGamesLaunch" xml:space="preserve">
+    <value>Automatically switch settings when games launch</value>
+  </data>
+  <data name="GameProfileManagerView_SearchProfiles" xml:space="preserve">
+    <value>Search profiles...</value>
+  </data>
+  <data name="GameProfileManagerView_NewProfile" xml:space="preserve">
+    <value>New Profile</value>
+  </data>
+  <data name="GameProfileManagerView_Duplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="GameProfileManagerView_ImportProfiles" xml:space="preserve">
+    <value>Import Profiles</value>
+  </data>
+  <data name="GameProfileManagerView_ExportProfiles" xml:space="preserve">
+    <value>Export Profiles</value>
+  </data>
+  <data name="GameProfileManagerView_ProfileSettings" xml:space="preserve">
+    <value>Profile Settings</value>
+  </data>
+  <data name="GameProfileManagerView_ProfileName" xml:space="preserve">
+    <value>Profile Name</value>
+  </data>
+  <data name="GameProfileManagerView_ExecutableNameEGRocketleagueExe" xml:space="preserve">
+    <value>Executable Name (e.g., RocketLeague.exe)</value>
+  </data>
+  <data name="GameProfileManagerView_ExecutablePathOptionalForSpecificInstalls" xml:space="preserve">
+    <value>Executable Path (Optional - for specific installs)</value>
+  </data>
+  <data name="GameProfileManagerView_Browse" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="GameProfileManagerView_AlsoApplyToOptionalCommaSeparatedExeNames" xml:space="preserve">
+    <value>Also Apply To (Optional - comma-separated .exe names)</value>
+  </data>
+  <data name="GameProfileManagerView_OtherGamesThatShouldShareThisProfileSSetti" xml:space="preserve">
+    <value>Other games that should share this profile's settings, e.g. game2.exe, game3.exe. Lets one profile act as a default for a list of games.</value>
+  </data>
+  <data name="GameProfileManagerView_EnableAutoSwitch" xml:space="preserve">
+    <value>Enable Auto-Switch</value>
+  </data>
+  <data name="GameProfileManagerView_PerformanceSettings" xml:space="preserve">
+    <value>Performance Settings</value>
+  </data>
+  <data name="GameProfileManagerView_FanPreset" xml:space="preserve">
+    <value>Fan Preset</value>
+  </data>
+  <data name="GameProfileManagerView_CpuCoreUndervoltMv" xml:space="preserve">
+    <value>CPU Core Undervolt (mV)</value>
+  </data>
+  <data name="GameProfileManagerView_GpuMode" xml:space="preserve">
+    <value>GPU Mode</value>
+  </data>
+  <data name="GameProfileManagerView_LightingSettings" xml:space="preserve">
+    <value>Lighting Settings</value>
+  </data>
+  <data name="GameProfileManagerView_KeyboardLightingProfile" xml:space="preserve">
+    <value>Keyboard Lighting Profile</value>
+  </data>
+  <data name="GameProfileManagerView_PeripheralLightingProfile" xml:space="preserve">
+    <value>Peripheral Lighting Profile</value>
+  </data>
+  <data name="GameProfileManagerView_AdvancedSettings" xml:space="preserve">
+    <value>Advanced Settings</value>
+  </data>
+  <data name="GameProfileManagerView_PriorityExactExecutablePathsWinFirstHigher" xml:space="preserve">
+    <value>Priority (exact executable paths win first; higher priority breaks ties)</value>
+  </data>
+  <data name="GameProfileManagerView_RestoreDefaultFanPerformanceSettingsWhenGa" xml:space="preserve">
+    <value>Restore default fan/performance settings when game exits</value>
+  </data>
+  <data name="GameProfileManagerView_CleanMemoryRamWhenThisGameLaunches" xml:space="preserve">
+    <value>Clean memory (RAM) when this game launches</value>
+  </data>
+  <data name="GameProfileManagerView_Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="GameProfileManagerView_LaunchCount" xml:space="preserve">
+    <value>Launch Count: </value>
+  </data>
+  <data name="GameProfileManagerView_TotalPlaytime" xml:space="preserve">
+    <value>Total Playtime: </value>
+  </data>
+  <data name="GameProfileManagerView_Created" xml:space="preserve">
+    <value>Created: </value>
+  </data>
+  <data name="GameProfileManagerView_Modified" xml:space="preserve">
+    <value>Modified: </value>
+  </data>
+  <data name="GameProfileManagerView_SaveClose" xml:space="preserve">
+    <value>Save &amp; Close</value>
+  </data>
+  <data name="GeneralView_PerformanceCooling" xml:space="preserve">
+    <value>PERFORMANCE &amp; COOLING</value>
+  </data>
+  <data name="GeneralView_QuickProfileSelectionForOptimalSystemTunin" xml:space="preserve">
+    <value>Quick profile selection for optimal system tuning</value>
+  </data>
+  <data name="GeneralView_ThermalSafetyActive" xml:space="preserve">
+    <value>THERMAL SAFETY ACTIVE</value>
+  </data>
+  <data name="GeneralView_TemperatureCriticalFansRunningAtMaxQuietCu" xml:space="preserve">
+    <value>Temperature critical — fans running at Max. Quiet curve will resume when temp drops.</value>
+  </data>
+  <data name="GeneralView_QuickProfiles" xml:space="preserve">
+    <value>QUICK PROFILES</value>
+  </data>
+  <data name="GeneralView_ClickToActivate" xml:space="preserve">
+    <value>Click to activate</value>
+  </data>
+  <data name="GeneralView_PerformanceProfileMaximumCpuGpuPowerAndAgg" xml:space="preserve">
+    <value>Performance profile: maximum CPU/GPU power and aggressive fans</value>
+  </data>
+  <data name="GeneralView_MaximumCpuGpuPowerLimitsAndAggressiveFanCu" xml:space="preserve">
+    <value>Maximum CPU/GPU power limits and aggressive fan curves for gaming and heavy workloads</value>
+  </data>
+  <data name="GeneralView_MaximumOutput" xml:space="preserve">
+    <value>MAXIMUM OUTPUT</value>
+  </data>
+  <data name="GeneralView_Active" xml:space="preserve">
+    <value>✓ ACTIVE</value>
+  </data>
+  <data name="GeneralView_BalancedProfileDefaultHpPowerAndThermals" xml:space="preserve">
+    <value>Balanced profile: default HP power and thermals</value>
+  </data>
+  <data name="GeneralView_DefaultHpProfileBalancedPowerAndThermalsFo" xml:space="preserve">
+    <value>Default HP profile — balanced power and thermals for everyday use</value>
+  </data>
+  <data name="GeneralView_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="GeneralView_AutoFans" xml:space="preserve">
+    <value>Auto Fans</value>
+  </data>
+  <data name="GeneralView_QuietProfileReducedPowerAndMinimalFanSpeed" xml:space="preserve">
+    <value>Quiet profile: reduced power and minimal fan speed</value>
+  </data>
+  <data name="GeneralView_ReducedPowerLimitsAndMinimalFanSpeedForSil" xml:space="preserve">
+    <value>Reduced power limits and minimal fan speed for silent operation</value>
+  </data>
+  <data name="GeneralView_PowerSave" xml:space="preserve">
+    <value>Power Save</value>
+  </data>
+  <data name="GeneralView_LowFans" xml:space="preserve">
+    <value>Low Fans</value>
+  </data>
+  <data name="GeneralView_CustomProfileUserDefinedFanCurvesAndPowerS" xml:space="preserve">
+    <value>Custom profile: user-defined fan curves and power settings</value>
+  </data>
+  <data name="GeneralView_UserDefinedFanCurvesAndPowerSettingsViaThe" xml:space="preserve">
+    <value>User-defined fan curves and power settings via the Custom tab</value>
+  </data>
+  <data name="GeneralView_AdvancedControl" xml:space="preserve">
+    <value>ADVANCED CONTROL</value>
+  </data>
+  <data name="GeneralView_CustomTab" xml:space="preserve">
+    <value>Custom Tab</value>
+  </data>
+  <data name="GeneralView_FanModeMax" xml:space="preserve">
+    <value>Fan mode: Max</value>
+  </data>
+  <data name="GeneralView_FansRunAtMaximumSpeedRegardlessOfTheActive" xml:space="preserve">
+    <value>Fans run at maximum speed regardless of the active performance profile</value>
+  </data>
+  <data name="GeneralView_FanModeProfileControlledAutomatic" xml:space="preserve">
+    <value>Fan mode: Profile controlled, automatic</value>
+  </data>
+  <data name="GeneralView_FansFollowTheActivePerformanceProfileBiosA" xml:space="preserve">
+    <value>Fans follow the active performance profile / BIOS auto curve</value>
+  </data>
+  <data name="GeneralView_ProfileControlledAuto" xml:space="preserve">
+    <value>Profile Controlled (Auto)</value>
+  </data>
+  <data name="GeneralView_FanModeCustom" xml:space="preserve">
+    <value>Fan mode: Custom</value>
+  </data>
+  <data name="GeneralView_OpenTheCustomTabToSetAManualFanCurve" xml:space="preserve">
+    <value>Open the Custom tab to set a manual fan curve</value>
+  </data>
+  <data name="GeneralView_Fan" xml:space="preserve">
+    <value>🌀 FAN</value>
+  </data>
+  <data name="GeneralView_Mode" xml:space="preserve">
+    <value>⚡ MODE</value>
+  </data>
+  <data name="GeneralView_Fans" xml:space="preserve">
+    <value>🌀 FANS</value>
+  </data>
+  <data name="HotkeyOsdWindow_OmencoreOsd" xml:space="preserve">
+    <value>OmenCore OSD</value>
+  </data>
+  <data name="HotkeyOsdWindow_Widthandheight" xml:space="preserve">
+    <value>WidthAndHeight</value>
+  </data>
+  <data name="HotkeyOsdWindow_ViaHotkeyCtrlShiftF" xml:space="preserve">
+    <value>via Hotkey (Ctrl+Shift+F)</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_DetectDevices" xml:space="preserve">
+    <value>Detect Devices</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_RunTestPattern" xml:space="preserve">
+    <value>Run Test Pattern</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_ClearTestPattern" xml:space="preserve">
+    <value>Clear Test Pattern</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_CollectLogs" xml:space="preserve">
+    <value>Collect Logs</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_RgbPayloadProbeAdvanced" xml:space="preserve">
+    <value>RGB Payload Probe (advanced)</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_ExperimentalTries5ColourCommandLayoutsForK" xml:space="preserve">
+    <value>Experimental: tries 5 colour-command layouts for keyboards that ignore colour (GitHub #212).</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_DetectedDevices" xml:space="preserve">
+    <value>Detected Devices</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_ServiceStatus" xml:space="preserve">
+    <value>Service Status</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_CorsairIcue" xml:space="preserve">
+    <value>Corsair iCUE:</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_LogitechGHub" xml:space="preserve">
+    <value>Logitech G HUB:</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_RazerChroma" xml:space="preserve">
+    <value>Razer Chroma:</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_HpOmenKeyboard" xml:space="preserve">
+    <value>HP Omen Keyboard:</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_KeyboardLightingTelemetry" xml:space="preserve">
+    <value>Keyboard Lighting Telemetry</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_TroubleshootingTips" xml:space="preserve">
+    <value>Troubleshooting Tips</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_EnsureIcueGHubOrSynapseSoftwareIsRunningFo" xml:space="preserve">
+    <value>• Ensure iCUE, G HUB, or Synapse software is running for respective devices</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_CheckDeviceConnectionsAndTryRePluggingUsbD" xml:space="preserve">
+    <value>• Check device connections and try re-plugging USB devices</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_ForHpOmenKeyboardEnsureWmiBiosSupportIsAva" xml:space="preserve">
+    <value>• For HP Omen keyboard, ensure WMI BIOS support is available</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_RestartTheApplicationAfterInstallingUpdati" xml:space="preserve">
+    <value>• Restart the application after installing/updating lighting software</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_CheckWindowsEventViewerForSdkInitializatio" xml:space="preserve">
+    <value>• Check Windows Event Viewer for SDK initialization errors</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_DiagnosticLogs" xml:space="preserve">
+    <value>Diagnostic Logs</value>
+  </data>
+  <data name="KeyboardMapEditor_OpenDynamicLightingSettings" xml:space="preserve">
+    <value>Open Dynamic Lighting settings</value>
+  </data>
+  <data name="KeyboardMapEditor_OpenTheWindowsDynamicLightingSettingsPage" xml:space="preserve">
+    <value>Open the Windows Dynamic Lighting settings page</value>
+  </data>
+  <data name="KeyboardMapEditor_Brush" xml:space="preserve">
+    <value>Brush:</value>
+  </data>
+  <data name="KeyboardMapEditor_ChooseAColour" xml:space="preserve">
+    <value>Choose a colour</value>
+  </data>
+  <data name="KeyboardMapEditor_ChooseBrushColour" xml:space="preserve">
+    <value>Choose brush colour</value>
+  </data>
+  <data name="KeyboardMapEditor_PickColour" xml:space="preserve">
+    <value>Pick colour…</value>
+  </data>
+  <data name="KeyboardMapEditor_PaintSelected" xml:space="preserve">
+    <value>Paint selected</value>
+  </data>
+  <data name="KeyboardMapEditor_SelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="KeyboardMapEditor_ClearSelection" xml:space="preserve">
+    <value>Clear selection</value>
+  </data>
+  <data name="KeyboardMapEditor_AllBlack" xml:space="preserve">
+    <value>All black</value>
+  </data>
+  <data name="KeyboardMapEditor_ApplyToKeyboard" xml:space="preserve">
+    <value>Apply to keyboard</value>
+  </data>
+  <data name="KeyboardMapEditor_ApplyPerKeyColoursToTheKeyboard" xml:space="preserve">
+    <value>Apply per-key colours to the keyboard</value>
+  </data>
+  <data name="KeyboardMapEditor_SaveToKeyboard" xml:space="preserve">
+    <value>Save to keyboard</value>
+  </data>
+  <data name="KeyboardMapEditor_SaveThePictureIntoTheKeyboardSoItSurvivesA" xml:space="preserve">
+    <value>Save the picture into the keyboard so it survives a power cycle</value>
+  </data>
+  <data name="KeyboardMapEditor_AppliesThePictureThenStoresItInTheKeyboard" xml:space="preserve">
+    <value>Applies the picture, then stores it in the keyboard's own memory so it survives a power cycle and shows with OmenCore closed. This writes to the keyboard's flash, so use it when you have finished rather than after every change.</value>
+  </data>
+  <data name="KeyboardMapEditor_WholeKeyboard" xml:space="preserve">
+    <value>Whole keyboard:</value>
+  </data>
+  <data name="KeyboardMapEditor_MasterBrightnessForTheWholeKeyboardAndLigh" xml:space="preserve">
+    <value>Master brightness for the whole keyboard and light bar</value>
+  </data>
+  <data name="KeyboardMapEditor_Selected" xml:space="preserve">
+    <value>Selected:</value>
+  </data>
+  <data name="KeyboardMapEditor_BrightnessOfTheSelectedKeysAndLightBarZone" xml:space="preserve">
+    <value>Brightness of the selected keys and light bar zones</value>
+  </data>
+  <data name="KeyboardMapEditor_ClickAKeyToSelectOrDeselectItDragABoxToSel" xml:space="preserve">
+    <value>Click a key to select or deselect it. Drag a box to select a region — it can span the keyboard and the light bar. Hold Ctrl or Shift while dragging to add to the selection.</value>
+  </data>
+  <data name="LightingView_RgbLightingPeripherals" xml:space="preserve">
+    <value>RGB Lighting &amp; Peripherals</value>
+  </data>
+  <data name="LightingView_OmenKeyboard" xml:space="preserve">
+    <value>OMEN Keyboard</value>
+  </data>
+  <data name="LightingView_ControlOwnership" xml:space="preserve">
+    <value>Control ownership</value>
+  </data>
+  <data name="LightingView_ReapplySavedKeyboardColorsThroughTheActive" xml:space="preserve">
+    <value>Reapply saved keyboard colors through the active HP keyboard backend</value>
+  </data>
+  <data name="LightingView_RestoreKeyboardLighting" xml:space="preserve">
+    <value>Restore keyboard lighting</value>
+  </data>
+  <data name="LightingView_RestoreKeyboard" xml:space="preserve">
+    <value>Restore Keyboard</value>
+  </data>
+  <data name="LightingView_RgbSurfaceObservation" xml:space="preserve">
+    <value>RGB surface observation</value>
+  </data>
+  <data name="LightingView_RecordThePhysicalRgbOrBacklightSurfaceThat" xml:space="preserve">
+    <value>Record the physical RGB or backlight surface that changed after probing</value>
+  </data>
+  <data name="LightingView_ObservedRgbSurface" xml:space="preserve">
+    <value>Observed RGB surface</value>
+  </data>
+  <data name="LightingView_ApplyASafeBrightProbeColorThroughTheActive" xml:space="preserve">
+    <value>Apply a safe bright probe color through the active HP keyboard backend</value>
+  </data>
+  <data name="LightingView_RunRgbSurfaceProbe" xml:space="preserve">
+    <value>Run RGB surface probe</value>
+  </data>
+  <data name="LightingView_SaveTheSelectedObservedRgbSurfaceForDiagno" xml:space="preserve">
+    <value>Save the selected observed RGB surface for diagnostic exports</value>
+  </data>
+  <data name="LightingView_SaveObservedRgbSurface" xml:space="preserve">
+    <value>Save observed RGB surface</value>
+  </data>
+  <data name="LightingView_SyncCurrentColorAcrossAllConnectedRgbDevic" xml:space="preserve">
+    <value>Sync current color across all connected RGB devices</value>
+  </data>
+  <data name="LightingView_SyncAllRgbDevices" xml:space="preserve">
+    <value>Sync all RGB devices</value>
+  </data>
+  <data name="LightingView_SyncAllRgb" xml:space="preserve">
+    <value>Sync All RGB</value>
+  </data>
+  <data name="LightingView_SceneQuickSelect" xml:space="preserve">
+    <value>Scene Quick Select</value>
+  </data>
+  <data name="LightingView_EnableOrDisableSceneQuickSelectControlsInT" xml:space="preserve">
+    <value>Enable or disable Scene Quick Select controls in this card</value>
+  </data>
+  <data name="LightingView_EnableSceneQuickSelectCard" xml:space="preserve">
+    <value>Enable Scene Quick Select card</value>
+  </data>
+  <data name="LightingView_AmbientScreenLighting" xml:space="preserve">
+    <value>Ambient Screen Lighting</value>
+  </data>
+  <data name="LightingView_RgbSyncsWithScreenEdgeColors" xml:space="preserve">
+    <value>RGB syncs with screen edge colors</value>
+  </data>
+  <data name="LightingView_AudioReactiveLighting" xml:space="preserve">
+    <value>Audio Reactive Lighting</value>
+  </data>
+  <data name="LightingView_PulsesWithSystemAudioOutputViaWasapiLoopba" xml:space="preserve">
+    <value>Pulses with system audio output via WASAPI loopback</value>
+  </data>
+  <data name="LightingView_AudioReactiveVisualizationMode" xml:space="preserve">
+    <value>Audio reactive visualization mode</value>
+  </data>
+  <data name="LightingView_Sensitivity" xml:space="preserve">
+    <value>Sensitivity</value>
+  </data>
+  <data name="LightingView_AudioReactiveSensitivity" xml:space="preserve">
+    <value>Audio reactive sensitivity</value>
+  </data>
+  <data name="LightingView_CorsairDevices" xml:space="preserve">
+    <value>Corsair Devices</value>
+  </data>
+  <data name="LightingView_EnableOrDisableCorsairControlsInThisCard" xml:space="preserve">
+    <value>Enable or disable Corsair controls in this card</value>
+  </data>
+  <data name="LightingView_EnableCorsairDevicesCard" xml:space="preserve">
+    <value>Enable Corsair Devices card</value>
+  </data>
+  <data name="LightingView_DiscoverDevices" xml:space="preserve">
+    <value>Discover Devices</value>
+  </data>
+  <data name="LightingView_Identify" xml:space="preserve">
+    <value>💡 Identify</value>
+  </data>
+  <data name="LightingView_FlashDeviceLedsToIdentifyThisDevice" xml:space="preserve">
+    <value>Flash device LEDs to identify this device</value>
+  </data>
+  <data name="LightingView_LightingPreset" xml:space="preserve">
+    <value>Lighting Preset:</value>
+  </data>
+  <data name="LightingView_ApplyToSystem" xml:space="preserve">
+    <value>Apply to System</value>
+  </data>
+  <data name="LightingView_CustomRgbColor" xml:space="preserve">
+    <value>Custom RGB Color</value>
+  </data>
+  <data name="LightingView_ColorHex" xml:space="preserve">
+    <value>Color (Hex):</value>
+  </data>
+  <data name="LightingView_ApplyColor" xml:space="preserve">
+    <value>Apply Color</value>
+  </data>
+  <data name="LightingView_DpiConfiguration" xml:space="preserve">
+    <value>DPI Configuration</value>
+  </data>
+  <data name="LightingView_DpiStages" xml:space="preserve">
+    <value>DPI Stages:</value>
+  </data>
+  <data name="LightingView_SelectASavedDpiProfileSaveWithSameNameWill" xml:space="preserve">
+    <value>Select a saved DPI profile (Save with same name will prompt to overwrite)</value>
+  </data>
+  <data name="LightingView_SavedDpiProfileSelection" xml:space="preserve">
+    <value>Saved DPI profile selection</value>
+  </data>
+  <data name="LightingView_SaveProfile" xml:space="preserve">
+    <value>Save Profile</value>
+  </data>
+  <data name="LightingView_SaveCurrentDpiStagesAsAProfile" xml:space="preserve">
+    <value>Save current DPI stages as a profile</value>
+  </data>
+  <data name="LightingView_ApplyProfile" xml:space="preserve">
+    <value>Apply Profile</value>
+  </data>
+  <data name="LightingView_ApplySelectedDpiProfileToCurrentStages" xml:space="preserve">
+    <value>Apply selected DPI profile to current stages</value>
+  </data>
+  <data name="LightingView_DeleteTheSelectedDpiProfile" xml:space="preserve">
+    <value>Delete the selected DPI profile</value>
+  </data>
+  <data name="LightingView_RestoreDefaults" xml:space="preserve">
+    <value>Restore Defaults</value>
+  </data>
+  <data name="LightingView_ApplyDpiSettings" xml:space="preserve">
+    <value>Apply DPI Settings</value>
+  </data>
+  <data name="LightingView_LogitechDevices" xml:space="preserve">
+    <value>Logitech Devices</value>
+  </data>
+  <data name="LightingView_EnableOrDisableLogitechControlsInThisCard" xml:space="preserve">
+    <value>Enable or disable Logitech controls in this card</value>
+  </data>
+  <data name="LightingView_EnableLogitechDevicesCard" xml:space="preserve">
+    <value>Enable Logitech Devices card</value>
+  </data>
+  <data name="LightingView_ApplyToAllSystemRgb" xml:space="preserve">
+    <value>🎨 Apply to All System RGB</value>
+  </data>
+  <data name="LightingView_SyncColorAcrossAllDetectedLogitechDevices" xml:space="preserve">
+    <value>Sync color across all detected Logitech devices</value>
+  </data>
+  <data name="LightingView_StaticColor" xml:space="preserve">
+    <value>Static Color:</value>
+  </data>
+  <data name="LightingView_LogitechColorRedValue" xml:space="preserve">
+    <value>Logitech color red value</value>
+  </data>
+  <data name="LightingView_LogitechColorGreenValue" xml:space="preserve">
+    <value>Logitech color green value</value>
+  </data>
+  <data name="LightingView_LogitechColorBlueValue" xml:space="preserve">
+    <value>Logitech color blue value</value>
+  </data>
+  <data name="LightingView_RazerDevices" xml:space="preserve">
+    <value>Razer Devices</value>
+  </data>
+  <data name="LightingView_EnableOrDisableRazerControlsInThisCard" xml:space="preserve">
+    <value>Enable or disable Razer controls in this card</value>
+  </data>
+  <data name="LightingView_EnableRazerDevicesCard" xml:space="preserve">
+    <value>Enable Razer Devices card</value>
+  </data>
+  <data name="LightingView_RequiresRazerSynapseToBeInstalledAndRunnin" xml:space="preserve">
+    <value>Requires Razer Synapse to be installed and running</value>
+  </data>
+  <data name="LightingView_LightingControl" xml:space="preserve">
+    <value>Lighting Control</value>
+  </data>
+  <data name="LightingView_Color" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="LightingView_RazerColorRedValue" xml:space="preserve">
+    <value>Razer color red value</value>
+  </data>
+  <data name="LightingView_RazerColorGreenValue" xml:space="preserve">
+    <value>Razer color green value</value>
+  </data>
+  <data name="LightingView_RazerColorBlueValue" xml:space="preserve">
+    <value>Razer color blue value</value>
+  </data>
+  <data name="LightingView_ApplyStatic" xml:space="preserve">
+    <value>Apply Static</value>
+  </data>
+  <data name="LightingView_Breathing" xml:space="preserve">
+    <value>Breathing</value>
+  </data>
+  <data name="LightingView_SpectrumCycle" xml:space="preserve">
+    <value>Spectrum Cycle</value>
+  </data>
+  <data name="LightingView_RazerSupportIsLimitedToDetectedDeviceStatu" xml:space="preserve">
+    <value>Razer support is limited to detected-device status and validated lighting actions for supported hardware.</value>
+  </data>
+  <data name="LightingView_OpenrgbDevices" xml:space="preserve">
+    <value>OpenRGB Devices</value>
+  </data>
+  <data name="LightingView_OptionalGenericRgbControlViaOpenrgbServerF" xml:space="preserve">
+    <value>Optional generic RGB control via OpenRGB server for motherboards, RAM, GPUs, fans, LED strips, and other peripherals.</value>
+  </data>
+  <data name="LightingView_QuickColors" xml:space="preserve">
+    <value>⚡ QUICK COLORS</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorRed" xml:space="preserve">
+    <value>OpenRGB quick color: Red</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorBlue" xml:space="preserve">
+    <value>OpenRGB quick color: Blue</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorGreen" xml:space="preserve">
+    <value>OpenRGB quick color: Green</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorPurple" xml:space="preserve">
+    <value>OpenRGB quick color: Purple</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorYellow" xml:space="preserve">
+    <value>OpenRGB quick color: Yellow</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorWhite" xml:space="preserve">
+    <value>OpenRGB quick color: White</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorOrange" xml:space="preserve">
+    <value>OpenRGB quick color: Orange</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorOff" xml:space="preserve">
+    <value>OpenRGB quick color: Off</value>
+  </data>
+  <data name="LightingView_OpenrgbIntegration" xml:space="preserve">
+    <value>OpenRGB Integration:</value>
+  </data>
+  <data name="LightingView_ControlsAnyRgbDeviceSupportedByOpenrgbMoth" xml:space="preserve">
+    <value> Controls any RGB device supported by OpenRGB (motherboards, RAM, GPUs, coolers, LED strips, etc). </value>
+  </data>
+  <data name="LightingView_DownloadOpenrgbFromOpenrgbOrgAndEnableTheS" xml:space="preserve">
+    <value>Download OpenRGB from openrgb.org and enable the SDK Server (Settings → SDK Server → Start Server).</value>
+  </data>
+  <data name="LightingView_HpOmenKeyboard" xml:space="preserve">
+    <value>HP OMEN Keyboard</value>
+  </data>
+  <data name="LightingView_EnableOrDisableHpOmenKeyboardControlsInThi" xml:space="preserve">
+    <value>Enable or disable HP OMEN keyboard controls in this card</value>
+  </data>
+  <data name="LightingView_EnableHpOmenKeyboardCard" xml:space="preserve">
+    <value>Enable HP OMEN Keyboard card</value>
+  </data>
+  <data name="LightingView_YourLaptopSBuiltIn4ZoneRgbKeyboard" xml:space="preserve">
+    <value>Your laptop's built-in 4-zone RGB keyboard</value>
+  </data>
+  <data name="LightingView_QuickColorsClickToApplyToAllZones" xml:space="preserve">
+    <value>⚡ QUICK COLORS (click to apply to all zones)</value>
+  </data>
+  <data name="LightingView_OmenRed" xml:space="preserve">
+    <value>OMEN Red</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorOmenRed" xml:space="preserve">
+    <value>Keyboard quick color: OMEN Red</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorBlue" xml:space="preserve">
+    <value>Keyboard quick color: Blue</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorGreen" xml:space="preserve">
+    <value>Keyboard quick color: Green</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorPurple" xml:space="preserve">
+    <value>Keyboard quick color: Purple</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorYellow" xml:space="preserve">
+    <value>Keyboard quick color: Yellow</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorWhite" xml:space="preserve">
+    <value>Keyboard quick color: White</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorCyan" xml:space="preserve">
+    <value>Keyboard quick color: Cyan</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorPink" xml:space="preserve">
+    <value>Keyboard quick color: Pink</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorOff" xml:space="preserve">
+    <value>Keyboard quick color: Off</value>
+  </data>
+  <data name="LightingView_KeyboardZonesClickZoneToChangeColor" xml:space="preserve">
+    <value>🎹 KEYBOARD ZONES (click zone to change color)</value>
+  </data>
+  <data name="LightingView_Preset" xml:space="preserve">
+    <value>Preset:</value>
+  </data>
+  <data name="LightingView_KeyboardLightingPresetSelection" xml:space="preserve">
+    <value>Keyboard lighting preset selection</value>
+  </data>
+  <data name="LightingView_ApplyZoneColorsToKeyboard" xml:space="preserve">
+    <value>Apply zone colors to keyboard</value>
+  </data>
+  <data name="LightingView_AllSameColor" xml:space="preserve">
+    <value>All Same Color</value>
+  </data>
+  <data name="LightingView_ApplyZone1ColorToAllZones" xml:space="preserve">
+    <value>Apply Zone 1 color to all zones</value>
+  </data>
+  <data name="LightingView_ApplyColorsOnStartup" xml:space="preserve">
+    <value>Apply Colors on Startup</value>
+  </data>
+  <data name="LightingView_AutomaticallyRestoreSavedKeyboardColorsWhe" xml:space="preserve">
+    <value>Automatically restore saved keyboard colors when OmenCore starts</value>
+  </data>
+  <data name="LightingView_ApplyKeyboardColorsOnStartup" xml:space="preserve">
+    <value>Apply keyboard colors on startup</value>
+  </data>
+  <data name="LightingView_OmenMax" xml:space="preserve">
+    <value>OMEN Max</value>
+  </data>
+  <data name="LightingView_MeasuredLayoutEveryKeyAtThePositionTheKeyb" xml:space="preserve">
+    <value>Measured layout — every key at the position the keyboard reported</value>
+  </data>
+  <data name="LightingView_FillAll" xml:space="preserve">
+    <value>Fill All</value>
+  </data>
+  <data name="LightingView_ApplyPerKeyColorsToKeyboard" xml:space="preserve">
+    <value>Apply per-key colors to keyboard</value>
+  </data>
+  <data name="LightingView_KeyboardEffects" xml:space="preserve">
+    <value>Keyboard effects</value>
+  </data>
+  <data name="LightingView_RunByTheKeyboardSOwnControllerTheseKeepRun" xml:space="preserve">
+    <value>Run by the keyboard's own controller. These keep running when OmenCore is closed, and replace any per-key colours.</value>
+  </data>
+  <data name="LightingView_Direction" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="LightingView_CustomColours" xml:space="preserve">
+    <value>Custom colours</value>
+  </data>
+  <data name="LightingView_ChooseTheFirstColour" xml:space="preserve">
+    <value>Choose the first colour</value>
+  </data>
+  <data name="LightingView_ChooseTheFirstCustomEffectColour" xml:space="preserve">
+    <value>Choose the first custom effect colour</value>
+  </data>
+  <data name="LightingView_ChooseTheSecondColour" xml:space="preserve">
+    <value>Choose the second colour</value>
+  </data>
+  <data name="LightingView_ChooseTheSecondCustomEffectColour" xml:space="preserve">
+    <value>Choose the second custom effect colour</value>
+  </data>
+  <data name="LightingView_ApplyEffect" xml:space="preserve">
+    <value>Apply effect</value>
+  </data>
+  <data name="LightingView_WhatSOnItNow" xml:space="preserve">
+    <value>What's on it now?</value>
+  </data>
+  <data name="LightingView_Fn1Fn2Cycle" xml:space="preserve">
+    <value>Fn+1 / Fn+2 cycle</value>
+  </data>
+  <data name="LightingView_TheKeyboardRemembersAListOfEffectsAndSteps" xml:space="preserve">
+    <value>The keyboard remembers a list of effects and steps through it when you press Fn+1 (next) or Fn+2 (previous). Curate that list here and it keeps working with OmenCore closed, or uninstalled.</value>
+  </data>
+  <data name="LightingView_AddToCycle" xml:space="preserve">
+    <value>Add to cycle</value>
+  </data>
+  <data name="LightingView_StageTheEffectColoursSpeedAndDirectionSetA" xml:space="preserve">
+    <value>Stage the effect, colours, speed and direction set above</value>
+  </data>
+  <data name="LightingView_WriteToKeyboard" xml:space="preserve">
+    <value>Write to keyboard</value>
+  </data>
+  <data name="LightingView_SendEveryStagedProfileToTheKeyboard" xml:space="preserve">
+    <value>Send every staged profile to the keyboard</value>
+  </data>
+  <data name="LightingView_Showing" xml:space="preserve">
+    <value>Showing</value>
+  </data>
+  <data name="LightingView_LeaveTheKeyboardShowingThisOneAfterWriting" xml:space="preserve">
+    <value>Leave the keyboard showing this one after writing</value>
+  </data>
+  <data name="LightingView_TakeThisOffTheListItStaysOnTheKeyboard" xml:space="preserve">
+    <value>Take this off the list. It stays on the keyboard.</value>
+  </data>
+  <data name="LightingView_TheStripOnTheFrontOfTheChassisFourZonesLef" xml:space="preserve">
+    <value>The strip on the front of the chassis — four zones, left to right. Separate from the keyboard.</value>
+  </data>
+  <data name="LightingView_ChooseTheLightBarColour" xml:space="preserve">
+    <value>Choose the light bar colour</value>
+  </data>
+  <data name="LightingView_ApplyColour" xml:space="preserve">
+    <value>Apply colour</value>
+  </data>
+  <data name="LightingView_Brightness" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="LightingView_RunAnimation" xml:space="preserve">
+    <value>Run animation</value>
+  </data>
+  <data name="LightingView_AdvancedLightingEffects" xml:space="preserve">
+    <value>🎨 Advanced Lighting Effects</value>
+  </data>
+  <data name="LightingView_TemperatureResponsiveLighting" xml:space="preserve">
+    <value>🌡️ Temperature-Responsive Lighting</value>
+  </data>
+  <data name="LightingView_KeyboardLightBarAndRgbDevicesChangeColorBa" xml:space="preserve">
+    <value>Keyboard, light bar and RGB devices change color based on CPU/GPU temperature</value>
+  </data>
+  <data name="LightingView_EnableTemperatureResponsiveLighting" xml:space="preserve">
+    <value>Enable temperature-responsive lighting</value>
+  </data>
+  <data name="LightingView_TemperatureThresholdsC" xml:space="preserve">
+    <value>Temperature Thresholds (°C)</value>
+  </data>
+  <data name="LightingView_LowTemp" xml:space="preserve">
+    <value>Low Temp</value>
+  </data>
+  <data name="LightingView_MediumTemp" xml:space="preserve">
+    <value>Medium Temp</value>
+  </data>
+  <data name="LightingView_HighTemp" xml:space="preserve">
+    <value>High Temp</value>
+  </data>
+  <data name="LightingView_PerformanceModeSyncedLighting" xml:space="preserve">
+    <value>⚡ Performance Mode Synced Lighting</value>
+  </data>
+  <data name="LightingView_KeyboardLightBarAndRgbDevicesChangeColorBa_2" xml:space="preserve">
+    <value>Keyboard, light bar and RGB devices change color based on current performance mode</value>
+  </data>
+  <data name="LightingView_EnablePerformanceModeSyncedLighting" xml:space="preserve">
+    <value>Enable performance mode synced lighting</value>
+  </data>
+  <data name="LightingView_PerformanceModeColors" xml:space="preserve">
+    <value>Performance Mode Colors</value>
+  </data>
+  <data name="LightingView_ThrottlingIndicators" xml:space="preserve">
+    <value>🚨 Throttling Indicators</value>
+  </data>
+  <data name="LightingView_FlashRedOrangeWhenCpuGpuThermalOrPowerThro" xml:space="preserve">
+    <value>Flash red/orange when CPU/GPU thermal or power throttling occurs</value>
+  </data>
+  <data name="LightingView_EnableThrottlingIndicatorLighting" xml:space="preserve">
+    <value>Enable throttling indicator lighting</value>
+  </data>
+  <data name="LightingView_ThrottlingWarningColor" xml:space="preserve">
+    <value>Throttling Warning Color</value>
+  </data>
+  <data name="LightingView_ThrottlingAlert" xml:space="preserve">
+    <value>⚠️ Throttling Alert</value>
+  </data>
+  <data name="LightingView_ThisFeatureRequiresASupportedHpOmenLaptopW" xml:space="preserve">
+    <value>This feature requires a supported HP OMEN laptop with 4-zone RGB keyboard and the WMI BIOS interface.</value>
+  </data>
+  <data name="LightingView_MacroProfiles" xml:space="preserve">
+    <value>Macro Profiles</value>
+  </data>
+  <data name="LightingView_ActiveProfile" xml:space="preserve">
+    <value>Active Profile:</value>
+  </data>
+  <data name="LightingView_MacroProfileSelection" xml:space="preserve">
+    <value>Macro profile selection</value>
+  </data>
+  <data name="LightingView_LoadProfile" xml:space="preserve">
+    <value>Load Profile</value>
+  </data>
+  <data name="LightingView_UseCorsairIcueOrLogitechGHubSoftwareForAdv" xml:space="preserve">
+    <value>Use Corsair iCUE or Logitech G HUB software for advanced macro configuration.</value>
+  </data>
+  <data name="MainWindow_ApplyYourSavedFanPreset" xml:space="preserve">
+    <value>Apply your saved fan preset</value>
+  </data>
+  <data name="MainWindow_ApplySavedFanPreset" xml:space="preserve">
+    <value>Apply saved fan preset</value>
+  </data>
+  <data name="MainWindow_SwitchPerformanceProfile" xml:space="preserve">
+    <value>Switch performance profile</value>
+  </data>
+  <data name="MainWindow_ApplyRgbLighting" xml:space="preserve">
+    <value>Apply RGB lighting</value>
+  </data>
+  <data name="MainWindow_EnableGamingOptimizations" xml:space="preserve">
+    <value>Enable gaming optimizations</value>
+  </data>
+  <data name="MainWindow_RestoreDefaultsResetFanCurvesLightingAndPe" xml:space="preserve">
+    <value>Restore Defaults: reset fan curves, lighting, and performance mode to their defaults</value>
+  </data>
+  <data name="MainWindow_ExportYourSettings" xml:space="preserve">
+    <value>Export your settings</value>
+  </data>
+  <data name="MainWindow_ImportSettingsFile" xml:space="preserve">
+    <value>Import settings file</value>
+  </data>
+  <data name="MainWindow_ManagePerGameSettings" xml:space="preserve">
+    <value>Manage per-game settings</value>
+  </data>
+  <data name="MainWindow_Profiles" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="MainWindow_ManuallyCheckForANewVersion" xml:space="preserve">
+    <value>Manually check for a new version</value>
+  </data>
+  <data name="MainWindow_CheckForUpdates" xml:space="preserve">
+    <value>Check for Updates</value>
+  </data>
+  <data name="MainWindow_UpdateReady" xml:space="preserve">
+    <value>Update Ready</value>
+  </data>
+  <data name="MainWindow_InstallUpdate" xml:space="preserve">
+    <value>Install Update</value>
+  </data>
+  <data name="MainWindow_ReleaseNotes" xml:space="preserve">
+    <value>Release Notes</value>
+  </data>
+  <data name="MainWindow_WarningUnsupportedSystemDetected" xml:space="preserve">
+    <value>Warning: Unsupported System Detected</value>
+  </data>
+  <data name="MainWindow_OmencoreIsBuiltForHpOmenAndVictusGamingLap" xml:space="preserve">
+    <value>OmenCore is built for HP OMEN and Victus gaming laptops. This system isn't detected as either, so most hardware-control features will be unavailable - this is a hardware/firmware limitation, not something a model-database update can fix.</value>
+  </data>
+  <data name="MainWindow_StandardProfileNotice" xml:space="preserve">
+    <value>Standard profile notice</value>
+  </data>
+  <data name="MainWindow_DismissTheStandardProfileNotice" xml:space="preserve">
+    <value>Dismiss the standard profile notice</value>
+  </data>
+  <data name="MainWindow_HideThisNoticeForThisLaptop" xml:space="preserve">
+    <value>Hide this notice for this laptop</value>
+  </data>
+  <data name="MainWindow_YourLaptopIsSupportedWithItsFamilySStandar" xml:space="preserve">
+    <value>Your laptop is supported with its family's standard profile</value>
+  </data>
+  <data name="MainWindow_NobodyWithThisExactModelHasConfirmedEveryF" xml:space="preserve">
+    <value>Nobody with this exact model has confirmed every feature yet, so a few advanced options may stay off. Diagnostics shows which ones and why. A diagnostics export on GitHub or Discord gets your model fully confirmed.</value>
+  </data>
+  <data name="MainWindow_RecentActivity" xml:space="preserve">
+    <value>RECENT ACTIVITY</value>
+  </data>
+  <data name="MainWindow_SystemLog" xml:space="preserve">
+    <value>SYSTEM LOG</value>
+  </data>
+  <data name="MemoryOptimizerView_MemoryOptimizer" xml:space="preserve">
+    <value>Memory Optimizer</value>
+  </data>
+  <data name="MemoryOptimizerView_MonitorAndOptimizeSystemMemoryInRealTime" xml:space="preserve">
+    <value>Monitor and optimize system memory in real-time</value>
+  </data>
+  <data name="MemoryOptimizerView_Available" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="MemoryOptimizerView_SystemCache" xml:space="preserve">
+    <value>System Cache</value>
+  </data>
+  <data name="MemoryOptimizerView_PageFile" xml:space="preserve">
+    <value>Page File</value>
+  </data>
+  <data name="MemoryOptimizerView_CopyLastResult" xml:space="preserve">
+    <value>Copy last result</value>
+  </data>
+  <data name="MemoryOptimizerView_CopyLastMemoryCleanResult" xml:space="preserve">
+    <value>Copy last memory clean result</value>
+  </data>
+  <data name="MemoryOptimizerView_CopiesTheLatestMemoryCleanSummaryToTheClip" xml:space="preserve">
+    <value>Copies the latest memory clean summary to the clipboard</value>
+  </data>
+  <data name="MemoryOptimizerView_SafeCleanTrimsWorkingSetsPurgesLowPriority" xml:space="preserve">
+    <value>Safe clean: trims working sets, purges low-priority standby, combines pages</value>
+  </data>
+  <data name="MemoryOptimizerView_SmartClean" xml:space="preserve">
+    <value>Smart Clean</value>
+  </data>
+  <data name="MemoryOptimizerView_AggressiveCleanAllOperationsIncludingStand" xml:space="preserve">
+    <value>Aggressive clean: all operations including standby list purge and cache flush. May cause brief stutter.</value>
+  </data>
+  <data name="MemoryOptimizerView_DeepClean" xml:space="preserve">
+    <value>Deep Clean</value>
+  </data>
+  <data name="MemoryOptimizerView_N30MinMemoryTrend" xml:space="preserve">
+    <value>30-Min Memory Trend</value>
+  </data>
+  <data name="MemoryOptimizerView_TopMemoryHogs" xml:space="preserve">
+    <value>Top Memory Hogs</value>
+  </data>
+  <data name="MemoryOptimizerView_CopyProcessName" xml:space="preserve">
+    <value>Copy process name</value>
+  </data>
+  <data name="MemoryOptimizerView_OpenFileLocation" xml:space="preserve">
+    <value>Open file location</value>
+  </data>
+  <data name="MemoryOptimizerView_AddToWorkingSetExclusions" xml:space="preserve">
+    <value>Add to working-set exclusions</value>
+  </data>
+  <data name="MemoryOptimizerView_Process" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="MemoryOptimizerView_WorkingSet" xml:space="preserve">
+    <value>Working Set</value>
+  </data>
+  <data name="MemoryOptimizerView_Private" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="MemoryOptimizerView_Ram" xml:space="preserve">
+    <value>RAM %</value>
+  </data>
+  <data name="MemoryOptimizerView_IndividualOperations" xml:space="preserve">
+    <value>Individual Operations</value>
+  </data>
+  <data name="MemoryOptimizerView_TrimWorkingSets" xml:space="preserve">
+    <value>Trim Working Sets</value>
+  </data>
+  <data name="MemoryOptimizerView_ReleasesUnusedMemoryFromAllProcesses" xml:space="preserve">
+    <value>Releases unused memory from all processes</value>
+  </data>
+  <data name="MemoryOptimizerView_PurgeStandbyList" xml:space="preserve">
+    <value>Purge Standby List</value>
+  </data>
+  <data name="MemoryOptimizerView_RemovesCachedPagesFromStandbyMemory" xml:space="preserve">
+    <value>Removes cached pages from standby memory</value>
+  </data>
+  <data name="MemoryOptimizerView_MediumMayCauseBriefStutter" xml:space="preserve">
+    <value>Medium — may cause brief stutter</value>
+  </data>
+  <data name="MemoryOptimizerView_FlushFileCache" xml:space="preserve">
+    <value>Flush File Cache</value>
+  </data>
+  <data name="MemoryOptimizerView_FlushesTheSystemFileCache" xml:space="preserve">
+    <value>Flushes the system file cache</value>
+  </data>
+  <data name="MemoryOptimizerView_MediumMaySlowFileAccessTemporarily" xml:space="preserve">
+    <value>Medium — may slow file access temporarily</value>
+  </data>
+  <data name="MemoryOptimizerView_FlushModifiedPages" xml:space="preserve">
+    <value>Flush Modified Pages</value>
+  </data>
+  <data name="MemoryOptimizerView_WritesModifiedPagesToDiskAndFreesMemory" xml:space="preserve">
+    <value>Writes modified pages to disk and frees memory</value>
+  </data>
+  <data name="MemoryOptimizerView_MediumDiskIOBurst" xml:space="preserve">
+    <value>Medium — disk I/O burst</value>
+  </data>
+  <data name="MemoryOptimizerView_CombineMemoryPages" xml:space="preserve">
+    <value>Combine Memory Pages</value>
+  </data>
+  <data name="MemoryOptimizerView_MergesIdenticalMemoryPagesWindows10" xml:space="preserve">
+    <value>Merges identical memory pages (Windows 10+)</value>
+  </data>
+  <data name="MemoryOptimizerView_SystemInformation" xml:space="preserve">
+    <value>System Information</value>
+  </data>
+  <data name="MemoryOptimizerView_Processes" xml:space="preserve">
+    <value>Processes</value>
+  </data>
+  <data name="MemoryOptimizerView_Threads" xml:space="preserve">
+    <value>Threads</value>
+  </data>
+  <data name="MemoryOptimizerView_Handles" xml:space="preserve">
+    <value>Handles</value>
+  </data>
+  <data name="MemoryOptimizerView_KernelNonPaged" xml:space="preserve">
+    <value>Kernel Non-Paged</value>
+  </data>
+  <data name="MemoryOptimizerView_StandbyList" xml:space="preserve">
+    <value>Standby List</value>
+  </data>
+  <data name="MemoryOptimizerView_ModifiedPages" xml:space="preserve">
+    <value>Modified Pages</value>
+  </data>
+  <data name="MemoryOptimizerView_CompressedMemory" xml:space="preserve">
+    <value>Compressed Memory</value>
+  </data>
+  <data name="MemoryOptimizerView_AutoClean" xml:space="preserve">
+    <value>Auto Clean</value>
+  </data>
+  <data name="MemoryOptimizerView_AutomaticMemoryCleaning" xml:space="preserve">
+    <value>Automatic Memory Cleaning</value>
+  </data>
+  <data name="MemoryOptimizerView_RunsSmartCleanWhenRamUsageExceedsThreshold" xml:space="preserve">
+    <value>Runs Smart Clean when RAM usage exceeds threshold</value>
+  </data>
+  <data name="MemoryOptimizerView_AdaptiveProfile" xml:space="preserve">
+    <value>Adaptive Profile</value>
+  </data>
+  <data name="MemoryOptimizerView_UsageThreshold" xml:space="preserve">
+    <value>Usage Threshold</value>
+  </data>
+  <data name="MemoryOptimizerView_MinimumGapBetweenCleans" xml:space="preserve">
+    <value>Minimum Gap Between Cleans</value>
+  </data>
+  <data name="MemoryOptimizerView_SetTo0ToUseTheSelectedProfileDefaultCooldo" xml:space="preserve">
+    <value>Set to 0 to use the selected profile default cooldown.</value>
+  </data>
+  <data name="MemoryOptimizerView_GameAwareQuietWindow" xml:space="preserve">
+    <value>Game-aware quiet window</value>
+  </data>
+  <data name="MemoryOptimizerView_PeriodicMemoryCleaning" xml:space="preserve">
+    <value>Periodic Memory Cleaning</value>
+  </data>
+  <data name="MemoryOptimizerView_RunsSmartCleanAutomaticallyEveryNMinutes" xml:space="preserve">
+    <value>Runs Smart Clean automatically every N minutes</value>
+  </data>
+  <data name="MemoryOptimizerView_CleanInterval" xml:space="preserve">
+    <value>Clean Interval</value>
+  </data>
+  <data name="MemoryOptimizerView_WorkingSetExclusions" xml:space="preserve">
+    <value>Working Set Exclusions</value>
+  </data>
+  <data name="MemoryOptimizerView_ExcludedProcessesAreSkippedDuringWorkingSe" xml:space="preserve">
+    <value>Excluded processes are skipped during working-set trimming (enter with or without .exe).</value>
+  </data>
+  <data name="MemoryOptimizerView_TipRightClickAProcessInTopMemoryHogsToAddG" xml:space="preserve">
+    <value>Tip: right-click a process in Top Memory Hogs to add games, capture tools, anti-cheat, or chat apps here before Smart Clean.</value>
+  </data>
+  <data name="MemoryOptimizerView_MemoryCompression" xml:space="preserve">
+    <value>Memory Compression</value>
+  </data>
+  <data name="MemoryOptimizerView_HowItWorks" xml:space="preserve">
+    <value>How It Works</value>
+  </data>
+  <data name="MemoryOptimizerView_TrimsProcessWorkingSetsPurgesLowPrioritySt" xml:space="preserve">
+    <value> trims process working sets, purges low-priority standby pages, and combines identical memory pages. These operations are safe and won't cause application issues.</value>
+  </data>
+  <data name="MemoryOptimizerView_AdditionallyPurgesAllStandbyPagesFlushesTh" xml:space="preserve">
+    <value> additionally purges all standby pages, flushes the system file cache, and writes modified pages to disk. This may cause a brief stutter as data is re-cached.</value>
+  </data>
+  <data name="OnboardingWindow_WelcomeToOmencore" xml:space="preserve">
+    <value>Welcome to OmenCore</value>
+  </data>
+  <data name="OnboardingWindow_OmencoreSetup" xml:space="preserve">
+    <value>OmenCore Setup</value>
+  </data>
+  <data name="OnboardingWindow_Welcome" xml:space="preserve">
+    <value>👋 Welcome!</value>
+  </data>
+  <data name="OnboardingWindow_OmencoreIsACommunityBuiltFanLightingAndPer" xml:space="preserve">
+    <value>OmenCore is a community-built fan, lighting, and performance controller for HP OMEN laptops.</value>
+  </data>
+  <data name="OnboardingWindow_ThisQuickSetupTakesAbout30SecondsAndHelpsO" xml:space="preserve">
+    <value>This quick setup takes about 30 seconds and helps OmenCore work best on your system.</value>
+  </data>
+  <data name="OnboardingWindow_WhatOmencoreDoes" xml:space="preserve">
+    <value>What OmenCore does:</value>
+  </data>
+  <data name="OnboardingWindow_CustomFanCurvesWithTemperatureBasedControl" xml:space="preserve">
+    <value>Custom fan curves with temperature-based control</value>
+  </data>
+  <data name="OnboardingWindow_N4ZoneRgbKeyboardLightingControl" xml:space="preserve">
+    <value>4-zone RGB keyboard lighting control</value>
+  </data>
+  <data name="OnboardingWindow_PerformanceAndPowerModeSwitching" xml:space="preserve">
+    <value>Performance and power mode switching</value>
+  </data>
+  <data name="OnboardingWindow_RealTimeCpuGpuTemperatureAndLoadMonitoring" xml:space="preserve">
+    <value>Real-time CPU/GPU temperature and load monitoring</value>
+  </data>
+  <data name="OnboardingWindow_YourHardware" xml:space="preserve">
+    <value>🔍 Your Hardware</value>
+  </data>
+  <data name="OnboardingWindow_OmencoreDetectedTheFollowingOnYourSystem" xml:space="preserve">
+    <value>OmenCore detected the following on your system:</value>
+  </data>
+  <data name="OnboardingWindow_FanControlBackend" xml:space="preserve">
+    <value>Fan Control Backend</value>
+  </data>
+  <data name="OnboardingWindow_Detecting" xml:space="preserve">
+    <value>Detecting...</value>
+  </data>
+  <data name="OnboardingWindow_MonitoringSource" xml:space="preserve">
+    <value>Monitoring Source</value>
+  </data>
+  <data name="OnboardingWindow_PawnioDriver" xml:space="preserve">
+    <value>PawnIO Driver</value>
+  </data>
+  <data name="OnboardingWindow_Checking" xml:space="preserve">
+    <value>Checking...</value>
+  </data>
+  <data name="OnboardingWindow_QuickStart" xml:space="preserve">
+    <value>🚀 Quick Start</value>
+  </data>
+  <data name="OnboardingWindow_ApplyAFanPreset" xml:space="preserve">
+    <value>Apply a Fan Preset</value>
+  </data>
+  <data name="OnboardingWindow_HeadToFanControlAndTryTheAutoOrGamingPrese" xml:space="preserve">
+    <value>Head to Fan Control and try the Auto or Gaming preset.</value>
+  </data>
+  <data name="OnboardingWindow_CustomiseYourLighting" xml:space="preserve">
+    <value>Customise Your Lighting</value>
+  </data>
+  <data name="OnboardingWindow_OpenLightingAndClickAnyKeyboardZoneToChang" xml:space="preserve">
+    <value>Open Lighting and click any keyboard zone to change its colour.</value>
+  </data>
+  <data name="OnboardingWindow_ConfigureSettings" xml:space="preserve">
+    <value>Configure Settings</value>
+  </data>
+  <data name="OnboardingWindow_EnableStartWithWindowsSetAPollingIntervalA" xml:space="preserve">
+    <value>Enable start with Windows, set a polling interval, and explore automations.</value>
+  </data>
+  <data name="OnboardingWindow_Back" xml:space="preserve">
+    <value>← Back</value>
+  </data>
+  <data name="OnboardingWindow_Next" xml:space="preserve">
+    <value>Next →</value>
+  </data>
+  <data name="OnboardingWindow_GetStarted" xml:space="preserve">
+    <value>Get Started</value>
+  </data>
+  <data name="OsdOverlayWindow_CpuClk" xml:space="preserve">
+    <value>CPU CLK</value>
+  </data>
+  <data name="OsdOverlayWindow_GpuClk" xml:space="preserve">
+    <value>GPU CLK</value>
+  </data>
+  <data name="OsdOverlayWindow_FpsViaRtss" xml:space="preserve">
+    <value>FPS via RTSS</value>
+  </data>
+  <data name="OsdOverlayWindow_Up" xml:space="preserve">
+    <value>↑ UP</value>
+  </data>
+  <data name="OsdOverlayWindow_Dn" xml:space="preserve">
+    <value>↓ DN</value>
+  </data>
+  <data name="OsdOverlayWindow_ThermalThrottle" xml:space="preserve">
+    <value>⚠ THERMAL THROTTLE</value>
+  </data>
+  <data name="QuickPopupWindow_OmencoreQuickAccess" xml:space="preserve">
+    <value>OmenCore Quick Access</value>
+  </data>
+  <data name="QuickPopupWindow_QuickAccess" xml:space="preserve">
+    <value>Quick Access</value>
+  </data>
+  <data name="QuickPopupWindow_MonitoringUnknown" xml:space="preserve">
+    <value>Monitoring: Unknown</value>
+  </data>
+  <data name="QuickPopupWindow_FanPerfDecoupled" xml:space="preserve">
+    <value>Fan/Perf: Decoupled</value>
+  </data>
+  <data name="QuickPopupWindow_QuickProfile" xml:space="preserve">
+    <value>Quick Profile</value>
+  </data>
+  <data name="QuickPopupWindow_Perform" xml:space="preserve">
+    <value>Perform</value>
+  </data>
+  <data name="QuickPopupWindow_OpenFullDashboard" xml:space="preserve">
+    <value>Open full dashboard</value>
+  </data>
+  <data name="QuickPopupWindow_Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="QuickPopupWindow_TurnOffDisplay" xml:space="preserve">
+    <value>Turn off display</value>
+  </data>
+  <data name="QuickPopupWindow_DisplayOff" xml:space="preserve">
+    <value>Display Off</value>
+  </data>
+  <data name="QuickPopupWindow_ToggleRefreshRate" xml:space="preserve">
+    <value>Toggle refresh rate</value>
+  </data>
+  <data name="QuickPopupWindow_RunASafeRamClean" xml:space="preserve">
+    <value>Run a safe RAM clean</value>
+  </data>
+  <data name="QuickPopupWindow_CleanRam" xml:space="preserve">
+    <value>Clean RAM</value>
+  </data>
+  <data name="SettingsView_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsView_ConfigureApplicationBehaviorStartupOptions" xml:space="preserve">
+    <value>Configure application behavior, startup options, and driver settings</value>
+  </data>
+  <data name="SettingsView_SettingsSearchQuery" xml:space="preserve">
+    <value>Settings Search Query</value>
+  </data>
+  <data name="SettingsView_SearchResults" xml:space="preserve">
+    <value>Search Results</value>
+  </data>
+  <data name="SettingsView_SystemStatus" xml:space="preserve">
+    <value>System Status</value>
+  </data>
+  <data name="SettingsView_TheMethodUsedToControlFansOnYourSystem" xml:space="preserve">
+    <value>The method used to control fans on your system</value>
+  </data>
+  <data name="SettingsView_SecureBoot" xml:space="preserve">
+    <value>Secure Boot</value>
+  </data>
+  <data name="SettingsView_SecureBootCompatibleDriverForEcMsrAccess" xml:space="preserve">
+    <value>Secure Boot compatible driver for EC/MSR access</value>
+  </data>
+  <data name="SettingsView_OmenGamingHub" xml:space="preserve">
+    <value>OMEN Gaming Hub</value>
+  </data>
+  <data name="SettingsView_HpSOfficialControlSoftwareProvidesWmiAcces" xml:space="preserve">
+    <value>HP's official control software - provides WMI access</value>
+  </data>
+  <data name="SettingsView_StandaloneStatus" xml:space="preserve">
+    <value>Standalone Status</value>
+  </data>
+  <data name="SettingsView_PostResumeRecovery" xml:space="preserve">
+    <value>Post-Resume Recovery</value>
+  </data>
+  <data name="SettingsView_ResumeRecoveryTimeline" xml:space="preserve">
+    <value>Resume Recovery Timeline</value>
+  </data>
+  <data name="SettingsView_ModelIdentityResolution" xml:space="preserve">
+    <value>Model Identity Resolution</value>
+  </data>
+  <data name="SettingsView_ResolvedModel" xml:space="preserve">
+    <value>Resolved Model</value>
+  </data>
+  <data name="SettingsView_ResolutionSource" xml:space="preserve">
+    <value>Resolution Source</value>
+  </data>
+  <data name="SettingsView_Confidence" xml:space="preserve">
+    <value>Confidence</value>
+  </data>
+  <data name="SettingsView_KeyboardProfile" xml:space="preserve">
+    <value>Keyboard Profile</value>
+  </data>
+  <data name="SettingsView_KeyboardSource" xml:space="preserve">
+    <value>Keyboard Source</value>
+  </data>
+  <data name="SettingsView_CopySummary" xml:space="preserve">
+    <value>Copy Summary</value>
+  </data>
+  <data name="SettingsView_PawnioOnlyMode" xml:space="preserve">
+    <value>PawnIO-Only Mode</value>
+  </data>
+  <data name="SettingsView_DisableHpServiceDependentFeaturesPerforman" xml:space="preserve">
+    <value>Disable HP service-dependent features (performance modes, GPU switching). Use only PawnIO for EC fan control and temperature monitoring.</value>
+  </data>
+  <data name="SettingsView_BiosWmiReliability" xml:space="preserve">
+    <value>BIOS WMI Reliability</value>
+  </data>
+  <data name="SettingsView_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SettingsView_ShareAnonymousPidSuccessFailureCountsToHel" xml:space="preserve">
+    <value>Share anonymous PID success/failure counts to help improve device support. Opt-in only; stored at %LOCALAPPDATA%\OmenCore\telemetry.json</value>
+  </data>
+  <data name="SettingsView_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="SettingsView_Monitoring" xml:space="preserve">
+    <value>Monitoring</value>
+  </data>
+  <data name="SettingsView_AutomaticMonitoringCadence" xml:space="preserve">
+    <value>Automatic monitoring cadence</value>
+  </data>
+  <data name="SettingsView_OmencoreNowOwnsCadenceAutomaticallyActiveW" xml:space="preserve">
+    <value>OmenCore now owns cadence automatically: active windows and OSD stay responsive, idle sessions slow down safely, and low-overhead tray-only mode can settle to the ultra-low cadence when nothing is blocking it.</value>
+  </data>
+  <data name="SettingsView_CadenceTiers" xml:space="preserve">
+    <value>Cadence tiers</value>
+  </data>
+  <data name="SettingsView_N1sWhenTheUiOrOsdNeedsLiveData5sInStandardB" xml:space="preserve">
+    <value>1s when the UI or OSD needs live data, 5s in standard background idle, and 10s for eligible tray-only low-overhead sessions. Use Low overhead mode below to favor the lighter cadence path.</value>
+  </data>
+  <data name="SettingsView_ChartHistory" xml:space="preserve">
+    <value>Chart history</value>
+  </data>
+  <data name="SettingsView_NumberOfDataPointsToDisplayInCharts" xml:space="preserve">
+    <value>Number of data points to display in charts</value>
+  </data>
+  <data name="SettingsView_HistoryCount" xml:space="preserve">
+    <value>History Count</value>
+  </data>
+  <data name="SettingsView_LowOverheadMode" xml:space="preserve">
+    <value>Low overhead mode</value>
+  </data>
+  <data name="SettingsView_ReduceCpuUsageByLimitingSensorPolling" xml:space="preserve">
+    <value>Reduce CPU usage by limiting sensor polling</value>
+  </data>
+  <data name="SettingsView_LiveCadenceStatus" xml:space="preserve">
+    <value>Live cadence status</value>
+  </data>
+  <data name="SettingsView_CurrentTier" xml:space="preserve">
+    <value>Current tier: </value>
+  </data>
+  <data name="SettingsView_Reason" xml:space="preserve">
+    <value>Reason: </value>
+  </data>
+  <data name="SettingsView_UltraLowBlockers" xml:space="preserve">
+    <value>Ultra-low blockers: </value>
+  </data>
+  <data name="SettingsView_StartupSafeModeGuard" xml:space="preserve">
+    <value>Startup safe mode guard</value>
+  </data>
+  <data name="SettingsView_TemporarilyBlocksTrayWriteActionsIfMonitor" xml:space="preserve">
+    <value>Temporarily blocks tray write actions if monitoring is unstable right after startup</value>
+  </data>
+  <data name="SettingsView_SafeModeStartupWindow" xml:space="preserve">
+    <value>Safe-mode startup window</value>
+  </data>
+  <data name="SettingsView_HowLongAfterStartupTheGuardCanAutoActivate" xml:space="preserve">
+    <value>How long after startup the guard can auto-activate</value>
+  </data>
+  <data name="SettingsView_StartupSafeModeWindowSeconds" xml:space="preserve">
+    <value>Startup Safe Mode Window Seconds</value>
+  </data>
+  <data name="SettingsView_TimeoutThreshold" xml:space="preserve">
+    <value>Timeout threshold</value>
+  </data>
+  <data name="SettingsView_ConsecutiveMonitorTimeoutsRequiredBeforeSt" xml:space="preserve">
+    <value>Consecutive monitor timeouts required before startup safe mode activates</value>
+  </data>
+  <data name="SettingsView_StartupSafeModeTimeoutThreshold" xml:space="preserve">
+    <value>Startup Safe Mode Timeout Threshold</value>
+  </data>
+  <data name="SettingsView_HardwareWorker" xml:space="preserve">
+    <value>Hardware Worker</value>
+  </data>
+  <data name="SettingsView_EnableOrphanTimeout" xml:space="preserve">
+    <value>Enable orphan timeout</value>
+  </data>
+  <data name="SettingsView_WorkerProcessExitsAfterMainAppClosesIfNoRe" xml:space="preserve">
+    <value>Worker process exits after main app closes if no reconnection occurs</value>
+  </data>
+  <data name="SettingsView_OrphanTimeoutDuration" xml:space="preserve">
+    <value>Orphan timeout duration</value>
+  </data>
+  <data name="SettingsView_MinutesToWaitForReconnectionBeforeWorkerEx" xml:space="preserve">
+    <value>Minutes to wait for reconnection before worker exits</value>
+  </data>
+  <data name="SettingsView_HardwareWorkerOrphanTimeoutMinutes" xml:space="preserve">
+    <value>Hardware Worker Orphan Timeout Minutes</value>
+  </data>
+  <data name="SettingsView_PowerAutomation" xml:space="preserve">
+    <value>Power Automation</value>
+  </data>
+  <data name="SettingsView_AutoSwitchOnPowerChange" xml:space="preserve">
+    <value>Auto-switch on power change</value>
+  </data>
+  <data name="SettingsView_AutomaticallySwitchProfilesWhenAcPowerIsCo" xml:space="preserve">
+    <value>Automatically switch profiles when AC power is connected or disconnected</value>
+  </data>
+  <data name="SettingsView_WhenOnAcPower" xml:space="preserve">
+    <value>When on AC Power:</value>
+  </data>
+  <data name="SettingsView_AcPowerFanPreset" xml:space="preserve">
+    <value>AC power fan preset</value>
+  </data>
+  <data name="SettingsView_AcPowerPerformanceMode" xml:space="preserve">
+    <value>AC power performance mode</value>
+  </data>
+  <data name="SettingsView_WhenOnBattery" xml:space="preserve">
+    <value>When on Battery:</value>
+  </data>
+  <data name="SettingsView_BatteryPowerFanPreset" xml:space="preserve">
+    <value>Battery power fan preset</value>
+  </data>
+  <data name="SettingsView_BatteryPowerPerformanceMode" xml:space="preserve">
+    <value>Battery power performance mode</value>
+  </data>
+  <data name="SettingsView_LinkFanToPerformanceMode" xml:space="preserve">
+    <value>Link fan to performance mode</value>
+  </data>
+  <data name="SettingsView_AutomaticallyApplyTheMatchingFanPresetWhen" xml:space="preserve">
+    <value>Automatically apply the matching fan preset whenever you change performance mode.</value>
+  </data>
+  <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAutoExperi" xml:space="preserve">
+    <value>Do not pin a fan level when returning to Auto (experimental)</value>
+  </data>
+  <data name="SettingsView_ForLaptopsWhoseFansStayNear2000RpmAtHighTe" xml:space="preserve">
+    <value>For laptops whose fans stay near 2000 RPM at high temperature until you restore the OEM profile. Skips a fan-level hint OmenCore sends when it hands control back to the BIOS. Off by default; takes effect after a restart. Not yet confirmed on hardware.</value>
+  </data>
+  <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAuto" xml:space="preserve">
+    <value>Do not pin a fan level when returning to Auto</value>
+  </data>
+  <data name="SettingsView_ReturnMaxFanModeToAuto" xml:space="preserve">
+    <value>Return Max fan mode to Auto</value>
+  </data>
+  <data name="SettingsView_OffKeepsMaxUntilYouChangeItCooldownHandsTh" xml:space="preserve">
+    <value>Off keeps Max until you change it. Cooldown hands the fans back to BIOS Auto when CPU and GPU stay under 60 C for 2 minutes. Timer hands them back after the chosen time. Not yet confirmed on hardware.</value>
+  </data>
+  <data name="SettingsView_Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="SettingsView_MaxFanAutoReturnTimerMinutes" xml:space="preserve">
+    <value>Max fan auto-return timer minutes</value>
+  </data>
+  <data name="SettingsView_RestoreLastHardwareSettingsOnStartup" xml:space="preserve">
+    <value>Restore last hardware settings on startup</value>
+  </data>
+  <data name="SettingsView_ReapplyTheSavedFanPresetPerformanceModeGpu" xml:space="preserve">
+    <value>Reapply the saved fan preset, performance mode, GPU boost, and tuning settings after OmenCore starts.</value>
+  </data>
+  <data name="SettingsView_AllowStartupRestoreOnOmen16Victus" xml:space="preserve">
+    <value>Allow startup restore on OMEN 16/Victus</value>
+  </data>
+  <data name="SettingsView_OverridesTheExtraGuardrailForModelsThatHav" xml:space="preserve">
+    <value>Overrides the extra guardrail for models that have reported firmware sensitivity during boot. Leave off unless you want automatic reapply on those systems.</value>
+  </data>
+  <data name="SettingsView_StartupRestoreCategories" xml:space="preserve">
+    <value>Startup Restore Categories</value>
+  </data>
+  <data name="SettingsView_ReapplySavedFanPresetOrCurveAtStartup" xml:space="preserve">
+    <value>Reapply saved fan preset or curve at startup.</value>
+  </data>
+  <data name="SettingsView_RestoreSavedFanMax" xml:space="preserve">
+    <value>Restore saved Fan Max</value>
+  </data>
+  <data name="SettingsView_AllowASavedMaxPresetToStartFansAtFullSpeed" xml:space="preserve">
+    <value>Allow a saved Max preset to start fans at full speed on launch. Off by default; BIOS Auto is used instead.</value>
+  </data>
+  <data name="SettingsView_FactoryFanCurveInPerformanceModeExperiment" xml:space="preserve">
+    <value>Factory fan curve in Performance mode (experimental)</value>
+  </data>
+  <data name="SettingsView_OnThisBoardTheFirmwareSOwnAutoParksTheFans" xml:space="preserve">
+    <value>On this board the firmware's own Auto parks the fans too low under heavy load. This runs HP's own Performance-mode curve instead, only while Performance mode is active and fans are on Auto. Not yet confirmed on hardware; fans return to BIOS Auto when turned off. Off by default.</value>
+  </data>
+  <data name="SettingsView_FactoryFanCurveInPerformanceMode" xml:space="preserve">
+    <value>Factory fan curve in Performance mode</value>
+  </data>
+  <data name="SettingsView_ReapplyPerformanceModeAndGpuPowerBoost" xml:space="preserve">
+    <value>Reapply performance mode and GPU power boost.</value>
+  </data>
+  <data name="SettingsView_RestoreSavedKeyboardLightingColorsWhenRgbS" xml:space="preserve">
+    <value>Restore saved keyboard lighting colors when RGB startup restore is enabled.</value>
+  </data>
+  <data name="SettingsView_ReapplyConfirmedUndervoltTccCpuPowerAndGpu" xml:space="preserve">
+    <value>Reapply confirmed undervolt, TCC, CPU power, and GPU OC restore paths. On OMEN 16/Victus models this is skipped unless 'Allow startup restore on OMEN 16/Victus' is on.</value>
+  </data>
+  <data name="SettingsView_StartupRestore" xml:space="preserve">
+    <value>Startup restore: </value>
+  </data>
+  <data name="SettingsView_CurrentStatus" xml:space="preserve">
+    <value>Current status: </value>
+  </data>
+  <data name="SettingsView_Updates" xml:space="preserve">
+    <value>Updates</value>
+  </data>
+  <data name="SettingsView_CheckForUpdatesAutomatically" xml:space="preserve">
+    <value>Check for updates automatically</value>
+  </data>
+  <data name="SettingsView_PeriodicallyCheckGithubForNewReleases" xml:space="preserve">
+    <value>Periodically check GitHub for new releases</value>
+  </data>
+  <data name="SettingsView_CheckInterval" xml:space="preserve">
+    <value>Check interval</value>
+  </data>
+  <data name="SettingsView_HowOftenToCheckForUpdates" xml:space="preserve">
+    <value>How often to check for updates</value>
+  </data>
+  <data name="SettingsView_UpdateCheckInterval" xml:space="preserve">
+    <value>Update check interval</value>
+  </data>
+  <data name="SettingsView_EveryHour" xml:space="preserve">
+    <value>Every hour</value>
+  </data>
+  <data name="SettingsView_Every6Hours" xml:space="preserve">
+    <value>Every 6 hours</value>
+  </data>
+  <data name="SettingsView_IncludePreReleases" xml:space="preserve">
+    <value>Include pre-releases</value>
+  </data>
+  <data name="SettingsView_GetNotifiedAboutBetaAndPreviewVersions" xml:space="preserve">
+    <value>Get notified about beta and preview versions</value>
+  </data>
+  <data name="SettingsView_Hotkeys" xml:space="preserve">
+    <value>Hotkeys</value>
+  </data>
+  <data name="SettingsView_EnableGlobalHotkeys" xml:space="preserve">
+    <value>Enable global hotkeys</value>
+  </data>
+  <data name="SettingsView_UseKeyboardShortcutsEvenWhenAppIsInBackgro" xml:space="preserve">
+    <value>Use keyboard shortcuts even when app is in background</value>
+  </data>
+  <data name="SettingsView_OnlyEnableHotkeysWhenWindowIsFocused" xml:space="preserve">
+    <value>Only enable hotkeys when window is focused</value>
+  </data>
+  <data name="SettingsView_PreventsConflictsByDeactivatingHotkeysWhen" xml:space="preserve">
+    <value>Prevents conflicts by deactivating hotkeys when the app isn’t active</value>
+  </data>
+  <data name="SettingsView_ExperimentalFirmwareFnPProfileCycle" xml:space="preserve">
+    <value>Experimental firmware Fn+P profile cycle</value>
+  </data>
+  <data name="SettingsView_UseBiosWmiEventMappingToCyclePerformancePr" xml:space="preserve">
+    <value>Use BIOS WMI event mapping to cycle performance profiles. Disabled by default because event codes vary by model.</value>
+  </data>
+  <data name="SettingsView_DefaultHotkeys" xml:space="preserve">
+    <value>Default Hotkeys</value>
+  </data>
+  <data name="SettingsView_CtrlShiftF" xml:space="preserve">
+    <value>Ctrl + Shift + F</value>
+  </data>
+  <data name="SettingsView_CycleFanModes" xml:space="preserve">
+    <value>Cycle fan modes</value>
+  </data>
+  <data name="SettingsView_CtrlShiftP" xml:space="preserve">
+    <value>Ctrl + Shift + P</value>
+  </data>
+  <data name="SettingsView_CyclePerformanceModes" xml:space="preserve">
+    <value>Cycle performance modes</value>
+  </data>
+  <data name="SettingsView_CtrlShiftE" xml:space="preserve">
+    <value>Ctrl + Shift + E</value>
+  </data>
+  <data name="SettingsView_CycleGeneralProfiles" xml:space="preserve">
+    <value>Cycle General profiles</value>
+  </data>
+  <data name="SettingsView_CtrlShiftB" xml:space="preserve">
+    <value>Ctrl + Shift + B</value>
+  </data>
+  <data name="SettingsView_BoostModePerformance" xml:space="preserve">
+    <value>Boost mode (Performance)</value>
+  </data>
+  <data name="SettingsView_CtrlShiftQ" xml:space="preserve">
+    <value>Ctrl + Shift + Q</value>
+  </data>
+  <data name="SettingsView_QuietMode" xml:space="preserve">
+    <value>Quiet mode</value>
+  </data>
+  <data name="SettingsView_CtrlShiftO" xml:space="preserve">
+    <value>Ctrl + Shift + O</value>
+  </data>
+  <data name="SettingsView_ShowHideOmencoreWindow" xml:space="preserve">
+    <value>Show/hide OmenCore window</value>
+  </data>
+  <data name="SettingsView_WinF12" xml:space="preserve">
+    <value>Win + F12</value>
+  </data>
+  <data name="SettingsView_ShowOmencoreWindow" xml:space="preserve">
+    <value>Show OmenCore window</value>
+  </data>
+  <data name="SettingsView_Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="SettingsView_EnableNotifications" xml:space="preserve">
+    <value>Enable notifications</value>
+  </data>
+  <data name="SettingsView_ShowWindowsToastNotificationsForEvents" xml:space="preserve">
+    <value>Show Windows toast notifications for events</value>
+  </data>
+  <data name="SettingsView_GameProfileNotifications" xml:space="preserve">
+    <value>Game profile notifications</value>
+  </data>
+  <data name="SettingsView_NotifyWhenGameProfilesAreActivatedDeactiva" xml:space="preserve">
+    <value>Notify when game profiles are activated/deactivated</value>
+  </data>
+  <data name="SettingsView_ModeChangeNotifications" xml:space="preserve">
+    <value>Mode change notifications</value>
+  </data>
+  <data name="SettingsView_NotifyWhenFanOrPerformanceModesChangeViaHo" xml:space="preserve">
+    <value>Notify when fan or performance modes change via hotkey</value>
+  </data>
+  <data name="SettingsView_TemperatureWarnings" xml:space="preserve">
+    <value>Temperature warnings</value>
+  </data>
+  <data name="SettingsView_AlertWhenCpuGpuTemperatureExceedsThreshold" xml:space="preserve">
+    <value>Alert when CPU/GPU temperature exceeds threshold</value>
+  </data>
+  <data name="SettingsView_HardwareDriver" xml:space="preserve">
+    <value>Hardware Driver</value>
+  </data>
+  <data name="SettingsView_GetPawnioRecommended" xml:space="preserve">
+    <value>Get PawnIO (Recommended)</value>
+  </data>
+  <data name="SettingsView_GetPawnioRecommended_2" xml:space="preserve">
+    <value>📥 Get PawnIO (Recommended)</value>
+  </data>
+  <data name="SettingsView_DownloadAndInstallPawnioASecureBootCompati" xml:space="preserve">
+    <value>Download and install PawnIO — a Secure Boot compatible driver for EC/MSR access</value>
+  </data>
+  <data name="SettingsView_RefreshStatus" xml:space="preserve">
+    <value>Refresh Status</value>
+  </data>
+  <data name="SettingsView_RefreshStatus_2" xml:space="preserve">
+    <value>🔄 Refresh Status</value>
+  </data>
+  <data name="SettingsView_ReCheckDriverAndEcBackendStatus" xml:space="preserve">
+    <value>Re-check driver and EC backend status</value>
+  </data>
+  <data name="SettingsView_ResetEcToDefaults" xml:space="preserve">
+    <value>Reset EC to Defaults</value>
+  </data>
+  <data name="SettingsView_RestoresBiosFanControlUseIfBiosShowsStuckI" xml:space="preserve">
+    <value>Restores BIOS fan control. Use if BIOS shows stuck/incorrect fan values.</value>
+  </data>
+  <data name="SettingsView_ResetEc" xml:space="preserve">
+    <value>Reset EC</value>
+  </data>
+  <data name="SettingsView_ResetEc_2" xml:space="preserve">
+    <value>🔧 Reset EC</value>
+  </data>
+  <data name="SettingsView_BiosInformation" xml:space="preserve">
+    <value>BIOS Information</value>
+  </data>
+  <data name="SettingsView_HpModel" xml:space="preserve">
+    <value>HP Model:</value>
+  </data>
+  <data name="SettingsView_CurrentBios" xml:space="preserve">
+    <value>Current BIOS:</value>
+  </data>
+  <data name="SettingsView_LatestBios" xml:space="preserve">
+    <value>Latest BIOS:</value>
+  </data>
+  <data name="SettingsView_CheckForUpdates" xml:space="preserve">
+    <value>🔍 Check for Updates</value>
+  </data>
+  <data name="SettingsView_CheckHpForAvailableBiosFirmwareUpdates" xml:space="preserve">
+    <value>Check HP for available BIOS firmware updates</value>
+  </data>
+  <data name="SettingsView_DownloadUpdate" xml:space="preserve">
+    <value>Download Update</value>
+  </data>
+  <data name="SettingsView_DownloadUpdate_2" xml:space="preserve">
+    <value>⬇️ Download Update</value>
+  </data>
+  <data name="SettingsView_DownloadAndLaunchTheBiosUpdateInstaller" xml:space="preserve">
+    <value>Download and launch the BIOS update installer</value>
+  </data>
+  <data name="SettingsView_HpDriverSupportResources" xml:space="preserve">
+    <value>HP Driver &amp; Support Resources</value>
+  </data>
+  <data name="SettingsView_HpSupportAssistant" xml:space="preserve">
+    <value>HP Support Assistant</value>
+  </data>
+  <data name="SettingsView_HpSupport" xml:space="preserve">
+    <value>HP Support</value>
+  </data>
+  <data name="SettingsView_Assistant" xml:space="preserve">
+    <value>Assistant</value>
+  </data>
+  <data name="SettingsView_HpDriverDownloads" xml:space="preserve">
+    <value>HP Driver Downloads</value>
+  </data>
+  <data name="SettingsView_Downloads" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="SettingsView_OmenGamingHubOfficial" xml:space="preserve">
+    <value>OMEN Gaming Hub (Official)</value>
+  </data>
+  <data name="SettingsView_OmenHub" xml:space="preserve">
+    <value>OMEN Hub</value>
+  </data>
+  <data name="SettingsView_Official" xml:space="preserve">
+    <value>(Official)</value>
+  </data>
+  <data name="SettingsView_FanBoost" xml:space="preserve">
+    <value>Fan Boost</value>
+  </data>
+  <data name="SettingsView_StartFanBoost" xml:space="preserve">
+    <value>Start Fan Boost</value>
+  </data>
+  <data name="SettingsView_StartFanBoost_2" xml:space="preserve">
+    <value>💨 Start Fan Boost</value>
+  </data>
+  <data name="SettingsView_RunFansAtMaximumSpeedFor60SecondsToClearDu" xml:space="preserve">
+    <value>Run fans at maximum speed for ~60 seconds to clear dust buildup</value>
+  </data>
+  <data name="SettingsView_StopTheFanCleaningCycleAndReturnFansToNorm" xml:space="preserve">
+    <value>Stop the fan cleaning cycle and return fans to normal control</value>
+  </data>
+  <data name="SettingsView_HpBloatwareRemoval" xml:space="preserve">
+    <value>HP Bloatware Removal</value>
+  </data>
+  <data name="SettingsView_RemoveUnnecessaryHpPreInstalledApps" xml:space="preserve">
+    <value>Remove unnecessary HP pre-installed apps</value>
+  </data>
+  <data name="SettingsView_OpenBloatwareManager" xml:space="preserve">
+    <value>Open Bloatware Manager →</value>
+  </data>
+  <data name="SettingsView_OpenBloatwareManager_2" xml:space="preserve">
+    <value>🗑️ Open Bloatware Manager →</value>
+  </data>
+  <data name="SettingsView_SwitchToTheBloatwareManagerTab" xml:space="preserve">
+    <value>Switch to the Bloatware Manager tab</value>
+  </data>
+  <data name="SettingsView_FeatureModules" xml:space="preserve">
+    <value>Feature Modules</value>
+  </data>
+  <data name="SettingsView_EnableDisableFeaturesToReduceResourceUsage" xml:space="preserve">
+    <value>Enable/disable features to reduce resource usage</value>
+  </data>
+  <data name="SettingsView_CorsairIcueIntegration" xml:space="preserve">
+    <value>Corsair iCUE Integration</value>
+  </data>
+  <data name="SettingsView_SupportForCorsairKeyboardsMiceHeadsets" xml:space="preserve">
+    <value>Support for Corsair keyboards, mice, headsets</value>
+  </data>
+  <data name="SettingsView_LogitechGHubIntegration" xml:space="preserve">
+    <value>Logitech G HUB Integration</value>
+  </data>
+  <data name="SettingsView_SupportForLogitechGPeripherals" xml:space="preserve">
+    <value>Support for Logitech G peripherals</value>
+  </data>
+  <data name="SettingsView_GameProfileAutoSwitching" xml:space="preserve">
+    <value>Game Profile Auto-Switching</value>
+  </data>
+  <data name="SettingsView_AutomaticallyApplyProfilesWhenGamesLaunch" xml:space="preserve">
+    <value>Automatically apply profiles when games launch</value>
+  </data>
+  <data name="SettingsView_KeyboardBacklightControl" xml:space="preserve">
+    <value>Keyboard Backlight Control</value>
+  </data>
+  <data name="SettingsView_OmenKeyboard4ZoneRgbLighting" xml:space="preserve">
+    <value>OMEN keyboard 4-zone RGB lighting</value>
+  </data>
+  <data name="SettingsView_AmbientLighting" xml:space="preserve">
+    <value>🌈 Ambient Lighting</value>
+  </data>
+  <data name="SettingsView_SyncKeyboardPeripheralsWithScreenColorsAmb" xml:space="preserve">
+    <value>Sync keyboard/peripherals with screen colors (Ambilight-style)</value>
+  </data>
+  <data name="SettingsView_Saturation" xml:space="preserve">
+    <value>Saturation:</value>
+  </data>
+  <data name="SettingsView_AmbientLightingSaturation" xml:space="preserve">
+    <value>Ambient Lighting Saturation</value>
+  </data>
+  <data name="SettingsView_UpdateRate" xml:space="preserve">
+    <value>Update Rate:</value>
+  </data>
+  <data name="SettingsView_AmbientLightingFps" xml:space="preserve">
+    <value>Ambient Lighting Fps</value>
+  </data>
+  <data name="SettingsView_SamplesColorsFromScreenEdgesAndAppliesToRg" xml:space="preserve">
+    <value>💡 Samples colors from screen edges and applies to RGB devices</value>
+  </data>
+  <data name="SettingsView_ExperimentalDirectEcKeyboardControl" xml:space="preserve">
+    <value>EXPERIMENTAL: Direct EC Keyboard Control</value>
+  </data>
+  <data name="SettingsView_EnableOnlyIfWmiKeyboardControlDoesnTWorkOn" xml:space="preserve">
+    <value>Enable only if WMI keyboard control doesn't work on your model.</value>
+  </data>
+  <data name="SettingsView_ForceEcKeyboardWrites" xml:space="preserve">
+    <value>Force EC Keyboard Writes</value>
+  </data>
+  <data name="SettingsView_WarningEcWritesCausedCrashesOnOmen17Ck2xxx" xml:space="preserve">
+    <value>⚠️ WARNING: EC writes caused crashes on OMEN 17-ck2xxx.</value>
+  </data>
+  <data name="SettingsView_ThisMayHardCrashYourSystemRequiringForcedR" xml:space="preserve">
+    <value>This may hard-crash your system requiring forced restart.</value>
+  </data>
+  <data name="SettingsView_ExclusiveEcDiagnostics" xml:space="preserve">
+    <value>Exclusive EC Diagnostics</value>
+  </data>
+  <data name="SettingsView_DiagnosticModeAcquiresExclusiveEcAccessToD" xml:space="preserve">
+    <value>⚠️ Diagnostic mode: Acquires exclusive EC access to detect conflicts.</value>
+  </data>
+  <data name="SettingsView_MayInterfereWithOmenGamingHubOrOtherFanCon" xml:space="preserve">
+    <value>May interfere with OMEN Gaming Hub or other fan control apps.</value>
+  </data>
+  <data name="SettingsView_KeyboardBackend" xml:space="preserve">
+    <value>Keyboard Backend</value>
+  </data>
+  <data name="SettingsView_AutoWmiBiosWmiEcSetSpecificIfAutoDetection" xml:space="preserve">
+    <value>Auto = WMI BIOS → WMI → EC. Set specific if auto-detection fails.</value>
+  </data>
+  <data name="SettingsView_InvertRgbZoneOrder" xml:space="preserve">
+    <value>Invert RGB Zone Order</value>
+  </data>
+  <data name="SettingsView_EnableForOmenMax16LightBarZonesRunRightToL" xml:space="preserve">
+    <value>Enable for OMEN Max 16 light bar (zones run right-to-left)</value>
+  </data>
+  <data name="SettingsView_SafeAlternativeUseHpOmenGamingHubForKeyboa" xml:space="preserve">
+    <value>💡 Safe alternative: Use HP Omen Gaming Hub for keyboard lighting</value>
+  </data>
+  <data name="SettingsView_ContinuousFanSpeedAdjustmentDisableForBios" xml:space="preserve">
+    <value>Continuous fan speed adjustment (disable for BIOS-only control)</value>
+  </data>
+  <data name="SettingsView_PowerSourceAutomation" xml:space="preserve">
+    <value>Power Source Automation</value>
+  </data>
+  <data name="SettingsView_AutoSwitchProfilesWhenPluggingUnpluggingAc" xml:space="preserve">
+    <value>Auto-switch profiles when plugging/unplugging AC</value>
+  </data>
+  <data name="SettingsView_GpuModeSwitching" xml:space="preserve">
+    <value>GPU Mode Switching</value>
+  </data>
+  <data name="SettingsView_ControlHybridDiscreteOptimusModes" xml:space="preserve">
+    <value>Control Hybrid/Discrete/Optimus modes</value>
+  </data>
+  <data name="SettingsView_CpuUndervoltControls" xml:space="preserve">
+    <value>CPU Undervolt Controls</value>
+  </data>
+  <data name="SettingsView_VoltageOffsetAdjustmentRequiresCompatibleC" xml:space="preserve">
+    <value>Voltage offset adjustment (requires compatible CPU)</value>
+  </data>
+  <data name="SettingsView_OmenKeyInterception" xml:space="preserve">
+    <value>OMEN Key Interception</value>
+  </data>
+  <data name="SettingsView_CaptureOmenKeyToShowOmencoreInsteadOfHpGam" xml:space="preserve">
+    <value>Capture OMEN key to show OmenCore instead of HP Gaming Hub</value>
+  </data>
+  <data name="SettingsView_OmenKeyInterceptionEnabled" xml:space="preserve">
+    <value>Omen Key Interception Enabled</value>
+  </data>
+  <data name="SettingsView_AnOmenGamingHubServiceOrProcessIsRunningTh" xml:space="preserve">
+    <value>An OMEN Gaming Hub service or process is running. This can conflict with OmenCore's fan control, undervolt, or OMEN key handling. If Gaming Hub itself is still installed, use Bloatware Manager to remove it.</value>
+  </data>
+  <data name="SettingsView_OmenKeyAction" xml:space="preserve">
+    <value>OMEN Key Action</value>
+  </data>
+  <data name="SettingsView_ProgramOrScriptToRun" xml:space="preserve">
+    <value>Program or script to run</value>
+  </data>
+  <data name="SettingsView_OmenKeyProgramOrScript" xml:space="preserve">
+    <value>OMEN key program or script</value>
+  </data>
+  <data name="SettingsView_ArgumentsOptional" xml:space="preserve">
+    <value>Arguments (optional)</value>
+  </data>
+  <data name="SettingsView_OmenKeyArguments" xml:space="preserve">
+    <value>OMEN key arguments</value>
+  </data>
+  <data name="SettingsView_Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="SettingsView_InGameOsd" xml:space="preserve">
+    <value>In-Game OSD</value>
+  </data>
+  <data name="SettingsView_OnScreenOverlayShowingSystemStatsDuringGam" xml:space="preserve">
+    <value>On-screen overlay showing system stats during gaming</value>
+  </data>
+  <data name="SettingsView_EnableOsdOverlay" xml:space="preserve">
+    <value>Enable OSD Overlay</value>
+  </data>
+  <data name="SettingsView_WhenDisabledNoOsdBackgroundProcessRunsAtAl" xml:space="preserve">
+    <value>When disabled, no OSD background process runs at all</value>
+  </data>
+  <data name="SettingsView_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="SettingsView_TargetMonitor" xml:space="preserve">
+    <value>Target Monitor</value>
+  </data>
+  <data name="SettingsView_OverlayDensity" xml:space="preserve">
+    <value>Overlay Density</value>
+  </data>
+  <data name="SettingsView_ToggleHotkey" xml:space="preserve">
+    <value>Toggle Hotkey</value>
+  </data>
+  <data name="SettingsView_HotkeyOsdVisuals" xml:space="preserve">
+    <value>Hotkey OSD Visuals</value>
+  </data>
+  <data name="SettingsView_PopupDuration" xml:space="preserve">
+    <value>Popup Duration</value>
+  </data>
+  <data name="SettingsView_OsdHotkeyToastDurationMs" xml:space="preserve">
+    <value>Osd Hotkey Toast Duration Ms</value>
+  </data>
+  <data name="SettingsView_PopupSize" xml:space="preserve">
+    <value>Popup Size</value>
+  </data>
+  <data name="SettingsView_OsdHotkeyToastScalePercent" xml:space="preserve">
+    <value>Osd Hotkey Toast Scale Percent</value>
+  </data>
+  <data name="SettingsView_AccentTheme" xml:space="preserve">
+    <value>Accent Theme</value>
+  </data>
+  <data name="SettingsView_CompactPopup" xml:space="preserve">
+    <value>Compact Popup</value>
+  </data>
+  <data name="SettingsView_SmallerCardLessSecondaryText" xml:space="preserve">
+    <value>(smaller card, less secondary text)</value>
+  </data>
+  <data name="SettingsView_MetricsToDisplay" xml:space="preserve">
+    <value>Metrics to Display</value>
+  </data>
+  <data name="SettingsView_MetricGroups" xml:space="preserve">
+    <value>Metric Groups</value>
+  </data>
+  <data name="SettingsView_Thermals" xml:space="preserve">
+    <value>Thermals</value>
+  </data>
+  <data name="SettingsView_Network" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="SettingsView_TemperatureLoad" xml:space="preserve">
+    <value>Temperature &amp; Load</value>
+  </data>
+  <data name="SettingsView_CpuTemp" xml:space="preserve">
+    <value>CPU Temp</value>
+  </data>
+  <data name="SettingsView_GpuTemp" xml:space="preserve">
+    <value>GPU Temp</value>
+  </data>
+  <data name="SettingsView_CpuLoad" xml:space="preserve">
+    <value>CPU Load %</value>
+  </data>
+  <data name="SettingsView_GpuLoad" xml:space="preserve">
+    <value>GPU Load %</value>
+  </data>
+  <data name="SettingsView_PowerMemory" xml:space="preserve">
+    <value>Power &amp; Memory</value>
+  </data>
+  <data name="SettingsView_CpuPowerW" xml:space="preserve">
+    <value>CPU Power (W)</value>
+  </data>
+  <data name="SettingsView_GpuPowerW" xml:space="preserve">
+    <value>GPU Power (W)</value>
+  </data>
+  <data name="SettingsView_VramUsage" xml:space="preserve">
+    <value>VRAM Usage</value>
+  </data>
+  <data name="SettingsView_FpsRtss" xml:space="preserve">
+    <value>FPS (RTSS)</value>
+  </data>
+  <data name="SettingsView_FrametimeMs" xml:space="preserve">
+    <value>Frametime (ms)</value>
+  </data>
+  <data name="SettingsView_NetworkPing" xml:space="preserve">
+    <value>Network Ping</value>
+  </data>
+  <data name="SettingsView_NetUpload" xml:space="preserve">
+    <value>Net Upload</value>
+  </data>
+  <data name="SettingsView_NetDownload" xml:space="preserve">
+    <value>Net Download</value>
+  </data>
+  <data name="SettingsView_FanSpeedRpm" xml:space="preserve">
+    <value>Fan Speed (RPM)</value>
+  </data>
+  <data name="SettingsView_PerfMode" xml:space="preserve">
+    <value>Perf. Mode</value>
+  </data>
+  <data name="SettingsView_ClockTime" xml:space="preserve">
+    <value>Clock Time</value>
+  </data>
+  <data name="SettingsView_Battery" xml:space="preserve">
+    <value>Battery %</value>
+  </data>
+  <data name="SettingsView_GpuClock" xml:space="preserve">
+    <value>GPU Clock</value>
+  </data>
+  <data name="SettingsView_HorizontalLayout" xml:space="preserve">
+    <value>Horizontal Layout</value>
+  </data>
+  <data name="SettingsView_CompactBarAtScreenEdge" xml:space="preserve">
+    <value>(Compact bar at screen edge)</value>
+  </data>
+  <data name="SettingsView_BatteryCare" xml:space="preserve">
+    <value>Battery Care</value>
+  </data>
+  <data name="SettingsView_ExtendBatteryLifespanWithSmartChargeLimiti" xml:space="preserve">
+    <value>Extend battery lifespan with smart charge limiting</value>
+  </data>
+  <data name="SettingsView_EnableChargeLimit" xml:space="preserve">
+    <value>Enable Charge Limit</value>
+  </data>
+  <data name="SettingsView_StopChargingAtACustomThresholdToPreserveBa" xml:space="preserve">
+    <value>Stop charging at a custom threshold to preserve battery health</value>
+  </data>
+  <data name="SettingsView_ChargeThreshold" xml:space="preserve">
+    <value>Charge Threshold</value>
+  </data>
+  <data name="SettingsView_SetMaximumBatteryChargeLevel" xml:space="preserve">
+    <value>Set maximum battery charge level</value>
+  </data>
+  <data name="SettingsView_BatteryChargeThresholdPercent" xml:space="preserve">
+    <value>Battery Charge Threshold Percent</value>
+  </data>
+  <data name="SettingsView_FanHysteresis" xml:space="preserve">
+    <value>Fan Hysteresis</value>
+  </data>
+  <data name="SettingsView_PreventFanSpeedOscillationWithDeadZoneAndD" xml:space="preserve">
+    <value>Prevent fan speed oscillation with dead-zone and delays</value>
+  </data>
+  <data name="SettingsView_EnableHysteresis" xml:space="preserve">
+    <value>Enable Hysteresis</value>
+  </data>
+  <data name="SettingsView_SmoothOutFanSpeedChangesToReduceNoiseFluct" xml:space="preserve">
+    <value>Smooth out fan speed changes to reduce noise fluctuation</value>
+  </data>
+  <data name="SettingsView_TemperatureDeadZone" xml:space="preserve">
+    <value>Temperature Dead-Zone</value>
+  </data>
+  <data name="SettingsView_FansWonTChangeUnlessTempMovesBeyondThis" xml:space="preserve">
+    <value>Fans won't change unless temp moves beyond this</value>
+  </data>
+  <data name="SettingsView_FanHysteresisDeadZone" xml:space="preserve">
+    <value>Fan Hysteresis Dead Zone</value>
+  </data>
+  <data name="SettingsView_RampUpDelay" xml:space="preserve">
+    <value>Ramp-Up Delay</value>
+  </data>
+  <data name="SettingsView_WaitBeforeIncreasingFanSpeed" xml:space="preserve">
+    <value>Wait before increasing fan speed</value>
+  </data>
+  <data name="SettingsView_FanHysteresisRampUpDelay" xml:space="preserve">
+    <value>Fan Hysteresis Ramp Up Delay</value>
+  </data>
+  <data name="SettingsView_RampDownDelay" xml:space="preserve">
+    <value>Ramp-Down Delay</value>
+  </data>
+  <data name="SettingsView_WaitBeforeDecreasingFanSpeed" xml:space="preserve">
+    <value>Wait before decreasing fan speed</value>
+  </data>
+  <data name="SettingsView_FanHysteresisRampDownDelay" xml:space="preserve">
+    <value>Fan Hysteresis Ramp Down Delay</value>
+  </data>
+  <data name="SettingsView_ThermalProtection" xml:space="preserve">
+    <value>Thermal Protection</value>
+  </data>
+  <data name="SettingsView_AutoBoostFansWhenTempsExceedThresholdInclu" xml:space="preserve">
+    <value>Auto-boost fans when temps exceed threshold, including the emergency 100% override on custom curves. Disable if your laptop naturally runs hot and you manage fans manually — you take full responsibility for thermal management.</value>
+  </data>
+  <data name="SettingsView_ThermalProtectionThreshold" xml:space="preserve">
+    <value>Thermal Protection Threshold</value>
+  </data>
+  <data name="SettingsView_FansRampUpWhenTempsExceedThis7095C" xml:space="preserve">
+    <value>Fans ramp up when temps exceed this (70-95°C)</value>
+  </data>
+  <data name="SettingsView_ThermalProtectionRampThresholdInCelsius" xml:space="preserve">
+    <value>Thermal protection ramp threshold in Celsius</value>
+  </data>
+  <data name="SettingsView_EmergencyMaxFanThreshold" xml:space="preserve">
+    <value>Emergency Max-Fan Threshold</value>
+  </data>
+  <data name="SettingsView_FansForcedTo100ImmediatelyAboveThis9099CAl" xml:space="preserve">
+    <value>Fans forced to 100% immediately above this (90-99°C, always at least 2°C above the ramp threshold above)</value>
+  </data>
+  <data name="SettingsView_EmergencyMaxFanThresholdInCelsius" xml:space="preserve">
+    <value>Emergency max fan threshold in Celsius</value>
+  </data>
+  <data name="SettingsView_MaxFanLevelOverride" xml:space="preserve">
+    <value>Max Fan Level Override</value>
+  </data>
+  <data name="SettingsView_OverrideAutoDetectedMaxFanLevelSetTo0ForAu" xml:space="preserve">
+    <value>Override auto-detected max fan level. Set to 0 for auto-detect. If fans don't reach full speed, try 63 or 100. Requires restart.</value>
+  </data>
+  <data name="SettingsView_HpOmenGamingHubCleanup" xml:space="preserve">
+    <value>HP OMEN Gaming Hub Cleanup</value>
+  </data>
+  <data name="SettingsView_RemoveHpOmenGamingHubAndRelatedServicesThi" xml:space="preserve">
+    <value>Remove HP OMEN Gaming Hub and related services. This is optional - OmenCore works without OGH installed.</value>
+  </data>
+  <data name="SettingsView_ASystemRestorePointWillBeCreatedAutomatica" xml:space="preserve">
+    <value>ℹ️ A System Restore point will be created automatically before cleanup begins.</value>
+  </data>
+  <data name="SettingsView_KillRunningHpOmenProcesses" xml:space="preserve">
+    <value>Kill running HP OMEN processes</value>
+  </data>
+  <data name="SettingsView_UninstallHpOmenGamingHubApplication" xml:space="preserve">
+    <value>Uninstall HP OMEN Gaming Hub application</value>
+  </data>
+  <data name="SettingsView_RemoveHpOmenServicesOmenserviceLightingser" xml:space="preserve">
+    <value>Remove HP OMEN services (OmenService, LightingService)</value>
+  </data>
+  <data name="SettingsView_CleanHpOmenRegistryEntries" xml:space="preserve">
+    <value>Clean HP OMEN registry entries</value>
+  </data>
+  <data name="SettingsView_RemoveHpOmenLegacyInstallersWingetAppx" xml:space="preserve">
+    <value>Remove HP OMEN legacy installers (winget/AppX)</value>
+  </data>
+  <data name="SettingsView_RemoveResidualHpOmenFilesAndFolders" xml:space="preserve">
+    <value>Remove residual HP OMEN files and folders</value>
+  </data>
+  <data name="SettingsView_AutomaticSystemRestorePoint" xml:space="preserve">
+    <value>✓ Automatic System Restore Point</value>
+  </data>
+  <data name="SettingsView_ASystemRestorePointWillBeCreatedAutomatica_2" xml:space="preserve">
+    <value>A System Restore point will be created automatically before cleanup starts. If restore point creation fails (e.g., System Restore is disabled), you'll be prompted to continue or cancel.</value>
+  </data>
+  <data name="SettingsView_TipYouCanAlsoManuallyCreateARestorePointUs" xml:space="preserve">
+    <value>Tip: You can also manually create a restore point using the button below if you want extra safety.</value>
+  </data>
+  <data name="SettingsView_CreateManualRestorePoint" xml:space="preserve">
+    <value>Create Manual Restore Point</value>
+  </data>
+  <data name="SettingsView_CreateAWindowsSystemRestoreSnapshotBeforeR" xml:space="preserve">
+    <value>Create a Windows System Restore snapshot before running cleanup</value>
+  </data>
+  <data name="SettingsView_RunCleanup" xml:space="preserve">
+    <value>Run Cleanup</value>
+  </data>
+  <data name="SettingsView_RunCleanup_2" xml:space="preserve">
+    <value>🗑️ Run Cleanup</value>
+  </data>
+  <data name="SettingsView_ExecuteTheSelectedWindowsSystemCleanupTask" xml:space="preserve">
+    <value>Execute the selected Windows system cleanup tasks</value>
+  </data>
+  <data name="SettingsView_RestartRecommendedToCompleteCleanup" xml:space="preserve">
+    <value>💡 Restart recommended to complete cleanup</value>
+  </data>
+  <data name="SettingsView_SomeComponentsMayStillBeRunningUntilYouRes" xml:space="preserve">
+    <value>Some components may still be running until you restart Windows.</value>
+  </data>
+  <data name="SettingsView_ProfileManagement" xml:space="preserve">
+    <value>Profile Management</value>
+  </data>
+  <data name="SettingsView_SaveAndLoadYourCompleteOmencoreConfigurati" xml:space="preserve">
+    <value>Save and load your complete OmenCore configuration</value>
+  </data>
+  <data name="SettingsView_ImportProfile" xml:space="preserve">
+    <value>Import Profile</value>
+  </data>
+  <data name="SettingsView_ImportProfile_2" xml:space="preserve">
+    <value>📥 Import Profile</value>
+  </data>
+  <data name="SettingsView_LoadFanCurvesPerformanceModesAndGpuOcSetti" xml:space="preserve">
+    <value>Load fan curves, performance modes, and GPU OC settings from .omencore file</value>
+  </data>
+  <data name="SettingsView_ExportProfile" xml:space="preserve">
+    <value>Export Profile</value>
+  </data>
+  <data name="SettingsView_ExportProfile_2" xml:space="preserve">
+    <value>📤 Export Profile</value>
+  </data>
+  <data name="SettingsView_SaveYourCurrentConfigurationToShareOrBacku" xml:space="preserve">
+    <value>Save your current configuration to share or backup</value>
+  </data>
+  <data name="SettingsView_ExportDiagnostics" xml:space="preserve">
+    <value>🔬 Export Diagnostics</value>
+  </data>
+  <data name="SettingsView_ExportLogsAndSystemInfoForTroubleshooting" xml:space="preserve">
+    <value>Export logs and system info for troubleshooting</value>
+  </data>
+  <data name="SettingsView_DataStorage" xml:space="preserve">
+    <value>Data &amp; Storage</value>
+  </data>
+  <data name="SettingsView_OpenConfigFolder" xml:space="preserve">
+    <value>Open Config Folder</value>
+  </data>
+  <data name="SettingsView_OpenConfigFolder_2" xml:space="preserve">
+    <value>📂 Open Config Folder</value>
+  </data>
+  <data name="SettingsView_OpenLocalappdataOmencoreWhereSettingsAndPr" xml:space="preserve">
+    <value>Open %LOCALAPPDATA%\OmenCore — where settings and profiles are stored</value>
+  </data>
+  <data name="SettingsView_OpenLogFolder" xml:space="preserve">
+    <value>Open Log Folder</value>
+  </data>
+  <data name="SettingsView_OpenLogFolder_2" xml:space="preserve">
+    <value>📋 Open Log Folder</value>
+  </data>
+  <data name="SettingsView_OpenTheFolderContainingOmencoreDiagnosticL" xml:space="preserve">
+    <value>Open the folder containing OmenCore diagnostic log files</value>
+  </data>
+  <data name="SettingsView_ResetToDefaults" xml:space="preserve">
+    <value>Reset to Defaults</value>
+  </data>
+  <data name="SettingsView_ResetToDefaults_2" xml:space="preserve">
+    <value>🔄 Reset to Defaults</value>
+  </data>
+  <data name="SettingsView_ResetAllSettingsToDefaultValues" xml:space="preserve">
+    <value>Reset all settings to default values</value>
+  </data>
+  <data name="SettingsView_Version" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="SettingsView_Github" xml:space="preserve">
+    <value>🌐 GitHub</value>
+  </data>
+  <data name="SettingsView_OpenTheOmencoreGithubRepositoryInYourBrows" xml:space="preserve">
+    <value>Open the OmenCore GitHub repository in your browser</value>
+  </data>
+  <data name="SettingsView_ReleaseNotes" xml:space="preserve">
+    <value>📝 Release Notes</value>
+  </data>
+  <data name="SettingsView_ViewTheFullChangelogForThisRelease" xml:space="preserve">
+    <value>View the full changelog for this release</value>
+  </data>
+  <data name="SettingsView_ReportIssue" xml:space="preserve">
+    <value>Report Issue</value>
+  </data>
+  <data name="SettingsView_ReportIssue_2" xml:space="preserve">
+    <value>🐛 Report Issue</value>
+  </data>
+  <data name="SettingsView_OpenTheGithubIssueTrackerToReportABugOrReq" xml:space="preserve">
+    <value>Open the GitHub issue tracker to report a bug or request a feature</value>
+  </data>
+  <data name="SettingsView_SupportDevelopment" xml:space="preserve">
+    <value>💖 Support Development</value>
+  </data>
+  <data name="SettingsView_OmencoreIsFreeAndOpenSourceIfYouFindItUsef" xml:space="preserve">
+    <value>OmenCore is free and open source. If you find it useful, consider supporting its development!</value>
+  </data>
+  <data name="SettingsView_DonateViaPaypal" xml:space="preserve">
+    <value>Donate via PayPal</value>
+  </data>
+  <data name="SettingsView_Scheduler" xml:space="preserve">
+    <value>Scheduler</value>
+  </data>
+  <data name="SettingsView_ProfileScheduler" xml:space="preserve">
+    <value>Profile Scheduler</value>
+  </data>
+  <data name="SettingsView_AutomaticallyApplyFanPresetsAndPerformance" xml:space="preserve">
+    <value>Automatically apply fan presets and performance modes at scheduled times each day.</value>
+  </data>
+  <data name="SettingsView_EnableThisScheduleRule" xml:space="preserve">
+    <value>Enable this schedule rule</value>
+  </data>
+  <data name="SettingsView_RuleName" xml:space="preserve">
+    <value>Rule Name</value>
+  </data>
+  <data name="SettingsView_Time" xml:space="preserve">
+    <value>Time:</value>
+  </data>
+  <data name="SettingsView_Fan" xml:space="preserve">
+    <value>Fan:</value>
+  </data>
+  <data name="SettingsView_Mode" xml:space="preserve">
+    <value>Mode:</value>
+  </data>
+  <data name="SettingsView_RemoveScheduleRule" xml:space="preserve">
+    <value>Remove Schedule Rule</value>
+  </data>
+  <data name="SettingsView_AddRule" xml:space="preserve">
+    <value>Add Rule</value>
+  </data>
+  <data name="SettingsView_AddRule_2" xml:space="preserve">
+    <value>+ Add Rule</value>
+  </data>
+  <data name="SettingsView_AutomationRules" xml:space="preserve">
+    <value>Automation Rules</value>
+  </data>
+  <data name="SettingsView_PromotedTriggersForShippedAutomationTimeWi" xml:space="preserve">
+    <value>Promoted triggers for shipped automation: time window, battery threshold, AC power state, CPU/GPU temperature, and system idle time.</value>
+  </data>
+  <data name="SettingsView_AddAutomationRule" xml:space="preserve">
+    <value>Add Automation Rule</value>
+  </data>
+  <data name="SettingsView_AddAutomationRule_2" xml:space="preserve">
+    <value>+ Add Automation Rule</value>
+  </data>
+  <data name="SettingsView_EnableThisAutomationRule" xml:space="preserve">
+    <value>Enable this automation rule</value>
+  </data>
+  <data name="SettingsView_AutomationRuleName" xml:space="preserve">
+    <value>Automation Rule Name</value>
+  </data>
+  <data name="SettingsView_TriggerType" xml:space="preserve">
+    <value>Trigger Type</value>
+  </data>
+  <data name="SettingsView_PriorityLowerNumbersRunFirst" xml:space="preserve">
+    <value>Priority (lower numbers run first)</value>
+  </data>
+  <data name="SettingsView_LowerNumbersRunFirst" xml:space="preserve">
+    <value>Lower numbers run first</value>
+  </data>
+  <data name="SettingsView_RemoveAutomationRule" xml:space="preserve">
+    <value>Remove Automation Rule</value>
+  </data>
+  <data name="SettingsView_StartTime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="SettingsView_EndTime" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="SettingsView_BatteryThreshold" xml:space="preserve">
+    <value>Battery threshold</value>
+  </data>
+  <data name="SettingsView_BatteryCondition" xml:space="preserve">
+    <value>Battery condition</value>
+  </data>
+  <data name="SettingsView_AcPowerState" xml:space="preserve">
+    <value>AC power state</value>
+  </data>
+  <data name="SettingsView_TemperatureThresholdC" xml:space="preserve">
+    <value>Temperature threshold (°C)</value>
+  </data>
+  <data name="SettingsView_TemperatureThreshold" xml:space="preserve">
+    <value>Temperature threshold</value>
+  </data>
+  <data name="SettingsView_TemperatureCondition" xml:space="preserve">
+    <value>Temperature condition</value>
+  </data>
+  <data name="SettingsView_TemperatureSensor" xml:space="preserve">
+    <value>Temperature sensor</value>
+  </data>
+  <data name="SettingsView_IdleMinutes" xml:space="preserve">
+    <value>Idle minutes</value>
+  </data>
+  <data name="SettingsView_ProcessNameEGGameExe" xml:space="preserve">
+    <value>Process name (e.g. game.exe)</value>
+  </data>
+  <data name="SettingsView_ProcessName" xml:space="preserve">
+    <value>Process name</value>
+  </data>
+  <data name="SettingsView_WifiNetworkNameSsid" xml:space="preserve">
+    <value>WiFi network name (SSID)</value>
+  </data>
+  <data name="SettingsView_WifiSsid" xml:space="preserve">
+    <value>WiFi SSID</value>
+  </data>
+  <data name="SettingsView_LidState" xml:space="preserve">
+    <value>Lid state</value>
+  </data>
+  <data name="SettingsView_FanPresetAction" xml:space="preserve">
+    <value>Fan preset action</value>
+  </data>
+  <data name="SettingsView_PerformanceModeAction" xml:space="preserve">
+    <value>Performance mode action</value>
+  </data>
+  <data name="SplashWindow_V200Alpha1" xml:space="preserve">
+    <value>v2.0.0-alpha1</value>
+  </data>
+  <data name="SplashWindow_HardwareControlSuite" xml:space="preserve">
+    <value>Hardware Control Suite</value>
+  </data>
+  <data name="SplashWindow_Initializing" xml:space="preserve">
+    <value>Initializing...</value>
+  </data>
+  <data name="SystemOptimizerView_WhatChanges" xml:space="preserve">
+    <value>What changes</value>
+  </data>
+  <data name="SystemOptimizerView_RegistryKeys" xml:space="preserve">
+    <value>Registry keys</value>
+  </data>
+  <data name="SystemOptimizerView_ServicesOrCommands" xml:space="preserve">
+    <value>Services or commands</value>
+  </data>
+  <data name="SystemOptimizerView_ManualUndo" xml:space="preserve">
+    <value>Manual undo</value>
+  </data>
+  <data name="SystemOptimizerView_Applying" xml:space="preserve">
+    <value>Applying...</value>
+  </data>
+  <data name="SystemOptimizerView_SystemOptimizer" xml:space="preserve">
+    <value>System Optimizer</value>
+  </data>
+  <data name="SystemOptimizerView_FineTuneWindowsForGamingPerformance" xml:space="preserve">
+    <value>Fine-tune Windows for gaming performance</value>
+  </data>
+  <data name="SystemOptimizerView_ApplyAllOptimizationsForMaximumGamingPerfo" xml:space="preserve">
+    <value>Apply all optimizations for maximum gaming performance</value>
+  </data>
+  <data name="SystemOptimizerView_GamingMax" xml:space="preserve">
+    <value>Gaming Max</value>
+  </data>
+  <data name="SystemOptimizerView_ApplyRecommendedOptimizationsOnly" xml:space="preserve">
+    <value>Apply recommended optimizations only</value>
+  </data>
+  <data name="SystemOptimizerView_RefreshRiskTierPreflightSummary" xml:space="preserve">
+    <value>Refresh risk-tier preflight summary</value>
+  </data>
+  <data name="SystemOptimizerView_Preflight" xml:space="preserve">
+    <value>Preflight</value>
+  </data>
+  <data name="SystemOptimizerView_ExportOptimizerStateAndDriftDiagnosticsRep" xml:space="preserve">
+    <value>Export optimizer state and drift diagnostics report</value>
+  </data>
+  <data name="SystemOptimizerView_ExportReport" xml:space="preserve">
+    <value>Export Report</value>
+  </data>
+  <data name="SystemOptimizerView_RestoreAllSettingsToWindowsDefaults" xml:space="preserve">
+    <value>Restore all settings to Windows defaults</value>
+  </data>
+  <data name="SystemOptimizerView_RevertAll" xml:space="preserve">
+    <value>Revert All</value>
+  </data>
+  <data name="SystemOptimizerView_PowerPerformance" xml:space="preserve">
+    <value>Power &amp; Performance</value>
+  </data>
+  <data name="SystemOptimizerView_ApplyAll" xml:space="preserve">
+    <value>Apply All</value>
+  </data>
+  <data name="SystemOptimizerView_WindowsServices" xml:space="preserve">
+    <value>Windows Services</value>
+  </data>
+  <data name="SystemOptimizerView_NetworkLatency" xml:space="preserve">
+    <value>Network &amp; Latency</value>
+  </data>
+  <data name="SystemOptimizerView_InputGaming" xml:space="preserve">
+    <value>Input &amp; Gaming</value>
+  </data>
+  <data name="SystemOptimizerView_VisualEffects" xml:space="preserve">
+    <value>Visual Effects</value>
+  </data>
+  <data name="SystemOptimizerView_StorageDisk" xml:space="preserve">
+    <value>Storage &amp; Disk</value>
+  </data>
+  <data name="SystemOptimizerView_ImportantNotes" xml:space="preserve">
+    <value>Important Notes</value>
+  </data>
+  <data name="TuningView_CpuGpuTuning" xml:space="preserve">
+    <value>CPU / GPU Tuning</value>
+  </data>
+  <data name="TuningView_AdvancedPerformanceTuningUndervoltOvercloc" xml:space="preserve">
+    <value>Advanced performance tuning • Undervolt • Overclock • Power Limits</value>
+  </data>
+  <data name="TuningView_AdvancedTuning" xml:space="preserve">
+    <value>ADVANCED TUNING</value>
+  </data>
+  <data name="TuningView_ImproperValuesMayCauseCrashesOrFreezesStar" xml:space="preserve">
+    <value> — Improper values may cause crashes or freezes. Start small, test stability. Settings reset on reboot unless auto-apply is enabled.</value>
+  </data>
+  <data name="TuningView_TuningStatus" xml:space="preserve">
+    <value>Tuning status</value>
+  </data>
+  <data name="TuningView_ResetLiveTuningWhereAvailableAndNormalizeS" xml:space="preserve">
+    <value>Reset live tuning where available and normalize startup tuning state to safe Balanced/Auto defaults.</value>
+  </data>
+  <data name="TuningView_RollBackAllTuningToSafeDefaults" xml:space="preserve">
+    <value>Roll back all tuning to safe defaults</value>
+  </data>
+  <data name="TuningView_SafeRollback" xml:space="preserve">
+    <value>Safe Rollback</value>
+  </data>
+  <data name="TuningView_CpuTuning" xml:space="preserve">
+    <value>CPU Tuning</value>
+  </data>
+  <data name="TuningView_CpuUndervoltIsNotAvailable" xml:space="preserve">
+    <value>CPU undervolt is not available</value>
+  </data>
+  <data name="TuningView_CpuUndervoltIsNotAvailableOnThisMachine" xml:space="preserve">
+    <value>CPU undervolt is not available on this machine</value>
+  </data>
+  <data name="TuningView_Status" xml:space="preserve">
+    <value>Status: </value>
+  </data>
+  <data name="TuningView_CoreOffset" xml:space="preserve">
+    <value>CORE OFFSET</value>
+  </data>
+  <data name="TuningView_ApplyTheCpuVoltageOffsetAboveAnOffsetThatI" xml:space="preserve">
+    <value>Apply the CPU voltage offset above. An offset that is too aggressive can cause instability or crashes — test gradually.</value>
+  </data>
+  <data name="TuningView_ApplyCpuUndervoltOffset" xml:space="preserve">
+    <value>Apply CPU undervolt offset</value>
+  </data>
+  <data name="TuningView_ResetTo0mv" xml:space="preserve">
+    <value>Reset to 0mV</value>
+  </data>
+  <data name="TuningView_RemoveTheCpuVoltageOffsetReturningTheCpuTo" xml:space="preserve">
+    <value>Remove the CPU voltage offset, returning the CPU to its stock voltage.</value>
+  </data>
+  <data name="TuningView_ResetCpuUndervoltTo0Millivolts" xml:space="preserve">
+    <value>Reset CPU undervolt to 0 millivolts</value>
+  </data>
+  <data name="TuningView_AdjustCpuSustainedPl1AndBurstPl2PowerLimit" xml:space="preserve">
+    <value>Adjust CPU sustained (PL1) and burst (PL2) power limits. Higher values = more performance but more heat.</value>
+  </data>
+  <data name="TuningView_CpuPowerLimitsPl1Pl2" xml:space="preserve">
+    <value>CPU Power Limits (PL1/PL2)</value>
+  </data>
+  <data name="TuningView_Refresh" xml:space="preserve">
+    <value>🔄 Refresh</value>
+  </data>
+  <data name="TuningView_ReReadTheCurrentCpuPowerLimitsFromTheHardw" xml:space="preserve">
+    <value>Re-read the current CPU power limits from the hardware.</value>
+  </data>
+  <data name="TuningView_RefreshCpuPowerLimitReadings" xml:space="preserve">
+    <value>Refresh CPU power limit readings</value>
+  </data>
+  <data name="TuningView_SustainedTdp" xml:space="preserve">
+    <value>= Sustained TDP •</value>
+  </data>
+  <data name="TuningView_BurstPowerForTurboHigherMorePerformanceHea" xml:space="preserve">
+    <value>= Burst power for turbo • Higher = more performance &amp; heat</value>
+  </data>
+  <data name="TuningView_Pl1Sustained" xml:space="preserve">
+    <value>PL1 SUSTAINED</value>
+  </data>
+  <data name="TuningView_LongTermTdp" xml:space="preserve">
+    <value>Long-term TDP</value>
+  </data>
+  <data name="TuningView_Pl2Burst" xml:space="preserve">
+    <value>PL2 BURST</value>
+  </data>
+  <data name="TuningView_TurboPower" xml:space="preserve">
+    <value>Turbo Power</value>
+  </data>
+  <data name="TuningView_PowerLimitsLockedByBios" xml:space="preserve">
+    <value>Power limits locked by BIOS</value>
+  </data>
+  <data name="TuningView_MsrRegistersAreWriteLockedUntilRebootMayRe" xml:space="preserve">
+    <value> — MSR registers are write-locked until reboot. May require BIOS settings or HP Unleashed Mode.</value>
+  </data>
+  <data name="TuningView_ApplyPowerLimits" xml:space="preserve">
+    <value>Apply Power Limits</value>
+  </data>
+  <data name="TuningView_ApplyTheCpuPl1Pl2PowerLimitsAboveHigherLim" xml:space="preserve">
+    <value>Apply the CPU PL1/PL2 power limits above. Higher limits allow more sustained performance but more heat.</value>
+  </data>
+  <data name="TuningView_ApplyCpuPowerLimits" xml:space="preserve">
+    <value>Apply CPU power limits</value>
+  </data>
+  <data name="TuningView_RestoreTheCpuPowerLimitsToThisModelSStockV" xml:space="preserve">
+    <value>Restore the CPU power limits to this model's stock values.</value>
+  </data>
+  <data name="TuningView_ResetCpuPowerLimitsToDefaults" xml:space="preserve">
+    <value>Reset CPU power limits to defaults</value>
+  </data>
+  <data name="TuningView_ControlAmdRyzenStapmPowerAndTctlTemperatur" xml:space="preserve">
+    <value>Control AMD Ryzen STAPM power and Tctl temperature limits via SMU.</value>
+  </data>
+  <data name="TuningView_AmdCpuPowerLimits" xml:space="preserve">
+    <value>AMD CPU Power Limits</value>
+  </data>
+  <data name="TuningView_ControlsSustainedPackagePowerWhile" xml:space="preserve">
+    <value> controls sustained package power, while </value>
+  </data>
+  <data name="TuningView_SetsTheThermalThrottleTargetLowerValuesRed" xml:space="preserve">
+    <value> sets the thermal throttle target. Lower values reduce heat and fan noise; higher values bias toward performance.</value>
+  </data>
+  <data name="TuningView_SustainedPower" xml:space="preserve">
+    <value>Sustained power</value>
+  </data>
+  <data name="TuningView_TctlLimit" xml:space="preserve">
+    <value>TCTL LIMIT</value>
+  </data>
+  <data name="TuningView_ThrottlePoint" xml:space="preserve">
+    <value>Throttle point</value>
+  </data>
+  <data name="TuningView_CurrentlyEnforced" xml:space="preserve">
+    <value>Currently enforced</value>
+  </data>
+  <data name="TuningView_ReadTheFourPowerLimitsBackOutOfTheSmuDoesN" xml:space="preserve">
+    <value>Read the four power limits back out of the SMU. Does not write anything.</value>
+  </data>
+  <data name="TuningView_RefreshEnforcedAmdCpuPowerLimits" xml:space="preserve">
+    <value>Refresh enforced AMD CPU power limits</value>
+  </data>
+  <data name="TuningView_ApplyAmdLimits" xml:space="preserve">
+    <value>Apply AMD Limits</value>
+  </data>
+  <data name="TuningView_ApplyTheAmdStapmTemperatureLimitsAbove" xml:space="preserve">
+    <value>Apply the AMD STAPM/temperature limits above.</value>
+  </data>
+  <data name="TuningView_ApplyAmdCpuPowerLimits" xml:space="preserve">
+    <value>Apply AMD CPU power limits</value>
+  </data>
+  <data name="TuningView_RestoreTheAmdCpuPowerLimitsToThisModelSSto" xml:space="preserve">
+    <value>Restore the AMD CPU power limits to this model's stock values.</value>
+  </data>
+  <data name="TuningView_ResetAmdCpuPowerLimitsToDefaults" xml:space="preserve">
+    <value>Reset AMD CPU power limits to defaults</value>
+  </data>
+  <data name="TuningView_TccOffsetThermalThrottlePoint" xml:space="preserve">
+    <value>TCC Offset (Thermal Throttle Point)</value>
+  </data>
+  <data name="TuningView_ReduceCpuTjmaxThrottlingTemperature" xml:space="preserve">
+    <value>Reduce CPU Tjmax throttling temperature</value>
+  </data>
+  <data name="TuningView_TccOffset" xml:space="preserve">
+    <value>TCC OFFSET</value>
+  </data>
+  <data name="TuningView_CReduction" xml:space="preserve">
+    <value>°C reduction</value>
+  </data>
+  <data name="TuningView_Default100CTjmax" xml:space="preserve">
+    <value>= Default (100°C Tjmax) •</value>
+  </data>
+  <data name="TuningView_ThrottleAt85C" xml:space="preserve">
+    <value>= Throttle at 85°C •</value>
+  </data>
+  <data name="TuningView_ThrottleAt70C" xml:space="preserve">
+    <value>= Throttle at 70°C</value>
+  </data>
+  <data name="TuningView_ApplyLimit" xml:space="preserve">
+    <value>Apply Limit</value>
+  </data>
+  <data name="TuningView_ApplyTheCpuThermalThrottleLimitAboveTheCpu" xml:space="preserve">
+    <value>Apply the CPU thermal throttle limit above. The CPU will begin throttling at this temperature instead of its stock limit.</value>
+  </data>
+  <data name="TuningView_ApplyCpuThermalLimitOffset" xml:space="preserve">
+    <value>Apply CPU thermal limit offset</value>
+  </data>
+  <data name="TuningView_RemoveLimit" xml:space="preserve">
+    <value>Remove Limit</value>
+  </data>
+  <data name="TuningView_RemoveTheThermalThrottleLimitReturningTheC" xml:space="preserve">
+    <value>Remove the thermal throttle limit, returning the CPU to its stock throttle temperature.</value>
+  </data>
+  <data name="TuningView_RemoveCpuThermalLimitOffset" xml:space="preserve">
+    <value>Remove CPU thermal limit offset</value>
+  </data>
+  <data name="TuningView_GpuTuning" xml:space="preserve">
+    <value>GPU Tuning</value>
+  </data>
+  <data name="TuningView_GpuPowerPolicyReadOnly" xml:space="preserve">
+    <value>GPU POWER POLICY (read-only)</value>
+  </data>
+  <data name="TuningView_WhatTheNvidiaDriverIsEnforcingRightNowALap" xml:space="preserve">
+    <value>What the NVIDIA driver is enforcing right now. A laptop's own firmware can hold this below the driver maximum.</value>
+  </data>
+  <data name="TuningView_NvidiaPowerUnlockAdvancedOffByDefault" xml:space="preserve">
+    <value>NVIDIA POWER UNLOCK (advanced, off by default)</value>
+  </data>
+  <data name="TuningView_Order1ResolveVbios2ApplyMax3RestartWindows" xml:space="preserve">
+    <value>Order: 1) Resolve VBIOS, 2) Apply MAX, 3) restart Windows, 4) Apply CURRENT. Raises the GPU's power limit above the laptop maker's setting. MAX is stored in the NVIDIA driver's registry and needs a restart; CURRENT is applied live and resets on reboot. More power means more heat. Based on timmyy123's nvidia-power-control and bobshmo's OmenCore-Prophecy, used with their permission.</value>
+  </data>
+  <data name="TuningView_EnableNvidiaPowerUnlock" xml:space="preserve">
+    <value>Enable NVIDIA power unlock</value>
+  </data>
+  <data name="TuningView_TargetW" xml:space="preserve">
+    <value>Target (W)</value>
+  </data>
+  <data name="TuningView_N1ResolveVbios" xml:space="preserve">
+    <value>1. Resolve VBIOS</value>
+  </data>
+  <data name="TuningView_ReadsTheVbiosPowerTableNeedsNvflash64ExeNv" xml:space="preserve">
+    <value>Reads the VBIOS power table. Needs nvflash64.exe (nvflashb.exe on RTX 50 cards) next to OmenCore.exe, or use 'From file'. Apply CURRENT does not need it.</value>
+  </data>
+  <data name="TuningView_FromFile" xml:space="preserve">
+    <value>From file...</value>
+  </data>
+  <data name="TuningView_ApplyMaxRestart" xml:space="preserve">
+    <value>Apply MAX (restart)</value>
+  </data>
+  <data name="TuningView_ApplyCurrent" xml:space="preserve">
+    <value>Apply CURRENT</value>
+  </data>
+  <data name="TuningView_RemoveMaxOverride" xml:space="preserve">
+    <value>Remove MAX override</value>
+  </data>
+  <data name="TuningView_NotesDoNotDisablePpabDynamicBoostTheAdapte" xml:space="preserve">
+    <value>Notes: do not disable PPAB (Dynamic Boost); the adapter limit applies to CPU and GPU together. A graphics driver update can undo the unlock, so check the live values afterwards. The RTX 5050 is untested. If CURRENT will not stick, switch the HP performance mode away and back, then apply again.</value>
+  </data>
+  <data name="TuningView_Driver" xml:space="preserve">
+    <value>Driver </value>
+  </data>
+  <data name="TuningView_WhetherTheConfirmedGpuOcProfileIsCurrently" xml:space="preserve">
+    <value>Whether the confirmed GPU OC profile is currently authorized to reapply when OmenCore starts. Saving or selecting a profile alone never authorizes a startup write.</value>
+  </data>
+  <data name="TuningView_GpuUndervolting" xml:space="preserve">
+    <value>GPU UNDERVOLTING:</value>
+  </data>
+  <data name="TuningView_ModernNvidiaGpusAutoManageVoltageToReduceP" xml:space="preserve">
+    <value> Modern NVIDIA GPUs auto-manage voltage. To reduce power/heat: lower the</value>
+  </data>
+  <data name="TuningView_PowerLimit" xml:space="preserve">
+    <value> Power Limit</value>
+  </data>
+  <data name="TuningView_ForcesLowerVoltageAtEachFrequencyOrUse" xml:space="preserve">
+    <value> (forces lower voltage at each frequency) or use</value>
+  </data>
+  <data name="TuningView_NegativeCoreOffset" xml:space="preserve">
+    <value> negative Core Offset</value>
+  </data>
+  <data name="TuningView_ReducesBoostClocksLessVoltageNeededForVFCu" xml:space="preserve">
+    <value> (reduces boost clocks → less voltage needed). For V/F curve editing, use MSI Afterburner.</value>
+  </data>
+  <data name="TuningView_DetectedGpuGuardrails" xml:space="preserve">
+    <value>Detected GPU Guardrails</value>
+  </data>
+  <data name="TuningView_AmdGpuOverclockingAdl2" xml:space="preserve">
+    <value>✓ AMD GPU Overclocking (ADL2)</value>
+  </data>
+  <data name="TuningView_AmdRadeonGpuOverclockingIsAvailableViaAmdD" xml:space="preserve">
+    <value>AMD Radeon GPU overclocking is available via AMD Display Library. Adjust clock offsets and power limits below.</value>
+  </data>
+  <data name="TuningView_ManualApplyOnlyAmdOffsetsAreNotSavedAndDoN" xml:space="preserve">
+    <value>Manual apply only: AMD offsets are not saved and do not reapply when OmenCore starts. Reapply after every reboot.</value>
+  </data>
+  <data name="TuningView_CoreClockOffsetMhz" xml:space="preserve">
+    <value>Core Clock Offset (MHz)</value>
+  </data>
+  <data name="TuningView_MemoryClockOffsetMhz" xml:space="preserve">
+    <value>Memory Clock Offset (MHz)</value>
+  </data>
+  <data name="TuningView_PowerLimit_2" xml:space="preserve">
+    <value>Power Limit (%)</value>
+  </data>
+  <data name="TuningView_ResetToDefault" xml:space="preserve">
+    <value>Reset to Default</value>
+  </data>
+  <data name="TuningView_RestoreAmdGpuClocksAndPowerToStockValues" xml:space="preserve">
+    <value>Restore AMD GPU clocks and power to stock values.</value>
+  </data>
+  <data name="TuningView_ResetAmdGpuOverclockToDefaults" xml:space="preserve">
+    <value>Reset AMD GPU overclock to defaults</value>
+  </data>
+  <data name="TuningView_ApplyAmdGpuOc" xml:space="preserve">
+    <value>Apply AMD GPU OC</value>
+  </data>
+  <data name="TuningView_ApplyTheAmdGpuClockAndPowerOffsetsAboveAnU" xml:space="preserve">
+    <value>Apply the AMD GPU clock and power offsets above. An unstable overclock can cause driver resets or crashes.</value>
+  </data>
+  <data name="TuningView_ApplyAmdGpuOverclock" xml:space="preserve">
+    <value>Apply AMD GPU overclock</value>
+  </data>
+  <data name="TuningView_ClockOffsetsNotAvailable" xml:space="preserve">
+    <value>ℹ️ Clock Offsets Not Available</value>
+  </data>
+  <data name="TuningView_YourGpuDoesnTSupportClockOffsetAdjustments" xml:space="preserve">
+    <value>Your GPU doesn't support clock offset adjustments via NVAPI. Power Limit adjustments still work below.</value>
+  </data>
+  <data name="TuningView_ForClockOcUseMsiAfterburnerOrHpOmenHub" xml:space="preserve">
+    <value>For clock OC, use MSI Afterburner or HP Omen Hub.</value>
+  </data>
+  <data name="TuningView_PowerLimitLocked" xml:space="preserve">
+    <value>Power Limit Locked</value>
+  </data>
+  <data name="TuningView_PowerLimit_3" xml:space="preserve">
+    <value>POWER LIMIT</value>
+  </data>
+  <data name="TuningView_CoreClock" xml:space="preserve">
+    <value>CORE CLOCK</value>
+  </data>
+  <data name="TuningView_MemClock" xml:space="preserve">
+    <value>MEM CLOCK</value>
+  </data>
+  <data name="TuningView_TestApply" xml:space="preserve">
+    <value>Test Apply</value>
+  </data>
+  <data name="TuningView_ApplyTheseGpuSettingsTemporarilySoYouCanCh" xml:space="preserve">
+    <value>Apply these GPU settings temporarily so you can check stability. They revert automatically unless you press Keep.</value>
+  </data>
+  <data name="TuningView_TestGpuOverclockTemporarily" xml:space="preserve">
+    <value>Test GPU overclock temporarily</value>
+  </data>
+  <data name="TuningView_ConfirmTheSettingsYouAreCurrentlyTestingAn" xml:space="preserve">
+    <value>Confirm the settings you are currently testing and stop them from reverting.</value>
+  </data>
+  <data name="TuningView_KeepTestedGpuOverclock" xml:space="preserve">
+    <value>Keep tested GPU overclock</value>
+  </data>
+  <data name="TuningView_ApplyGpuSettings" xml:space="preserve">
+    <value>Apply GPU Settings</value>
+  </data>
+  <data name="TuningView_ApplyTheGpuClockMemoryAndPowerOffsetsAbove" xml:space="preserve">
+    <value>Apply the GPU clock, memory, and power offsets above. An unstable overclock can cause driver resets or crashes.</value>
+  </data>
+  <data name="TuningView_ApplyNvidiaGpuOverclock" xml:space="preserve">
+    <value>Apply NVIDIA GPU overclock</value>
+  </data>
+  <data name="TuningView_RestoreGpuClocksMemoryAndPowerLimitToStock" xml:space="preserve">
+    <value>Restore GPU clocks, memory, and power limit to stock values.</value>
+  </data>
+  <data name="TuningView_ResetNvidiaGpuOverclockToDefaults" xml:space="preserve">
+    <value>Reset NVIDIA GPU overclock to defaults</value>
+  </data>
+  <data name="TuningView_NoTuningFeaturesAvailable" xml:space="preserve">
+    <value>No Tuning Features Available</value>
+  </data>
+  <data name="TuningView_YourSystemDoesnTSupportCpuUndervoltingPowe" xml:space="preserve">
+    <value>Your system doesn't support CPU undervolting, power limit control, or GPU overclocking through OmenCore.</value>
+  </data>
 </root>

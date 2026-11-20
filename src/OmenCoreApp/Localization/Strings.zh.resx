@@ -169,4 +169,4165 @@
   <data name="SettingsTelemetryHelp" xml:space="preserve">
     <value>匿名分享 Corsair PID 成功/失败次数的聚合统计，帮助我们改进设备兼容性。不会收集任何可用于识别设备的信息。</value>
   </data>
+  <data name="DiagnosticExportControl_DiagnosticExport" xml:space="preserve">
+    <value>诊断导出</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportSystemDiagnosticsAndLogsToHelpTroubl" xml:space="preserve">
+    <value>导出系统诊断和日志以帮助排查问题。将生成一份综合报告，可附加到 GitHub issue 或提供给支持人员。</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportOptions" xml:space="preserve">
+    <value>导出选项</value>
+  </data>
+  <data name="DiagnosticExportControl_SystemInformationOsHardwareDrivers" xml:space="preserve">
+    <value>系统信息（操作系统、硬件、驱动）</value>
+  </data>
+  <data name="DiagnosticExportControl_HardwareMonitoringDataTemperaturesFanSpeed" xml:space="preserve">
+    <value>硬件监控数据（温度、风扇转速、功耗）</value>
+  </data>
+  <data name="DiagnosticExportControl_ApplicationLogsLast1000Entries" xml:space="preserve">
+    <value>应用日志（最近 1000 条）</value>
+  </data>
+  <data name="DiagnosticExportControl_SettingsConfiguration" xml:space="preserve">
+    <value>设置与配置</value>
+  </data>
+  <data name="DiagnosticExportControl_PerformanceModeData" xml:space="preserve">
+    <value>性能模式数据</value>
+  </data>
+  <data name="DiagnosticExportControl_FanCalibrationDataIfAvailable" xml:space="preserve">
+    <value>风扇校准数据（如可用）</value>
+  </data>
+  <data name="DiagnosticExportControl_FanMaxVerificationRunsAQuickVerificationOf" xml:space="preserve">
+    <value>风扇最大转速验证（快速验证“最大”预设）</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportFormat" xml:space="preserve">
+    <value>导出格式</value>
+  </data>
+  <data name="DiagnosticExportControl_JsonFormatStructuredMachineReadable" xml:space="preserve">
+    <value>JSON 格式（结构化、机器可读）</value>
+  </data>
+  <data name="DiagnosticExportControl_TextFormatHumanReadable" xml:space="preserve">
+    <value>文本格式（易读）</value>
+  </data>
+  <data name="DiagnosticExportControl_CompressedZipSmallerFileSize" xml:space="preserve">
+    <value>压缩 ZIP（文件更小）</value>
+  </data>
+  <data name="DiagnosticExportControl_PrivacySecurity" xml:space="preserve">
+    <value>隐私与安全</value>
+  </data>
+  <data name="DiagnosticExportControl_AnonymizeSensitiveDataRemoveUsernamesPaths" xml:space="preserve">
+    <value>匿名化敏感数据（移除用户名、路径等）</value>
+  </data>
+  <data name="DiagnosticExportControl_NoteDiagnosticDataIncludesSystemInformatio" xml:space="preserve">
+    <value>注意：诊断数据包含系统信息，不含任何个人文件或凭据。</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportProgress" xml:space="preserve">
+    <value>导出进度</value>
+  </data>
+  <data name="DiagnosticExportControl_PreparingDiagnosticData" xml:space="preserve">
+    <value>正在准备诊断数据…</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportResults" xml:space="preserve">
+    <value>导出结果</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportCompletedSuccessfully" xml:space="preserve">
+    <value>导出成功完成</value>
+  </data>
+  <data name="DiagnosticExportControl_FileSavedTo" xml:space="preserve">
+    <value>文件已保存到：</value>
+  </data>
+  <data name="DiagnosticExportControl_FileSize" xml:space="preserve">
+    <value>文件大小：</value>
+  </data>
+  <data name="DiagnosticExportControl_ContainsSystemInfoHardwareDataLogsSettings" xml:space="preserve">
+    <value>包含：系统信息、硬件数据、日志、设置</value>
+  </data>
+  <data name="DiagnosticExportControl_GithubIssueIntegration" xml:space="preserve">
+    <value>GitHub Issue 集成</value>
+  </data>
+  <data name="DiagnosticExportControl_QuickGithubIssueCreation" xml:space="preserve">
+    <value>快速创建 GitHub Issue：</value>
+  </data>
+  <data name="DiagnosticExportControl_N1ExportDiagnosticsUsingTheButtonBelow" xml:space="preserve">
+    <value>1. 用下方按钮导出诊断</value>
+  </data>
+  <data name="DiagnosticExportControl_N2ClickCreateGithubIssueToOpenAPreFilledIss" xml:space="preserve">
+    <value>2. 点击“创建 GitHub Issue”打开预填写的 issue</value>
+  </data>
+  <data name="DiagnosticExportControl_N3AttachTheExportedDiagnosticFileToTheIssue" xml:space="preserve">
+    <value>3. 将导出的诊断文件附加到 issue</value>
+  </data>
+  <data name="DiagnosticExportControl_CreateGithubIssue" xml:space="preserve">
+    <value>创建 GitHub Issue</value>
+  </data>
+  <data name="DiagnosticExportControl_WhatGetsExported" xml:space="preserve">
+    <value>ℹ️ 导出内容：</value>
+  </data>
+  <data name="DiagnosticExportControl_SystemInformationOsVersionHardwareSpecsDri" xml:space="preserve">
+    <value>• 系统信息（OS 版本、硬件规格、驱动版本）</value>
+  </data>
+  <data name="DiagnosticExportControl_HardwareMonitoringDataTemperaturesFanSpeed_2" xml:space="preserve">
+    <value>• 硬件监控数据（温度、风扇转速、功耗）</value>
+  </data>
+  <data name="DiagnosticExportControl_ApplicationLogsAndErrorMessages" xml:space="preserve">
+    <value>• 应用日志和错误信息</value>
+  </data>
+  <data name="DiagnosticExportControl_CurrentSettingsAndConfiguration" xml:space="preserve">
+    <value>• 当前设置与配置</value>
+  </data>
+  <data name="DiagnosticExportControl_PerformanceModeAndFanCalibrationData" xml:space="preserve">
+    <value>• 性能模式和风扇校准数据</value>
+  </data>
+  <data name="DiagnosticExportControl_NoPersonalFilesCredentialsOrSensitiveInfor" xml:space="preserve">
+    <value>不含任何个人文件、凭据或敏感信息。</value>
+  </data>
+  <data name="DiagnosticExportControl_ExportDiagnostics" xml:space="preserve">
+    <value>导出诊断</value>
+  </data>
+  <data name="DiagnosticExportControl_OpenFolder" xml:space="preserve">
+    <value>打开文件夹</value>
+  </data>
+  <data name="DiagnosticExportControl_CopyPath" xml:space="preserve">
+    <value>复制路径</value>
+  </data>
+  <data name="FanCalibrationControl_FanCalibration" xml:space="preserve">
+    <value>风扇校准</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrateFanRpmCurvesForAccurateSpeedContr" xml:space="preserve">
+    <value>校准风扇 RPM 曲线，在你的具体机型上实现精准转速控制。</value>
+  </data>
+  <data name="FanCalibrationControl_ThisProcessWillTestFanSpeedsFrom0To100AndM" xml:space="preserve">
+    <value>此过程将测试 0% 到 100% 的风扇转速，可能需要几分钟。</value>
+  </data>
+  <data name="FanCalibrationControl_ModelInformation" xml:space="preserve">
+    <value>机型信息</value>
+  </data>
+  <data name="FanCalibrationControl_DetectingLaptopModel" xml:space="preserve">
+    <value>正在检测机型…</value>
+  </data>
+  <data name="FanCalibrationControl_NoCalibrationDataFound" xml:space="preserve">
+    <value>未找到校准数据</value>
+  </data>
+  <data name="FanCalibrationControl_FanSelection" xml:space="preserve">
+    <value>风扇选择</value>
+  </data>
+  <data name="FanCalibrationControl_SelectWhichFanToCalibrate" xml:space="preserve">
+    <value>选择要校准的风扇：</value>
+  </data>
+  <data name="FanCalibrationControl_CpuFanFan0" xml:space="preserve">
+    <value>CPU 风扇（风扇 0）</value>
+  </data>
+  <data name="FanCalibrationControl_GpuFanFan1" xml:space="preserve">
+    <value>GPU 风扇（风扇 1）</value>
+  </data>
+  <data name="FanCalibrationControl_SelectAFanToSeeCurrentStatus" xml:space="preserve">
+    <value>选择一个风扇以查看当前状态</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationProgress" xml:space="preserve">
+    <value>校准进度</value>
+  </data>
+  <data name="FanCalibrationControl_PreparingCalibration" xml:space="preserve">
+    <value>正在准备校准…</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationResults" xml:space="preserve">
+    <value>校准结果</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationCompletedSuccessfully" xml:space="preserve">
+    <value>校准成功完成</value>
+  </data>
+  <data name="FanCalibrationControl_Target" xml:space="preserve">
+    <value>目标 %</value>
+  </data>
+  <data name="FanCalibrationControl_AppliedLevel" xml:space="preserve">
+    <value>应用档位</value>
+  </data>
+  <data name="FanCalibrationControl_MeasuredRpm" xml:space="preserve">
+    <value>实测 RPM</value>
+  </data>
+  <data name="FanCalibrationControl_RpmRange" xml:space="preserve">
+    <value>RPM 范围</value>
+  </data>
+  <data name="FanCalibrationControl_Duration" xml:space="preserve">
+    <value>持续时间</value>
+  </data>
+  <data name="FanCalibrationControl_ImportantNotes" xml:space="preserve">
+    <value>⚠️ 重要提示：</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationMayTake510MinutesPerFan" xml:space="preserve">
+    <value>• 每个风扇的校准可能需要 5-10 分钟</value>
+  </data>
+  <data name="FanCalibrationControl_FansWillRunAtVariousSpeedsEnsureProperVent" xml:space="preserve">
+    <value>• 风扇会以不同转速运转——请确保通风良好</value>
+  </data>
+  <data name="FanCalibrationControl_DoNotInterruptTheCalibrationProcess" xml:space="preserve">
+    <value>• 请勿中断校准过程</value>
+  </data>
+  <data name="FanCalibrationControl_OmencoreRestoresBiosAutoFanControlWhenCali" xml:space="preserve">
+    <value>• 校准结束时 OmenCore 会恢复 BIOS 自动风扇控制；若风扇仍持续高速，可使用“恢复自动”</value>
+  </data>
+  <data name="FanCalibrationControl_CalibrationDataIsStoredLocallyAndCanBeShar" xml:space="preserve">
+    <value>• 校准数据保存在本地，可分享给社区</value>
+  </data>
+  <data name="FanCalibrationControl_StartCalibration" xml:space="preserve">
+    <value>开始校准</value>
+  </data>
+  <data name="FanCalibrationControl_LoadExisting" xml:space="preserve">
+    <value>载入已有数据</value>
+  </data>
+  <data name="FanCalibrationControl_SaveResults" xml:space="preserve">
+    <value>保存结果</value>
+  </data>
+  <data name="FanCalibrationControl_RestoreAuto" xml:space="preserve">
+    <value>恢复自动</value>
+  </data>
+  <data name="FanCalibrationControl_ReleaseCalibrationManualFanOwnershipAndRet" xml:space="preserve">
+    <value>释放校准/手动风扇控制权，让风扇回到 BIOS 自动控制</value>
+  </data>
+  <data name="FanCalibrationControl_ClearData" xml:space="preserve">
+    <value>清除数据</value>
+  </data>
+  <data name="FanCurveChart_FanSpeedVsTemperature" xml:space="preserve">
+    <value>风扇转速 vs 温度</value>
+  </data>
+  <data name="FanCurveChart_LoadingFanCurveData" xml:space="preserve">
+    <value>正在加载风扇曲线数据…</value>
+  </data>
+  <data name="FanCurveEditor_ClickToAddCurvePointsDragToAdjust" xml:space="preserve">
+    <value>点击添加曲线点，拖动调整</value>
+  </data>
+  <data name="FanCurveEditor_TemperatureC" xml:space="preserve">
+    <value>🌡️ 温度（°C）</value>
+  </data>
+  <data name="FanCurveEditor_FanSpeed" xml:space="preserve">
+    <value>💨 风扇转速（%）</value>
+  </data>
+  <data name="FanCurveEditor_DragPointsToAdjust" xml:space="preserve">
+    <value> • 拖动点位进行调整</value>
+  </data>
+  <data name="GpuVcChart_GpuVoltage" xml:space="preserve">
+    <value>GPU 电压</value>
+  </data>
+  <data name="GpuVcChart_GpuCurrent" xml:space="preserve">
+    <value>GPU 电流</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_HardwareMonitoringDashboard" xml:space="preserve">
+    <value>硬件监控面板</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_RealTimeMonitoringOfPowerConsumptionBatter" xml:space="preserve">
+    <value>实时监控功耗、电池容量和系统性能，并提供历史趋势与告警。</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_CurrentMetrics" xml:space="preserve">
+    <value>当前指标</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_PowerConsumption" xml:space="preserve">
+    <value>功耗</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Stable" xml:space="preserve">
+    <value>→ 稳定</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryCapacity" xml:space="preserve">
+    <value>电池容量</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Unavailable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_CpuTemperature" xml:space="preserve">
+    <value>CPU 温度</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_GpuTemperature" xml:space="preserve">
+    <value>GPU 温度</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_SystemActivity" xml:space="preserve">
+    <value>系统活动</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_CpuLoad" xml:space="preserve">
+    <value>CPU 负载</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_GpuLoad" xml:space="preserve">
+    <value>GPU 负载</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_CpuClock" xml:space="preserve">
+    <value>CPU 频率</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_AverageCoreClock" xml:space="preserve">
+    <value>平均核心频率</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_RamUsage" xml:space="preserve">
+    <value>内存占用</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Used" xml:space="preserve">
+    <value>% 已用</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_HistoricalTrends" xml:space="preserve">
+    <value>历史趋势</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_PowerConsumption_2" xml:space="preserve">
+    <value>⚡ 功耗</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Temperature" xml:space="preserve">
+    <value>🌡️ 温度</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryCharge" xml:space="preserve">
+    <value>🔋 电量</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_FanSpeeds" xml:space="preserve">
+    <value>🌀 风扇转速</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_RefreshCharts" xml:space="preserve">
+    <value>🔄 刷新图表</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_RefreshAllHardwareMonitoringCharts" xml:space="preserve">
+    <value>刷新全部硬件监控图表</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_ExportData" xml:space="preserve">
+    <value>💾 导出数据</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_ExportSensorHistoryToACsvFile" xml:space="preserve">
+    <value>将传感器历史导出为 CSV 文件</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_SystemAlerts" xml:space="preserve">
+    <value>系统告警</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_ActiveAlerts" xml:space="preserve">
+    <value>活动告警</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_NoActiveAlerts" xml:space="preserve">
+    <value>无活动告警</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_EfficiencyMetrics" xml:space="preserve">
+    <value>效率指标</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_PowerEfficiency" xml:space="preserve">
+    <value>能耗效率</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_ThermalStatus" xml:space="preserve">
+    <value>散热状态</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Optimal" xml:space="preserve">
+    <value>最佳</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Condition" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Fan68Efficient" xml:space="preserve">
+    <value>风扇：68% 效率</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryStatus" xml:space="preserve">
+    <value>电池状态</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_N30YearsRemaining" xml:space="preserve">
+    <value>剩余约 3.0 年</value>
+  </data>
+  <data name="LoadChart_CpuUsage" xml:space="preserve">
+    <value>CPU 占用</value>
+  </data>
+  <data name="LoadChart_GpuUsage" xml:space="preserve">
+    <value>GPU 占用</value>
+  </data>
+  <data name="LoadingOverlay_ThisMayTakeAFewMoments" xml:space="preserve">
+    <value>可能需要几秒钟</value>
+  </data>
+  <data name="ThermalChart_LoadingTemperatureHistory" xml:space="preserve">
+    <value>正在加载温度历史…</value>
+  </data>
+  <data name="AboutWindow_AboutOmencore" xml:space="preserve">
+    <value>关于 OmenCore</value>
+  </data>
+  <data name="AboutWindow_GamingLaptopAndDesktopControlCenter" xml:space="preserve">
+    <value>游戏本与台式机控制中心</value>
+  </data>
+  <data name="AboutWindow_CloseEsc" xml:space="preserve">
+    <value>关闭（Esc）</value>
+  </data>
+  <data name="AboutWindow_Version300" xml:space="preserve">
+    <value>版本 3.0.0</value>
+  </data>
+  <data name="AboutWindow_AdvancedThermalPowerAndRgbControlForHpOmen" xml:space="preserve">
+    <value>面向 HP OMEN 游戏本和台式机的高级散热、功耗与 RGB 控制。</value>
+  </data>
+  <data name="AboutWindow_WmiEcFanControlWithCustomCurves" xml:space="preserve">
+    <value>✓ WMI/EC 风扇控制，支持自定义曲线</value>
+  </data>
+  <data name="AboutWindow_CpuUndervoltIntelCurveOptimizerAmd" xml:space="preserve">
+    <value>✓ CPU 降压（Intel）与 Curve Optimizer（AMD）</value>
+  </data>
+  <data name="AboutWindow_GpuDynamicBoostTgpPpab" xml:space="preserve">
+    <value>✓ GPU Dynamic Boost（TGP/PPAB）</value>
+  </data>
+  <data name="AboutWindow_DriverFreeMonitoringWmiBiosNvapiPawnio" xml:space="preserve">
+    <value>✓ 免驱动监控（WMI BIOS + NVAPI + PawnIO）</value>
+  </data>
+  <data name="AboutWindow_PerGameProfileAutoSwitching" xml:space="preserve">
+    <value>✓ 按游戏档案自动切换</value>
+  </data>
+  <data name="AboutWindow_V2KeyboardEnginePerKeyEcWmiLighting" xml:space="preserve">
+    <value>✓ V2 键盘引擎（单键 EC 与 WMI 灯效）</value>
+  </data>
+  <data name="AboutWindow_GuidedFanDiagnostics" xml:space="preserve">
+    <value>✓ 引导式风扇诊断</value>
+  </data>
+  <data name="AboutWindow_MemoryOptimizer" xml:space="preserve">
+    <value>✓ 内存优化器</value>
+  </data>
+  <data name="AboutWindow_HeadlessModeTrayOnlyNoWindow" xml:space="preserve">
+    <value>✓ 无窗口模式（仅托盘）</value>
+  </data>
+  <data name="AboutWindow_RealTimeHardwareMonitoring" xml:space="preserve">
+    <value>✓ 实时硬件监控</value>
+  </data>
+  <data name="AboutWindow_CheckForUpdates" xml:space="preserve">
+    <value>⟳ 检查更新</value>
+  </data>
+  <data name="AboutWindow_CheckGithubForNewReleases" xml:space="preserve">
+    <value>到 GitHub 检查新版本</value>
+  </data>
+  <data name="AboutWindow_CloseThisWindowEsc" xml:space="preserve">
+    <value>关闭此窗口（Esc）</value>
+  </data>
+  <data name="AdvancedView_OmenControls" xml:space="preserve">
+    <value>OMEN 控制</value>
+  </data>
+  <data name="AdvancedView_HpOmenSpecificFeaturesPerformanceModesFanC" xml:space="preserve">
+    <value>HP OMEN 专属功能：性能模式、风扇曲线、GPU 切换</value>
+  </data>
+  <data name="AdvancedView_PerformanceMode" xml:space="preserve">
+    <value>性能模式</value>
+  </data>
+  <data name="AdvancedView_SystemPowerAndCoolingProfile" xml:space="preserve">
+    <value>系统功耗与散热配置</value>
+  </data>
+  <data name="AdvancedView_QuietPerformanceModeSilentOperationLowPowe" xml:space="preserve">
+    <value>安静性能模式：静音运行、低功耗</value>
+  </data>
+  <data name="AdvancedView_SilentOperation" xml:space="preserve">
+    <value>静音运行</value>
+  </data>
+  <data name="AdvancedView_LowPower" xml:space="preserve">
+    <value>低功耗</value>
+  </data>
+  <data name="AdvancedView_SilentFans" xml:space="preserve">
+    <value>静音风扇</value>
+  </data>
+  <data name="AdvancedView_BalancedPerformanceModeRecommendedAutomati" xml:space="preserve">
+    <value>均衡性能模式：推荐，自动管理功耗与风扇</value>
+  </data>
+  <data name="AdvancedView_Balanced" xml:space="preserve">
+    <value>均衡</value>
+  </data>
+  <data name="AdvancedView_Recommended" xml:space="preserve">
+    <value>推荐</value>
+  </data>
+  <data name="AdvancedView_AutoPower" xml:space="preserve">
+    <value>自动功耗</value>
+  </data>
+  <data name="AdvancedView_SmartFans" xml:space="preserve">
+    <value>智能风扇</value>
+  </data>
+  <data name="AdvancedView_PerformanceModeMaximumPowerHighFanSpeed" xml:space="preserve">
+    <value>性能模式：最大功率、高风扇转速</value>
+  </data>
+  <data name="AdvancedView_Performance" xml:space="preserve">
+    <value>性能</value>
+  </data>
+  <data name="AdvancedView_MaximumPower" xml:space="preserve">
+    <value>最大功率</value>
+  </data>
+  <data name="AdvancedView_MaxPower" xml:space="preserve">
+    <value>最大功耗</value>
+  </data>
+  <data name="AdvancedView_HighFans" xml:space="preserve">
+    <value>高转速风扇</value>
+  </data>
+  <data name="AdvancedView_ThisModeRemembers" xml:space="preserve">
+    <value>此模式会记住</value>
+  </data>
+  <data name="AdvancedView_RememberCurrentState" xml:space="preserve">
+    <value>记住当前状态</value>
+  </data>
+  <data name="AdvancedView_RememberTheCurrentFanGpuBoostRefreshRateLi" xml:space="preserve">
+    <value>将当前的风扇、GPU 加速、刷新率、灯效和充电上限设置保存在所选性能模式中</value>
+  </data>
+  <data name="AdvancedView_CustomFanCurve" xml:space="preserve">
+    <value>自定义风扇曲线</value>
+  </data>
+  <data name="AdvancedView_BoostActive" xml:space="preserve">
+    <value>加速已激活</value>
+  </data>
+  <data name="AdvancedView_GpuPowerBoostTgpDynamicBoost" xml:space="preserve">
+    <value>GPU 功率加速（TGP/Dynamic Boost）</value>
+  </data>
+  <data name="AdvancedView_ControlGpuTotalGraphicsPowerTgpAndDynamicB" xml:space="preserve">
+    <value>控制 GPU 总图形功耗（TGP）和 Dynamic Boost（PPAB）。数值越高 GPU 可用功耗越大。“扩展”档供可能支持 +25W 加速的 RTX 5080 及更新显卡使用。</value>
+  </data>
+  <data name="AdvancedView_FirmwareDeterminedCeiling" xml:space="preserve">
+    <value>⚠ 固件决定的功耗上限：</value>
+  </data>
+  <data name="AdvancedView_TheseLevelsAreRelativeBoostRequestsSentToT" xml:space="preserve">
+    <value>这些档位是发送到与 OMEN Gaming Hub 相同的 GPU 固件处理器的相对加速请求，并非绝对功耗保证。实际上限可能受其他功耗控制软件残留的 GPU 固件/EC 状态影响——如果看到功耗与档位描述不符，请先彻底关闭 OMEN Gaming Hub。</value>
+  </data>
+  <data name="AdvancedView_CurrentPowerMode" xml:space="preserve">
+    <value>当前性能模式</value>
+  </data>
+  <data name="AdvancedView_ExtraPower" xml:space="preserve">
+    <value>额外功耗</value>
+  </data>
+  <data name="AdvancedView_PowerLevel" xml:space="preserve">
+    <value>功耗档位：</value>
+  </data>
+  <data name="AdvancedView_GpuPowerBoostLevel" xml:space="preserve">
+    <value>GPU 功率加速档位</value>
+  </data>
+  <data name="AdvancedView_ApplyGpuPowerBoostLevel" xml:space="preserve">
+    <value>应用 GPU 功率加速档位</value>
+  </data>
+  <data name="AdvancedView_GpuSwitchingAdvancedOptimus" xml:space="preserve">
+    <value>GPU 切换（Advanced Optimus）</value>
+  </data>
+  <data name="AdvancedView_SwitchBetweenIntegratedAndDiscreteGpuForOp" xml:space="preserve">
+    <value>在核显与独显之间切换，兼顾性能或续航。</value>
+  </data>
+  <data name="AdvancedView_HardwareLimitation" xml:space="preserve">
+    <value>⚠ 硬件限制：</value>
+  </data>
+  <data name="AdvancedView_GpuModeSwitchingRequiresASystemRebootSomeO" xml:space="preserve">
+    <value>GPU 模式切换需要重启系统。部分 OMEN 机型仅能通过 BIOS 设置切换。</value>
+  </data>
+  <data name="AdvancedView_CurrentMode" xml:space="preserve">
+    <value>当前模式：</value>
+  </data>
+  <data name="AdvancedView_SwitchTo" xml:space="preserve">
+    <value>切换到：</value>
+  </data>
+  <data name="AdvancedView_SwitchGpuModeTo" xml:space="preserve">
+    <value>将 GPU 模式切换为</value>
+  </data>
+  <data name="AdvancedView_ApplyRequiresRestart" xml:space="preserve">
+    <value>应用（需重启）</value>
+  </data>
+  <data name="AdvancedView_ApplyGpuModeSwitchRequiresRestart" xml:space="preserve">
+    <value>应用 GPU 模式切换，需要重启</value>
+  </data>
+  <data name="AdvancedView_WhyGpuModeSwitchingIsUnavailable" xml:space="preserve">
+    <value>为什么 GPU 模式切换不可用</value>
+  </data>
+  <data name="AdvancedView_HpTelemetryBackgroundServices" xml:space="preserve">
+    <value>HP 遥测与后台服务</value>
+  </data>
+  <data name="AdvancedView_StopsAndDisablesHpSAnalyticsAndDiagnostics" xml:space="preserve">
+    <value>停止并禁用 HP 的分析诊断服务。可逆：每个服务的原始启动类型都会保存，“恢复”可还原。需要管理员权限。不影响 OmenCore 依赖的任何组件。</value>
+  </data>
+  <data name="AdvancedView_DisableHpTelemetry" xml:space="preserve">
+    <value>禁用 HP 遥测</value>
+  </data>
+  <data name="AdvancedView_DisableHpTelemetryServices" xml:space="preserve">
+    <value>禁用 HP 遥测服务</value>
+  </data>
+  <data name="AdvancedView_Restore" xml:space="preserve">
+    <value>恢复</value>
+  </data>
+  <data name="AdvancedView_RestoreHpTelemetryServices" xml:space="preserve">
+    <value>恢复 HP 遥测服务</value>
+  </data>
+  <data name="AdvancedView_DisplayOverdrive" xml:space="preserve">
+    <value>显示加速</value>
+  </data>
+  <data name="AdvancedView_ReducesPanelResponseTimeForLessMotionBlurD" xml:space="preserve">
+    <value>缩短面板响应时间，减少快节奏游戏中的拖影。部分面板可能出现轻微过冲伪影。</value>
+  </data>
+  <data name="AdvancedView_PanelOverdrive" xml:space="preserve">
+    <value>面板加速</value>
+  </data>
+  <data name="AdvancedView_ImprovesPixelResponseTimeOn165hzDisplays" xml:space="preserve">
+    <value>改善 165Hz+ 屏幕的像素响应时间</value>
+  </data>
+  <data name="BloatwareManagerView_BloatwareManager" xml:space="preserve">
+    <value>预装软件管理器</value>
+  </data>
+  <data name="BloatwareManagerView_RemovePreInstalledBloatwareToImproveSystem" xml:space="preserve">
+    <value>移除预装的臃肿软件，提升系统性能、减少杂乱。低风险项可安全移除。</value>
+  </data>
+  <data name="BloatwareManagerView_Detected" xml:space="preserve">
+    <value>已检测</value>
+  </data>
+  <data name="BloatwareManagerView_Removed" xml:space="preserve">
+    <value>已移除</value>
+  </data>
+  <data name="BloatwareManagerView_LowRisk" xml:space="preserve">
+    <value>低风险</value>
+  </data>
+  <data name="BloatwareManagerView_ScanForBloatware" xml:space="preserve">
+    <value>扫描预装软件</value>
+  </data>
+  <data name="BloatwareManagerView_RemoveAllLowRiskItems" xml:space="preserve">
+    <value>移除全部低风险项</value>
+  </data>
+  <data name="BloatwareManagerView_RemoveLowRisk" xml:space="preserve">
+    <value>移除低风险项</value>
+  </data>
+  <data name="BloatwareManagerView_ExportBloatwareDryRunReport" xml:space="preserve">
+    <value>导出预装软件演练报告</value>
+  </data>
+  <data name="BloatwareManagerView_DryRun" xml:space="preserve">
+    <value>演练</value>
+  </data>
+  <data name="BloatwareManagerView_CancelBulkOperation" xml:space="preserve">
+    <value>取消批量操作</value>
+  </data>
+  <data name="BloatwareManagerView_SearchAppsPublishers" xml:space="preserve">
+    <value>搜索应用、发布者…</value>
+  </data>
+  <data name="BloatwareManagerView_Risk" xml:space="preserve">
+    <value>风险：</value>
+  </data>
+  <data name="BloatwareManagerView_RemoveSelectedItem" xml:space="preserve">
+    <value>移除所选项目</value>
+  </data>
+  <data name="BloatwareManagerView_RestoreSelectedItem" xml:space="preserve">
+    <value>恢复所选项目</value>
+  </data>
+  <data name="BloatwareManagerView_DependencyHint" xml:space="preserve">
+    <value>依赖提示</value>
+  </data>
+  <data name="BloatwareManagerView_ToggleAll" xml:space="preserve">
+    <value>全选/反选</value>
+  </data>
+  <data name="BloatwareManagerView_RemoveSelected" xml:space="preserve">
+    <value>移除所选</value>
+  </data>
+  <data name="BloatwareManagerView_NoBloatwareDetected" xml:space="preserve">
+    <value>未检测到预装软件</value>
+  </data>
+  <data name="BloatwareManagerView_ClickScanToSearchForBloatware" xml:space="preserve">
+    <value>点击“扫描”以查找预装软件</value>
+  </data>
+  <data name="BloatwareManagerView_ResultDetail" xml:space="preserve">
+    <value>结果详情</value>
+  </data>
+  <data name="BloatwareManagerView_Category" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="BloatwareManagerView_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="BloatwareManagerView_Publisher" xml:space="preserve">
+    <value>发布者</value>
+  </data>
+  <data name="BloatwareManagerView_ExportRemovalResultsToALogFile" xml:space="preserve">
+    <value>将移除结果导出到日志文件</value>
+  </data>
+  <data name="BloatwareManagerView_ExportRemovalLog" xml:space="preserve">
+    <value>导出移除日志</value>
+  </data>
+  <data name="BloatwareManagerView_ExportLog" xml:space="preserve">
+    <value>导出日志</value>
+  </data>
+  <data name="BloatwareManagerView_OpenTheMostRecentRemovalReport" xml:space="preserve">
+    <value>打开最近一次移除报告</value>
+  </data>
+  <data name="BloatwareManagerView_ViewLastRemovalReport" xml:space="preserve">
+    <value>查看上次移除报告</value>
+  </data>
+  <data name="BloatwareManagerView_ViewReport" xml:space="preserve">
+    <value>查看报告</value>
+  </data>
+  <data name="BloatwareManagerView_SomeRemovalsMayRequireARestart" xml:space="preserve">
+    <value>部分移除操作可能需要重启</value>
+  </data>
+  <data name="ColorPickerDialog_SelectColor" xml:space="preserve">
+    <value>选择颜色</value>
+  </data>
+  <data name="ColorPickerDialog_SelectZoneColor" xml:space="preserve">
+    <value>选择分区颜色</value>
+  </data>
+  <data name="ColorPickerDialog_Zone1Left" xml:space="preserve">
+    <value>分区 1 - 左侧</value>
+  </data>
+  <data name="ColorPickerDialog_CancelEsc" xml:space="preserve">
+    <value>取消（Esc）</value>
+  </data>
+  <data name="ColorPickerDialog_Hex" xml:space="preserve">
+    <value>HEX：</value>
+  </data>
+  <data name="DashboardView_SystemOverview" xml:space="preserve">
+    <value>系统总览</value>
+  </data>
+  <data name="DashboardView_RealTimeHardwareTelemetry" xml:space="preserve">
+    <value>实时硬件遥测</value>
+  </data>
+  <data name="DashboardView_Throttling" xml:space="preserve">
+    <value>降频</value>
+  </data>
+  <data name="DashboardView_RefreshDashboardReadings" xml:space="preserve">
+    <value>刷新面板读数</value>
+  </data>
+  <data name="DashboardView_Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="DashboardView_CpuPeak" xml:space="preserve">
+    <value>CPU 峰值：</value>
+  </data>
+  <data name="DashboardView_GpuPeak" xml:space="preserve">
+    <value>GPU 峰值：</value>
+  </data>
+  <data name="DashboardView_FanMode" xml:space="preserve">
+    <value>风扇模式</value>
+  </data>
+  <data name="DashboardView_CpuTemperatureAndUtilizationGreenOkYellowW" xml:space="preserve">
+    <value>CPU 温度与占用率。绿色=正常，黄色=偏热，橙色=较热，红色=危险</value>
+  </data>
+  <data name="DashboardView_Processor" xml:space="preserve">
+    <value>处理器</value>
+  </data>
+  <data name="DashboardView_GpuTemperatureLoadAndVramUsageGpusCanSafel" xml:space="preserve">
+    <value>GPU 温度、负载与显存占用。GPU 可以承受比 CPU 更高的温度。</value>
+  </data>
+  <data name="DashboardView_Graphics" xml:space="preserve">
+    <value>显卡</value>
+  </data>
+  <data name="DashboardView_TemperatureStatus" xml:space="preserve">
+    <value>温度状态</value>
+  </data>
+  <data name="DashboardView_SystemRamUsageHighUsageMayCauseSlowdownsCo" xml:space="preserve">
+    <value>系统内存占用。占用过高可能导致卡顿——考虑关闭未使用的应用。</value>
+  </data>
+  <data name="DashboardView_MemoryUsageIndicator" xml:space="preserve">
+    <value>内存占用指示条</value>
+  </data>
+  <data name="DashboardView_SsdTemperatureAndDiskActivityOptimalSsdTem" xml:space="preserve">
+    <value>SSD 温度与磁盘活动。SSD 最佳温度低于 45°C。</value>
+  </data>
+  <data name="DashboardView_Storage" xml:space="preserve">
+    <value>存储</value>
+  </data>
+  <data name="DashboardView_SsdTemperatureIndicator" xml:space="preserve">
+    <value>SSD 温度指示条</value>
+  </data>
+  <data name="DashboardView_BatteryChargeLevelAndPowerStatusKeepBatter" xml:space="preserve">
+    <value>电池电量与电源状态。为延长寿命，建议将电量保持在 20-80% 之间。</value>
+  </data>
+  <data name="DashboardView_Battery" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="DashboardView_BatteryLevelIndicator" xml:space="preserve">
+    <value>电池电量指示条</value>
+  </data>
+  <data name="DashboardView_SystemPowerConsumptionFromCpuAndGpuHigherV" xml:space="preserve">
+    <value>CPU 与 GPU 的系统功耗。数值越高表示负载越重。</value>
+  </data>
+  <data name="DashboardView_TotalSystemPower" xml:space="preserve">
+    <value>系统总功耗</value>
+  </data>
+  <data name="DashboardView_LiveFanCurveShowingTemperatureVsFanSpeedRe" xml:space="preserve">
+    <value>实时风扇曲线，展示温度与风扇转速的关系。</value>
+  </data>
+  <data name="DashboardView_FanCurve" xml:space="preserve">
+    <value>风扇曲线</value>
+  </data>
+  <data name="DashboardView_CurrentFanSpeeds" xml:space="preserve">
+    <value>当前风扇转速</value>
+  </data>
+  <data name="DashboardView_History" xml:space="preserve">
+    <value>历史：</value>
+  </data>
+  <data name="DashboardView_ShowLast1MinuteOfHistory" xml:space="preserve">
+    <value>显示最近 1 分钟历史</value>
+  </data>
+  <data name="DashboardView_ShowLast5MinutesOfHistory" xml:space="preserve">
+    <value>显示最近 5 分钟历史</value>
+  </data>
+  <data name="DashboardView_ShowLast15MinutesOfHistory" xml:space="preserve">
+    <value>显示最近 15 分钟历史</value>
+  </data>
+  <data name="DashboardView_ShowLast30MinutesOfHistory" xml:space="preserve">
+    <value>显示最近 30 分钟历史</value>
+  </data>
+  <data name="DashboardView_Utilization" xml:space="preserve">
+    <value>占用率</value>
+  </data>
+  <data name="DashboardView_CpuFrequencies" xml:space="preserve">
+    <value>CPU 频率</value>
+  </data>
+  <data name="DashboardView_GpuVoltageCurrent" xml:space="preserve">
+    <value>GPU 电压与电流</value>
+  </data>
+  <data name="DashboardView_Voltage" xml:space="preserve">
+    <value>电压</value>
+  </data>
+  <data name="DashboardView_Current" xml:space="preserve">
+    <value>电流</value>
+  </data>
+  <data name="DashboardView_CpuFan" xml:space="preserve">
+    <value>CPU 风扇</value>
+  </data>
+  <data name="DashboardView_GpuFan" xml:space="preserve">
+    <value>GPU 风扇</value>
+  </data>
+  <data name="DashboardView_ReducedCpuUsageMode" xml:space="preserve">
+    <value>降低 CPU 占用模式</value>
+  </data>
+  <data name="DashboardView_LiveChartsAreDisabledToMinimizeMonitoringO" xml:space="preserve">
+    <value>实时图表已禁用，以最小化监控开销。</value>
+  </data>
+  <data name="DashboardView_HardwareSummaryInformationIsStillAvailable" xml:space="preserve">
+    <value>硬件概要信息在上方仍可用。</value>
+  </data>
+  <data name="DiagnosticsView_SystemDiagnostics" xml:space="preserve">
+    <value>系统诊断</value>
+  </data>
+  <data name="DiagnosticsView_HardwareTestingAndValidationTools" xml:space="preserve">
+    <value>硬件测试与验证工具</value>
+  </data>
+  <data name="DiagnosticsView_FanDiagnostics" xml:space="preserve">
+    <value>风扇诊断</value>
+  </data>
+  <data name="DiagnosticsView_KeyboardLightingDiagnostics" xml:space="preserve">
+    <value>键盘灯效诊断</value>
+  </data>
+  <data name="DiagnosticsView_MonitoringDiagnostics" xml:space="preserve">
+    <value>监控诊断</value>
+  </data>
+  <data name="DiagnosticsView_Health" xml:space="preserve">
+    <value>健康度：</value>
+  </data>
+  <data name="DiagnosticsView_Source" xml:space="preserve">
+    <value>来源：</value>
+  </data>
+  <data name="DiagnosticsView_LastSampleAge" xml:space="preserve">
+    <value>样本距今：</value>
+  </data>
+  <data name="DiagnosticsView_ConsecutiveTimeouts" xml:space="preserve">
+    <value>连续超时：</value>
+  </data>
+  <data name="DiagnosticsView_CpuTempOverride" xml:space="preserve">
+    <value>CPU 温度覆盖：</value>
+  </data>
+  <data name="DiagnosticsView_SaveTheFullCoreControlReadinessReportToAFi" xml:space="preserve">
+    <value>将完整的核心控制就绪报告保存到文件，用于排障或提交 bug 报告</value>
+  </data>
+  <data name="DiagnosticsView_ExportFullDiagnosticsReport" xml:space="preserve">
+    <value>导出完整诊断报告</value>
+  </data>
+  <data name="DiagnosticsView_ExportTelemetry" xml:space="preserve">
+    <value>导出遥测</value>
+  </data>
+  <data name="DiagnosticsView_CreateACopyOfTheTelemetryJsonForUpload" xml:space="preserve">
+    <value>复制一份遥测 JSON 用于上传</value>
+  </data>
+  <data name="DiagnosticsView_ExportTelemetryJson" xml:space="preserve">
+    <value>导出遥测 JSON</value>
+  </data>
+  <data name="DiagnosticsView_ReportModel" xml:space="preserve">
+    <value>上报机型</value>
+  </data>
+  <data name="DiagnosticsView_CreateDiagnosticsBundleAndCopyModelInfoToC" xml:space="preserve">
+    <value>创建诊断包并复制机型信息到剪贴板</value>
+  </data>
+  <data name="DiagnosticsView_ReportThisModelToTheMaintainer" xml:space="preserve">
+    <value>向维护者上报此机型</value>
+  </data>
+  <data name="DiagnosticsView_Backend" xml:space="preserve">
+    <value>后端：</value>
+  </data>
+  <data name="DiagnosticsView_WorkerTimeouts" xml:space="preserve">
+    <value>工作进程超时：</value>
+  </data>
+  <data name="DiagnosticsView_QuickActions" xml:space="preserve">
+    <value>快捷操作</value>
+  </data>
+  <data name="DiagnosticsView_OpenAppLogsFolder" xml:space="preserve">
+    <value>打开应用日志文件夹</value>
+  </data>
+  <data name="DiagnosticsView_OpenTheFolderContainingOmencoreSLogFilesIn" xml:space="preserve">
+    <value>在文件资源管理器中打开包含 OmenCore 日志文件的文件夹</value>
+  </data>
+  <data name="DiagnosticsView_OpenOmencoreDataFolder" xml:space="preserve">
+    <value>打开 OmenCore 数据文件夹</value>
+  </data>
+  <data name="DiagnosticsView_OpenTheFolderContainingOmencoreSConfigAndS" xml:space="preserve">
+    <value>在文件资源管理器中打开包含 OmenCore 配置和已存数据的文件夹</value>
+  </data>
+  <data name="DiagnosticsView_TemperatureSourceComparison" xml:space="preserve">
+    <value>温度来源对比</value>
+  </data>
+  <data name="DiagnosticsView_ReadsEveryCpuTemperatureSourceOmencoreKnow" xml:space="preserve">
+    <value>同时读取 OmenCore 已知的全部 CPU 温度来源并报告它们是否一致。不会改变被信任的来源——只读。</value>
+  </data>
+  <data name="DiagnosticsView_ReadWmiBiosAcpiAndLibrehardwaremonitorCpuT" xml:space="preserve">
+    <value>并排读取 WMI BIOS、ACPI 和 LibreHardwareMonitor 的 CPU 温度。只读，不改变任何设置。</value>
+  </data>
+  <data name="DiagnosticsView_RunTemperatureSourceComparison" xml:space="preserve">
+    <value>运行温度来源对比</value>
+  </data>
+  <data name="DiagnosticsView_PowerAdapter" xml:space="preserve">
+    <value>电源适配器</value>
+  </data>
+  <data name="DiagnosticsView_ConnectedAdapter" xml:space="preserve">
+    <value>当前适配器</value>
+  </data>
+  <data name="DiagnosticsView_ShippedWith" xml:space="preserve">
+    <value>随附适配器</value>
+  </data>
+  <data name="DiagnosticsView_CurrentGpuPowerLimit" xml:space="preserve">
+    <value>当前 GPU 功耗限制</value>
+  </data>
+  <data name="DiagnosticsView_ReadTheGpuSCurrentPowerLimitDirectlyFromTh" xml:space="preserve">
+    <value>直接从驱动读取 GPU 当前的功耗限制。只读，不改变任何设置。</value>
+  </data>
+  <data name="DiagnosticsView_CheckCurrentGpuPowerLimit" xml:space="preserve">
+    <value>检查当前 GPU 功耗限制</value>
+  </data>
+  <data name="DiagnosticsView_DropTheAdapterPowerClamp" xml:space="preserve">
+    <value>解除适配器功耗钳制</value>
+  </data>
+  <data name="DiagnosticsView_TheFirmwareTellsTheGpuDriverAboutTheAdapte" xml:space="preserve">
+    <value>固件只在评估适配器时向 GPU 驱动通告一次，之后驱动无从询问。刚启动的驱动尚未收到通告，因此重启设备会清除钳制——只有再次通告才会恢复。更换电源或重启都会触发。</value>
+  </data>
+  <data name="DiagnosticsView_TheSameSupplyClampsTheCpuByADifferentRoute" xml:space="preserve">
+    <value>同一电源还通过另一条路径钳制 CPU：AMD SMU 的四个功耗限制中有三个被钉在低位，设备重启对它无效。这些值是直接写入的，会在唤醒或更换电源后重新生效——正是拿走它们的那些事件。</value>
+  </data>
+  <data name="DiagnosticsView_YourScreensWillGoBlackForAFewSecondsAndAny" xml:space="preserve">
+    <value>你的屏幕会黑几秒钟，所有正在使用 GPU 的程序都会失去它。游戏或渲染进行中请勿执行。</value>
+  </data>
+  <data name="DiagnosticsView_DropTheClamp" xml:space="preserve">
+    <value>解除钳制</value>
+  </data>
+  <data name="DiagnosticsView_RestartsTheGpuDeviceToForceTheDriverToReRe" xml:space="preserve">
+    <value>重启 GPU 设备，强制驱动重新读取适配器的功耗能力。屏幕会黑几秒——游戏或渲染进行中请勿使用。</value>
+  </data>
+  <data name="DiagnosticsView_StopHoldingTheCpuLimits" xml:space="preserve">
+    <value>停止保持 CPU 限制</value>
+  </data>
+  <data name="DiagnosticsView_ReleaseTheAmdSmuPowerLimitsOmencoreIsCurre" xml:space="preserve">
+    <value>释放 OmenCore 为绕过适配器钳制而钉低的 AMD SMU 功耗限制</value>
+  </data>
+  <data name="DiagnosticsView_StopHoldingTheCpuPowerLimits" xml:space="preserve">
+    <value>停止保持 CPU 功耗限制</value>
+  </data>
+  <data name="DiagnosticsView_DoThisOnItsOwn" xml:space="preserve">
+    <value>单独执行此操作</value>
+  </data>
+  <data name="DiagnosticsView_KeepTheCpuPowerLimitsRaised" xml:space="preserve">
+    <value>保持 CPU 功耗限制处于放开状态</value>
+  </data>
+  <data name="DiagnosticsView_AppliedAtStartupAfterAResumeAndWhenTheSupp" xml:space="preserve">
+    <value>在启动时、唤醒后和电源变更时应用——正是拿走这些限制的事件。其余时间不写入任何内容，也不影响任何正在运行的任务。</value>
+  </data>
+  <data name="DiagnosticsView_RestartTheGpuToDropItsClampButOnlyWhileItI" xml:space="preserve">
+    <value>重启 GPU 以解除钳制——但仅在它休眠时执行</value>
+  </data>
+  <data name="DiagnosticsView_OnlyWhenTheDriverHasParkedTheGpuAndTheDisp" xml:space="preserve">
+    <value>仅当驱动已停放 GPU 且显示由核显输出时执行，因此没有可被打断的任务、也不会黑屏。如果执行时机到来时 GPU 仍处于唤醒状态，将不做操作并提示你——请改用上面的按钮。</value>
+  </data>
+  <data name="DiagnosticsView_ReadFromTheBiosEachTimeThisTabIsOpenedThis" xml:space="preserve">
+    <value>每次打开此标签页时从 BIOS 读取。这是机器自己对所接电源的认知，不是测量值。</value>
+  </data>
+  <data name="DiagnosticsView_GpuPowerUnlockExperimentalBoard8d87Only" xml:space="preserve">
+    <value>GPU 功耗解锁（实验性，仅限 8D87 主板）</value>
+  </data>
+  <data name="DiagnosticsView_ThisBoardSGpuIsHeldUnderItsFull175WRatingB" xml:space="preserve">
+    <value>这块主板的 GPU 被两道固件闸门压在 175W 完整额定值之下，OMEN Gaming Hub 平时会打开它们。此操作将闸门短暂钉开并让驱动重新读取——不是超频，也不持久：固件会在下次唤醒、更换适配器或重启时收回两道闸门。</value>
+  </data>
+  <data name="DiagnosticsView_NotConfirmedOnRealHardwareForcingThisOnAnU" xml:space="preserve">
+    <value>尚未在真实硬件上确认。在本次调查所依据的案例中，曾观察到在功率不足的适配器上强制执行会令 GPU 进入降级状态，且在有过 GPU 驱动崩溃历史的机器上只能靠重启恢复——因此只有当适配器余量远高于本机额定需求时才会提供此操作。</value>
+  </data>
+  <data name="DiagnosticsView_TryTheGpuPowerUnlock" xml:space="preserve">
+    <value>尝试 GPU 功耗解锁</value>
+  </data>
+  <data name="DiagnosticsView_ExperimentalPinsTwoEcBitsAndFiresOneWmiCom" xml:space="preserve">
+    <value>实验性。钉住两个 EC 位并发出一条 WMI 命令，然后以实测 GPU 功耗验证。尚未在真实硬件上确认——见上方说明。</value>
+  </data>
+  <data name="DiagnosticsView_TryTheGpuPowerUnlockExperimental" xml:space="preserve">
+    <value>尝试 GPU 功耗解锁（实验性）</value>
+  </data>
+  <data name="DiagnosticsView_ModelCapabilities" xml:space="preserve">
+    <value>机型能力</value>
+  </data>
+  <data name="DiagnosticsView_ProductId" xml:space="preserve">
+    <value>Product ID：</value>
+  </data>
+  <data name="DiagnosticsView_UserVerifiedProfile" xml:space="preserve">
+    <value>✓ 用户验证过的档案</value>
+  </data>
+  <data name="DiagnosticsView_InferredNotYetVerified" xml:space="preserve">
+    <value>⚠ 推断值，尚未验证</value>
+  </data>
+  <data name="DiagnosticsView_ThisReflectsWhatOmencoreSModelDatabaseKnow" xml:space="preserve">
+    <value>这反映的是 OmenCore 机型数据库对这台机器所检测到的具体主板的认识——某功能显示“不支持”可能是真实的硬件/固件限制，而非 OmenCore 的 bug。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功率加速）；常规标签页中的基本 Auto/Performance/Max 风扇模式由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
+  </data>
+  <data name="DiagnosticsView_CustomFanCurves" xml:space="preserve">
+    <value>自定义风扇曲线</value>
+  </data>
+  <data name="DiagnosticsView_Supported" xml:space="preserve">
+    <value>✓ 支持</value>
+  </data>
+  <data name="DiagnosticsView_NotSupported" xml:space="preserve">
+    <value>✗ 不支持</value>
+  </data>
+  <data name="DiagnosticsView_IndependentCpuGpuFanCurves" xml:space="preserve">
+    <value>CPU/GPU 独立风扇曲线</value>
+  </data>
+  <data name="DiagnosticsView_RealFanRpmReadback" xml:space="preserve">
+    <value>真实风扇 RPM 回读</value>
+  </data>
+  <data name="DiagnosticsView_GpuMuxSwitch" xml:space="preserve">
+    <value>GPU MUX 切换</value>
+  </data>
+  <data name="DiagnosticsView_Present" xml:space="preserve">
+    <value>✓ 具备</value>
+  </data>
+  <data name="DiagnosticsView_NotPresent" xml:space="preserve">
+    <value>✗ 不具备</value>
+  </data>
+  <data name="DiagnosticsView_GpuPowerBoostTgp" xml:space="preserve">
+    <value>GPU 功率加速（TGP）</value>
+  </data>
+  <data name="DiagnosticsView_AdvancedOptimusGpuSwitching" xml:space="preserve">
+    <value>Advanced Optimus GPU 切换</value>
+  </data>
+  <data name="DiagnosticsView_N4ZoneKeyboardRgb" xml:space="preserve">
+    <value>四分区键盘 RGB</value>
+  </data>
+  <data name="DiagnosticsView_PerKeyRgb" xml:space="preserve">
+    <value>单键 RGB</value>
+  </data>
+  <data name="DiagnosticsView_LightBar" xml:space="preserve">
+    <value>灯条</value>
+  </data>
+  <data name="DiagnosticsView_CpuUndervolting" xml:space="preserve">
+    <value>CPU 降压</value>
+  </data>
+  <data name="DiagnosticsView_PowerLimitPl1Pl2Adjustment" xml:space="preserve">
+    <value>功耗限制（PL1/PL2）调节</value>
+  </data>
+  <data name="DiagnosticsView_OverboostMode" xml:space="preserve">
+    <value>Overboost 模式</value>
+  </data>
+  <data name="DiagnosticsView_AboutDiagnostics" xml:space="preserve">
+    <value>ℹ️ 关于诊断</value>
+  </data>
+  <data name="DiagnosticsView_FanDiagnostics_2" xml:space="preserve">
+    <value>风扇诊断：</value>
+  </data>
+  <data name="DiagnosticsView_VerifyFanControlResponsivenessTestDifferen" xml:space="preserve">
+    <value> 验证风扇控制的响应性，测试不同转速档位，并校验 RPM 读数</value>
+  </data>
+  <data name="DiagnosticsView_KeyboardDiagnostics" xml:space="preserve">
+    <value>键盘诊断：</value>
+  </data>
+  <data name="DiagnosticsView_TestIndividualKeyBacklightingVerifyRgbZone" xml:space="preserve">
+    <value> 测试单键背光，校验 RGB 分区，排查键盘灯效问题</value>
+  </data>
+  <data name="DiagnosticsView_DiagnosticToolsAreForTroubleshootingOnlyTh" xml:space="preserve">
+    <value>诊断工具仅用于排障——它们会临时覆盖你的正常设置</value>
+  </data>
+  <data name="FanControlView_FanThermalControl" xml:space="preserve">
+    <value>风扇与散热控制</value>
+  </data>
+  <data name="FanControlView_ManageYourLaptopSCoolingPerformanceAllFanC" xml:space="preserve">
+    <value>管理笔记本的散热性能。全部风扇控制均通过笔记本的标准固件接口（WMI BIOS）进行，软件命令不会损坏硬件。</value>
+  </data>
+  <data name="FanControlView_CurveActive" xml:space="preserve">
+    <value>曲线已启用</value>
+  </data>
+  <data name="FanControlView_FanPerformanceDecouplingIsNowTheDefault" xml:space="preserve">
+    <value>风扇/性能解耦现已成为默认行为</value>
+  </data>
+  <data name="FanControlView_DismissFanPerformanceDecouplingNotice" xml:space="preserve">
+    <value>关闭风扇/性能解耦提示</value>
+  </data>
+  <data name="FanControlView_Dismiss" xml:space="preserve">
+    <value>知道了</value>
+  </data>
+  <data name="FanControlView_PossibleFanHardwareIssueDetected" xml:space="preserve">
+    <value>检测到可能的风扇硬件问题</value>
+  </data>
+  <data name="FanControlView_OmencoreUsesYourLaptopSStandardFirmwareInt" xml:space="preserve">
+    <value>OmenCore 使用笔记本的标准固件接口（WMI BIOS），软件命令不会损坏硬件。如问题持续，请联系 HP 支持或物理检查风扇。</value>
+  </data>
+  <data name="FanControlView_DismissFanHardwareIssueWarning" xml:space="preserve">
+    <value>关闭风扇硬件问题警告</value>
+  </data>
+  <data name="FanControlView_FanProfiles" xml:space="preserve">
+    <value>风扇预设</value>
+  </data>
+  <data name="FanControlView_ClearOmencoreFanOwnershipAndReturnControlT" xml:space="preserve">
+    <value>释放 OmenCore 的风扇控制权，交回固件自动模式</value>
+  </data>
+  <data name="FanControlView_RestoreOemAutoFanControl" xml:space="preserve">
+    <value>恢复 OEM 自动风扇控制</value>
+  </data>
+  <data name="FanControlView_RestoreOemAuto" xml:space="preserve">
+    <value>恢复 OEM 自动</value>
+  </data>
+  <data name="FanControlView_ForcesAllFansToMaximumRpmUseForHeavyGaming" xml:space="preserve">
+    <value>强制所有风扇以最大 RPM 运转。适合重度游戏或压力测试。</value>
+  </data>
+  <data name="FanControlView_MaxFanPresetForcesAllFansTo100" xml:space="preserve">
+    <value>最大风扇预设：强制所有风扇 100%</value>
+  </data>
+  <data name="FanControlView_DirectFixedFanLevelPreset" xml:space="preserve">
+    <value>直接固定风扇档位预设</value>
+  </data>
+  <data name="FanControlView_HighestNonMaxCoolingCurveReserves100FanDut" xml:space="preserve">
+    <value>非 Max 之下的最高散热曲线。为更热工况保留 100% 风扇占空比；需要立即全速请用 Max。</value>
+  </data>
+  <data name="FanControlView_ExtremeFanPresetHighestNonMaxCoolingCurve" xml:space="preserve">
+    <value>极限风扇预设：非 Max 下最高散热曲线</value>
+  </data>
+  <data name="FanControlView_Extreme" xml:space="preserve">
+    <value>极限</value>
+  </data>
+  <data name="FanControlView_AggressiveFanCurveThatRampsUpQuicklyGoodFo" xml:space="preserve">
+    <value>激进型风扇曲线，转速爬升快。适合游戏时段。</value>
+  </data>
+  <data name="FanControlView_GamingFanPresetAggressiveRampUpCurve" xml:space="preserve">
+    <value>游戏风扇预设：激进爬升曲线</value>
+  </data>
+  <data name="FanControlView_BiosControlledBalancedCurveRecommendedForE" xml:space="preserve">
+    <value>BIOS 控制的均衡曲线。日常使用推荐。</value>
+  </data>
+  <data name="FanControlView_AutoFanPresetBiosControlledBalancedCurve" xml:space="preserve">
+    <value>自动风扇预设：BIOS 控制的均衡曲线</value>
+  </data>
+  <data name="FanControlView_PrioritizesQuietOperationFansStayLowUntilT" xml:space="preserve">
+    <value>优先安静运行。温度显著升高前风扇保持低速。</value>
+  </data>
+  <data name="FanControlView_SilentFanPresetPrioritizesQuietOperation" xml:space="preserve">
+    <value>静音风扇预设：优先安静运行</value>
+  </data>
+  <data name="FanControlView_CustomFanPresetUserDefinedCurve" xml:space="preserve">
+    <value>自定义风扇预设：用户自定义曲线</value>
+  </data>
+  <data name="FanControlView_DirectFanLevel" xml:space="preserve">
+    <value>直接风扇档位</value>
+  </data>
+  <data name="FanControlView_DragToRequestAFixedFanLevel" xml:space="preserve">
+    <value>拖动以设置固定风扇档位</value>
+  </data>
+  <data name="FanControlView_DirectFanLevelPercentage" xml:space="preserve">
+    <value>直接风扇档位百分比</value>
+  </data>
+  <data name="FanControlView_ApplyTheSelectedDirectFanLevelNow" xml:space="preserve">
+    <value>立即应用所选的直接风扇档位</value>
+  </data>
+  <data name="FanControlView_ApplyDirectFanLevel" xml:space="preserve">
+    <value>应用直接风扇档位</value>
+  </data>
+  <data name="FanControlView_NameForYourCustomPreset" xml:space="preserve">
+    <value>自定义预设的名称</value>
+  </data>
+  <data name="FanControlView_CustomPresetName" xml:space="preserve">
+    <value>自定义预设名称</value>
+  </data>
+  <data name="FanControlView_SaveCurrentCurveAsACustomPreset" xml:space="preserve">
+    <value>将当前曲线保存为自定义预设</value>
+  </data>
+  <data name="FanControlView_SaveCustomPreset" xml:space="preserve">
+    <value>保存自定义预设</value>
+  </data>
+  <data name="FanControlView_Saved" xml:space="preserve">
+    <value>已保存：</value>
+  </data>
+  <data name="FanControlView_SelectASavedCustomPresetToLoad" xml:space="preserve">
+    <value>选择要加载的已保存自定义预设</value>
+  </data>
+  <data name="FanControlView_SavedCustomPresets" xml:space="preserve">
+    <value>已保存的自定义预设</value>
+  </data>
+  <data name="FanControlView_DeleteTheSelectedCustomPreset" xml:space="preserve">
+    <value>删除所选自定义预设</value>
+  </data>
+  <data name="FanControlView_DeleteSelectedPreset" xml:space="preserve">
+    <value>删除所选预设</value>
+  </data>
+  <data name="FanControlView_ImportPresetsFromAJsonFile" xml:space="preserve">
+    <value>从 JSON 文件导入预设</value>
+  </data>
+  <data name="FanControlView_ImportPresetsFromFile" xml:space="preserve">
+    <value>从文件导入预设</value>
+  </data>
+  <data name="FanControlView_ExportPresetsToAJsonFile" xml:space="preserve">
+    <value>将预设导出到 JSON 文件</value>
+  </data>
+  <data name="FanControlView_ExportPresetsToFile" xml:space="preserve">
+    <value>导出预设到文件</value>
+  </data>
+  <data name="FanControlView_ThisWonTSurviveARestartYet" xml:space="preserve">
+    <value>此设置重启后暂不会保留</value>
+  </data>
+  <data name="FanControlView_DismissStartupRestoreHint" xml:space="preserve">
+    <value>关闭启动恢复提示</value>
+  </data>
+  <data name="FanControlView_InstantApply" xml:space="preserve">
+    <value>即时应用</value>
+  </data>
+  <data name="FanControlView_BypassSmoothingOnSaveApply" xml:space="preserve">
+    <value>保存/应用时跳过平滑</value>
+  </data>
+  <data name="FanControlView_Smoothing" xml:space="preserve">
+    <value>平滑：</value>
+  </data>
+  <data name="FanControlView_SmoothingDurationInMilliseconds" xml:space="preserve">
+    <value>平滑时长（毫秒）</value>
+  </data>
+  <data name="FanControlView_Step" xml:space="preserve">
+    <value>步长：</value>
+  </data>
+  <data name="FanControlView_SmoothingStepInMilliseconds" xml:space="preserve">
+    <value>平滑步长（毫秒）</value>
+  </data>
+  <data name="FanControlView_IndependentCpuGpu" xml:space="preserve">
+    <value>CPU/GPU 独立</value>
+  </data>
+  <data name="FanControlView_GpuFanWritesAreModelDependentUnifiedCurveM" xml:space="preserve">
+    <value>GPU 风扇写入依赖机型；统一曲线模式仍是安全默认。</value>
+  </data>
+  <data name="FanControlView_GpuFanCurveSupportStatus" xml:space="preserve">
+    <value>GPU 风扇曲线支持状态</value>
+  </data>
+  <data name="FanControlView_VisualCurveEditor" xml:space="preserve">
+    <value>可视化曲线编辑器</value>
+  </data>
+  <data name="FanControlView_AddANewCurvePointMax10Points" xml:space="preserve">
+    <value>添加新曲线点（最多 10 个点）</value>
+  </data>
+  <data name="FanControlView_AddCurvePoint" xml:space="preserve">
+    <value>添加曲线点</value>
+  </data>
+  <data name="FanControlView_Remove" xml:space="preserve">
+    <value>− 移除</value>
+  </data>
+  <data name="FanControlView_RemoveTheLastCurvePointMin2Points" xml:space="preserve">
+    <value>移除最后一个曲线点（至少保留 2 个点）</value>
+  </data>
+  <data name="FanControlView_RemoveLastCurvePoint" xml:space="preserve">
+    <value>移除最后一个曲线点</value>
+  </data>
+  <data name="FanControlView_Reset" xml:space="preserve">
+    <value>↺ 重置</value>
+  </data>
+  <data name="FanControlView_ResetCurveToDefault" xml:space="preserve">
+    <value>将曲线重置为默认</value>
+  </data>
+  <data name="FanControlView_CopyCode" xml:space="preserve">
+    <value>📋 复制代码</value>
+  </data>
+  <data name="FanControlView_CopyThisCurveAsAShareCodeYouCanPasteIntoDi" xml:space="preserve">
+    <value>把这条曲线复制为分享代码，可粘贴到 Discord、Reddit 或 GitHub 评论</value>
+  </data>
+  <data name="FanControlView_CopyCurveAsShareCode" xml:space="preserve">
+    <value>复制曲线为分享代码</value>
+  </data>
+  <data name="FanControlView_PasteCode" xml:space="preserve">
+    <value>📥 粘贴代码</value>
+  </data>
+  <data name="FanControlView_ImportAFanCurveFromAShareCodeOnTheClipboar" xml:space="preserve">
+    <value>从剪贴板中的分享代码导入风扇曲线</value>
+  </data>
+  <data name="FanControlView_ImportCurveFromClipboardShareCode" xml:space="preserve">
+    <value>从剪贴板分享代码导入曲线</value>
+  </data>
+  <data name="FanControlView_HowToUse" xml:space="preserve">
+    <value>💡 用法：</value>
+  </data>
+  <data name="FanControlView_DragPointsToAdjustTemperatureFanSpeedMappi" xml:space="preserve">
+    <value>• 拖动点位调整温度/风扇转速映射</value>
+  </data>
+  <data name="FanControlView_ClickEmptyAreaToAddNewPoints" xml:space="preserve">
+    <value>• 点击空白区域添加新点位</value>
+  </data>
+  <data name="FanControlView_RightClickAPointToRemoveIt" xml:space="preserve">
+    <value>• 右键点击点位将其移除</value>
+  </data>
+  <data name="FanControlView_BlueLineShowsCurrentTemperatureMaxOfCpuGpu" xml:space="preserve">
+    <value>• 蓝线显示当前温度（取 CPU/GPU 较大值）</value>
+  </data>
+  <data name="FanControlView_LivePreview" xml:space="preserve">
+    <value>实时预览：</value>
+  </data>
+  <data name="FanControlView_CurrentPoints" xml:space="preserve">
+    <value>当前点位：</value>
+  </data>
+  <data name="FanControlView_FanCurveByCpuTemp" xml:space="preserve">
+    <value>风扇曲线（按 CPU 温度）</value>
+  </data>
+  <data name="FanControlView_AddCpuCurvePoint" xml:space="preserve">
+    <value>添加 CPU 曲线点</value>
+  </data>
+  <data name="FanControlView_RemoveLastCpuCurvePoint" xml:space="preserve">
+    <value>移除最后一个 CPU 曲线点</value>
+  </data>
+  <data name="FanControlView_ResetCpuCurveToDefault" xml:space="preserve">
+    <value>将 CPU 曲线重置为默认</value>
+  </data>
+  <data name="FanControlView_FanCurveByGpuTemp" xml:space="preserve">
+    <value>风扇曲线（按 GPU 温度）</value>
+  </data>
+  <data name="FanControlView_CopyCpuCurveToGpu" xml:space="preserve">
+    <value>将 CPU 曲线复制到 GPU</value>
+  </data>
+  <data name="FanControlView_AddGpuCurvePoint" xml:space="preserve">
+    <value>添加 GPU 曲线点</value>
+  </data>
+  <data name="FanControlView_RemoveLastGpuCurvePoint" xml:space="preserve">
+    <value>移除最后一个 GPU 曲线点</value>
+  </data>
+  <data name="FanControlView_ResetGpuCurveToDefault" xml:space="preserve">
+    <value>将 GPU 曲线重置为默认</value>
+  </data>
+  <data name="FanControlView_TemperatureHistory" xml:space="preserve">
+    <value>温度历史</value>
+  </data>
+  <data name="FanControlView_RealTimeStatus" xml:space="preserve">
+    <value>实时状态</value>
+  </data>
+  <data name="FanControlView_ThermalProtectionActive" xml:space="preserve">
+    <value>散热保护已激活</value>
+  </data>
+  <data name="FanControlView_FanControlOwner" xml:space="preserve">
+    <value>风扇控制权归属</value>
+  </data>
+  <data name="FanControlView_CalibrationWizard" xml:space="preserve">
+    <value>校准向导</value>
+  </data>
+  <data name="FanControlView_OpenFanCalibrationWizard" xml:space="preserve">
+    <value>打开风扇校准向导</value>
+  </data>
+  <data name="FanControlView_Cpu" xml:space="preserve">
+    <value>CPU：</value>
+  </data>
+  <data name="FanControlView_Gpu" xml:space="preserve">
+    <value>GPU：</value>
+  </data>
+  <data name="FanDiagnosticsView_SelectedFan" xml:space="preserve">
+    <value>所选风扇</value>
+  </data>
+  <data name="FanDiagnosticsView_TargetPercent" xml:space="preserve">
+    <value>目标百分比</value>
+  </data>
+  <data name="FanDiagnosticsView_ApplyVerify" xml:space="preserve">
+    <value>应用并验证</value>
+  </data>
+  <data name="FanDiagnosticsView_CurrentState" xml:space="preserve">
+    <value>当前状态</value>
+  </data>
+  <data name="FanDiagnosticsView_Rpm" xml:space="preserve">
+    <value>RPM：</value>
+  </data>
+  <data name="FanDiagnosticsView_SourceOfRpmDataEcDirectEcReadHwmonLibrehar" xml:space="preserve">
+    <value>RPM 数据来源：EC=直接 EC 读取，HWMon=LibreHardwareMonitor，MAB=MSI Afterburner，Est=估算</value>
+  </data>
+  <data name="FanDiagnosticsView_Level" xml:space="preserve">
+    <value>档位：</value>
+  </data>
+  <data name="FanDiagnosticsView_GuidedFanVerification" xml:space="preserve">
+    <value>引导式风扇验证</value>
+  </data>
+  <data name="FanDiagnosticsView_Tests3060100" xml:space="preserve">
+    <value>测试：30% → 60% → 100%</value>
+  </data>
+  <data name="FanDiagnosticsView_RunGuidedFanVerification" xml:space="preserve">
+    <value>运行引导式风扇验证</value>
+  </data>
+  <data name="FanDiagnosticsView_VerificationResults" xml:space="preserve">
+    <value>验证结果</value>
+  </data>
+  <data name="FanDiagnosticsView_CopyResults" xml:space="preserve">
+    <value>复制结果</value>
+  </data>
+  <data name="FanDiagnosticsView_History" xml:space="preserve">
+    <value>历史</value>
+  </data>
+  <data name="FanDiagnosticsView_Requested" xml:space="preserve">
+    <value>请求：</value>
+  </data>
+  <data name="FanDiagnosticsView_Readback" xml:space="preserve">
+    <value>%，回读：</value>
+  </data>
+  <data name="FanDiagnosticsView_Evidence" xml:space="preserve">
+    <value>证据：</value>
+  </data>
+  <data name="GameLibraryView_GameLibrary" xml:space="preserve">
+    <value>🎮 游戏库</value>
+  </data>
+  <data name="GameLibraryView_AutomaticallyDetectedGamesFromSteamEpicGog" xml:space="preserve">
+    <value>自动检测来自 Steam、Epic、GOG 等平台的游戏</value>
+  </data>
+  <data name="GameLibraryView_SearchGames" xml:space="preserve">
+    <value>搜索游戏…</value>
+  </data>
+  <data name="GameLibraryView_RescanAllGamePlatforms" xml:space="preserve">
+    <value>重新扫描全部游戏平台</value>
+  </data>
+  <data name="GameLibraryView_ManuallyAddAGameExecutable" xml:space="preserve">
+    <value>手动添加游戏可执行文件</value>
+  </data>
+  <data name="GameLibraryView_AddGame" xml:space="preserve">
+    <value>添加游戏</value>
+  </data>
+  <data name="GameLibraryView_ScanningGameLibraries" xml:space="preserve">
+    <value>正在扫描游戏库…</value>
+  </data>
+  <data name="GameLibraryView_LaunchSelectedGame" xml:space="preserve">
+    <value>启动所选游戏</value>
+  </data>
+  <data name="GameLibraryView_CreatePerformanceProfileForSelectedGame" xml:space="preserve">
+    <value>为所选游戏创建性能档案</value>
+  </data>
+  <data name="GameLibraryView_CreateProfile" xml:space="preserve">
+    <value>创建档案</value>
+  </data>
+  <data name="GameLibraryView_EditExistingProfile" xml:space="preserve">
+    <value>编辑现有档案</value>
+  </data>
+  <data name="GameLibraryView_EditProfile" xml:space="preserve">
+    <value>编辑档案</value>
+  </data>
+  <data name="GameProfileManagerView_GameProfileManager" xml:space="preserve">
+    <value>游戏档案管理器</value>
+  </data>
+  <data name="GameProfileManagerView_AutomaticallySwitchSettingsWhenGamesLaunch" xml:space="preserve">
+    <value>游戏启动时自动切换设置</value>
+  </data>
+  <data name="GameProfileManagerView_SearchProfiles" xml:space="preserve">
+    <value>搜索档案…</value>
+  </data>
+  <data name="GameProfileManagerView_NewProfile" xml:space="preserve">
+    <value>新建档案</value>
+  </data>
+  <data name="GameProfileManagerView_Duplicate" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="GameProfileManagerView_ImportProfiles" xml:space="preserve">
+    <value>导入档案</value>
+  </data>
+  <data name="GameProfileManagerView_ExportProfiles" xml:space="preserve">
+    <value>导出档案</value>
+  </data>
+  <data name="GameProfileManagerView_ProfileSettings" xml:space="preserve">
+    <value>档案设置</value>
+  </data>
+  <data name="GameProfileManagerView_ProfileName" xml:space="preserve">
+    <value>档案名称</value>
+  </data>
+  <data name="GameProfileManagerView_ExecutableNameEGRocketleagueExe" xml:space="preserve">
+    <value>可执行文件名（如 RocketLeague.exe）</value>
+  </data>
+  <data name="GameProfileManagerView_ExecutablePathOptionalForSpecificInstalls" xml:space="preserve">
+    <value>可执行文件路径（可选——用于指定安装）</value>
+  </data>
+  <data name="GameProfileManagerView_Browse" xml:space="preserve">
+    <value>浏览…</value>
+  </data>
+  <data name="GameProfileManagerView_AlsoApplyToOptionalCommaSeparatedExeNames" xml:space="preserve">
+    <value>同样应用于（可选——逗号分隔的 .exe 名称）</value>
+  </data>
+  <data name="GameProfileManagerView_OtherGamesThatShouldShareThisProfileSSetti" xml:space="preserve">
+    <value>应共享此档案设置的其他游戏，例如 game2.exe、game3.exe。让一个档案充当一批游戏的默认配置。</value>
+  </data>
+  <data name="GameProfileManagerView_EnableAutoSwitch" xml:space="preserve">
+    <value>启用自动切换</value>
+  </data>
+  <data name="GameProfileManagerView_PerformanceSettings" xml:space="preserve">
+    <value>性能设置</value>
+  </data>
+  <data name="GameProfileManagerView_FanPreset" xml:space="preserve">
+    <value>风扇预设</value>
+  </data>
+  <data name="GameProfileManagerView_CpuCoreUndervoltMv" xml:space="preserve">
+    <value>CPU 核心降压（mV）</value>
+  </data>
+  <data name="GameProfileManagerView_GpuMode" xml:space="preserve">
+    <value>GPU 模式</value>
+  </data>
+  <data name="GameProfileManagerView_LightingSettings" xml:space="preserve">
+    <value>灯效设置</value>
+  </data>
+  <data name="GameProfileManagerView_KeyboardLightingProfile" xml:space="preserve">
+    <value>键盘灯效档案</value>
+  </data>
+  <data name="GameProfileManagerView_PeripheralLightingProfile" xml:space="preserve">
+    <value>外设灯效档案</value>
+  </data>
+  <data name="GameProfileManagerView_AdvancedSettings" xml:space="preserve">
+    <value>高级设置</value>
+  </data>
+  <data name="GameProfileManagerView_PriorityExactExecutablePathsWinFirstHigher" xml:space="preserve">
+    <value>优先级（精确可执行路径优先；更高优先级打破并列）</value>
+  </data>
+  <data name="GameProfileManagerView_RestoreDefaultFanPerformanceSettingsWhenGa" xml:space="preserve">
+    <value>游戏退出时恢复默认风扇/性能设置</value>
+  </data>
+  <data name="GameProfileManagerView_CleanMemoryRamWhenThisGameLaunches" xml:space="preserve">
+    <value>游戏启动时清理内存（RAM）</value>
+  </data>
+  <data name="GameProfileManagerView_Statistics" xml:space="preserve">
+    <value>统计</value>
+  </data>
+  <data name="GameProfileManagerView_LaunchCount" xml:space="preserve">
+    <value>启动次数：</value>
+  </data>
+  <data name="GameProfileManagerView_TotalPlaytime" xml:space="preserve">
+    <value>总游玩时长：</value>
+  </data>
+  <data name="GameProfileManagerView_Created" xml:space="preserve">
+    <value>创建时间：</value>
+  </data>
+  <data name="GameProfileManagerView_Modified" xml:space="preserve">
+    <value>修改时间：</value>
+  </data>
+  <data name="GameProfileManagerView_SaveClose" xml:space="preserve">
+    <value>保存并关闭</value>
+  </data>
+  <data name="GeneralView_PerformanceCooling" xml:space="preserve">
+    <value>性能与散热</value>
+  </data>
+  <data name="GeneralView_QuickProfileSelectionForOptimalSystemTunin" xml:space="preserve">
+    <value>快速选择配置档案，实现最佳系统调校</value>
+  </data>
+  <data name="GeneralView_ThermalSafetyActive" xml:space="preserve">
+    <value>散热安全已激活</value>
+  </data>
+  <data name="GeneralView_TemperatureCriticalFansRunningAtMaxQuietCu" xml:space="preserve">
+    <value>温度达到临界值——风扇已全速运转。温度回落后将自动恢复安静曲线。</value>
+  </data>
+  <data name="GeneralView_QuickProfiles" xml:space="preserve">
+    <value>快速配置</value>
+  </data>
+  <data name="GeneralView_ClickToActivate" xml:space="preserve">
+    <value>点击启用</value>
+  </data>
+  <data name="GeneralView_PerformanceProfileMaximumCpuGpuPowerAndAgg" xml:space="preserve">
+    <value>性能档案：CPU/GPU 最大功耗与激进风扇</value>
+  </data>
+  <data name="GeneralView_MaximumCpuGpuPowerLimitsAndAggressiveFanCu" xml:space="preserve">
+    <value>CPU/GPU 最大功耗限制与激进风扇曲线，适合游戏和重负载工作。</value>
+  </data>
+  <data name="GeneralView_MaximumOutput" xml:space="preserve">
+    <value>最大输出</value>
+  </data>
+  <data name="GeneralView_Active" xml:space="preserve">
+    <value>✓ 使用中</value>
+  </data>
+  <data name="GeneralView_BalancedProfileDefaultHpPowerAndThermals" xml:space="preserve">
+    <value>均衡档案：HP 默认功耗与散热</value>
+  </data>
+  <data name="GeneralView_DefaultHpProfileBalancedPowerAndThermalsFo" xml:space="preserve">
+    <value>HP 默认档案——日常使用的均衡功耗与散热</value>
+  </data>
+  <data name="GeneralView_Default" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="GeneralView_AutoFans" xml:space="preserve">
+    <value>自动风扇</value>
+  </data>
+  <data name="GeneralView_QuietProfileReducedPowerAndMinimalFanSpeed" xml:space="preserve">
+    <value>安静档案：降低功耗并使用最低风扇转速</value>
+  </data>
+  <data name="GeneralView_ReducedPowerLimitsAndMinimalFanSpeedForSil" xml:space="preserve">
+    <value>降低功耗限制与最低风扇转速，实现静音运行</value>
+  </data>
+  <data name="GeneralView_PowerSave" xml:space="preserve">
+    <value>省电</value>
+  </data>
+  <data name="GeneralView_LowFans" xml:space="preserve">
+    <value>低速风扇</value>
+  </data>
+  <data name="GeneralView_CustomProfileUserDefinedFanCurvesAndPowerS" xml:space="preserve">
+    <value>自定义档案：用户自定义风扇曲线与功耗设置</value>
+  </data>
+  <data name="GeneralView_UserDefinedFanCurvesAndPowerSettingsViaThe" xml:space="preserve">
+    <value>通过“自定义”标签页设置的风扇曲线与功耗</value>
+  </data>
+  <data name="GeneralView_AdvancedControl" xml:space="preserve">
+    <value>高级控制</value>
+  </data>
+  <data name="GeneralView_CustomTab" xml:space="preserve">
+    <value>自定义标签页</value>
+  </data>
+  <data name="GeneralView_FanModeMax" xml:space="preserve">
+    <value>风扇模式：最大</value>
+  </data>
+  <data name="GeneralView_FansRunAtMaximumSpeedRegardlessOfTheActive" xml:space="preserve">
+    <value>风扇以最大转速运转，不受当前性能档案影响</value>
+  </data>
+  <data name="GeneralView_FanModeProfileControlledAutomatic" xml:space="preserve">
+    <value>风扇模式：档案控制（自动）</value>
+  </data>
+  <data name="GeneralView_FansFollowTheActivePerformanceProfileBiosA" xml:space="preserve">
+    <value>风扇跟随当前性能档案 / BIOS 自动曲线</value>
+  </data>
+  <data name="GeneralView_ProfileControlledAuto" xml:space="preserve">
+    <value>档案控制（自动）</value>
+  </data>
+  <data name="GeneralView_FanModeCustom" xml:space="preserve">
+    <value>风扇模式：自定义</value>
+  </data>
+  <data name="GeneralView_OpenTheCustomTabToSetAManualFanCurve" xml:space="preserve">
+    <value>打开“自定义”标签页设置手动风扇曲线</value>
+  </data>
+  <data name="GeneralView_Fan" xml:space="preserve">
+    <value>🌀 风扇</value>
+  </data>
+  <data name="GeneralView_Mode" xml:space="preserve">
+    <value>⚡ 模式</value>
+  </data>
+  <data name="GeneralView_Fans" xml:space="preserve">
+    <value>🌀 风扇组</value>
+  </data>
+  <data name="HotkeyOsdWindow_OmencoreOsd" xml:space="preserve">
+    <value>OmenCore OSD</value>
+  </data>
+  <data name="HotkeyOsdWindow_Widthandheight" xml:space="preserve">
+    <value>宽高</value>
+  </data>
+  <data name="HotkeyOsdWindow_ViaHotkeyCtrlShiftF" xml:space="preserve">
+    <value>快捷键（Ctrl+Shift+F）</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_DetectDevices" xml:space="preserve">
+    <value>检测设备</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_RunTestPattern" xml:space="preserve">
+    <value>运行测试图案</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_ClearTestPattern" xml:space="preserve">
+    <value>清除测试图案</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_CollectLogs" xml:space="preserve">
+    <value>收集日志</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_RgbPayloadProbeAdvanced" xml:space="preserve">
+    <value>RGB 载荷探测（高级）</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_ExperimentalTries5ColourCommandLayoutsForK" xml:space="preserve">
+    <value>实验性：为忽略颜色的键盘尝试 5 种颜色命令布局（GitHub #212）。</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_DetectedDevices" xml:space="preserve">
+    <value>已检测设备</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_ServiceStatus" xml:space="preserve">
+    <value>服务状态</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_CorsairIcue" xml:space="preserve">
+    <value>Corsair iCUE：</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_LogitechGHub" xml:space="preserve">
+    <value>罗技 G HUB：</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_RazerChroma" xml:space="preserve">
+    <value>雷蛇 Chroma：</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_HpOmenKeyboard" xml:space="preserve">
+    <value>HP OMEN 键盘：</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_KeyboardLightingTelemetry" xml:space="preserve">
+    <value>键盘灯效遥测</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_TroubleshootingTips" xml:space="preserve">
+    <value>排障提示</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_EnsureIcueGHubOrSynapseSoftwareIsRunningFo" xml:space="preserve">
+    <value>• 对应设备请确保 iCUE、G HUB 或 Synapse 软件正在运行</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_CheckDeviceConnectionsAndTryRePluggingUsbD" xml:space="preserve">
+    <value>• 检查设备连接，尝试重新插拔 USB 设备</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_ForHpOmenKeyboardEnsureWmiBiosSupportIsAva" xml:space="preserve">
+    <value>• HP OMEN 键盘需确保 WMI BIOS 支持可用</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_RestartTheApplicationAfterInstallingUpdati" xml:space="preserve">
+    <value>• 安装或更新灯效软件后请重启应用</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_CheckWindowsEventViewerForSdkInitializatio" xml:space="preserve">
+    <value>• 在 Windows 事件查看器中检查 SDK 初始化错误</value>
+  </data>
+  <data name="KeyboardDiagnosticsView_DiagnosticLogs" xml:space="preserve">
+    <value>诊断日志</value>
+  </data>
+  <data name="KeyboardMapEditor_OpenDynamicLightingSettings" xml:space="preserve">
+    <value>打开动态灯效设置</value>
+  </data>
+  <data name="KeyboardMapEditor_OpenTheWindowsDynamicLightingSettingsPage" xml:space="preserve">
+    <value>打开 Windows 动态灯效设置页面</value>
+  </data>
+  <data name="KeyboardMapEditor_Brush" xml:space="preserve">
+    <value>画笔：</value>
+  </data>
+  <data name="KeyboardMapEditor_ChooseAColour" xml:space="preserve">
+    <value>选择颜色</value>
+  </data>
+  <data name="KeyboardMapEditor_ChooseBrushColour" xml:space="preserve">
+    <value>选择画笔颜色</value>
+  </data>
+  <data name="KeyboardMapEditor_PickColour" xml:space="preserve">
+    <value>选取颜色…</value>
+  </data>
+  <data name="KeyboardMapEditor_PaintSelected" xml:space="preserve">
+    <value>填充所选</value>
+  </data>
+  <data name="KeyboardMapEditor_SelectAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="KeyboardMapEditor_ClearSelection" xml:space="preserve">
+    <value>清除选择</value>
+  </data>
+  <data name="KeyboardMapEditor_AllBlack" xml:space="preserve">
+    <value>全部黑色</value>
+  </data>
+  <data name="KeyboardMapEditor_ApplyToKeyboard" xml:space="preserve">
+    <value>应用到键盘</value>
+  </data>
+  <data name="KeyboardMapEditor_ApplyPerKeyColoursToTheKeyboard" xml:space="preserve">
+    <value>将单键颜色应用到键盘</value>
+  </data>
+  <data name="KeyboardMapEditor_SaveToKeyboard" xml:space="preserve">
+    <value>保存到键盘</value>
+  </data>
+  <data name="KeyboardMapEditor_SaveThePictureIntoTheKeyboardSoItSurvivesA" xml:space="preserve">
+    <value>将画面存入键盘，使其在断电后仍保留</value>
+  </data>
+  <data name="KeyboardMapEditor_AppliesThePictureThenStoresItInTheKeyboard" xml:space="preserve">
+    <value>先应用画面，然后存入键盘自身存储，断电后仍保留，关闭 OmenCore 也照常显示。此操作会写入键盘闪存，请在完成后使用而不是每次改动后都写。</value>
+  </data>
+  <data name="KeyboardMapEditor_WholeKeyboard" xml:space="preserve">
+    <value>整个键盘：</value>
+  </data>
+  <data name="KeyboardMapEditor_MasterBrightnessForTheWholeKeyboardAndLigh" xml:space="preserve">
+    <value>整个键盘与灯条的主亮度</value>
+  </data>
+  <data name="KeyboardMapEditor_Selected" xml:space="preserve">
+    <value>所选键：</value>
+  </data>
+  <data name="KeyboardMapEditor_BrightnessOfTheSelectedKeysAndLightBarZone" xml:space="preserve">
+    <value>所选按键与灯条分区的亮度</value>
+  </data>
+  <data name="KeyboardMapEditor_ClickAKeyToSelectOrDeselectItDragABoxToSel" xml:space="preserve">
+    <value>点击按键以选中或取消选中。拖框可框选一个区域——可横跨键盘与灯条。按住 Ctrl 或 Shift 拖动可追加选择。</value>
+  </data>
+  <data name="LightingView_RgbLightingPeripherals" xml:space="preserve">
+    <value>RGB 灯效与外设</value>
+  </data>
+  <data name="LightingView_OmenKeyboard" xml:space="preserve">
+    <value>OMEN 键盘</value>
+  </data>
+  <data name="LightingView_ControlOwnership" xml:space="preserve">
+    <value>控制权归属</value>
+  </data>
+  <data name="LightingView_ReapplySavedKeyboardColorsThroughTheActive" xml:space="preserve">
+    <value>通过当前活动的 HP 键盘后端重新应用已保存的键盘颜色</value>
+  </data>
+  <data name="LightingView_RestoreKeyboardLighting" xml:space="preserve">
+    <value>恢复键盘灯效</value>
+  </data>
+  <data name="LightingView_RestoreKeyboard" xml:space="preserve">
+    <value>恢复键盘</value>
+  </data>
+  <data name="LightingView_RgbSurfaceObservation" xml:space="preserve">
+    <value>RGB 表面观测</value>
+  </data>
+  <data name="LightingView_RecordThePhysicalRgbOrBacklightSurfaceThat" xml:space="preserve">
+    <value>记录探测后发生变化的物理 RGB 或背光表面</value>
+  </data>
+  <data name="LightingView_ObservedRgbSurface" xml:space="preserve">
+    <value>观测到的 RGB 表面</value>
+  </data>
+  <data name="LightingView_ApplyASafeBrightProbeColorThroughTheActive" xml:space="preserve">
+    <value>通过当前活动的 HP 键盘后端应用一个安全的明亮探测色</value>
+  </data>
+  <data name="LightingView_RunRgbSurfaceProbe" xml:space="preserve">
+    <value>运行 RGB 表面探测</value>
+  </data>
+  <data name="LightingView_SaveTheSelectedObservedRgbSurfaceForDiagno" xml:space="preserve">
+    <value>保存所选的观测 RGB 表面，用于诊断导出</value>
+  </data>
+  <data name="LightingView_SaveObservedRgbSurface" xml:space="preserve">
+    <value>保存观测到的 RGB 表面</value>
+  </data>
+  <data name="LightingView_SyncCurrentColorAcrossAllConnectedRgbDevic" xml:space="preserve">
+    <value>将当前颜色同步到所有已连接的 RGB 设备</value>
+  </data>
+  <data name="LightingView_SyncAllRgbDevices" xml:space="preserve">
+    <value>同步所有 RGB 设备</value>
+  </data>
+  <data name="LightingView_SyncAllRgb" xml:space="preserve">
+    <value>同步全部 RGB</value>
+  </data>
+  <data name="LightingView_SceneQuickSelect" xml:space="preserve">
+    <value>场景快速切换</value>
+  </data>
+  <data name="LightingView_EnableOrDisableSceneQuickSelectControlsInT" xml:space="preserve">
+    <value>启用或禁用此卡片中的场景快速切换控件</value>
+  </data>
+  <data name="LightingView_EnableSceneQuickSelectCard" xml:space="preserve">
+    <value>启用场景快速切换卡片</value>
+  </data>
+  <data name="LightingView_AmbientScreenLighting" xml:space="preserve">
+    <value>屏幕环境光</value>
+  </data>
+  <data name="LightingView_RgbSyncsWithScreenEdgeColors" xml:space="preserve">
+    <value>RGB 与屏幕边缘颜色同步</value>
+  </data>
+  <data name="LightingView_AudioReactiveLighting" xml:space="preserve">
+    <value>音频律动灯效</value>
+  </data>
+  <data name="LightingView_PulsesWithSystemAudioOutputViaWasapiLoopba" xml:space="preserve">
+    <value>通过 WASAPI 环回随系统音频输出脉动</value>
+  </data>
+  <data name="LightingView_AudioReactiveVisualizationMode" xml:space="preserve">
+    <value>音频律动可视化模式</value>
+  </data>
+  <data name="LightingView_Sensitivity" xml:space="preserve">
+    <value>灵敏度</value>
+  </data>
+  <data name="LightingView_AudioReactiveSensitivity" xml:space="preserve">
+    <value>音频律动灵敏度</value>
+  </data>
+  <data name="LightingView_CorsairDevices" xml:space="preserve">
+    <value>Corsair 设备</value>
+  </data>
+  <data name="LightingView_EnableOrDisableCorsairControlsInThisCard" xml:space="preserve">
+    <value>启用或禁用此卡片中的 Corsair 控件</value>
+  </data>
+  <data name="LightingView_EnableCorsairDevicesCard" xml:space="preserve">
+    <value>启用 Corsair 设备卡片</value>
+  </data>
+  <data name="LightingView_DiscoverDevices" xml:space="preserve">
+    <value>发现设备</value>
+  </data>
+  <data name="LightingView_Identify" xml:space="preserve">
+    <value>💡 识别</value>
+  </data>
+  <data name="LightingView_FlashDeviceLedsToIdentifyThisDevice" xml:space="preserve">
+    <value>闪烁设备 LED 以识别此设备</value>
+  </data>
+  <data name="LightingView_LightingPreset" xml:space="preserve">
+    <value>灯效预设：</value>
+  </data>
+  <data name="LightingView_ApplyToSystem" xml:space="preserve">
+    <value>应用到系统</value>
+  </data>
+  <data name="LightingView_CustomRgbColor" xml:space="preserve">
+    <value>自定义 RGB 颜色</value>
+  </data>
+  <data name="LightingView_ColorHex" xml:space="preserve">
+    <value>颜色（HEX）：</value>
+  </data>
+  <data name="LightingView_ApplyColor" xml:space="preserve">
+    <value>应用颜色</value>
+  </data>
+  <data name="LightingView_DpiConfiguration" xml:space="preserve">
+    <value>DPI 配置</value>
+  </data>
+  <data name="LightingView_DpiStages" xml:space="preserve">
+    <value>DPI 档位：</value>
+  </data>
+  <data name="LightingView_SelectASavedDpiProfileSaveWithSameNameWill" xml:space="preserve">
+    <value>选择已保存的 DPI 档案（以同名保存会提示覆盖）</value>
+  </data>
+  <data name="LightingView_SavedDpiProfileSelection" xml:space="preserve">
+    <value>已保存 DPI 档案选择</value>
+  </data>
+  <data name="LightingView_SaveProfile" xml:space="preserve">
+    <value>保存档案</value>
+  </data>
+  <data name="LightingView_SaveCurrentDpiStagesAsAProfile" xml:space="preserve">
+    <value>将当前 DPI 档位保存为档案</value>
+  </data>
+  <data name="LightingView_ApplyProfile" xml:space="preserve">
+    <value>应用档案</value>
+  </data>
+  <data name="LightingView_ApplySelectedDpiProfileToCurrentStages" xml:space="preserve">
+    <value>将所选 DPI 档案应用到当前档位</value>
+  </data>
+  <data name="LightingView_DeleteTheSelectedDpiProfile" xml:space="preserve">
+    <value>删除所选 DPI 档案</value>
+  </data>
+  <data name="LightingView_RestoreDefaults" xml:space="preserve">
+    <value>恢复默认</value>
+  </data>
+  <data name="LightingView_ApplyDpiSettings" xml:space="preserve">
+    <value>应用 DPI 设置</value>
+  </data>
+  <data name="LightingView_LogitechDevices" xml:space="preserve">
+    <value>罗技设备</value>
+  </data>
+  <data name="LightingView_EnableOrDisableLogitechControlsInThisCard" xml:space="preserve">
+    <value>启用或禁用此卡片中的罗技控件</value>
+  </data>
+  <data name="LightingView_EnableLogitechDevicesCard" xml:space="preserve">
+    <value>启用罗技设备卡片</value>
+  </data>
+  <data name="LightingView_ApplyToAllSystemRgb" xml:space="preserve">
+    <value>🎨 应用到全部系统 RGB</value>
+  </data>
+  <data name="LightingView_SyncColorAcrossAllDetectedLogitechDevices" xml:space="preserve">
+    <value>将颜色同步到所有检测到的罗技设备</value>
+  </data>
+  <data name="LightingView_StaticColor" xml:space="preserve">
+    <value>静态颜色：</value>
+  </data>
+  <data name="LightingView_LogitechColorRedValue" xml:space="preserve">
+    <value>罗技颜色红色分量</value>
+  </data>
+  <data name="LightingView_LogitechColorGreenValue" xml:space="preserve">
+    <value>罗技颜色绿色分量</value>
+  </data>
+  <data name="LightingView_LogitechColorBlueValue" xml:space="preserve">
+    <value>罗技颜色蓝色分量</value>
+  </data>
+  <data name="LightingView_RazerDevices" xml:space="preserve">
+    <value>雷蛇设备</value>
+  </data>
+  <data name="LightingView_EnableOrDisableRazerControlsInThisCard" xml:space="preserve">
+    <value>启用或禁用此卡片中的雷蛇控件</value>
+  </data>
+  <data name="LightingView_EnableRazerDevicesCard" xml:space="preserve">
+    <value>启用雷蛇设备卡片</value>
+  </data>
+  <data name="LightingView_RequiresRazerSynapseToBeInstalledAndRunnin" xml:space="preserve">
+    <value>需要安装并运行 Razer Synapse</value>
+  </data>
+  <data name="LightingView_LightingControl" xml:space="preserve">
+    <value>灯效控制</value>
+  </data>
+  <data name="LightingView_Color" xml:space="preserve">
+    <value>颜色：</value>
+  </data>
+  <data name="LightingView_RazerColorRedValue" xml:space="preserve">
+    <value>雷蛇颜色红色分量</value>
+  </data>
+  <data name="LightingView_RazerColorGreenValue" xml:space="preserve">
+    <value>雷蛇颜色绿色分量</value>
+  </data>
+  <data name="LightingView_RazerColorBlueValue" xml:space="preserve">
+    <value>雷蛇颜色蓝色分量</value>
+  </data>
+  <data name="LightingView_ApplyStatic" xml:space="preserve">
+    <value>应用静态灯效</value>
+  </data>
+  <data name="LightingView_Breathing" xml:space="preserve">
+    <value>呼吸</value>
+  </data>
+  <data name="LightingView_SpectrumCycle" xml:space="preserve">
+    <value>光谱循环</value>
+  </data>
+  <data name="LightingView_RazerSupportIsLimitedToDetectedDeviceStatu" xml:space="preserve">
+    <value>雷蛇支持仅限于设备检测状态和受支持硬件的已验证灯效操作。</value>
+  </data>
+  <data name="LightingView_OpenrgbDevices" xml:space="preserve">
+    <value>OpenRGB 设备</value>
+  </data>
+  <data name="LightingView_OptionalGenericRgbControlViaOpenrgbServerF" xml:space="preserve">
+    <value>通过 OpenRGB 服务器可选地控制主板、内存、显卡、风扇、灯带等通用 RGB 设备。</value>
+  </data>
+  <data name="LightingView_QuickColors" xml:space="preserve">
+    <value>⚡ 快速颜色</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorRed" xml:space="preserve">
+    <value>OpenRGB 快速颜色：红色</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorBlue" xml:space="preserve">
+    <value>OpenRGB 快速颜色：蓝色</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorGreen" xml:space="preserve">
+    <value>OpenRGB 快速颜色：绿色</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorPurple" xml:space="preserve">
+    <value>OpenRGB 快速颜色：紫色</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorYellow" xml:space="preserve">
+    <value>OpenRGB 快速颜色：黄色</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorWhite" xml:space="preserve">
+    <value>OpenRGB 快速颜色：白色</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorOrange" xml:space="preserve">
+    <value>OpenRGB 快速颜色：橙色</value>
+  </data>
+  <data name="LightingView_OpenrgbQuickColorOff" xml:space="preserve">
+    <value>OpenRGB 快速颜色：熄灭</value>
+  </data>
+  <data name="LightingView_OpenrgbIntegration" xml:space="preserve">
+    <value>OpenRGB 集成：</value>
+  </data>
+  <data name="LightingView_ControlsAnyRgbDeviceSupportedByOpenrgbMoth" xml:space="preserve">
+    <value> 控制 OpenRGB 支持的任何 RGB 设备（主板、内存、显卡、散热器、灯带等）。</value>
+  </data>
+  <data name="LightingView_DownloadOpenrgbFromOpenrgbOrgAndEnableTheS" xml:space="preserve">
+    <value>从 openrgb.org 下载 OpenRGB 并启用 SDK 服务器（Settings → SDK Server → Start Server）。</value>
+  </data>
+  <data name="LightingView_HpOmenKeyboard" xml:space="preserve">
+    <value>HP OMEN 键盘</value>
+  </data>
+  <data name="LightingView_EnableOrDisableHpOmenKeyboardControlsInThi" xml:space="preserve">
+    <value>启用或禁用此卡片中的 HP OMEN 键盘控件</value>
+  </data>
+  <data name="LightingView_EnableHpOmenKeyboardCard" xml:space="preserve">
+    <value>启用 HP OMEN 键盘卡片</value>
+  </data>
+  <data name="LightingView_YourLaptopSBuiltIn4ZoneRgbKeyboard" xml:space="preserve">
+    <value>笔记本内置的四分区 RGB 键盘</value>
+  </data>
+  <data name="LightingView_QuickColorsClickToApplyToAllZones" xml:space="preserve">
+    <value>⚡ 快速颜色（点击应用到所有分区）</value>
+  </data>
+  <data name="LightingView_OmenRed" xml:space="preserve">
+    <value>OMEN 红</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorOmenRed" xml:space="preserve">
+    <value>键盘快速颜色：OMEN 红</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorBlue" xml:space="preserve">
+    <value>键盘快速颜色：蓝色</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorGreen" xml:space="preserve">
+    <value>键盘快速颜色：绿色</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorPurple" xml:space="preserve">
+    <value>键盘快速颜色：紫色</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorYellow" xml:space="preserve">
+    <value>键盘快速颜色：黄色</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorWhite" xml:space="preserve">
+    <value>键盘快速颜色：白色</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorCyan" xml:space="preserve">
+    <value>键盘快速颜色：青色</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorPink" xml:space="preserve">
+    <value>键盘快速颜色：粉色</value>
+  </data>
+  <data name="LightingView_KeyboardQuickColorOff" xml:space="preserve">
+    <value>键盘快速颜色：熄灭</value>
+  </data>
+  <data name="LightingView_KeyboardZonesClickZoneToChangeColor" xml:space="preserve">
+    <value>🎹 键盘分区（点击分区更改颜色）</value>
+  </data>
+  <data name="LightingView_Preset" xml:space="preserve">
+    <value>预设：</value>
+  </data>
+  <data name="LightingView_KeyboardLightingPresetSelection" xml:space="preserve">
+    <value>键盘灯效预设选择</value>
+  </data>
+  <data name="LightingView_ApplyZoneColorsToKeyboard" xml:space="preserve">
+    <value>将分区颜色应用到键盘</value>
+  </data>
+  <data name="LightingView_AllSameColor" xml:space="preserve">
+    <value>全部同色</value>
+  </data>
+  <data name="LightingView_ApplyZone1ColorToAllZones" xml:space="preserve">
+    <value>将分区 1 的颜色应用到所有分区</value>
+  </data>
+  <data name="LightingView_ApplyColorsOnStartup" xml:space="preserve">
+    <value>启动时应用颜色</value>
+  </data>
+  <data name="LightingView_AutomaticallyRestoreSavedKeyboardColorsWhe" xml:space="preserve">
+    <value>OmenCore 启动时自动恢复已保存的键盘颜色</value>
+  </data>
+  <data name="LightingView_ApplyKeyboardColorsOnStartup" xml:space="preserve">
+    <value>启动时应用键盘颜色</value>
+  </data>
+  <data name="LightingView_OmenMax" xml:space="preserve">
+    <value>OMEN Max</value>
+  </data>
+  <data name="LightingView_MeasuredLayoutEveryKeyAtThePositionTheKeyb" xml:space="preserve">
+    <value>实测布局——每个按键都位于键盘上报的位置</value>
+  </data>
+  <data name="LightingView_FillAll" xml:space="preserve">
+    <value>全部填充</value>
+  </data>
+  <data name="LightingView_ApplyPerKeyColorsToKeyboard" xml:space="preserve">
+    <value>将单键颜色应用到键盘</value>
+  </data>
+  <data name="LightingView_KeyboardEffects" xml:space="preserve">
+    <value>键盘灯效</value>
+  </data>
+  <data name="LightingView_RunByTheKeyboardSOwnControllerTheseKeepRun" xml:space="preserve">
+    <value>由键盘自身控制器运行。关闭 OmenCore 后依然持续，并会替换任何单键颜色。</value>
+  </data>
+  <data name="LightingView_Direction" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="LightingView_CustomColours" xml:space="preserve">
+    <value>自定义颜色</value>
+  </data>
+  <data name="LightingView_ChooseTheFirstColour" xml:space="preserve">
+    <value>选择第一种颜色</value>
+  </data>
+  <data name="LightingView_ChooseTheFirstCustomEffectColour" xml:space="preserve">
+    <value>选择第一个自定义灯效颜色</value>
+  </data>
+  <data name="LightingView_ChooseTheSecondColour" xml:space="preserve">
+    <value>选择第二种颜色</value>
+  </data>
+  <data name="LightingView_ChooseTheSecondCustomEffectColour" xml:space="preserve">
+    <value>选择第二个自定义灯效颜色</value>
+  </data>
+  <data name="LightingView_ApplyEffect" xml:space="preserve">
+    <value>应用灯效</value>
+  </data>
+  <data name="LightingView_WhatSOnItNow" xml:space="preserve">
+    <value>当前内容是什么？</value>
+  </data>
+  <data name="LightingView_Fn1Fn2Cycle" xml:space="preserve">
+    <value>Fn+1 / Fn+2 循环</value>
+  </data>
+  <data name="LightingView_TheKeyboardRemembersAListOfEffectsAndSteps" xml:space="preserve">
+    <value>键盘会记住一组灯效列表，按 Fn+1（下一个）或 Fn+2（上一个）切换。在此整理列表后，即使关闭 OmenCore 甚至卸载它也能继续工作。</value>
+  </data>
+  <data name="LightingView_AddToCycle" xml:space="preserve">
+    <value>加入循环</value>
+  </data>
+  <data name="LightingView_StageTheEffectColoursSpeedAndDirectionSetA" xml:space="preserve">
+    <value>暂存上方设置的灯效、颜色、速度和方向</value>
+  </data>
+  <data name="LightingView_WriteToKeyboard" xml:space="preserve">
+    <value>写入键盘</value>
+  </data>
+  <data name="LightingView_SendEveryStagedProfileToTheKeyboard" xml:space="preserve">
+    <value>将全部暂存的配置发送到键盘</value>
+  </data>
+  <data name="LightingView_Showing" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="LightingView_LeaveTheKeyboardShowingThisOneAfterWriting" xml:space="preserve">
+    <value>写入后让键盘保持显示这一项</value>
+  </data>
+  <data name="LightingView_TakeThisOffTheListItStaysOnTheKeyboard" xml:space="preserve">
+    <value>从列表中移除此项。它仍保留在键盘上。</value>
+  </data>
+  <data name="LightingView_TheStripOnTheFrontOfTheChassisFourZonesLef" xml:space="preserve">
+    <value>机身前部的灯带——四个分区，从左到右。独立于键盘。</value>
+  </data>
+  <data name="LightingView_ChooseTheLightBarColour" xml:space="preserve">
+    <value>选择灯条颜色</value>
+  </data>
+  <data name="LightingView_ApplyColour" xml:space="preserve">
+    <value>应用颜色</value>
+  </data>
+  <data name="LightingView_Brightness" xml:space="preserve">
+    <value>亮度</value>
+  </data>
+  <data name="LightingView_RunAnimation" xml:space="preserve">
+    <value>运行动画</value>
+  </data>
+  <data name="LightingView_AdvancedLightingEffects" xml:space="preserve">
+    <value>🎨 高级灯效</value>
+  </data>
+  <data name="LightingView_TemperatureResponsiveLighting" xml:space="preserve">
+    <value>🌡️ 温度响应灯效</value>
+  </data>
+  <data name="LightingView_KeyboardLightBarAndRgbDevicesChangeColorBa" xml:space="preserve">
+    <value>键盘、灯条和 RGB 设备根据 CPU/GPU 温度变换颜色</value>
+  </data>
+  <data name="LightingView_EnableTemperatureResponsiveLighting" xml:space="preserve">
+    <value>启用温度响应灯效</value>
+  </data>
+  <data name="LightingView_TemperatureThresholdsC" xml:space="preserve">
+    <value>温度阈值（°C）</value>
+  </data>
+  <data name="LightingView_LowTemp" xml:space="preserve">
+    <value>低温</value>
+  </data>
+  <data name="LightingView_MediumTemp" xml:space="preserve">
+    <value>中温</value>
+  </data>
+  <data name="LightingView_HighTemp" xml:space="preserve">
+    <value>高温</value>
+  </data>
+  <data name="LightingView_PerformanceModeSyncedLighting" xml:space="preserve">
+    <value>⚡ 性能模式联动灯效</value>
+  </data>
+  <data name="LightingView_KeyboardLightBarAndRgbDevicesChangeColorBa_2" xml:space="preserve">
+    <value>键盘、灯条和 RGB 设备根据当前性能模式变换颜色</value>
+  </data>
+  <data name="LightingView_EnablePerformanceModeSyncedLighting" xml:space="preserve">
+    <value>启用性能模式联动灯效</value>
+  </data>
+  <data name="LightingView_PerformanceModeColors" xml:space="preserve">
+    <value>性能模式颜色</value>
+  </data>
+  <data name="LightingView_ThrottlingIndicators" xml:space="preserve">
+    <value>🚨 降频指示</value>
+  </data>
+  <data name="LightingView_FlashRedOrangeWhenCpuGpuThermalOrPowerThro" xml:space="preserve">
+    <value>当 CPU/GPU 出现温度或功耗降频时闪烁红/橙色</value>
+  </data>
+  <data name="LightingView_EnableThrottlingIndicatorLighting" xml:space="preserve">
+    <value>启用降频指示灯效</value>
+  </data>
+  <data name="LightingView_ThrottlingWarningColor" xml:space="preserve">
+    <value>降频警告颜色</value>
+  </data>
+  <data name="LightingView_ThrottlingAlert" xml:space="preserve">
+    <value>⚠️ 降频警告</value>
+  </data>
+  <data name="LightingView_ThisFeatureRequiresASupportedHpOmenLaptopW" xml:space="preserve">
+    <value>此功能需要支持四分区 RGB 键盘和 WMI BIOS 接口的 HP OMEN 笔记本。</value>
+  </data>
+  <data name="LightingView_MacroProfiles" xml:space="preserve">
+    <value>宏配置档案</value>
+  </data>
+  <data name="LightingView_ActiveProfile" xml:space="preserve">
+    <value>当前档案：</value>
+  </data>
+  <data name="LightingView_MacroProfileSelection" xml:space="preserve">
+    <value>宏配置档案选择</value>
+  </data>
+  <data name="LightingView_LoadProfile" xml:space="preserve">
+    <value>加载档案</value>
+  </data>
+  <data name="LightingView_UseCorsairIcueOrLogitechGHubSoftwareForAdv" xml:space="preserve">
+    <value>高级宏配置请使用 Corsair iCUE 或罗技 G HUB 软件。</value>
+  </data>
+  <data name="MainWindow_ApplyYourSavedFanPreset" xml:space="preserve">
+    <value>应用你保存的风扇预设</value>
+  </data>
+  <data name="MainWindow_ApplySavedFanPreset" xml:space="preserve">
+    <value>应用已保存风扇预设</value>
+  </data>
+  <data name="MainWindow_SwitchPerformanceProfile" xml:space="preserve">
+    <value>切换性能档案</value>
+  </data>
+  <data name="MainWindow_ApplyRgbLighting" xml:space="preserve">
+    <value>应用 RGB 灯效</value>
+  </data>
+  <data name="MainWindow_EnableGamingOptimizations" xml:space="preserve">
+    <value>启用游戏优化</value>
+  </data>
+  <data name="MainWindow_RestoreDefaultsResetFanCurvesLightingAndPe" xml:space="preserve">
+    <value>恢复默认：将风扇曲线、灯效和性能模式重置为默认值</value>
+  </data>
+  <data name="MainWindow_ExportYourSettings" xml:space="preserve">
+    <value>导出你的设置</value>
+  </data>
+  <data name="MainWindow_ImportSettingsFile" xml:space="preserve">
+    <value>导入设置文件</value>
+  </data>
+  <data name="MainWindow_ManagePerGameSettings" xml:space="preserve">
+    <value>管理每游戏设置</value>
+  </data>
+  <data name="MainWindow_Profiles" xml:space="preserve">
+    <value>配置档案</value>
+  </data>
+  <data name="MainWindow_ManuallyCheckForANewVersion" xml:space="preserve">
+    <value>手动检查新版本</value>
+  </data>
+  <data name="MainWindow_CheckForUpdates" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="MainWindow_UpdateReady" xml:space="preserve">
+    <value>更新就绪</value>
+  </data>
+  <data name="MainWindow_InstallUpdate" xml:space="preserve">
+    <value>安装更新</value>
+  </data>
+  <data name="MainWindow_ReleaseNotes" xml:space="preserve">
+    <value>更新日志</value>
+  </data>
+  <data name="MainWindow_WarningUnsupportedSystemDetected" xml:space="preserve">
+    <value>警告：检测到不受支持的系统</value>
+  </data>
+  <data name="MainWindow_OmencoreIsBuiltForHpOmenAndVictusGamingLap" xml:space="preserve">
+    <value>OmenCore 专为 HP OMEN 和 Victus 游戏本打造。当前系统未被识别为其中之一，大多数硬件控制功能将不可用——这是硬件/固件层面的限制，不是机型数据库更新能解决的。</value>
+  </data>
+  <data name="MainWindow_StandardProfileNotice" xml:space="preserve">
+    <value>标准档案提示</value>
+  </data>
+  <data name="MainWindow_DismissTheStandardProfileNotice" xml:space="preserve">
+    <value>关闭标准档案提示</value>
+  </data>
+  <data name="MainWindow_HideThisNoticeForThisLaptop" xml:space="preserve">
+    <value>在本笔记本上隐藏此提示</value>
+  </data>
+  <data name="MainWindow_YourLaptopIsSupportedWithItsFamilySStandar" xml:space="preserve">
+    <value>你的笔记本受支持，使用其所属系列的标准档案</value>
+  </data>
+  <data name="MainWindow_NobodyWithThisExactModelHasConfirmedEveryF" xml:space="preserve">
+    <value>目前还没有与你这台完全同型号的用户确认过全部功能，因此部分高级选项可能保持关闭。诊断页会显示是哪些以及原因。在 GitHub 或 Discord 提交诊断导出可以让你的机型得到完整确认。</value>
+  </data>
+  <data name="MainWindow_RecentActivity" xml:space="preserve">
+    <value>最近活动</value>
+  </data>
+  <data name="MainWindow_SystemLog" xml:space="preserve">
+    <value>系统日志</value>
+  </data>
+  <data name="MemoryOptimizerView_MemoryOptimizer" xml:space="preserve">
+    <value>内存优化器</value>
+  </data>
+  <data name="MemoryOptimizerView_MonitorAndOptimizeSystemMemoryInRealTime" xml:space="preserve">
+    <value>实时监控并优化系统内存</value>
+  </data>
+  <data name="MemoryOptimizerView_Available" xml:space="preserve">
+    <value>可用</value>
+  </data>
+  <data name="MemoryOptimizerView_SystemCache" xml:space="preserve">
+    <value>系统缓存</value>
+  </data>
+  <data name="MemoryOptimizerView_PageFile" xml:space="preserve">
+    <value>页面文件</value>
+  </data>
+  <data name="MemoryOptimizerView_CopyLastResult" xml:space="preserve">
+    <value>复制上次结果</value>
+  </data>
+  <data name="MemoryOptimizerView_CopyLastMemoryCleanResult" xml:space="preserve">
+    <value>复制上次内存清理结果</value>
+  </data>
+  <data name="MemoryOptimizerView_CopiesTheLatestMemoryCleanSummaryToTheClip" xml:space="preserve">
+    <value>将最近一次内存清理摘要复制到剪贴板</value>
+  </data>
+  <data name="MemoryOptimizerView_SafeCleanTrimsWorkingSetsPurgesLowPriority" xml:space="preserve">
+    <value>安全清理：修剪工作集、清除低优先级待备页、合并页面</value>
+  </data>
+  <data name="MemoryOptimizerView_SmartClean" xml:space="preserve">
+    <value>智能清理</value>
+  </data>
+  <data name="MemoryOptimizerView_AggressiveCleanAllOperationsIncludingStand" xml:space="preserve">
+    <value>强力清理：包括待备列表清除与缓存刷新在内的全部操作。可能造成短暂卡顿。</value>
+  </data>
+  <data name="MemoryOptimizerView_DeepClean" xml:space="preserve">
+    <value>深度清理</value>
+  </data>
+  <data name="MemoryOptimizerView_N30MinMemoryTrend" xml:space="preserve">
+    <value>30 分钟内存趋势</value>
+  </data>
+  <data name="MemoryOptimizerView_TopMemoryHogs" xml:space="preserve">
+    <value>内存占用大户</value>
+  </data>
+  <data name="MemoryOptimizerView_CopyProcessName" xml:space="preserve">
+    <value>复制进程名</value>
+  </data>
+  <data name="MemoryOptimizerView_OpenFileLocation" xml:space="preserve">
+    <value>打开文件位置</value>
+  </data>
+  <data name="MemoryOptimizerView_AddToWorkingSetExclusions" xml:space="preserve">
+    <value>加入工作集排除列表</value>
+  </data>
+  <data name="MemoryOptimizerView_Process" xml:space="preserve">
+    <value>进程</value>
+  </data>
+  <data name="MemoryOptimizerView_WorkingSet" xml:space="preserve">
+    <value>工作集</value>
+  </data>
+  <data name="MemoryOptimizerView_Private" xml:space="preserve">
+    <value>专用</value>
+  </data>
+  <data name="MemoryOptimizerView_Ram" xml:space="preserve">
+    <value>RAM %</value>
+  </data>
+  <data name="MemoryOptimizerView_IndividualOperations" xml:space="preserve">
+    <value>单项操作</value>
+  </data>
+  <data name="MemoryOptimizerView_TrimWorkingSets" xml:space="preserve">
+    <value>修剪工作集</value>
+  </data>
+  <data name="MemoryOptimizerView_ReleasesUnusedMemoryFromAllProcesses" xml:space="preserve">
+    <value>释放所有进程的未用内存</value>
+  </data>
+  <data name="MemoryOptimizerView_PurgeStandbyList" xml:space="preserve">
+    <value>清除待备列表</value>
+  </data>
+  <data name="MemoryOptimizerView_RemovesCachedPagesFromStandbyMemory" xml:space="preserve">
+    <value>从待备内存中移除缓存页面</value>
+  </data>
+  <data name="MemoryOptimizerView_MediumMayCauseBriefStutter" xml:space="preserve">
+    <value>中等——可能造成短暂卡顿</value>
+  </data>
+  <data name="MemoryOptimizerView_FlushFileCache" xml:space="preserve">
+    <value>刷新文件缓存</value>
+  </data>
+  <data name="MemoryOptimizerView_FlushesTheSystemFileCache" xml:space="preserve">
+    <value>清空系统文件缓存</value>
+  </data>
+  <data name="MemoryOptimizerView_MediumMaySlowFileAccessTemporarily" xml:space="preserve">
+    <value>中等——可能暂时降低文件访问速度</value>
+  </data>
+  <data name="MemoryOptimizerView_FlushModifiedPages" xml:space="preserve">
+    <value>刷新已修改页面</value>
+  </data>
+  <data name="MemoryOptimizerView_WritesModifiedPagesToDiskAndFreesMemory" xml:space="preserve">
+    <value>将已修改页面写入磁盘并释放内存</value>
+  </data>
+  <data name="MemoryOptimizerView_MediumDiskIOBurst" xml:space="preserve">
+    <value>中等——磁盘 I/O 突发</value>
+  </data>
+  <data name="MemoryOptimizerView_CombineMemoryPages" xml:space="preserve">
+    <value>合并内存页</value>
+  </data>
+  <data name="MemoryOptimizerView_MergesIdenticalMemoryPagesWindows10" xml:space="preserve">
+    <value>合并相同内容的内存页（Windows 10+）</value>
+  </data>
+  <data name="MemoryOptimizerView_SystemInformation" xml:space="preserve">
+    <value>系统信息</value>
+  </data>
+  <data name="MemoryOptimizerView_Processes" xml:space="preserve">
+    <value>进程数</value>
+  </data>
+  <data name="MemoryOptimizerView_Threads" xml:space="preserve">
+    <value>线程数</value>
+  </data>
+  <data name="MemoryOptimizerView_Handles" xml:space="preserve">
+    <value>句柄数</value>
+  </data>
+  <data name="MemoryOptimizerView_KernelNonPaged" xml:space="preserve">
+    <value>内核非分页</value>
+  </data>
+  <data name="MemoryOptimizerView_StandbyList" xml:space="preserve">
+    <value>待备列表</value>
+  </data>
+  <data name="MemoryOptimizerView_ModifiedPages" xml:space="preserve">
+    <value>已修改页面</value>
+  </data>
+  <data name="MemoryOptimizerView_CompressedMemory" xml:space="preserve">
+    <value>压缩内存</value>
+  </data>
+  <data name="MemoryOptimizerView_AutoClean" xml:space="preserve">
+    <value>自动清理</value>
+  </data>
+  <data name="MemoryOptimizerView_AutomaticMemoryCleaning" xml:space="preserve">
+    <value>自动内存清理</value>
+  </data>
+  <data name="MemoryOptimizerView_RunsSmartCleanWhenRamUsageExceedsThreshold" xml:space="preserve">
+    <value>内存占用超过阈值时运行智能清理</value>
+  </data>
+  <data name="MemoryOptimizerView_AdaptiveProfile" xml:space="preserve">
+    <value>自适应配置</value>
+  </data>
+  <data name="MemoryOptimizerView_UsageThreshold" xml:space="preserve">
+    <value>占用阈值</value>
+  </data>
+  <data name="MemoryOptimizerView_MinimumGapBetweenCleans" xml:space="preserve">
+    <value>清理最小间隔</value>
+  </data>
+  <data name="MemoryOptimizerView_SetTo0ToUseTheSelectedProfileDefaultCooldo" xml:space="preserve">
+    <value>设为 0 则使用所选档案的默认冷却时间。</value>
+  </data>
+  <data name="MemoryOptimizerView_GameAwareQuietWindow" xml:space="preserve">
+    <value>游戏感知静默窗口</value>
+  </data>
+  <data name="MemoryOptimizerView_PeriodicMemoryCleaning" xml:space="preserve">
+    <value>周期性内存清理</value>
+  </data>
+  <data name="MemoryOptimizerView_RunsSmartCleanAutomaticallyEveryNMinutes" xml:space="preserve">
+    <value>每 N 分钟自动运行智能清理</value>
+  </data>
+  <data name="MemoryOptimizerView_CleanInterval" xml:space="preserve">
+    <value>清理间隔</value>
+  </data>
+  <data name="MemoryOptimizerView_WorkingSetExclusions" xml:space="preserve">
+    <value>工作集排除列表</value>
+  </data>
+  <data name="MemoryOptimizerView_ExcludedProcessesAreSkippedDuringWorkingSe" xml:space="preserve">
+    <value>修剪工作集时跳过排除列表中的进程（可带或不带 .exe 输入）。</value>
+  </data>
+  <data name="MemoryOptimizerView_TipRightClickAProcessInTopMemoryHogsToAddG" xml:space="preserve">
+    <value>提示：在“内存占用大户”中右键进程，可在智能清理前把游戏、录屏工具、反作弊或聊天应用加入此列表。</value>
+  </data>
+  <data name="MemoryOptimizerView_MemoryCompression" xml:space="preserve">
+    <value>内存压缩</value>
+  </data>
+  <data name="MemoryOptimizerView_HowItWorks" xml:space="preserve">
+    <value>工作原理</value>
+  </data>
+  <data name="MemoryOptimizerView_TrimsProcessWorkingSetsPurgesLowPrioritySt" xml:space="preserve">
+    <value> 修剪进程工作集、清除低优先级待备页并合并相同内存页。这些操作是安全的，不会造成应用问题。</value>
+  </data>
+  <data name="MemoryOptimizerView_AdditionallyPurgesAllStandbyPagesFlushesTh" xml:space="preserve">
+    <value> 还会清除全部待备页、刷新系统文件缓存并把已修改页面写入磁盘。数据重新缓存时可能造成短暂卡顿。</value>
+  </data>
+  <data name="OnboardingWindow_WelcomeToOmencore" xml:space="preserve">
+    <value>欢迎使用 OmenCore</value>
+  </data>
+  <data name="OnboardingWindow_OmencoreSetup" xml:space="preserve">
+    <value>OmenCore 设置</value>
+  </data>
+  <data name="OnboardingWindow_Welcome" xml:space="preserve">
+    <value>👋 欢迎！</value>
+  </data>
+  <data name="OnboardingWindow_OmencoreIsACommunityBuiltFanLightingAndPer" xml:space="preserve">
+    <value>OmenCore 是一个社区打造的 HP OMEN 笔记本风扇、灯效与性能控制器。</value>
+  </data>
+  <data name="OnboardingWindow_ThisQuickSetupTakesAbout30SecondsAndHelpsO" xml:space="preserve">
+    <value>此快速设置约需 30 秒，能让 OmenCore 在你的系统上达到最佳工作状态。</value>
+  </data>
+  <data name="OnboardingWindow_WhatOmencoreDoes" xml:space="preserve">
+    <value>OmenCore 能做什么：</value>
+  </data>
+  <data name="OnboardingWindow_CustomFanCurvesWithTemperatureBasedControl" xml:space="preserve">
+    <value>自定义风扇曲线，基于温度的控制</value>
+  </data>
+  <data name="OnboardingWindow_N4ZoneRgbKeyboardLightingControl" xml:space="preserve">
+    <value>四分区 RGB 键盘灯效控制</value>
+  </data>
+  <data name="OnboardingWindow_PerformanceAndPowerModeSwitching" xml:space="preserve">
+    <value>性能与功耗模式切换</value>
+  </data>
+  <data name="OnboardingWindow_RealTimeCpuGpuTemperatureAndLoadMonitoring" xml:space="preserve">
+    <value>实时 CPU/GPU 温度与负载监控</value>
+  </data>
+  <data name="OnboardingWindow_YourHardware" xml:space="preserve">
+    <value>🔍 你的硬件</value>
+  </data>
+  <data name="OnboardingWindow_OmencoreDetectedTheFollowingOnYourSystem" xml:space="preserve">
+    <value>OmenCore 在你的系统上检测到以下内容：</value>
+  </data>
+  <data name="OnboardingWindow_FanControlBackend" xml:space="preserve">
+    <value>风扇控制后端</value>
+  </data>
+  <data name="OnboardingWindow_Detecting" xml:space="preserve">
+    <value>检测中…</value>
+  </data>
+  <data name="OnboardingWindow_MonitoringSource" xml:space="preserve">
+    <value>监控来源</value>
+  </data>
+  <data name="OnboardingWindow_PawnioDriver" xml:space="preserve">
+    <value>PawnIO 驱动</value>
+  </data>
+  <data name="OnboardingWindow_Checking" xml:space="preserve">
+    <value>检查中…</value>
+  </data>
+  <data name="OnboardingWindow_QuickStart" xml:space="preserve">
+    <value>🚀 快速上手</value>
+  </data>
+  <data name="OnboardingWindow_ApplyAFanPreset" xml:space="preserve">
+    <value>应用风扇预设</value>
+  </data>
+  <data name="OnboardingWindow_HeadToFanControlAndTryTheAutoOrGamingPrese" xml:space="preserve">
+    <value>前往“风扇控制”，试试 Auto 或 Gaming 预设。</value>
+  </data>
+  <data name="OnboardingWindow_CustomiseYourLighting" xml:space="preserve">
+    <value>自定义你的灯效</value>
+  </data>
+  <data name="OnboardingWindow_OpenLightingAndClickAnyKeyboardZoneToChang" xml:space="preserve">
+    <value>打开“灯效”，点击任意键盘分区更改颜色。</value>
+  </data>
+  <data name="OnboardingWindow_ConfigureSettings" xml:space="preserve">
+    <value>配置设置</value>
+  </data>
+  <data name="OnboardingWindow_EnableStartWithWindowsSetAPollingIntervalA" xml:space="preserve">
+    <value>启用开机自启、设置轮询间隔，并探索自动化功能。</value>
+  </data>
+  <data name="OnboardingWindow_Back" xml:space="preserve">
+    <value>← 上一步</value>
+  </data>
+  <data name="OnboardingWindow_Next" xml:space="preserve">
+    <value>下一步 →</value>
+  </data>
+  <data name="OnboardingWindow_GetStarted" xml:space="preserve">
+    <value>开始使用</value>
+  </data>
+  <data name="OsdOverlayWindow_CpuClk" xml:space="preserve">
+    <value>CPU 频率</value>
+  </data>
+  <data name="OsdOverlayWindow_GpuClk" xml:space="preserve">
+    <value>GPU 频率</value>
+  </data>
+  <data name="OsdOverlayWindow_FpsViaRtss" xml:space="preserve">
+    <value>FPS（经 RTSS）</value>
+  </data>
+  <data name="OsdOverlayWindow_Up" xml:space="preserve">
+    <value>↑ 升</value>
+  </data>
+  <data name="OsdOverlayWindow_Dn" xml:space="preserve">
+    <value>↓ 降</value>
+  </data>
+  <data name="OsdOverlayWindow_ThermalThrottle" xml:space="preserve">
+    <value>⚠ 温度降频</value>
+  </data>
+  <data name="QuickPopupWindow_OmencoreQuickAccess" xml:space="preserve">
+    <value>OmenCore 快速访问</value>
+  </data>
+  <data name="QuickPopupWindow_QuickAccess" xml:space="preserve">
+    <value>快速访问</value>
+  </data>
+  <data name="QuickPopupWindow_MonitoringUnknown" xml:space="preserve">
+    <value>监控：未知</value>
+  </data>
+  <data name="QuickPopupWindow_FanPerfDecoupled" xml:space="preserve">
+    <value>风扇/性能：已解耦</value>
+  </data>
+  <data name="QuickPopupWindow_QuickProfile" xml:space="preserve">
+    <value>快速配置</value>
+  </data>
+  <data name="QuickPopupWindow_Perform" xml:space="preserve">
+    <value>性能</value>
+  </data>
+  <data name="QuickPopupWindow_OpenFullDashboard" xml:space="preserve">
+    <value>打开完整面板</value>
+  </data>
+  <data name="QuickPopupWindow_Dashboard" xml:space="preserve">
+    <value>面板</value>
+  </data>
+  <data name="QuickPopupWindow_TurnOffDisplay" xml:space="preserve">
+    <value>关闭屏幕</value>
+  </data>
+  <data name="QuickPopupWindow_DisplayOff" xml:space="preserve">
+    <value>屏幕关闭</value>
+  </data>
+  <data name="QuickPopupWindow_ToggleRefreshRate" xml:space="preserve">
+    <value>切换刷新率</value>
+  </data>
+  <data name="QuickPopupWindow_RunASafeRamClean" xml:space="preserve">
+    <value>执行一次安全的 RAM 清理</value>
+  </data>
+  <data name="QuickPopupWindow_CleanRam" xml:space="preserve">
+    <value>清理内存</value>
+  </data>
+  <data name="SettingsView_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SettingsView_ConfigureApplicationBehaviorStartupOptions" xml:space="preserve">
+    <value>配置应用行为、启动选项和驱动设置</value>
+  </data>
+  <data name="SettingsView_SettingsSearchQuery" xml:space="preserve">
+    <value>设置搜索关键词</value>
+  </data>
+  <data name="SettingsView_SearchResults" xml:space="preserve">
+    <value>搜索结果</value>
+  </data>
+  <data name="SettingsView_SystemStatus" xml:space="preserve">
+    <value>系统状态</value>
+  </data>
+  <data name="SettingsView_TheMethodUsedToControlFansOnYourSystem" xml:space="preserve">
+    <value>你的系统上用于控制风扇的方法</value>
+  </data>
+  <data name="SettingsView_SecureBoot" xml:space="preserve">
+    <value>Secure Boot</value>
+  </data>
+  <data name="SettingsView_SecureBootCompatibleDriverForEcMsrAccess" xml:space="preserve">
+    <value>兼容 Secure Boot 的 EC/MSR 访问驱动</value>
+  </data>
+  <data name="SettingsView_OmenGamingHub" xml:space="preserve">
+    <value>OMEN Gaming Hub</value>
+  </data>
+  <data name="SettingsView_HpSOfficialControlSoftwareProvidesWmiAcces" xml:space="preserve">
+    <value>HP 官方控制软件——提供 WMI 访问</value>
+  </data>
+  <data name="SettingsView_StandaloneStatus" xml:space="preserve">
+    <value>独立运行状态</value>
+  </data>
+  <data name="SettingsView_PostResumeRecovery" xml:space="preserve">
+    <value>唤醒后恢复</value>
+  </data>
+  <data name="SettingsView_ResumeRecoveryTimeline" xml:space="preserve">
+    <value>唤醒恢复时间线</value>
+  </data>
+  <data name="SettingsView_ModelIdentityResolution" xml:space="preserve">
+    <value>机型识别解析</value>
+  </data>
+  <data name="SettingsView_ResolvedModel" xml:space="preserve">
+    <value>解析出的机型</value>
+  </data>
+  <data name="SettingsView_ResolutionSource" xml:space="preserve">
+    <value>解析来源</value>
+  </data>
+  <data name="SettingsView_Confidence" xml:space="preserve">
+    <value>置信度</value>
+  </data>
+  <data name="SettingsView_KeyboardProfile" xml:space="preserve">
+    <value>键盘档案</value>
+  </data>
+  <data name="SettingsView_KeyboardSource" xml:space="preserve">
+    <value>键盘来源</value>
+  </data>
+  <data name="SettingsView_CopySummary" xml:space="preserve">
+    <value>复制摘要</value>
+  </data>
+  <data name="SettingsView_PawnioOnlyMode" xml:space="preserve">
+    <value>仅 PawnIO 模式</value>
+  </data>
+  <data name="SettingsView_DisableHpServiceDependentFeaturesPerforman" xml:space="preserve">
+    <value>禁用依赖 HP 服务的功能（性能模式、GPU 切换）。仅用 PawnIO 做 EC 风扇控制和温度监控。</value>
+  </data>
+  <data name="SettingsView_BiosWmiReliability" xml:space="preserve">
+    <value>BIOS WMI 可靠性</value>
+  </data>
+  <data name="SettingsView_General" xml:space="preserve">
+    <value>常规</value>
+  </data>
+  <data name="SettingsView_ShareAnonymousPidSuccessFailureCountsToHel" xml:space="preserve">
+    <value>匿名分享 PID 成功/失败计数，帮助改进设备支持。仅自愿加入；存储于 %LOCALAPPDATA%\OmenCore\telemetry.json</value>
+  </data>
+  <data name="SettingsView_Advanced" xml:space="preserve">
+    <value>高级</value>
+  </data>
+  <data name="SettingsView_Monitoring" xml:space="preserve">
+    <value>监控</value>
+  </data>
+  <data name="SettingsView_AutomaticMonitoringCadence" xml:space="preserve">
+    <value>自动监控节奏</value>
+  </data>
+  <data name="SettingsView_OmencoreNowOwnsCadenceAutomaticallyActiveW" xml:space="preserve">
+    <value>OmenCore 现在自动管理节奏：活动窗口和 OSD 保持响应，空闲会话安全降速，无人阻挡时低开销托盘模式可降到超低节奏。</value>
+  </data>
+  <data name="SettingsView_CadenceTiers" xml:space="preserve">
+    <value>节奏分级</value>
+  </data>
+  <data name="SettingsView_N1sWhenTheUiOrOsdNeedsLiveData5sInStandardB" xml:space="preserve">
+    <value>UI 或 OSD 需要实时数据时 1 秒，标准后台空闲 5 秒，符合条件的托盘低负载会话 10 秒。使用下方的“低开销模式”偏好更轻的节奏路径。</value>
+  </data>
+  <data name="SettingsView_ChartHistory" xml:space="preserve">
+    <value>图表历史</value>
+  </data>
+  <data name="SettingsView_NumberOfDataPointsToDisplayInCharts" xml:space="preserve">
+    <value>图表中显示的数据点数量</value>
+  </data>
+  <data name="SettingsView_HistoryCount" xml:space="preserve">
+    <value>历史点数</value>
+  </data>
+  <data name="SettingsView_LowOverheadMode" xml:space="preserve">
+    <value>低开销模式</value>
+  </data>
+  <data name="SettingsView_ReduceCpuUsageByLimitingSensorPolling" xml:space="preserve">
+    <value>通过限制传感器轮询降低 CPU 占用</value>
+  </data>
+  <data name="SettingsView_LiveCadenceStatus" xml:space="preserve">
+    <value>实时节奏状态</value>
+  </data>
+  <data name="SettingsView_CurrentTier" xml:space="preserve">
+    <value>当前级别：</value>
+  </data>
+  <data name="SettingsView_Reason" xml:space="preserve">
+    <value>原因：</value>
+  </data>
+  <data name="SettingsView_UltraLowBlockers" xml:space="preserve">
+    <value>超低级阻挡项：</value>
+  </data>
+  <data name="SettingsView_StartupSafeModeGuard" xml:space="preserve">
+    <value>启动安全模式守卫</value>
+  </data>
+  <data name="SettingsView_TemporarilyBlocksTrayWriteActionsIfMonitor" xml:space="preserve">
+    <value>若启动后监控短暂不稳定，则临时阻止托盘写操作</value>
+  </data>
+  <data name="SettingsView_SafeModeStartupWindow" xml:space="preserve">
+    <value>安全模式启动窗口</value>
+  </data>
+  <data name="SettingsView_HowLongAfterStartupTheGuardCanAutoActivate" xml:space="preserve">
+    <value>守卫可在启动后多久内自动激活</value>
+  </data>
+  <data name="SettingsView_StartupSafeModeWindowSeconds" xml:space="preserve">
+    <value>启动安全模式窗口（秒）</value>
+  </data>
+  <data name="SettingsView_TimeoutThreshold" xml:space="preserve">
+    <value>超时阈值</value>
+  </data>
+  <data name="SettingsView_ConsecutiveMonitorTimeoutsRequiredBeforeSt" xml:space="preserve">
+    <value>启动安全模式激活前所需的连续监控超时次数</value>
+  </data>
+  <data name="SettingsView_StartupSafeModeTimeoutThreshold" xml:space="preserve">
+    <value>启动安全模式超时阈值</value>
+  </data>
+  <data name="SettingsView_HardwareWorker" xml:space="preserve">
+    <value>硬件工作进程</value>
+  </data>
+  <data name="SettingsView_EnableOrphanTimeout" xml:space="preserve">
+    <value>启用孤儿超时</value>
+  </data>
+  <data name="SettingsView_WorkerProcessExitsAfterMainAppClosesIfNoRe" xml:space="preserve">
+    <value>主应用关闭后若无重连，工作进程将退出</value>
+  </data>
+  <data name="SettingsView_OrphanTimeoutDuration" xml:space="preserve">
+    <value>孤儿超时时长</value>
+  </data>
+  <data name="SettingsView_MinutesToWaitForReconnectionBeforeWorkerEx" xml:space="preserve">
+    <value>工作进程退出前等待重连的分钟数</value>
+  </data>
+  <data name="SettingsView_HardwareWorkerOrphanTimeoutMinutes" xml:space="preserve">
+    <value>硬件工作进程孤儿超时（分钟）</value>
+  </data>
+  <data name="SettingsView_PowerAutomation" xml:space="preserve">
+    <value>电源自动化</value>
+  </data>
+  <data name="SettingsView_AutoSwitchOnPowerChange" xml:space="preserve">
+    <value>电源变化时自动切换</value>
+  </data>
+  <data name="SettingsView_AutomaticallySwitchProfilesWhenAcPowerIsCo" xml:space="preserve">
+    <value>接入或断开交流电源时自动切换档案</value>
+  </data>
+  <data name="SettingsView_WhenOnAcPower" xml:space="preserve">
+    <value>使用交流电源时：</value>
+  </data>
+  <data name="SettingsView_AcPowerFanPreset" xml:space="preserve">
+    <value>交流电源风扇预设</value>
+  </data>
+  <data name="SettingsView_AcPowerPerformanceMode" xml:space="preserve">
+    <value>交流电源性能模式</value>
+  </data>
+  <data name="SettingsView_WhenOnBattery" xml:space="preserve">
+    <value>使用电池时：</value>
+  </data>
+  <data name="SettingsView_BatteryPowerFanPreset" xml:space="preserve">
+    <value>电池供电风扇预设</value>
+  </data>
+  <data name="SettingsView_BatteryPowerPerformanceMode" xml:space="preserve">
+    <value>电池供电性能模式</value>
+  </data>
+  <data name="SettingsView_LinkFanToPerformanceMode" xml:space="preserve">
+    <value>风扇联动性能模式</value>
+  </data>
+  <data name="SettingsView_AutomaticallyApplyTheMatchingFanPresetWhen" xml:space="preserve">
+    <value>切换性能模式时自动应用匹配的风扇预设。</value>
+  </data>
+  <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAutoExperi" xml:space="preserve">
+    <value>返回自动模式时不钉住风扇档位（实验性）</value>
+  </data>
+  <data name="SettingsView_ForLaptopsWhoseFansStayNear2000RpmAtHighTe" xml:space="preserve">
+    <value>适用于高温下风扇持续停留在约 2000 RPM、直到恢复 OEM 档案才变化的机型。跳过 OmenCore 在交还控制权给 BIOS 时发送的风扇档位提示。默认关闭；重启后生效。尚未在硬件上确认。</value>
+  </data>
+  <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAuto" xml:space="preserve">
+    <value>返回自动时不钉住风扇档位</value>
+  </data>
+  <data name="SettingsView_ReturnMaxFanModeToAuto" xml:space="preserve">
+    <value>将最大风扇模式恢复为自动</value>
+  </data>
+  <data name="SettingsView_OffKeepsMaxUntilYouChangeItCooldownHandsTh" xml:space="preserve">
+    <value>关闭：保持 Max 直到你手动更改。Cooldown：CPU 和 GPU 连续 2 分钟低于 60°C 后交还 BIOS 自动。Timer：到达所设时间后交还。尚未在硬件上确认。</value>
+  </data>
+  <data name="SettingsView_Minutes" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="SettingsView_MaxFanAutoReturnTimerMinutes" xml:space="preserve">
+    <value>最大风扇自动恢复计时器（分钟）</value>
+  </data>
+  <data name="SettingsView_RestoreLastHardwareSettingsOnStartup" xml:space="preserve">
+    <value>启动时恢复上次硬件设置</value>
+  </data>
+  <data name="SettingsView_ReapplyTheSavedFanPresetPerformanceModeGpu" xml:space="preserve">
+    <value>OmenCore 启动后重新应用已保存的风扇预设、性能模式、GPU 加速和调优设置。</value>
+  </data>
+  <data name="SettingsView_AllowStartupRestoreOnOmen16Victus" xml:space="preserve">
+    <value>在 OMEN 16/Victus 上允许启动恢复</value>
+  </data>
+  <data name="SettingsView_OverridesTheExtraGuardrailForModelsThatHav" xml:space="preserve">
+    <value>为启动期间报告过固件敏感问题的机型覆盖额外防护栏。除非你明确要在这些系统上自动重应用，否则保持关闭。</value>
+  </data>
+  <data name="SettingsView_StartupRestoreCategories" xml:space="preserve">
+    <value>启动恢复类别</value>
+  </data>
+  <data name="SettingsView_ReapplySavedFanPresetOrCurveAtStartup" xml:space="preserve">
+    <value>启动时重新应用已保存的风扇预设或曲线。</value>
+  </data>
+  <data name="SettingsView_RestoreSavedFanMax" xml:space="preserve">
+    <value>恢复已保存的 Fan Max</value>
+  </data>
+  <data name="SettingsView_AllowASavedMaxPresetToStartFansAtFullSpeed" xml:space="preserve">
+    <value>允许已保存的 Max 预设在启动时全速运转风扇。默认关闭；改用 BIOS 自动。</value>
+  </data>
+  <data name="SettingsView_FactoryFanCurveInPerformanceModeExperiment" xml:space="preserve">
+    <value>性能模式下的出厂风扇曲线（实验性）</value>
+  </data>
+  <data name="SettingsView_OnThisBoardTheFirmwareSOwnAutoParksTheFans" xml:space="preserve">
+    <value>此主板的固件自动模式在重负载下把风扇压得过低。此选项改用 HP 自家的性能模式曲线，仅在性能模式激活且风扇处于自动时运行。尚未在硬件上确认；关闭后风扇回到 BIOS 自动。默认关闭。</value>
+  </data>
+  <data name="SettingsView_FactoryFanCurveInPerformanceMode" xml:space="preserve">
+    <value>性能模式下的出厂风扇曲线</value>
+  </data>
+  <data name="SettingsView_ReapplyPerformanceModeAndGpuPowerBoost" xml:space="preserve">
+    <value>重新应用性能模式和 GPU 功率加速。</value>
+  </data>
+  <data name="SettingsView_RestoreSavedKeyboardLightingColorsWhenRgbS" xml:space="preserve">
+    <value>启用 RGB 启动恢复时恢复已保存的键盘灯效颜色。</value>
+  </data>
+  <data name="SettingsView_ReapplyConfirmedUndervoltTccCpuPowerAndGpu" xml:space="preserve">
+    <value>重新应用已确认的降压、TCC、CPU 功耗和 GPU 超频恢复路径。OMEN 16/Victus 机型上除非开启“允许启动恢复”，否则会跳过。</value>
+  </data>
+  <data name="SettingsView_StartupRestore" xml:space="preserve">
+    <value>启动恢复：</value>
+  </data>
+  <data name="SettingsView_CurrentStatus" xml:space="preserve">
+    <value>当前状态：</value>
+  </data>
+  <data name="SettingsView_Updates" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="SettingsView_CheckForUpdatesAutomatically" xml:space="preserve">
+    <value>自动检查更新</value>
+  </data>
+  <data name="SettingsView_PeriodicallyCheckGithubForNewReleases" xml:space="preserve">
+    <value>定期到 GitHub 检查新版本</value>
+  </data>
+  <data name="SettingsView_CheckInterval" xml:space="preserve">
+    <value>检查间隔</value>
+  </data>
+  <data name="SettingsView_HowOftenToCheckForUpdates" xml:space="preserve">
+    <value>检查更新的频率</value>
+  </data>
+  <data name="SettingsView_UpdateCheckInterval" xml:space="preserve">
+    <value>更新检查间隔</value>
+  </data>
+  <data name="SettingsView_EveryHour" xml:space="preserve">
+    <value>每小时</value>
+  </data>
+  <data name="SettingsView_Every6Hours" xml:space="preserve">
+    <value>每 6 小时</value>
+  </data>
+  <data name="SettingsView_IncludePreReleases" xml:space="preserve">
+    <value>包含预发布版</value>
+  </data>
+  <data name="SettingsView_GetNotifiedAboutBetaAndPreviewVersions" xml:space="preserve">
+    <value>获取 Beta 与预览版本通知</value>
+  </data>
+  <data name="SettingsView_Hotkeys" xml:space="preserve">
+    <value>快捷键</value>
+  </data>
+  <data name="SettingsView_EnableGlobalHotkeys" xml:space="preserve">
+    <value>启用全局快捷键</value>
+  </data>
+  <data name="SettingsView_UseKeyboardShortcutsEvenWhenAppIsInBackgro" xml:space="preserve">
+    <value>即使应用在后台也响应键盘快捷键</value>
+  </data>
+  <data name="SettingsView_OnlyEnableHotkeysWhenWindowIsFocused" xml:space="preserve">
+    <value>仅在窗口获得焦点时启用快捷键</value>
+  </data>
+  <data name="SettingsView_PreventsConflictsByDeactivatingHotkeysWhen" xml:space="preserve">
+    <value>应用未激活时停用快捷键以避免冲突</value>
+  </data>
+  <data name="SettingsView_ExperimentalFirmwareFnPProfileCycle" xml:space="preserve">
+    <value>实验性固件 Fn+P 档案循环</value>
+  </data>
+  <data name="SettingsView_UseBiosWmiEventMappingToCyclePerformancePr" xml:space="preserve">
+    <value>使用 BIOS WMI 事件映射循环切换性能档案。默认关闭，因为事件码因机型而异。</value>
+  </data>
+  <data name="SettingsView_DefaultHotkeys" xml:space="preserve">
+    <value>默认快捷键</value>
+  </data>
+  <data name="SettingsView_CtrlShiftF" xml:space="preserve">
+    <value>Ctrl + Shift + F</value>
+  </data>
+  <data name="SettingsView_CycleFanModes" xml:space="preserve">
+    <value>循环切换风扇模式</value>
+  </data>
+  <data name="SettingsView_CtrlShiftP" xml:space="preserve">
+    <value>Ctrl + Shift + P</value>
+  </data>
+  <data name="SettingsView_CyclePerformanceModes" xml:space="preserve">
+    <value>循环切换性能模式</value>
+  </data>
+  <data name="SettingsView_CtrlShiftE" xml:space="preserve">
+    <value>Ctrl + Shift + E</value>
+  </data>
+  <data name="SettingsView_CycleGeneralProfiles" xml:space="preserve">
+    <value>循环切换常规档案</value>
+  </data>
+  <data name="SettingsView_CtrlShiftB" xml:space="preserve">
+    <value>Ctrl + Shift + B</value>
+  </data>
+  <data name="SettingsView_BoostModePerformance" xml:space="preserve">
+    <value>加速模式（性能）</value>
+  </data>
+  <data name="SettingsView_CtrlShiftQ" xml:space="preserve">
+    <value>Ctrl + Shift + Q</value>
+  </data>
+  <data name="SettingsView_QuietMode" xml:space="preserve">
+    <value>安静模式</value>
+  </data>
+  <data name="SettingsView_CtrlShiftO" xml:space="preserve">
+    <value>Ctrl + Shift + O</value>
+  </data>
+  <data name="SettingsView_ShowHideOmencoreWindow" xml:space="preserve">
+    <value>显示/隐藏 OmenCore 窗口</value>
+  </data>
+  <data name="SettingsView_WinF12" xml:space="preserve">
+    <value>Win + F12</value>
+  </data>
+  <data name="SettingsView_ShowOmencoreWindow" xml:space="preserve">
+    <value>显示 OmenCore 窗口</value>
+  </data>
+  <data name="SettingsView_Notifications" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="SettingsView_EnableNotifications" xml:space="preserve">
+    <value>启用通知</value>
+  </data>
+  <data name="SettingsView_ShowWindowsToastNotificationsForEvents" xml:space="preserve">
+    <value>为事件显示 Windows 通知</value>
+  </data>
+  <data name="SettingsView_GameProfileNotifications" xml:space="preserve">
+    <value>游戏档案通知</value>
+  </data>
+  <data name="SettingsView_NotifyWhenGameProfilesAreActivatedDeactiva" xml:space="preserve">
+    <value>游戏档案启用/停用时通知</value>
+  </data>
+  <data name="SettingsView_ModeChangeNotifications" xml:space="preserve">
+    <value>模式切换通知</value>
+  </data>
+  <data name="SettingsView_NotifyWhenFanOrPerformanceModesChangeViaHo" xml:space="preserve">
+    <value>通过快捷键切换风扇/性能模式时通知</value>
+  </data>
+  <data name="SettingsView_TemperatureWarnings" xml:space="preserve">
+    <value>温度警告</value>
+  </data>
+  <data name="SettingsView_AlertWhenCpuGpuTemperatureExceedsThreshold" xml:space="preserve">
+    <value>CPU/GPU 温度超过阈值时提醒</value>
+  </data>
+  <data name="SettingsView_HardwareDriver" xml:space="preserve">
+    <value>硬件驱动</value>
+  </data>
+  <data name="SettingsView_GetPawnioRecommended" xml:space="preserve">
+    <value>获取 PawnIO（推荐）</value>
+  </data>
+  <data name="SettingsView_GetPawnioRecommended_2" xml:space="preserve">
+    <value>📥 获取 PawnIO（推荐）</value>
+  </data>
+  <data name="SettingsView_DownloadAndInstallPawnioASecureBootCompati" xml:space="preserve">
+    <value>下载并安装 PawnIO——兼容 Secure Boot 的 EC/MSR 访问驱动</value>
+  </data>
+  <data name="SettingsView_RefreshStatus" xml:space="preserve">
+    <value>刷新状态</value>
+  </data>
+  <data name="SettingsView_RefreshStatus_2" xml:space="preserve">
+    <value>🔄 刷新状态</value>
+  </data>
+  <data name="SettingsView_ReCheckDriverAndEcBackendStatus" xml:space="preserve">
+    <value>重新检查驱动与 EC 后端状态</value>
+  </data>
+  <data name="SettingsView_ResetEcToDefaults" xml:space="preserve">
+    <value>重置 EC 为默认</value>
+  </data>
+  <data name="SettingsView_RestoresBiosFanControlUseIfBiosShowsStuckI" xml:space="preserve">
+    <value>恢复 BIOS 风扇控制。BIOS 显示风扇数值卡死/异常时使用。</value>
+  </data>
+  <data name="SettingsView_ResetEc" xml:space="preserve">
+    <value>重置 EC</value>
+  </data>
+  <data name="SettingsView_ResetEc_2" xml:space="preserve">
+    <value>🔧 重置 EC</value>
+  </data>
+  <data name="SettingsView_BiosInformation" xml:space="preserve">
+    <value>BIOS 信息</value>
+  </data>
+  <data name="SettingsView_HpModel" xml:space="preserve">
+    <value>HP 机型：</value>
+  </data>
+  <data name="SettingsView_CurrentBios" xml:space="preserve">
+    <value>当前 BIOS：</value>
+  </data>
+  <data name="SettingsView_LatestBios" xml:space="preserve">
+    <value>最新 BIOS：</value>
+  </data>
+  <data name="SettingsView_CheckForUpdates" xml:space="preserve">
+    <value>🔍 检查更新</value>
+  </data>
+  <data name="SettingsView_CheckHpForAvailableBiosFirmwareUpdates" xml:space="preserve">
+    <value>检查 HP 是否有可用的 BIOS 固件更新</value>
+  </data>
+  <data name="SettingsView_DownloadUpdate" xml:space="preserve">
+    <value>下载更新</value>
+  </data>
+  <data name="SettingsView_DownloadUpdate_2" xml:space="preserve">
+    <value>⬇️ 下载更新</value>
+  </data>
+  <data name="SettingsView_DownloadAndLaunchTheBiosUpdateInstaller" xml:space="preserve">
+    <value>下载并启动 BIOS 更新安装器</value>
+  </data>
+  <data name="SettingsView_HpDriverSupportResources" xml:space="preserve">
+    <value>HP 驱动与支持资源</value>
+  </data>
+  <data name="SettingsView_HpSupportAssistant" xml:space="preserve">
+    <value>HP Support Assistant</value>
+  </data>
+  <data name="SettingsView_HpSupport" xml:space="preserve">
+    <value>HP 支持</value>
+  </data>
+  <data name="SettingsView_Assistant" xml:space="preserve">
+    <value>助手</value>
+  </data>
+  <data name="SettingsView_HpDriverDownloads" xml:space="preserve">
+    <value>HP 驱动下载</value>
+  </data>
+  <data name="SettingsView_Downloads" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="SettingsView_OmenGamingHubOfficial" xml:space="preserve">
+    <value>OMEN Gaming Hub（官方）</value>
+  </data>
+  <data name="SettingsView_OmenHub" xml:space="preserve">
+    <value>OMEN Hub</value>
+  </data>
+  <data name="SettingsView_Official" xml:space="preserve">
+    <value>（官方）</value>
+  </data>
+  <data name="SettingsView_FanBoost" xml:space="preserve">
+    <value>风扇加速</value>
+  </data>
+  <data name="SettingsView_StartFanBoost" xml:space="preserve">
+    <value>启动风扇加速</value>
+  </data>
+  <data name="SettingsView_StartFanBoost_2" xml:space="preserve">
+    <value>💨 启动风扇加速</value>
+  </data>
+  <data name="SettingsView_RunFansAtMaximumSpeedFor60SecondsToClearDu" xml:space="preserve">
+    <value>风扇以最大转速运转约 60 秒，清除积尘</value>
+  </data>
+  <data name="SettingsView_StopTheFanCleaningCycleAndReturnFansToNorm" xml:space="preserve">
+    <value>停止风扇清洁循环，让风扇恢复正常控制</value>
+  </data>
+  <data name="SettingsView_HpBloatwareRemoval" xml:space="preserve">
+    <value>HP 预装软件移除</value>
+  </data>
+  <data name="SettingsView_RemoveUnnecessaryHpPreInstalledApps" xml:space="preserve">
+    <value>移除不必要的 HP 预装应用</value>
+  </data>
+  <data name="SettingsView_OpenBloatwareManager" xml:space="preserve">
+    <value>打开预装软件管理器 →</value>
+  </data>
+  <data name="SettingsView_OpenBloatwareManager_2" xml:space="preserve">
+    <value>🗑️ 打开预装软件管理器 →</value>
+  </data>
+  <data name="SettingsView_SwitchToTheBloatwareManagerTab" xml:space="preserve">
+    <value>切换到预装软件管理器标签页</value>
+  </data>
+  <data name="SettingsView_FeatureModules" xml:space="preserve">
+    <value>功能模块</value>
+  </data>
+  <data name="SettingsView_EnableDisableFeaturesToReduceResourceUsage" xml:space="preserve">
+    <value>启用/禁用功能以减少资源占用</value>
+  </data>
+  <data name="SettingsView_CorsairIcueIntegration" xml:space="preserve">
+    <value>Corsair iCUE 集成</value>
+  </data>
+  <data name="SettingsView_SupportForCorsairKeyboardsMiceHeadsets" xml:space="preserve">
+    <value>支持 Corsair 键盘、鼠标、耳机</value>
+  </data>
+  <data name="SettingsView_LogitechGHubIntegration" xml:space="preserve">
+    <value>罗技 G HUB 集成</value>
+  </data>
+  <data name="SettingsView_SupportForLogitechGPeripherals" xml:space="preserve">
+    <value>支持罗技 G 系列外设</value>
+  </data>
+  <data name="SettingsView_GameProfileAutoSwitching" xml:space="preserve">
+    <value>游戏档案自动切换</value>
+  </data>
+  <data name="SettingsView_AutomaticallyApplyProfilesWhenGamesLaunch" xml:space="preserve">
+    <value>游戏启动时自动应用档案</value>
+  </data>
+  <data name="SettingsView_KeyboardBacklightControl" xml:space="preserve">
+    <value>键盘背光控制</value>
+  </data>
+  <data name="SettingsView_OmenKeyboard4ZoneRgbLighting" xml:space="preserve">
+    <value>OMEN 键盘四分区 RGB 灯效</value>
+  </data>
+  <data name="SettingsView_AmbientLighting" xml:space="preserve">
+    <value>🌈 环境光</value>
+  </data>
+  <data name="SettingsView_SyncKeyboardPeripheralsWithScreenColorsAmb" xml:space="preserve">
+    <value>键盘/外设与屏幕颜色同步（Ambilight 风格）</value>
+  </data>
+  <data name="SettingsView_Saturation" xml:space="preserve">
+    <value>饱和度：</value>
+  </data>
+  <data name="SettingsView_AmbientLightingSaturation" xml:space="preserve">
+    <value>环境光饱和度</value>
+  </data>
+  <data name="SettingsView_UpdateRate" xml:space="preserve">
+    <value>更新频率：</value>
+  </data>
+  <data name="SettingsView_AmbientLightingFps" xml:space="preserve">
+    <value>环境光 FPS</value>
+  </data>
+  <data name="SettingsView_SamplesColorsFromScreenEdgesAndAppliesToRg" xml:space="preserve">
+    <value>💡 从屏幕边缘采样颜色并应用到 RGB 设备</value>
+  </data>
+  <data name="SettingsView_ExperimentalDirectEcKeyboardControl" xml:space="preserve">
+    <value>实验性：直接 EC 键盘控制</value>
+  </data>
+  <data name="SettingsView_EnableOnlyIfWmiKeyboardControlDoesnTWorkOn" xml:space="preserve">
+    <value>仅当 WMI 键盘控制在你的机型上无效时才启用。</value>
+  </data>
+  <data name="SettingsView_ForceEcKeyboardWrites" xml:space="preserve">
+    <value>强制 EC 键盘写入</value>
+  </data>
+  <data name="SettingsView_WarningEcWritesCausedCrashesOnOmen17Ck2xxx" xml:space="preserve">
+    <value>⚠️ 警告：EC 写入曾在 OMEN 17-ck2xxx 上导致崩溃。</value>
+  </data>
+  <data name="SettingsView_ThisMayHardCrashYourSystemRequiringForcedR" xml:space="preserve">
+    <value>可能导致系统硬崩溃，需要强制重启。</value>
+  </data>
+  <data name="SettingsView_ExclusiveEcDiagnostics" xml:space="preserve">
+    <value>独占式 EC 诊断</value>
+  </data>
+  <data name="SettingsView_DiagnosticModeAcquiresExclusiveEcAccessToD" xml:space="preserve">
+    <value>⚠️ 诊断模式：获取独占 EC 访问以检测冲突。</value>
+  </data>
+  <data name="SettingsView_MayInterfereWithOmenGamingHubOrOtherFanCon" xml:space="preserve">
+    <value>可能与 OMEN Gaming Hub 或其他风扇控制应用冲突。</value>
+  </data>
+  <data name="SettingsView_KeyboardBackend" xml:space="preserve">
+    <value>键盘后端</value>
+  </data>
+  <data name="SettingsView_AutoWmiBiosWmiEcSetSpecificIfAutoDetection" xml:space="preserve">
+    <value>Auto = WMI BIOS → WMI → EC。自动检测失败时请指定具体后端。</value>
+  </data>
+  <data name="SettingsView_InvertRgbZoneOrder" xml:space="preserve">
+    <value>反转 RGB 分区顺序</value>
+  </data>
+  <data name="SettingsView_EnableForOmenMax16LightBarZonesRunRightToL" xml:space="preserve">
+    <value>为 OMEN Max 16 灯条启用（分区从右到左排列）</value>
+  </data>
+  <data name="SettingsView_SafeAlternativeUseHpOmenGamingHubForKeyboa" xml:space="preserve">
+    <value>💡 安全替代方案：使用 HP Omen Gaming Hub 控制键盘灯效</value>
+  </data>
+  <data name="SettingsView_ContinuousFanSpeedAdjustmentDisableForBios" xml:space="preserve">
+    <value>连续风扇转速调节（纯 BIOS 控制时请禁用）</value>
+  </data>
+  <data name="SettingsView_PowerSourceAutomation" xml:space="preserve">
+    <value>电源来源自动化</value>
+  </data>
+  <data name="SettingsView_AutoSwitchProfilesWhenPluggingUnpluggingAc" xml:space="preserve">
+    <value>插拔交流电源时自动切换档案</value>
+  </data>
+  <data name="SettingsView_GpuModeSwitching" xml:space="preserve">
+    <value>GPU 模式切换</value>
+  </data>
+  <data name="SettingsView_ControlHybridDiscreteOptimusModes" xml:space="preserve">
+    <value>控制混合/独显/Optimus 模式</value>
+  </data>
+  <data name="SettingsView_CpuUndervoltControls" xml:space="preserve">
+    <value>CPU 降压控制</value>
+  </data>
+  <data name="SettingsView_VoltageOffsetAdjustmentRequiresCompatibleC" xml:space="preserve">
+    <value>电压偏移调节（需要兼容的 CPU）</value>
+  </data>
+  <data name="SettingsView_OmenKeyInterception" xml:space="preserve">
+    <value>OMEN 键拦截</value>
+  </data>
+  <data name="SettingsView_CaptureOmenKeyToShowOmencoreInsteadOfHpGam" xml:space="preserve">
+    <value>拦截 OMEN 键，打开 OmenCore 而不是 HP Gaming Hub</value>
+  </data>
+  <data name="SettingsView_OmenKeyInterceptionEnabled" xml:space="preserve">
+    <value>OMEN 键拦截已启用</value>
+  </data>
+  <data name="SettingsView_AnOmenGamingHubServiceOrProcessIsRunningTh" xml:space="preserve">
+    <value>检测到 OMEN Gaming Hub 的服务或进程正在运行。它可能与 OmenCore 的风扇控制、降压或 OMEN 键处理冲突。如果 Gaming Hub 仍安装着，请用预装软件管理器移除它。</value>
+  </data>
+  <data name="SettingsView_OmenKeyAction" xml:space="preserve">
+    <value>OMEN 键动作</value>
+  </data>
+  <data name="SettingsView_ProgramOrScriptToRun" xml:space="preserve">
+    <value>要运行的程序或脚本</value>
+  </data>
+  <data name="SettingsView_OmenKeyProgramOrScript" xml:space="preserve">
+    <value>OMEN 键程序或脚本</value>
+  </data>
+  <data name="SettingsView_ArgumentsOptional" xml:space="preserve">
+    <value>参数（可选）</value>
+  </data>
+  <data name="SettingsView_OmenKeyArguments" xml:space="preserve">
+    <value>OMEN 键参数</value>
+  </data>
+  <data name="SettingsView_Appearance" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="SettingsView_InGameOsd" xml:space="preserve">
+    <value>游戏内 OSD</value>
+  </data>
+  <data name="SettingsView_OnScreenOverlayShowingSystemStatsDuringGam" xml:space="preserve">
+    <value>游戏时在屏幕上叠加显示系统状态</value>
+  </data>
+  <data name="SettingsView_EnableOsdOverlay" xml:space="preserve">
+    <value>启用 OSD 叠加层</value>
+  </data>
+  <data name="SettingsView_Position" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="SettingsView_TargetMonitor" xml:space="preserve">
+    <value>目标显示器</value>
+  </data>
+  <data name="SettingsView_OverlayDensity" xml:space="preserve">
+    <value>叠加层密度</value>
+  </data>
+  <data name="SettingsView_ToggleHotkey" xml:space="preserve">
+    <value>切换快捷键</value>
+  </data>
+  <data name="SettingsView_HotkeyOsdVisuals" xml:space="preserve">
+    <value>快捷键 OSD 视觉</value>
+  </data>
+  <data name="SettingsView_PopupDuration" xml:space="preserve">
+    <value>弹窗时长</value>
+  </data>
+  <data name="SettingsView_OsdHotkeyToastDurationMs" xml:space="preserve">
+    <value>OSD 快捷键提示时长（毫秒）</value>
+  </data>
+  <data name="SettingsView_PopupSize" xml:space="preserve">
+    <value>弹窗大小</value>
+  </data>
+  <data name="SettingsView_OsdHotkeyToastScalePercent" xml:space="preserve">
+    <value>OSD 快捷键提示缩放（%）</value>
+  </data>
+  <data name="SettingsView_AccentTheme" xml:space="preserve">
+    <value>强调色主题</value>
+  </data>
+  <data name="SettingsView_CompactPopup" xml:space="preserve">
+    <value>紧凑弹窗</value>
+  </data>
+  <data name="SettingsView_SmallerCardLessSecondaryText" xml:space="preserve">
+    <value>（更小的卡片，更少次要文字）</value>
+  </data>
+  <data name="SettingsView_MetricsToDisplay" xml:space="preserve">
+    <value>要显示的指标</value>
+  </data>
+  <data name="SettingsView_MetricGroups" xml:space="preserve">
+    <value>指标分组</value>
+  </data>
+  <data name="SettingsView_Thermals" xml:space="preserve">
+    <value>散热</value>
+  </data>
+  <data name="SettingsView_Network" xml:space="preserve">
+    <value>网络</value>
+  </data>
+  <data name="SettingsView_TemperatureLoad" xml:space="preserve">
+    <value>温度与负载</value>
+  </data>
+  <data name="SettingsView_CpuTemp" xml:space="preserve">
+    <value>CPU 温度</value>
+  </data>
+  <data name="SettingsView_GpuTemp" xml:space="preserve">
+    <value>GPU 温度</value>
+  </data>
+  <data name="SettingsView_CpuLoad" xml:space="preserve">
+    <value>CPU 负载 %</value>
+  </data>
+  <data name="SettingsView_GpuLoad" xml:space="preserve">
+    <value>GPU 负载 %</value>
+  </data>
+  <data name="SettingsView_PowerMemory" xml:space="preserve">
+    <value>功耗与内存</value>
+  </data>
+  <data name="SettingsView_CpuPowerW" xml:space="preserve">
+    <value>CPU 功耗 (W)</value>
+  </data>
+  <data name="SettingsView_GpuPowerW" xml:space="preserve">
+    <value>GPU 功耗 (W)</value>
+  </data>
+  <data name="SettingsView_VramUsage" xml:space="preserve">
+    <value>显存占用</value>
+  </data>
+  <data name="SettingsView_FpsRtss" xml:space="preserve">
+    <value>FPS（RTSS）</value>
+  </data>
+  <data name="SettingsView_FrametimeMs" xml:space="preserve">
+    <value>帧时间（ms）</value>
+  </data>
+  <data name="SettingsView_NetworkPing" xml:space="preserve">
+    <value>网络延迟</value>
+  </data>
+  <data name="SettingsView_NetUpload" xml:space="preserve">
+    <value>网络上传</value>
+  </data>
+  <data name="SettingsView_NetDownload" xml:space="preserve">
+    <value>网络下载</value>
+  </data>
+  <data name="SettingsView_FanSpeedRpm" xml:space="preserve">
+    <value>风扇转速 (RPM)</value>
+  </data>
+  <data name="SettingsView_PerfMode" xml:space="preserve">
+    <value>性能模式</value>
+  </data>
+  <data name="SettingsView_ClockTime" xml:space="preserve">
+    <value>时钟时间</value>
+  </data>
+  <data name="SettingsView_Battery" xml:space="preserve">
+    <value>电池 %</value>
+  </data>
+  <data name="SettingsView_GpuClock" xml:space="preserve">
+    <value>GPU 频率</value>
+  </data>
+  <data name="SettingsView_HorizontalLayout" xml:space="preserve">
+    <value>水平布局</value>
+  </data>
+  <data name="SettingsView_CompactBarAtScreenEdge" xml:space="preserve">
+    <value>（屏幕边缘的紧凑条）</value>
+  </data>
+  <data name="SettingsView_BatteryCare" xml:space="preserve">
+    <value>电池养护</value>
+  </data>
+  <data name="SettingsView_ExtendBatteryLifespanWithSmartChargeLimiti" xml:space="preserve">
+    <value>通过智能充电上限延长电池寿命</value>
+  </data>
+  <data name="SettingsView_EnableChargeLimit" xml:space="preserve">
+    <value>启用充电上限</value>
+  </data>
+  <data name="SettingsView_StopChargingAtACustomThresholdToPreserveBa" xml:space="preserve">
+    <value>在自定义阈值停止充电，保护电池健康</value>
+  </data>
+  <data name="SettingsView_ChargeThreshold" xml:space="preserve">
+    <value>充电阈值</value>
+  </data>
+  <data name="SettingsView_SetMaximumBatteryChargeLevel" xml:space="preserve">
+    <value>设置最大电池充电电量</value>
+  </data>
+  <data name="SettingsView_BatteryChargeThresholdPercent" xml:space="preserve">
+    <value>电池充电阈值（%）</value>
+  </data>
+  <data name="SettingsView_FanHysteresis" xml:space="preserve">
+    <value>风扇滞回</value>
+  </data>
+  <data name="SettingsView_PreventFanSpeedOscillationWithDeadZoneAndD" xml:space="preserve">
+    <value>用死区和延迟防止风扇转速振荡</value>
+  </data>
+  <data name="SettingsView_EnableHysteresis" xml:space="preserve">
+    <value>启用滞回</value>
+  </data>
+  <data name="SettingsView_SmoothOutFanSpeedChangesToReduceNoiseFluct" xml:space="preserve">
+    <value>平滑风扇转速变化，减少噪音波动</value>
+  </data>
+  <data name="SettingsView_TemperatureDeadZone" xml:space="preserve">
+    <value>温度死区</value>
+  </data>
+  <data name="SettingsView_FansWonTChangeUnlessTempMovesBeyondThis" xml:space="preserve">
+    <value>温度变化超过此值前风扇保持不变</value>
+  </data>
+  <data name="SettingsView_FanHysteresisDeadZone" xml:space="preserve">
+    <value>风扇滞回死区</value>
+  </data>
+  <data name="SettingsView_RampUpDelay" xml:space="preserve">
+    <value>升速延迟</value>
+  </data>
+  <data name="SettingsView_WaitBeforeIncreasingFanSpeed" xml:space="preserve">
+    <value>提高风扇转速前的等待时间</value>
+  </data>
+  <data name="SettingsView_FanHysteresisRampUpDelay" xml:space="preserve">
+    <value>风扇滞回升速延迟</value>
+  </data>
+  <data name="SettingsView_RampDownDelay" xml:space="preserve">
+    <value>降速延迟</value>
+  </data>
+  <data name="SettingsView_WaitBeforeDecreasingFanSpeed" xml:space="preserve">
+    <value>降低风扇转速前的等待时间</value>
+  </data>
+  <data name="SettingsView_FanHysteresisRampDownDelay" xml:space="preserve">
+    <value>风扇滞回降速延迟</value>
+  </data>
+  <data name="SettingsView_ThermalProtection" xml:space="preserve">
+    <value>散热保护</value>
+  </data>
+  <data name="SettingsView_AutoBoostFansWhenTempsExceedThresholdInclu" xml:space="preserve">
+    <value>温度超过阈值时自动加速风扇，包括自定义曲线上的紧急 100% 覆盖。如果你的笔记本本身容易发热、且你手动管理风扇，可禁用——散热管理责任完全由你承担。</value>
+  </data>
+  <data name="SettingsView_ThermalProtectionThreshold" xml:space="preserve">
+    <value>散热保护阈值</value>
+  </data>
+  <data name="SettingsView_FansRampUpWhenTempsExceedThis7095C" xml:space="preserve">
+    <value>温度超过此值时风扇加速（70-95°C）</value>
+  </data>
+  <data name="SettingsView_ThermalProtectionRampThresholdInCelsius" xml:space="preserve">
+    <value>散热保护加速阈值（摄氏度）</value>
+  </data>
+  <data name="SettingsView_EmergencyMaxFanThreshold" xml:space="preserve">
+    <value>紧急全速风扇阈值</value>
+  </data>
+  <data name="SettingsView_FansForcedTo100ImmediatelyAboveThis9099CAl" xml:space="preserve">
+    <value>温度超过此值时风扇立即强制 100%（90-99°C，且始终至少比上方加速阈值高 2°C）</value>
+  </data>
+  <data name="SettingsView_EmergencyMaxFanThresholdInCelsius" xml:space="preserve">
+    <value>紧急全速风扇阈值（摄氏度）</value>
+  </data>
+  <data name="SettingsView_MaxFanLevelOverride" xml:space="preserve">
+    <value>最大风扇档位覆盖</value>
+  </data>
+  <data name="SettingsView_OverrideAutoDetectedMaxFanLevelSetTo0ForAu" xml:space="preserve">
+    <value>覆盖自动检测的最大风扇档位。设为 0 保持自动检测。如果风扇达不到全速，试试 63 或 100。需要重启。</value>
+  </data>
+  <data name="SettingsView_HpOmenGamingHubCleanup" xml:space="preserve">
+    <value>HP OMEN Gaming Hub 清理</value>
+  </data>
+  <data name="SettingsView_RemoveHpOmenGamingHubAndRelatedServicesThi" xml:space="preserve">
+    <value>移除 HP OMEN Gaming Hub 及相关服务。可选——不装 OGH 时 OmenCore 也能正常工作。</value>
+  </data>
+  <data name="SettingsView_ASystemRestorePointWillBeCreatedAutomatica" xml:space="preserve">
+    <value>ℹ️ 清理开始前将自动创建系统还原点。</value>
+  </data>
+  <data name="SettingsView_KillRunningHpOmenProcesses" xml:space="preserve">
+    <value>结束正在运行的 HP OMEN 进程</value>
+  </data>
+  <data name="SettingsView_UninstallHpOmenGamingHubApplication" xml:space="preserve">
+    <value>卸载 HP OMEN Gaming Hub 应用</value>
+  </data>
+  <data name="SettingsView_RemoveHpOmenServicesOmenserviceLightingser" xml:space="preserve">
+    <value>移除 HP OMEN 服务（OmenService、LightingService）</value>
+  </data>
+  <data name="SettingsView_CleanHpOmenRegistryEntries" xml:space="preserve">
+    <value>清理 HP OMEN 注册表项</value>
+  </data>
+  <data name="SettingsView_RemoveHpOmenLegacyInstallersWingetAppx" xml:space="preserve">
+    <value>移除 HP OMEN 旧版安装包（winget/AppX）</value>
+  </data>
+  <data name="SettingsView_RemoveResidualHpOmenFilesAndFolders" xml:space="preserve">
+    <value>移除残留的 HP OMEN 文件和文件夹</value>
+  </data>
+  <data name="SettingsView_AutomaticSystemRestorePoint" xml:space="preserve">
+    <value>✓ 自动创建系统还原点</value>
+  </data>
+  <data name="SettingsView_ASystemRestorePointWillBeCreatedAutomatica_2" xml:space="preserve">
+    <value>清理开始前将自动创建系统还原点。如果还原点创建失败（例如系统还原被禁用），会提示你继续或取消。</value>
+  </data>
+  <data name="SettingsView_TipYouCanAlsoManuallyCreateARestorePointUs" xml:space="preserve">
+    <value>提示：如需额外保险，也可以用下方按钮手动创建还原点。</value>
+  </data>
+  <data name="SettingsView_CreateManualRestorePoint" xml:space="preserve">
+    <value>创建手动还原点</value>
+  </data>
+  <data name="SettingsView_CreateAWindowsSystemRestoreSnapshotBeforeR" xml:space="preserve">
+    <value>运行清理前创建 Windows 系统还原快照</value>
+  </data>
+  <data name="SettingsView_RunCleanup" xml:space="preserve">
+    <value>运行清理</value>
+  </data>
+  <data name="SettingsView_RunCleanup_2" xml:space="preserve">
+    <value>🗑️ 运行清理</value>
+  </data>
+  <data name="SettingsView_ExecuteTheSelectedWindowsSystemCleanupTask" xml:space="preserve">
+    <value>执行所选的 Windows 系统清理任务</value>
+  </data>
+  <data name="SettingsView_RestartRecommendedToCompleteCleanup" xml:space="preserve">
+    <value>💡 建议重启以完成清理</value>
+  </data>
+  <data name="SettingsView_SomeComponentsMayStillBeRunningUntilYouRes" xml:space="preserve">
+    <value>重启 Windows 前，部分组件可能仍在运行。</value>
+  </data>
+  <data name="SettingsView_ProfileManagement" xml:space="preserve">
+    <value>配置档案管理</value>
+  </data>
+  <data name="SettingsView_SaveAndLoadYourCompleteOmencoreConfigurati" xml:space="preserve">
+    <value>保存和加载完整的 OmenCore 配置</value>
+  </data>
+  <data name="SettingsView_ImportProfile" xml:space="preserve">
+    <value>导入档案</value>
+  </data>
+  <data name="SettingsView_ImportProfile_2" xml:space="preserve">
+    <value>📥 导入档案</value>
+  </data>
+  <data name="SettingsView_LoadFanCurvesPerformanceModesAndGpuOcSetti" xml:space="preserve">
+    <value>从 .omencore 文件加载风扇曲线、性能模式和 GPU 超频设置</value>
+  </data>
+  <data name="SettingsView_ExportProfile" xml:space="preserve">
+    <value>导出档案</value>
+  </data>
+  <data name="SettingsView_ExportProfile_2" xml:space="preserve">
+    <value>📤 导出档案</value>
+  </data>
+  <data name="SettingsView_SaveYourCurrentConfigurationToShareOrBacku" xml:space="preserve">
+    <value>保存当前配置用于分享或备份</value>
+  </data>
+  <data name="SettingsView_ExportDiagnostics" xml:space="preserve">
+    <value>🔬 导出诊断</value>
+  </data>
+  <data name="SettingsView_ExportLogsAndSystemInfoForTroubleshooting" xml:space="preserve">
+    <value>导出日志和系统信息用于排障</value>
+  </data>
+  <data name="SettingsView_DataStorage" xml:space="preserve">
+    <value>数据与存储</value>
+  </data>
+  <data name="SettingsView_OpenConfigFolder" xml:space="preserve">
+    <value>打开配置文件夹</value>
+  </data>
+  <data name="SettingsView_OpenConfigFolder_2" xml:space="preserve">
+    <value>📂 打开配置文件夹</value>
+  </data>
+  <data name="SettingsView_OpenLocalappdataOmencoreWhereSettingsAndPr" xml:space="preserve">
+    <value>打开 %LOCALAPPDATA%\OmenCore——设置和档案的存储位置</value>
+  </data>
+  <data name="SettingsView_OpenLogFolder" xml:space="preserve">
+    <value>打开日志文件夹</value>
+  </data>
+  <data name="SettingsView_OpenLogFolder_2" xml:space="preserve">
+    <value>📋 打开日志文件夹</value>
+  </data>
+  <data name="SettingsView_OpenTheFolderContainingOmencoreDiagnosticL" xml:space="preserve">
+    <value>打开包含 OmenCore 诊断日志文件的文件夹</value>
+  </data>
+  <data name="SettingsView_ResetToDefaults" xml:space="preserve">
+    <value>重置为默认</value>
+  </data>
+  <data name="SettingsView_ResetToDefaults_2" xml:space="preserve">
+    <value>🔄 重置为默认</value>
+  </data>
+  <data name="SettingsView_ResetAllSettingsToDefaultValues" xml:space="preserve">
+    <value>将全部设置重置为默认值</value>
+  </data>
+  <data name="SettingsView_Version" xml:space="preserve">
+    <value>版本：</value>
+  </data>
+  <data name="SettingsView_Github" xml:space="preserve">
+    <value>🌐 GitHub</value>
+  </data>
+  <data name="SettingsView_OpenTheOmencoreGithubRepositoryInYourBrows" xml:space="preserve">
+    <value>在浏览器中打开 OmenCore 的 GitHub 仓库</value>
+  </data>
+  <data name="SettingsView_ReleaseNotes" xml:space="preserve">
+    <value>📝 更新日志</value>
+  </data>
+  <data name="SettingsView_ViewTheFullChangelogForThisRelease" xml:space="preserve">
+    <value>查看此版本的完整更新日志</value>
+  </data>
+  <data name="SettingsView_ReportIssue" xml:space="preserve">
+    <value>报告问题</value>
+  </data>
+  <data name="SettingsView_ReportIssue_2" xml:space="preserve">
+    <value>🐛 报告问题</value>
+  </data>
+  <data name="SettingsView_OpenTheGithubIssueTrackerToReportABugOrReq" xml:space="preserve">
+    <value>打开 GitHub issue 跟踪器报告 bug 或请求功能</value>
+  </data>
+  <data name="SettingsView_SupportDevelopment" xml:space="preserve">
+    <value>💖 支持开发</value>
+  </data>
+  <data name="SettingsView_OmencoreIsFreeAndOpenSourceIfYouFindItUsef" xml:space="preserve">
+    <value>OmenCore 是免费开源软件。如果它对你有用，欢迎支持它的开发！</value>
+  </data>
+  <data name="SettingsView_DonateViaPaypal" xml:space="preserve">
+    <value>通过 PayPal 捐赠</value>
+  </data>
+  <data name="SettingsView_Scheduler" xml:space="preserve">
+    <value>计划任务</value>
+  </data>
+  <data name="SettingsView_ProfileScheduler" xml:space="preserve">
+    <value>档案计划任务</value>
+  </data>
+  <data name="SettingsView_AutomaticallyApplyFanPresetsAndPerformance" xml:space="preserve">
+    <value>每天在计划时间自动应用风扇预设和性能模式。</value>
+  </data>
+  <data name="SettingsView_EnableThisScheduleRule" xml:space="preserve">
+    <value>启用此计划规则</value>
+  </data>
+  <data name="SettingsView_RuleName" xml:space="preserve">
+    <value>规则名称</value>
+  </data>
+  <data name="SettingsView_Time" xml:space="preserve">
+    <value>时间：</value>
+  </data>
+  <data name="SettingsView_Fan" xml:space="preserve">
+    <value>风扇：</value>
+  </data>
+  <data name="SettingsView_Mode" xml:space="preserve">
+    <value>模式：</value>
+  </data>
+  <data name="SettingsView_RemoveScheduleRule" xml:space="preserve">
+    <value>移除计划规则</value>
+  </data>
+  <data name="SettingsView_AddRule" xml:space="preserve">
+    <value>添加规则</value>
+  </data>
+  <data name="SettingsView_AddRule_2" xml:space="preserve">
+    <value>+ 添加规则</value>
+  </data>
+  <data name="SettingsView_AutomationRules" xml:space="preserve">
+    <value>自动化规则</value>
+  </data>
+  <data name="SettingsView_PromotedTriggersForShippedAutomationTimeWi" xml:space="preserve">
+    <value>内置自动化的触发器：时间窗口、电量阈值、交流电源状态、CPU/GPU 温度和系统空闲时间。</value>
+  </data>
+  <data name="SettingsView_AddAutomationRule" xml:space="preserve">
+    <value>添加自动化规则</value>
+  </data>
+  <data name="SettingsView_AddAutomationRule_2" xml:space="preserve">
+    <value>+ 添加自动化规则</value>
+  </data>
+  <data name="SettingsView_EnableThisAutomationRule" xml:space="preserve">
+    <value>启用此自动化规则</value>
+  </data>
+  <data name="SettingsView_AutomationRuleName" xml:space="preserve">
+    <value>自动化规则名称</value>
+  </data>
+  <data name="SettingsView_TriggerType" xml:space="preserve">
+    <value>触发类型</value>
+  </data>
+  <data name="SettingsView_PriorityLowerNumbersRunFirst" xml:space="preserve">
+    <value>优先级（数字越小越先执行）</value>
+  </data>
+  <data name="SettingsView_LowerNumbersRunFirst" xml:space="preserve">
+    <value>数字越小越先执行</value>
+  </data>
+  <data name="SettingsView_RemoveAutomationRule" xml:space="preserve">
+    <value>移除自动化规则</value>
+  </data>
+  <data name="SettingsView_StartTime" xml:space="preserve">
+    <value>开始时间</value>
+  </data>
+  <data name="SettingsView_EndTime" xml:space="preserve">
+    <value>结束时间</value>
+  </data>
+  <data name="SettingsView_BatteryThreshold" xml:space="preserve">
+    <value>电量阈值</value>
+  </data>
+  <data name="SettingsView_BatteryCondition" xml:space="preserve">
+    <value>电量条件</value>
+  </data>
+  <data name="SettingsView_AcPowerState" xml:space="preserve">
+    <value>交流电源状态</value>
+  </data>
+  <data name="SettingsView_TemperatureThresholdC" xml:space="preserve">
+    <value>温度阈值（°C）</value>
+  </data>
+  <data name="SettingsView_TemperatureThreshold" xml:space="preserve">
+    <value>温度阈值</value>
+  </data>
+  <data name="SettingsView_TemperatureCondition" xml:space="preserve">
+    <value>温度条件</value>
+  </data>
+  <data name="SettingsView_TemperatureSensor" xml:space="preserve">
+    <value>温度传感器</value>
+  </data>
+  <data name="SettingsView_IdleMinutes" xml:space="preserve">
+    <value>空闲分钟数</value>
+  </data>
+  <data name="SettingsView_ProcessNameEGGameExe" xml:space="preserve">
+    <value>进程名（如 game.exe）</value>
+  </data>
+  <data name="SettingsView_ProcessName" xml:space="preserve">
+    <value>进程名</value>
+  </data>
+  <data name="SettingsView_WifiNetworkNameSsid" xml:space="preserve">
+    <value>WiFi 网络名称（SSID）</value>
+  </data>
+  <data name="SettingsView_WifiSsid" xml:space="preserve">
+    <value>WiFi SSID</value>
+  </data>
+  <data name="SettingsView_LidState" xml:space="preserve">
+    <value>屏幕盖状态</value>
+  </data>
+  <data name="SettingsView_FanPresetAction" xml:space="preserve">
+    <value>风扇预设动作</value>
+  </data>
+  <data name="SettingsView_PerformanceModeAction" xml:space="preserve">
+    <value>性能模式动作</value>
+  </data>
+  <data name="SplashWindow_V200Alpha1" xml:space="preserve">
+    <value>v2.0.0-alpha1</value>
+  </data>
+  <data name="SplashWindow_HardwareControlSuite" xml:space="preserve">
+    <value>硬件控制套件</value>
+  </data>
+  <data name="SplashWindow_Initializing" xml:space="preserve">
+    <value>正在初始化…</value>
+  </data>
+  <data name="SystemOptimizerView_WhatChanges" xml:space="preserve">
+    <value>变更内容</value>
+  </data>
+  <data name="SystemOptimizerView_RegistryKeys" xml:space="preserve">
+    <value>注册表项</value>
+  </data>
+  <data name="SystemOptimizerView_ServicesOrCommands" xml:space="preserve">
+    <value>服务或命令</value>
+  </data>
+  <data name="SystemOptimizerView_ManualUndo" xml:space="preserve">
+    <value>手动撤销</value>
+  </data>
+  <data name="SystemOptimizerView_Applying" xml:space="preserve">
+    <value>正在应用…</value>
+  </data>
+  <data name="SystemOptimizerView_SystemOptimizer" xml:space="preserve">
+    <value>系统优化器</value>
+  </data>
+  <data name="SystemOptimizerView_FineTuneWindowsForGamingPerformance" xml:space="preserve">
+    <value>为游戏性能微调 Windows</value>
+  </data>
+  <data name="SystemOptimizerView_ApplyAllOptimizationsForMaximumGamingPerfo" xml:space="preserve">
+    <value>应用全部优化，榨取最大游戏性能</value>
+  </data>
+  <data name="SystemOptimizerView_GamingMax" xml:space="preserve">
+    <value>游戏极限</value>
+  </data>
+  <data name="SystemOptimizerView_ApplyRecommendedOptimizationsOnly" xml:space="preserve">
+    <value>仅应用推荐的优化</value>
+  </data>
+  <data name="SystemOptimizerView_RefreshRiskTierPreflightSummary" xml:space="preserve">
+    <value>刷新风险分级预检摘要</value>
+  </data>
+  <data name="SystemOptimizerView_Preflight" xml:space="preserve">
+    <value>预检</value>
+  </data>
+  <data name="SystemOptimizerView_ExportOptimizerStateAndDriftDiagnosticsRep" xml:space="preserve">
+    <value>导出优化器状态与漂移诊断报告</value>
+  </data>
+  <data name="SystemOptimizerView_ExportReport" xml:space="preserve">
+    <value>导出报告</value>
+  </data>
+  <data name="SystemOptimizerView_RestoreAllSettingsToWindowsDefaults" xml:space="preserve">
+    <value>将全部设置恢复为 Windows 默认值</value>
+  </data>
+  <data name="SystemOptimizerView_RevertAll" xml:space="preserve">
+    <value>全部还原</value>
+  </data>
+  <data name="SystemOptimizerView_PowerPerformance" xml:space="preserve">
+    <value>功耗与性能</value>
+  </data>
+  <data name="SystemOptimizerView_ApplyAll" xml:space="preserve">
+    <value>全部应用</value>
+  </data>
+  <data name="SystemOptimizerView_WindowsServices" xml:space="preserve">
+    <value>Windows 服务</value>
+  </data>
+  <data name="SystemOptimizerView_NetworkLatency" xml:space="preserve">
+    <value>网络与延迟</value>
+  </data>
+  <data name="SystemOptimizerView_InputGaming" xml:space="preserve">
+    <value>输入与游戏</value>
+  </data>
+  <data name="SystemOptimizerView_VisualEffects" xml:space="preserve">
+    <value>视觉效果</value>
+  </data>
+  <data name="SystemOptimizerView_StorageDisk" xml:space="preserve">
+    <value>存储与磁盘</value>
+  </data>
+  <data name="SystemOptimizerView_ImportantNotes" xml:space="preserve">
+    <value>重要提示</value>
+  </data>
+  <data name="TuningView_CpuGpuTuning" xml:space="preserve">
+    <value>CPU / GPU 调优</value>
+  </data>
+  <data name="TuningView_AdvancedPerformanceTuningUndervoltOvercloc" xml:space="preserve">
+    <value>高级性能调优 • 降压 • 超频 • 功耗限制</value>
+  </data>
+  <data name="TuningView_AdvancedTuning" xml:space="preserve">
+    <value>高级调优</value>
+  </data>
+  <data name="TuningView_ImproperValuesMayCauseCrashesOrFreezesStar" xml:space="preserve">
+    <value>——不当的数值可能导致崩溃或卡死。请从小幅度开始，逐步测试稳定性。除非启用自动应用，重启后设置会复位。</value>
+  </data>
+  <data name="TuningView_TuningStatus" xml:space="preserve">
+    <value>调优状态</value>
+  </data>
+  <data name="TuningView_ResetLiveTuningWhereAvailableAndNormalizeS" xml:space="preserve">
+    <value>重置可用的实时调优，并把启动调优状态归一化为安全的均衡/自动默认值。</value>
+  </data>
+  <data name="TuningView_RollBackAllTuningToSafeDefaults" xml:space="preserve">
+    <value>把所有调优回滚到安全默认值</value>
+  </data>
+  <data name="TuningView_SafeRollback" xml:space="preserve">
+    <value>安全回滚</value>
+  </data>
+  <data name="TuningView_CpuTuning" xml:space="preserve">
+    <value>CPU 调优</value>
+  </data>
+  <data name="TuningView_CpuUndervoltIsNotAvailable" xml:space="preserve">
+    <value>CPU 降压不可用</value>
+  </data>
+  <data name="TuningView_CpuUndervoltIsNotAvailableOnThisMachine" xml:space="preserve">
+    <value>此机器上 CPU 降压不可用</value>
+  </data>
+  <data name="TuningView_Status" xml:space="preserve">
+    <value>状态：</value>
+  </data>
+  <data name="TuningView_CoreOffset" xml:space="preserve">
+    <value>核心偏移</value>
+  </data>
+  <data name="TuningView_ApplyTheCpuVoltageOffsetAboveAnOffsetThatI" xml:space="preserve">
+    <value>应用上方的 CPU 电压偏移。过于激进的偏移可能导致不稳定或崩溃——请逐步测试。</value>
+  </data>
+  <data name="TuningView_ApplyCpuUndervoltOffset" xml:space="preserve">
+    <value>应用 CPU 降压偏移</value>
+  </data>
+  <data name="TuningView_ResetTo0mv" xml:space="preserve">
+    <value>重置为 0mV</value>
+  </data>
+  <data name="TuningView_RemoveTheCpuVoltageOffsetReturningTheCpuTo" xml:space="preserve">
+    <value>移除 CPU 电压偏移，让 CPU 回到出厂电压。</value>
+  </data>
+  <data name="TuningView_ResetCpuUndervoltTo0Millivolts" xml:space="preserve">
+    <value>把 CPU 降压重置为 0 毫伏</value>
+  </data>
+  <data name="TuningView_AdjustCpuSustainedPl1AndBurstPl2PowerLimit" xml:space="preserve">
+    <value>调节 CPU 持续功耗（PL1）与瞬时功耗（PL2）限制。数值越高性能越强，发热也越大。</value>
+  </data>
+  <data name="TuningView_CpuPowerLimitsPl1Pl2" xml:space="preserve">
+    <value>CPU 功耗限制（PL1/PL2）</value>
+  </data>
+  <data name="TuningView_Refresh" xml:space="preserve">
+    <value>🔄 刷新</value>
+  </data>
+  <data name="TuningView_ReReadTheCurrentCpuPowerLimitsFromTheHardw" xml:space="preserve">
+    <value>从硬件重新读取当前 CPU 功耗限制。</value>
+  </data>
+  <data name="TuningView_RefreshCpuPowerLimitReadings" xml:space="preserve">
+    <value>刷新 CPU 功耗限制读数</value>
+  </data>
+  <data name="TuningView_SustainedTdp" xml:space="preserve">
+    <value>= 持续 TDP •</value>
+  </data>
+  <data name="TuningView_BurstPowerForTurboHigherMorePerformanceHea" xml:space="preserve">
+    <value>= 睿频瞬时功耗 • 越高 = 性能越强、发热越大</value>
+  </data>
+  <data name="TuningView_Pl1Sustained" xml:space="preserve">
+    <value>PL1 持续</value>
+  </data>
+  <data name="TuningView_LongTermTdp" xml:space="preserve">
+    <value>长期 TDP</value>
+  </data>
+  <data name="TuningView_Pl2Burst" xml:space="preserve">
+    <value>PL2 瞬时</value>
+  </data>
+  <data name="TuningView_TurboPower" xml:space="preserve">
+    <value>睿频功耗</value>
+  </data>
+  <data name="TuningView_PowerLimitsLockedByBios" xml:space="preserve">
+    <value>功耗限制被 BIOS 锁定</value>
+  </data>
+  <data name="TuningView_MsrRegistersAreWriteLockedUntilRebootMayRe" xml:space="preserve">
+    <value>——MSR 寄存器在重启前为写锁定。可能需要 BIOS 设置或 HP Unleashed Mode。</value>
+  </data>
+  <data name="TuningView_ApplyPowerLimits" xml:space="preserve">
+    <value>应用功耗限制</value>
+  </data>
+  <data name="TuningView_ApplyTheCpuPl1Pl2PowerLimitsAboveHigherLim" xml:space="preserve">
+    <value>应用上方的 CPU PL1/PL2 功耗限制。限制越高持续性能越强，发热也越大。</value>
+  </data>
+  <data name="TuningView_ApplyCpuPowerLimits" xml:space="preserve">
+    <value>应用 CPU 功耗限制</value>
+  </data>
+  <data name="TuningView_RestoreTheCpuPowerLimitsToThisModelSStockV" xml:space="preserve">
+    <value>将 CPU 功耗限制恢复到此机型的出厂值。</value>
+  </data>
+  <data name="TuningView_ResetCpuPowerLimitsToDefaults" xml:space="preserve">
+    <value>重置 CPU 功耗限制为默认</value>
+  </data>
+  <data name="TuningView_ControlAmdRyzenStapmPowerAndTctlTemperatur" xml:space="preserve">
+    <value>通过 SMU 控制 AMD Ryzen 的 STAPM 功耗与 Tctl 温度限制。</value>
+  </data>
+  <data name="TuningView_AmdCpuPowerLimits" xml:space="preserve">
+    <value>AMD CPU 功耗限制</value>
+  </data>
+  <data name="TuningView_ControlsSustainedPackagePowerWhile" xml:space="preserve">
+    <value> 控制持续封装功耗，而 </value>
+  </data>
+  <data name="TuningView_SetsTheThermalThrottleTargetLowerValuesRed" xml:space="preserve">
+    <value> 设置温度降频目标。数值越低散热与噪音越小；数值越高偏向性能。</value>
+  </data>
+  <data name="TuningView_SustainedPower" xml:space="preserve">
+    <value>持续功耗</value>
+  </data>
+  <data name="TuningView_TctlLimit" xml:space="preserve">
+    <value>TCTL 限制</value>
+  </data>
+  <data name="TuningView_ThrottlePoint" xml:space="preserve">
+    <value>降频点</value>
+  </data>
+  <data name="TuningView_CurrentlyEnforced" xml:space="preserve">
+    <value>当前生效值</value>
+  </data>
+  <data name="TuningView_ReadTheFourPowerLimitsBackOutOfTheSmuDoesN" xml:space="preserve">
+    <value>从 SMU 读回四项功耗限制。不写入任何内容。</value>
+  </data>
+  <data name="TuningView_RefreshEnforcedAmdCpuPowerLimits" xml:space="preserve">
+    <value>刷新当前生效的 AMD CPU 功耗限制</value>
+  </data>
+  <data name="TuningView_ApplyAmdLimits" xml:space="preserve">
+    <value>应用 AMD 限制</value>
+  </data>
+  <data name="TuningView_ApplyTheAmdStapmTemperatureLimitsAbove" xml:space="preserve">
+    <value>应用上方的 AMD STAPM/温度限制。</value>
+  </data>
+  <data name="TuningView_ApplyAmdCpuPowerLimits" xml:space="preserve">
+    <value>应用 AMD CPU 功耗限制</value>
+  </data>
+  <data name="TuningView_RestoreTheAmdCpuPowerLimitsToThisModelSSto" xml:space="preserve">
+    <value>将 AMD CPU 功耗限制恢复到此机型的出厂值。</value>
+  </data>
+  <data name="TuningView_ResetAmdCpuPowerLimitsToDefaults" xml:space="preserve">
+    <value>重置 AMD CPU 功耗限制为默认</value>
+  </data>
+  <data name="TuningView_TccOffsetThermalThrottlePoint" xml:space="preserve">
+    <value>TCC 偏移（温度降频点）</value>
+  </data>
+  <data name="TuningView_ReduceCpuTjmaxThrottlingTemperature" xml:space="preserve">
+    <value>降低 CPU Tjmax 降频温度</value>
+  </data>
+  <data name="TuningView_TccOffset" xml:space="preserve">
+    <value>TCC 偏移</value>
+  </data>
+  <data name="TuningView_CReduction" xml:space="preserve">
+    <value>°C 降低</value>
+  </data>
+  <data name="TuningView_Default100CTjmax" xml:space="preserve">
+    <value>= 默认（100°C Tjmax）•</value>
+  </data>
+  <data name="TuningView_ThrottleAt85C" xml:space="preserve">
+    <value>= 85°C 降频 •</value>
+  </data>
+  <data name="TuningView_ThrottleAt70C" xml:space="preserve">
+    <value>= 70°C 降频</value>
+  </data>
+  <data name="TuningView_ApplyLimit" xml:space="preserve">
+    <value>应用限制</value>
+  </data>
+  <data name="TuningView_ApplyTheCpuThermalThrottleLimitAboveTheCpu" xml:space="preserve">
+    <value>应用上方的 CPU 温度降频限制。CPU 将在此温度开始降频，而不是出厂限值。</value>
+  </data>
+  <data name="TuningView_ApplyCpuThermalLimitOffset" xml:space="preserve">
+    <value>应用 CPU 温度限制偏移</value>
+  </data>
+  <data name="TuningView_RemoveLimit" xml:space="preserve">
+    <value>移除限制</value>
+  </data>
+  <data name="TuningView_RemoveTheThermalThrottleLimitReturningTheC" xml:space="preserve">
+    <value>移除温度降频限制，让 CPU 回到出厂降频温度。</value>
+  </data>
+  <data name="TuningView_RemoveCpuThermalLimitOffset" xml:space="preserve">
+    <value>移除 CPU 温度限制偏移</value>
+  </data>
+  <data name="TuningView_GpuTuning" xml:space="preserve">
+    <value>GPU 调优</value>
+  </data>
+  <data name="TuningView_GpuPowerPolicyReadOnly" xml:space="preserve">
+    <value>GPU 功耗策略（只读）</value>
+  </data>
+  <data name="TuningView_WhatTheNvidiaDriverIsEnforcingRightNowALap" xml:space="preserve">
+    <value>NVIDIA 驱动当前正在强制执行的策略。笔记本自身固件可能将其压在驱动最大值之下。</value>
+  </data>
+  <data name="TuningView_NvidiaPowerUnlockAdvancedOffByDefault" xml:space="preserve">
+    <value>NVIDIA 功耗解锁（高级，默认关闭）</value>
+  </data>
+  <data name="TuningView_Order1ResolveVbios2ApplyMax3RestartWindows" xml:space="preserve">
+    <value>顺序：1) 解析 VBIOS，2) 应用 MAX，3) 重启 Windows，4) 应用 CURRENT。把 GPU 功耗上限提到笔记本厂商设定之上。MAX 写入 NVIDIA 驱动注册表，需要重启；CURRENT 实时应用，重启后失效。功耗越大发热越大。基于 timmyy123 的 nvidia-power-control 与 bobshmo 的 OmenCore-Prophecy，经许可使用。</value>
+  </data>
+  <data name="TuningView_EnableNvidiaPowerUnlock" xml:space="preserve">
+    <value>启用 NVIDIA 功耗解锁</value>
+  </data>
+  <data name="TuningView_TargetW" xml:space="preserve">
+    <value>目标（W）</value>
+  </data>
+  <data name="TuningView_N1ResolveVbios" xml:space="preserve">
+    <value>1. 解析 VBIOS</value>
+  </data>
+  <data name="TuningView_ReadsTheVbiosPowerTableNeedsNvflash64ExeNv" xml:space="preserve">
+    <value>读取 VBIOS 功耗表。需要把 nvflash64.exe（RTX 50 卡为 nvflashb.exe）放在 OmenCore.exe 旁，或用“从文件”。应用 CURRENT 不需要它。</value>
+  </data>
+  <data name="TuningView_FromFile" xml:space="preserve">
+    <value>从文件…</value>
+  </data>
+  <data name="TuningView_ApplyMaxRestart" xml:space="preserve">
+    <value>应用 MAX（重启）</value>
+  </data>
+  <data name="TuningView_ApplyCurrent" xml:space="preserve">
+    <value>应用 CURRENT</value>
+  </data>
+  <data name="TuningView_RemoveMaxOverride" xml:space="preserve">
+    <value>移除 MAX 覆盖</value>
+  </data>
+  <data name="TuningView_NotesDoNotDisablePpabDynamicBoostTheAdapte" xml:space="preserve">
+    <value>注意：不要禁用 PPAB（Dynamic Boost）；适配器限制是 CPU 和 GPU 合计的。显卡驱动更新可能撤销解锁，之后请核对实时数值。RTX 5050 未测试。如果 CURRENT 不生效，把 HP 性能模式切走再切回，然后重新应用。</value>
+  </data>
+  <data name="TuningView_Driver" xml:space="preserve">
+    <value>驱动</value>
+  </data>
+  <data name="TuningView_WhetherTheConfirmedGpuOcProfileIsCurrently" xml:space="preserve">
+    <value>确认过的 GPU 超频档案当前是否被授权在 OmenCore 启动时重新应用。仅保存或选择档案永远不会授权启动写入。</value>
+  </data>
+  <data name="TuningView_GpuUndervolting" xml:space="preserve">
+    <value>GPU 降压：</value>
+  </data>
+  <data name="TuningView_ModernNvidiaGpusAutoManageVoltageToReduceP" xml:space="preserve">
+    <value> 现代 NVIDIA GPU 自动管理电压。要降低功耗/发热：降低</value>
+  </data>
+  <data name="TuningView_PowerLimit" xml:space="preserve">
+    <value> 功耗限制</value>
+  </data>
+  <data name="TuningView_ForcesLowerVoltageAtEachFrequencyOrUse" xml:space="preserve">
+    <value>（强制每个频率使用更低电压）或使用</value>
+  </data>
+  <data name="TuningView_NegativeCoreOffset" xml:space="preserve">
+    <value> 负核心偏移</value>
+  </data>
+  <data name="TuningView_ReducesBoostClocksLessVoltageNeededForVFCu" xml:space="preserve">
+    <value>（降低睿频频率→所需电压更低）。V/F 曲线编辑请使用 MSI Afterburner。</value>
+  </data>
+  <data name="TuningView_DetectedGpuGuardrails" xml:space="preserve">
+    <value>检测到的 GPU 防护栏</value>
+  </data>
+  <data name="TuningView_AmdGpuOverclockingAdl2" xml:space="preserve">
+    <value>✓ AMD GPU 超频（ADL2）</value>
+  </data>
+  <data name="TuningView_AmdRadeonGpuOverclockingIsAvailableViaAmdD" xml:space="preserve">
+    <value>可通过 AMD Display Library 对 AMD Radeon GPU 超频。在下方调节频率偏移与功耗限制。</value>
+  </data>
+  <data name="TuningView_ManualApplyOnlyAmdOffsetsAreNotSavedAndDoN" xml:space="preserve">
+    <value>仅手动应用：AMD 偏移不会被保存，OmenCore 启动时也不会重新应用。每次重启后需重新应用。</value>
+  </data>
+  <data name="TuningView_CoreClockOffsetMhz" xml:space="preserve">
+    <value>核心频率偏移（MHz）</value>
+  </data>
+  <data name="TuningView_MemoryClockOffsetMhz" xml:space="preserve">
+    <value>显存频率偏移（MHz）</value>
+  </data>
+  <data name="TuningView_PowerLimit_2" xml:space="preserve">
+    <value>功耗限制（%）</value>
+  </data>
+  <data name="TuningView_ResetToDefault" xml:space="preserve">
+    <value>重置为默认</value>
+  </data>
+  <data name="TuningView_RestoreAmdGpuClocksAndPowerToStockValues" xml:space="preserve">
+    <value>将 AMD GPU 频率与功耗恢复为出厂值。</value>
+  </data>
+  <data name="TuningView_ResetAmdGpuOverclockToDefaults" xml:space="preserve">
+    <value>重置 AMD GPU 超频为默认</value>
+  </data>
+  <data name="TuningView_ApplyAmdGpuOc" xml:space="preserve">
+    <value>应用 AMD GPU 超频</value>
+  </data>
+  <data name="TuningView_ApplyTheAmdGpuClockAndPowerOffsetsAboveAnU" xml:space="preserve">
+    <value>应用上方的 AMD GPU 频率与功耗偏移。不稳定的超频可能导致驱动重置或崩溃。</value>
+  </data>
+  <data name="TuningView_ApplyAmdGpuOverclock" xml:space="preserve">
+    <value>应用 AMD GPU 超频</value>
+  </data>
+  <data name="TuningView_ClockOffsetsNotAvailable" xml:space="preserve">
+    <value>ℹ️ 频率偏移不可用</value>
+  </data>
+  <data name="TuningView_YourGpuDoesnTSupportClockOffsetAdjustments" xml:space="preserve">
+    <value>你的 GPU 不支持通过 NVAPI 调节频率偏移。下方的功耗限制调节仍然可用。</value>
+  </data>
+  <data name="TuningView_ForClockOcUseMsiAfterburnerOrHpOmenHub" xml:space="preserve">
+    <value>频率超频请使用 MSI Afterburner 或 HP Omen Hub。</value>
+  </data>
+  <data name="TuningView_PowerLimitLocked" xml:space="preserve">
+    <value>功耗限制已锁定</value>
+  </data>
+  <data name="TuningView_PowerLimit_3" xml:space="preserve">
+    <value>功耗限制</value>
+  </data>
+  <data name="TuningView_CoreClock" xml:space="preserve">
+    <value>核心频率</value>
+  </data>
+  <data name="TuningView_MemClock" xml:space="preserve">
+    <value>显存频率</value>
+  </data>
+  <data name="TuningView_TestApply" xml:space="preserve">
+    <value>测试应用</value>
+  </data>
+  <data name="TuningView_ApplyTheseGpuSettingsTemporarilySoYouCanCh" xml:space="preserve">
+    <value>临时应用这些 GPU 设置以便检查稳定性。除非你点击“保留”，否则会自动还原。</value>
+  </data>
+  <data name="TuningView_TestGpuOverclockTemporarily" xml:space="preserve">
+    <value>临时测试 GPU 超频</value>
+  </data>
+  <data name="TuningView_ConfirmTheSettingsYouAreCurrentlyTestingAn" xml:space="preserve">
+    <value>确认你当前正在测试的设置并阻止其还原。</value>
+  </data>
+  <data name="TuningView_KeepTestedGpuOverclock" xml:space="preserve">
+    <value>保留测试中的 GPU 超频</value>
+  </data>
+  <data name="TuningView_ApplyGpuSettings" xml:space="preserve">
+    <value>应用 GPU 设置</value>
+  </data>
+  <data name="TuningView_ApplyTheGpuClockMemoryAndPowerOffsetsAbove" xml:space="preserve">
+    <value>应用上方的 GPU 频率、显存与功耗偏移。不稳定的超频可能导致驱动重置或崩溃。</value>
+  </data>
+  <data name="TuningView_ApplyNvidiaGpuOverclock" xml:space="preserve">
+    <value>应用 NVIDIA GPU 超频</value>
+  </data>
+  <data name="TuningView_RestoreGpuClocksMemoryAndPowerLimitToStock" xml:space="preserve">
+    <value>将 GPU 频率、显存与功耗限制恢复为出厂值。</value>
+  </data>
+  <data name="TuningView_ResetNvidiaGpuOverclockToDefaults" xml:space="preserve">
+    <value>重置 NVIDIA GPU 超频为默认</value>
+  </data>
+  <data name="TuningView_NoTuningFeaturesAvailable" xml:space="preserve">
+    <value>无可用的调优功能</value>
+  </data>
+  <data name="TuningView_YourSystemDoesnTSupportCpuUndervoltingPowe" xml:space="preserve">
+    <value>你的系统不支持通过 OmenCore 进行 CPU 降压、功耗限制控制或 GPU 超频。</value>
+  </data>
+  <data name="SettingsView_WhenDisabledNoOsdBackgroundProcessRunsAtAl" xml:space="preserve">
+    <value>禁用后完全不运行任何 OSD 后台进程</value>
+  </data>
 </root>

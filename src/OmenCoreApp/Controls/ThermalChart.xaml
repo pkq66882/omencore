@@ -1,6 +1,7 @@
 <UserControl x:Class="OmenCore.Controls.ThermalChart"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:loc="clr-namespace:OmenCore.Localization"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" d:DesignHeight="200" d:DesignWidth="500"
@@ -21,7 +22,7 @@
                             Margin="0,0,12,0">
                         <StackPanel Orientation="Horizontal">
                             <Rectangle Width="16" Height="16" Fill="{StaticResource AccentBrush}" RadiusX="4" RadiusY="4" />
-                            <TextBlock Text="CPU Temperature" Foreground="{StaticResource TextPrimaryBrush}" FontSize="12" FontWeight="SemiBold" Margin="8,0,0,0" VerticalAlignment="Center" />
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_CpuTemperature}" Foreground="{StaticResource TextPrimaryBrush}" FontSize="12" FontWeight="SemiBold" Margin="8,0,0,0" VerticalAlignment="Center" />
                         </StackPanel>
                     </Border>
                     <Border Background="{StaticResource SurfaceDarkBrush}"
@@ -31,7 +32,7 @@
                             Padding="10,6">
                         <StackPanel Orientation="Horizontal">
                             <Rectangle Width="16" Height="16" Fill="{StaticResource AccentBlueBrush}" RadiusX="4" RadiusY="4" />
-                            <TextBlock Text="GPU Temperature" Foreground="{StaticResource TextPrimaryBrush}" FontSize="12" FontWeight="SemiBold" Margin="8,0,0,0" VerticalAlignment="Center" />
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_GpuTemperature}" Foreground="{StaticResource TextPrimaryBrush}" FontSize="12" FontWeight="SemiBold" Margin="8,0,0,0" VerticalAlignment="Center" />
                         </StackPanel>
                     </Border>
                 </StackPanel>
@@ -47,7 +48,7 @@
                     <Canvas x:Name="ChartCanvas" Margin="4" />
                     <!-- Empty state message -->
                     <TextBlock x:Name="EmptyStateText"
-                               Text="Loading temperature history..."
+                               Text="{x:Static loc:Strings.ThermalChart_LoadingTemperatureHistory}"
                                FontSize="14"
                                FontStyle="Italic"
                                Foreground="{StaticResource TextSecondaryBrush}"

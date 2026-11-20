@@ -1,6 +1,7 @@
 <UserControl x:Class="OmenCore.Controls.FanCurveEditor"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:loc="clr-namespace:OmenCore.Localization"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
@@ -83,7 +84,7 @@
                 
                 <!-- Instructions overlay when empty -->
                 <TextBlock x:Name="EmptyStateText"
-                           Text="Click to add curve points, drag to adjust"
+                           Text="{x:Static loc:Strings.FanCurveEditor_ClickToAddCurvePointsDragToAdjust}"
                            Foreground="{StaticResource TextTertiaryBrush}"
                            FontSize="12"
                            HorizontalAlignment="Center"
@@ -115,14 +116,14 @@
                     Orientation="Horizontal" 
                     HorizontalAlignment="Center"
                     Margin="0,12,0,0">
-            <TextBlock Text="🌡️ Temperature (°C)" 
+            <TextBlock Text="{x:Static loc:Strings.FanCurveEditor_TemperatureC}" 
                        Foreground="{StaticResource TextSecondaryBrush}"
                        FontSize="11"
                        Margin="0,0,24,0"/>
-            <TextBlock Text="💨 Fan Speed (%)" 
+            <TextBlock Text="{x:Static loc:Strings.FanCurveEditor_FanSpeed}" 
                        Foreground="{StaticResource AccentBrush}"
                        FontSize="11"/>
-            <TextBlock Text=" • Drag points to adjust"
+            <TextBlock Text="{x:Static loc:Strings.FanCurveEditor_DragPointsToAdjust}"
                        Foreground="{StaticResource TextTertiaryBrush}"
                        FontSize="11"
                        Margin="16,0,0,0"/>

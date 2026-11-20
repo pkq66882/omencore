@@ -1,7 +1,8 @@
 <Window x:Class="OmenCore.Views.AboutWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="About OmenCore" Height="360" Width="500" WindowStartupLocation="CenterOwner"
+                    xmlns:loc="clr-namespace:OmenCore.Localization"
+        Title="{x:Static loc:Strings.AboutWindow_AboutOmencore}" Height="360" Width="500" WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize" WindowStyle="None" Icon="/Assets/OmenCore.ico"
         AllowsTransparency="True"
         Background="Transparent"
@@ -30,14 +31,14 @@
                     </Image>
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Text="OmenCore" FontSize="28" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" />
-                        <TextBlock Text="Gaming Laptop and Desktop Control Center" FontSize="14" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,4,0,0" />
+                        <TextBlock Text="{x:Static loc:Strings.AboutWindow_GamingLaptopAndDesktopControlCenter}" FontSize="14" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,4,0,0" />
                     </StackPanel>
                 </DockPanel>
                 <Button Grid.Column="1"
                         Width="36"
                         Height="36"
                         Style="{StaticResource SecondaryButton}"
-                        ToolTip="Close (Esc)"
+                        ToolTip="{x:Static loc:Strings.AboutWindow_CloseEsc}"
                         Click="CloseClicked"
                         Content="✕"
                         FontSize="16"
@@ -53,24 +54,24 @@
                         Margin="0,0,0,16">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                            <TextBlock x:Name="VersionText" Text="Version 3.0.0" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" />
+                            <TextBlock x:Name="VersionText" Text="{x:Static loc:Strings.AboutWindow_Version300}" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" />
                         </StackPanel>
-                        <TextBlock Text="Advanced thermal, power, and RGB control for HP OMEN gaming laptops and desktops." 
+                        <TextBlock Text="{x:Static loc:Strings.AboutWindow_AdvancedThermalPowerAndRgbControlForHpOmen}" 
                                    FontSize="13" 
                                    Foreground="{StaticResource TextSecondaryBrush}" 
                                    TextWrapping="Wrap" 
                                    Margin="0,0,0,12" />
                         <TextBlock FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,0,0,8">
-                            <Run Text="✓ WMI/EC Fan Control with Custom Curves"/><LineBreak/>
-                            <Run Text="✓ CPU Undervolt (Intel) &amp; Curve Optimizer (AMD)"/><LineBreak/>
-                            <Run Text="✓ GPU Dynamic Boost (TGP/PPAB)"/><LineBreak/>
-                            <Run Text="✓ Driver-Free Monitoring (WMI BIOS + NVAPI + PawnIO)"/><LineBreak/>
-                            <Run Text="✓ Per-Game Profile Auto-Switching"/><LineBreak/>
-                            <Run Text="✓ V2 Keyboard Engine (Per-Key EC &amp; WMI Lighting)"/><LineBreak/>
-                            <Run Text="✓ Guided Fan Diagnostics"/><LineBreak/>
-                            <Run Text="✓ Memory Optimizer"/><LineBreak/>
-                            <Run Text="✓ Headless Mode (Tray-Only, No Window)"/><LineBreak/>
-                            <Run Text="✓ Real-Time Hardware Monitoring"/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_WmiEcFanControlWithCustomCurves}"/><LineBreak/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_CpuUndervoltIntelCurveOptimizerAmd}"/><LineBreak/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_GpuDynamicBoostTgpPpab}"/><LineBreak/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_DriverFreeMonitoringWmiBiosNvapiPawnio}"/><LineBreak/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_PerGameProfileAutoSwitching}"/><LineBreak/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_V2KeyboardEnginePerKeyEcWmiLighting}"/><LineBreak/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_GuidedFanDiagnostics}"/><LineBreak/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_MemoryOptimizer}"/><LineBreak/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_HeadlessModeTrayOnlyNoWindow}"/><LineBreak/>
+                            <Run Text="{x:Static loc:Strings.AboutWindow_RealTimeHardwareMonitoring}"/>
                         </TextBlock>
                         <TextBlock x:Name="UpdateStatusText" 
                                    Text="" 
@@ -108,14 +109,14 @@
                 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,16,0,0">
                     <Button x:Name="CheckUpdatesButton" 
-                            Content="⟳ Check for Updates" 
+                            Content="{x:Static loc:Strings.AboutWindow_CheckForUpdates}" 
                             Width="180" 
                             Height="42"
                             Click="CheckUpdatesClicked" 
                             Style="{StaticResource ModernButton}" 
                             Padding="16,10" 
                             Margin="0,0,12,0"
-                            ToolTip="Check GitHub for new releases" />
+                            ToolTip="{x:Static loc:Strings.AboutWindow_CheckGithubForNewReleases}" />
                     <Button x:Name="CloseButton"
                             Content="Close" 
                             Width="100" 
@@ -124,7 +125,7 @@
                             IsCancel="True"
                             Style="{StaticResource SecondaryButton}" 
                             Padding="16,10"
-                            ToolTip="Close this window (Esc)" />
+                            ToolTip="{x:Static loc:Strings.AboutWindow_CloseThisWindowEsc}" />
                 </StackPanel>
             </StackPanel>
         </Grid>

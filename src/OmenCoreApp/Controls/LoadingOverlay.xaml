@@ -1,6 +1,7 @@
 <UserControl x:Class="OmenCore.Controls.LoadingOverlay"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:loc="clr-namespace:OmenCore.Localization"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
@@ -74,7 +75,7 @@
                            TextWrapping="Wrap" />
                 
                 <!-- Sub-message -->
-                <TextBlock Text="This may take a few moments"
+                <TextBlock Text="{x:Static loc:Strings.LoadingOverlay_ThisMayTakeAFewMoments}"
                            FontSize="13"
                            Foreground="{StaticResource TextSecondaryBrush}"
                            TextAlignment="Center"

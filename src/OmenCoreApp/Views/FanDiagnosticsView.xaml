@@ -1,45 +1,46 @@
 <UserControl x:Class="OmenCore.Views.FanDiagnosticsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:loc="clr-namespace:OmenCore.Localization"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="700">
     <Border Style="{StaticResource SurfaceCard}" Padding="16">
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
         <StackPanel>
-            <TextBlock Text="Fan Diagnostics" Style="{StaticResource Heading2}" />
+            <TextBlock Text="{x:Static loc:Strings.DiagnosticsView_FanDiagnostics}" Style="{StaticResource Heading2}" />
             <WrapPanel Orientation="Horizontal" Margin="0,8,0,12">
                 <StackPanel MinWidth="200" MaxWidth="280" Margin="0,0,16,8">
-                    <TextBlock Text="Selected Fan" Style="{StaticResource Caption}" />
+                    <TextBlock Text="{x:Static loc:Strings.FanDiagnosticsView_SelectedFan}" Style="{StaticResource Caption}" />
                     <ComboBox SelectedIndex="{Binding SelectedFanIndex, Mode=TwoWay}" Margin="0,6,0,0">
-                        <ComboBoxItem Content="CPU Fan" />
-                        <ComboBoxItem Content="GPU Fan" />
+                        <ComboBoxItem Content="{x:Static loc:Strings.DashboardView_CpuFan}" />
+                        <ComboBoxItem Content="{x:Static loc:Strings.DashboardView_GpuFan}" />
                     </ComboBox>
 
-                    <TextBlock Text="Target Percent" Style="{StaticResource Caption}" Margin="0,10,0,0" />
+                    <TextBlock Text="{x:Static loc:Strings.FanDiagnosticsView_TargetPercent}" Style="{StaticResource Caption}" Margin="0,10,0,0" />
                     <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
                         <Slider Width="160" Minimum="0" Maximum="100" Value="{Binding TargetPercent, Mode=TwoWay}" />
                         <TextBlock Text="{Binding TargetPercent}" Margin="8,0,0,0" VerticalAlignment="Center" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-                        <Button Content="Apply &amp; Verify" Command="{Binding ApplyAndVerifyCommand}" Style="{StaticResource ModernButton}" />
-                        <Button Content="Refresh" Command="{Binding RefreshStateCommand}" Margin="8,0,0,0" />
+                        <Button Content="{x:Static loc:Strings.FanDiagnosticsView_ApplyVerify}" Command="{Binding ApplyAndVerifyCommand}" Style="{StaticResource ModernButton}" />
+                        <Button Content="{x:Static loc:Strings.DashboardView_Refresh}" Command="{Binding RefreshStateCommand}" Margin="8,0,0,0" />
                     </StackPanel>
                 </StackPanel>
 
                 <Border Background="{StaticResource SurfaceDarkBrush}" CornerRadius="6" Padding="12" Margin="0,0,16,8" VerticalAlignment="Top">
                     <StackPanel>
-                        <TextBlock Text="Current State" FontWeight="SemiBold" />
-                        <TextBlock Text="RPM:" Style="{StaticResource Caption}" Margin="0,6,0,0" />
+                        <TextBlock Text="{x:Static loc:Strings.FanDiagnosticsView_CurrentState}" FontWeight="SemiBold" />
+                        <TextBlock Text="{x:Static loc:Strings.FanDiagnosticsView_Rpm}" Style="{StaticResource Caption}" Margin="0,6,0,0" />
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding CurrentRpm}" FontSize="18" FontWeight="Bold" Foreground="{StaticResource AccentBrush}" />
                             <Border Background="{StaticResource SurfaceMediumBrush}" CornerRadius="4" Padding="6,2" Margin="8,0,0,0" VerticalAlignment="Center"
-                                    ToolTip="Source of RPM data: EC=Direct EC read, HWMon=LibreHardwareMonitor, MAB=MSI Afterburner, Est=Estimated">
+                                    ToolTip="{x:Static loc:Strings.FanDiagnosticsView_SourceOfRpmDataEcDirectEcReadHwmonLibrehar}">
                                 <TextBlock Text="{Binding RpmSourceDisplay}" FontSize="10" Foreground="{StaticResource TextSecondaryBrush}" />
                             </Border>
                         </StackPanel>
-                        <TextBlock Text="Level:" Style="{StaticResource Caption}" Margin="0,8,0,0" />
+                        <TextBlock Text="{x:Static loc:Strings.FanDiagnosticsView_Level}" Style="{StaticResource Caption}" Margin="0,8,0,0" />
                         <TextBlock Text="{Binding CurrentLevel}" FontSize="18" FontWeight="Bold" Foreground="{StaticResource AccentBrush}" />
                     </StackPanel>
                 </Border>
@@ -47,9 +48,9 @@
                 <!-- Guided Diagnostic (v2.7.0) -->
                 <Border Background="{StaticResource SurfaceDarkBrush}" CornerRadius="6" Padding="12" Margin="0,0,16,8" VerticalAlignment="Top">
                     <StackPanel MinWidth="200" MaxWidth="320">
-                        <TextBlock Text="Guided Fan Verification" FontWeight="SemiBold" />
-                        <TextBlock Text="Tests: 30% → 60% → 100%" Style="{StaticResource Caption}" Margin="0,4,0,0" TextWrapping="Wrap"/>
-                        <Button Content="Run Guided Fan Verification" Command="{Binding RunGuidedDiagnosticCommand}" 
+                        <TextBlock Text="{x:Static loc:Strings.FanDiagnosticsView_GuidedFanVerification}" FontWeight="SemiBold" />
+                        <TextBlock Text="{x:Static loc:Strings.FanDiagnosticsView_Tests3060100}" Style="{StaticResource Caption}" Margin="0,4,0,0" TextWrapping="Wrap"/>
+                        <Button Content="{x:Static loc:Strings.FanDiagnosticsView_RunGuidedFanVerification}" Command="{Binding RunGuidedDiagnosticCommand}" 
                                 Style="{StaticResource ModernButton}" Margin="0,8,0,0" 
                                 IsEnabled="{Binding IsGuidedTestRunning, Converter={StaticResource InverseBooleanConverter}}"/>
                         
@@ -70,7 +71,7 @@
             <Border Background="{StaticResource SurfaceDarkBrush}" CornerRadius="6" Padding="12" Margin="0,12,0,0"
                     Visibility="{Binding GuidedTestResult, Converter={StaticResource StringNotEmptyToVisibilityConverter}}">
                 <StackPanel>
-                    <TextBlock Text="Verification Results" FontWeight="SemiBold" />
+                    <TextBlock Text="{x:Static loc:Strings.FanDiagnosticsView_VerificationResults}" FontWeight="SemiBold" />
                     <!-- A read-only TextBox, not a TextBlock: WPF TextBlock text cannot be
                          selected, so dragging across these results did nothing and the click
                          fell through to the surrounding panel. This keeps the same flat look
@@ -80,13 +81,13 @@
                              TextWrapping="Wrap" IsReadOnly="True" IsReadOnlyCaretVisible="False"
                              Background="Transparent" BorderThickness="0" Padding="0"
                              HorizontalScrollBarVisibility="Disabled"/>
-                    <Button Content="Copy Results" Command="{Binding CopyGuidedResultCommand}" 
+                    <Button Content="{x:Static loc:Strings.FanDiagnosticsView_CopyResults}" Command="{Binding CopyGuidedResultCommand}" 
                             Style="{StaticResource ModernButton}" Margin="0,8,0,0" 
                             Visibility="{Binding GuidedTestResult, Converter={StaticResource StringNotEmptyToVisibilityConverter}}"/>
                 </StackPanel>
             </Border>
 
-            <TextBlock Text="History" Style="{StaticResource Heading3}" Margin="0,8,0,8" />
+            <TextBlock Text="{x:Static loc:Strings.FanDiagnosticsView_History}" Style="{StaticResource Heading3}" Margin="0,8,0,8" />
             <ListBox ItemsSource="{Binding History}" MaxHeight="180">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -94,16 +95,16 @@
                             <StackPanel>
                                 <TextBlock Text="{Binding FanName, Mode=OneWay}" FontWeight="SemiBold" />
                                         <TextBlock FontSize="12" Foreground="{StaticResource TextSecondaryBrush}">
-                                            <Run Text="Requested: " />
+                                            <Run Text="{x:Static loc:Strings.FanDiagnosticsView_Requested}" />
                                             <Run Text="{Binding RequestedPercent, Mode=OneWay}" />
-                                            <Run Text="%  , Readback: " />
+                                            <Run Text="{x:Static loc:Strings.FanDiagnosticsView_Readback}" />
                                             <Run Text="{Binding RpmDisplay, Mode=OneWay}" />
                                             <Run Text=" (±" />
                                             <Run Text="{Binding DeviationPercent, StringFormat={}{0:F1}%, Mode=OneWay}" />
                                             <Run Text=")" />
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource TextMutedBrush}">
-                                            <Run Text="Evidence: " />
+                                            <Run Text="{x:Static loc:Strings.FanDiagnosticsView_Evidence}" />
                                             <Run Text="{Binding VerificationEvidence, Mode=OneWay}" />
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource TextMutedBrush}"

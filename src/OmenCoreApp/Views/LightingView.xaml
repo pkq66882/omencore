@@ -1,6 +1,7 @@
 <UserControl x:Class="OmenCore.Views.LightingView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:loc="clr-namespace:OmenCore.Localization"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls="clr-namespace:OmenCore.Controls"
@@ -52,7 +53,7 @@
             </Grid.ColumnDefinitions>
             
             <StackPanel Grid.Column="0">
-                <TextBlock Text="RGB Lighting &amp; Peripherals" 
+                <TextBlock Text="{x:Static loc:Strings.LightingView_RgbLightingPeripherals}" 
                            FontSize="28" FontWeight="Bold" 
                            Foreground="{StaticResource TextPrimaryBrush}"/>
                 <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
@@ -89,7 +90,7 @@
                             Visibility="{Binding IsKeyboardLightingAvailable, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal">
                             <Ellipse Fill="{StaticResource AccentBrush}" Style="{StaticResource ConnectionIndicator}"/>
-                            <TextBlock Text="OMEN Keyboard" FontSize="11" Foreground="{StaticResource AccentBrush}"/>
+                            <TextBlock Text="{x:Static loc:Strings.LightingView_OmenKeyboard}" FontSize="11" Foreground="{StaticResource AccentBrush}"/>
                         </StackPanel>
                     </Border>
                 </StackPanel>
@@ -155,7 +156,7 @@
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Grid.Column="0"
-                                       Text="Control ownership"
+                                       Text="{x:Static loc:Strings.LightingView_ControlOwnership}"
                                        FontSize="13"
                                        FontWeight="SemiBold"
                                        Foreground="{StaticResource TextPrimaryBrush}"/>
@@ -196,11 +197,11 @@
                             <StackPanel>
                                 <TextBlock Text="{Binding KeyboardDynamicLightingWarning}" FontSize="11" Foreground="#8CC8F0"
                                            TextWrapping="Wrap"/>
-                                <Button Content="Open Dynamic Lighting settings"
+                                <Button Content="{x:Static loc:Strings.KeyboardMapEditor_OpenDynamicLightingSettings}"
                                         Command="{Binding OpenDynamicLightingSettingsCommand}"
                                         Style="{StaticResource ModernButton}" Padding="12,4" Margin="0,8,0,0"
                                         HorizontalAlignment="Left" FontSize="11"
-                                        AutomationProperties.Name="Open the Windows Dynamic Lighting settings page"/>
+                                        AutomationProperties.Name="{x:Static loc:Strings.KeyboardMapEditor_OpenTheWindowsDynamicLightingSettingsPage}"/>
                             </StackPanel>
                         </Border>
 
@@ -222,9 +223,9 @@
                                     IsEnabled="{Binding IsKeyboardLightingAvailable}"
                                     Style="{StaticResource SecondaryButton}"
                                     Padding="10,5"
-                                    ToolTip="Reapply saved keyboard colors through the active HP keyboard backend"
-                                    AutomationProperties.Name="Restore keyboard lighting">
-                                <TextBlock Text="Restore Keyboard"
+                                    ToolTip="{x:Static loc:Strings.LightingView_ReapplySavedKeyboardColorsThroughTheActive}"
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_RestoreKeyboardLighting}">
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_RestoreKeyboard}"
                                            FontSize="10"/>
                             </Button>
                         </Grid>
@@ -245,7 +246,7 @@
                                 <StackPanel Grid.Column="0"
                                             Margin="0,0,12,0"
                                             VerticalAlignment="Center">
-                                    <TextBlock Text="RGB surface observation"
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_RgbSurfaceObservation}"
                                                FontSize="11"
                                                FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
@@ -261,8 +262,8 @@
                                           SelectedItem="{Binding SelectedObservedRgbSurface, Mode=TwoWay}"
                                           MinHeight="30"
                                           VerticalAlignment="Center"
-                                          ToolTip="Record the physical RGB or backlight surface that changed after probing"
-                                          AutomationProperties.Name="Observed RGB surface"/>
+                                          ToolTip="{x:Static loc:Strings.LightingView_RecordThePhysicalRgbOrBacklightSurfaceThat}"
+                                          AutomationProperties.Name="{x:Static loc:Strings.LightingView_ObservedRgbSurface}"/>
 
                                 <StackPanel Grid.Column="2"
                                             Orientation="Horizontal"
@@ -273,8 +274,8 @@
                                             Style="{StaticResource SecondaryButton}"
                                             Padding="8,5"
                                             Margin="0,0,6,0"
-                                            ToolTip="Apply a safe bright probe color through the active HP keyboard backend"
-                                            AutomationProperties.Name="Run RGB surface probe">
+                                            ToolTip="{x:Static loc:Strings.LightingView_ApplyASafeBrightProbeColorThroughTheActive}"
+                                            AutomationProperties.Name="{x:Static loc:Strings.LightingView_RunRgbSurfaceProbe}">
                                         <StackPanel Orientation="Horizontal">
                                             <Path Data="{StaticResource IconRefresh}"
                                                   Width="12"
@@ -288,8 +289,8 @@
                                     <Button Command="{Binding SaveRgbSurfaceObservationCommand}"
                                             Style="{StaticResource SecondaryButton}"
                                             Padding="8,5"
-                                            ToolTip="Save the selected observed RGB surface for diagnostic exports"
-                                            AutomationProperties.Name="Save observed RGB surface">
+                                            ToolTip="{x:Static loc:Strings.LightingView_SaveTheSelectedObservedRgbSurfaceForDiagno}"
+                                            AutomationProperties.Name="{x:Static loc:Strings.LightingView_SaveObservedRgbSurface}">
                                         <StackPanel Orientation="Horizontal">
                                             <Path Data="{StaticResource IconCheck}"
                                                   Width="12"
@@ -356,8 +357,8 @@
             <!-- Sync All Button -->
             <Button Grid.Column="1" Command="{Binding SyncAllRgbCommand}"
                     VerticalAlignment="Top" Margin="0,0,0,0"
-                    ToolTip="Sync current color across all connected RGB devices"
-                    AutomationProperties.Name="Sync all RGB devices">
+                    ToolTip="{x:Static loc:Strings.LightingView_SyncCurrentColorAcrossAllConnectedRgbDevic}"
+                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_SyncAllRgbDevices}">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="{DynamicResource AccentBrush}"/>
@@ -372,7 +373,7 @@
                                             CornerRadius="8" Padding="{TemplateBinding Padding}">
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Text="🔗" FontSize="14" Margin="0,0,8,0" VerticalAlignment="Center"/>
-                                            <TextBlock Text="Sync All RGB" FontWeight="SemiBold" FontSize="13" VerticalAlignment="Center"/>
+                                            <TextBlock Text="{x:Static loc:Strings.LightingView_SyncAllRgb}" FontWeight="SemiBold" FontSize="13" VerticalAlignment="Center"/>
                                         </StackPanel>
                                     </Border>
                                     <ControlTemplate.Triggers>
@@ -398,7 +399,7 @@
                     <StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
                             <TextBlock Text="🎨" FontSize="24" Margin="0,0,12,0" VerticalAlignment="Center"/>
-                            <TextBlock Text="Scene Quick Select" FontSize="20" FontWeight="SemiBold" 
+                            <TextBlock Text="{x:Static loc:Strings.LightingView_SceneQuickSelect}" FontSize="20" FontWeight="SemiBold" 
                                        Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                             <!-- Was a stray hardcoded purple (#9C27B0) matching nothing else in the app's
                                  palette. AccentBrush is already what "active/selected" means everywhere
@@ -410,8 +411,8 @@
                                           Style="{StaticResource ToggleButtonStyle}"
                                           Margin="12,0,0,0"
                                           VerticalAlignment="Center"
-                                          ToolTip="Enable or disable Scene Quick Select controls in this card"
-                                          AutomationProperties.Name="Enable Scene Quick Select card"/>
+                                          ToolTip="{x:Static loc:Strings.LightingView_EnableOrDisableSceneQuickSelectControlsInT}"
+                                          AutomationProperties.Name="{x:Static loc:Strings.LightingView_EnableSceneQuickSelectCard}"/>
                         </StackPanel>
 
                         <StackPanel Visibility="{Binding IsSceneQuickSelectCardContentVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
@@ -478,14 +479,14 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel>
-                                <TextBlock Text="Ambient Screen Lighting" FontSize="14" FontWeight="SemiBold" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_AmbientScreenLighting}" FontSize="14" FontWeight="SemiBold" 
                                            Foreground="{StaticResource TextPrimaryBrush}"/>
-                                <TextBlock Text="RGB syncs with screen edge colors" FontSize="12" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_RgbSyncsWithScreenEdgeColors}" FontSize="12" 
                                            Foreground="{StaticResource TextSecondaryBrush}"/>
                             </StackPanel>
                             <ToggleButton Grid.Column="1" IsChecked="{Binding IsAmbientModeActive, Mode=TwoWay}"
                                           Style="{StaticResource ToggleButtonStyle}"
-                                          AutomationProperties.Name="Ambient screen lighting"/>
+                                          AutomationProperties.Name="{x:Static loc:Strings.LightingView_AmbientScreenLighting}"/>
                         </Grid>
 
                         <!-- Audio Reactive Toggle -->
@@ -496,16 +497,16 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel>
-                                <TextBlock Text="Audio Reactive Lighting" FontSize="14" FontWeight="SemiBold"
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_AudioReactiveLighting}" FontSize="14" FontWeight="SemiBold"
                                            Foreground="{StaticResource TextPrimaryBrush}"/>
-                                <TextBlock Text="Pulses with system audio output via WASAPI loopback" FontSize="12"
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_PulsesWithSystemAudioOutputViaWasapiLoopba}" FontSize="12"
                                            Foreground="{StaticResource TextSecondaryBrush}"/>
                                 <TextBlock Text="{Binding AudioReactiveLevelText}" FontSize="11"
                                            Foreground="{StaticResource TextTertiaryBrush}" Margin="0,4,0,0"/>
                             </StackPanel>
                             <ToggleButton Grid.Column="1" IsChecked="{Binding IsAudioReactiveModeActive, Mode=TwoWay}"
                                           Style="{StaticResource ToggleButtonStyle}"
-                                          AutomationProperties.Name="Audio reactive lighting"/>
+                                          AutomationProperties.Name="{x:Static loc:Strings.LightingView_AudioReactiveLighting}"/>
                         </Grid>
 
                         <Grid Margin="0,8,0,0"
@@ -523,13 +524,13 @@
                             <ComboBox Grid.Column="1" ItemsSource="{Binding AudioVisualizationModes}"
                                       SelectedItem="{Binding SelectedAudioVisualizationMode, Mode=TwoWay}"
                                       Style="{StaticResource ModernComboBox}"
-                                      AutomationProperties.Name="Audio reactive visualization mode"/>
+                                      AutomationProperties.Name="{x:Static loc:Strings.LightingView_AudioReactiveVisualizationMode}"/>
 
-                            <TextBlock Grid.Column="3" Text="Sensitivity" VerticalAlignment="Center"
+                            <TextBlock Grid.Column="3" Text="{x:Static loc:Strings.LightingView_Sensitivity}" VerticalAlignment="Center"
                                        Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,8,0"/>
                             <Slider Grid.Column="4" Minimum="0.1" Maximum="1" TickFrequency="0.05" IsSnapToTickEnabled="True"
                                     Value="{Binding AudioReactiveSensitivity, Mode=TwoWay}"
-                                    AutomationProperties.Name="Audio reactive sensitivity"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_AudioReactiveSensitivity}"/>
                         </Grid>
                         </StackPanel>
                     </StackPanel>
@@ -541,7 +542,7 @@
                         <!-- Brand Header with Logo -->
                         <StackPanel Style="{StaticResource BrandSectionHeader}">
                             <Image Source="pack://application:,,,/Assets/corsair.png" Width="28" Height="28" Margin="0,0,12,0"/>
-                            <TextBlock Text="Corsair Devices" FontSize="20" FontWeight="SemiBold" 
+                            <TextBlock Text="{x:Static loc:Strings.LightingView_CorsairDevices}" FontSize="20" FontWeight="SemiBold" 
                                        Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                             <Border Background="#0D000000" CornerRadius="8" Padding="8,3" Margin="12,0,0,0" VerticalAlignment="Center"
                                     BorderBrush="{Binding CorsairStatusBrush}" BorderThickness="1"
@@ -555,8 +556,8 @@
                                           Style="{StaticResource ToggleButtonStyle}"
                                           Margin="12,0,0,0"
                                           VerticalAlignment="Center"
-                                          ToolTip="Enable or disable Corsair controls in this card"
-                                          AutomationProperties.Name="Enable Corsair Devices card"/>
+                                          ToolTip="{x:Static loc:Strings.LightingView_EnableOrDisableCorsairControlsInThisCard}"
+                                          AutomationProperties.Name="{x:Static loc:Strings.LightingView_EnableCorsairDevicesCard}"/>
                         </StackPanel>
 
                         <StackPanel Visibility="{Binding IsCorsairCardContentVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
@@ -575,7 +576,7 @@
                                        VerticalAlignment="Center"/>
                             
                             <Button Grid.Column="1" 
-                                    Content="Discover Devices" 
+                                    Content="{x:Static loc:Strings.LightingView_DiscoverDevices}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding DiscoverCorsairDevicesCommand}"
                                     Padding="16,8"/>
@@ -621,11 +622,11 @@
 
                                             <!-- Identify Button -->
                                             <Button Grid.Column="2" 
-                                                    Content="💡 Identify"
+                                                    Content="{x:Static loc:Strings.LightingView_Identify}"
                                                     Style="{StaticResource ModernButton}"
                                                     Command="{Binding DataContext.FlashCorsairDeviceCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                                     CommandParameter="{Binding}"
-                                                    ToolTip="Flash device LEDs to identify this device"
+                                                    ToolTip="{x:Static loc:Strings.LightingView_FlashDeviceLedsToIdentifyThisDevice}"
                                                     Padding="12,6"
                                                     Margin="8,0,0,0"
                                                     VerticalAlignment="Center"/>
@@ -653,7 +654,7 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Column="0" Text="Lighting Preset:" 
+                            <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.LightingView_LightingPreset}" 
                                        FontSize="14" 
                                        Foreground="{StaticResource TextPrimaryBrush}"
                                        VerticalAlignment="Center" Margin="0,0,12,0"/>
@@ -667,12 +668,12 @@
                             
                             <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
                                 <Button Content="Apply" Style="{StaticResource ModernButton}" Command="{Binding ApplyCorsairLightingCommand}" Padding="16,8" Margin="0,0,8,0"/>
-                                <Button Content="Apply to System" Style="{StaticResource ModernButton}" Command="{Binding ApplyCorsairPresetToSystemCommand}" Padding="12,8"/>
+                                <Button Content="{x:Static loc:Strings.LightingView_ApplyToSystem}" Style="{StaticResource ModernButton}" Command="{Binding ApplyCorsairPresetToSystemCommand}" Padding="12,8"/>
                             </StackPanel>
                         </Grid>
 
                         <!-- Custom RGB Color with Color Picker -->
-                        <Expander Header="Custom RGB Color" 
+                        <Expander Header="{x:Static loc:Strings.LightingView_CustomRgbColor}" 
                                   Margin="0,16,0,0"
                                   IsExpanded="False">
                             <StackPanel Margin="0,12,0,0">
@@ -686,7 +687,7 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <TextBlock Grid.Column="0" Text="Color (Hex):" 
+                                    <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.LightingView_ColorHex}" 
                                                FontSize="14" 
                                                Foreground="{StaticResource TextPrimaryBrush}"
                                                VerticalAlignment="Center" Margin="0,0,12,0"/>
@@ -698,7 +699,7 @@
                                              MaxLength="7"/>
                                     
                                     <Button Grid.Column="2" 
-                                            Content="Apply Color" 
+                                            Content="{x:Static loc:Strings.LightingView_ApplyColor}" 
                                             Style="{StaticResource ModernButton}"
                                             Command="{Binding ApplyCorsairCustomColorCommand}"
                                             Padding="16,8"/>
@@ -707,12 +708,12 @@
                         </Expander>
 
                         <!-- DPI Configuration (for mice) -->
-                        <Expander Header="DPI Configuration" 
+                        <Expander Header="{x:Static loc:Strings.LightingView_DpiConfiguration}" 
                                   Margin="0,16,0,0"
                                   IsExpanded="False"
                                   Visibility="{Binding HasCorsairMouse, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel Margin="0,12,0,0">
-                                <TextBlock Text="DPI Stages:" FontSize="14" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_DpiStages}" FontSize="14" 
                                            Foreground="{StaticResource TextPrimaryBrush}" 
                                            Margin="0,0,0,8"/>
                                 
@@ -763,20 +764,20 @@
                                                   SelectedItem="{Binding SelectedCorsairDpiProfile}"
                                                   DisplayMemberPath="Name"
                                                   Width="220" Margin="0,0,8,0"
-                                                  ToolTip="Select a saved DPI profile (Save with same name will prompt to overwrite)"
-                                                  AutomationProperties.Name="Saved DPI profile selection"/>
+                                                  ToolTip="{x:Static loc:Strings.LightingView_SelectASavedDpiProfileSaveWithSameNameWill}"
+                                                  AutomationProperties.Name="{x:Static loc:Strings.LightingView_SavedDpiProfileSelection}"/>
 
-                                        <Button Content="Save Profile" Style="{StaticResource ModernButton}" Command="{Binding SaveCorsairDpiProfileCommand}" Padding="12,6" Margin="0,0,8,0" ToolTip="Save current DPI stages as a profile"/>
-                                        <Button Content="Apply Profile" Style="{StaticResource ModernButton}" Command="{Binding ApplyCorsairDpiProfileCommand}" Padding="12,6" Margin="0,0,8,0" ToolTip="Apply selected DPI profile to current stages"/>
-                                        <Button Content="Delete" Style="{StaticResource ModernButton}" Command="{Binding DeleteCorsairDpiProfileCommand}" Padding="12,6" ToolTip="Delete the selected DPI profile" />
+                                        <Button Content="{x:Static loc:Strings.LightingView_SaveProfile}" Style="{StaticResource ModernButton}" Command="{Binding SaveCorsairDpiProfileCommand}" Padding="12,6" Margin="0,0,8,0" ToolTip="{x:Static loc:Strings.LightingView_SaveCurrentDpiStagesAsAProfile}"/>
+                                        <Button Content="{x:Static loc:Strings.LightingView_ApplyProfile}" Style="{StaticResource ModernButton}" Command="{Binding ApplyCorsairDpiProfileCommand}" Padding="12,6" Margin="0,0,8,0" ToolTip="{x:Static loc:Strings.LightingView_ApplySelectedDpiProfileToCurrentStages}"/>
+                                        <Button Content="Delete" Style="{StaticResource ModernButton}" Command="{Binding DeleteCorsairDpiProfileCommand}" Padding="12,6" ToolTip="{x:Static loc:Strings.LightingView_DeleteTheSelectedDpiProfile}" />
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
-                                        <Button Content="Restore Defaults" 
+                                        <Button Content="{x:Static loc:Strings.LightingView_RestoreDefaults}" 
                                                 Style="{StaticResource ModernButton}"
                                                 Command="{Binding RestoreCorsairDpiCommand}"
                                                 Padding="12,6" Margin="0,0,8,0"/>
-                                        <Button Content="Apply DPI Settings" 
+                                        <Button Content="{x:Static loc:Strings.LightingView_ApplyDpiSettings}" 
                                                 Style="{StaticResource ModernButton}"
                                                 Command="{Binding ApplyCorsairDpiCommand}"
                                                 Padding="16,8" />
@@ -794,7 +795,7 @@
                         <!-- Brand Header with Logo -->
                         <StackPanel Style="{StaticResource BrandSectionHeader}">
                             <Image Source="pack://application:,,,/Assets/logitechg.png" Width="28" Height="28" Margin="0,0,12,0"/>
-                            <TextBlock Text="Logitech Devices" FontSize="20" FontWeight="SemiBold" 
+                            <TextBlock Text="{x:Static loc:Strings.LightingView_LogitechDevices}" FontSize="20" FontWeight="SemiBold" 
                                        Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                             <Border Background="#0D000000" CornerRadius="8" Padding="8,3" Margin="12,0,0,0" VerticalAlignment="Center"
                                     BorderBrush="{Binding LogitechStatusBrush}" BorderThickness="1"
@@ -808,8 +809,8 @@
                                           Style="{StaticResource ToggleButtonStyle}"
                                           Margin="12,0,0,0"
                                           VerticalAlignment="Center"
-                                          ToolTip="Enable or disable Logitech controls in this card"
-                                          AutomationProperties.Name="Enable Logitech Devices card"/>
+                                          ToolTip="{x:Static loc:Strings.LightingView_EnableOrDisableLogitechControlsInThisCard}"
+                                          AutomationProperties.Name="{x:Static loc:Strings.LightingView_EnableLogitechDevicesCard}"/>
                         </StackPanel>
 
                         <StackPanel Visibility="{Binding IsLogitechCardContentVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
@@ -817,13 +818,13 @@
                         <!-- System RGB Section -->
                         <Border Background="{StaticResource SurfaceDarkBrush}" CornerRadius="10" Padding="16" Margin="0,0,0,16">
                             <StackPanel>
-                                <TextBlock Text="🎨 Apply to All System RGB" FontSize="14" FontWeight="SemiBold" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_ApplyToAllSystemRgb}" FontSize="14" FontWeight="SemiBold" 
                                            Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,8"/>
-                                <TextBlock Text="Sync color across all detected Logitech devices" FontSize="12" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_SyncColorAcrossAllDetectedLogitechDevices}" FontSize="12" 
                                            Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,0,12"/>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                     <controls:ColorPickerControl HexValue="{Binding SystemColorHex, Mode=TwoWay}" Width="220"/>
-                                    <Button Content="Apply to System" Style="{StaticResource ModernButton}" Command="{Binding ApplyToSystemCommand}" Padding="16,8" Margin="12,0,0,0"/>
+                                    <Button Content="{x:Static loc:Strings.LightingView_ApplyToSystem}" Style="{StaticResource ModernButton}" Command="{Binding ApplyToSystemCommand}" Padding="16,8" Margin="12,0,0,0"/>
                                 </StackPanel>
                             </StackPanel>
                         </Border>
@@ -842,7 +843,7 @@
                                        VerticalAlignment="Center"/>
                             
                             <Button Grid.Column="1" 
-                                    Content="Discover Devices" 
+                                    Content="{x:Static loc:Strings.LightingView_DiscoverDevices}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding DiscoverLogitechDevicesCommand}"
                                     Padding="16,8"/>
@@ -910,7 +911,7 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Column="0" Text="Static Color:" 
+                            <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.LightingView_StaticColor}" 
                                        FontSize="14" 
                                        Foreground="{StaticResource TextPrimaryBrush}"
                                        VerticalAlignment="Center" Margin="0,0,12,0"/>
@@ -921,7 +922,7 @@
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding LogitechRedValue, UpdateSourceTrigger=PropertyChanged}"
                                          FontSize="14"
-                                         AutomationProperties.Name="Logitech color red value"/>
+                                         AutomationProperties.Name="{x:Static loc:Strings.LightingView_LogitechColorRedValue}"/>
                             </StackPanel>
                             
                             <StackPanel Grid.Column="2" Margin="0,0,8,0">
@@ -930,7 +931,7 @@
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding LogitechGreenValue, UpdateSourceTrigger=PropertyChanged}"
                                          FontSize="14"
-                                         AutomationProperties.Name="Logitech color green value"/>
+                                         AutomationProperties.Name="{x:Static loc:Strings.LightingView_LogitechColorGreenValue}"/>
                             </StackPanel>
                             
                             <StackPanel Grid.Column="3" Margin="0,0,8,0">
@@ -939,11 +940,11 @@
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding LogitechBlueValue, UpdateSourceTrigger=PropertyChanged}"
                                          FontSize="14"
-                                         AutomationProperties.Name="Logitech color blue value"/>
+                                         AutomationProperties.Name="{x:Static loc:Strings.LightingView_LogitechColorBlueValue}"/>
                             </StackPanel>
                             
                             <Button Grid.Column="5" 
-                                    Content="Apply Color" 
+                                    Content="{x:Static loc:Strings.LightingView_ApplyColor}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding ApplyLogitechColorCommand}"
                                     Padding="16,8" 
@@ -962,7 +963,7 @@
                                 <Path Data="{StaticResource IconRazer}" Fill="#44D62C" Stretch="Uniform"
                                       Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
-                            <TextBlock Text="Razer Devices" FontSize="20" FontWeight="SemiBold" 
+                            <TextBlock Text="{x:Static loc:Strings.LightingView_RazerDevices}" FontSize="20" FontWeight="SemiBold" 
                                        Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                             <Border Background="#0D000000" CornerRadius="8" Padding="8,3" Margin="12,0,0,0" VerticalAlignment="Center"
                                     BorderBrush="{Binding RazerStatusBrush}" BorderThickness="1"
@@ -976,13 +977,13 @@
                                           Style="{StaticResource ToggleButtonStyle}"
                                           Margin="12,0,0,0"
                                           VerticalAlignment="Center"
-                                          ToolTip="Enable or disable Razer controls in this card"
-                                          AutomationProperties.Name="Enable Razer Devices card"/>
+                                          ToolTip="{x:Static loc:Strings.LightingView_EnableOrDisableRazerControlsInThisCard}"
+                                          AutomationProperties.Name="{x:Static loc:Strings.LightingView_EnableRazerDevicesCard}"/>
                         </StackPanel>
 
                         <StackPanel Visibility="{Binding IsRazerCardContentVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
                         
-                        <TextBlock Text="Requires Razer Synapse to be installed and running" 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_RequiresRazerSynapseToBeInstalledAndRunnin}" 
                                    FontSize="12" 
                                    Foreground="{StaticResource TextSecondaryBrush}"
                                    Margin="0,0,0,16"/>
@@ -1001,7 +1002,7 @@
                                        VerticalAlignment="Center"/>
                             
                             <Button Grid.Column="1" 
-                                    Content="Discover Devices" 
+                                    Content="{x:Static loc:Strings.LightingView_DiscoverDevices}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding DiscoverRazerDevicesCommand}"
                                     Padding="16,8"/>
@@ -1048,7 +1049,7 @@
                         </ItemsControl>
 
                         <!-- Razer Static Color -->
-                        <TextBlock Text="Lighting Control" FontSize="16" FontWeight="SemiBold" 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_LightingControl}" FontSize="16" FontWeight="SemiBold" 
                                    Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,12"/>
                         
                         <Grid Margin="0,0,0,16">
@@ -1061,7 +1062,7 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Column="0" Text="Color:" 
+                            <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.LightingView_Color}" 
                                        FontSize="14" 
                                        Foreground="{StaticResource TextPrimaryBrush}"
                                        VerticalAlignment="Center" Margin="0,0,12,0"/>
@@ -1072,7 +1073,7 @@
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding RazerRedValue, UpdateSourceTrigger=PropertyChanged}"
                                          FontSize="14"
-                                         AutomationProperties.Name="Razer color red value"/>
+                                         AutomationProperties.Name="{x:Static loc:Strings.LightingView_RazerColorRedValue}"/>
                             </StackPanel>
                             
                             <StackPanel Grid.Column="2" Margin="0,0,8,0">
@@ -1081,7 +1082,7 @@
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding RazerGreenValue, UpdateSourceTrigger=PropertyChanged}"
                                          FontSize="14"
-                                         AutomationProperties.Name="Razer color green value"/>
+                                         AutomationProperties.Name="{x:Static loc:Strings.LightingView_RazerColorGreenValue}"/>
                             </StackPanel>
                             
                             <StackPanel Grid.Column="3" Margin="0,0,8,0">
@@ -1090,11 +1091,11 @@
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding RazerBlueValue, UpdateSourceTrigger=PropertyChanged}"
                                          FontSize="14"
-                                         AutomationProperties.Name="Razer color blue value"/>
+                                         AutomationProperties.Name="{x:Static loc:Strings.LightingView_RazerColorBlueValue}"/>
                             </StackPanel>
                             
                             <Button Grid.Column="5" 
-                                    Content="Apply Static" 
+                                    Content="{x:Static loc:Strings.LightingView_ApplyStatic}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding ApplyRazerColorCommand}"
                                     Padding="16,8" 
@@ -1110,14 +1111,14 @@
                             </Grid.ColumnDefinitions>
                             
                             <Button Grid.Column="0" 
-                                    Content="Breathing" 
+                                    Content="{x:Static loc:Strings.LightingView_Breathing}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding ApplyRazerBreathingCommand}"
                                     Padding="16,8" 
                                     Margin="0,0,8,0"/>
                             
                             <Button Grid.Column="1" 
-                                    Content="Spectrum Cycle" 
+                                    Content="{x:Static loc:Strings.LightingView_SpectrumCycle}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding ApplyRazerSpectrumCommand}"
                                     Padding="16,8"/>
@@ -1126,7 +1127,7 @@
                         <!-- Note about limited Razer support -->
                         <Border Background="{StaticResource SurfaceDarkBrush}" CornerRadius="4" 
                                 Padding="12" Margin="0,16,0,0">
-                            <TextBlock Text="Razer support is limited to detected-device status and validated lighting actions for supported hardware." 
+                            <TextBlock Text="{x:Static loc:Strings.LightingView_RazerSupportIsLimitedToDetectedDeviceStatu}" 
                                        FontSize="12" 
                                        Foreground="{StaticResource TextSecondaryBrush}"
                                        TextWrapping="Wrap"/>
@@ -1145,14 +1146,14 @@
                                 <TextBlock Text="🌈" FontSize="14"
                                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
-                            <TextBlock Text="OpenRGB Devices" FontSize="20" FontWeight="SemiBold" 
+                            <TextBlock Text="{x:Static loc:Strings.LightingView_OpenrgbDevices}" FontSize="20" FontWeight="SemiBold" 
                                        Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                             <Border Background="#1AFF6B35" CornerRadius="8" Padding="8,3" Margin="12,0,0,0" VerticalAlignment="Center">
                                 <TextBlock Text="{Binding OpenRgbStatusText}" FontSize="10" Foreground="#FF6B35"/>
                             </Border>
                         </StackPanel>
                         
-                        <TextBlock Text="Optional generic RGB control via OpenRGB server for motherboards, RAM, GPUs, fans, LED strips, and other peripherals."
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_OptionalGenericRgbControlViaOpenrgbServerF}"
                                    FontSize="12" 
                                    Foreground="{StaticResource TextSecondaryBrush}"
                                    Margin="0,0,0,16"/>
@@ -1205,7 +1206,7 @@
                         </ItemsControl>
 
                         <!-- Quick Color Buttons for OpenRGB -->
-                        <TextBlock Text="⚡ QUICK COLORS" 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_QuickColors}" 
                                    FontSize="11" FontWeight="SemiBold"
                                    Foreground="{StaticResource TextTertiaryBrush}" 
                                    Margin="0,0,0,8"/>
@@ -1213,44 +1214,44 @@
                             <Button Content="🔴" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Red"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#FF0000"
-                                    AutomationProperties.Name="OpenRGB quick color: Red"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorRed}"/>
                             <Button Content="🔵" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Blue"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#0066FF"
-                                    AutomationProperties.Name="OpenRGB quick color: Blue"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorBlue}"/>
                             <Button Content="🟢" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Green"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#00FF00"
-                                    AutomationProperties.Name="OpenRGB quick color: Green"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorGreen}"/>
                             <Button Content="🟣" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Purple"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#9400D3"
-                                    AutomationProperties.Name="OpenRGB quick color: Purple"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorPurple}"/>
                             <Button Content="🟡" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Yellow"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#FFFF00"
-                                    AutomationProperties.Name="OpenRGB quick color: Yellow"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorYellow}"/>
                             <Button Content="⚪" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="White"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#FFFFFF"
-                                    AutomationProperties.Name="OpenRGB quick color: White"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorWhite}"/>
                             <Button Content="🟠" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Orange"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#FF6B35"
-                                    AutomationProperties.Name="OpenRGB quick color: Orange"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorOrange}"/>
                             <Button Content="⬛" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Off"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#000000"
-                                    AutomationProperties.Name="OpenRGB quick color: Off"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorOff}"/>
                         </WrapPanel>
                         
                         <!-- Info Box -->
                         <Border Background="{StaticResource SurfaceDarkBrush}" CornerRadius="4" 
                                 Padding="12" Margin="0,16,0,0">
                             <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}">
-                                <Run Text="OpenRGB Integration:"/>
-                                <Run Text=" Controls any RGB device supported by OpenRGB (motherboards, RAM, GPUs, coolers, LED strips, etc). "/>
-                                <Run Text="Download OpenRGB from openrgb.org and enable the SDK Server (Settings → SDK Server → Start Server)."/>
+                                <Run Text="{x:Static loc:Strings.LightingView_OpenrgbIntegration}"/>
+                                <Run Text="{x:Static loc:Strings.LightingView_ControlsAnyRgbDeviceSupportedByOpenrgbMoth}"/>
+                                <Run Text="{x:Static loc:Strings.LightingView_DownloadOpenrgbFromOpenrgbOrgAndEnableTheS}"/>
                             </TextBlock>
                         </Border>
                     </StackPanel>
@@ -1266,7 +1267,7 @@
                                 <TextBlock Text="⌨️" FontSize="14"
                                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
-                            <TextBlock Text="HP OMEN Keyboard" FontSize="20" FontWeight="SemiBold" 
+                            <TextBlock Text="{x:Static loc:Strings.LightingView_HpOmenKeyboard}" FontSize="20" FontWeight="SemiBold" 
                                        Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                             <Border Background="#1AE6002E" CornerRadius="8" Padding="8,3" Margin="12,0,0,0" VerticalAlignment="Center">
                                 <StackPanel Orientation="Horizontal">
@@ -1277,11 +1278,11 @@
                                           Style="{StaticResource ToggleButtonStyle}"
                                           Margin="12,0,0,0"
                                           VerticalAlignment="Center"
-                                          ToolTip="Enable or disable HP OMEN keyboard controls in this card"
-                                          AutomationProperties.Name="Enable HP OMEN Keyboard card"/>
+                                          ToolTip="{x:Static loc:Strings.LightingView_EnableOrDisableHpOmenKeyboardControlsInThi}"
+                                          AutomationProperties.Name="{x:Static loc:Strings.LightingView_EnableHpOmenKeyboardCard}"/>
                         </StackPanel>
                         
-                        <TextBlock Text="Your laptop's built-in 4-zone RGB keyboard" 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_YourLaptopSBuiltIn4ZoneRgbKeyboard}" 
                                    FontSize="12" 
                                    Foreground="{StaticResource TextSecondaryBrush}"
                                    Margin="0,0,0,12"/>
@@ -1296,47 +1297,47 @@
                         <StackPanel Visibility="{Binding HasFourZoneKeyboard, Converter={StaticResource BooleanToVisibilityConverter}}">
 
                         <!-- Quick Color Buttons -->
-                        <TextBlock Text="⚡ QUICK COLORS (click to apply to all zones)" 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_QuickColorsClickToApplyToAllZones}" 
                                    FontSize="11" FontWeight="SemiBold"
                                    Foreground="{StaticResource TextTertiaryBrush}" 
                                    Margin="0,0,0,8"/>
                         <WrapPanel Margin="0,0,0,16">
                             <Button Content="🔴" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="OMEN Red"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_OmenRed}"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#E6002E"
-                                    AutomationProperties.Name="Keyboard quick color: OMEN Red"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorOmenRed}"/>
                             <Button Content="🔵" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Blue"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#0066FF"
-                                    AutomationProperties.Name="Keyboard quick color: Blue"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorBlue}"/>
                             <Button Content="🟢" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Green"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#00FF00"
-                                    AutomationProperties.Name="Keyboard quick color: Green"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorGreen}"/>
                             <Button Content="🟣" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Purple"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#9400D3"
-                                    AutomationProperties.Name="Keyboard quick color: Purple"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorPurple}"/>
                             <Button Content="🟡" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Yellow"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#FFFF00"
-                                    AutomationProperties.Name="Keyboard quick color: Yellow"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorYellow}"/>
                             <Button Content="⚪" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="White"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#FFFFFF"
-                                    AutomationProperties.Name="Keyboard quick color: White"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorWhite}"/>
                             <Button Content="🩵" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Cyan"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#00FFFF"
-                                    AutomationProperties.Name="Keyboard quick color: Cyan"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorCyan}"/>
                             <Button Content="🩷" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Pink"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#FF69B4"
-                                    AutomationProperties.Name="Keyboard quick color: Pink"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorPink}"/>
                             <Button Content="⬛" FontSize="14" Padding="8,4" Margin="0,0,6,4"
                                     Style="{StaticResource ModernButton}" ToolTip="Off"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#000000"
-                                    AutomationProperties.Name="Keyboard quick color: Off"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorOff}"/>
                         </WrapPanel>
                         
                         <!-- Keyboard Status Hint (shows tips for models where WMI may not work) -->
@@ -1349,7 +1350,7 @@
                         </Border>
 
                         <!-- Keyboard Zone Display - Visual Schematic -->
-                        <TextBlock Text="🎹 KEYBOARD ZONES (click zone to change color)" 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_KeyboardZonesClickZoneToChangeColor}" 
                                    FontSize="12" FontWeight="SemiBold"
                                    Foreground="{StaticResource TextSecondaryBrush}" 
                                    Margin="0,8,0,12"/>
@@ -1460,7 +1461,7 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             
-                            <TextBlock Grid.Column="0" Text="Preset:" 
+                            <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.LightingView_Preset}" 
                                        FontSize="14" 
                                        Foreground="{StaticResource TextPrimaryBrush}"
                                        VerticalAlignment="Center" Margin="0,0,12,0"/>
@@ -1471,22 +1472,22 @@
                                       SelectedItem="{Binding SelectedKeyboardPreset}"
                                       DisplayMemberPath="Name"
                                       Margin="0,0,12,0"
-                                      AutomationProperties.Name="Keyboard lighting preset selection"/>
+                                      AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardLightingPresetSelection}"/>
 
                             <Button Grid.Column="2"
-                                    Content="Apply to Keyboard"
+                                    Content="{x:Static loc:Strings.KeyboardMapEditor_ApplyToKeyboard}"
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding ApplyKeyboardColorsCommand}"
                                     Padding="16,8"
                                     Margin="0,0,8,0"
-                                    AutomationProperties.Name="Apply zone colors to keyboard"/>
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_ApplyZoneColorsToKeyboard}"/>
                             
                             <Button Grid.Column="3" 
-                                    Content="All Same Color" 
+                                    Content="{x:Static loc:Strings.LightingView_AllSameColor}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding ApplyAllZonesSameColorCommand}"
                                     Padding="16,8"
-                                    ToolTip="Apply Zone 1 color to all zones"/>
+                                    ToolTip="{x:Static loc:Strings.LightingView_ApplyZone1ColorToAllZones}"/>
                         </Grid>
                         
                         <!-- Apply on Startup Toggle -->
@@ -1499,10 +1500,10 @@
                                 </Grid.ColumnDefinitions>
                                 
                                 <StackPanel Grid.Column="0">
-                                    <TextBlock Text="Apply Colors on Startup" 
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_ApplyColorsOnStartup}" 
                                                FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
-                                    <TextBlock Text="Automatically restore saved keyboard colors when OmenCore starts" 
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_AutomaticallyRestoreSavedKeyboardColorsWhe}" 
                                                FontSize="11" 
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                Margin="0,2,0,0"/>
@@ -1512,7 +1513,7 @@
                                               IsChecked="{Binding ApplyKeyboardColorsOnStartup, Mode=TwoWay}"
                                               Style="{StaticResource ModernToggleButton}"
                                               VerticalAlignment="Center"
-                                              AutomationProperties.Name="Apply keyboard colors on startup"/>
+                                              AutomationProperties.Name="{x:Static loc:Strings.LightingView_ApplyKeyboardColorsOnStartup}"/>
                             </Grid>
                         </Border>
 
@@ -1521,10 +1522,10 @@
                                 Margin="0,12,0,0" Padding="16">
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                                    <TextBlock Text="Per-Key RGB" FontSize="14" FontWeight="SemiBold"
+                                    <TextBlock Text="{x:Static loc:Strings.DiagnosticsView_PerKeyRgb}" FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                                     <Border Background="#1A8B5CF6" CornerRadius="6" Padding="8,3" Margin="12,0,0,0" VerticalAlignment="Center">
-                                        <TextBlock Text="OMEN Max" FontSize="10" Foreground="#8B5CF6"/>
+                                        <TextBlock Text="{x:Static loc:Strings.LightingView_OmenMax}" FontSize="10" Foreground="#8B5CF6"/>
                                     </Border>
                                 </StackPanel>
 
@@ -1540,7 +1541,7 @@
                                      lamp map off the device; everywhere else this is collapsed and the
                                      fixed grid below is exactly what it always was. -->
                                 <StackPanel Visibility="{Binding HasMeasuredKeyMap, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                    <TextBlock Text="Measured layout — every key at the position the keyboard reported"
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_MeasuredLayoutEveryKeyAtThePositionTheKeyb}"
                                                FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"
                                                Margin="0,0,0,8" TextWrapping="Wrap"/>
                                     <views:KeyboardMapEditor DataContext="{Binding KeyboardMap}"/>
@@ -1558,7 +1559,7 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="Brush:" FontSize="12"
+                                        <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.KeyboardMapEditor_Brush}" FontSize="12"
                                                    Foreground="{StaticResource TextSecondaryBrush}"
                                                    VerticalAlignment="Center" Margin="0,0,8,0"/>
                                         <Border Grid.Column="1" Width="26" Height="26" CornerRadius="4"
@@ -1567,12 +1568,12 @@
                                         <TextBox Grid.Column="2" Style="{StaticResource ModernTextBox}"
                                                  Text="{Binding SelectedPerKeyColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                  MaxLength="7" Width="72" Margin="0,0,12,0"/>
-                                        <Button Grid.Column="4" Content="Fill All" Style="{StaticResource ModernButton}"
+                                        <Button Grid.Column="4" Content="{x:Static loc:Strings.LightingView_FillAll}" Style="{StaticResource ModernButton}"
                                                 Command="{Binding FillAllPerKeyCommand}" Padding="12,6" Margin="0,0,8,0"/>
-                                        <Button Grid.Column="5" Content="Apply to Keyboard"
+                                        <Button Grid.Column="5" Content="{x:Static loc:Strings.KeyboardMapEditor_ApplyToKeyboard}"
                                                 Style="{StaticResource ModernButton}"
                                                 Command="{Binding ApplyPerKeyLightingCommand}" Padding="16,6"
-                                                AutomationProperties.Name="Apply per-key colors to keyboard"/>
+                                                AutomationProperties.Name="{x:Static loc:Strings.LightingView_ApplyPerKeyColorsToKeyboard}"/>
                                     </Grid>
                                     <!-- Key grid -->
                                     <Border Background="#0D0D0D" CornerRadius="8" Padding="8"
@@ -1629,9 +1630,9 @@
                         DataContext="{Binding DeviceLighting}"
                         Visibility="{Binding SupportsDeviceEffects, Converter={StaticResource BooleanToVisibilityConverter}}">
                     <StackPanel>
-                        <TextBlock Text="Keyboard effects" FontSize="20" FontWeight="SemiBold"
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_KeyboardEffects}" FontSize="20" FontWeight="SemiBold"
                                    Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,4"/>
-                        <TextBlock Text="Run by the keyboard's own controller. These keep running when OmenCore is closed, and replace any per-key colours."
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_RunByTheKeyboardSOwnControllerTheseKeepRun}"
                                    FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
                                    TextWrapping="Wrap" Margin="0,0,0,16"/>
 
@@ -1655,14 +1656,14 @@
                                           ItemsSource="{Binding Speeds}" SelectedItem="{Binding Speed, Mode=TwoWay}"/>
                             </StackPanel>
                             <StackPanel Margin="0,0,16,8">
-                                <TextBlock Text="Direction" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Direction}" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                 <ComboBox Width="130" Style="{StaticResource ModernComboBox}"
                                           ItemsSource="{Binding Directions}" SelectedItem="{Binding Direction, Mode=TwoWay}"/>
                             </StackPanel>
                         </WrapPanel>
 
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
-                            <CheckBox Content="Custom colours" IsChecked="{Binding UseCustomColors, Mode=TwoWay}"
+                            <CheckBox Content="{x:Static loc:Strings.LightingView_CustomColours}" IsChecked="{Binding UseCustomColors, Mode=TwoWay}"
                                       Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"
                                       Margin="0,0,16,0"/>
                             <!-- Swatch is the picker button, matching the per-key editor. The hex
@@ -1671,8 +1672,8 @@
                             <Button Command="{Binding PickPrimaryColorCommand}" Cursor="Hand"
                                     Padding="0" BorderThickness="0" Background="Transparent"
                                     Margin="0,0,6,0" IsEnabled="{Binding UseCustomColors}"
-                                    ToolTip="Choose the first colour"
-                                    AutomationProperties.Name="Choose the first custom effect colour">
+                                    ToolTip="{x:Static loc:Strings.LightingView_ChooseTheFirstColour}"
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_ChooseTheFirstCustomEffectColour}">
                                 <Border Width="26" Height="26" CornerRadius="4"
                                         Background="{Binding PrimaryColorBrush}"
                                         BorderBrush="#666" BorderThickness="1"/>
@@ -1684,8 +1685,8 @@
                             <Button Command="{Binding PickSecondaryColorCommand}" Cursor="Hand"
                                     Padding="0" BorderThickness="0" Background="Transparent"
                                     Margin="0,0,6,0" IsEnabled="{Binding UseCustomColors}"
-                                    ToolTip="Choose the second colour"
-                                    AutomationProperties.Name="Choose the second custom effect colour">
+                                    ToolTip="{x:Static loc:Strings.LightingView_ChooseTheSecondColour}"
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_ChooseTheSecondCustomEffectColour}">
                                 <Border Width="26" Height="26" CornerRadius="4"
                                         Background="{Binding SecondaryColorBrush}"
                                         BorderBrush="#666" BorderThickness="1"/>
@@ -1693,9 +1694,9 @@
                             <TextBox Width="80" Margin="0,0,16,0" MaxLength="7"
                                      Text="{Binding SecondaryColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                      IsEnabled="{Binding UseCustomColors}"/>
-                            <Button Content="Apply effect" Style="{StaticResource ModernButton}" Padding="16,6"
+                            <Button Content="{x:Static loc:Strings.LightingView_ApplyEffect}" Style="{StaticResource ModernButton}" Padding="16,6"
                                     Command="{Binding ApplyEffectCommand}" Margin="0,0,8,0"/>
-                            <Button Content="What's on it now?" Style="{StaticResource ModernButton}" Padding="12,6"
+                            <Button Content="{x:Static loc:Strings.LightingView_WhatSOnItNow}" Style="{StaticResource ModernButton}" Padding="12,6"
                                     Command="{Binding ReadEffectCommand}"/>
                         </StackPanel>
 
@@ -1714,19 +1715,19 @@
                         DataContext="{Binding DeviceLighting}"
                         Visibility="{Binding SupportsDeviceEffects, Converter={StaticResource BooleanToVisibilityConverter}}">
                     <StackPanel>
-                        <TextBlock Text="Fn+1 / Fn+2 cycle" FontSize="20" FontWeight="SemiBold"
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_Fn1Fn2Cycle}" FontSize="20" FontWeight="SemiBold"
                                    Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,4"/>
-                        <TextBlock Text="The keyboard remembers a list of effects and steps through it when you press Fn+1 (next) or Fn+2 (previous). Curate that list here and it keeps working with OmenCore closed, or uninstalled."
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_TheKeyboardRemembersAListOfEffectsAndSteps}"
                                    FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
                                    TextWrapping="Wrap" Margin="0,0,0,16"/>
 
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
-                            <Button Content="Add to cycle" Style="{StaticResource ModernButton}" Padding="16,6"
+                            <Button Content="{x:Static loc:Strings.LightingView_AddToCycle}" Style="{StaticResource ModernButton}" Padding="16,6"
                                     Command="{Binding StageCurrentEffectCommand}" Margin="0,0,8,0"
-                                    ToolTip="Stage the effect, colours, speed and direction set above"/>
-                            <Button Content="Write to keyboard" Style="{StaticResource ModernButton}" Padding="16,6"
+                                    ToolTip="{x:Static loc:Strings.LightingView_StageTheEffectColoursSpeedAndDirectionSetA}"/>
+                            <Button Content="{x:Static loc:Strings.LightingView_WriteToKeyboard}" Style="{StaticResource ModernButton}" Padding="16,6"
                                     Command="{Binding WriteFnCycleCommand}"
-                                    ToolTip="Send every staged profile to the keyboard"/>
+                                    ToolTip="{x:Static loc:Strings.LightingView_SendEveryStagedProfileToTheKeyboard}"/>
                         </StackPanel>
 
                         <TextBlock Text="{Binding FnCycleEmptyHint}" FontSize="12" FontStyle="Italic"
@@ -1761,19 +1762,19 @@
                                             <!-- IsChecked is one-way: the view model owns which slot is
                                                  active and clears the others, so the radios cannot get
                                                  into a state where two look selected. -->
-                                            <RadioButton Grid.Column="2" Content="Showing" VerticalAlignment="Center"
+                                            <RadioButton Grid.Column="2" Content="{x:Static loc:Strings.LightingView_Showing}" VerticalAlignment="Center"
                                                          Margin="0,0,12,0" FontSize="11"
                                                          Foreground="{StaticResource TextSecondaryBrush}"
                                                          IsChecked="{Binding IsActive, Mode=OneWay}"
                                                          Command="{Binding DataContext.MakeFnSlotActiveCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                                          CommandParameter="{Binding}"
-                                                         ToolTip="Leave the keyboard showing this one after writing"/>
+                                                         ToolTip="{x:Static loc:Strings.LightingView_LeaveTheKeyboardShowingThisOneAfterWriting}"/>
 
                                             <Button Grid.Column="3" Content="Remove" Padding="10,4" FontSize="11"
                                                     Style="{StaticResource ModernButton}"
                                                     Command="{Binding DataContext.RemoveFnSlotCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                                     CommandParameter="{Binding}"
-                                                    ToolTip="Take this off the list. It stays on the keyboard."/>
+                                                    ToolTip="{x:Static loc:Strings.LightingView_TakeThisOffTheListItStaysOnTheKeyboard}"/>
                                         </Grid>
                                     </Border>
                                 </DataTemplate>
@@ -1796,9 +1797,9 @@
                         DataContext="{Binding DeviceLighting}"
                         Visibility="{Binding IsLightBarAvailable, Converter={StaticResource BooleanToVisibilityConverter}}">
                     <StackPanel>
-                        <TextBlock Text="Light bar" FontSize="20" FontWeight="SemiBold"
+                        <TextBlock Text="{x:Static loc:Strings.DiagnosticsView_LightBar}" FontSize="20" FontWeight="SemiBold"
                                    Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,4"/>
-                        <TextBlock Text="The strip on the front of the chassis — four zones, left to right. Separate from the keyboard."
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_TheStripOnTheFrontOfTheChassisFourZonesLef}"
                                    FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
                                    TextWrapping="Wrap" Margin="0,0,0,16"/>
 
@@ -1807,15 +1808,15 @@
                                        VerticalAlignment="Center" Margin="0,0,8,0"/>
                             <Button Command="{Binding PickBarColorCommand}" Cursor="Hand"
                                     Padding="0" BorderThickness="0" Background="Transparent"
-                                    Margin="0,0,6,0" ToolTip="Choose a colour"
-                                    AutomationProperties.Name="Choose the light bar colour">
+                                    Margin="0,0,6,0" ToolTip="{x:Static loc:Strings.KeyboardMapEditor_ChooseAColour}"
+                                    AutomationProperties.Name="{x:Static loc:Strings.LightingView_ChooseTheLightBarColour}">
                                 <Border Width="26" Height="26" CornerRadius="4"
                                         Background="{Binding BarColorBrush}"
                                         BorderBrush="#666" BorderThickness="1"/>
                             </Button>
                             <TextBox Width="80" Margin="0,0,16,0" MaxLength="7"
                                      Text="{Binding BarColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Button Content="Apply colour" Style="{StaticResource ModernButton}" Padding="14,6"
+                            <Button Content="{x:Static loc:Strings.LightingView_ApplyColour}" Style="{StaticResource ModernButton}" Padding="14,6"
                                     Command="{Binding ApplyLightBarColorCommand}" Margin="0,0,8,0"/>
                             <Button Content="Off" Style="{StaticResource ModernButton}" Padding="14,6"
                                     Command="{Binding LightBarOffCommand}"/>
@@ -1825,7 +1826,7 @@
                              shown disabled when OmenCore is not elevated. -->
                         <StackPanel Visibility="{Binding SupportsLightBarEffects, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
-                                <TextBlock Text="Brightness" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Brightness}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
                                            VerticalAlignment="Center" Margin="0,0,8,0"/>
                                 <Slider Width="160" Minimum="0" Maximum="100" VerticalAlignment="Center"
                                         Value="{Binding BarBrightness, Mode=TwoWay}" Margin="0,0,8,0"/>
@@ -1834,7 +1835,7 @@
                                 <ComboBox Width="140" Style="{StaticResource ModernComboBox}" Margin="16,0,8,0"
                                           ItemsSource="{Binding LightBarEffects}"
                                           SelectedItem="{Binding SelectedBarEffect, Mode=TwoWay}"/>
-                                <Button Content="Run animation" Style="{StaticResource ModernButton}" Padding="14,6"
+                                <Button Content="{x:Static loc:Strings.LightingView_RunAnimation}" Style="{StaticResource ModernButton}" Padding="14,6"
                                         Command="{Binding ApplyLightBarEffectCommand}"/>
                             </StackPanel>
                         </StackPanel>
@@ -1849,7 +1850,7 @@
                 <!-- Advanced Lighting Effects -->
                 <Border Style="{StaticResource SurfaceCard}" Padding="24" Margin="0,0,0,16">
                     <StackPanel>
-                        <TextBlock Text="🎨 Advanced Lighting Effects" FontSize="20" FontWeight="SemiBold"
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_AdvancedLightingEffects}" FontSize="20" FontWeight="SemiBold"
                                    Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,16"/>
 
                         <!-- Temperature-Responsive Lighting -->
@@ -1862,10 +1863,10 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Grid.Column="0">
-                                    <TextBlock Text="🌡️ Temperature-Responsive Lighting"
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_TemperatureResponsiveLighting}"
                                                FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
-                                    <TextBlock Text="Keyboard, light bar and RGB devices change color based on CPU/GPU temperature"
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_KeyboardLightBarAndRgbDevicesChangeColorBa}"
                                                FontSize="11"
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                Margin="0,2,0,0"/>
@@ -1875,7 +1876,7 @@
                                               IsChecked="{Binding TemperatureResponsiveLightingEnabled, Mode=TwoWay}"
                                               Style="{StaticResource ModernToggleButton}"
                                               VerticalAlignment="Center"
-                                              AutomationProperties.Name="Enable temperature-responsive lighting"/>
+                                              AutomationProperties.Name="{x:Static loc:Strings.LightingView_EnableTemperatureResponsiveLighting}"/>
                             </Grid>
                         </Border>
 
@@ -1884,7 +1885,7 @@
                                 CornerRadius="8" Padding="16" Margin="0,0,0,12"
                                 Visibility="{Binding TemperatureResponsiveLightingEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel>
-                                <TextBlock Text="Temperature Thresholds (°C)" FontSize="12" FontWeight="SemiBold"
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_TemperatureThresholdsC}" FontSize="12" FontWeight="SemiBold"
                                            Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,0,8"/>
 
                                 <Grid Margin="0,0,0,8">
@@ -1924,7 +1925,7 @@
                                     <Border Grid.Column="0" Background="{Binding TempLowColorHex, Converter={StaticResource HexToBrushConverter}}"
                                             CornerRadius="6" Padding="8" Margin="0,0,8,0" Cursor="Hand">
                                         <StackPanel HorizontalAlignment="Center">
-                                            <TextBlock Text="Low Temp" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
+                                            <TextBlock Text="{x:Static loc:Strings.LightingView_LowTemp}" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
                                             <TextBox Text="{Binding TempLowColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                      Style="{StaticResource ModernTextBox}" FontSize="10" Margin="0,4,0,0" Width="70"/>
                                         </StackPanel>
@@ -1933,7 +1934,7 @@
                                     <Border Grid.Column="1" Background="{Binding TempMediumColorHex, Converter={StaticResource HexToBrushConverter}}"
                                             CornerRadius="6" Padding="8" Margin="4,0" Cursor="Hand">
                                         <StackPanel HorizontalAlignment="Center">
-                                            <TextBlock Text="Medium Temp" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
+                                            <TextBlock Text="{x:Static loc:Strings.LightingView_MediumTemp}" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
                                             <TextBox Text="{Binding TempMediumColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                      Style="{StaticResource ModernTextBox}" FontSize="10" Margin="0,4,0,0" Width="70"/>
                                         </StackPanel>
@@ -1942,7 +1943,7 @@
                                     <Border Grid.Column="2" Background="{Binding TempHighColorHex, Converter={StaticResource HexToBrushConverter}}"
                                             CornerRadius="6" Padding="8" Margin="8,0,0,0" Cursor="Hand">
                                         <StackPanel HorizontalAlignment="Center">
-                                            <TextBlock Text="High Temp" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
+                                            <TextBlock Text="{x:Static loc:Strings.LightingView_HighTemp}" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
                                             <TextBox Text="{Binding TempHighColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                      Style="{StaticResource ModernTextBox}" FontSize="10" Margin="0,4,0,0" Width="70"/>
                                         </StackPanel>
@@ -1961,10 +1962,10 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Grid.Column="0">
-                                    <TextBlock Text="⚡ Performance Mode Synced Lighting"
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_PerformanceModeSyncedLighting}"
                                                FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
-                                    <TextBlock Text="Keyboard, light bar and RGB devices change color based on current performance mode"
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_KeyboardLightBarAndRgbDevicesChangeColorBa_2}"
                                                FontSize="11"
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                Margin="0,2,0,0"/>
@@ -1974,7 +1975,7 @@
                                               IsChecked="{Binding PerformanceModeSyncedLightingEnabled, Mode=TwoWay}"
                                               Style="{StaticResource ModernToggleButton}"
                                               VerticalAlignment="Center"
-                                              AutomationProperties.Name="Enable performance mode synced lighting"/>
+                                              AutomationProperties.Name="{x:Static loc:Strings.LightingView_EnablePerformanceModeSyncedLighting}"/>
                             </Grid>
                         </Border>
 
@@ -1983,7 +1984,7 @@
                                 CornerRadius="8" Padding="16" Margin="0,0,0,12"
                                 Visibility="{Binding PerformanceModeSyncedLightingEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel>
-                                <TextBlock Text="Performance Mode Colors" FontSize="12" FontWeight="SemiBold"
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_PerformanceModeColors}" FontSize="12" FontWeight="SemiBold"
                                            Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,0,8"/>
 
                                 <Grid>
@@ -1997,7 +1998,7 @@
                                     <Border Grid.Column="0" Background="{Binding BalancedModeColorHex, Converter={StaticResource HexToBrushConverter}}"
                                             CornerRadius="6" Padding="8" Margin="0,0,8,0" Cursor="Hand">
                                         <StackPanel HorizontalAlignment="Center">
-                                            <TextBlock Text="Balanced" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
+                                            <TextBlock Text="{x:Static loc:Strings.AdvancedView_Balanced}" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
                                             <TextBox Text="{Binding BalancedModeColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                      Style="{StaticResource ModernTextBox}" FontSize="10" Margin="0,4,0,0" Width="70"/>
                                         </StackPanel>
@@ -2006,7 +2007,7 @@
                                     <Border Grid.Column="1" Background="{Binding PerformanceModeColorHex, Converter={StaticResource HexToBrushConverter}}"
                                             CornerRadius="6" Padding="8" Margin="4,0" Cursor="Hand">
                                         <StackPanel HorizontalAlignment="Center">
-                                            <TextBlock Text="Performance" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
+                                            <TextBlock Text="{x:Static loc:Strings.AdvancedView_Performance}" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
                                             <TextBox Text="{Binding PerformanceModeColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                      Style="{StaticResource ModernTextBox}" FontSize="10" Margin="0,4,0,0" Width="70"/>
                                         </StackPanel>
@@ -2043,10 +2044,10 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Grid.Column="0">
-                                    <TextBlock Text="🚨 Throttling Indicators"
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_ThrottlingIndicators}"
                                                FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
-                                    <TextBlock Text="Flash red/orange when CPU/GPU thermal or power throttling occurs"
+                                    <TextBlock Text="{x:Static loc:Strings.LightingView_FlashRedOrangeWhenCpuGpuThermalOrPowerThro}"
                                                FontSize="11"
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                Margin="0,2,0,0"/>
@@ -2056,7 +2057,7 @@
                                               IsChecked="{Binding ThrottlingIndicatorLightingEnabled, Mode=TwoWay}"
                                               Style="{StaticResource ModernToggleButton}"
                                               VerticalAlignment="Center"
-                                              AutomationProperties.Name="Enable throttling indicator lighting"/>
+                                              AutomationProperties.Name="{x:Static loc:Strings.LightingView_EnableThrottlingIndicatorLighting}"/>
                             </Grid>
                         </Border>
 
@@ -2065,13 +2066,13 @@
                                 CornerRadius="8" Padding="16" Margin="0,0,0,0"
                                 Visibility="{Binding ThrottlingIndicatorLightingEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel>
-                                <TextBlock Text="Throttling Warning Color" FontSize="12" FontWeight="SemiBold"
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_ThrottlingWarningColor}" FontSize="12" FontWeight="SemiBold"
                                            Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,0,8"/>
 
                                 <Border Background="{Binding ThrottlingColorHex, Converter={StaticResource HexToBrushConverter}}"
                                         CornerRadius="6" Padding="12" Cursor="Hand">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <TextBlock Text="⚠️ Throttling Alert" FontSize="12" Foreground="White" FontWeight="SemiBold"/>
+                                        <TextBlock Text="{x:Static loc:Strings.LightingView_ThrottlingAlert}" FontSize="12" Foreground="White" FontWeight="SemiBold"/>
                                         <TextBox Text="{Binding ThrottlingColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                  Style="{StaticResource ModernTextBox}" FontSize="10" Margin="12,0,0,0" Width="70"/>
                                     </StackPanel>
@@ -2085,14 +2086,14 @@
                 <Border Style="{StaticResource SurfaceCard}" Padding="24" Margin="0,0,0,16"
                         Visibility="{Binding IsKeyboardLightingAvailable, Converter={StaticResource InverseBoolToVisibility}}">
                     <StackPanel>
-                        <TextBlock Text="HP OMEN Keyboard" FontSize="20" FontWeight="SemiBold" 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_HpOmenKeyboard}" FontSize="20" FontWeight="SemiBold" 
                                    Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,8"/>
                         <TextBlock Text="{Binding KeyboardUnavailableMessage}" 
                                    TextWrapping="Wrap"
                                    FontSize="14" 
                                    Foreground="{StaticResource TextSecondaryBrush}"
                                    Margin="0,0,0,8"/>
-                        <TextBlock Text="This feature requires a supported HP OMEN laptop with 4-zone RGB keyboard and the WMI BIOS interface." 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_ThisFeatureRequiresASupportedHpOmenLaptopW}" 
                                    FontSize="12" 
                                    Foreground="{StaticResource TextTertiaryBrush}"
                                    TextWrapping="Wrap"/>
@@ -2102,7 +2103,7 @@
                 <!-- Macro Profiles (Corsair) -->
                 <Border Style="{StaticResource SurfaceCard}" Padding="24">
                     <StackPanel>
-                        <TextBlock Text="Macro Profiles" FontSize="20" FontWeight="SemiBold" 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_MacroProfiles}" FontSize="20" FontWeight="SemiBold" 
                                    Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,16"/>
                         
                         <Grid>
@@ -2112,7 +2113,7 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Column="0" Text="Active Profile:" 
+                            <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.LightingView_ActiveProfile}" 
                                        FontSize="14" 
                                        Foreground="{StaticResource TextPrimaryBrush}"
                                        VerticalAlignment="Center" Margin="0,0,12,0"/>
@@ -2123,16 +2124,16 @@
                                       SelectedItem="{Binding SelectedMacroProfile}"
                                       DisplayMemberPath="ProfileName"
                                       Margin="0,0,12,0"
-                                      AutomationProperties.Name="Macro profile selection"/>
+                                      AutomationProperties.Name="{x:Static loc:Strings.LightingView_MacroProfileSelection}"/>
                             
                             <Button Grid.Column="2" 
-                                    Content="Load Profile" 
+                                    Content="{x:Static loc:Strings.LightingView_LoadProfile}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding LoadMacroProfileCommand}"
                                     Padding="16,8"/>
                         </Grid>
 
-                        <TextBlock Text="Use Corsair iCUE or Logitech G HUB software for advanced macro configuration." 
+                        <TextBlock Text="{x:Static loc:Strings.LightingView_UseCorsairIcueOrLogitechGHubSoftwareForAdv}" 
                                    FontSize="12" 
                                    Foreground="{StaticResource TextSecondaryBrush}"
                                    Margin="0,16,0,0" TextWrapping="Wrap"/>
