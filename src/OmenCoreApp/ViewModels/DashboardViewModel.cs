@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -155,6 +156,14 @@ namespace OmenCore.ViewModels
                 }
             }
         }
+
+        public string CurrentFanModeDisplay => CurrentFanMode switch
+        {
+            "Max" => Strings.FanControlView_Max,
+            "Custom" => Strings.FanControlView_Custom,
+            "Auto" => Strings.FanControlView_Auto,
+            _ => CurrentFanMode
+        };
 
         public string ModeLinkStatus
         {
@@ -446,7 +455,7 @@ namespace OmenCore.ViewModels
             string.Equals(LatestMonitoringSample?.CpuTemperatureSource, "LHM Fallback", StringComparison.OrdinalIgnoreCase);
 
         public string GpuTempChipDisplay => LatestMonitoringSample?.GpuTemperatureState == TelemetryDataState.Inactive
-            ? "Idle"
+            ? Strings.DashboardViewModel_Idle
             : FormatTemperatureForState(
                 GpuTemperature,
                 LatestMonitoringSample?.GpuTemperatureState ?? TelemetryDataState.Unknown);
@@ -454,39 +463,39 @@ namespace OmenCore.ViewModels
         public string SsdTempDisplay => FormatTemperature(LatestMonitoringSample?.SsdTemperatureC ?? 0);
 
         public string CpuSummary => LatestMonitoringSample == null 
-            ? "CPU telemetry unavailable" 
+            ? Strings.DashboardViewModel_CpuTelemetryUnavailable 
             : LatestMonitoringSample.CpuPowerWatts > 0 
                 ? $"{(LatestMonitoringSample.CpuTemperatureC > 0 ? $"{LatestMonitoringSample.CpuTemperatureC:F0}°C" : "—°C")} • {LatestMonitoringSample.CpuLoadPercent:F0}% • {LatestMonitoringSample.CpuPowerWatts:F0}W"
-                : $"{(LatestMonitoringSample.CpuTemperatureC > 0 ? $"{LatestMonitoringSample.CpuTemperatureC:F0}°C" : "—°C")} • {LatestMonitoringSample.CpuLoadPercent:F0}% load";
+                : $"{(LatestMonitoringSample.CpuTemperatureC > 0 ? $"{LatestMonitoringSample.CpuTemperatureC:F0}°C" : "—°C")} • {LatestMonitoringSample.CpuLoadPercent:F0}% {Strings.DashboardViewModel_Load}";
         public string GpuSummary => LatestMonitoringSample == null
-            ? "GPU telemetry unavailable"
+            ? Strings.DashboardViewModel_GpuTelemetryUnavailable
             : LatestMonitoringSample.GpuTemperatureState == TelemetryDataState.Inactive
-                ? $"dGPU idle • {LatestMonitoringSample.GpuLoadPercent:F0}% load{(LatestMonitoringSample.GpuVramUsageMb > 0 ? $" • {LatestMonitoringSample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}"
-                : $"{(LatestMonitoringSample.GpuTemperatureC > 0 ? $"{LatestMonitoringSample.GpuTemperatureC:F0}°C" : "—°C")} • {LatestMonitoringSample.GpuLoadPercent:F0}% load{(LatestMonitoringSample.GpuVramUsageMb > 0 ? $" • {LatestMonitoringSample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}";
-        public string MemorySummary => LatestMonitoringSample == null ? "Memory telemetry unavailable" : $"{LatestMonitoringSample.RamUsageGb:F1} / {LatestMonitoringSample.RamTotalGb:F0} GB";
-        public string StorageSummary => LatestMonitoringSample == null ? "Storage telemetry unavailable" 
+                ? $"{Strings.DashboardViewModel_DgpuIdle} • {LatestMonitoringSample.GpuLoadPercent:F0}% {Strings.DashboardViewModel_Load}{(LatestMonitoringSample.GpuVramUsageMb > 0 ? $" • {LatestMonitoringSample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}"
+                : $"{(LatestMonitoringSample.GpuTemperatureC > 0 ? $"{LatestMonitoringSample.GpuTemperatureC:F0}°C" : "—°C")} • {LatestMonitoringSample.GpuLoadPercent:F0}% {Strings.DashboardViewModel_Load}{(LatestMonitoringSample.GpuVramUsageMb > 0 ? $" • {LatestMonitoringSample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}";
+        public string MemorySummary => LatestMonitoringSample == null ? Strings.DashboardViewModel_MemoryTelemetryUnavailable : $"{LatestMonitoringSample.RamUsageGb:F1} / {LatestMonitoringSample.RamTotalGb:F0} GB";
+        public string StorageSummary => LatestMonitoringSample == null ? Strings.DashboardViewModel_StorageTelemetryUnavailable 
             : LatestMonitoringSample.SsdTemperatureC > 0 
-                ? $"SSD {LatestMonitoringSample.SsdTemperatureC:F0}°C • {LatestMonitoringSample.DiskUsagePercent:F0}% active"
-                : $"SSD —°C • {LatestMonitoringSample.DiskUsagePercent:F0}% active";
-        public string BatterySummary => LatestMonitoringSample == null ? "Battery unavailable" 
+                ? $"{Strings.DashboardViewModel_Ssd} {LatestMonitoringSample.SsdTemperatureC:F0}°C • {LatestMonitoringSample.DiskUsagePercent:F0}% {Strings.DashboardViewModel_Active}"
+                : $"{Strings.DashboardViewModel_Ssd} —°C • {LatestMonitoringSample.DiskUsagePercent:F0}% {Strings.DashboardViewModel_Active}";
+        public string BatterySummary => LatestMonitoringSample == null ? Strings.DashboardViewModel_BatteryTelemetryUnavailable 
             : LatestMonitoringSample.IsOnAcPower 
-                ? $"{LatestMonitoringSample.BatteryChargePercent:F0}% • AC Power" 
+                ? $"{LatestMonitoringSample.BatteryChargePercent:F0}% • {Strings.TrayIcon_AcPower}" 
                 : $"{LatestMonitoringSample.BatteryChargePercent:F0}% • {LatestMonitoringSample.BatteryTimeRemaining}";
         public string CpuSummaryDisplay => LatestMonitoringSample == null
-            ? "CPU telemetry unavailable"
+            ? Strings.DashboardViewModel_CpuTelemetryUnavailable
             : LatestMonitoringSample.CpuPowerWatts > 0
                 ? $"{FormatTemperature(LatestMonitoringSample.CpuTemperatureC)} | {LatestMonitoringSample.CpuLoadPercent:F0}% | {LatestMonitoringSample.CpuPowerWatts:F0}W"
-                : $"{FormatTemperature(LatestMonitoringSample.CpuTemperatureC)} | {LatestMonitoringSample.CpuLoadPercent:F0}% load";
+                : $"{FormatTemperature(LatestMonitoringSample.CpuTemperatureC)} | {LatestMonitoringSample.CpuLoadPercent:F0}% {Strings.DashboardViewModel_Load}";
 
         public string GpuSummaryDisplay => LatestMonitoringSample == null
-            ? "GPU telemetry unavailable"
+            ? Strings.DashboardViewModel_GpuTelemetryUnavailable
             : LatestMonitoringSample.GpuTemperatureState == TelemetryDataState.Inactive
-                ? $"dGPU idle | {LatestMonitoringSample.GpuLoadPercent:F0}% load{(LatestMonitoringSample.GpuVramUsageMb > 0 ? $" | {LatestMonitoringSample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}"
-                : $"{FormatTemperature(LatestMonitoringSample.GpuTemperatureC)} | {LatestMonitoringSample.GpuLoadPercent:F0}% load{(LatestMonitoringSample.GpuVramUsageMb > 0 ? $" | {LatestMonitoringSample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}";
+                ? $"{Strings.DashboardViewModel_DgpuIdle} | {LatestMonitoringSample.GpuLoadPercent:F0}% {Strings.DashboardViewModel_Load}{(LatestMonitoringSample.GpuVramUsageMb > 0 ? $" | {LatestMonitoringSample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}"
+                : $"{FormatTemperature(LatestMonitoringSample.GpuTemperatureC)} | {LatestMonitoringSample.GpuLoadPercent:F0}% {Strings.DashboardViewModel_Load}{(LatestMonitoringSample.GpuVramUsageMb > 0 ? $" | {LatestMonitoringSample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}";
 
         public string StorageSummaryDisplay => LatestMonitoringSample == null
             ? "Storage telemetry unavailable"
-            : $"SSD {FormatTemperature(LatestMonitoringSample.SsdTemperatureC)} | {LatestMonitoringSample.DiskUsagePercent:F0}% active";
+            : $"{Strings.DashboardViewModel_Ssd} {FormatTemperature(LatestMonitoringSample.SsdTemperatureC)} | {LatestMonitoringSample.DiskUsagePercent:F0}% {Strings.DashboardViewModel_Active}";
 
         private static string FormatTemperature(double temperature) =>
             temperature > 0 ? $"{temperature:F0}{CelsiusSuffix}" : MissingTemperatureDisplay;

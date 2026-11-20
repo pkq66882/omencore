@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -289,7 +290,7 @@ namespace OmenCore.ViewModels
             try
             {
                 IsScanning = true;
-                SetStatusAction("Scanning for bloatware");
+                SetStatusAction(Strings.BloatwareManagerViewModel_Scanning);
                 AllApps.Clear();
                 FilteredApps.Clear();
 

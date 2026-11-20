@@ -65,14 +65,23 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void BuildUndervoltStatusText_AmdStepRounding_IsNotAMismatch()
         {
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
             // GitHub #222 (8E35, Ryzen 9 8940HX): -15 requested, -12 applied (whole 4 mV-eq. counts).
             var status = new UndervoltStatus { CurrentCoreOffsetMv = -12, CurrentCacheOffsetMv = 0, ControlledByOmenCore = true };
 
-            var text = TuningStatusFormatter.BuildUndervoltStatusText(-15, 0, status, isAmdCpu: true);
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                var text = TuningStatusFormatter.BuildUndervoltStatusText(-15, 0, status, isAmdCpu: true);
 
-            text.Should().Contain("nearest Curve Optimizer step");
-            text.Should().NotContain("mismatch");
-            SystemControlViewModel.ComputeUndervoltMismatch(status, -15, 0, applyAttempted: true, isAmdCpu: true).Should().BeFalse();
+                text.Should().Contain("nearest Curve Optimizer step");
+                text.Should().NotContain("mismatch");
+                SystemControlViewModel.ComputeUndervoltMismatch(status, -15, 0, applyAttempted: true, isAmdCpu: true).Should().BeFalse();
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]
@@ -99,6 +108,7 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void BuildUndervoltStatusText_WhenExternalControllerPresent_ReturnsBlockedVerification()
         {
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
             var status = new UndervoltStatus
             {
                 CurrentCoreOffsetMv = 0,
@@ -106,9 +116,17 @@ namespace OmenCoreApp.Tests.ViewModels
                 ExternalController = "Intel XTU"
             };
 
-            var text = TuningStatusFormatter.BuildUndervoltStatusText(-60, -60, status, isAmdCpu: false);
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                var text = TuningStatusFormatter.BuildUndervoltStatusText(-60, -60, status, isAmdCpu: false);
 
-            text.Should().Contain("Verified: blocked by external controller (Intel XTU)");
+                text.Should().Contain("Verified: blocked by external controller (Intel XTU)");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]
@@ -136,6 +154,7 @@ namespace OmenCoreApp.Tests.ViewModels
             // A requested iGPU offset that no SMU message was ever sent for reads back as 0, which
             // on its own is indistinguishable from a write that was attempted and failed. The
             // provider's warning is what tells the two apart, so it has to win over the mismatch.
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
             var status = new UndervoltStatus
             {
                 CurrentCoreOffsetMv = -80,
@@ -145,11 +164,19 @@ namespace OmenCoreApp.Tests.ViewModels
                 Warning = "The iGPU Curve Optimizer offset was requested but not written: OmenCore has no confirmed iGPU CO message for this CPU."
             };
 
-            var text = TuningStatusFormatter.BuildUndervoltStatusText(-80, -60, status, isAmdCpu: true);
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                var text = TuningStatusFormatter.BuildUndervoltStatusText(-80, -60, status, isAmdCpu: true);
 
-            text.Should().Contain("Verified: warning");
-            text.Should().Contain("no confirmed iGPU CO message");
-            text.Should().NotContain("mismatch between requested and readback");
+                text.Should().Contain("Verified: warning");
+                text.Should().Contain("no confirmed iGPU CO message");
+                text.Should().NotContain("mismatch between requested and readback");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]

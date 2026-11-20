@@ -48,7 +48,16 @@ namespace OmenCoreApp.Tests.ViewModels
         {
             // With no services wired, the summary should say nothing is detected.
             var vm = BuildMinimalLightingViewModel();
-            vm.RgbOwnershipSummary.Should().Be("No active RGB controllers detected");
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                vm.RgbOwnershipSummary.Should().Be("No active RGB controllers detected");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]

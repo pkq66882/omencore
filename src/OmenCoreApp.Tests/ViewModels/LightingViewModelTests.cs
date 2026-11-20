@@ -68,15 +68,24 @@ namespace OmenCoreApp.Tests.ViewModels
             Environment.SetEnvironmentVariable("OMENCORE_DISABLE_FILE_LOG", "1");
             var logging = new LoggingService { Level = LogLevel.Info };
             var configService = new ConfigurationService();
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
             var vm = new LightingViewModel(null, null, logging, keyboardLightingService: null, configService: configService);
 
-            vm.KeyboardRestoreStatusText.Should().Contain("Ready");
+            try
+            {
+                vm.KeyboardRestoreStatusText.Should().Contain("Ready");
 
-            vm.RestoreKeyboardLightingCommand.Execute(null);
-            await Task.Delay(50);
+                vm.RestoreKeyboardLightingCommand.Execute(null);
+                await Task.Delay(50);
 
-            vm.KeyboardRestoreStatusText.Should().Contain("unavailable");
-            vm.KeyboardRestoreStatusText.Should().Contain("Settings");
+                vm.KeyboardRestoreStatusText.Should().Contain("unavailable");
+                vm.KeyboardRestoreStatusText.Should().Contain("Settings");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]

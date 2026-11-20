@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -51,18 +52,18 @@ namespace OmenCore.ViewModels
         private bool _respectExternalUndervolt = true;
         private bool _enablePerCoreUndervolt;
         private int?[]? _requestedPerCoreOffsets;
-        private string _undervoltLastActionText = "No recent undervolt action";
+        private string _undervoltLastActionText = Strings.SystemControlViewModel_NoRecentUndervolt;
         private System.Windows.Media.Brush _undervoltLastActionColor = System.Windows.Media.Brushes.Gray;
         private CancellationTokenSource? _gpuOcTestCancellation;
         private GpuOcSnapshot? _gpuOcTestSnapshot;
         private int _gpuOcTestCountdownSeconds;
         private bool _gpuOcTestPending;
-        private string _gpuOcTestStatusText = "Test Apply runs tuning temporarily and reverts automatically unless you keep it.";
+        private string _gpuOcTestStatusText = Strings.SystemControlViewModel_TestApplyGpu;
         private CancellationTokenSource? _cpuUndervoltTestCancellation;
         private (double CoreMv, double CacheMv)? _cpuUndervoltTestSnapshot;
         private bool _cpuUndervoltTestPending;
         private int _cpuUndervoltTestCountdownSeconds;
-        private string _cpuUndervoltTestStatusText = "Test Apply runs the undervolt temporarily and reverts automatically unless you keep it.";
+        private string _cpuUndervoltTestStatusText = Strings.SystemControlViewModel_TestApplyCpu;
 
         public ObservableCollection<PerformanceMode> PerformanceModes { get; } = new();
 
@@ -269,13 +270,13 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string UndervoltSectionTitle => IsAmdCpu ? "CPU Curve Optimizer (AMD)" : "CPU Undervolting";
+        public string UndervoltSectionTitle => IsAmdCpu ? Strings.SystemControlViewModel_CurveOptimizerTitle : Strings.SystemControlViewModel_UndervoltingTitle;
 
         public string UndervoltActionLabel => IsAmdCpu ? "Apply Curve Optimizer" : "Apply Undervolt";
 
         public string UndervoltGuidanceText => IsAmdCpu
             ? "AMD uses Curve Optimizer (CO) instead of direct mV offset writes. More negative values are stronger CO undervolt."
-            : "Reduce CPU voltage offset to lower temperature and power draw. More negative values apply stronger undervolt.";
+            : Strings.SystemControlViewModel_UndervoltHelp;
 
         public string UndervoltBackendText
         {
@@ -294,7 +295,7 @@ namespace OmenCore.ViewModels
 
                 if (provider is IntelUndervoltProvider intel)
                 {
-                    return $"Backend: Intel voltage offset via {intel.ActiveBackend}";
+                    return string.Format(Strings.SystemControlViewModel_UndervoltBackend, intel.ActiveBackend);
                 }
 
                 return $"Backend: {provider.GetType().Name}";
@@ -605,7 +606,7 @@ namespace OmenCore.ViewModels
 
         private AmdPowerLimitReadback? _amdLimitReadback;
         private string _amdLimitReadbackUnavailableReason =
-            "Not read yet - press Refresh to ask the SMU what it is running.";
+            Strings.SystemControlViewModel_AmdNotReadYet;
 
         /// <summary>
         /// True once the SMU's own power table has been read. Everything else on this row is
@@ -717,7 +718,7 @@ namespace OmenCore.ViewModels
             {
                 if (!IsAmdCpu)
                 {
-                    return "AMD Ryzen CPU not detected.";
+                    return Strings.SystemControlViewModel_AmdNotDetected;
                 }
 
                 if (_undervoltService?.Provider is AmdUndervoltProvider amdProvider)
@@ -1161,7 +1162,7 @@ namespace OmenCore.ViewModels
 
         public string GpuOcTestActionText => IsGpuOcTestPending
             ? $"Test active: auto-revert in {GpuOcTestCountdownSeconds}s unless you press Keep"
-            : "Test Apply runs the selected tuning for 30 seconds, then restores the previous GPU state unless you keep it.";
+            : Strings.SystemControlViewModel_TestApplyGpu30;
 
         public bool IsCpuUndervoltTestPending
         {
@@ -1210,7 +1211,7 @@ namespace OmenCore.ViewModels
 
         public string CpuUndervoltTestActionText => IsCpuUndervoltTestPending
             ? $"Test active: auto-revert in {CpuUndervoltTestCountdownSeconds}s unless you press Keep"
-            : "Test Apply runs the undervolt for 30 seconds, then restores the previous CPU voltage unless you keep it.";
+            : Strings.SystemControlViewModel_TestApplyCpu30;
 
         // ---- Tuning conflict report ----
         private TuningConflictReport? _lastTuningConflictReport;
@@ -1387,7 +1388,7 @@ namespace OmenCore.ViewModels
         public bool GpuOcNotAvailable => GpuNvapiAvailable && !GpuOcAvailable && GpuPowerLimitAvailable;
         public bool GpuPowerLimitUnavailable => GpuNvapiAvailable && !GpuPowerLimitAvailable;
         public bool GpuPowerLimitControlEnabled => GpuNvapiAvailable && GpuPowerLimitAvailable && !IsGpuOcTestPending;
-        public string GpuPowerLimitUnavailableText => "Power limit is locked by this NVIDIA driver or HP firmware path. Core and memory offsets can still be applied when available, but TGP changes must come from firmware/BIOS/OEM controls.";
+        public string GpuPowerLimitUnavailableText => Strings.SystemControlViewModel_PowerLimitLocked;
         public bool GpuExtendedOffsetsAvailable => GpuCoreOffsetMax > 200 || GpuMemoryOffsetMax > 500 || (GpuPowerLimitAvailable && GpuPowerLimitMax > 115);
         public string GpuOcCapabilityBadgeText => GpuPowerLimitUnavailable
             ? GpuOcAvailable ? "Power Locked" : "Locked"
@@ -1399,7 +1400,7 @@ namespace OmenCore.ViewModels
             : GpuOcNotAvailable
                 ? "This GPU/driver exposes NVAPI power tuning, but clock and voltage offsets remain locked."
                 : GpuExtendedOffsetsAvailable
-                ? "NVAPI reported a wider-than-default range for this GPU. Values near the top end should be treated as experimental."
+                ? Strings.SystemControlViewModel_NvapiWiderRange
                 : "This GPU is using the standard laptop-safe NVAPI range. Stability still varies by silicon and BIOS.";
         public string GpuOcDetectedLimitHeadline => string.IsNullOrWhiteSpace(GpuDisplayName)
             ? "Detected GPU tuning limits will appear after initialization."
@@ -1409,7 +1410,7 @@ namespace OmenCore.ViewModels
                     : $"{GpuDisplayName} was detected, but NVAPI tuning writes are locked by the current driver or firmware path."
             : GpuOcNotAvailable
                 ? $"Detected power range for {GpuDisplayName}: {GpuPowerLimitRangeText}. Clock offsets are blocked by the current driver or firmware path."
-                : $"Detected limits for {GpuDisplayName}: Core {GpuCoreOffsetRangeText}, Memory {GpuMemoryOffsetRangeText}, Power {GpuPowerLimitRangeText}.";
+                : string.Format(Strings.SystemControlViewModel_DetectedLimits, GpuDisplayName, GpuCoreOffsetRangeText, GpuMemoryOffsetRangeText, GpuPowerLimitRangeText);
         public string GpuOcRecommendationText => BuildGpuOcRecommendationText();
         
         /// <summary>
@@ -1721,7 +1722,7 @@ namespace OmenCore.ViewModels
         {
             if (!GpuNvapiAvailable)
             {
-                return "NVAPI tuning guidance will appear after the GPU is detected.";
+                return Strings.SystemControlViewModel_NvapiGuidance;
             }
 
             if (!GpuOcAvailable && !GpuPowerLimitAvailable)
@@ -3499,8 +3500,8 @@ namespace OmenCore.ViewModels
                     CpuPl1Watts = Math.Max(CpuPl1Watts, 15);
                     CpuPl2Watts = Math.Max(CpuPl2Watts, 25);
                     CpuPowerLimitsStatus = is8d2fIntelCoreUltra
-                        ? "MSR package limits unavailable on 8D2F Intel path - use OMEN/OGH mode policy control"
-                        : "MSR package limits unavailable - HP firmware may require OMEN performance modes/Unleashed mode";
+                        ? Strings.SystemControlViewModel_MsrLimitsUnavailable8D2F
+                        : Strings.SystemControlViewModel_MsrLimitsUnavailable;
                     _logging.Warn(is8d2fIntelCoreUltra
                         ? "CPU power limit MSR readback returned 0W/0W on 8D2F Intel Core Ultra path; treating direct PL1/PL2 sliders as firmware-managed while allowing OMEN/OGH mode policy control"
                         : "CPU power limit MSR readback returned 0W/0W; treating direct PL1/PL2 sliders as unavailable instead of projecting writable limits");

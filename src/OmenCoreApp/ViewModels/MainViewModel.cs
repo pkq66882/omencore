@@ -854,7 +854,7 @@ namespace OmenCore.ViewModels
             }
 
             return sample.GpuTemperatureState == TelemetryDataState.Inactive
-                ? $"dGPU idle • {sample.GpuLoadPercent:F0}% load{(sample.GpuVramUsageMb > 0 ? $" • {sample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}"
+                ? $"{Strings.DashboardViewModel_DgpuIdle} • {sample.GpuLoadPercent:F0}% load{(sample.GpuVramUsageMb > 0 ? $" • {sample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}"
                 : $"{(sample.GpuTemperatureC > 0 ? $"{sample.GpuTemperatureC:F0}°C" : "—°C")} • {sample.GpuLoadPercent:F0}% load{(sample.GpuVramUsageMb > 0 ? $" • {sample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}";
         }
 

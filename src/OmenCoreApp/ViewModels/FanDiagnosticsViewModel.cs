@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
@@ -76,7 +77,7 @@ namespace OmenCore.ViewModels
         /// </summary>
         public bool IsRgbCheckAvailable => _keyboardLightingService?.IsAvailable == true;
 
-        private string _rgbCheckStatus = "RGB check not run";
+        private string _rgbCheckStatus = Strings.FanDiagnosticsViewModel_RgbCheckNotRun;
         public string RgbCheckStatus
         {
             get => _rgbCheckStatus;

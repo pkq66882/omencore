@@ -1801,5 +1801,94 @@ namespace OmenCore.Localization
 
     // Auto-extracted literals from TuningView.xaml
 
+    // Auto-extracted literals from 
+    public static string BloatwareManagerViewModel_Scanning => Get(nameof(BloatwareManagerViewModel_Scanning));
+    public static string DashboardViewModel_Active => Get(nameof(DashboardViewModel_Active));
+    public static string DashboardViewModel_BatteryTelemetryUnavailable => Get(nameof(DashboardViewModel_BatteryTelemetryUnavailable));
+    public static string DashboardViewModel_CpuTelemetryUnavailable => Get(nameof(DashboardViewModel_CpuTelemetryUnavailable));
+    public static string DashboardViewModel_DgpuIdle => Get(nameof(DashboardViewModel_DgpuIdle));
+    public static string DashboardViewModel_FanModeDisplayProp => Get(nameof(DashboardViewModel_FanModeDisplayProp));
+    public static string DashboardViewModel_GpuTelemetryUnavailable => Get(nameof(DashboardViewModel_GpuTelemetryUnavailable));
+    public static string DashboardViewModel_Idle => Get(nameof(DashboardViewModel_Idle));
+    public static string DashboardViewModel_Load => Get(nameof(DashboardViewModel_Load));
+    public static string DashboardViewModel_MemoryTelemetryUnavailable => Get(nameof(DashboardViewModel_MemoryTelemetryUnavailable));
+    public static string DashboardViewModel_Ssd => Get(nameof(DashboardViewModel_Ssd));
+    public static string DashboardViewModel_StorageTelemetryUnavailable => Get(nameof(DashboardViewModel_StorageTelemetryUnavailable));
+    public static string FanDiagnosticsViewModel_RgbCheckNotRun => Get(nameof(FanDiagnosticsViewModel_RgbCheckNotRun));
+    public static string GameLibraryViewModel_ScanStatus => Get(nameof(GameLibraryViewModel_ScanStatus));
+    public static string HardwareMonitoringDashboard_StateInactive => Get(nameof(HardwareMonitoringDashboard_StateInactive));
+    public static string HardwareMonitoringDashboard_TrendStable => Get(nameof(HardwareMonitoringDashboard_TrendStable));
+    public static string KeyboardDiagnosticsViewModel_DetectionComplete => Get(nameof(KeyboardDiagnosticsViewModel_DetectionComplete));
+    public static string LightingViewModel_ActiveTargets => Get(nameof(LightingViewModel_ActiveTargets));
+    public static string LightingViewModel_KeyboardRgbNotDetected => Get(nameof(LightingViewModel_KeyboardRgbNotDetected));
+    public static string LightingViewModel_NoControllers => Get(nameof(LightingViewModel_NoControllers));
+    public static string LightingViewModel_NoSurfaceObservation => Get(nameof(LightingViewModel_NoSurfaceObservation));
+    public static string LightingViewModel_NoSyncSession => Get(nameof(LightingViewModel_NoSyncSession));
+    public static string LightingViewModel_OpenRgbNotDetected => Get(nameof(LightingViewModel_OpenRgbNotDetected));
+    public static string LightingViewModel_RazerNotDetected => Get(nameof(LightingViewModel_RazerNotDetected));
+    public static string LightingViewModel_ReadyToRestore => Get(nameof(LightingViewModel_ReadyToRestore));
+    public static string LightingViewModel_ReadyToSync => Get(nameof(LightingViewModel_ReadyToSync));
+    public static string MemoryOptimizerViewModel_Done => Get(nameof(MemoryOptimizerViewModel_Done));
+    public static string MemoryOptimizerViewModel_PhysicalSummary => Get(nameof(MemoryOptimizerViewModel_PhysicalSummary));
+    public static string MemoryOptimizerViewModel_TrendSummary => Get(nameof(MemoryOptimizerViewModel_TrendSummary));
+    public static string MemoryOptimizerViewModel_VirtualSummary => Get(nameof(MemoryOptimizerViewModel_VirtualSummary));
+    public static string PerformanceMode_Performance => Get(nameof(PerformanceMode_Performance));
+    public static string SettingsViewModel_AcPowerConnected => Get(nameof(SettingsViewModel_AcPowerConnected));
+    public static string SystemControlViewModel_AmdNotDetected => Get(nameof(SystemControlViewModel_AmdNotDetected));
+    public static string SystemControlViewModel_AmdNotReadYet => Get(nameof(SystemControlViewModel_AmdNotReadYet));
+    public static string SystemControlViewModel_CurveOptimizerTitle => Get(nameof(SystemControlViewModel_CurveOptimizerTitle));
+    public static string SystemControlViewModel_DetectedLimits => Get(nameof(SystemControlViewModel_DetectedLimits));
+    public static string SystemControlViewModel_MsrLimitsUnavailable => Get(nameof(SystemControlViewModel_MsrLimitsUnavailable));
+    public static string SystemControlViewModel_MsrLimitsUnavailable8D2F => Get(nameof(SystemControlViewModel_MsrLimitsUnavailable8D2F));
+    public static string SystemControlViewModel_NoRecentUndervolt => Get(nameof(SystemControlViewModel_NoRecentUndervolt));
+    public static string SystemControlViewModel_NvapiGuidance => Get(nameof(SystemControlViewModel_NvapiGuidance));
+    public static string SystemControlViewModel_NvapiWiderRange => Get(nameof(SystemControlViewModel_NvapiWiderRange));
+    public static string SystemControlViewModel_PowerLimitLocked => Get(nameof(SystemControlViewModel_PowerLimitLocked));
+    public static string SystemControlViewModel_TestApplyCpu => Get(nameof(SystemControlViewModel_TestApplyCpu));
+    public static string SystemControlViewModel_TestApplyCpu30 => Get(nameof(SystemControlViewModel_TestApplyCpu30));
+    public static string SystemControlViewModel_TestApplyGpu => Get(nameof(SystemControlViewModel_TestApplyGpu));
+    public static string SystemControlViewModel_TestApplyGpu30 => Get(nameof(SystemControlViewModel_TestApplyGpu30));
+    public static string SystemControlViewModel_UndervoltBackend => Get(nameof(SystemControlViewModel_UndervoltBackend));
+    public static string SystemControlViewModel_UndervoltHelp => Get(nameof(SystemControlViewModel_UndervoltHelp));
+    public static string SystemOptimizerViewModel_NoPreflightWarnings => Get(nameof(SystemOptimizerViewModel_NoPreflightWarnings));
+    public static string SystemOptimizerViewModel_OptimizationsActive => Get(nameof(SystemOptimizerViewModel_OptimizationsActive));
+    public static string SystemOptimizerViewModel_PreflightNotLoaded => Get(nameof(SystemOptimizerViewModel_PreflightNotLoaded));
+    public static string SystemOptimizerViewModel_VerificationPending => Get(nameof(SystemOptimizerViewModel_VerificationPending));
+    public static string TuningStatus_VerifiedBlocked => Get(nameof(TuningStatus_VerifiedBlocked));
+    public static string TuningStatus_VerifiedFailed => Get(nameof(TuningStatus_VerifiedFailed));
+    public static string TuningStatus_VerifiedNearestStep => Get(nameof(TuningStatus_VerifiedNearestStep));
+    public static string TuningStatus_VerifiedWarning => Get(nameof(TuningStatus_VerifiedWarning));
+
+    // Auto-extracted literals from AdvancedView.xaml
+    public static string AdvancedView_Active => Get(nameof(AdvancedView_Active));
+
+    // Auto-extracted literals from DashboardView.xaml
+    public static string DashboardView_Memory => Get(nameof(DashboardView_Memory));
+
+    // Auto-extracted literals from TuningView.xaml
+    public static string TuningView_Clock => Get(nameof(TuningView_Clock));
+    public static string TuningView_Core => Get(nameof(TuningView_Core));
+
+    // Auto-extracted literals from 
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+    public static string GameLibraryViewModel_Scanning => Get(nameof(GameLibraryViewModel_Scanning));
+    public static string PerformanceMode_Balanced => Get(nameof(PerformanceMode_Balanced));
+    public static string PerformanceMode_Quiet => Get(nameof(PerformanceMode_Quiet));
+    public static string SettingsViewModel_OnBattery => Get(nameof(SettingsViewModel_OnBattery));
+    public static string SystemControlViewModel_UndervoltingTitle => Get(nameof(SystemControlViewModel_UndervoltingTitle));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
     }
 }

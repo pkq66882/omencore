@@ -257,6 +257,7 @@ namespace OmenCoreApp.Tests.ViewModels
 
                 var latestProperty = typeof(DashboardViewModel).GetProperty(nameof(DashboardViewModel.LatestMonitoringSample));
                 latestProperty.Should().NotBeNull();
+                var original = System.Globalization.CultureInfo.CurrentUICulture;
 
                 latestProperty!.GetSetMethod(nonPublic: true)!.Invoke(vm, new object?[]
                 {
@@ -289,7 +290,15 @@ namespace OmenCoreApp.Tests.ViewModels
                     }
                 });
 
-                vm.GpuTempChipDisplay.Should().Be("Idle");
+                System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+                try
+                {
+                    vm.GpuTempChipDisplay.Should().Be("Idle");
+                }
+                finally
+                {
+                    System.Globalization.CultureInfo.CurrentUICulture = original;
+                }
                 vm.RefreshCommand.Should().NotBeNull("the Dashboard refresh button should be connected to the view model");
             }
             finally

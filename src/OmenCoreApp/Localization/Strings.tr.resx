@@ -4762,4 +4762,199 @@
   <data name="TuningView_Keep" xml:space="preserve">
     <value>Koru</value>
   </data>
+  <data name="BloatwareManagerViewModel_Scanning" xml:space="preserve">
+    <value>Ön yüklü yazılım taranıyor</value>
+  </data>
+  <data name="DashboardViewModel_Active" xml:space="preserve">
+    <value>etkin</value>
+  </data>
+  <data name="DashboardViewModel_BatteryTelemetryUnavailable" xml:space="preserve">
+    <value>Pil telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="DashboardViewModel_CpuTelemetryUnavailable" xml:space="preserve">
+    <value>CPU telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="DashboardViewModel_DgpuIdle" xml:space="preserve">
+    <value>dGPU boşta</value>
+  </data>
+  <data name="DashboardViewModel_FanModeDisplayProp" xml:space="preserve">
+    <value>Otomatik</value>
+  </data>
+  <data name="DashboardViewModel_GpuTelemetryUnavailable" xml:space="preserve">
+    <value>GPU telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="DashboardViewModel_Idle" xml:space="preserve">
+    <value>Boşta</value>
+  </data>
+  <data name="DashboardViewModel_Load" xml:space="preserve">
+    <value>yük</value>
+  </data>
+  <data name="DashboardViewModel_MemoryTelemetryUnavailable" xml:space="preserve">
+    <value>Bellek telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="DashboardViewModel_Ssd" xml:space="preserve">
+    <value>SSD</value>
+  </data>
+  <data name="DashboardViewModel_StorageTelemetryUnavailable" xml:space="preserve">
+    <value>Depolama telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_RgbCheckNotRun" xml:space="preserve">
+    <value>RGB kontrolü çalıştırılmadı</value>
+  </data>
+  <data name="GameLibraryViewModel_ScanStatus" xml:space="preserve">
+    <value>{0} oyun bulundu</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StateInactive" xml:space="preserve">
+    <value>Etkin değil</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_TrendStable" xml:space="preserve">
+    <value>Kararlı</value>
+  </data>
+  <data name="KeyboardDiagnosticsViewModel_DetectionComplete" xml:space="preserve">
+    <value>Algılama tamamlandı. {0} cihaz bulundu.</value>
+  </data>
+  <data name="LightingViewModel_ActiveTargets" xml:space="preserve">
+    <value>{0} etkin aydınlatma hedefi</value>
+  </data>
+  <data name="LightingViewModel_KeyboardRgbNotDetected" xml:space="preserve">
+    <value>Bu sistemde klavye RGB algılanmadı.</value>
+  </data>
+  <data name="LightingViewModel_NoControllers" xml:space="preserve">
+    <value>Etkin RGB denetleyicisi algılanmadı</value>
+  </data>
+  <data name="LightingViewModel_NoSurfaceObservation" xml:space="preserve">
+    <value>RGB yüzey gözlemi kaydedilmedi.</value>
+  </data>
+  <data name="LightingViewModel_NoSyncSession" xml:space="preserve">
+    <value>Bu oturumda eşitleme çalıştırılmadı.</value>
+  </data>
+  <data name="LightingViewModel_OpenRgbNotDetected" xml:space="preserve">
+    <value>OpenRGB sunucusu algılanmadı</value>
+  </data>
+  <data name="LightingViewModel_RazerNotDetected" xml:space="preserve">
+    <value>Razer Synapse algılanmadı</value>
+  </data>
+  <data name="LightingViewModel_ReadyToRestore" xml:space="preserve">
+    <value>Kaydedilen klavye renklerini geri yüklemeye hazır.</value>
+  </data>
+  <data name="LightingViewModel_ReadyToSync" xml:space="preserve">
+    <value>Eşitlemeye hazır</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_Done" xml:space="preserve">
+    <value>Tamamlandı</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_PhysicalSummary" xml:space="preserve">
+    <value>Kullanılan {0} • Kullanılabilir {1} • Önbellek {2} GB</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_TrendSummary" xml:space="preserve">
+    <value>{0} dk geçmiş • ort {1}% • düşük {2}% • yüksek {3}%</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_VirtualSummary" xml:space="preserve">
+    <value>Taahhüt {0} • Sayfa dosyası {1}</value>
+  </data>
+  <data name="PerformanceMode_Performance" xml:space="preserve">
+    <value>Performans</value>
+  </data>
+  <data name="SettingsViewModel_AcPowerConnected" xml:space="preserve">
+    <value>AC gücü bağlı</value>
+  </data>
+  <data name="SystemControlViewModel_AmdNotDetected" xml:space="preserve">
+    <value>AMD Ryzen CPU algılanmadı.</value>
+  </data>
+  <data name="SystemControlViewModel_AmdNotReadYet" xml:space="preserve">
+    <value>Henüz okunmadı - SMU'ya ne çalıştığını sormak için Yenile'ye basın.</value>
+  </data>
+  <data name="SystemControlViewModel_CurveOptimizerTitle" xml:space="preserve">
+    <value>CPU Curve Optimizer (AMD)</value>
+  </data>
+  <data name="SystemControlViewModel_DetectedLimits" xml:space="preserve">
+    <value>{0} için algılanan limitler: Çekirdek {1}, Bellek {2}, Güç {3}.</value>
+  </data>
+  <data name="SystemControlViewModel_MsrLimitsUnavailable" xml:space="preserve">
+    <value>MSR paket limitleri kullanılamıyor - HP aygıt yazılımı OMEN performans modları veya Unleashed modu gerektirebilir</value>
+  </data>
+  <data name="SystemControlViewModel_MsrLimitsUnavailable8D2F" xml:space="preserve">
+    <value>MSR paket limitleri 8D2F Intel yolunda kullanılamıyor - OMEN/OGH mod politika kontrolünü kullanın</value>
+  </data>
+  <data name="SystemControlViewModel_NoRecentUndervolt" xml:space="preserve">
+    <value>Yakında undervolt işlemi yok</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiGuidance" xml:space="preserve">
+    <value>GPU algılandıktan sonra NVAPI ayar rehberi görünecektir.</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiWiderRange" xml:space="preserve">
+    <value>NVAPI bu GPU için varsayılandan daha geniş bir aralık bildirdi. Üst uca yakın değerler deneysel kabul edilmelidir.</value>
+  </data>
+  <data name="SystemControlViewModel_PowerLimitLocked" xml:space="preserve">
+    <value>Güç limiti bu NVIDIA sürücüsü veya HP aygıt yazılımı yolu tarafından kilitli. Çekirdek ve bellek ofsetleri kullanılabilir olduğunda yine de uygulanabilir, ancak TGP değişiklikleri aygıt yazılımı/BIOS/OEM kontrolünden gelmelidir.</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyCpu" xml:space="preserve">
+    <value>Test Uygula, undervolt'u geçici olarak çalıştırır ve Koru'a basmadığınız sürece otomatik olarak geri alır.</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyCpu30" xml:space="preserve">
+    <value>Test Uygula, undervolt'u 30 saniye çalıştırır, ardından Koru'a basmadığınız sürece önceki CPU voltajını geri yükler.</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyGpu" xml:space="preserve">
+    <value>Test Uygula, ayarı geçici olarak çalıştırır ve Koru'a basmadığınız sürece otomatik olarak geri alır.</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyGpu30" xml:space="preserve">
+    <value>Test Uygula, seçilen ayarı 30 saniye çalıştırır, ardından Koru'a basmadığınız sürece önceki GPU durumunu geri yükler.</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltBackend" xml:space="preserve">
+    <value>Arka uç: {0} üzerinden Intel voltaj ofseti</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltHelp" xml:space="preserve">
+    <value>Sıcaklığı ve güç tüketimini düşürmek için CPU voltaj ofsetini azaltın. Daha negatif değerler daha güçlü undervolt uygular.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoPreflightWarnings" xml:space="preserve">
+    <value>Ek ön uçuş uyarısı yok.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_OptimizationsActive" xml:space="preserve">
+    <value>{1} optimizasyondan {0} tanesi etkin</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightNotLoaded" xml:space="preserve">
+    <value>Ön uçuş: yüklenmedi</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerificationPending" xml:space="preserve">
+    <value>Doğrulama bekliyor</value>
+  </data>
+  <data name="TuningStatus_VerifiedBlocked" xml:space="preserve">
+    <value>Doğrulandı: harici denetleyici tarafından engellendi ({0})</value>
+  </data>
+  <data name="TuningStatus_VerifiedFailed" xml:space="preserve">
+    <value>Doğrulandı: başarısız ({0})</value>
+  </data>
+  <data name="TuningStatus_VerifiedNearestStep" xml:space="preserve">
+    <value>Doğrulandı: en yakın Curve Optimizer adımına uygulandı (adım başına {0} mV eşdeğeri)</value>
+  </data>
+  <data name="TuningStatus_VerifiedWarning" xml:space="preserve">
+    <value>Doğrulandı: uyarı ({0})</value>
+  </data>
+  <data name="AdvancedView_Active" xml:space="preserve">
+    <value>AKTİF</value>
+  </data>
+  <data name="DashboardView_Memory" xml:space="preserve">
+    <value>BELLEK</value>
+  </data>
+  <data name="TuningView_Clock" xml:space="preserve">
+    <value>SAAT</value>
+  </data>
+  <data name="TuningView_Core" xml:space="preserve">
+    <value>ÇEKİRDEK</value>
+  </data>
+  <data name="GameLibraryViewModel_Scanning" xml:space="preserve">
+    <value>Oyun kitaplıkları taranıyor…</value>
+  </data>
+  <data name="PerformanceMode_Balanced" xml:space="preserve">
+    <value>Dengeli</value>
+  </data>
+  <data name="PerformanceMode_Quiet" xml:space="preserve">
+    <value>Sessiz</value>
+  </data>
+  <data name="SettingsViewModel_OnBattery" xml:space="preserve">
+    <value>Pilde</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltingTitle" xml:space="preserve">
+    <value>CPU Undervolt</value>
+  </data>
 </root>

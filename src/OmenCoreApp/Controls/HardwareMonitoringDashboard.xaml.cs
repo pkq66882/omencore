@@ -340,7 +340,7 @@ namespace OmenCore.Controls
                 {
                     if (!hasBatteryHealth)
                     {
-                        BatteryHealthStatus.Text = "Capacity unavailable";
+                        BatteryHealthStatus.Text = Strings.HardwareMonitoringDashboard_BatteryCapacityUnavailable;
                         BatteryHealthStatus.Foreground = Brushes.Gray;
                     }
                     else if (batteryHealth >= 80)
@@ -398,7 +398,7 @@ namespace OmenCore.Controls
                 {
                     GpuTempValue.Text = sample.GpuTemperatureState switch
                     {
-                        TelemetryDataState.Inactive => "Inactive",
+                        TelemetryDataState.Inactive => Strings.HardwareMonitoringDashboard_StateInactive,
                         TelemetryDataState.Unavailable => "--",
                         TelemetryDataState.Invalid => "Invalid",
                         _ => gpuTemp.ToString("F0")
@@ -409,7 +409,7 @@ namespace OmenCore.Controls
                 {
                     var gpuStatus = sample.GpuTemperatureState switch
                     {
-                        TelemetryDataState.Inactive => "Inactive",
+                        TelemetryDataState.Inactive => Strings.HardwareMonitoringDashboard_StateInactive,
                         TelemetryDataState.Unavailable => Strings.HardwareMonitoringDashboard_StateUnavailable,
                         TelemetryDataState.Stale => "Stale",
                         TelemetryDataState.Invalid => "Invalid",
@@ -530,7 +530,7 @@ namespace OmenCore.Controls
             if (PowerConsumptionValue != null) PowerConsumptionValue.Text = "--";
             if (PowerConsumptionTrend != null) PowerConsumptionTrend.Text = "No data";
             if (BatteryHealthValue != null) BatteryHealthValue.Text = "--";
-            if (BatteryHealthStatus != null) BatteryHealthStatus.Text = "Capacity unavailable";
+            if (BatteryHealthStatus != null) BatteryHealthStatus.Text = Strings.HardwareMonitoringDashboard_BatteryCapacityUnavailable;
             if (CpuTempValue != null) CpuTempValue.Text = "--";
             if (CpuTempStatus != null) CpuTempStatus.Text = "No data";
             if (GpuTempValue != null) GpuTempValue.Text = "--";
@@ -744,7 +744,7 @@ namespace OmenCore.Controls
 
         private string GetTrendIndicator(double trend)
         {
-            if (Math.Abs(trend) < 0.1) return "Stable";
+            if (Math.Abs(trend) < 0.1) return Strings.HardwareMonitoringDashboard_TrendStable;
             if (trend > 0) return $"+{trend:F1}W";
             return $"{trend:F1}W";
         }

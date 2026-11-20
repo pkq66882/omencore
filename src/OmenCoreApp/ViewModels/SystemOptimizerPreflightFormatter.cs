@@ -1,4 +1,5 @@
 using System.Linq;
+using OmenCore.Localization;
 using OmenCore.Services.SystemOptimizer;
 
 namespace OmenCore.ViewModels
@@ -15,7 +16,7 @@ namespace OmenCore.ViewModels
         {
             if (report.Warnings.Count == 0)
             {
-                return "No additional preflight warnings.";
+                return Strings.SystemOptimizerViewModel_NoPreflightWarnings;
             }
 
             var selected = report.Warnings.Take(maxWarnings).ToList();

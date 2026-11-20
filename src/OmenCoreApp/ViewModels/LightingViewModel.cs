@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
@@ -91,11 +92,11 @@ namespace OmenCore.ViewModels
         private const int ThrottlingLightingMinIntervalSeconds = 10;
 
         // RGB sync trust signals
-        private string _lastRgbSyncSummary = "Ready to sync";
-        private string _lastRgbSyncDetail = "No sync has run this session.";
+        private string _lastRgbSyncSummary = Strings.LightingViewModel_ReadyToSync;
+        private string _lastRgbSyncDetail = Strings.LightingViewModel_NoSyncSession;
         private System.Windows.Media.SolidColorBrush _lastRgbSyncBrush =
             new(System.Windows.Media.Color.FromRgb(0x75, 0x75, 0x75));
-        private string _keyboardRestoreStatusText = "Ready to restore saved keyboard colors.";
+        private string _keyboardRestoreStatusText = Strings.LightingViewModel_ReadyToRestore;
         
         // Performance mode colors
         private string _balancedModeColorHex = "#0096FF"; // Blue
@@ -111,7 +112,7 @@ namespace OmenCore.ViewModels
         private const string RgbObservationNotRecorded = "Not recorded";
         private const string RgbObservationProbeColorHex = "#00FF66";
         private string _selectedObservedRgbSurface = RgbObservationNotRecorded;
-        private string _rgbSurfaceObservationStatusText = "No RGB surface observation recorded.";
+        private string _rgbSurfaceObservationStatusText = Strings.LightingViewModel_NoSurfaceObservation;
 
         public ReadOnlyObservableCollection<CorsairDevice> CorsairDevices => _corsairService?.Devices ?? _emptyCorsairDevices;
         public ReadOnlyObservableCollection<LogitechDevice> LogitechDevices => _logitechService?.Devices ?? _emptyLogitechDevices;
@@ -455,7 +456,7 @@ namespace OmenCore.ViewModels
                 }
 
                 if (parts.Count == 0)
-                    return "No active RGB controllers detected";
+                    return Strings.LightingViewModel_NoControllers;
 
                 return string.Join(", ", parts);
             }
@@ -542,7 +543,7 @@ namespace OmenCore.ViewModels
         public string RgbSyncParticipantSummary =>
             ActiveRgbTargetCount == 1
                 ? "1 active lighting target"
-                : $"{ActiveRgbTargetCount} active lighting targets";
+                : string.Format(Strings.LightingViewModel_ActiveTargets, ActiveRgbTargetCount);
 
         public string LastRgbSyncSummary
         {
@@ -606,7 +607,7 @@ namespace OmenCore.ViewModels
         public bool IsRazerAvailable => _razerService?.IsAvailable ?? false;
         public string RazerDeviceStatusText => IsRazerAvailable 
             ? $"{_razerDevices.Count} device(s) detected" 
-            : "Razer Synapse not detected";
+            : Strings.LightingViewModel_RazerNotDetected;
         
         public string RazerColorHex
         {
@@ -668,7 +669,7 @@ namespace OmenCore.ViewModels
         public int OpenRgbDeviceCount => _openRgbProvider?.DeviceCount ?? 0;
         public string OpenRgbStatusText => HasOpenRgbDevices 
             ? $"{OpenRgbDeviceCount} device(s) via OpenRGB" 
-            : "OpenRGB server not detected";
+            : Strings.LightingViewModel_OpenRgbNotDetected;
         public System.Collections.Generic.IReadOnlyList<OmenCore.Services.Rgb.OpenRgbDevice> OpenRgbDevices => 
             _openRgbProvider?.Devices ?? new System.Collections.Generic.List<OmenCore.Services.Rgb.OpenRgbDevice>();
         
@@ -784,7 +785,7 @@ namespace OmenCore.ViewModels
             get
             {
                 if (!IsKeyboardLightingAvailable)
-                    return "Keyboard RGB not detected on this system.";
+                    return Strings.LightingViewModel_KeyboardRgbNotDetected;
                 
                 var backend = KeyboardLightingBackend;
                 if (backend.Contains("WMI"))
@@ -2576,7 +2577,7 @@ namespace OmenCore.ViewModels
                 if (config == null)
                 {
                     SelectedObservedRgbSurface = RgbObservationNotRecorded;
-                    RgbSurfaceObservationStatusText = "No RGB surface observation recorded.";
+                    RgbSurfaceObservationStatusText = Strings.LightingViewModel_NoSurfaceObservation;
                     return;
                 }
 
@@ -2604,7 +2605,7 @@ namespace OmenCore.ViewModels
                 string.IsNullOrWhiteSpace(settings.ObservedSurface) ||
                 string.Equals(settings.ObservedSurface, RgbObservationNotRecorded, StringComparison.OrdinalIgnoreCase))
             {
-                return "No RGB surface observation recorded.";
+                return Strings.LightingViewModel_NoSurfaceObservation;
             }
 
             var backend = string.IsNullOrWhiteSpace(settings.ObservedBackend)

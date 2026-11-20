@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -56,7 +57,7 @@ namespace OmenCore.ViewModels
         // State
         private bool _isCleaning;
         private bool _isPageActive = true;
-        private string _statusMessage = "Done";
+        private string _statusMessage = Strings.MemoryOptimizerViewModel_Done;
         private string _lastCleanResult = "";
         private bool _autoCleanEnabled;
         public ICommand CopyLastCleanCommand { get; }
@@ -402,8 +403,8 @@ namespace OmenCore.ViewModels
         public string StandbyListText => $"{StandbyListMB} MB";
         public string ModifiedPageListText => $"{ModifiedPageListMB} MB";
         public string CompressedMemoryText => CompressedMemoryMB.HasValue ? $"{CompressedMemoryMB.Value} MB" : (MemoryCompressionEnabled ? "Enabled" : "Unavailable");
-        public string PhysicalMemorySummary => $"Used {UsedPhysicalGB} • Available {AvailablePhysicalGB} • Cache {SystemCacheMB / 1024.0:F1} GB";
-        public string VirtualMemorySummary => $"Commit {CommitText} • Page file {PageFileText}";
+        public string PhysicalMemorySummary => string.Format(Strings.MemoryOptimizerViewModel_PhysicalSummary, UsedPhysicalGB, AvailablePhysicalGB, (SystemCacheMB / 1024.0).ToString("F1"));
+        public string VirtualMemorySummary => string.Format(Strings.MemoryOptimizerViewModel_VirtualSummary, CommitText, PageFileText);
         public IEnumerable<double> RecentMemoryLoadHistory => _memoryHistory.Select(sample => (double)sample.LoadPercent);
         public bool HasMemoryHistory => _memoryHistory.Count >= 3;
         public string MemoryTrendSummary
@@ -420,7 +421,7 @@ namespace OmenCore.ViewModels
                 var max = loads.Max();
                 var avg = loads.Average();
                 var span = _memoryHistory.Last().Timestamp - _memoryHistory.First().Timestamp;
-                return $"{span.TotalMinutes:F0} min history • avg {avg:F0}% • low {min}% • high {max}%";
+                return string.Format(Strings.MemoryOptimizerViewModel_TrendSummary, span.TotalMinutes.ToString("F0"), avg.ToString("F0"), min, max);
             }
         }
 
@@ -1218,7 +1219,7 @@ namespace OmenCore.ViewModels
 
         private void SetStatusDone(string? details = null)
         {
-            StatusMessage = string.IsNullOrWhiteSpace(details) ? "Done" : $"Done: {details}";
+            StatusMessage = string.IsNullOrWhiteSpace(details) ? Strings.MemoryOptimizerViewModel_Done : $"{Strings.MemoryOptimizerViewModel_Done}: {details}";
         }
 
         private void SetStatusFailed(string? reason)

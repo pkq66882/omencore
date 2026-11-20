@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -33,14 +34,14 @@ namespace OmenCore.ViewModels
         private string _operationProgressLabel = string.Empty;
         private readonly DispatcherTimer _verificationTimer;
         private DateTime? _lastVerifiedAt;
-        private string _verificationSummary = "Verification pending";
+        private string _verificationSummary = Strings.SystemOptimizerViewModel_VerificationPending;
         private bool _hasStateDrift;
         private OptimizationDriftSummary _lastDriftSummary = new();
         private string _driftWarningRollup = "No drift explanations yet.";
         private string _lastExportedReportPath = string.Empty;
         private OptimizationState? _expectedStateForDrift;
-        private string _preflightSummary = "Preflight: not loaded";
-        private string _preflightWarningRollup = "No additional preflight warnings.";
+        private string _preflightSummary = Strings.SystemOptimizerViewModel_PreflightNotLoaded;
+        private string _preflightWarningRollup = Strings.SystemOptimizerViewModel_NoPreflightWarnings;
         private bool _preflightHasHighRisk;
         private int _preflightHighRiskCount;
         
@@ -155,7 +156,7 @@ namespace OmenCore.ViewModels
 
         public string LastVerifiedText => LastVerifiedAt.HasValue
             ? $"Last verified {LastVerifiedAt.Value:g}"
-            : "Verification pending";
+            : Strings.SystemOptimizerViewModel_VerificationPending;
 
         public string VerificationSummary
         {
@@ -197,7 +198,7 @@ namespace OmenCore.ViewModels
         public bool CanCopyExportedReportPath => SystemOptimizerReportActionGuard.CanCopyPath(LastExportedReportPath);
 
         public string OptimizationSummary => 
-            $"{ActiveOptimizationCount} of {TotalOptimizationCount} optimizations active";
+            string.Format(Strings.SystemOptimizerViewModel_OptimizationsActive, ActiveOptimizationCount, TotalOptimizationCount);
 
         public string PreflightSummary
         {

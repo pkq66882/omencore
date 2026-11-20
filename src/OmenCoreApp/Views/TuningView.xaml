@@ -1081,7 +1081,7 @@
                                                            HorizontalAlignment="Center"/>
                                             </StackPanel>
                                         </Grid>
-                                        <TextBlock Text="CLOCK" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
+                                        <TextBlock Text="{x:Static loc:Strings.TuningView_Clock}" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
                                                    HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                     </StackPanel>
                                 </StackPanel>
@@ -1178,20 +1178,20 @@
                                 <Border Grid.Column="0" Background="{StaticResource AccentBrush}" 
                                         CornerRadius="4" Padding="10,5" Margin="0,0,16,0"
                                         VerticalAlignment="Center">
-                                    <TextBlock Text="ACTIVE" FontSize="10" FontWeight="Bold" 
+                                    <TextBlock Text="{x:Static loc:Strings.AdvancedView_Active}" FontSize="10" FontWeight="Bold" 
                                                Foreground="White" FontFamily="{StaticResource MonospaceFontFamily}"/>
                                 </Border>
                                 
                                 <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                     <StackPanel Margin="0,0,24,0">
-                                        <TextBlock Text="CORE" FontSize="9" Foreground="{StaticResource TextMutedBrush}"/>
+                                        <TextBlock Text="{x:Static loc:Strings.TuningView_Core}" FontSize="9" Foreground="{StaticResource TextMutedBrush}"/>
                                         <TextBlock Text="{Binding SystemControl.GpuCoreClockOffset, StringFormat={}{0:+0;-0;0} MHz}" 
                                                    FontFamily="{StaticResource MonospaceFontFamily}"
                                                    FontSize="16" FontWeight="Bold"
                                                    Foreground="{StaticResource AccentBrush}"/>
                                     </StackPanel>
                                     <StackPanel Margin="0,0,24,0">
-                                        <TextBlock Text="MEMORY" FontSize="9" Foreground="{StaticResource TextMutedBrush}"/>
+                                        <TextBlock Text="{x:Static loc:Strings.DashboardView_Memory}" FontSize="9" Foreground="{StaticResource TextMutedBrush}"/>
                                         <TextBlock Text="{Binding SystemControl.GpuMemoryClockOffset, StringFormat={}{0:+0;-0;0} MHz}" 
                                                    FontFamily="{StaticResource MonospaceFontFamily}"
                                                    FontSize="16" FontWeight="Bold"

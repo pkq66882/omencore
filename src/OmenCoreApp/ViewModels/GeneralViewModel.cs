@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Windows.Media;
 using OmenCore.Models;
 using OmenCore.Services;
@@ -164,7 +165,17 @@ namespace OmenCore.ViewModels
         }
 
         /// <summary>The mode as the profile cards name it ("Balanced", not the firmware's "Default").</summary>
-        public string CurrentPerformanceModeDisplay => OmenCore.Models.PerformanceModeNameResolver.ToDisplayName(_currentPerformanceMode);
+        public string CurrentPerformanceModeDisplay
+        {
+            get
+            {
+                var n = OmenCore.Models.PerformanceModeNameResolver.ToDisplayName(_currentPerformanceMode);
+                if (n == "Performance") return Strings.PerformanceMode_Performance;
+                if (n == "Quiet") return Strings.PerformanceMode_Quiet;
+                if (n == "Balanced") return Strings.PerformanceMode_Balanced;
+                return n;
+            }
+        }
 
         public string CurrentFanMode
         {

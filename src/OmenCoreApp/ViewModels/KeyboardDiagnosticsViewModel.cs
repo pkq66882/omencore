@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -156,7 +157,7 @@ namespace OmenCore.ViewModels
                     });
                 }
 
-                DiagnosticStatus = $"Detection complete. Found {DetectedDevices.Count} device(s).";
+                DiagnosticStatus = string.Format(Strings.KeyboardDiagnosticsViewModel_DetectionComplete, DetectedDevices.Count);
                 OnPropertyChanged(nameof(KeyboardLightingTelemetry));
             }
             catch (Exception ex)

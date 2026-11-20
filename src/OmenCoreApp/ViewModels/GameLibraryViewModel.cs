@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -83,7 +84,7 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string ScanStatusText => IsScanning ? "Scanning game libraries..." : $"{FilteredGames.Count} games found";
+        public string ScanStatusText => IsScanning ? Strings.GameLibraryViewModel_Scanning : string.Format(Strings.GameLibraryViewModel_ScanStatus, FilteredGames.Count);
 
         public string SearchFilter
         {

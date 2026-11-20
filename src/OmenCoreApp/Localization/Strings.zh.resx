@@ -4762,4 +4762,199 @@
   <data name="TuningView_Keep" xml:space="preserve">
     <value>保留</value>
   </data>
+  <data name="BloatwareManagerViewModel_Scanning" xml:space="preserve">
+    <value>正在扫描预装软件</value>
+  </data>
+  <data name="DashboardViewModel_Active" xml:space="preserve">
+    <value>活动</value>
+  </data>
+  <data name="DashboardViewModel_BatteryTelemetryUnavailable" xml:space="preserve">
+    <value>电池遥测不可用</value>
+  </data>
+  <data name="DashboardViewModel_CpuTelemetryUnavailable" xml:space="preserve">
+    <value>CPU 遥测不可用</value>
+  </data>
+  <data name="DashboardViewModel_DgpuIdle" xml:space="preserve">
+    <value>独显空闲</value>
+  </data>
+  <data name="DashboardViewModel_FanModeDisplayProp" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="DashboardViewModel_GpuTelemetryUnavailable" xml:space="preserve">
+    <value>GPU 遥测不可用</value>
+  </data>
+  <data name="DashboardViewModel_Idle" xml:space="preserve">
+    <value>空闲</value>
+  </data>
+  <data name="DashboardViewModel_Load" xml:space="preserve">
+    <value>负载</value>
+  </data>
+  <data name="DashboardViewModel_MemoryTelemetryUnavailable" xml:space="preserve">
+    <value>内存遥测不可用</value>
+  </data>
+  <data name="DashboardViewModel_Ssd" xml:space="preserve">
+    <value>SSD</value>
+  </data>
+  <data name="DashboardViewModel_StorageTelemetryUnavailable" xml:space="preserve">
+    <value>存储遥测不可用</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_RgbCheckNotRun" xml:space="preserve">
+    <value>RGB 检查未运行</value>
+  </data>
+  <data name="GameLibraryViewModel_ScanStatus" xml:space="preserve">
+    <value>已找到 {0} 款游戏</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StateInactive" xml:space="preserve">
+    <value>未活动</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_TrendStable" xml:space="preserve">
+    <value>稳定</value>
+  </data>
+  <data name="KeyboardDiagnosticsViewModel_DetectionComplete" xml:space="preserve">
+    <value>检测完成。发现 {0} 台设备。</value>
+  </data>
+  <data name="LightingViewModel_ActiveTargets" xml:space="preserve">
+    <value>{0} 个活动灯效目标</value>
+  </data>
+  <data name="LightingViewModel_KeyboardRgbNotDetected" xml:space="preserve">
+    <value>此系统上未检测到键盘 RGB。</value>
+  </data>
+  <data name="LightingViewModel_NoControllers" xml:space="preserve">
+    <value>未检测到活动的 RGB 控制器</value>
+  </data>
+  <data name="LightingViewModel_NoSurfaceObservation" xml:space="preserve">
+    <value>尚未记录 RGB 表面观测。</value>
+  </data>
+  <data name="LightingViewModel_NoSyncSession" xml:space="preserve">
+    <value>本次会话尚未运行同步。</value>
+  </data>
+  <data name="LightingViewModel_OpenRgbNotDetected" xml:space="preserve">
+    <value>未检测到 OpenRGB 服务器</value>
+  </data>
+  <data name="LightingViewModel_RazerNotDetected" xml:space="preserve">
+    <value>未检测到 Razer Synapse</value>
+  </data>
+  <data name="LightingViewModel_ReadyToRestore" xml:space="preserve">
+    <value>已就绪，可恢复已保存的键盘颜色。</value>
+  </data>
+  <data name="LightingViewModel_ReadyToSync" xml:space="preserve">
+    <value>已就绪，可同步</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_Done" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_PhysicalSummary" xml:space="preserve">
+    <value>已用 {0} • 可用 {1} • 缓存 {2} GB</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_TrendSummary" xml:space="preserve">
+    <value>{0} 分钟历史 • 平均 {1}% • 最低 {2}% • 最高 {3}%</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_VirtualSummary" xml:space="preserve">
+    <value>提交 {0} • 页面文件 {1}</value>
+  </data>
+  <data name="PerformanceMode_Performance" xml:space="preserve">
+    <value>性能</value>
+  </data>
+  <data name="SettingsViewModel_AcPowerConnected" xml:space="preserve">
+    <value>交流电源已连接</value>
+  </data>
+  <data name="SystemControlViewModel_AmdNotDetected" xml:space="preserve">
+    <value>未检测到 AMD Ryzen CPU。</value>
+  </data>
+  <data name="SystemControlViewModel_AmdNotReadYet" xml:space="preserve">
+    <value>尚未读取——按“刷新”向 SMU 查询当前运行值。</value>
+  </data>
+  <data name="SystemControlViewModel_CurveOptimizerTitle" xml:space="preserve">
+    <value>CPU Curve Optimizer（AMD）</value>
+  </data>
+  <data name="SystemControlViewModel_DetectedLimits" xml:space="preserve">
+    <value>检测到的 {0} 限制：核心 {1}，显存 {2}，功耗 {3}。</value>
+  </data>
+  <data name="SystemControlViewModel_MsrLimitsUnavailable" xml:space="preserve">
+    <value>MSR 封装限制不可用——HP 固件可能需要 OMEN 性能模式或 Unleashed 模式</value>
+  </data>
+  <data name="SystemControlViewModel_MsrLimitsUnavailable8D2F" xml:space="preserve">
+    <value>MSR 封装限制在 8D2F Intel 路径上不可用——请使用 OMEN/OGH 模式策略控制</value>
+  </data>
+  <data name="SystemControlViewModel_NoRecentUndervolt" xml:space="preserve">
+    <value>近期无降压操作</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiGuidance" xml:space="preserve">
+    <value>GPU 检测后将显示 NVAPI 调优指引。</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiWiderRange" xml:space="preserve">
+    <value>NVAPI 为此 GPU 报告了比默认更宽的调节范围。接近上限的数值应视为实验性。</value>
+  </data>
+  <data name="SystemControlViewModel_PowerLimitLocked" xml:space="preserve">
+    <value>功耗限制被此 NVIDIA 驱动或 HP 固件路径锁定。核心与显存偏移在可用时仍可调节，但 TGP 变更必须来自固件/BIOS/OEM 控制。</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyCpu" xml:space="preserve">
+    <value>测试应用会临时执行降压并自动还原，除非你点击“保留”。</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyCpu30" xml:space="preserve">
+    <value>测试应用将运行降压 30 秒，随后恢复之前的 CPU 电压，除非你点击“保留”。</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyGpu" xml:space="preserve">
+    <value>测试应用会临时执行调优并自动还原，除非你点击“保留”。</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyGpu30" xml:space="preserve">
+    <value>测试应用将运行所选调优 30 秒，随后恢复之前的 GPU 状态，除非你点击“保留”。</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltBackend" xml:space="preserve">
+    <value>后端：通过 {0} 的 Intel 电压偏移</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltHelp" xml:space="preserve">
+    <value>降低 CPU 电压偏移以降低温度和功耗。负值越大降压越强。</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoPreflightWarnings" xml:space="preserve">
+    <value>无额外预检警告。</value>
+  </data>
+  <data name="SystemOptimizerViewModel_OptimizationsActive" xml:space="preserve">
+    <value>{0} / {1} 项优化已激活</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightNotLoaded" xml:space="preserve">
+    <value>预检：未加载</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerificationPending" xml:space="preserve">
+    <value>验证待完成</value>
+  </data>
+  <data name="TuningStatus_VerifiedBlocked" xml:space="preserve">
+    <value>已验证：被外部控制器阻止（{0}）</value>
+  </data>
+  <data name="TuningStatus_VerifiedFailed" xml:space="preserve">
+    <value>已验证：失败（{0}）</value>
+  </data>
+  <data name="TuningStatus_VerifiedNearestStep" xml:space="preserve">
+    <value>已验证：应用到最接近的 Curve Optimizer 档位（每档 {0} mV 等效）</value>
+  </data>
+  <data name="TuningStatus_VerifiedWarning" xml:space="preserve">
+    <value>已验证：警告（{0}）</value>
+  </data>
+  <data name="AdvancedView_Active" xml:space="preserve">
+    <value>激活</value>
+  </data>
+  <data name="DashboardView_Memory" xml:space="preserve">
+    <value>内存</value>
+  </data>
+  <data name="TuningView_Clock" xml:space="preserve">
+    <value>频率</value>
+  </data>
+  <data name="TuningView_Core" xml:space="preserve">
+    <value>核心</value>
+  </data>
+  <data name="GameLibraryViewModel_Scanning" xml:space="preserve">
+    <value>正在扫描游戏库…</value>
+  </data>
+  <data name="PerformanceMode_Balanced" xml:space="preserve">
+    <value>均衡</value>
+  </data>
+  <data name="PerformanceMode_Quiet" xml:space="preserve">
+    <value>安静</value>
+  </data>
+  <data name="SettingsViewModel_OnBattery" xml:space="preserve">
+    <value>使用电池</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltingTitle" xml:space="preserve">
+    <value>CPU 降压</value>
+  </data>
 </root>

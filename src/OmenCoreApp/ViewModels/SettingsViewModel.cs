@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -996,8 +997,8 @@ namespace OmenCore.ViewModels
             {
                 var powerStatus = System.Windows.Forms.SystemInformation.PowerStatus;
                 CurrentPowerStatus = powerStatus.PowerLineStatus == System.Windows.Forms.PowerLineStatus.Online
-                    ? "⚡ AC Power Connected"
-                    : "🔋 On Battery";
+                    ? "⚡ " + Strings.SettingsViewModel_AcPowerConnected
+                    : "🔋 " + Strings.SettingsViewModel_OnBattery;
             }
             catch
             {

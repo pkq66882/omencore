@@ -4762,4 +4762,199 @@
   <data name="TuningView_Keep" xml:space="preserve">
     <value>Сохранить</value>
   </data>
+  <data name="BloatwareManagerViewModel_Scanning" xml:space="preserve">
+    <value>Сканирование предустановленного ПО</value>
+  </data>
+  <data name="DashboardViewModel_Active" xml:space="preserve">
+    <value>активна</value>
+  </data>
+  <data name="DashboardViewModel_BatteryTelemetryUnavailable" xml:space="preserve">
+    <value>Данные батареи недоступны</value>
+  </data>
+  <data name="DashboardViewModel_CpuTelemetryUnavailable" xml:space="preserve">
+    <value>Данные CPU недоступны</value>
+  </data>
+  <data name="DashboardViewModel_DgpuIdle" xml:space="preserve">
+    <value>dGPU простаивает</value>
+  </data>
+  <data name="DashboardViewModel_FanModeDisplayProp" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="DashboardViewModel_GpuTelemetryUnavailable" xml:space="preserve">
+    <value>Данные GPU недоступны</value>
+  </data>
+  <data name="DashboardViewModel_Idle" xml:space="preserve">
+    <value>Простой</value>
+  </data>
+  <data name="DashboardViewModel_Load" xml:space="preserve">
+    <value>нагрузка</value>
+  </data>
+  <data name="DashboardViewModel_MemoryTelemetryUnavailable" xml:space="preserve">
+    <value>Данные памяти недоступны</value>
+  </data>
+  <data name="DashboardViewModel_Ssd" xml:space="preserve">
+    <value>SSD</value>
+  </data>
+  <data name="DashboardViewModel_StorageTelemetryUnavailable" xml:space="preserve">
+    <value>Данные накопителя недоступны</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_RgbCheckNotRun" xml:space="preserve">
+    <value>Проверка RGB не выполнялась</value>
+  </data>
+  <data name="GameLibraryViewModel_ScanStatus" xml:space="preserve">
+    <value>Найдено игр: {0}</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StateInactive" xml:space="preserve">
+    <value>Неактивно</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_TrendStable" xml:space="preserve">
+    <value>Стабильно</value>
+  </data>
+  <data name="KeyboardDiagnosticsViewModel_DetectionComplete" xml:space="preserve">
+    <value>Обнаружение завершено. Найдено устройств: {0}.</value>
+  </data>
+  <data name="LightingViewModel_ActiveTargets" xml:space="preserve">
+    <value>Активных целей подсветки: {0}</value>
+  </data>
+  <data name="LightingViewModel_KeyboardRgbNotDetected" xml:space="preserve">
+    <value>RGB-подсветка клавиатуры на этой системе не обнаружена.</value>
+  </data>
+  <data name="LightingViewModel_NoControllers" xml:space="preserve">
+    <value>Активные RGB-контроллеры не обнаружены</value>
+  </data>
+  <data name="LightingViewModel_NoSurfaceObservation" xml:space="preserve">
+    <value>Наблюдение RGB-поверхности не записано.</value>
+  </data>
+  <data name="LightingViewModel_NoSyncSession" xml:space="preserve">
+    <value>В этом сеансе синхронизация не выполнялась.</value>
+  </data>
+  <data name="LightingViewModel_OpenRgbNotDetected" xml:space="preserve">
+    <value>Сервер OpenRGB не обнаружен</value>
+  </data>
+  <data name="LightingViewModel_RazerNotDetected" xml:space="preserve">
+    <value>Razer Synapse не обнаружен</value>
+  </data>
+  <data name="LightingViewModel_ReadyToRestore" xml:space="preserve">
+    <value>Готов к восстановлению сохранённых цветов клавиатуры.</value>
+  </data>
+  <data name="LightingViewModel_ReadyToSync" xml:space="preserve">
+    <value>Готов к синхронизации</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_Done" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_PhysicalSummary" xml:space="preserve">
+    <value>Занято {0} • Доступно {1} • Кэш {2} ГБ</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_TrendSummary" xml:space="preserve">
+    <value>{0} мин истории • среднее {1}% • минимум {2}% • максимум {3}%</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_VirtualSummary" xml:space="preserve">
+    <value>Коммит {0} • Файл подкачки {1}</value>
+  </data>
+  <data name="PerformanceMode_Performance" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="SettingsViewModel_AcPowerConnected" xml:space="preserve">
+    <value>Питание от сети подключено</value>
+  </data>
+  <data name="SystemControlViewModel_AmdNotDetected" xml:space="preserve">
+    <value>AMD Ryzen CPU не обнаружен.</value>
+  </data>
+  <data name="SystemControlViewModel_AmdNotReadYet" xml:space="preserve">
+    <value>Ещё не прочитано — нажмите «Обновить», чтобы спросить SMU о текущих значениях.</value>
+  </data>
+  <data name="SystemControlViewModel_CurveOptimizerTitle" xml:space="preserve">
+    <value>Curve Optimizer CPU (AMD)</value>
+  </data>
+  <data name="SystemControlViewModel_DetectedLimits" xml:space="preserve">
+    <value>Обнаруженные лимиты для {0}: ядро {1}, память {2}, мощность {3}.</value>
+  </data>
+  <data name="SystemControlViewModel_MsrLimitsUnavailable" xml:space="preserve">
+    <value>Пакетные лимиты MSR недоступны — прошивка HP может требовать режимы производительности OMEN или режим Unleashed</value>
+  </data>
+  <data name="SystemControlViewModel_MsrLimitsUnavailable8D2F" xml:space="preserve">
+    <value>Пакетные лимиты MSR недоступны на пути 8D2F Intel — используйте управление политикой режимов OMEN/OGH</value>
+  </data>
+  <data name="SystemControlViewModel_NoRecentUndervolt" xml:space="preserve">
+    <value>Недавних действий по недовольту нет</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiGuidance" xml:space="preserve">
+    <value>Рекомендации по тюнингу NVAPI появятся после обнаружения GPU.</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiWiderRange" xml:space="preserve">
+    <value>NVAPI сообщила более широкий, чем по умолчанию, диапазон для этого GPU. Значения у верхней границы следует считать экспериментальными.</value>
+  </data>
+  <data name="SystemControlViewModel_PowerLimitLocked" xml:space="preserve">
+    <value>Лимит мощности заблокирован этим драйвером NVIDIA или путём прошивки HP. Смещения ядра и памяти при доступности всё ещё можно менять, но изменения TGP должны идти от прошивки/BIOS/OEM.</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyCpu" xml:space="preserve">
+    <value>Тест-применение временно выполняет недовольт и автоматически откатывает, если вы не нажмёте «Сохранить».</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyCpu30" xml:space="preserve">
+    <value>Тест-применение выполнит недовольт 30 секунд, затем восстановит прежнее напряжение CPU, если вы не нажмёте «Сохранить».</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyGpu" xml:space="preserve">
+    <value>Тест-применение временно выполняет тюнинг и автоматически откатывает, если вы не нажмёте «Сохранить».</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyGpu30" xml:space="preserve">
+    <value>Тест-применение выполнит выбранный тюнинг 30 секунд, затем восстановит прежнее состояние GPU, если вы не нажмёте «Сохранить».</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltBackend" xml:space="preserve">
+    <value>Бэкенд: смещение напряжения Intel через {0}</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltHelp" xml:space="preserve">
+    <value>Уменьшите смещение напряжения CPU, чтобы снизить температуру и энергопотребление. Более отрицательные значения дают более сильный недовольт.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoPreflightWarnings" xml:space="preserve">
+    <value>Дополнительных предупреждений предпроверки нет.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_OptimizationsActive" xml:space="preserve">
+    <value>Активных оптимизаций: {0} из {1}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightNotLoaded" xml:space="preserve">
+    <value>Предпроверка: не загружена</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerificationPending" xml:space="preserve">
+    <value>Проверка ожидает</value>
+  </data>
+  <data name="TuningStatus_VerifiedBlocked" xml:space="preserve">
+    <value>Проверено: заблокировано внешним контроллером ({0})</value>
+  </data>
+  <data name="TuningStatus_VerifiedFailed" xml:space="preserve">
+    <value>Проверено: сбой ({0})</value>
+  </data>
+  <data name="TuningStatus_VerifiedNearestStep" xml:space="preserve">
+    <value>Проверено: применено к ближайшему шагу Curve Optimizer ({0} мВ на шаг)</value>
+  </data>
+  <data name="TuningStatus_VerifiedWarning" xml:space="preserve">
+    <value>Проверено: предупреждение ({0})</value>
+  </data>
+  <data name="AdvancedView_Active" xml:space="preserve">
+    <value>АКТИВНЫЙ</value>
+  </data>
+  <data name="DashboardView_Memory" xml:space="preserve">
+    <value>ПАМЯТЬ</value>
+  </data>
+  <data name="TuningView_Clock" xml:space="preserve">
+    <value>ЧАСТОТА</value>
+  </data>
+  <data name="TuningView_Core" xml:space="preserve">
+    <value>ЯДРО</value>
+  </data>
+  <data name="GameLibraryViewModel_Scanning" xml:space="preserve">
+    <value>Сканирование игровых библиотек…</value>
+  </data>
+  <data name="PerformanceMode_Balanced" xml:space="preserve">
+    <value>Сбалансированный</value>
+  </data>
+  <data name="PerformanceMode_Quiet" xml:space="preserve">
+    <value>Тихий</value>
+  </data>
+  <data name="SettingsViewModel_OnBattery" xml:space="preserve">
+    <value>От батареи</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltingTitle" xml:space="preserve">
+    <value>Недовольт CPU</value>
+  </data>
 </root>

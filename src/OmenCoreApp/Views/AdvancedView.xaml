@@ -144,7 +144,7 @@
                                         Visibility="{Binding SystemControl.IsQuietMode, Converter={StaticResource BoolToVisibility}}">
                                     <StackPanel Orientation="Horizontal">
                                         <Path Data="{StaticResource IconCheck}" Fill="White" Width="11" Height="11" Stretch="Uniform" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="ACTIVE" FontSize="10" FontWeight="Bold" Foreground="White"/>
+                                        <TextBlock Text="{x:Static loc:Strings.AdvancedView_Active}" FontSize="10" FontWeight="Bold" Foreground="White"/>
                                     </StackPanel>
                                 </Border>
                             </Grid>
@@ -197,7 +197,7 @@
                                         Visibility="{Binding SystemControl.IsBalancedMode, Converter={StaticResource BoolToVisibility}}">
                                     <StackPanel Orientation="Horizontal">
                                         <Path Data="{StaticResource IconCheck}" Fill="White" Width="11" Height="11" Stretch="Uniform" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="ACTIVE" FontSize="10" FontWeight="Bold" Foreground="White"/>
+                                        <TextBlock Text="{x:Static loc:Strings.AdvancedView_Active}" FontSize="10" FontWeight="Bold" Foreground="White"/>
                                     </StackPanel>
                                 </Border>
                             </Grid>
@@ -250,7 +250,7 @@
                                         Visibility="{Binding SystemControl.IsPerformanceMode, Converter={StaticResource BoolToVisibility}}">
                                     <StackPanel Orientation="Horizontal">
                                         <Path Data="{StaticResource IconCheck}" Fill="White" Width="11" Height="11" Stretch="Uniform" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                                        <TextBlock Text="ACTIVE" FontSize="10" FontWeight="Bold" Foreground="White"/>
+                                        <TextBlock Text="{x:Static loc:Strings.AdvancedView_Active}" FontSize="10" FontWeight="Bold" Foreground="White"/>
                                     </StackPanel>
                                 </Border>
                             </Grid>

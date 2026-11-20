@@ -4766,4 +4766,199 @@
   <data name="UpdateViewModel_YouAreRunningLatestCmp" xml:space="preserve">
     <value>You are running the latest version.</value>
   </data>
+  <data name="AdvancedView_Active" xml:space="preserve">
+    <value>ACTIVE</value>
+  </data>
+  <data name="DashboardView_Memory" xml:space="preserve">
+    <value>MEMORY</value>
+  </data>
+  <data name="TuningView_Clock" xml:space="preserve">
+    <value>CLOCK</value>
+  </data>
+  <data name="TuningView_Core" xml:space="preserve">
+    <value>CORE</value>
+  </data>
+  <data name="BloatwareManagerViewModel_Scanning" xml:space="preserve">
+    <value>Scanning for bloatware</value>
+  </data>
+  <data name="DashboardViewModel_Active" xml:space="preserve">
+    <value>active</value>
+  </data>
+  <data name="DashboardViewModel_BatteryTelemetryUnavailable" xml:space="preserve">
+    <value>Battery unavailable</value>
+  </data>
+  <data name="DashboardViewModel_CpuTelemetryUnavailable" xml:space="preserve">
+    <value>CPU telemetry unavailable</value>
+  </data>
+  <data name="DashboardViewModel_DgpuIdle" xml:space="preserve">
+    <value>dGPU idle</value>
+  </data>
+  <data name="DashboardViewModel_FanModeDisplayProp" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="DashboardViewModel_GpuTelemetryUnavailable" xml:space="preserve">
+    <value>GPU telemetry unavailable</value>
+  </data>
+  <data name="DashboardViewModel_Idle" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="DashboardViewModel_Load" xml:space="preserve">
+    <value>load</value>
+  </data>
+  <data name="DashboardViewModel_MemoryTelemetryUnavailable" xml:space="preserve">
+    <value>Memory telemetry unavailable</value>
+  </data>
+  <data name="DashboardViewModel_Ssd" xml:space="preserve">
+    <value>SSD</value>
+  </data>
+  <data name="DashboardViewModel_StorageTelemetryUnavailable" xml:space="preserve">
+    <value>Storage telemetry unavailable</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_RgbCheckNotRun" xml:space="preserve">
+    <value>RGB check not run</value>
+  </data>
+  <data name="GameLibraryViewModel_Scanning" xml:space="preserve">
+    <value>Scanning game libraries...</value>
+  </data>
+  <data name="GameLibraryViewModel_ScanStatus" xml:space="preserve">
+    <value>{0} games found</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StateInactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_TrendStable" xml:space="preserve">
+    <value>Stable</value>
+  </data>
+  <data name="KeyboardDiagnosticsViewModel_DetectionComplete" xml:space="preserve">
+    <value>Detection complete. Found {0} device(s).</value>
+  </data>
+  <data name="LightingViewModel_ActiveTargets" xml:space="preserve">
+    <value>{0} active lighting targets</value>
+  </data>
+  <data name="LightingViewModel_KeyboardRgbNotDetected" xml:space="preserve">
+    <value>Keyboard RGB not detected on this system.</value>
+  </data>
+  <data name="LightingViewModel_NoControllers" xml:space="preserve">
+    <value>No active RGB controllers detected</value>
+  </data>
+  <data name="LightingViewModel_NoSurfaceObservation" xml:space="preserve">
+    <value>No RGB surface observation recorded.</value>
+  </data>
+  <data name="LightingViewModel_NoSyncSession" xml:space="preserve">
+    <value>No sync has run this session.</value>
+  </data>
+  <data name="LightingViewModel_OpenRgbNotDetected" xml:space="preserve">
+    <value>OpenRGB server not detected</value>
+  </data>
+  <data name="LightingViewModel_RazerNotDetected" xml:space="preserve">
+    <value>Razer Synapse not detected</value>
+  </data>
+  <data name="LightingViewModel_ReadyToRestore" xml:space="preserve">
+    <value>Ready to restore saved keyboard colors.</value>
+  </data>
+  <data name="LightingViewModel_ReadyToSync" xml:space="preserve">
+    <value>Ready to sync</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_PhysicalSummary" xml:space="preserve">
+    <value>Used {0} • Available {1} • Cache {2} GB</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_TrendSummary" xml:space="preserve">
+    <value>{0} min history • avg {1}% • low {2}% • high {3}%</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_VirtualSummary" xml:space="preserve">
+    <value>Commit {0} • Page file {1}</value>
+  </data>
+  <data name="PerformanceMode_Balanced" xml:space="preserve">
+    <value>Balanced</value>
+  </data>
+  <data name="PerformanceMode_Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="PerformanceMode_Quiet" xml:space="preserve">
+    <value>Quiet</value>
+  </data>
+  <data name="SettingsViewModel_AcPowerConnected" xml:space="preserve">
+    <value>AC Power Connected</value>
+  </data>
+  <data name="SettingsViewModel_OnBattery" xml:space="preserve">
+    <value>On Battery</value>
+  </data>
+  <data name="SystemControlViewModel_AmdNotDetected" xml:space="preserve">
+    <value>AMD Ryzen CPU not detected.</value>
+  </data>
+  <data name="SystemControlViewModel_AmdNotReadYet" xml:space="preserve">
+    <value>Not read yet - press Refresh to ask the SMU what it is running.</value>
+  </data>
+  <data name="SystemControlViewModel_CurveOptimizerTitle" xml:space="preserve">
+    <value>CPU Curve Optimizer (AMD)</value>
+  </data>
+  <data name="SystemControlViewModel_DetectedLimits" xml:space="preserve">
+    <value>Detected limits for {0}: Core {1}, Memory {2}, Power {3}.</value>
+  </data>
+  <data name="SystemControlViewModel_MsrLimitsUnavailable" xml:space="preserve">
+    <value>MSR package limits unavailable - HP firmware may require OMEN performance modes/Unleashed mode</value>
+  </data>
+  <data name="SystemControlViewModel_MsrLimitsUnavailable8D2F" xml:space="preserve">
+    <value>MSR package limits unavailable on 8D2F Intel path - use OMEN/OGH mode policy control</value>
+  </data>
+  <data name="SystemControlViewModel_NoRecentUndervolt" xml:space="preserve">
+    <value>No recent undervolt action</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiGuidance" xml:space="preserve">
+    <value>NVAPI tuning guidance will appear after the GPU is detected.</value>
+  </data>
+  <data name="SystemControlViewModel_NvapiWiderRange" xml:space="preserve">
+    <value>NVAPI reported a wider-than-default range for this GPU. Values near the top end should be treated as experimental.</value>
+  </data>
+  <data name="SystemControlViewModel_PowerLimitLocked" xml:space="preserve">
+    <value>Power limit is locked by this NVIDIA driver or HP firmware path. Core and memory offsets can still be applied when available, but TGP changes must come from firmware/BIOS/OEM controls.</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyCpu" xml:space="preserve">
+    <value>Test Apply runs the undervolt temporarily and reverts automatically unless you keep it.</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyCpu30" xml:space="preserve">
+    <value>Test Apply runs the undervolt for 30 seconds, then restores the previous CPU voltage unless you keep it.</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyGpu" xml:space="preserve">
+    <value>Test Apply runs tuning temporarily and reverts automatically unless you keep it.</value>
+  </data>
+  <data name="SystemControlViewModel_TestApplyGpu30" xml:space="preserve">
+    <value>Test Apply runs the selected tuning for 30 seconds, then restores the previous GPU state unless you keep it.</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltBackend" xml:space="preserve">
+    <value>Backend: Intel voltage offset via {0}</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltHelp" xml:space="preserve">
+    <value>Reduce CPU voltage offset to lower temperature and power draw. More negative values apply stronger undervolt.</value>
+  </data>
+  <data name="SystemControlViewModel_UndervoltingTitle" xml:space="preserve">
+    <value>CPU Undervolting</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoPreflightWarnings" xml:space="preserve">
+    <value>No additional preflight warnings.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_OptimizationsActive" xml:space="preserve">
+    <value>{0} of {1} optimizations active</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightNotLoaded" xml:space="preserve">
+    <value>Preflight: not loaded</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerificationPending" xml:space="preserve">
+    <value>Verification pending</value>
+  </data>
+  <data name="TuningStatus_VerifiedBlocked" xml:space="preserve">
+    <value>Verified: blocked by external controller ({0})</value>
+  </data>
+  <data name="TuningStatus_VerifiedFailed" xml:space="preserve">
+    <value>Verified: failed ({0})</value>
+  </data>
+  <data name="TuningStatus_VerifiedNearestStep" xml:space="preserve">
+    <value>Verified: applied at the nearest Curve Optimizer step ({0} mV eq. per step)</value>
+  </data>
+  <data name="TuningStatus_VerifiedWarning" xml:space="preserve">
+    <value>Verified: warning ({0})</value>
+  </data>
 </root>

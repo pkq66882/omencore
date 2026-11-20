@@ -39,15 +39,15 @@ namespace OmenCore.ViewModels
             string verified;
             if (status.HasExternalController)
             {
-                verified = $"Verified: blocked by external controller ({status.ExternalController})";
+                verified = string.Format(Strings.TuningStatus_VerifiedBlocked, status.ExternalController);
             }
             else if (!string.IsNullOrWhiteSpace(status.Error))
             {
-                verified = $"Verified: failed ({status.Error})";
+                verified = string.Format(Strings.TuningStatus_VerifiedFailed, status.Error);
             }
             else if (!string.IsNullOrWhiteSpace(status.Warning))
             {
-                verified = $"Verified: warning ({status.Warning})";
+                verified = string.Format(Strings.TuningStatus_VerifiedWarning, status.Warning);
             }
             else
             {
@@ -57,7 +57,7 @@ namespace OmenCore.ViewModels
                               !UndervoltOffsetIsExact(status.CurrentCacheOffsetMv, requestedCacheMv);
                 verified = coreMatch && cacheMatch
                     ? (rounded
-                        ? $"Verified: applied at the nearest Curve Optimizer step ({AmdCoStepMv:0} mV eq. per step)"
+                        ? string.Format(Strings.TuningStatus_VerifiedNearestStep, AmdCoStepMv)
                         : status.HasIndependentReadback
                         ? Strings.TuningStatus_VerifiedReadback
                         : Strings.TuningStatus_VerifiedAcknowledged)

@@ -305,7 +305,7 @@
                         <StackPanel Orientation="Horizontal">
                             <Path Data="{StaticResource IconRam}" Width="16" Height="16" 
                                   Fill="#9C27B0" Stretch="Uniform" Margin="0,0,8,0"/>
-                            <TextBlock Text="MEMORY" Style="{StaticResource Label}"/>
+                            <TextBlock Text="{x:Static loc:Strings.DashboardView_Memory}" Style="{StaticResource Label}"/>
                         </StackPanel>
                         <Border HorizontalAlignment="Right" VerticalAlignment="Center"
                                 Background="{Binding LatestMonitoringSample.RamUsagePercent, Converter={StaticResource LoadToColorConverter}}"
