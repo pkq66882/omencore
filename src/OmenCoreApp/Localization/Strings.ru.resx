@@ -5257,4 +5257,13 @@
   <data name="SystemOptimizerViewModel_VerifyingState" xml:space="preserve">
     <value>Проверка состояния оптимизации…</value>
   </data>
+  <data name="MemoryOptimizerViewModel_Disabled" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_Enabled" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_StateUnavailable" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
 </root>

@@ -5257,4 +5257,13 @@
   <data name="SystemOptimizerViewModel_VerifyingState" xml:space="preserve">
     <value>Optimizasyon durumu doğrulanıyor…</value>
   </data>
+  <data name="MemoryOptimizerViewModel_Disabled" xml:space="preserve">
+    <value>Devre dışı</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_Enabled" xml:space="preserve">
+    <value>Etkin</value>
+  </data>
+  <data name="MemoryOptimizerViewModel_StateUnavailable" xml:space="preserve">
+    <value>Kullanılamıyor</value>
+  </data>
 </root>
