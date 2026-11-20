@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using OmenCore.Models;
 
 namespace OmenCore.ViewModels
@@ -58,11 +59,11 @@ namespace OmenCore.ViewModels
                     ? (rounded
                         ? $"Verified: applied at the nearest Curve Optimizer step ({AmdCoStepMv:0} mV eq. per step)"
                         : status.HasIndependentReadback
-                        ? "Verified: readback matches requested"
-                        : "Verified: write acknowledged (no independent hardware readback on this path)")
+                        ? Strings.TuningStatus_VerifiedReadback
+                        : Strings.TuningStatus_VerifiedAcknowledged)
                     : status.ControlledByOmenCore
-                        ? "Verified: mismatch between requested and readback"
-                        : "Verified: not controlled by OmenCore";
+                        ? Strings.TuningStatus_VerifiedMismatch
+                        : Strings.TuningStatus_VerifiedNotControlled;
             }
 
             return $"{requested} | {applied} | {verified}";

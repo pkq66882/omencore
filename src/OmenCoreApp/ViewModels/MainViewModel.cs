@@ -1,4 +1,5 @@
 using OmenCore.Hardware;
+using OmenCore.Localization;
 using OmenCore.Models;
 using OmenCore.Services;
 using OmenCore.Services.Diagnostics;
@@ -635,8 +636,8 @@ namespace OmenCore.ViewModels
         }
 
         public string FanPerformanceLinkStatus => IsFanPerformanceLinked
-            ? "Linked: fan follows performance"
-            : "Decoupled: fan independent";
+            ? Strings.MainViewModel_LinkStatusLinked
+            : Strings.MainViewModel_LinkStatusDecoupled;
 
         /// <summary>
         /// Re-applies the Settings > Notifications toggles to the live NotificationService.
@@ -662,8 +663,8 @@ namespace OmenCore.ViewModels
             if (_dashboard != null)
             {
                 _dashboard.ModeLinkStatus = linked
-                    ? "Linked: fan follows performance"
-                    : "Decoupled: fan independent";
+                    ? Strings.MainViewModel_LinkStatusLinked
+                    : Strings.MainViewModel_LinkStatusDecoupled;
             }
         }
         
@@ -953,7 +954,7 @@ namespace OmenCore.ViewModels
                     OnPropertyChanged(nameof(MonitoringGraphsVisible));
                     if (_monitoringInitialized)
                     {
-                        PushEvent(value ? "Low overhead monitoring enabled" : "Full monitoring telemetry enabled");
+                        PushEvent(value ? Strings.MainViewModel_MonitoringLowOverhead : Strings.MainViewModel_MonitoringFull);
                     }
                 }
             }
@@ -1072,7 +1073,7 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string LogsToggleText => LogsCollapsed ? "Show activity log" : "Hide activity log";
+        public string LogsToggleText => LogsCollapsed ? Strings.MainViewModel_LogsShow : Strings.MainViewModel_LogsHide;
 
         public bool RestorePointInProgress
         {
@@ -2600,7 +2601,7 @@ namespace OmenCore.ViewModels
         private async Task RunOmenCleanupAsync()
         {
             CleanupInProgress = true;
-            CleanupStatus = CleanupDryRun ? "Running cleanup dry run..." : "Removing OMEN Gaming Hub...";
+            CleanupStatus = CleanupDryRun ? Strings.MainViewModel_CleanupDryRunning : Strings.MainViewModel_CleanupRemoving;
             OmenCleanupSteps.Clear();
             
             // Skip restore point for dry run
@@ -2608,7 +2609,7 @@ namespace OmenCore.ViewModels
             {
                 // Automatically attempt to create restore point before cleanup
                 _logging.Info("Attempting to create restore point before OGH cleanup...");
-                CleanupStatus = "Creating restore point...";
+                CleanupStatus = Strings.MainViewModel_CleanupRestorePoint;
                 OmenCleanupSteps.Add("Creating system restore point...");
                 
                 var restoreResult = await _systemRestoreService.CreateRestorePointAsync("OmenCore - Before OGH Cleanup");
@@ -2681,12 +2682,12 @@ namespace OmenCore.ViewModels
 
                 if (result.Success)
                 {
-                    CleanupStatus = CleanupDryRun ? "✓ Dry run completed" : "✓ OMEN Gaming Hub removed";
+                    CleanupStatus = CleanupDryRun ? Strings.MainViewModel_CleanupDryDone : Strings.MainViewModel_CleanupRemoved;
                     PushEvent(CleanupDryRun ? "OMEN cleanup dry run completed" : "OMEN Gaming Hub cleanup complete");
                 }
                 else
                 {
-                    CleanupStatus = "⚠ Cleanup finished with errors";
+                    CleanupStatus = Strings.MainViewModel_CleanupErrors;
                     PushEvent("OMEN cleanup completed with errors");
                 }
             }

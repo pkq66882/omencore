@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows;
@@ -228,8 +229,8 @@ namespace OmenCore.Views
                 ? new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0x00, 0xC8, 0xC8))
                 : new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0x9C, 0xA3, 0xAF));
             LinkModeText.ToolTip = linked
-                ? "Linked mode is enabled. Performance changes may also rewrite fan policy."
-                : "Decoupled mode is enabled. Performance changes leave your current fan preset or curve untouched.";
+                ? Strings.QuickPopup_LinkedMode
+                : Strings.QuickPopup_DecoupledMode;
             UpdatePerformanceModeTooltips();
         }
 
@@ -279,7 +280,7 @@ namespace OmenCore.Views
         private string BuildLinkModeText()
         {
             return _isFanPerformanceLinked
-                ? "Fan/Perf: Linked"
+                ? Strings.QuickPopup_FanPerfLinked
                 : "Fan/Perf: Decoupled - fan stays";
         }
 

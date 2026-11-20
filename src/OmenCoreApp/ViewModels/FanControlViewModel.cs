@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -493,29 +494,29 @@ namespace OmenCore.ViewModels
 
         public bool ShowConstantControl => IsConstantSelected && ManualFanControlAvailable;
 
-        public string FanCapabilityBadgeText => ProfileOnlyFanControl ? "Profile-only" : "Curves";
+        public string FanCapabilityBadgeText => ProfileOnlyFanControl ? Strings.FanControlViewModel_BadgeProfileOnly : Strings.FanControlViewModel_BadgeCurves;
 
         public string FanCapabilityVisualState => ProfileOnlyFanControl ? "degraded" : "confirmed";
 
         public string FanProfileHeaderHint => ProfileOnlyFanControl
-            ? "Select an OEM fan profile"
-            : "Select a preset, direct fan level, or custom curve";
+            ? Strings.FanControlViewModel_HeaderHintProfileOnly
+            : Strings.FanControlViewModel_HeaderHintPresets;
 
-        public string ExtremePresetSubtitle => ProfileOnlyFanControl ? "Profile" : "@75C";
+        public string ExtremePresetSubtitle => ProfileOnlyFanControl ? Strings.FanControlViewModel_SubtitleProfile : "@75C";
 
-        public string GamingPresetSubtitle => ProfileOnlyFanControl ? "Profile" : "@80C";
+        public string GamingPresetSubtitle => ProfileOnlyFanControl ? Strings.FanControlViewModel_SubtitleProfile80 : "@80C";
 
-        public string CustomPresetSubtitle => FanCurvesAvailable ? "Editor" : "Unavailable";
+        public string CustomPresetSubtitle => FanCurvesAvailable ? Strings.FanControlViewModel_SubtitleEditor : Strings.FanControlViewModel_SubtitleUnavailable;
 
-        public string DirectPresetSubtitle => ManualFanControlAvailable ? $"{ConstantFanPercent}%" : "Unavailable";
+        public string DirectPresetSubtitle => ManualFanControlAvailable ? $"{ConstantFanPercent}%" : Strings.FanControlViewModel_SubtitleUnavailableDirect;
 
         public string CustomCurveTooltip => FanCurvesAvailable
-            ? "Apply your custom fan curve defined in the editor below."
-            : "This model's fan controller doesn't expose a custom-curve interface — a hardware/firmware limitation, not related to whether the model profile is verified. Use OEM fan profiles instead.";
+            ? Strings.FanControlViewModel_CustomCurveTooltipOk
+            : Strings.FanControlViewModel_CustomCurveTooltipNo;
 
         public string DirectFanControlTooltip => ManualFanControlAvailable
-            ? "Hold fans at a fixed requested level using manual fan control."
-            : "This model's fan controller doesn't expose direct fixed-level control — a hardware/firmware limitation, not related to whether the model profile is verified. Use OEM fan profiles instead.";
+            ? Strings.FanControlViewModel_DirectTooltipOk
+            : Strings.FanControlViewModel_DirectTooltipNo;
 
         public string CustomPresetName
         {
@@ -766,21 +767,21 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string FanCalibrationActionText => HasFanCalibrationData ? "Recalibrate" : "Start Calibration";
+        public string FanCalibrationActionText => HasFanCalibrationData ? Strings.FanControlViewModel_CalibrateRecalibrate : Strings.FanControlViewModel_CalibrateStart;
 
         public string FanCalibrationMapSummary => HasFanCalibrationMap
-            ? "Measured duty-to-RPM map from the latest calibration run."
-            : "No duty-to-RPM map available yet.";
+            ? Strings.FanControlViewModel_CalibrationMapOk
+            : Strings.FanControlViewModel_CalibrationMapNone;
 
         public bool IsFanPerformanceLinked => _configService.Config.LinkFanToPerformanceMode;
 
         public string FanPerformanceLinkBadgeText => IsFanPerformanceLinked
-            ? "Linked: performance may change fan mode"
-            : "Independent: fan mode stays under fan controls";
+            ? Strings.FanControlViewModel_LinkBadgeLinked
+            : Strings.FanControlViewModel_LinkBadgeIndependent;
 
         public string FanPerformanceLinkDescription => IsFanPerformanceLinked
-            ? "When linked, selecting a performance profile can also switch the active fan mode. Use this only if you want profile-driven fan behavior."
-            : "When independent, performance profile changes do not rewrite fan policy. Your selected fan preset/curve remains active until you change fan controls directly.";
+            ? Strings.FanControlViewModel_LinkDescLinked
+            : Strings.FanControlViewModel_LinkDescIndependent;
 
         public bool ShowFanPerformanceInfoBanner => !IsFanPerformanceLinked && !_configService.Config.DismissedFanPerformanceDecouplingNotice;
 
@@ -796,8 +797,8 @@ namespace OmenCore.ViewModels
         public bool ShowStartupRestoreHint => !WillFanStateReapplyAtStartup && !_configService.Config.DismissedStartupRestoreHint;
 
         public string StartupRestoreHintText => !_configService.Config.EnableStartupHardwareRestore
-            ? "Startup Hardware Restore is off in Settings, so this preset/curve won't be reapplied automatically after a restart - you'll need to reselect it, or turn that on."
-            : "The Fans category of Startup Hardware Restore is off in Settings, so this preset/curve won't be reapplied automatically after a restart - you'll need to reselect it, or turn that category back on.";
+            ? Strings.FanControlViewModel_StartupHintOff
+            : Strings.FanControlViewModel_StartupHintCategoryOff;
 
         public ICommand DismissStartupRestoreHintCommand { get; }
 
@@ -975,8 +976,8 @@ namespace OmenCore.ViewModels
             ActiveFanMode = "Auto";
             SelectPresetByNameNoApplyAndSave("Auto");
             CurveApplyStatus = success
-                ? "OEM auto restored"
-                : "OEM auto restore did not report success";
+                ? Strings.FanControlViewModel_OemAutoRestored
+                : Strings.FanControlViewModel_OemAutoFailed;
             NotifyFanOwnershipChanged();
         }
 
@@ -1069,8 +1070,8 @@ namespace OmenCore.ViewModels
                 window.ShowDialog();
                 RefreshFanCalibrationStatus();
                 CurveApplyStatus = HasFanCalibrationData
-                    ? "Fan calibration map refreshed from the latest wizard run."
-                    : "Fan calibration wizard closed.";
+                    ? Strings.FanControlViewModel_CalibrationMapRefreshed
+                    : Strings.FanControlViewModel_CalibrationWizardClosed;
             }
             catch (Exception ex)
             {

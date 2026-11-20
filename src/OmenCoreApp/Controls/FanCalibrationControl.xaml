@@ -83,7 +83,7 @@
                                     <DataGridTextColumn Header="{x:Static loc:Strings.FanCalibrationControl_AppliedLevel}" Binding="{Binding AppliedLevel}" Width="130"/>
                                     <DataGridTextColumn Header="{x:Static loc:Strings.FanCalibrationControl_MeasuredRpm}" Binding="{Binding MeasuredRpm}" Width="140"/>
                                     <DataGridTextColumn Header="{x:Static loc:Strings.FanCalibrationControl_RpmRange}" Binding="{Binding RpmRange}" Width="100"/>
-                                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="80"/>
+                                    <DataGridTextColumn Header="{x:Static loc:Strings.FanCalibrationControl_Status}" Binding="{Binding Status}" Width="80"/>
                                     <DataGridTextColumn Header="{x:Static loc:Strings.FanCalibrationControl_Duration}" Binding="{Binding DurationFormatted}" Width="100"/>
                                 </DataGrid.Columns>
                             </DataGrid>
@@ -110,7 +110,7 @@
         <Border Grid.Row="2" Background="{DynamicResource SurfaceDarkBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="8" Margin="0,10,0,0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="15">
                 <Button x:Name="StartCalibrationButton" Content="{x:Static loc:Strings.FanCalibrationControl_StartCalibration}" Style="{StaticResource CalibrationButtonStyle}" Background="{DynamicResource AccentBrush}" Foreground="White" Click="StartCalibrationButton_Click"/>
-                <Button x:Name="StopCalibrationButton" Content="Stop" Style="{StaticResource CalibrationButtonStyle}" Background="{DynamicResource ErrorBrush}" Foreground="White" Click="StopCalibrationButton_Click" Visibility="Collapsed"/>
+                <Button x:Name="StopCalibrationButton" Content="{x:Static loc:Strings.FanCalibrationControl_Stop}" Style="{StaticResource CalibrationButtonStyle}" Background="{DynamicResource ErrorBrush}" Foreground="White" Click="StopCalibrationButton_Click" Visibility="Collapsed"/>
                 <Button x:Name="LoadCalibrationButton" Content="{x:Static loc:Strings.FanCalibrationControl_LoadExisting}" Style="{StaticResource CalibrationButtonStyle}" Click="LoadCalibrationButton_Click"/>
                 <Button x:Name="SaveCalibrationButton" Content="{x:Static loc:Strings.FanCalibrationControl_SaveResults}" Style="{StaticResource CalibrationButtonStyle}" Click="SaveCalibrationButton_Click" Visibility="Collapsed"/>
                 <Button x:Name="RestoreAutoButton" Content="{x:Static loc:Strings.FanCalibrationControl_RestoreAuto}" Style="{StaticResource CalibrationButtonStyle}" Click="RestoreAutoButton_Click" ToolTip="{x:Static loc:Strings.FanCalibrationControl_ReleaseCalibrationManualFanOwnershipAndRet}"/>

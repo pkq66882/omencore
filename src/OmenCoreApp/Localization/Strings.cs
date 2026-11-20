@@ -1535,5 +1535,271 @@ namespace OmenCore.Localization
     public static string TuningView_YourGpuDoesnTSupportClockOffsetAdjustments => Get(nameof(TuningView_YourGpuDoesnTSupportClockOffsetAdjustments));
     public static string TuningView_YourSystemDoesnTSupportCpuUndervoltingPowe => Get(nameof(TuningView_YourSystemDoesnTSupportCpuUndervoltingPowe));
 
+    // Auto-extracted literals from AboutWindow.xaml
+    public static string AboutWindow_Close => Get(nameof(AboutWindow_Close));
+
+    // Auto-extracted literals from AdvancedView.xaml
+    public static string AdvancedView_Apply => Get(nameof(AdvancedView_Apply));
+    public static string AdvancedView_Quiet => Get(nameof(AdvancedView_Quiet));
+
+    // Auto-extracted literals from BloatwareManagerView.xaml
+    public static string BloatwareManagerView_All => Get(nameof(BloatwareManagerView_All));
+    public static string BloatwareManagerView_App => Get(nameof(BloatwareManagerView_App));
+    public static string BloatwareManagerView_Est => Get(nameof(BloatwareManagerView_Est));
+    public static string BloatwareManagerView_High => Get(nameof(BloatwareManagerView_High));
+    public static string BloatwareManagerView_Low => Get(nameof(BloatwareManagerView_Low));
+    public static string BloatwareManagerView_Med => Get(nameof(BloatwareManagerView_Med));
+    public static string BloatwareManagerView_Name => Get(nameof(BloatwareManagerView_Name));
+    public static string BloatwareManagerView_Remove => Get(nameof(BloatwareManagerView_Remove));
+    public static string BloatwareManagerView_Risk_X => Get(nameof(BloatwareManagerView_Risk_X));
+    public static string BloatwareManagerView_Scan => Get(nameof(BloatwareManagerView_Scan));
+    public static string BloatwareManagerView_Type => Get(nameof(BloatwareManagerView_Type));
+
+    // Auto-extracted literals from DashboardView.xaml
+    public static string DashboardView_Power => Get(nameof(DashboardView_Power));
+
+    // Auto-extracted literals from DiagnosticExportControl.xaml
+    public static string DiagnosticExportControl_Cancel => Get(nameof(DiagnosticExportControl_Cancel));
+
+    // Auto-extracted literals from FanCalibrationControl.xaml
+    public static string FanCalibrationControl_Status => Get(nameof(FanCalibrationControl_Status));
+    public static string FanCalibrationControl_Stop => Get(nameof(FanCalibrationControl_Stop));
+
+    // Auto-extracted literals from FanControlView.xaml
+    public static string FanControlView_Add => Get(nameof(FanControlView_Add));
+    public static string FanControlView_Auto => Get(nameof(FanControlView_Auto));
+    public static string FanControlView_Custom => Get(nameof(FanControlView_Custom));
+    public static string FanControlView_Direct => Get(nameof(FanControlView_Direct));
+    public static string FanControlView_Export => Get(nameof(FanControlView_Export));
+    public static string FanControlView_Gaming => Get(nameof(FanControlView_Gaming));
+    public static string FanControlView_Import => Get(nameof(FanControlView_Import));
+    public static string FanControlView_Max => Get(nameof(FanControlView_Max));
+    public static string FanControlView_Ms => Get(nameof(FanControlView_Ms));
+    public static string FanControlView_Save => Get(nameof(FanControlView_Save));
+    public static string FanControlView_Silent => Get(nameof(FanControlView_Silent));
+
+    // Auto-extracted literals from GameLibraryView.xaml
+    public static string GameLibraryView_Launch => Get(nameof(GameLibraryView_Launch));
+
+    // Auto-extracted literals from GameProfileManagerView.xaml
+    public static string GameProfileManagerView_Delete => Get(nameof(GameProfileManagerView_Delete));
+
+    // Auto-extracted literals from GeneralView.xaml
+    public static string GeneralView_Load => Get(nameof(GeneralView_Load));
+    public static string GeneralView_Manual => Get(nameof(GeneralView_Manual));
+    public static string GeneralView_Ram => Get(nameof(GeneralView_Ram));
+    public static string GeneralView_System => Get(nameof(GeneralView_System));
+    public static string GeneralView_Temp => Get(nameof(GeneralView_Temp));
+    public static string GeneralView_Used => Get(nameof(GeneralView_Used));
+
+    // Auto-extracted literals from HardwareMonitoringDashboard.xaml
+    public static string HardwareMonitoringDashboard_Cycles => Get(nameof(HardwareMonitoringDashboard_Cycles));
+    public static string HardwareMonitoringDashboard_Good => Get(nameof(HardwareMonitoringDashboard_Good));
+    public static string HardwareMonitoringDashboard_Mhz => Get(nameof(HardwareMonitoringDashboard_Mhz));
+    public static string HardwareMonitoringDashboard_Normal => Get(nameof(HardwareMonitoringDashboard_Normal));
+    public static string HardwareMonitoringDashboard_Watts => Get(nameof(HardwareMonitoringDashboard_Watts));
+
+    // Auto-extracted literals from InputPromptWindow.xaml
+    public static string InputPromptWindow_Input => Get(nameof(InputPromptWindow_Input));
+    public static string InputPromptWindow_Prompt => Get(nameof(InputPromptWindow_Prompt));
+
+    // Auto-extracted literals from LightingView.xaml
+    public static string LightingView_Blue => Get(nameof(LightingView_Blue));
+    public static string LightingView_Colour => Get(nameof(LightingView_Colour));
+    public static string LightingView_Cyan => Get(nameof(LightingView_Cyan));
+    public static string LightingView_Effect => Get(nameof(LightingView_Effect));
+    public static string LightingView_Green => Get(nameof(LightingView_Green));
+    public static string LightingView_Leds => Get(nameof(LightingView_Leds));
+    public static string LightingView_Medium => Get(nameof(LightingView_Medium));
+    public static string LightingView_Mode => Get(nameof(LightingView_Mode));
+    public static string LightingView_Off => Get(nameof(LightingView_Off));
+    public static string LightingView_Orange => Get(nameof(LightingView_Orange));
+    public static string LightingView_Pink => Get(nameof(LightingView_Pink));
+    public static string LightingView_Probe => Get(nameof(LightingView_Probe));
+    public static string LightingView_Purple => Get(nameof(LightingView_Purple));
+    public static string LightingView_Red => Get(nameof(LightingView_Red));
+    public static string LightingView_Speed => Get(nameof(LightingView_Speed));
+    public static string LightingView_Theme => Get(nameof(LightingView_Theme));
+    public static string LightingView_White => Get(nameof(LightingView_White));
+    public static string LightingView_Yellow => Get(nameof(LightingView_Yellow));
+
+    // Auto-extracted literals from MainWindow.xaml
+    public static string MainWindow_About => Get(nameof(MainWindow_About));
+    public static string MainWindow_GotIt => Get(nameof(MainWindow_GotIt));
+
+    // Auto-extracted literals from MemoryOptimizerView.xaml
+    public static string MemoryOptimizerView_Add => Get(nameof(MemoryOptimizerView_Add));
+    public static string MemoryOptimizerView_Clean => Get(nameof(MemoryOptimizerView_Clean));
+    public static string MemoryOptimizerView_Commit => Get(nameof(MemoryOptimizerView_Commit));
+    public static string MemoryOptimizerView_Safe => Get(nameof(MemoryOptimizerView_Safe));
+    public static string MemoryOptimizerView_Toggle => Get(nameof(MemoryOptimizerView_Toggle));
+
+    // Auto-extracted literals from OsdOverlayWindow.xaml
+    public static string OsdOverlayWindow_Mbps => Get(nameof(OsdOverlayWindow_Mbps));
+
+    // Auto-extracted literals from QuickPopupWindow.xaml
+    public static string QuickPopupWindow_Curve => Get(nameof(QuickPopupWindow_Curve));
+    public static string QuickPopupWindow_N165hz => Get(nameof(QuickPopupWindow_N165hz));
+
+    // Auto-extracted literals from SettingsView.xaml
+    public static string SettingsView_Daily => Get(nameof(SettingsView_Daily));
+    public static string SettingsView_Driver => Get(nameof(SettingsView_Driver));
+    public static string SettingsView_Fans => Get(nameof(SettingsView_Fans));
+    public static string SettingsView_Github_X => Get(nameof(SettingsView_Github_X));
+    public static string SettingsView_Layout => Get(nameof(SettingsView_Layout));
+    public static string SettingsView_Sensor => Get(nameof(SettingsView_Sensor));
+    public static string SettingsView_Tuning => Get(nameof(SettingsView_Tuning));
+    public static string SettingsView_Weekly => Get(nameof(SettingsView_Weekly));
+
+    // Auto-extracted literals from SystemOptimizerView.xaml
+    public static string SystemOptimizerView_Open => Get(nameof(SystemOptimizerView_Open));
+
+    // Auto-extracted literals from TuningView.xaml
+    public static string TuningView_Keep => Get(nameof(TuningView_Keep));
+
+    // Auto-extracted literals from AboutWindow.xaml
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from BloatwareManagerView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from DiagnosticExportControl.xaml
+
+    // Auto-extracted literals from FanCalibrationControl.xaml
+
+    // Auto-extracted literals from FanControlView.xaml
+
+    // Auto-extracted literals from GameLibraryView.xaml
+
+    // Auto-extracted literals from GameProfileManagerView.xaml
+
+    // Auto-extracted literals from GeneralView.xaml
+
+    // Auto-extracted literals from HardwareMonitoringDashboard.xaml
+
+    // Auto-extracted literals from InputPromptWindow.xaml
+
+    // Auto-extracted literals from LightingView.xaml
+
+    // Auto-extracted literals from MainWindow.xaml
+
+    // Auto-extracted literals from MemoryOptimizerView.xaml
+
+    // Auto-extracted literals from OsdOverlayWindow.xaml
+
+    // Auto-extracted literals from QuickPopupWindow.xaml
+
+    // Auto-extracted literals from SettingsView.xaml
+
+    // Auto-extracted literals from SystemOptimizerView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+    public static string FanControlViewModel_BadgeCurves => Get(nameof(FanControlViewModel_BadgeCurves));
+    public static string FanControlViewModel_BadgeProfileOnly => Get(nameof(FanControlViewModel_BadgeProfileOnly));
+    public static string FanControlViewModel_CalibrateRecalibrate => Get(nameof(FanControlViewModel_CalibrateRecalibrate));
+    public static string FanControlViewModel_CalibrateStart => Get(nameof(FanControlViewModel_CalibrateStart));
+    public static string FanControlViewModel_CalibrationMapNone => Get(nameof(FanControlViewModel_CalibrationMapNone));
+    public static string FanControlViewModel_CalibrationMapOk => Get(nameof(FanControlViewModel_CalibrationMapOk));
+    public static string FanControlViewModel_CalibrationMapRefreshed => Get(nameof(FanControlViewModel_CalibrationMapRefreshed));
+    public static string FanControlViewModel_CalibrationWizardClosed => Get(nameof(FanControlViewModel_CalibrationWizardClosed));
+    public static string FanControlViewModel_CustomCurveTooltipNo => Get(nameof(FanControlViewModel_CustomCurveTooltipNo));
+    public static string FanControlViewModel_CustomCurveTooltipOk => Get(nameof(FanControlViewModel_CustomCurveTooltipOk));
+    public static string FanControlViewModel_DirectTooltipNo => Get(nameof(FanControlViewModel_DirectTooltipNo));
+    public static string FanControlViewModel_DirectTooltipOk => Get(nameof(FanControlViewModel_DirectTooltipOk));
+    public static string FanControlViewModel_HeaderHintPresets => Get(nameof(FanControlViewModel_HeaderHintPresets));
+    public static string FanControlViewModel_HeaderHintProfileOnly => Get(nameof(FanControlViewModel_HeaderHintProfileOnly));
+    public static string FanControlViewModel_LinkBadgeIndependent => Get(nameof(FanControlViewModel_LinkBadgeIndependent));
+    public static string FanControlViewModel_LinkBadgeLinked => Get(nameof(FanControlViewModel_LinkBadgeLinked));
+    public static string FanControlViewModel_LinkDescIndependent => Get(nameof(FanControlViewModel_LinkDescIndependent));
+    public static string FanControlViewModel_LinkDescLinked => Get(nameof(FanControlViewModel_LinkDescLinked));
+    public static string FanControlViewModel_OemAutoFailed => Get(nameof(FanControlViewModel_OemAutoFailed));
+    public static string FanControlViewModel_OemAutoRestored => Get(nameof(FanControlViewModel_OemAutoRestored));
+    public static string FanControlViewModel_StartupHintCategoryOff => Get(nameof(FanControlViewModel_StartupHintCategoryOff));
+    public static string FanControlViewModel_StartupHintOff => Get(nameof(FanControlViewModel_StartupHintOff));
+    public static string FanControlViewModel_SubtitleEditor => Get(nameof(FanControlViewModel_SubtitleEditor));
+    public static string FanControlViewModel_SubtitleProfile => Get(nameof(FanControlViewModel_SubtitleProfile));
+    public static string FanControlViewModel_SubtitleProfile80 => Get(nameof(FanControlViewModel_SubtitleProfile80));
+    public static string FanControlViewModel_SubtitleUnavailable => Get(nameof(FanControlViewModel_SubtitleUnavailable));
+    public static string FanControlViewModel_SubtitleUnavailableDirect => Get(nameof(FanControlViewModel_SubtitleUnavailableDirect));
+    public static string HardwareMonitoringDashboard_BatteryCapacityUnavailable => Get(nameof(HardwareMonitoringDashboard_BatteryCapacityUnavailable));
+    public static string HardwareMonitoringDashboard_BatteryNotReported => Get(nameof(HardwareMonitoringDashboard_BatteryNotReported));
+    public static string HardwareMonitoringDashboard_StateUnavailable => Get(nameof(HardwareMonitoringDashboard_StateUnavailable));
+    public static string MainViewModel_CleanupDryDone => Get(nameof(MainViewModel_CleanupDryDone));
+    public static string MainViewModel_CleanupDryRunning => Get(nameof(MainViewModel_CleanupDryRunning));
+    public static string MainViewModel_CleanupErrors => Get(nameof(MainViewModel_CleanupErrors));
+    public static string MainViewModel_CleanupRemoved => Get(nameof(MainViewModel_CleanupRemoved));
+    public static string MainViewModel_CleanupRemoving => Get(nameof(MainViewModel_CleanupRemoving));
+    public static string MainViewModel_CleanupRestorePoint => Get(nameof(MainViewModel_CleanupRestorePoint));
+    public static string MainViewModel_LinkStatusDecoupled => Get(nameof(MainViewModel_LinkStatusDecoupled));
+    public static string MainViewModel_LinkStatusLinked => Get(nameof(MainViewModel_LinkStatusLinked));
+    public static string MainViewModel_LogsHide => Get(nameof(MainViewModel_LogsHide));
+    public static string MainViewModel_LogsShow => Get(nameof(MainViewModel_LogsShow));
+    public static string MainViewModel_MonitoringFull => Get(nameof(MainViewModel_MonitoringFull));
+    public static string MainViewModel_MonitoringLowOverhead => Get(nameof(MainViewModel_MonitoringLowOverhead));
+    public static string QuickPopup_DecoupledMode => Get(nameof(QuickPopup_DecoupledMode));
+    public static string QuickPopup_FanPerfLinked => Get(nameof(QuickPopup_FanPerfLinked));
+    public static string QuickPopup_LinkedMode => Get(nameof(QuickPopup_LinkedMode));
+    public static string TrayIcon_AcPower => Get(nameof(TrayIcon_AcPower));
+    public static string TrayIcon_Battery => Get(nameof(TrayIcon_Battery));
+    public static string TrayIcon_Charging => Get(nameof(TrayIcon_Charging));
+    public static string TrayIcon_Decoupled => Get(nameof(TrayIcon_Decoupled));
+    public static string TrayIcon_Enabled => Get(nameof(TrayIcon_Enabled));
+    public static string TrayIcon_KeepAboveOff => Get(nameof(TrayIcon_KeepAboveOff));
+    public static string TrayIcon_KeepAboveOn => Get(nameof(TrayIcon_KeepAboveOn));
+    public static string TrayIcon_Linked => Get(nameof(TrayIcon_Linked));
+    public static string TrayIcon_OnBattery => Get(nameof(TrayIcon_OnBattery));
+    public static string TrayIcon_StayOnTopOff => Get(nameof(TrayIcon_StayOnTopOff));
+    public static string TrayIcon_StayOnTopOn => Get(nameof(TrayIcon_StayOnTopOn));
+    public static string TuningStatus_VerifiedAcknowledged => Get(nameof(TuningStatus_VerifiedAcknowledged));
+    public static string TuningStatus_VerifiedMismatch => Get(nameof(TuningStatus_VerifiedMismatch));
+    public static string TuningStatus_VerifiedNotControlled => Get(nameof(TuningStatus_VerifiedNotControlled));
+    public static string TuningStatus_VerifiedReadback => Get(nameof(TuningStatus_VerifiedReadback));
+    public static string UpdateViewModel_YouAreRunningLatest => Get(nameof(UpdateViewModel_YouAreRunningLatest));
+    public static string UpdateViewModel_YouAreRunningLatestCmp => Get(nameof(UpdateViewModel_YouAreRunningLatestCmp));
+
+    // Auto-extracted literals from AboutWindow.xaml
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from BloatwareManagerView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from DiagnosticExportControl.xaml
+
+    // Auto-extracted literals from FanCalibrationControl.xaml
+
+    // Auto-extracted literals from FanControlView.xaml
+
+    // Auto-extracted literals from GameLibraryView.xaml
+
+    // Auto-extracted literals from GameProfileManagerView.xaml
+
+    // Auto-extracted literals from GeneralView.xaml
+
+    // Auto-extracted literals from HardwareMonitoringDashboard.xaml
+
+    // Auto-extracted literals from InputPromptWindow.xaml
+
+    // Auto-extracted literals from LightingView.xaml
+
+    // Auto-extracted literals from MainWindow.xaml
+
+    // Auto-extracted literals from MemoryOptimizerView.xaml
+
+    // Auto-extracted literals from OsdOverlayWindow.xaml
+
+    // Auto-extracted literals from QuickPopupWindow.xaml
+
+    // Auto-extracted literals from SettingsView.xaml
+
+    // Auto-extracted literals from SystemOptimizerView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
     }
 }

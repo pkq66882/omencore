@@ -283,7 +283,7 @@
                                                   Stretch="Uniform"
                                                   Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
                                                   Margin="0,0,5,0"/>
-                                            <TextBlock Text="Probe" FontSize="10"/>
+                                            <TextBlock Text="{x:Static loc:Strings.LightingView_Probe}" FontSize="10"/>
                                         </StackPanel>
                                     </Button>
                                     <Button Command="{Binding SaveRgbSurfaceObservationCommand}"
@@ -298,7 +298,7 @@
                                                   Stretch="Uniform"
                                                   Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
                                                   Margin="0,0,5,0"/>
-                                            <TextBlock Text="Save" FontSize="10"/>
+                                            <TextBlock Text="{x:Static loc:Strings.FanControlView_Save}" FontSize="10"/>
                                         </StackPanel>
                                     </Button>
                                 </StackPanel>
@@ -519,7 +519,7 @@
                                 <ColumnDefinition Width="220"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Column="0" Text="Mode" VerticalAlignment="Center"
+                            <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.LightingView_Mode}" VerticalAlignment="Center"
                                        Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,8,0"/>
                             <ComboBox Grid.Column="1" ItemsSource="{Binding AudioVisualizationModes}"
                                       SelectedItem="{Binding SelectedAudioVisualizationMode, Mode=TwoWay}"
@@ -667,7 +667,7 @@
                                       Margin="0,0,12,0"/>
                             
                             <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
-                                <Button Content="Apply" Style="{StaticResource ModernButton}" Command="{Binding ApplyCorsairLightingCommand}" Padding="16,8" Margin="0,0,8,0"/>
+                                <Button Content="{x:Static loc:Strings.AdvancedView_Apply}" Style="{StaticResource ModernButton}" Command="{Binding ApplyCorsairLightingCommand}" Padding="16,8" Margin="0,0,8,0"/>
                                 <Button Content="{x:Static loc:Strings.LightingView_ApplyToSystem}" Style="{StaticResource ModernButton}" Command="{Binding ApplyCorsairPresetToSystemCommand}" Padding="12,8"/>
                             </StackPanel>
                         </Grid>
@@ -769,7 +769,7 @@
 
                                         <Button Content="{x:Static loc:Strings.LightingView_SaveProfile}" Style="{StaticResource ModernButton}" Command="{Binding SaveCorsairDpiProfileCommand}" Padding="12,6" Margin="0,0,8,0" ToolTip="{x:Static loc:Strings.LightingView_SaveCurrentDpiStagesAsAProfile}"/>
                                         <Button Content="{x:Static loc:Strings.LightingView_ApplyProfile}" Style="{StaticResource ModernButton}" Command="{Binding ApplyCorsairDpiProfileCommand}" Padding="12,6" Margin="0,0,8,0" ToolTip="{x:Static loc:Strings.LightingView_ApplySelectedDpiProfileToCurrentStages}"/>
-                                        <Button Content="Delete" Style="{StaticResource ModernButton}" Command="{Binding DeleteCorsairDpiProfileCommand}" Padding="12,6" ToolTip="{x:Static loc:Strings.LightingView_DeleteTheSelectedDpiProfile}" />
+                                        <Button Content="{x:Static loc:Strings.GameProfileManagerView_Delete}" Style="{StaticResource ModernButton}" Command="{Binding DeleteCorsairDpiProfileCommand}" Padding="12,6" ToolTip="{x:Static loc:Strings.LightingView_DeleteTheSelectedDpiProfile}" />
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
@@ -917,7 +917,7 @@
                                        VerticalAlignment="Center" Margin="0,0,12,0"/>
                             
                             <StackPanel Grid.Column="1" Margin="0,0,8,0">
-                                <TextBlock Text="Red" FontSize="12" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Red}" FontSize="12" 
                                            Foreground="{StaticResource TextSecondaryBrush}" 
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding LogitechRedValue, UpdateSourceTrigger=PropertyChanged}"
@@ -926,7 +926,7 @@
                             </StackPanel>
                             
                             <StackPanel Grid.Column="2" Margin="0,0,8,0">
-                                <TextBlock Text="Green" FontSize="12" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Green}" FontSize="12" 
                                            Foreground="{StaticResource TextSecondaryBrush}" 
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding LogitechGreenValue, UpdateSourceTrigger=PropertyChanged}"
@@ -935,7 +935,7 @@
                             </StackPanel>
                             
                             <StackPanel Grid.Column="3" Margin="0,0,8,0">
-                                <TextBlock Text="Blue" FontSize="12" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Blue}" FontSize="12" 
                                            Foreground="{StaticResource TextSecondaryBrush}" 
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding LogitechBlueValue, UpdateSourceTrigger=PropertyChanged}"
@@ -1068,7 +1068,7 @@
                                        VerticalAlignment="Center" Margin="0,0,12,0"/>
                             
                             <StackPanel Grid.Column="1" Margin="0,0,8,0">
-                                <TextBlock Text="Red" FontSize="12" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Red}" FontSize="12" 
                                            Foreground="{StaticResource TextSecondaryBrush}" 
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding RazerRedValue, UpdateSourceTrigger=PropertyChanged}"
@@ -1077,7 +1077,7 @@
                             </StackPanel>
                             
                             <StackPanel Grid.Column="2" Margin="0,0,8,0">
-                                <TextBlock Text="Green" FontSize="12" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Green}" FontSize="12" 
                                            Foreground="{StaticResource TextSecondaryBrush}" 
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding RazerGreenValue, UpdateSourceTrigger=PropertyChanged}"
@@ -1086,7 +1086,7 @@
                             </StackPanel>
                             
                             <StackPanel Grid.Column="3" Margin="0,0,8,0">
-                                <TextBlock Text="Blue" FontSize="12" 
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Blue}" FontSize="12" 
                                            Foreground="{StaticResource TextSecondaryBrush}" 
                                            Margin="0,0,0,4"/>
                                 <TextBox Text="{Binding RazerBlueValue, UpdateSourceTrigger=PropertyChanged}"
@@ -1196,7 +1196,7 @@
                                             <Border Grid.Column="2" Background="#1AFF6B35" CornerRadius="6" Padding="8,4" VerticalAlignment="Center">
                                                 <TextBlock FontSize="11" Foreground="#FF6B35">
                                                     <Run Text="{Binding LedCount, Mode=OneWay}"/>
-                                                    <Run Text=" LEDs"/>
+                                                    <Run Text="{x:Static loc:Strings.LightingView_Leds}"/>
                                                 </TextBlock>
                                             </Border>
                                         </Grid>
@@ -1212,35 +1212,35 @@
                                    Margin="0,0,0,8"/>
                         <WrapPanel Margin="0,0,0,0">
                             <Button Content="🔴" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Red"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Red}"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#FF0000"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorRed}"/>
                             <Button Content="🔵" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Blue"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Blue}"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#0066FF"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorBlue}"/>
                             <Button Content="🟢" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Green"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Green}"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#00FF00"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorGreen}"/>
                             <Button Content="🟣" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Purple"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Purple}"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#9400D3"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorPurple}"/>
                             <Button Content="🟡" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Yellow"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Yellow}"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#FFFF00"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorYellow}"/>
                             <Button Content="⚪" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="White"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_White}"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#FFFFFF"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorWhite}"/>
                             <Button Content="🟠" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Orange"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Orange}"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#FF6B35"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorOrange}"/>
                             <Button Content="⬛" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Off"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Off}"
                                     Command="{Binding ApplyOpenRgbColorCommand}" CommandParameter="#000000"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_OpenrgbQuickColorOff}"/>
                         </WrapPanel>
@@ -1307,35 +1307,35 @@
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#E6002E"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorOmenRed}"/>
                             <Button Content="🔵" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Blue"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Blue}"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#0066FF"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorBlue}"/>
                             <Button Content="🟢" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Green"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Green}"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#00FF00"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorGreen}"/>
                             <Button Content="🟣" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Purple"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Purple}"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#9400D3"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorPurple}"/>
                             <Button Content="🟡" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Yellow"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Yellow}"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#FFFF00"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorYellow}"/>
                             <Button Content="⚪" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="White"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_White}"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#FFFFFF"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorWhite}"/>
                             <Button Content="🩵" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Cyan"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Cyan}"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#00FFFF"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorCyan}"/>
                             <Button Content="🩷" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Pink"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Pink}"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#FF69B4"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorPink}"/>
                             <Button Content="⬛" FontSize="14" Padding="8,4" Margin="0,0,6,4"
-                                    Style="{StaticResource ModernButton}" ToolTip="Off"
+                                    Style="{StaticResource ModernButton}" ToolTip="{x:Static loc:Strings.LightingView_Off}"
                                     Command="{Binding ApplyQuickColorCommand}" CommandParameter="#000000"
                                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_KeyboardQuickColorOff}"/>
                         </WrapPanel>
@@ -1638,20 +1638,20 @@
 
                         <WrapPanel Margin="0,0,0,12">
                             <StackPanel Margin="0,0,16,8">
-                                <TextBlock Text="Effect" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Effect}" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                 <ComboBox Width="160" Style="{StaticResource ModernComboBox}"
                                           ItemsSource="{Binding Effects}"
                                           SelectedItem="{Binding SelectedEffect, Mode=TwoWay}"/>
                             </StackPanel>
                             <StackPanel Margin="0,0,16,8">
-                                <TextBlock Text="Theme" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Theme}" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                 <ComboBox Width="120" Style="{StaticResource ModernComboBox}"
                                           ItemsSource="{Binding Themes}"
                                           SelectedItem="{Binding SelectedTheme, Mode=TwoWay}"
                                           IsEnabled="{Binding UseCustomColors, Converter={StaticResource InverseBooleanConverter}}"/>
                             </StackPanel>
                             <StackPanel Margin="0,0,16,8">
-                                <TextBlock Text="Speed" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                <TextBlock Text="{x:Static loc:Strings.LightingView_Speed}" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                 <ComboBox Width="100" Style="{StaticResource ModernComboBox}"
                                           ItemsSource="{Binding Speeds}" SelectedItem="{Binding Speed, Mode=TwoWay}"/>
                             </StackPanel>
@@ -1770,7 +1770,7 @@
                                                          CommandParameter="{Binding}"
                                                          ToolTip="{x:Static loc:Strings.LightingView_LeaveTheKeyboardShowingThisOneAfterWriting}"/>
 
-                                            <Button Grid.Column="3" Content="Remove" Padding="10,4" FontSize="11"
+                                            <Button Grid.Column="3" Content="{x:Static loc:Strings.BloatwareManagerView_Remove}" Padding="10,4" FontSize="11"
                                                     Style="{StaticResource ModernButton}"
                                                     Command="{Binding DataContext.RemoveFnSlotCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                                     CommandParameter="{Binding}"
@@ -1804,7 +1804,7 @@
                                    TextWrapping="Wrap" Margin="0,0,0,16"/>
 
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
-                            <TextBlock Text="Colour" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
+                            <TextBlock Text="{x:Static loc:Strings.LightingView_Colour}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
                                        VerticalAlignment="Center" Margin="0,0,8,0"/>
                             <Button Command="{Binding PickBarColorCommand}" Cursor="Hand"
                                     Padding="0" BorderThickness="0" Background="Transparent"
@@ -1818,7 +1818,7 @@
                                      Text="{Binding BarColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                             <Button Content="{x:Static loc:Strings.LightingView_ApplyColour}" Style="{StaticResource ModernButton}" Padding="14,6"
                                     Command="{Binding ApplyLightBarColorCommand}" Margin="0,0,8,0"/>
-                            <Button Content="Off" Style="{StaticResource ModernButton}" Padding="14,6"
+                            <Button Content="{x:Static loc:Strings.LightingView_Off}" Style="{StaticResource ModernButton}" Padding="14,6"
                                     Command="{Binding LightBarOffCommand}"/>
                         </StackPanel>
 
@@ -1896,19 +1896,19 @@
                                     </Grid.ColumnDefinitions>
 
                                     <StackPanel Grid.Column="0" Margin="0,0,8,0">
-                                        <TextBlock Text="Low" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                        <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_Low}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}"/>
                                         <TextBox Text="{Binding CpuTempThresholdLow, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                  Style="{StaticResource ModernTextBox}" Margin="0,2,0,0"/>
                                     </StackPanel>
 
                                     <StackPanel Grid.Column="1" Margin="4,0">
-                                        <TextBlock Text="Medium" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                        <TextBlock Text="{x:Static loc:Strings.LightingView_Medium}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}"/>
                                         <TextBox Text="{Binding CpuTempThresholdMedium, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                  Style="{StaticResource ModernTextBox}" Margin="0,2,0,0"/>
                                     </StackPanel>
 
                                     <StackPanel Grid.Column="2" Margin="8,0,0,0">
-                                        <TextBlock Text="High" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                        <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_High}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}"/>
                                         <TextBox Text="{Binding CpuTempThresholdHigh, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                  Style="{StaticResource ModernTextBox}" Margin="0,2,0,0"/>
                                     </StackPanel>
@@ -2016,7 +2016,7 @@
                                     <Border Grid.Column="2" Background="{Binding QuietModeColorHex, Converter={StaticResource HexToBrushConverter}}"
                                             CornerRadius="6" Padding="8" Margin="4,0" Cursor="Hand">
                                         <StackPanel HorizontalAlignment="Center">
-                                            <TextBlock Text="Quiet" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
+                                            <TextBlock Text="{x:Static loc:Strings.AdvancedView_Quiet}" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
                                             <TextBox Text="{Binding QuietModeColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                      Style="{StaticResource ModernTextBox}" FontSize="10" Margin="0,4,0,0" Width="70"/>
                                         </StackPanel>
@@ -2025,7 +2025,7 @@
                                     <Border Grid.Column="3" Background="{Binding CustomModeColorHex, Converter={StaticResource HexToBrushConverter}}"
                                             CornerRadius="6" Padding="8" Margin="8,0,0,0" Cursor="Hand">
                                         <StackPanel HorizontalAlignment="Center">
-                                            <TextBlock Text="Custom" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
+                                            <TextBlock Text="{x:Static loc:Strings.FanControlView_Custom}" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
                                             <TextBox Text="{Binding CustomModeColorHex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                      Style="{StaticResource ModernTextBox}" FontSize="10" Margin="0,4,0,0" Width="70"/>
                                         </StackPanel>

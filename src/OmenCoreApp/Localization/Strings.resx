@@ -4334,4 +4334,436 @@
   <data name="TuningView_YourSystemDoesnTSupportCpuUndervoltingPowe" xml:space="preserve">
     <value>Your system doesn't support CPU undervolting, power limit control, or GPU overclocking through OmenCore.</value>
   </data>
+  <data name="DiagnosticExportControl_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="FanCalibrationControl_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="FanCalibrationControl_Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Watts" xml:space="preserve">
+    <value>Watts</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Mhz" xml:space="preserve">
+    <value>MHz</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Good" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Cycles" xml:space="preserve">
+    <value>cycles</value>
+  </data>
+  <data name="AboutWindow_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="AdvancedView_Quiet" xml:space="preserve">
+    <value>Quiet</value>
+  </data>
+  <data name="AdvancedView_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="BloatwareManagerView_Scan" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="BloatwareManagerView_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="BloatwareManagerView_Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="BloatwareManagerView_Med" xml:space="preserve">
+    <value>Med</value>
+  </data>
+  <data name="BloatwareManagerView_High" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="BloatwareManagerView_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="BloatwareManagerView_App" xml:space="preserve">
+    <value>App</value>
+  </data>
+  <data name="BloatwareManagerView_Risk_X" xml:space="preserve">
+    <value>Risk</value>
+  </data>
+  <data name="BloatwareManagerView_Est" xml:space="preserve">
+    <value>Est.</value>
+  </data>
+  <data name="BloatwareManagerView_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="BloatwareManagerView_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="DashboardView_Power" xml:space="preserve">
+    <value>POWER</value>
+  </data>
+  <data name="FanControlView_Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="FanControlView_Direct" xml:space="preserve">
+    <value>Direct</value>
+  </data>
+  <data name="FanControlView_Gaming" xml:space="preserve">
+    <value>Gaming</value>
+  </data>
+  <data name="FanControlView_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="FanControlView_Silent" xml:space="preserve">
+    <value>Silent</value>
+  </data>
+  <data name="FanControlView_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="FanControlView_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="FanControlView_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="FanControlView_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="FanControlView_Ms" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="FanControlView_Add" xml:space="preserve">
+    <value>+ Add</value>
+  </data>
+  <data name="GameLibraryView_Launch" xml:space="preserve">
+    <value>Launch</value>
+  </data>
+  <data name="GameProfileManagerView_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="GeneralView_Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="GeneralView_Temp" xml:space="preserve">
+    <value>TEMP</value>
+  </data>
+  <data name="GeneralView_Load" xml:space="preserve">
+    <value>LOAD</value>
+  </data>
+  <data name="GeneralView_System" xml:space="preserve">
+    <value>SYSTEM</value>
+  </data>
+  <data name="GeneralView_Ram" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="GeneralView_Used" xml:space="preserve">
+    <value>USED</value>
+  </data>
+  <data name="InputPromptWindow_Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="InputPromptWindow_Prompt" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="LightingView_Probe" xml:space="preserve">
+    <value>Probe</value>
+  </data>
+  <data name="LightingView_Mode" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="LightingView_Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="LightingView_Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="LightingView_Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="LightingView_Leds" xml:space="preserve">
+    <value> LEDs</value>
+  </data>
+  <data name="LightingView_Purple" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="LightingView_Yellow" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="LightingView_White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="LightingView_Orange" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="LightingView_Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="LightingView_Cyan" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="LightingView_Pink" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="LightingView_Effect" xml:space="preserve">
+    <value>Effect</value>
+  </data>
+  <data name="LightingView_Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="LightingView_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="LightingView_Colour" xml:space="preserve">
+    <value>Colour</value>
+  </data>
+  <data name="LightingView_Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="MainWindow_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="MainWindow_GotIt" xml:space="preserve">
+    <value>Got it</value>
+  </data>
+  <data name="MemoryOptimizerView_Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="MemoryOptimizerView_Safe" xml:space="preserve">
+    <value>Safe</value>
+  </data>
+  <data name="MemoryOptimizerView_Clean" xml:space="preserve">
+    <value>Clean</value>
+  </data>
+  <data name="MemoryOptimizerView_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="MemoryOptimizerView_Toggle" xml:space="preserve">
+    <value>Toggle</value>
+  </data>
+  <data name="OsdOverlayWindow_Mbps" xml:space="preserve">
+    <value> Mbps</value>
+  </data>
+  <data name="QuickPopupWindow_Curve" xml:space="preserve">
+    <value>Curve</value>
+  </data>
+  <data name="QuickPopupWindow_N165hz" xml:space="preserve">
+    <value>165Hz</value>
+  </data>
+  <data name="SettingsView_Fans" xml:space="preserve">
+    <value>Fans</value>
+  </data>
+  <data name="SettingsView_Tuning" xml:space="preserve">
+    <value>Tuning</value>
+  </data>
+  <data name="SettingsView_Daily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="SettingsView_Weekly" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+  <data name="SettingsView_Driver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="SettingsView_Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="SettingsView_Github_X" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="SettingsView_Sensor" xml:space="preserve">
+    <value>Sensor</value>
+  </data>
+  <data name="SystemOptimizerView_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="TuningView_Keep" xml:space="preserve">
+    <value>Keep</value>
+  </data>
+  <data name="FanControlViewModel_BadgeCurves" xml:space="preserve">
+    <value>Curves</value>
+  </data>
+  <data name="FanControlViewModel_BadgeProfileOnly" xml:space="preserve">
+    <value>Profile-only</value>
+  </data>
+  <data name="FanControlViewModel_CalibrateRecalibrate" xml:space="preserve">
+    <value>Recalibrate</value>
+  </data>
+  <data name="FanControlViewModel_CalibrateStart" xml:space="preserve">
+    <value>Start Calibration</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapNone" xml:space="preserve">
+    <value>No duty-to-RPM map available yet.</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapOk" xml:space="preserve">
+    <value>Measured duty-to-RPM map from the latest calibration run.</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapRefreshed" xml:space="preserve">
+    <value>Fan calibration map refreshed from the latest wizard run.</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationWizardClosed" xml:space="preserve">
+    <value>Fan calibration wizard closed.</value>
+  </data>
+  <data name="FanControlViewModel_CustomCurveTooltipNo" xml:space="preserve">
+    <value>This model's fan controller doesn't expose a custom-curve interface - a hardware/firmware limitation, not related to whether the model profile is verified. Use OEM fan profiles instead.</value>
+  </data>
+  <data name="FanControlViewModel_CustomCurveTooltipOk" xml:space="preserve">
+    <value>Apply your custom fan curve defined in the editor below.</value>
+  </data>
+  <data name="FanControlViewModel_DirectTooltipNo" xml:space="preserve">
+    <value>This model's fan controller doesn't expose direct fixed-level control - a hardware/firmware limitation, not related to whether the model profile is verified. Use OEM fan profiles instead.</value>
+  </data>
+  <data name="FanControlViewModel_DirectTooltipOk" xml:space="preserve">
+    <value>Hold fans at a fixed requested level using manual fan control.</value>
+  </data>
+  <data name="FanControlViewModel_HeaderHintPresets" xml:space="preserve">
+    <value>Select a preset, direct fan level, or custom curve</value>
+  </data>
+  <data name="FanControlViewModel_HeaderHintProfileOnly" xml:space="preserve">
+    <value>Select an OEM fan profile</value>
+  </data>
+  <data name="FanControlViewModel_LinkBadgeIndependent" xml:space="preserve">
+    <value>Independent: fan mode stays under fan controls</value>
+  </data>
+  <data name="FanControlViewModel_LinkBadgeLinked" xml:space="preserve">
+    <value>Linked: performance may change fan mode</value>
+  </data>
+  <data name="FanControlViewModel_LinkDescIndependent" xml:space="preserve">
+    <value>When independent, performance profile changes do not rewrite fan policy. Your selected fan preset/curve remains active until you change fan controls directly.</value>
+  </data>
+  <data name="FanControlViewModel_LinkDescLinked" xml:space="preserve">
+    <value>When linked, selecting a performance profile can also switch the active fan mode. Use this only if you want profile-driven fan behavior.</value>
+  </data>
+  <data name="FanControlViewModel_OemAutoFailed" xml:space="preserve">
+    <value>OEM auto restore did not report success</value>
+  </data>
+  <data name="FanControlViewModel_OemAutoRestored" xml:space="preserve">
+    <value>OEM auto restored</value>
+  </data>
+  <data name="FanControlViewModel_StartupHintCategoryOff" xml:space="preserve">
+    <value>The Fans category of Startup Hardware Restore is off in Settings, so this preset/curve won't be reapplied automatically after a restart - you'll need to reselect it, or turn that category back on.</value>
+  </data>
+  <data name="FanControlViewModel_StartupHintOff" xml:space="preserve">
+    <value>Startup Hardware Restore is off in Settings, so this preset/curve won't be reapplied automatically after a restart - you'll need to reselect it, or turn that on.</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleEditor" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleProfile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleProfile80" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleUnavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleUnavailableDirect" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryCapacityUnavailable" xml:space="preserve">
+    <value>Capacity unavailable</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryNotReported" xml:space="preserve">
+    <value>Not reported by this battery</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StateUnavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="MainViewModel_CleanupDryDone" xml:space="preserve">
+    <value>Dry run completed</value>
+  </data>
+  <data name="MainViewModel_CleanupDryRunning" xml:space="preserve">
+    <value>Running cleanup dry run...</value>
+  </data>
+  <data name="MainViewModel_CleanupErrors" xml:space="preserve">
+    <value>Cleanup finished with errors</value>
+  </data>
+  <data name="MainViewModel_CleanupRemoved" xml:space="preserve">
+    <value>OMEN Gaming Hub removed</value>
+  </data>
+  <data name="MainViewModel_CleanupRemoving" xml:space="preserve">
+    <value>Removing OMEN Gaming Hub...</value>
+  </data>
+  <data name="MainViewModel_CleanupRestorePoint" xml:space="preserve">
+    <value>Creating restore point...</value>
+  </data>
+  <data name="MainViewModel_LinkStatusDecoupled" xml:space="preserve">
+    <value>Decoupled: fan independent</value>
+  </data>
+  <data name="MainViewModel_LinkStatusLinked" xml:space="preserve">
+    <value>Linked: fan follows performance</value>
+  </data>
+  <data name="MainViewModel_LogsHide" xml:space="preserve">
+    <value>Hide activity log</value>
+  </data>
+  <data name="MainViewModel_LogsShow" xml:space="preserve">
+    <value>Show activity log</value>
+  </data>
+  <data name="MainViewModel_MonitoringFull" xml:space="preserve">
+    <value>Full monitoring telemetry enabled</value>
+  </data>
+  <data name="MainViewModel_MonitoringLowOverhead" xml:space="preserve">
+    <value>Low overhead monitoring enabled</value>
+  </data>
+  <data name="QuickPopup_DecoupledMode" xml:space="preserve">
+    <value>Decoupled mode is enabled. Performance changes leave your current fan preset or curve untouched.</value>
+  </data>
+  <data name="QuickPopup_FanPerfLinked" xml:space="preserve">
+    <value>Fan/Perf: Linked</value>
+  </data>
+  <data name="QuickPopup_LinkedMode" xml:space="preserve">
+    <value>Linked mode is enabled. Performance changes may also rewrite fan policy.</value>
+  </data>
+  <data name="TrayIcon_AcPower" xml:space="preserve">
+    <value>AC Power</value>
+  </data>
+  <data name="TrayIcon_Battery" xml:space="preserve">
+    <value>Battery</value>
+  </data>
+  <data name="TrayIcon_Charging" xml:space="preserve">
+    <value>Charging</value>
+  </data>
+  <data name="TrayIcon_Decoupled" xml:space="preserve">
+    <value>Decoupled</value>
+  </data>
+  <data name="TrayIcon_Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="TrayIcon_KeepAboveOff" xml:space="preserve">
+    <value>Keep OmenCore above other windows (Off)</value>
+  </data>
+  <data name="TrayIcon_KeepAboveOn" xml:space="preserve">
+    <value>Keep OmenCore above other windows (On)</value>
+  </data>
+  <data name="TrayIcon_Linked" xml:space="preserve">
+    <value>Linked</value>
+  </data>
+  <data name="TrayIcon_OnBattery" xml:space="preserve">
+    <value>On Battery</value>
+  </data>
+  <data name="TrayIcon_StayOnTopOff" xml:space="preserve">
+    <value>Stay on top</value>
+  </data>
+  <data name="TrayIcon_StayOnTopOn" xml:space="preserve">
+    <value>Stay on top (on)</value>
+  </data>
+  <data name="TuningStatus_VerifiedAcknowledged" xml:space="preserve">
+    <value>Verified: write acknowledged (no independent hardware readback on this path)</value>
+  </data>
+  <data name="TuningStatus_VerifiedMismatch" xml:space="preserve">
+    <value>Verified: mismatch between requested and readback</value>
+  </data>
+  <data name="TuningStatus_VerifiedNotControlled" xml:space="preserve">
+    <value>Verified: not controlled by OmenCore</value>
+  </data>
+  <data name="TuningStatus_VerifiedReadback" xml:space="preserve">
+    <value>Verified: readback matches requested</value>
+  </data>
+  <data name="UpdateViewModel_YouAreRunningLatest" xml:space="preserve">
+    <value>You are running the latest version.</value>
+  </data>
+  <data name="UpdateViewModel_YouAreRunningLatestCmp" xml:space="preserve">
+    <value>You are running the latest version.</value>
+  </data>
 </root>

@@ -187,7 +187,7 @@
                 <StackPanel Grid.Column="6" Orientation="Horizontal">
                     <Path Data="{StaticResource IconUpdate}" Width="18" Height="18" Fill="{StaticResource SuccessBrush}" Stretch="Uniform" VerticalAlignment="Center" Margin="0,0,8,0"/>
                     <StackPanel>
-                        <TextBlock Text="POWER" Style="{StaticResource Label}" FontSize="10" Opacity="0.7"/>
+                        <TextBlock Text="{x:Static loc:Strings.DashboardView_Power}" Style="{StaticResource Label}" FontSize="10" Opacity="0.7"/>
                         <TextBlock FontSize="12" Foreground="{StaticResource TextPrimaryBrush}"
                                    Text="{Binding LatestMonitoringSample.IsOnAcPower, Converter={StaticResource BoolToYesNo}, ConverterParameter=AC|Battery, FallbackValue=--}"/>
                     </StackPanel>
@@ -404,7 +404,7 @@
                         <StackPanel Orientation="Horizontal">
                             <Path Data="{StaticResource IconUpdate}" Width="16" Height="16"
                                   Fill="#FFD700" Stretch="Uniform" Margin="0,0,8,0"/>
-                            <TextBlock Text="POWER" Style="{StaticResource Label}"/>
+                            <TextBlock Text="{x:Static loc:Strings.DashboardView_Power}" Style="{StaticResource Label}"/>
                         </StackPanel>
                         <Border HorizontalAlignment="Right" VerticalAlignment="Center"
                                 Background="#FFD700"

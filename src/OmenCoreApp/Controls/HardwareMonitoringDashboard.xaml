@@ -118,7 +118,7 @@
                         <StackPanel>
                             <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_PowerConsumption}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="PowerConsumptionValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#FF9800"/>
-                            <TextBlock Text="Watts" Style="{StaticResource MetricUnitStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Watts}" Style="{StaticResource MetricUnitStyle}"/>
                             <TextBlock x:Name="PowerConsumptionTrend" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Stable}" FontSize="12" FontWeight="Medium" Foreground="#6B7394"/>
                         </StackPanel>
                     </Border>
@@ -139,7 +139,7 @@
                             <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_CpuTemperature}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="CpuTempValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#FF6B6B"/>
                             <TextBlock Text="°C" Style="{StaticResource MetricUnitStyle}"/>
-                            <TextBlock x:Name="CpuTempStatus" Text="Normal" FontSize="12" FontWeight="Medium" Foreground="#66BB6A"/>
+                            <TextBlock x:Name="CpuTempStatus" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Normal}" FontSize="12" FontWeight="Medium" Foreground="#66BB6A"/>
                         </StackPanel>
                     </Border>
 
@@ -149,7 +149,7 @@
                             <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_GpuTemperature}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="GpuTempValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#45C7FF"/>
                             <TextBlock Text="°C" Style="{StaticResource MetricUnitStyle}"/>
-                            <TextBlock x:Name="GpuTempStatus" Text="Normal" FontSize="12" FontWeight="Medium" Foreground="#66BB6A"/>
+                            <TextBlock x:Name="GpuTempStatus" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Normal}" FontSize="12" FontWeight="Medium" Foreground="#66BB6A"/>
                         </StackPanel>
                     </Border>
                 </UniformGrid>
@@ -211,7 +211,7 @@
                         <StackPanel>
                             <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_CpuClock}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="CpuClockValue" Text="--" Style="{StaticResource MetricValueStyle}" Foreground="#FFD700"/>
-                            <TextBlock Text="MHz" Style="{StaticResource MetricUnitStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Mhz}" Style="{StaticResource MetricUnitStyle}"/>
                             <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_AverageCoreClock}" FontSize="11" Foreground="#6B7394"/>
                         </StackPanel>
                     </Border>
@@ -318,7 +318,7 @@
                             <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_PowerEfficiency}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="PowerEfficiencyValue" Text="85.2" Style="{StaticResource MetricValueStyle}"/>
                             <TextBlock Text="%" Style="{StaticResource MetricUnitStyle}"/>
-                            <TextBlock x:Name="PowerEfficiencyRating" Text="Good" FontSize="11" Foreground="{DynamicResource SuccessBrush}"/>
+                            <TextBlock x:Name="PowerEfficiencyRating" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Good}" FontSize="11" Foreground="{DynamicResource SuccessBrush}"/>
                         </StackPanel>
                     </Border>
 
@@ -337,7 +337,7 @@
                         <StackPanel>
                             <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_BatteryStatus}" Style="{StaticResource MetricTitleStyle}"/>
                             <TextBlock x:Name="BatteryCyclesValue" Text="--" Style="{StaticResource MetricValueStyle}"/>
-                            <TextBlock Text="cycles" Style="{StaticResource MetricUnitStyle}"/>
+                            <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_Cycles}" Style="{StaticResource MetricUnitStyle}"/>
                             <TextBlock x:Name="BatteryLifeEstimate" Text="{x:Static loc:Strings.HardwareMonitoringDashboard_N30YearsRemaining}" FontSize="10" Foreground="{DynamicResource TextSecondaryBrush}"/>
                         </StackPanel>
                     </Border>

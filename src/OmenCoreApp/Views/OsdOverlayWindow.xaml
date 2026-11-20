@@ -207,7 +207,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="RAM" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.GeneralView_Ram}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding RamUsage}" FontSize="12" Foreground="#AAAAAA" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium" HorizontalAlignment="Right"/>
             </Grid>
             
@@ -273,7 +273,7 @@
                 <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.OsdOverlayWindow_Up}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{Binding NetworkUpload}" FontSize="12" Foreground="#42A5F5" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
-                    <TextBlock Text=" Mbps" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                    <TextBlock Text="{x:Static loc:Strings.OsdOverlayWindow_Mbps}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 </StackPanel>
             </Grid>
             
@@ -287,7 +287,7 @@
                 <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.OsdOverlayWindow_Dn}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{Binding NetworkDownload}" FontSize="12" Foreground="#66BB6A" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
-                    <TextBlock Text=" Mbps" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                    <TextBlock Text="{x:Static loc:Strings.OsdOverlayWindow_Mbps}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 </StackPanel>
             </Grid>
             

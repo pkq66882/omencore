@@ -1,4 +1,5 @@
 using System;
+using OmenCore.Localization;
 using System.Globalization;
 using System.IO;
 using System.Threading;
@@ -545,10 +546,10 @@ namespace OmenCore.Utils
             var stayOnTopEnabled = App.Configuration.Config.StayOnTop;
             _stayOnTopMenuItem = new MenuItem
             {
-                Header = stayOnTopEnabled ? "Stay on Top ✓" : "Stay on Top",
+                Header = stayOnTopEnabled ? Strings.TrayIcon_StayOnTopOn : "Stay on Top",
                 ToolTip = stayOnTopEnabled
-                    ? "Keep OmenCore above other windows (On)"
-                    : "Keep OmenCore above other windows (Off)"
+                    ? Strings.TrayIcon_KeepAboveOn
+                    : Strings.TrayIcon_KeepAboveOff
             };
             _stayOnTopMenuItem.Click += (s, e) => ToggleStayOnTop();
             contextMenu.Items.Add(_stayOnTopMenuItem);
@@ -643,7 +644,7 @@ namespace OmenCore.Utils
                 var batteryPercent = _latestSample.BatteryChargePercent;
                 var isAc = _latestSample.IsOnAcPower;
                 var powerLine = batteryPercent > 0 || isAc
-                    ? $"{batteryPercent:F0}% · {(isAc ? "AC Power" : "Battery")}"
+                    ? $"{batteryPercent:F0}% · {(isAc ? Strings.TrayIcon_AcPower : Strings.TrayIcon_Battery)}"
                     : "";
                 
                 var toolTipText = $"OmenCore v{_appVersion}\n" +
@@ -652,7 +653,7 @@ namespace OmenCore.Utils
                                   $"GPU: {gpuTempStr} @ {gpuLoad:F0}%{gpuPowerDisplay}\n" +
                                   $"RAM: {memUsedGb:F1}/{memTotalGb:F1} GB ({memPercent:F0}%)\n" +
                                   $"{fanLine} | {_currentPerformanceMode}\n" +
-                                  $"Fan/Perf: {(_linkFanToPerformanceMode ? "Linked" : "Decoupled")}\n" +
+                                  $"Fan/Perf: {(_linkFanToPerformanceMode ? Strings.TrayIcon_Linked : Strings.TrayIcon_Decoupled)}\n" +
                                   (powerLine.Length > 0 ? $"{powerLine}\n" : "") +
                                   $"Monitor: {_monitoringHealth}\n" +
                                   $"━━━━━━━━━━━━━━━━━━\n" +
@@ -677,7 +678,7 @@ namespace OmenCore.Utils
                 {
                     if (batteryPercent > 0 || isAc)
                     {
-                        SetMenuHeaderIfChanged(_batteryMenuItem, $"{batteryPercent:F0}% · {(isAc ? "Charging" : "On Battery")}");
+                        SetMenuHeaderIfChanged(_batteryMenuItem, $"{batteryPercent:F0}% · {(isAc ? Strings.TrayIcon_Charging : Strings.TrayIcon_OnBattery)}");
                         SetMenuVisibilityIfChanged(_batteryMenuItem, Visibility.Visible);
                     }
                     else
@@ -960,15 +961,15 @@ namespace OmenCore.Utils
             // Update the menu item
             if (_stayOnTopMenuItem != null)
             {
-                _stayOnTopMenuItem.Header = newValue ? "Stay on Top ✓" : "Stay on Top";
+                _stayOnTopMenuItem.Header = newValue ? Strings.TrayIcon_StayOnTopOn : Strings.TrayIcon_StayOnTopOff;
                 _stayOnTopMenuItem.ToolTip = newValue
-                    ? "Keep OmenCore above other windows (On)"
-                    : "Keep OmenCore above other windows (Off)";
+                    ? Strings.TrayIcon_KeepAboveOn
+                    : Strings.TrayIcon_KeepAboveOff;
             }
             
             // Notify the main window to update
             StayOnTopChanged?.Invoke(newValue);
-            App.Logging.Info($"Stay on Top: {(newValue ? "Enabled" : "Disabled")}");
+            App.Logging.Info($"Stay on Top: {(newValue ? Strings.TrayIcon_Enabled : "Disabled")}");
         }
 
         public event Action<bool>? StayOnTopChanged;

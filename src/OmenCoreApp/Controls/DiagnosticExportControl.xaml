@@ -131,7 +131,7 @@
         <Border Grid.Row="2" Background="{DynamicResource SurfaceDarkBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="8" Margin="0,10,0,0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="15">
                 <Button x:Name="ExportButton" Content="{x:Static loc:Strings.DiagnosticExportControl_ExportDiagnostics}" Style="{StaticResource DiagnosticButtonStyle}" Background="{DynamicResource AccentBrush}" Foreground="White" Click="ExportButton_Click"/>
-                <Button x:Name="CancelExportButton" Content="Cancel" Style="{StaticResource DiagnosticButtonStyle}" Background="{DynamicResource ErrorBrush}" Foreground="White" Click="CancelExportButton_Click" Visibility="Collapsed"/>
+                <Button x:Name="CancelExportButton" Content="{x:Static loc:Strings.DiagnosticExportControl_Cancel}" Style="{StaticResource DiagnosticButtonStyle}" Background="{DynamicResource ErrorBrush}" Foreground="White" Click="CancelExportButton_Click" Visibility="Collapsed"/>
                 <Button x:Name="OpenExportFolderButton" Content="{x:Static loc:Strings.DiagnosticExportControl_OpenFolder}" Style="{StaticResource DiagnosticButtonStyle}" Click="OpenExportFolderButton_Click" Visibility="Collapsed"/>
                 <Button x:Name="CopyPathButton" Content="{x:Static loc:Strings.DiagnosticExportControl_CopyPath}" Style="{StaticResource DiagnosticButtonStyle}" Click="CopyPathButton_Click" Visibility="Collapsed"/>
             </StackPanel>

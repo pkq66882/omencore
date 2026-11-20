@@ -8,6 +8,7 @@ using System.Windows.Input;
 using OmenCore.Models;
 using OmenCore.Services;
 using OmenCore.Utils;
+using OmenCore.Localization;
 
 namespace OmenCore.ViewModels
 {
@@ -189,7 +190,7 @@ namespace OmenCore.ViewModels
                     _updateInstallBlocked = false;
                     if (showStatus)
                     {
-                        UpdateBannerMessage = "You are running the latest version.";
+                        UpdateBannerMessage = Strings.UpdateViewModel_YouAreRunningLatest;
                         UpdateBannerVisible = true;
                         // Auto-hide after 3 seconds
                         _ = AutoHideLatestVersionBannerAsync();
@@ -216,7 +217,7 @@ namespace OmenCore.ViewModels
             try
             {
                 await Task.Delay(3000);
-                if (UpdateBannerMessage == "You are running the latest version.")
+                if (UpdateBannerMessage == Strings.UpdateViewModel_YouAreRunningLatest)
                 {
                     UpdateBannerVisible = false;
                     UpdateBannerMessage = string.Empty;

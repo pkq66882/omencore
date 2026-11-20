@@ -198,7 +198,13 @@ namespace OmenCoreApp.Tests.ViewModels
 
             vm.WillFanStateReapplyAtStartup.Should().BeFalse();
             vm.ShowStartupRestoreHint.Should().BeTrue();
-            vm.StartupRestoreHintText.Should().Contain("Startup Hardware Restore is off");
+            var culture1 = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                vm.StartupRestoreHintText.Should().Contain("Startup Hardware Restore is off");
+            }
+            finally { System.Globalization.CultureInfo.CurrentUICulture = culture1; }
 
             logging.Dispose();
         }
@@ -237,7 +243,13 @@ namespace OmenCoreApp.Tests.ViewModels
 
             vm.WillFanStateReapplyAtStartup.Should().BeFalse();
             vm.ShowStartupRestoreHint.Should().BeTrue();
-            vm.StartupRestoreHintText.Should().Contain("Fans category");
+            var culture2 = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                vm.StartupRestoreHintText.Should().Contain("Fans category");
+            }
+            finally { System.Globalization.CultureInfo.CurrentUICulture = culture2; }
 
             logging.Dispose();
         }
@@ -292,8 +304,14 @@ namespace OmenCoreApp.Tests.ViewModels
             vm.ShowConstantControl.Should().BeTrue();
             vm.CurrentFanModeName.Should().Be("Direct");
             vm.DirectPresetSubtitle.Should().Be("65%");
-            vm.DirectFanControlTooltip.Should().Contain("fixed");
-            vm.FanProfileHeaderHint.Should().Contain("direct fan level");
+            var culture3 = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                vm.DirectFanControlTooltip.Should().Contain("fixed");
+                vm.FanProfileHeaderHint.Should().Contain("direct fan level");
+            }
+            finally { System.Globalization.CultureInfo.CurrentUICulture = culture3; }
         }
 
         [Fact]

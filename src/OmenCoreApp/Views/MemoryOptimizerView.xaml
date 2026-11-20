@@ -164,7 +164,7 @@
                         <!-- Commit -->
                         <Border Grid.Column="2" Style="{StaticResource Omen.Card.Utility}" Margin="4,0,4,0">
                             <StackPanel>
-                                <TextBlock Text="Commit" FontSize="11" Foreground="#6B7280"/>
+                                <TextBlock Text="{x:Static loc:Strings.MemoryOptimizerView_Commit}" FontSize="11" Foreground="#6B7280"/>
                                 <TextBlock Text="{Binding CommitText}" 
                                            FontSize="16" FontWeight="Bold" Foreground="#F97316"/>
                             </StackPanel>
@@ -327,10 +327,10 @@
                                 <TextBlock Text="{x:Static loc:Strings.MemoryOptimizerView_ReleasesUnusedMemoryFromAllProcesses}" 
                                            FontSize="12" Foreground="#9CA3AF" TextWrapping="Wrap"/>
                                 <Border Style="{StaticResource SuccessBadge}" Margin="0,4,0,0">
-                                    <TextBlock Text="Safe" FontSize="10" Foreground="{StaticResource SuccessBrush}"/>
+                                    <TextBlock Text="{x:Static loc:Strings.MemoryOptimizerView_Safe}" FontSize="10" Foreground="{StaticResource SuccessBrush}"/>
                                 </Border>
                             </StackPanel>
-                            <Button Grid.Column="1" Content="Clean" 
+                            <Button Grid.Column="1" Content="{x:Static loc:Strings.MemoryOptimizerView_Clean}" 
                                     Style="{StaticResource Omen.Button.Utility}"
                                     Command="{Binding CleanWorkingSetsCommand}"
                                     VerticalAlignment="Center" Margin="0"/>
@@ -352,7 +352,7 @@
                                     <TextBlock Text="{x:Static loc:Strings.MemoryOptimizerView_MediumMayCauseBriefStutter}" FontSize="10" Foreground="{StaticResource WarningBrush}"/>
                                 </Border>
                             </StackPanel>
-                            <Button Grid.Column="1" Content="Clean" 
+                            <Button Grid.Column="1" Content="{x:Static loc:Strings.MemoryOptimizerView_Clean}" 
                                     Style="{StaticResource Omen.Button.Utility}"
                                     Command="{Binding CleanStandbyCommand}"
                                     VerticalAlignment="Center" Margin="0"/>
@@ -374,7 +374,7 @@
                                     <TextBlock Text="{x:Static loc:Strings.MemoryOptimizerView_MediumMaySlowFileAccessTemporarily}" FontSize="10" Foreground="{StaticResource WarningBrush}"/>
                                 </Border>
                             </StackPanel>
-                            <Button Grid.Column="1" Content="Clean" 
+                            <Button Grid.Column="1" Content="{x:Static loc:Strings.MemoryOptimizerView_Clean}" 
                                     Style="{StaticResource Omen.Button.Utility}"
                                     Command="{Binding CleanFileCacheCommand}"
                                     VerticalAlignment="Center" Margin="0"/>
@@ -396,7 +396,7 @@
                                     <TextBlock Text="{x:Static loc:Strings.MemoryOptimizerView_MediumDiskIOBurst}" FontSize="10" Foreground="{StaticResource WarningBrush}"/>
                                 </Border>
                             </StackPanel>
-                            <Button Grid.Column="1" Content="Clean" 
+                            <Button Grid.Column="1" Content="{x:Static loc:Strings.MemoryOptimizerView_Clean}" 
                                     Style="{StaticResource Omen.Button.Utility}"
                                     Command="{Binding CleanModifiedPagesCommand}"
                                     VerticalAlignment="Center" Margin="0"/>
@@ -415,10 +415,10 @@
                                 <TextBlock Text="{x:Static loc:Strings.MemoryOptimizerView_MergesIdenticalMemoryPagesWindows10}" 
                                            FontSize="12" Foreground="#9CA3AF" TextWrapping="Wrap"/>
                                 <Border Style="{StaticResource SuccessBadge}" Margin="0,4,0,0">
-                                    <TextBlock Text="Safe" FontSize="10" Foreground="{StaticResource SuccessBrush}"/>
+                                    <TextBlock Text="{x:Static loc:Strings.MemoryOptimizerView_Safe}" FontSize="10" Foreground="{StaticResource SuccessBrush}"/>
                                 </Border>
                             </StackPanel>
-                            <Button Grid.Column="1" Content="Clean" 
+                            <Button Grid.Column="1" Content="{x:Static loc:Strings.MemoryOptimizerView_Clean}" 
                                     Style="{StaticResource Omen.Button.Utility}"
                                     Command="{Binding CleanCombinePagesCommand}"
                                     VerticalAlignment="Center" Margin="0"/>
@@ -658,7 +658,7 @@
                                          MinWidth="180"
                                          Margin="0,0,8,0"/>
                                 <Button Grid.Column="1"
-                                        Content="Add"
+                                        Content="{x:Static loc:Strings.MemoryOptimizerView_Add}"
                                         Style="{StaticResource Omen.Button.Utility}"
                                         Command="{Binding AddExcludedProcessCommand}"
                                         Margin="0"/>
@@ -680,7 +680,7 @@
                                          BorderBrush="{StaticResource BorderBrush}"/>
 
                                 <Button Grid.Column="1"
-                                        Content="Remove"
+                                        Content="{x:Static loc:Strings.BloatwareManagerView_Remove}"
                                         Style="{StaticResource Omen.Button.Utility}"
                                         Command="{Binding RemoveExcludedProcessCommand}"
                                         Margin="10,0,0,0"
@@ -703,7 +703,7 @@
                             </StackPanel>
 
                             <Button Grid.Column="1"
-                                    Content="Toggle"
+                                    Content="{x:Static loc:Strings.MemoryOptimizerView_Toggle}"
                                     Style="{StaticResource Omen.Button.Utility}"
                                     Command="{Binding ToggleMemoryCompressionCommand}"
                                     Margin="10,0,0,0"

@@ -4330,4 +4330,436 @@
   <data name="SettingsView_WhenDisabledNoOsdBackgroundProcessRunsAtAl" xml:space="preserve">
     <value>Devre dışı bırakıldığında hiçbir OSD arka plan işlemi çalışmaz</value>
   </data>
+  <data name="FanControlViewModel_BadgeCurves" xml:space="preserve">
+    <value>Eğriler</value>
+  </data>
+  <data name="FanControlViewModel_BadgeProfileOnly" xml:space="preserve">
+    <value>Yalnızca Profil</value>
+  </data>
+  <data name="FanControlViewModel_CalibrateRecalibrate" xml:space="preserve">
+    <value>Yeniden Kalibre Et</value>
+  </data>
+  <data name="FanControlViewModel_CalibrateStart" xml:space="preserve">
+    <value>Kalibrasyonu Başlat</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapNone" xml:space="preserve">
+    <value>Henüz görev döngüsü-RPM haritası yok.</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapOk" xml:space="preserve">
+    <value>Son kalibrasyon çalıştırmasından ölçülen görev döngüsü-RPM haritası.</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapRefreshed" xml:space="preserve">
+    <value>Fan kalibrasyon haritası en son sihirbaz çalıştırmasından yenilendi.</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationWizardClosed" xml:space="preserve">
+    <value>Fan kalibrasyon sihirbazı kapatıldı.</value>
+  </data>
+  <data name="FanControlViewModel_CustomCurveTooltipNo" xml:space="preserve">
+    <value>Bu modelin fan denetleyicisi özel eğri arayüzü sunmuyor - bu bir donanım/aygıt yazılımı sınırlamasıdır, model profilinin doğrulanmış olmasıyla ilgisi yoktur. Bunun yerine OEM fan önayarlarını kullanın.</value>
+  </data>
+  <data name="FanControlViewModel_CustomCurveTooltipOk" xml:space="preserve">
+    <value>Aşağıdaki düzenleyicide tanımladığınız özel fan eğrisini uygulayın.</value>
+  </data>
+  <data name="FanControlViewModel_DirectTooltipNo" xml:space="preserve">
+    <value>Bu modelin fan denetleyicisi doğrudan sabit seviye kontrolü sunmuyor - bu bir donanım/aygıt yazılımı sınırlamasıdır, model profilinin doğrulanmış olmasıyla ilgisi yoktur. Bunun yerine OEM fan önayarlarını kullanın.</value>
+  </data>
+  <data name="FanControlViewModel_DirectTooltipOk" xml:space="preserve">
+    <value>Manüel fan kontrolüyle fanları istenen sabit bir seviyede tutun.</value>
+  </data>
+  <data name="FanControlViewModel_HeaderHintPresets" xml:space="preserve">
+    <value>Bir önayar, doğrudan fan seviyesi veya özel eğri seçin</value>
+  </data>
+  <data name="FanControlViewModel_HeaderHintProfileOnly" xml:space="preserve">
+    <value>Bir OEM fan önayarı seçin</value>
+  </data>
+  <data name="FanControlViewModel_LinkBadgeIndependent" xml:space="preserve">
+    <value>Bağımsız: fan modu performans profillerinden etkilenmez</value>
+  </data>
+  <data name="FanControlViewModel_LinkBadgeLinked" xml:space="preserve">
+    <value>Bağlı: performans değişimi fan modunu değiştirebilir</value>
+  </data>
+  <data name="FanControlViewModel_LinkDescIndependent" xml:space="preserve">
+    <value>Bağımsız modda, performans profili değişiklikleri fan politikasını yeniden yazmaz. Seçtiğiniz fan önayarı/eğrisi, doğrudan fan kontrollerini değiştirene kadar etkin kalır.</value>
+  </data>
+  <data name="FanControlViewModel_LinkDescLinked" xml:space="preserve">
+    <value>Bağlı modda, bir performans profili seçmek etkin fan modunu da değiştirebilir. Bunu yalnızca profil tarafından yönlendirilen fan davranışı istiyorsanız kullanın.</value>
+  </data>
+  <data name="FanControlViewModel_OemAutoFailed" xml:space="preserve">
+    <value>OEM otomatik geri yükleme başarı bildirmedi</value>
+  </data>
+  <data name="FanControlViewModel_OemAutoRestored" xml:space="preserve">
+    <value>OEM otomatik geri yüklendi</value>
+  </data>
+  <data name="FanControlViewModel_StartupHintCategoryOff" xml:space="preserve">
+    <value>Ayarlar'daki Başlangıç Donanım Geri Yüklemesi'nin "Fanlar" kategorisi kapalı, bu yüzden yeniden başlatmadan sonra bu önayar/eğri otomatik olarak yeniden uygulanmayacak - yeniden seçmeniz veya o kategoriyi geri açmanız gerekecek.</value>
+  </data>
+  <data name="FanControlViewModel_StartupHintOff" xml:space="preserve">
+    <value>Ayarlar'da Başlangıç Donanım Geri Yüklemesi kapalı, bu yüzden yeniden başlatmadan sonra bu önayar/eğri otomatik olarak yeniden uygulanmayacak - yeniden seçmeniz veya bunu açmanız gerekecek.</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleEditor" xml:space="preserve">
+    <value>Düzenleyici</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleProfile80" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleUnavailable" xml:space="preserve">
+    <value>Kullanılamıyor</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleUnavailableDirect" xml:space="preserve">
+    <value>Kullanılamıyor</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryCapacityUnavailable" xml:space="preserve">
+    <value>Kapasite kullanılamıyor</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryNotReported" xml:space="preserve">
+    <value>Bu pil tarafından bildirilmiyor</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StateUnavailable" xml:space="preserve">
+    <value>Kullanılamıyor</value>
+  </data>
+  <data name="MainViewModel_CleanupDryDone" xml:space="preserve">
+    <value>Deneme çalıştırması tamamlandı</value>
+  </data>
+  <data name="MainViewModel_CleanupDryRunning" xml:space="preserve">
+    <value>Temizlik deneme çalıştırması yürütülüyor…</value>
+  </data>
+  <data name="MainViewModel_CleanupErrors" xml:space="preserve">
+    <value>Temizlik hatalarla tamamlandı</value>
+  </data>
+  <data name="MainViewModel_CleanupRemoved" xml:space="preserve">
+    <value>OMEN Gaming Hub kaldırıldı</value>
+  </data>
+  <data name="MainViewModel_CleanupRemoving" xml:space="preserve">
+    <value>OMEN Gaming Hub kaldırılıyor…</value>
+  </data>
+  <data name="MainViewModel_CleanupRestorePoint" xml:space="preserve">
+    <value>Geri yükleme noktası oluşturuluyor…</value>
+  </data>
+  <data name="MainViewModel_LinkStatusDecoupled" xml:space="preserve">
+    <value>Ayrılmış: fan bağımsız</value>
+  </data>
+  <data name="MainViewModel_LinkStatusLinked" xml:space="preserve">
+    <value>Bağlı: fan performansı takip eder</value>
+  </data>
+  <data name="MainViewModel_LogsHide" xml:space="preserve">
+    <value>Etkinlik günlüğünü gizle</value>
+  </data>
+  <data name="MainViewModel_LogsShow" xml:space="preserve">
+    <value>Etkinlik günlüğünü göster</value>
+  </data>
+  <data name="MainViewModel_MonitoringFull" xml:space="preserve">
+    <value>Tam izleme telemetrisi etkin</value>
+  </data>
+  <data name="MainViewModel_MonitoringLowOverhead" xml:space="preserve">
+    <value>Düşük yük izleme etkin</value>
+  </data>
+  <data name="QuickPopup_DecoupledMode" xml:space="preserve">
+    <value>Ayrılmış mod etkin. Performans değişiklikleri geçerli fan önayarını veya eğrinizi etkilemez.</value>
+  </data>
+  <data name="QuickPopup_FanPerfLinked" xml:space="preserve">
+    <value>Fan/Perf: Bağlı</value>
+  </data>
+  <data name="QuickPopup_LinkedMode" xml:space="preserve">
+    <value>Bağlı mod etkin. Performans değişiklikleri fan politikasını da yeniden yazabilir.</value>
+  </data>
+  <data name="TrayIcon_AcPower" xml:space="preserve">
+    <value>AC Gücü</value>
+  </data>
+  <data name="TrayIcon_Battery" xml:space="preserve">
+    <value>Pil</value>
+  </data>
+  <data name="TrayIcon_Charging" xml:space="preserve">
+    <value>Şarj ediliyor</value>
+  </data>
+  <data name="TrayIcon_Decoupled" xml:space="preserve">
+    <value>Ayrılmış</value>
+  </data>
+  <data name="TrayIcon_Enabled" xml:space="preserve">
+    <value>Etkin</value>
+  </data>
+  <data name="TrayIcon_KeepAboveOff" xml:space="preserve">
+    <value>OmenCore'u diğer pencerelerin üzerinde tut (Kapalı)</value>
+  </data>
+  <data name="TrayIcon_KeepAboveOn" xml:space="preserve">
+    <value>OmenCore'u diğer pencerelerin üzerinde tut (Açık)</value>
+  </data>
+  <data name="TrayIcon_Linked" xml:space="preserve">
+    <value>Bağlı</value>
+  </data>
+  <data name="TrayIcon_OnBattery" xml:space="preserve">
+    <value>Pilde</value>
+  </data>
+  <data name="TrayIcon_StayOnTopOff" xml:space="preserve">
+    <value>Pencereyi üstte tut</value>
+  </data>
+  <data name="TrayIcon_StayOnTopOn" xml:space="preserve">
+    <value>Pencereyi üstte tut (Açık)</value>
+  </data>
+  <data name="TuningStatus_VerifiedAcknowledged" xml:space="preserve">
+    <value>Doğrulandı: yazım onaylandı (bu yolda bağımsız donanım okuması yok)</value>
+  </data>
+  <data name="TuningStatus_VerifiedMismatch" xml:space="preserve">
+    <value>Doğrulandı: istenen ile okunan arasında uyuşmazlık</value>
+  </data>
+  <data name="TuningStatus_VerifiedNotControlled" xml:space="preserve">
+    <value>Doğrulandı: OmenCore tarafından kontrol edilmiyor</value>
+  </data>
+  <data name="TuningStatus_VerifiedReadback" xml:space="preserve">
+    <value>Doğrulandı: okuma istenenle eşleşiyor</value>
+  </data>
+  <data name="UpdateViewModel_YouAreRunningLatest" xml:space="preserve">
+    <value>En son sürümü çalıştırıyorsunuz.</value>
+  </data>
+  <data name="UpdateViewModel_YouAreRunningLatestCmp" xml:space="preserve">
+    <value>En son sürümü çalıştırıyorsunuz.</value>
+  </data>
+  <data name="DiagnosticExportControl_Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="FanCalibrationControl_Status" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="FanCalibrationControl_Stop" xml:space="preserve">
+    <value>Durdur</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Watts" xml:space="preserve">
+    <value>Watt</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Mhz" xml:space="preserve">
+    <value>MHz</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Good" xml:space="preserve">
+    <value>İyi</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Cycles" xml:space="preserve">
+    <value>döngü</value>
+  </data>
+  <data name="AboutWindow_Close" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="AdvancedView_Quiet" xml:space="preserve">
+    <value>Sessiz</value>
+  </data>
+  <data name="AdvancedView_Apply" xml:space="preserve">
+    <value>Uygula</value>
+  </data>
+  <data name="BloatwareManagerView_Scan" xml:space="preserve">
+    <value>Tara</value>
+  </data>
+  <data name="BloatwareManagerView_All" xml:space="preserve">
+    <value>Tümü</value>
+  </data>
+  <data name="BloatwareManagerView_Low" xml:space="preserve">
+    <value>Düşük</value>
+  </data>
+  <data name="BloatwareManagerView_Med" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="BloatwareManagerView_High" xml:space="preserve">
+    <value>Yüksek</value>
+  </data>
+  <data name="BloatwareManagerView_Remove" xml:space="preserve">
+    <value>Kaldır</value>
+  </data>
+  <data name="BloatwareManagerView_App" xml:space="preserve">
+    <value>Uygulama</value>
+  </data>
+  <data name="BloatwareManagerView_Risk_X" xml:space="preserve">
+    <value>Risk</value>
+  </data>
+  <data name="BloatwareManagerView_Est" xml:space="preserve">
+    <value>Tahmini</value>
+  </data>
+  <data name="BloatwareManagerView_Name" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="BloatwareManagerView_Type" xml:space="preserve">
+    <value>Tür</value>
+  </data>
+  <data name="DashboardView_Power" xml:space="preserve">
+    <value>GÜÇ</value>
+  </data>
+  <data name="FanControlView_Max" xml:space="preserve">
+    <value>Maks</value>
+  </data>
+  <data name="FanControlView_Direct" xml:space="preserve">
+    <value>Doğrudan</value>
+  </data>
+  <data name="FanControlView_Gaming" xml:space="preserve">
+    <value>Oyun</value>
+  </data>
+  <data name="FanControlView_Auto" xml:space="preserve">
+    <value>Otomatik</value>
+  </data>
+  <data name="FanControlView_Silent" xml:space="preserve">
+    <value>Sessiz</value>
+  </data>
+  <data name="FanControlView_Custom" xml:space="preserve">
+    <value>Özel</value>
+  </data>
+  <data name="FanControlView_Save" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="FanControlView_Import" xml:space="preserve">
+    <value>İçe Aktar</value>
+  </data>
+  <data name="FanControlView_Export" xml:space="preserve">
+    <value>Dışa Aktar</value>
+  </data>
+  <data name="FanControlView_Ms" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="FanControlView_Add" xml:space="preserve">
+    <value>+ Ekle</value>
+  </data>
+  <data name="GameLibraryView_Launch" xml:space="preserve">
+    <value>Başlat</value>
+  </data>
+  <data name="GameProfileManagerView_Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="GeneralView_Manual" xml:space="preserve">
+    <value>Manüel</value>
+  </data>
+  <data name="GeneralView_Temp" xml:space="preserve">
+    <value>SICAKLIK</value>
+  </data>
+  <data name="GeneralView_Load" xml:space="preserve">
+    <value>YÜK</value>
+  </data>
+  <data name="GeneralView_System" xml:space="preserve">
+    <value>SİSTEM</value>
+  </data>
+  <data name="GeneralView_Ram" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="GeneralView_Used" xml:space="preserve">
+    <value>KULLANILAN</value>
+  </data>
+  <data name="InputPromptWindow_Input" xml:space="preserve">
+    <value>Girdi</value>
+  </data>
+  <data name="InputPromptWindow_Prompt" xml:space="preserve">
+    <value>İstem</value>
+  </data>
+  <data name="LightingView_Probe" xml:space="preserve">
+    <value>Sonda</value>
+  </data>
+  <data name="LightingView_Mode" xml:space="preserve">
+    <value>Mod</value>
+  </data>
+  <data name="LightingView_Red" xml:space="preserve">
+    <value>Kırmızı</value>
+  </data>
+  <data name="LightingView_Green" xml:space="preserve">
+    <value>Yeşil</value>
+  </data>
+  <data name="LightingView_Blue" xml:space="preserve">
+    <value>Mavi</value>
+  </data>
+  <data name="LightingView_Leds" xml:space="preserve">
+    <value> LED</value>
+  </data>
+  <data name="LightingView_Purple" xml:space="preserve">
+    <value>Mor</value>
+  </data>
+  <data name="LightingView_Yellow" xml:space="preserve">
+    <value>Sarı</value>
+  </data>
+  <data name="LightingView_White" xml:space="preserve">
+    <value>Beyaz</value>
+  </data>
+  <data name="LightingView_Orange" xml:space="preserve">
+    <value>Turuncu</value>
+  </data>
+  <data name="LightingView_Off" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="LightingView_Cyan" xml:space="preserve">
+    <value>Camgöbeği</value>
+  </data>
+  <data name="LightingView_Pink" xml:space="preserve">
+    <value>Pembe</value>
+  </data>
+  <data name="LightingView_Effect" xml:space="preserve">
+    <value>Efekt</value>
+  </data>
+  <data name="LightingView_Theme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="LightingView_Speed" xml:space="preserve">
+    <value>Hız</value>
+  </data>
+  <data name="LightingView_Colour" xml:space="preserve">
+    <value>Renk</value>
+  </data>
+  <data name="LightingView_Medium" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="MainWindow_About" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="MainWindow_GotIt" xml:space="preserve">
+    <value>Anladım</value>
+  </data>
+  <data name="MemoryOptimizerView_Commit" xml:space="preserve">
+    <value>Taahhüt</value>
+  </data>
+  <data name="MemoryOptimizerView_Safe" xml:space="preserve">
+    <value>Güvenli</value>
+  </data>
+  <data name="MemoryOptimizerView_Clean" xml:space="preserve">
+    <value>Temizle</value>
+  </data>
+  <data name="MemoryOptimizerView_Add" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="MemoryOptimizerView_Toggle" xml:space="preserve">
+    <value>Değiştir</value>
+  </data>
+  <data name="OsdOverlayWindow_Mbps" xml:space="preserve">
+    <value> Mbps</value>
+  </data>
+  <data name="QuickPopupWindow_Curve" xml:space="preserve">
+    <value>Eğri</value>
+  </data>
+  <data name="QuickPopupWindow_N165hz" xml:space="preserve">
+    <value>165Hz</value>
+  </data>
+  <data name="SettingsView_Fans" xml:space="preserve">
+    <value>Fanlar</value>
+  </data>
+  <data name="SettingsView_Tuning" xml:space="preserve">
+    <value>Ayar</value>
+  </data>
+  <data name="SettingsView_Daily" xml:space="preserve">
+    <value>Günlük</value>
+  </data>
+  <data name="SettingsView_Weekly" xml:space="preserve">
+    <value>Haftalık</value>
+  </data>
+  <data name="SettingsView_Driver" xml:space="preserve">
+    <value>Sürücü</value>
+  </data>
+  <data name="SettingsView_Layout" xml:space="preserve">
+    <value>Düzen</value>
+  </data>
+  <data name="SettingsView_Github_X" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="SettingsView_Sensor" xml:space="preserve">
+    <value>Sensör</value>
+  </data>
+  <data name="SystemOptimizerView_Open" xml:space="preserve">
+    <value>Aç</value>
+  </data>
+  <data name="TuningView_Keep" xml:space="preserve">
+    <value>Koru</value>
+  </data>
 </root>

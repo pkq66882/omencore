@@ -4330,4 +4330,436 @@
   <data name="TuningView_ControlsSustainedPackagePowerWhile" xml:space="preserve">
     <value> контролирует длительную мощность пакета, в то время как </value>
   </data>
+  <data name="FanControlViewModel_BadgeCurves" xml:space="preserve">
+    <value>Кривые</value>
+  </data>
+  <data name="FanControlViewModel_BadgeProfileOnly" xml:space="preserve">
+    <value>Только профили</value>
+  </data>
+  <data name="FanControlViewModel_CalibrateRecalibrate" xml:space="preserve">
+    <value>Перекалибровать</value>
+  </data>
+  <data name="FanControlViewModel_CalibrateStart" xml:space="preserve">
+    <value>Начать калибровку</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapNone" xml:space="preserve">
+    <value>Карты скважность-RPM пока нет.</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapOk" xml:space="preserve">
+    <value>Карта скважность-RPM по данным последней калибровки.</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapRefreshed" xml:space="preserve">
+    <value>Карта калибровки вентиляторов обновлена по последнему запуску мастера.</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationWizardClosed" xml:space="preserve">
+    <value>Мастер калибровки вентиляторов закрыт.</value>
+  </data>
+  <data name="FanControlViewModel_CustomCurveTooltipNo" xml:space="preserve">
+    <value>Контроллер вентиляторов этой модели не предоставляет интерфейс пользовательских кривых — это ограничение оборудования/прошивки, не связанное с верификацией профиля модели. Используйте OEM-пресеты вентиляторов.</value>
+  </data>
+  <data name="FanControlViewModel_CustomCurveTooltipOk" xml:space="preserve">
+    <value>Применить пользовательскую кривую вентиляторов, заданную в редакторе ниже.</value>
+  </data>
+  <data name="FanControlViewModel_DirectTooltipNo" xml:space="preserve">
+    <value>Контроллер вентиляторов этой модели не предоставляет прямое управление фиксированным уровнем — это ограничение оборудования/прошивки, не связанное с верификацией профиля модели. Используйте OEM-пресеты вентиляторов.</value>
+  </data>
+  <data name="FanControlViewModel_DirectTooltipOk" xml:space="preserve">
+    <value>Удерживать вентиляторы на запрошенном фиксированном уровне с помощью ручного управления.</value>
+  </data>
+  <data name="FanControlViewModel_HeaderHintPresets" xml:space="preserve">
+    <value>Выберите пресет, прямой уровень вентиляторов или свою кривую</value>
+  </data>
+  <data name="FanControlViewModel_HeaderHintProfileOnly" xml:space="preserve">
+    <value>Выберите OEM-пресет вентиляторов</value>
+  </data>
+  <data name="FanControlViewModel_LinkBadgeIndependent" xml:space="preserve">
+    <value>Независимо: режим вентиляторов не зависит от профилей</value>
+  </data>
+  <data name="FanControlViewModel_LinkBadgeLinked" xml:space="preserve">
+    <value>Связано: смена профиля может менять режим вентиляторов</value>
+  </data>
+  <data name="FanControlViewModel_LinkDescIndependent" xml:space="preserve">
+    <value>В независимом режиме смена профиля производительности не переписывает политику вентиляторов. Выбранный пресет/кривая остаются активными, пока вы сами не измените управление вентиляторами.</value>
+  </data>
+  <data name="FanControlViewModel_LinkDescLinked" xml:space="preserve">
+    <value>В связанном режиме выбор профиля производительности может также переключить режим вентиляторов. Используйте, только если хотите поведение вентиляторов, управляемое профилем.</value>
+  </data>
+  <data name="FanControlViewModel_OemAutoFailed" xml:space="preserve">
+    <value>Восстановление OEM-авто не сообщило об успехе</value>
+  </data>
+  <data name="FanControlViewModel_OemAutoRestored" xml:space="preserve">
+    <value>OEM-авто восстановлено</value>
+  </data>
+  <data name="FanControlViewModel_StartupHintCategoryOff" xml:space="preserve">
+    <value>Категория «Вентиляторы» восстановления оборудования при запуске выключена в настройках, поэтому после перезагрузки этот пресет/кривая не применится автоматически — выберите его заново или включите эту категорию.</value>
+  </data>
+  <data name="FanControlViewModel_StartupHintOff" xml:space="preserve">
+    <value>Восстановление оборудования при запуске выключено в настройках, поэтому после перезагрузки этот пресет/кривая не применится автоматически — выберите его заново или включите эту функцию.</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleEditor" xml:space="preserve">
+    <value>Редактор</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleProfile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleProfile80" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleUnavailable" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleUnavailableDirect" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryCapacityUnavailable" xml:space="preserve">
+    <value>Ёмкость недоступна</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryNotReported" xml:space="preserve">
+    <value>Не сообщается этой батареей</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StateUnavailable" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
+  <data name="MainViewModel_CleanupDryDone" xml:space="preserve">
+    <value>Пробный прогон завершён</value>
+  </data>
+  <data name="MainViewModel_CleanupDryRunning" xml:space="preserve">
+    <value>Выполняется пробный прогон очистки…</value>
+  </data>
+  <data name="MainViewModel_CleanupErrors" xml:space="preserve">
+    <value>Очистка завершена с ошибками</value>
+  </data>
+  <data name="MainViewModel_CleanupRemoved" xml:space="preserve">
+    <value>OMEN Gaming Hub удалён</value>
+  </data>
+  <data name="MainViewModel_CleanupRemoving" xml:space="preserve">
+    <value>Удаление OMEN Gaming Hub…</value>
+  </data>
+  <data name="MainViewModel_CleanupRestorePoint" xml:space="preserve">
+    <value>Создание точки восстановления…</value>
+  </data>
+  <data name="MainViewModel_LinkStatusDecoupled" xml:space="preserve">
+    <value>Развязано: вентиляторы независимы</value>
+  </data>
+  <data name="MainViewModel_LinkStatusLinked" xml:space="preserve">
+    <value>Связано: вентиляторы следуют за производительностью</value>
+  </data>
+  <data name="MainViewModel_LogsHide" xml:space="preserve">
+    <value>Скрыть журнал активности</value>
+  </data>
+  <data name="MainViewModel_LogsShow" xml:space="preserve">
+    <value>Показать журнал активности</value>
+  </data>
+  <data name="MainViewModel_MonitoringFull" xml:space="preserve">
+    <value>Полная телеметрия мониторинга включена</value>
+  </data>
+  <data name="MainViewModel_MonitoringLowOverhead" xml:space="preserve">
+    <value>Включён малонагруженный мониторинг</value>
+  </data>
+  <data name="QuickPopup_DecoupledMode" xml:space="preserve">
+    <value>Включён развязанный режим. Изменение производительности не затронет текущий пресет или кривую вентиляторов.</value>
+  </data>
+  <data name="QuickPopup_FanPerfLinked" xml:space="preserve">
+    <value>Вентиляторы/производительность: связаны</value>
+  </data>
+  <data name="QuickPopup_LinkedMode" xml:space="preserve">
+    <value>Включён связанный режим. Изменение производительности может также переписать политику вентиляторов.</value>
+  </data>
+  <data name="TrayIcon_AcPower" xml:space="preserve">
+    <value>От сети</value>
+  </data>
+  <data name="TrayIcon_Battery" xml:space="preserve">
+    <value>Батарея</value>
+  </data>
+  <data name="TrayIcon_Charging" xml:space="preserve">
+    <value>Заряжается</value>
+  </data>
+  <data name="TrayIcon_Decoupled" xml:space="preserve">
+    <value>Развязано</value>
+  </data>
+  <data name="TrayIcon_Enabled" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="TrayIcon_KeepAboveOff" xml:space="preserve">
+    <value>Держать OmenCore поверх других окон (выкл.)</value>
+  </data>
+  <data name="TrayIcon_KeepAboveOn" xml:space="preserve">
+    <value>Держать OmenCore поверх других окон (вкл.)</value>
+  </data>
+  <data name="TrayIcon_Linked" xml:space="preserve">
+    <value>Связано</value>
+  </data>
+  <data name="TrayIcon_OnBattery" xml:space="preserve">
+    <value>От батареи</value>
+  </data>
+  <data name="TrayIcon_StayOnTopOff" xml:space="preserve">
+    <value>Поверх всех окон</value>
+  </data>
+  <data name="TrayIcon_StayOnTopOn" xml:space="preserve">
+    <value>Поверх всех окон (вкл.)</value>
+  </data>
+  <data name="TuningStatus_VerifiedAcknowledged" xml:space="preserve">
+    <value>Проверено: запись подтверждена (независимого аппаратного считывания на этом пути нет)</value>
+  </data>
+  <data name="TuningStatus_VerifiedMismatch" xml:space="preserve">
+    <value>Проверено: расхождение между запрошенным и считанным</value>
+  </data>
+  <data name="TuningStatus_VerifiedNotControlled" xml:space="preserve">
+    <value>Проверено: не управляется OmenCore</value>
+  </data>
+  <data name="TuningStatus_VerifiedReadback" xml:space="preserve">
+    <value>Проверено: считанное значение совпадает с запрошенным</value>
+  </data>
+  <data name="UpdateViewModel_YouAreRunningLatest" xml:space="preserve">
+    <value>У вас последняя версия.</value>
+  </data>
+  <data name="UpdateViewModel_YouAreRunningLatestCmp" xml:space="preserve">
+    <value>У вас последняя версия.</value>
+  </data>
+  <data name="DiagnosticExportControl_Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="FanCalibrationControl_Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="FanCalibrationControl_Stop" xml:space="preserve">
+    <value>Стоп</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Watts" xml:space="preserve">
+    <value>Вт</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Normal" xml:space="preserve">
+    <value>Норма</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Mhz" xml:space="preserve">
+    <value>МГц</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Good" xml:space="preserve">
+    <value>Хорошо</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Cycles" xml:space="preserve">
+    <value>циклов</value>
+  </data>
+  <data name="AboutWindow_Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="AdvancedView_Quiet" xml:space="preserve">
+    <value>Тихий</value>
+  </data>
+  <data name="AdvancedView_Apply" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="BloatwareManagerView_Scan" xml:space="preserve">
+    <value>Сканировать</value>
+  </data>
+  <data name="BloatwareManagerView_All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="BloatwareManagerView_Low" xml:space="preserve">
+    <value>Низкий</value>
+  </data>
+  <data name="BloatwareManagerView_Med" xml:space="preserve">
+    <value>Средний</value>
+  </data>
+  <data name="BloatwareManagerView_High" xml:space="preserve">
+    <value>Высокий</value>
+  </data>
+  <data name="BloatwareManagerView_Remove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="BloatwareManagerView_App" xml:space="preserve">
+    <value>Приложение</value>
+  </data>
+  <data name="BloatwareManagerView_Risk_X" xml:space="preserve">
+    <value>Риск</value>
+  </data>
+  <data name="BloatwareManagerView_Est" xml:space="preserve">
+    <value>Примерно</value>
+  </data>
+  <data name="BloatwareManagerView_Name" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="BloatwareManagerView_Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="DashboardView_Power" xml:space="preserve">
+    <value>МОЩНОСТЬ</value>
+  </data>
+  <data name="FanControlView_Max" xml:space="preserve">
+    <value>Макс</value>
+  </data>
+  <data name="FanControlView_Direct" xml:space="preserve">
+    <value>Прямой</value>
+  </data>
+  <data name="FanControlView_Gaming" xml:space="preserve">
+    <value>Игровой</value>
+  </data>
+  <data name="FanControlView_Auto" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="FanControlView_Silent" xml:space="preserve">
+    <value>Тихий</value>
+  </data>
+  <data name="FanControlView_Custom" xml:space="preserve">
+    <value>Свой</value>
+  </data>
+  <data name="FanControlView_Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="FanControlView_Import" xml:space="preserve">
+    <value>Импорт</value>
+  </data>
+  <data name="FanControlView_Export" xml:space="preserve">
+    <value>Экспорт</value>
+  </data>
+  <data name="FanControlView_Ms" xml:space="preserve">
+    <value>мс</value>
+  </data>
+  <data name="FanControlView_Add" xml:space="preserve">
+    <value>+ Добавить</value>
+  </data>
+  <data name="GameLibraryView_Launch" xml:space="preserve">
+    <value>Запустить</value>
+  </data>
+  <data name="GameProfileManagerView_Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="GeneralView_Manual" xml:space="preserve">
+    <value>Вручную</value>
+  </data>
+  <data name="GeneralView_Temp" xml:space="preserve">
+    <value>ТЕМП.</value>
+  </data>
+  <data name="GeneralView_Load" xml:space="preserve">
+    <value>НАГРУЗКА</value>
+  </data>
+  <data name="GeneralView_System" xml:space="preserve">
+    <value>СИСТЕМА</value>
+  </data>
+  <data name="GeneralView_Ram" xml:space="preserve">
+    <value>ОЗУ</value>
+  </data>
+  <data name="GeneralView_Used" xml:space="preserve">
+    <value>ЗАНЯТО</value>
+  </data>
+  <data name="InputPromptWindow_Input" xml:space="preserve">
+    <value>Ввод</value>
+  </data>
+  <data name="InputPromptWindow_Prompt" xml:space="preserve">
+    <value>Подсказка</value>
+  </data>
+  <data name="LightingView_Probe" xml:space="preserve">
+    <value>Зонд</value>
+  </data>
+  <data name="LightingView_Mode" xml:space="preserve">
+    <value>Режим</value>
+  </data>
+  <data name="LightingView_Red" xml:space="preserve">
+    <value>Красный</value>
+  </data>
+  <data name="LightingView_Green" xml:space="preserve">
+    <value>Зелёный</value>
+  </data>
+  <data name="LightingView_Blue" xml:space="preserve">
+    <value>Синий</value>
+  </data>
+  <data name="LightingView_Leds" xml:space="preserve">
+    <value> светодиодов</value>
+  </data>
+  <data name="LightingView_Purple" xml:space="preserve">
+    <value>Фиолетовый</value>
+  </data>
+  <data name="LightingView_Yellow" xml:space="preserve">
+    <value>Жёлтый</value>
+  </data>
+  <data name="LightingView_White" xml:space="preserve">
+    <value>Белый</value>
+  </data>
+  <data name="LightingView_Orange" xml:space="preserve">
+    <value>Оранжевый</value>
+  </data>
+  <data name="LightingView_Off" xml:space="preserve">
+    <value>Выключено</value>
+  </data>
+  <data name="LightingView_Cyan" xml:space="preserve">
+    <value>Голубой</value>
+  </data>
+  <data name="LightingView_Pink" xml:space="preserve">
+    <value>Розовый</value>
+  </data>
+  <data name="LightingView_Effect" xml:space="preserve">
+    <value>Эффект</value>
+  </data>
+  <data name="LightingView_Theme" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="LightingView_Speed" xml:space="preserve">
+    <value>Скорость</value>
+  </data>
+  <data name="LightingView_Colour" xml:space="preserve">
+    <value>Цвет</value>
+  </data>
+  <data name="LightingView_Medium" xml:space="preserve">
+    <value>Средняя</value>
+  </data>
+  <data name="MainWindow_About" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="MainWindow_GotIt" xml:space="preserve">
+    <value>Понятно</value>
+  </data>
+  <data name="MemoryOptimizerView_Commit" xml:space="preserve">
+    <value>Коммит</value>
+  </data>
+  <data name="MemoryOptimizerView_Safe" xml:space="preserve">
+    <value>Безопасно</value>
+  </data>
+  <data name="MemoryOptimizerView_Clean" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="MemoryOptimizerView_Add" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="MemoryOptimizerView_Toggle" xml:space="preserve">
+    <value>Переключить</value>
+  </data>
+  <data name="OsdOverlayWindow_Mbps" xml:space="preserve">
+    <value> Мбит/с</value>
+  </data>
+  <data name="QuickPopupWindow_Curve" xml:space="preserve">
+    <value>Кривая</value>
+  </data>
+  <data name="QuickPopupWindow_N165hz" xml:space="preserve">
+    <value>165Гц</value>
+  </data>
+  <data name="SettingsView_Fans" xml:space="preserve">
+    <value>Вентиляторы</value>
+  </data>
+  <data name="SettingsView_Tuning" xml:space="preserve">
+    <value>Тюнинг</value>
+  </data>
+  <data name="SettingsView_Daily" xml:space="preserve">
+    <value>Ежедневно</value>
+  </data>
+  <data name="SettingsView_Weekly" xml:space="preserve">
+    <value>Еженедельно</value>
+  </data>
+  <data name="SettingsView_Driver" xml:space="preserve">
+    <value>Драйвер</value>
+  </data>
+  <data name="SettingsView_Layout" xml:space="preserve">
+    <value>Компоновка</value>
+  </data>
+  <data name="SettingsView_Github_X" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="SettingsView_Sensor" xml:space="preserve">
+    <value>Датчик</value>
+  </data>
+  <data name="SystemOptimizerView_Open" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="TuningView_Keep" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
 </root>

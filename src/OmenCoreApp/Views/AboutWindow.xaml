@@ -118,7 +118,7 @@
                             Margin="0,0,12,0"
                             ToolTip="{x:Static loc:Strings.AboutWindow_CheckGithubForNewReleases}" />
                     <Button x:Name="CloseButton"
-                            Content="Close" 
+                            Content="{x:Static loc:Strings.AboutWindow_Close}" 
                             Width="100" 
                             Height="42"
                             Click="CloseClicked" 

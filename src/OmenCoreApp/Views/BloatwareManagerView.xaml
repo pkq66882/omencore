@@ -81,7 +81,7 @@
                             AutomationProperties.Name="{x:Static loc:Strings.BloatwareManagerView_ScanForBloatware}">
                         <StackPanel Orientation="Horizontal">
                             <Path Data="{StaticResource IconRefresh}" Width="14" Height="14" Fill="White" Stretch="Uniform" Margin="0,0,6,0"/>
-                            <TextBlock Text="Scan" FontSize="12"/>
+                            <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_Scan}" FontSize="12"/>
                         </StackPanel>
                     </Button>
                     <Button Command="{Binding RemoveAllLowRiskCommand}" 
@@ -112,7 +112,7 @@
                             AutomationProperties.Name="{x:Static loc:Strings.BloatwareManagerView_CancelBulkOperation}">
                         <StackPanel Orientation="Horizontal">
                             <Path Data="{StaticResource IconClose}" Width="12" Height="12" Fill="{StaticResource TextSecondaryBrush}" Stretch="Uniform" Margin="0,0,4,0"/>
-                            <TextBlock Text="Cancel" FontSize="11"/>
+                            <TextBlock Text="{x:Static loc:Strings.DiagnosticExportControl_Cancel}" FontSize="11"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
@@ -157,23 +157,23 @@
                     <!-- Risk Level Filter -->
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_Risk}" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                        <RadioButton Content="All"    IsChecked="{Binding IsRiskAll,    Mode=TwoWay}" GroupName="RiskFilter" Style="{StaticResource TimeRangeButton}" Margin="0,0,4,0"/>
+                        <RadioButton Content="{x:Static loc:Strings.BloatwareManagerView_All}"    IsChecked="{Binding IsRiskAll,    Mode=TwoWay}" GroupName="RiskFilter" Style="{StaticResource TimeRangeButton}" Margin="0,0,4,0"/>
                         <RadioButton IsChecked="{Binding IsRiskLow,    Mode=TwoWay}" GroupName="RiskFilter" Style="{StaticResource TimeRangeButton}" Margin="0,0,4,0">
                             <StackPanel Orientation="Horizontal">
                                 <Ellipse Width="6" Height="6" Fill="{StaticResource SuccessBrush}" VerticalAlignment="Center" Margin="0,0,4,0"/>
-                                <TextBlock Text="Low"/>
+                                <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_Low}"/>
                             </StackPanel>
                         </RadioButton>
                         <RadioButton IsChecked="{Binding IsRiskMedium, Mode=TwoWay}" GroupName="RiskFilter" Style="{StaticResource TimeRangeButton}" Margin="0,0,4,0">
                             <StackPanel Orientation="Horizontal">
                                 <Ellipse Width="6" Height="6" Fill="{StaticResource WarningBrush}" VerticalAlignment="Center" Margin="0,0,4,0"/>
-                                <TextBlock Text="Med"/>
+                                <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_Med}"/>
                             </StackPanel>
                         </RadioButton>
                         <RadioButton IsChecked="{Binding IsRiskHigh,   Mode=TwoWay}" GroupName="RiskFilter" Style="{StaticResource TimeRangeButton}">
                             <StackPanel Orientation="Horizontal">
                                 <Ellipse Width="6" Height="6" Fill="{StaticResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,4,0"/>
-                                <TextBlock Text="High"/>
+                                <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_High}"/>
                             </StackPanel>
                         </RadioButton>
                     </StackPanel>
@@ -189,7 +189,7 @@
                             AutomationProperties.Name="{x:Static loc:Strings.BloatwareManagerView_RemoveSelectedItem}">
                         <StackPanel Orientation="Horizontal">
                             <Path Data="{StaticResource IconTrash}" Width="12" Height="12" Fill="White" Stretch="Uniform" Margin="0,0,4,0"/>
-                            <TextBlock Text="Remove" FontSize="11"/>
+                            <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_Remove}" FontSize="11"/>
                         </StackPanel>
                     </Button>
                     <Button Command="{Binding RestoreSelectedCommand}" 
@@ -262,16 +262,16 @@
                               Background="{StaticResource SurfaceDarkBrush}" BorderBrush="{StaticResource BorderBrush}">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Remove" Width="60">
+                                <GridViewColumn Header="{x:Static loc:Strings.BloatwareManagerView_Remove}" Width="60">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="App" Width="220" DisplayMemberBinding="{Binding Name}"/>
-                                <GridViewColumn Header="Risk" Width="70" DisplayMemberBinding="{Binding Risk}"/>
-                                <GridViewColumn Header="Est." Width="60" DisplayMemberBinding="{Binding EstimatedText}"/>
+                                <GridViewColumn Header="{x:Static loc:Strings.BloatwareManagerView_App}" Width="220" DisplayMemberBinding="{Binding Name}"/>
+                                <GridViewColumn Header="{x:Static loc:Strings.BloatwareManagerView_Risk_X}" Width="70" DisplayMemberBinding="{Binding Risk}"/>
+                                <GridViewColumn Header="{x:Static loc:Strings.BloatwareManagerView_Est}" Width="60" DisplayMemberBinding="{Binding EstimatedText}"/>
                                 <GridViewColumn Header="{x:Static loc:Strings.BloatwareManagerView_DependencyHint}" Width="280" DisplayMemberBinding="{Binding DependencyHint}"/>
                             </GridView>
                         </ListView.View>
@@ -282,7 +282,7 @@
                             <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_ToggleAll}" FontSize="11"/>
                         </Button>
                         <Button Command="{Binding CancelRemovalPreviewCommand}" Style="{StaticResource SecondaryButton}" Padding="10,6" Margin="0,0,8,0">
-                            <TextBlock Text="Cancel" FontSize="11"/>
+                            <TextBlock Text="{x:Static loc:Strings.DiagnosticExportControl_Cancel}" FontSize="11"/>
                         </Button>
                         <Button Command="{Binding ConfirmRemovalPreviewCommand}" Style="{StaticResource ModernButton}" Background="#C62828" Padding="10,6">
                             <TextBlock Text="{x:Static loc:Strings.BloatwareManagerView_RemoveSelected}" FontSize="11" Foreground="White"/>
@@ -344,7 +344,7 @@
                           VirtualizingPanel.VirtualizationMode="Recycling">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Status" Width="70">
+                            <GridViewColumn Header="{x:Static loc:Strings.FanCalibrationControl_Status}" Width="70">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <Border HorizontalAlignment="Center" ToolTip="{Binding LastRemovalDetail}">
@@ -390,7 +390,7 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn Header="Name" Width="200">
+                            <GridViewColumn Header="{x:Static loc:Strings.BloatwareManagerView_Name}" Width="200">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Name}" FontWeight="Medium" Foreground="{StaticResource TextPrimaryBrush}"/>
@@ -426,14 +426,14 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn Header="Type" Width="100">
+                            <GridViewColumn Header="{x:Static loc:Strings.BloatwareManagerView_Type}" Width="100">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Type}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}"/>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn Header="Risk" Width="80">
+                            <GridViewColumn Header="{x:Static loc:Strings.BloatwareManagerView_Risk_X}" Width="80">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <Border HorizontalAlignment="Center">

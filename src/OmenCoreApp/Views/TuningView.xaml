@@ -296,7 +296,7 @@
                                                        Foreground="{StaticResource TextPrimaryBrush}"
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Grid>
-                                        <TextBlock Text="TEMP" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
+                                        <TextBlock Text="{x:Static loc:Strings.GeneralView_Temp}" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
                                                    HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                     </StackPanel>
                                     
@@ -312,7 +312,7 @@
                                                        Foreground="{StaticResource TextPrimaryBrush}"
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Grid>
-                                        <TextBlock Text="POWER" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
+                                        <TextBlock Text="{x:Static loc:Strings.DashboardView_Power}" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
                                                    HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                     </StackPanel>
                                 </StackPanel>
@@ -1047,7 +1047,7 @@
                                                        Foreground="{StaticResource TextPrimaryBrush}"
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Grid>
-                                        <TextBlock Text="TEMP" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
+                                        <TextBlock Text="{x:Static loc:Strings.GeneralView_Temp}" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
                                                    HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                     </StackPanel>
                                     
@@ -1063,7 +1063,7 @@
                                                        Foreground="{StaticResource TextPrimaryBrush}"
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Grid>
-                                        <TextBlock Text="POWER" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
+                                        <TextBlock Text="{x:Static loc:Strings.DashboardView_Power}" FontSize="9" Foreground="{StaticResource TextMutedBrush}" 
                                                    HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                     </StackPanel>
                                     
@@ -1198,7 +1198,7 @@
                                                    Foreground="{StaticResource AccentBlueBrush}"/>
                                     </StackPanel>
                                     <StackPanel>
-                                        <TextBlock Text="POWER" FontSize="9" Foreground="{StaticResource TextMutedBrush}"/>
+                                        <TextBlock Text="{x:Static loc:Strings.DashboardView_Power}" FontSize="9" Foreground="{StaticResource TextMutedBrush}"/>
                                         <TextBlock Text="{Binding SystemControl.GpuPowerLimitPercent, StringFormat={}{0}%}" 
                                                    FontFamily="{StaticResource MonospaceFontFamily}"
                                                    FontSize="16" FontWeight="Bold"
@@ -1468,7 +1468,7 @@
                                     ToolTip="{x:Static loc:Strings.TuningView_ApplyTheseGpuSettingsTemporarilySoYouCanCh}"
                                     AutomationProperties.Name="{x:Static loc:Strings.TuningView_TestGpuOverclockTemporarily}"/>
 
-                                <Button Content="Keep"
+                                <Button Content="{x:Static loc:Strings.TuningView_Keep}"
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding SystemControl.ConfirmGpuOcTestCommand}"
                                     Padding="16,8" Margin="0,0,8,0"

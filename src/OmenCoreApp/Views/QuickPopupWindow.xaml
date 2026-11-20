@@ -191,7 +191,7 @@
                 <Button x:Name="QuickQuietBtn" Style="{StaticResource ModeButtonStyle}" Click="QuickProfile_Click" Tag="Quiet">
                     <StackPanel>
                         <TextBlock Text="🤫" FontSize="18" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Quiet" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                        <TextBlock Text="{x:Static loc:Strings.AdvancedView_Quiet}" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="QuickBalancedBtn" Style="{StaticResource ModeButtonStyle}" Click="QuickProfile_Click" Tag="Balanced">
@@ -214,20 +214,20 @@
                 <Button x:Name="FanAutoBtn" Style="{StaticResource ModeButtonStyle}" Click="FanMode_Click" Tag="Auto">
                     <StackPanel>
                         <TextBlock Text="⚡" FontSize="18" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Auto" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                        <TextBlock Text="{x:Static loc:Strings.FanControlView_Auto}" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="FanCustomBtn" Style="{StaticResource ModeButtonStyle}" Click="FanMode_Click" Tag="Custom"
                         ToolTipService.ShowOnDisabled="True">
                     <StackPanel>
                         <TextBlock Text="🎛️" FontSize="18" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Curve" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                        <TextBlock Text="{x:Static loc:Strings.QuickPopupWindow_Curve}" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="FanMaxBtn" Style="{StaticResource ModeButtonStyle}" Click="FanMode_Click" Tag="Max">
                     <StackPanel>
                         <TextBlock Text="🔥" FontSize="18" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Max" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                        <TextBlock Text="{x:Static loc:Strings.FanControlView_Max}" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                     </StackPanel>
                 </Button>
             </UniformGrid>
@@ -249,7 +249,7 @@
                     <Button x:Name="RefreshRateBtn" Style="{StaticResource QuickButtonStyle}" Click="RefreshRate_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_ToggleRefreshRate}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="🖥️" FontSize="14" Margin="0,0,6,0"/>
-                            <TextBlock x:Name="RefreshRateText" Text="165Hz" FontSize="11"/>
+                            <TextBlock x:Name="RefreshRateText" Text="{x:Static loc:Strings.QuickPopupWindow_N165hz}" FontSize="11"/>
                         </StackPanel>
                     </Button>
                     <Button x:Name="MemoryCleanBtn" Style="{StaticResource QuickButtonStyle}" Click="MemoryClean_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_RunASafeRamClean}">

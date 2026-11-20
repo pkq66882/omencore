@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using OmenCore;
 using OmenCore.Services;
 using OmenCore.Models;
+using OmenCore.Localization;
 using OmenCore.ViewModels;
 
 namespace OmenCore.Controls
@@ -378,7 +379,7 @@ namespace OmenCore.Controls
                 {
                     var cpuStatus = sample.CpuTemperatureState switch
                     {
-                        TelemetryDataState.Unavailable => "Unavailable",
+                        TelemetryDataState.Unavailable => Strings.HardwareMonitoringDashboard_StateUnavailable,
                         TelemetryDataState.Stale => "Stale",
                         TelemetryDataState.Invalid => "Invalid",
                         _ => GetTemperatureStatus(cpuTemp)
@@ -409,7 +410,7 @@ namespace OmenCore.Controls
                     var gpuStatus = sample.GpuTemperatureState switch
                     {
                         TelemetryDataState.Inactive => "Inactive",
-                        TelemetryDataState.Unavailable => "Unavailable",
+                        TelemetryDataState.Unavailable => Strings.HardwareMonitoringDashboard_StateUnavailable,
                         TelemetryDataState.Stale => "Stale",
                         TelemetryDataState.Invalid => "Invalid",
                         _ => GetTemperatureStatus(gpuTemp)
@@ -500,8 +501,8 @@ namespace OmenCore.Controls
                         batteryInfo.DesignedCapacityMilliwattHours is int design
                             ? $"{full:N0} of {design:N0} mWh"
                             : batteryInfo.CycleCount == null
-                                ? "Not reported by this battery"
-                                : "Capacity unavailable";
+                                ? Strings.HardwareMonitoringDashboard_BatteryNotReported
+                                : Strings.HardwareMonitoringDashboard_BatteryCapacityUnavailable;
                 }
 
                 if (ThermalStatusValue != null)

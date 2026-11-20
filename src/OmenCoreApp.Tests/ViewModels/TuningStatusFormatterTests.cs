@@ -10,18 +10,27 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void BuildUndervoltStatusText_WhenReadbackMatchesRequested_ReturnsVerifiedMatch()
         {
-            var status = new UndervoltStatus
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
             {
-                CurrentCoreOffsetMv = -80,
-                CurrentCacheOffsetMv = -80,
-                ControlledByOmenCore = true
-            };
+                var status = new UndervoltStatus
+                {
+                    CurrentCoreOffsetMv = -80,
+                    CurrentCacheOffsetMv = -80,
+                    ControlledByOmenCore = true
+                };
 
-            var text = TuningStatusFormatter.BuildUndervoltStatusText(-80, -80, status, isAmdCpu: false);
+                var text = TuningStatusFormatter.BuildUndervoltStatusText(-80, -80, status, isAmdCpu: false);
 
-            text.Should().Contain("Requested:");
-            text.Should().Contain("Applied:");
-            text.Should().Contain("Verified: readback matches requested");
+                text.Should().Contain("Requested:");
+                text.Should().Contain("Applied:");
+                text.Should().Contain("Verified: readback matches requested");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]
@@ -30,18 +39,27 @@ namespace OmenCoreApp.Tests.ViewModels
             // AMD's Curve Optimizer/SMU path has no independent register to poll - CurrentCoreOffsetMv
             // is just the provider's own record of the last value it wrote. Claiming "readback
             // matches requested" here would be a tautology (it can only ever match itself).
-            var status = new UndervoltStatus
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
             {
-                CurrentCoreOffsetMv = -120,
-                CurrentCacheOffsetMv = 0,
-                ControlledByOmenCore = true,
-                HasIndependentReadback = false
-            };
+                var status = new UndervoltStatus
+                {
+                    CurrentCoreOffsetMv = -120,
+                    CurrentCacheOffsetMv = 0,
+                    ControlledByOmenCore = true,
+                    HasIndependentReadback = false
+                };
 
-            var text = TuningStatusFormatter.BuildUndervoltStatusText(-120, 0, status, isAmdCpu: true);
+                var text = TuningStatusFormatter.BuildUndervoltStatusText(-120, 0, status, isAmdCpu: true);
 
-            text.Should().NotContain("Verified: readback matches requested");
-            text.Should().Contain("Verified: write acknowledged");
+                text.Should().NotContain("Verified: readback matches requested");
+                text.Should().Contain("Verified: write acknowledged");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]
@@ -60,13 +78,22 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void BuildUndervoltStatusText_AmdOffsetOffByMoreThanAStep_IsStillAMismatch()
         {
-            var status = new UndervoltStatus { CurrentCoreOffsetMv = 0, CurrentCacheOffsetMv = 0, ControlledByOmenCore = true };
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                var status = new UndervoltStatus { CurrentCoreOffsetMv = 0, CurrentCacheOffsetMv = 0, ControlledByOmenCore = true };
 
-            TuningStatusFormatter.BuildUndervoltStatusText(-20, 0, status, isAmdCpu: true).Should().Contain("mismatch");
-            SystemControlViewModel.ComputeUndervoltMismatch(status, -20, 0, applyAttempted: true, isAmdCpu: true).Should().BeTrue();
-            // Intel has no step rounding: the same 3 mV difference is a mismatch there.
-            SystemControlViewModel.ComputeUndervoltMismatch(
-                new UndervoltStatus { CurrentCoreOffsetMv = -12 }, -15, 0, applyAttempted: true, isAmdCpu: false).Should().BeTrue();
+                TuningStatusFormatter.BuildUndervoltStatusText(-20, 0, status, isAmdCpu: true).Should().Contain("mismatch");
+                SystemControlViewModel.ComputeUndervoltMismatch(status, -20, 0, applyAttempted: true, isAmdCpu: true).Should().BeTrue();
+                // Intel has no step rounding: the same 3 mV difference is a mismatch there.
+                SystemControlViewModel.ComputeUndervoltMismatch(
+                    new UndervoltStatus { CurrentCoreOffsetMv = -12 }, -15, 0, applyAttempted: true, isAmdCpu: false).Should().BeTrue();
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]

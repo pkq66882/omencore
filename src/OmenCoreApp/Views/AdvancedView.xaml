@@ -123,7 +123,7 @@
                                     <Path Data="{StaticResource IconVolumeMute}" Fill="#00FF88" Width="26" Height="26" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Border>
                                 
-                                <TextBlock Grid.Row="1" Text="Quiet" FontSize="16" FontWeight="Bold" 
+                                <TextBlock Grid.Row="1" Text="{x:Static loc:Strings.AdvancedView_Quiet}" FontSize="16" FontWeight="Bold" 
                                            Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
                                 <TextBlock Grid.Row="2" Text="{x:Static loc:Strings.AdvancedView_SilentOperation}" FontSize="9" FontWeight="SemiBold" Foreground="#00FF88" 
                                            HorizontalAlignment="Center" Margin="0,4,0,10"/>
@@ -426,7 +426,7 @@
                                   AutomationProperties.Name="{x:Static loc:Strings.AdvancedView_GpuPowerBoostLevel}"/>
 
                         <Button Grid.Column="2"
-                                Content="Apply"
+                                Content="{x:Static loc:Strings.AdvancedView_Apply}"
                                 Style="{StaticResource ModernButton}"
                                 Command="{Binding SystemControl.ApplyGpuPowerBoostCommand}"
                                 Padding="16,8"

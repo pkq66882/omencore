@@ -84,7 +84,7 @@
         <!-- Sub-tabs for easier navigation (GitHub #48 - kg290) -->
         <TabControl Grid.Row="2" Style="{StaticResource ModernTabControl}" ItemContainerStyle="{StaticResource ModernTabItem}" Margin="0,8,0,0">
             <!-- Status Tab -->
-            <TabItem Header="Status">
+            <TabItem Header="{x:Static loc:Strings.FanCalibrationControl_Status}">
                 <ScrollViewer Style="{StaticResource SmoothScrollViewer}" 
                               IsDeferredScrollingEnabled="True"
                               Padding="0,0,12,0">
@@ -1334,13 +1334,13 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Column="0">
-                                        <TextBlock Text="Fans" FontSize="13" Foreground="{StaticResource TextPrimaryBrush}"/>
+                                        <TextBlock Text="{x:Static loc:Strings.SettingsView_Fans}" FontSize="13" Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock Text="{x:Static loc:Strings.SettingsView_ReapplySavedFanPresetOrCurveAtStartup}" FontSize="11"
                                                    Foreground="{StaticResource TextSecondaryBrush}" TextWrapping="Wrap"/>
                                     </StackPanel>
                                     <ToggleButton Grid.Column="1" Style="{StaticResource ModernToggleButton}"
                                                   IsChecked="{Binding StartupRestoreFansEnabled, Mode=TwoWay}"
-                                                  AutomationProperties.Name="Fans"/>
+                                                  AutomationProperties.Name="{x:Static loc:Strings.SettingsView_Fans}"/>
                                 </Grid>
 
                                 <Grid Margin="0,0,0,8" IsEnabled="{Binding StartupRestoreFansEnabled}">
@@ -1409,13 +1409,13 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Grid.Column="0">
-                                        <TextBlock Text="Tuning" FontSize="13" Foreground="{StaticResource TextPrimaryBrush}"/>
+                                        <TextBlock Text="{x:Static loc:Strings.SettingsView_Tuning}" FontSize="13" Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock Text="{x:Static loc:Strings.SettingsView_ReapplyConfirmedUndervoltTccCpuPowerAndGpu}" FontSize="11"
                                                    Foreground="{StaticResource TextSecondaryBrush}" TextWrapping="Wrap"/>
                                     </StackPanel>
                                     <ToggleButton Grid.Column="1" Style="{StaticResource ModernToggleButton}"
                                                   IsChecked="{Binding StartupRestoreTuningEnabled, Mode=TwoWay}"
-                                                  AutomationProperties.Name="Tuning"/>
+                                                  AutomationProperties.Name="{x:Static loc:Strings.SettingsView_Tuning}"/>
                                 </Grid>
                             </StackPanel>
                         </Border>
@@ -1489,8 +1489,8 @@
                                       AutomationProperties.Name="{x:Static loc:Strings.SettingsView_UpdateCheckInterval}">
                                 <ComboBoxItem Content="{x:Static loc:Strings.SettingsView_EveryHour}"/>
                                 <ComboBoxItem Content="{x:Static loc:Strings.SettingsView_Every6Hours}"/>
-                                <ComboBoxItem Content="Daily"/>
-                                <ComboBoxItem Content="Weekly"/>
+                                <ComboBoxItem Content="{x:Static loc:Strings.SettingsView_Daily}"/>
+                                <ComboBoxItem Content="{x:Static loc:Strings.SettingsView_Weekly}"/>
                             </ComboBox>
                         </Grid>
 
@@ -1953,7 +1953,7 @@
                                     Margin="0,0,8,8" Padding="12,16">
                                 <StackPanel>
                                     <TextBlock Text="💾" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
-                                    <TextBlock Text="Driver" FontSize="12" FontWeight="SemiBold" 
+                                    <TextBlock Text="{x:Static loc:Strings.SettingsView_Driver}" FontSize="12" FontWeight="SemiBold" 
                                                HorizontalAlignment="Center"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock Text="{x:Static loc:Strings.SettingsView_Downloads}" FontSize="12" FontWeight="SemiBold" 
@@ -2060,7 +2060,7 @@
                             <ProgressBar Value="{Binding FanCleaningProgressPercent}"
                                          Maximum="100" Height="8"
                                          Foreground="#FFB74D"/>
-                            <Button AutomationProperties.Name="Cancel" Content="Cancel"
+                            <Button AutomationProperties.Name="{x:Static loc:Strings.DiagnosticExportControl_Cancel}" Content="{x:Static loc:Strings.DiagnosticExportControl_Cancel}"
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding CancelFanCleaningCommand}"
                                     HorizontalAlignment="Left"
@@ -2677,8 +2677,8 @@
                                         <ToggleButton AutomationProperties.Name="{x:Static loc:Strings.SettingsView_Network}" Style="{StaticResource ModernToggleButton}" IsChecked="{Binding OsdShowNetworkGroup}"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal" Margin="0,0,16,4">
-                                        <TextBlock Text="System" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{StaticResource TextPrimaryBrush}"/>
-                                        <ToggleButton AutomationProperties.Name="System" Style="{StaticResource ModernToggleButton}" IsChecked="{Binding OsdShowSystemGroup}"/>
+                                        <TextBlock Text="{x:Static loc:Strings.GeneralView_System}" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{StaticResource TextPrimaryBrush}"/>
+                                        <ToggleButton AutomationProperties.Name="{x:Static loc:Strings.GeneralView_System}" Style="{StaticResource ModernToggleButton}" IsChecked="{Binding OsdShowSystemGroup}"/>
                                     </StackPanel>
                                 </WrapPanel>
                                 
@@ -2783,7 +2783,7 @@
                                 </WrapPanel>
                                 
                                 <!-- Layout -->
-                                <TextBlock Text="Layout" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}" Margin="0,8,0,4"/>
+                                <TextBlock Text="{x:Static loc:Strings.SettingsView_Layout}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}" Margin="0,8,0,4"/>
                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
                                     <TextBlock Text="{x:Static loc:Strings.SettingsView_HorizontalLayout}" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <ToggleButton AutomationProperties.Name="{x:Static loc:Strings.SettingsView_HorizontalLayout}" Style="{StaticResource ModernToggleButton}" IsChecked="{Binding IsOsdHorizontalLayout}"/>
@@ -3332,7 +3332,7 @@
                 </ScrollViewer>
             </TabItem>
 
-            <TabItem Header="About">
+            <TabItem Header="{x:Static loc:Strings.MainWindow_About}">
                 <ScrollViewer Style="{StaticResource SmoothScrollViewer}" Padding="0,0,12,0">
                     <StackPanel Margin="20,20,20,40">
 
@@ -3356,7 +3356,7 @@
                         </TextBlock>
 
                         <StackPanel Orientation="Horizontal">
-                            <Button AutomationProperties.Name="GitHub" Content="{x:Static loc:Strings.SettingsView_Github}" 
+                            <Button AutomationProperties.Name="{x:Static loc:Strings.SettingsView_Github_X}" Content="{x:Static loc:Strings.SettingsView_Github}" 
                                     Style="{StaticResource ModernButton}"
                                     Command="{Binding OpenGitHubCommand}"
                                     Padding="16,8" Margin="0,0,12,0"
@@ -3436,11 +3436,11 @@
                                                             <TextBlock Text="{x:Static loc:Strings.SettingsView_Fan}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" Margin="12,0,6,0"/>
                                                             <ComboBox AutomationProperties.Name="{x:Static loc:Strings.SettingsView_Fan}" SelectedValue="{Binding FanPreset, Mode=TwoWay}" Width="90" FontSize="11"
                                                                       Style="{StaticResource ModernComboBox}">
-                                                                <ComboBoxItem Content="Auto"/>
-                                                                <ComboBoxItem Content="Silent"/>
-                                                                <ComboBoxItem Content="Gaming"/>
+                                                                <ComboBoxItem Content="{x:Static loc:Strings.FanControlView_Auto}"/>
+                                                                <ComboBoxItem Content="{x:Static loc:Strings.FanControlView_Silent}"/>
+                                                                <ComboBoxItem Content="{x:Static loc:Strings.FanControlView_Gaming}"/>
                                                                 <ComboBoxItem Content="{x:Static loc:Strings.FanControlView_Extreme}"/>
-                                                                <ComboBoxItem Content="Max"/>
+                                                                <ComboBoxItem Content="{x:Static loc:Strings.FanControlView_Max}"/>
                                                             </ComboBox>
                                                             <TextBlock Text="{x:Static loc:Strings.SettingsView_Mode}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" Margin="12,0,6,0"/>
                                                             <ComboBox AutomationProperties.Name="{x:Static loc:Strings.SettingsView_Mode}" SelectedValue="{Binding PerformanceMode, Mode=TwoWay}" Width="100" FontSize="11"
@@ -3448,7 +3448,7 @@
                                                                 <ComboBoxItem Content=""/>
                                                                 <ComboBoxItem Content="{x:Static loc:Strings.AdvancedView_Balanced}"/>
                                                                 <ComboBoxItem Content="{x:Static loc:Strings.AdvancedView_Performance}"/>
-                                                                <ComboBoxItem Content="Silent"/>
+                                                                <ComboBoxItem Content="{x:Static loc:Strings.FanControlView_Silent}"/>
                                                             </ComboBox>
                                                         </StackPanel>
                                                     </StackPanel>
@@ -3571,7 +3571,7 @@
 
                                                         <StackPanel Grid.Column="2"
                                                                     Visibility="{Binding IsTemperatureTrigger, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                            <TextBlock Text="Sensor" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}" Margin="0,0,0,4"/>
+                                                            <TextBlock Text="{x:Static loc:Strings.SettingsView_Sensor}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}" Margin="0,0,0,4"/>
                                                             <ComboBox AutomationProperties.Name="{x:Static loc:Strings.SettingsView_TemperatureSensor}" ItemsSource="{Binding TemperatureSensors}" SelectedItem="{Binding TemperatureSensor, Mode=TwoWay}"
                                                                       Style="{StaticResource ModernComboBox}"/>
                                                         </StackPanel>

@@ -215,7 +215,7 @@
                         <Button Command="{Binding DeleteProfileCommand}" Margin="0,0,0,4">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="×" FontSize="14" FontWeight="Bold" Margin="0,0,6,0" Foreground="#F44336"/>
-                                <TextBlock Text="Delete"/>
+                                <TextBlock Text="{x:Static loc:Strings.GameProfileManagerView_Delete}"/>
                             </StackPanel>
                         </Button>
                         <Separator Margin="0,8"/>
@@ -420,7 +420,7 @@
                         Style="{StaticResource ModernButton}"
                         Width="140" Height="38"
                         Margin="0,0,10,0"/>
-                <Button Content="Cancel"
+                <Button Content="{x:Static loc:Strings.DiagnosticExportControl_Cancel}"
                         Command="{Binding CancelCommand}"
                         Style="{StaticResource SecondaryButton}"
                         Width="100" Height="38"/>

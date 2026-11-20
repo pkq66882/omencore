@@ -226,7 +226,7 @@
                                 <Path Data="{StaticResource IconFire}" Fill="#FF4444" Width="20" Height="20" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                             
-                            <TextBlock Grid.Row="1" Text="Max" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Row="1" Text="{x:Static loc:Strings.FanControlView_Max}" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
                             <TextBlock Grid.Row="2" Text="100%" FontSize="9" FontWeight="SemiBold" Foreground="#FF4444" HorizontalAlignment="Center" Margin="0,2,0,6"/>
                             
                             <Border Grid.Row="3" Background="#20FF4444" CornerRadius="4" Padding="6,2" HorizontalAlignment="Center"
@@ -264,7 +264,7 @@
                                 <Path Data="{StaticResource IconTune}" Fill="#26C6DA" Width="20" Height="20" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
 
-                            <TextBlock Grid.Row="1" Text="Direct" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Row="1" Text="{x:Static loc:Strings.FanControlView_Direct}" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
                             <TextBlock Grid.Row="2" Text="{Binding DirectPresetSubtitle}" FontSize="9" FontWeight="SemiBold" Foreground="#26C6DA" HorizontalAlignment="Center" Margin="0,2,0,6"/>
 
                             <Border Grid.Row="3" Background="#2026C6DA" CornerRadius="4" Padding="6,2" HorizontalAlignment="Center"
@@ -342,7 +342,7 @@
                                 <Path Data="{StaticResource IconGamepad}" Fill="#9C27B0" Width="20" Height="20" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                             
-                            <TextBlock Grid.Row="1" Text="Gaming" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Row="1" Text="{x:Static loc:Strings.FanControlView_Gaming}" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
                             <TextBlock Grid.Row="2" Text="{Binding GamingPresetSubtitle}" FontSize="9" FontWeight="SemiBold" Foreground="#9C27B0" HorizontalAlignment="Center" Margin="0,2,0,6"/>
                             
                             <Border Grid.Row="3" Background="#209C27B0" CornerRadius="4" Padding="6,2" HorizontalAlignment="Center"
@@ -381,7 +381,7 @@
                                 <Path Data="{StaticResource IconScale}" Fill="#4CAF50" Width="20" Height="20" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                             
-                            <TextBlock Grid.Row="1" Text="Auto" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Row="1" Text="{x:Static loc:Strings.FanControlView_Auto}" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
                             <TextBlock Grid.Row="2" Text="BIOS" FontSize="9" FontWeight="SemiBold" Foreground="#4CAF50" HorizontalAlignment="Center" Margin="0,2,0,6"/>
                             
                             <Border Grid.Row="3" Background="#204CAF50" CornerRadius="4" Padding="6,2" HorizontalAlignment="Center"
@@ -420,8 +420,8 @@
                                 <Path Data="{StaticResource IconVolumeMute}" Fill="#607D8B" Width="20" Height="20" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                             
-                            <TextBlock Grid.Row="1" Text="Silent" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
-                            <TextBlock Grid.Row="2" Text="Quiet" FontSize="9" FontWeight="SemiBold" Foreground="#607D8B" HorizontalAlignment="Center" Margin="0,2,0,6"/>
+                            <TextBlock Grid.Row="1" Text="{x:Static loc:Strings.FanControlView_Silent}" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Row="2" Text="{x:Static loc:Strings.AdvancedView_Quiet}" FontSize="9" FontWeight="SemiBold" Foreground="#607D8B" HorizontalAlignment="Center" Margin="0,2,0,6"/>
                             
                             <Border Grid.Row="3" Background="#20607D8B" CornerRadius="4" Padding="6,2" HorizontalAlignment="Center"
                                     Visibility="{Binding IsSilentSelected, Converter={StaticResource BoolToVisibility}}">
@@ -460,7 +460,7 @@
                                 <Path Data="{StaticResource IconTune}" Fill="#FF6B35" Width="20" Height="20" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                             
-                            <TextBlock Grid.Row="1" Text="Custom" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Row="1" Text="{x:Static loc:Strings.FanControlView_Custom}" FontSize="13" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
                             <TextBlock Grid.Row="2" Text="{Binding CustomPresetSubtitle}" FontSize="9" FontWeight="SemiBold" Foreground="#FF6B35" HorizontalAlignment="Center" Margin="0,2,0,6"/>
                             
                             <Border Grid.Row="3" Background="#20FF6B35" CornerRadius="4" Padding="6,2" HorizontalAlignment="Center"
@@ -524,7 +524,7 @@
                                 VerticalAlignment="Center"
                                 ToolTip="{x:Static loc:Strings.FanControlView_ApplyTheSelectedDirectFanLevelNow}"
                                 AutomationProperties.Name="{x:Static loc:Strings.FanControlView_ApplyDirectFanLevel}">
-                            <TextBlock Text="Apply" FontSize="11"/>
+                            <TextBlock Text="{x:Static loc:Strings.AdvancedView_Apply}" FontSize="11"/>
                         </Button>
                     </Grid>
                 </Border>
@@ -547,7 +547,7 @@
                                 AutomationProperties.Name="{x:Static loc:Strings.FanControlView_SaveCustomPreset}">
                             <StackPanel Orientation="Horizontal">
                                 <Path Data="{StaticResource IconExport}" Width="10" Height="10" Fill="{StaticResource TextPrimaryBrush}" Stretch="Uniform" Margin="0,0,4,0"/>
-                                <TextBlock Text="Save" FontSize="10"/>
+                                <TextBlock Text="{x:Static loc:Strings.FanControlView_Save}" FontSize="10"/>
                             </StackPanel>
                         </Button>
                     </WrapPanel>
@@ -574,14 +574,14 @@
                                 Height="28" Padding="6,0" Margin="8,0,0,0"
                                 ToolTip="{x:Static loc:Strings.FanControlView_ImportPresetsFromAJsonFile}"
                                 AutomationProperties.Name="{x:Static loc:Strings.FanControlView_ImportPresetsFromFile}">
-                            <TextBlock Text="Import" FontSize="10"/>
+                            <TextBlock Text="{x:Static loc:Strings.FanControlView_Import}" FontSize="10"/>
                         </Button>
                         <Button Command="{Binding ExportPresetsCommand}"
                                 Style="{StaticResource ModernButton}"
                                 Height="28" Padding="6,0" Margin="4,0,0,0"
                                 ToolTip="{x:Static loc:Strings.FanControlView_ExportPresetsToAJsonFile}"
                                 AutomationProperties.Name="{x:Static loc:Strings.FanControlView_ExportPresetsToFile}">
-                            <TextBlock Text="Export" FontSize="10"/>
+                            <TextBlock Text="{x:Static loc:Strings.FanControlView_Export}" FontSize="10"/>
                         </Button>
                     </WrapPanel>
 
@@ -621,14 +621,14 @@
                             <TextBox Text="{Binding SmoothingDurationMs, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                                      Width="50" Height="24" Style="{StaticResource ModernTextBox}" FontSize="10" Padding="4,2"
                                      AutomationProperties.Name="{x:Static loc:Strings.FanControlView_SmoothingDurationInMilliseconds}"/>
-                            <TextBlock Text="ms" Style="{StaticResource SettingsLabel}" Margin="4,0,12,0"/>
+                            <TextBlock Text="{x:Static loc:Strings.FanControlView_Ms}" Style="{StaticResource SettingsLabel}" Margin="4,0,12,0"/>
 
                             <!-- Step -->
                             <TextBlock Text="{x:Static loc:Strings.FanControlView_Step}" Style="{StaticResource SettingsLabel}" Margin="0,0,6,0"/>
                             <TextBox Text="{Binding SmoothingStepMs, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                                      Width="50" Height="24" Style="{StaticResource ModernTextBox}" FontSize="10" Padding="4,2"
                                      AutomationProperties.Name="{x:Static loc:Strings.FanControlView_SmoothingStepInMilliseconds}"/>
-                            <TextBlock Text="ms" Style="{StaticResource SettingsLabel}" Margin="4,0,12,0"/>
+                            <TextBlock Text="{x:Static loc:Strings.FanControlView_Ms}" Style="{StaticResource SettingsLabel}" Margin="4,0,12,0"/>
                             
                             <Border Width="1" Background="#333" Margin="0,0,12,0"/>
                             
@@ -706,7 +706,7 @@
                                 <TextBlock Text="{x:Static loc:Strings.FanControlView_VisualCurveEditor}" 
                                            Style="{StaticResource Label}"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                    <Button Content="+ Add"
+                                    <Button Content="{x:Static loc:Strings.FanControlView_Add}"
                                             Command="{Binding AddCurvePointCommand}"
                                             Style="{StaticResource SecondaryButton}"
                                             Width="70" Height="32"

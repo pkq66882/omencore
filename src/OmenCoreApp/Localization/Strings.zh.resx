@@ -4330,4 +4330,436 @@
   <data name="SettingsView_WhenDisabledNoOsdBackgroundProcessRunsAtAl" xml:space="preserve">
     <value>禁用后完全不运行任何 OSD 后台进程</value>
   </data>
+  <data name="FanControlViewModel_BadgeCurves" xml:space="preserve">
+    <value>曲线</value>
+  </data>
+  <data name="FanControlViewModel_BadgeProfileOnly" xml:space="preserve">
+    <value>仅档案</value>
+  </data>
+  <data name="FanControlViewModel_CalibrateRecalibrate" xml:space="preserve">
+    <value>重新校准</value>
+  </data>
+  <data name="FanControlViewModel_CalibrateStart" xml:space="preserve">
+    <value>开始校准</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapNone" xml:space="preserve">
+    <value>尚无占空比-RPM 映射数据。</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapOk" xml:space="preserve">
+    <value>来自最近一次校准运行的实测占空比-RPM 映射。</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationMapRefreshed" xml:space="preserve">
+    <value>风扇校准映射已从最新向导运行中刷新。</value>
+  </data>
+  <data name="FanControlViewModel_CalibrationWizardClosed" xml:space="preserve">
+    <value>风扇校准向导已关闭。</value>
+  </data>
+  <data name="FanControlViewModel_CustomCurveTooltipNo" xml:space="preserve">
+    <value>此机型的风扇控制器不暴露自定义曲线接口——这是硬件/固件层面的限制，与机型档案是否经过验证无关。请改用 OEM 风扇预设。</value>
+  </data>
+  <data name="FanControlViewModel_CustomCurveTooltipOk" xml:space="preserve">
+    <value>应用你在下方编辑器中定义的自定义风扇曲线。</value>
+  </data>
+  <data name="FanControlViewModel_DirectTooltipNo" xml:space="preserve">
+    <value>此机型的风扇控制器不暴露直接固定档位控制——这是硬件/固件层面的限制，与机型档案是否经过验证无关。请改用 OEM 风扇预设。</value>
+  </data>
+  <data name="FanControlViewModel_DirectTooltipOk" xml:space="preserve">
+    <value>通过手动风扇控制将风扇保持在一个请求的固定档位。</value>
+  </data>
+  <data name="FanControlViewModel_HeaderHintPresets" xml:space="preserve">
+    <value>选择预设、直接风扇档位或自定义曲线</value>
+  </data>
+  <data name="FanControlViewModel_HeaderHintProfileOnly" xml:space="preserve">
+    <value>选择一个 OEM 风扇预设</value>
+  </data>
+  <data name="FanControlViewModel_LinkBadgeIndependent" xml:space="preserve">
+    <value>独立：风扇模式不受性能档案影响</value>
+  </data>
+  <data name="FanControlViewModel_LinkBadgeLinked" xml:space="preserve">
+    <value>联动：切换性能可能改变风扇模式</value>
+  </data>
+  <data name="FanControlViewModel_LinkDescIndependent" xml:space="preserve">
+    <value>独立模式下，切换性能档案不会重写风扇策略。你选择的风扇预设/曲线将保持生效，直到你直接更改风扇控制。</value>
+  </data>
+  <data name="FanControlViewModel_LinkDescLinked" xml:space="preserve">
+    <value>联动模式下，选择性能档案也可能切换当前风扇模式。仅当你希望由档案驱动风扇行为时使用。</value>
+  </data>
+  <data name="FanControlViewModel_OemAutoFailed" xml:space="preserve">
+    <value>OEM 自动恢复未报告成功</value>
+  </data>
+  <data name="FanControlViewModel_OemAutoRestored" xml:space="preserve">
+    <value>OEM 自动已恢复</value>
+  </data>
+  <data name="FanControlViewModel_StartupHintCategoryOff" xml:space="preserve">
+    <value>设置中的“启动硬件恢复”的“风扇”类别未开启，因此重启后此预设/曲线不会自动重新应用——你需要重新选择，或在设置中重新开启该类别。</value>
+  </data>
+  <data name="FanControlViewModel_StartupHintOff" xml:space="preserve">
+    <value>设置中的“启动硬件恢复”未开启，因此重启后此预设/曲线不会自动重新应用——你需要重新选择，或开启该功能。</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleEditor" xml:space="preserve">
+    <value>编辑器</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleProfile" xml:space="preserve">
+    <value>档案</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleProfile80" xml:space="preserve">
+    <value>档案</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleUnavailable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="FanControlViewModel_SubtitleUnavailableDirect" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryCapacityUnavailable" xml:space="preserve">
+    <value>容量不可用</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_BatteryNotReported" xml:space="preserve">
+    <value>此电池未报告该项</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_StateUnavailable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="MainViewModel_CleanupDryDone" xml:space="preserve">
+    <value>演练完成</value>
+  </data>
+  <data name="MainViewModel_CleanupDryRunning" xml:space="preserve">
+    <value>正在运行清理演练…</value>
+  </data>
+  <data name="MainViewModel_CleanupErrors" xml:space="preserve">
+    <value>清理完成，但有错误</value>
+  </data>
+  <data name="MainViewModel_CleanupRemoved" xml:space="preserve">
+    <value>OMEN Gaming Hub 已移除</value>
+  </data>
+  <data name="MainViewModel_CleanupRemoving" xml:space="preserve">
+    <value>正在移除 OMEN Gaming Hub…</value>
+  </data>
+  <data name="MainViewModel_CleanupRestorePoint" xml:space="preserve">
+    <value>正在创建还原点…</value>
+  </data>
+  <data name="MainViewModel_LinkStatusDecoupled" xml:space="preserve">
+    <value>已解耦：风扇独立</value>
+  </data>
+  <data name="MainViewModel_LinkStatusLinked" xml:space="preserve">
+    <value>已联动：风扇跟随性能</value>
+  </data>
+  <data name="MainViewModel_LogsHide" xml:space="preserve">
+    <value>隐藏活动日志</value>
+  </data>
+  <data name="MainViewModel_LogsShow" xml:space="preserve">
+    <value>显示活动日志</value>
+  </data>
+  <data name="MainViewModel_MonitoringFull" xml:space="preserve">
+    <value>已启用完整监控遥测</value>
+  </data>
+  <data name="MainViewModel_MonitoringLowOverhead" xml:space="preserve">
+    <value>已启用低开销监控</value>
+  </data>
+  <data name="QuickPopup_DecoupledMode" xml:space="preserve">
+    <value>已启用解耦模式。更改性能不会影响你当前的风扇预设或曲线。</value>
+  </data>
+  <data name="QuickPopup_FanPerfLinked" xml:space="preserve">
+    <value>风扇/性能：已联动</value>
+  </data>
+  <data name="QuickPopup_LinkedMode" xml:space="preserve">
+    <value>已启用联动模式。更改性能可能同时重写风扇策略。</value>
+  </data>
+  <data name="TrayIcon_AcPower" xml:space="preserve">
+    <value>交流电源</value>
+  </data>
+  <data name="TrayIcon_Battery" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="TrayIcon_Charging" xml:space="preserve">
+    <value>充电中</value>
+  </data>
+  <data name="TrayIcon_Decoupled" xml:space="preserve">
+    <value>已解耦</value>
+  </data>
+  <data name="TrayIcon_Enabled" xml:space="preserve">
+    <value>已启用</value>
+  </data>
+  <data name="TrayIcon_KeepAboveOff" xml:space="preserve">
+    <value>让 OmenCore 保持在其他窗口之上（关）</value>
+  </data>
+  <data name="TrayIcon_KeepAboveOn" xml:space="preserve">
+    <value>让 OmenCore 保持在其他窗口之上（开）</value>
+  </data>
+  <data name="TrayIcon_Linked" xml:space="preserve">
+    <value>已联动</value>
+  </data>
+  <data name="TrayIcon_OnBattery" xml:space="preserve">
+    <value>使用电池</value>
+  </data>
+  <data name="TrayIcon_StayOnTopOff" xml:space="preserve">
+    <value>窗口置顶</value>
+  </data>
+  <data name="TrayIcon_StayOnTopOn" xml:space="preserve">
+    <value>窗口置顶（开）</value>
+  </data>
+  <data name="TuningStatus_VerifiedAcknowledged" xml:space="preserve">
+    <value>已验证：写入已确认（此路径无独立硬件回读）</value>
+  </data>
+  <data name="TuningStatus_VerifiedMismatch" xml:space="preserve">
+    <value>已验证：请求值与回读值不匹配</value>
+  </data>
+  <data name="TuningStatus_VerifiedNotControlled" xml:space="preserve">
+    <value>已验证：不受 OmenCore 控制</value>
+  </data>
+  <data name="TuningStatus_VerifiedReadback" xml:space="preserve">
+    <value>已验证：回读值与请求值一致</value>
+  </data>
+  <data name="UpdateViewModel_YouAreRunningLatest" xml:space="preserve">
+    <value>你正在运行最新版本。</value>
+  </data>
+  <data name="UpdateViewModel_YouAreRunningLatestCmp" xml:space="preserve">
+    <value>你正在运行最新版本。</value>
+  </data>
+  <data name="DiagnosticExportControl_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FanCalibrationControl_Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="FanCalibrationControl_Stop" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Watts" xml:space="preserve">
+    <value>瓦</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Normal" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Mhz" xml:space="preserve">
+    <value>MHz</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Good" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="HardwareMonitoringDashboard_Cycles" xml:space="preserve">
+    <value>次循环</value>
+  </data>
+  <data name="AboutWindow_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="AdvancedView_Quiet" xml:space="preserve">
+    <value>安静</value>
+  </data>
+  <data name="AdvancedView_Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="BloatwareManagerView_Scan" xml:space="preserve">
+    <value>扫描</value>
+  </data>
+  <data name="BloatwareManagerView_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="BloatwareManagerView_Low" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="BloatwareManagerView_Med" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="BloatwareManagerView_High" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="BloatwareManagerView_Remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="BloatwareManagerView_App" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="BloatwareManagerView_Risk_X" xml:space="preserve">
+    <value>风险</value>
+  </data>
+  <data name="BloatwareManagerView_Est" xml:space="preserve">
+    <value>预计</value>
+  </data>
+  <data name="BloatwareManagerView_Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="BloatwareManagerView_Type" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="DashboardView_Power" xml:space="preserve">
+    <value>功耗</value>
+  </data>
+  <data name="FanControlView_Max" xml:space="preserve">
+    <value>最大</value>
+  </data>
+  <data name="FanControlView_Direct" xml:space="preserve">
+    <value>直接</value>
+  </data>
+  <data name="FanControlView_Gaming" xml:space="preserve">
+    <value>游戏</value>
+  </data>
+  <data name="FanControlView_Auto" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="FanControlView_Silent" xml:space="preserve">
+    <value>静音</value>
+  </data>
+  <data name="FanControlView_Custom" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="FanControlView_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="FanControlView_Import" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="FanControlView_Export" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="FanControlView_Ms" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="FanControlView_Add" xml:space="preserve">
+    <value>+ 添加</value>
+  </data>
+  <data name="GameLibraryView_Launch" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="GameProfileManagerView_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="GeneralView_Manual" xml:space="preserve">
+    <value>手动</value>
+  </data>
+  <data name="GeneralView_Temp" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="GeneralView_Load" xml:space="preserve">
+    <value>负载</value>
+  </data>
+  <data name="GeneralView_System" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="GeneralView_Ram" xml:space="preserve">
+    <value>内存</value>
+  </data>
+  <data name="GeneralView_Used" xml:space="preserve">
+    <value>已用</value>
+  </data>
+  <data name="InputPromptWindow_Input" xml:space="preserve">
+    <value>输入</value>
+  </data>
+  <data name="InputPromptWindow_Prompt" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="LightingView_Probe" xml:space="preserve">
+    <value>探测</value>
+  </data>
+  <data name="LightingView_Mode" xml:space="preserve">
+    <value>模式</value>
+  </data>
+  <data name="LightingView_Red" xml:space="preserve">
+    <value>红色</value>
+  </data>
+  <data name="LightingView_Green" xml:space="preserve">
+    <value>绿色</value>
+  </data>
+  <data name="LightingView_Blue" xml:space="preserve">
+    <value>蓝色</value>
+  </data>
+  <data name="LightingView_Leds" xml:space="preserve">
+    <value> 个 LED</value>
+  </data>
+  <data name="LightingView_Purple" xml:space="preserve">
+    <value>紫色</value>
+  </data>
+  <data name="LightingView_Yellow" xml:space="preserve">
+    <value>黄色</value>
+  </data>
+  <data name="LightingView_White" xml:space="preserve">
+    <value>白色</value>
+  </data>
+  <data name="LightingView_Orange" xml:space="preserve">
+    <value>橙色</value>
+  </data>
+  <data name="LightingView_Off" xml:space="preserve">
+    <value>熄灭</value>
+  </data>
+  <data name="LightingView_Cyan" xml:space="preserve">
+    <value>青色</value>
+  </data>
+  <data name="LightingView_Pink" xml:space="preserve">
+    <value>粉色</value>
+  </data>
+  <data name="LightingView_Effect" xml:space="preserve">
+    <value>效果</value>
+  </data>
+  <data name="LightingView_Theme" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="LightingView_Speed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="LightingView_Colour" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="LightingView_Medium" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="MainWindow_About" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="MainWindow_GotIt" xml:space="preserve">
+    <value>知道了</value>
+  </data>
+  <data name="MemoryOptimizerView_Commit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="MemoryOptimizerView_Safe" xml:space="preserve">
+    <value>安全</value>
+  </data>
+  <data name="MemoryOptimizerView_Clean" xml:space="preserve">
+    <value>清理</value>
+  </data>
+  <data name="MemoryOptimizerView_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="MemoryOptimizerView_Toggle" xml:space="preserve">
+    <value>切换</value>
+  </data>
+  <data name="OsdOverlayWindow_Mbps" xml:space="preserve">
+    <value> Mbps</value>
+  </data>
+  <data name="QuickPopupWindow_Curve" xml:space="preserve">
+    <value>曲线</value>
+  </data>
+  <data name="QuickPopupWindow_N165hz" xml:space="preserve">
+    <value>165Hz</value>
+  </data>
+  <data name="SettingsView_Fans" xml:space="preserve">
+    <value>风扇</value>
+  </data>
+  <data name="SettingsView_Tuning" xml:space="preserve">
+    <value>调优</value>
+  </data>
+  <data name="SettingsView_Daily" xml:space="preserve">
+    <value>每天</value>
+  </data>
+  <data name="SettingsView_Weekly" xml:space="preserve">
+    <value>每周</value>
+  </data>
+  <data name="SettingsView_Driver" xml:space="preserve">
+    <value>驱动</value>
+  </data>
+  <data name="SettingsView_Layout" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="SettingsView_Github_X" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="SettingsView_Sensor" xml:space="preserve">
+    <value>传感器</value>
+  </data>
+  <data name="SystemOptimizerView_Open" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="TuningView_Keep" xml:space="preserve">
+    <value>保留</value>
+  </data>
 </root>

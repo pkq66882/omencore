@@ -218,13 +218,13 @@
                         <Button Command="{Binding ExportConfigurationCommand}" Style="{StaticResource SecondaryButton}" Height="30" Padding="10,4" Margin="0,0,8,0" ToolTip="{x:Static loc:Strings.MainWindow_ExportYourSettings}">
                             <StackPanel Orientation="Horizontal">
                                 <Path Data="{StaticResource IconExport}" Width="12" Height="12" Fill="{StaticResource TextSecondaryBrush}" Stretch="Uniform" Margin="0,0,5,0"/>
-                                <TextBlock Text="Export" FontSize="11" VerticalAlignment="Center"/>
+                                <TextBlock Text="{x:Static loc:Strings.FanControlView_Export}" FontSize="11" VerticalAlignment="Center"/>
                             </StackPanel>
                         </Button>
                         <Button Command="{Binding ImportConfigurationCommand}" Style="{StaticResource SecondaryButton}" Height="30" Padding="10,4" Margin="0,0,8,0" ToolTip="{x:Static loc:Strings.MainWindow_ImportSettingsFile}">
                             <StackPanel Orientation="Horizontal">
                                 <Path Data="{StaticResource IconImport}" Width="12" Height="12" Fill="{StaticResource TextSecondaryBrush}" Stretch="Uniform" Margin="0,0,5,0"/>
-                                <TextBlock Text="Import" FontSize="11" VerticalAlignment="Center"/>
+                                <TextBlock Text="{x:Static loc:Strings.FanControlView_Import}" FontSize="11" VerticalAlignment="Center"/>
                             </StackPanel>
                         </Button>
                         <Button Command="{Binding OpenGameProfileManagerCommand}" Style="{StaticResource SecondaryButton}" Height="30" Padding="10,4" Margin="0,0,8,0" ToolTip="{x:Static loc:Strings.MainWindow_ManagePerGameSettings}">
@@ -236,7 +236,7 @@
                         <Button Command="{Binding OpenAboutCommand}" Style="{StaticResource SecondaryButton}" Height="30" Padding="10,4" Margin="0,0,8,0" ToolTip="{x:Static loc:Strings.AboutWindow_AboutOmencore}">
                             <StackPanel Orientation="Horizontal">
                                 <Path Data="{StaticResource IconAbout}" Width="12" Height="12" Fill="{StaticResource AccentBlueBrush}" Stretch="Uniform" Margin="0,0,5,0"/>
-                                <TextBlock Text="About" FontSize="11" VerticalAlignment="Center"/>
+                                <TextBlock Text="{x:Static loc:Strings.MainWindow_About}" FontSize="11" VerticalAlignment="Center"/>
                             </StackPanel>
                         </Button>
                         <Button Command="{Binding Update.CheckForUpdatesCommand}" Height="30" Padding="10,4" ToolTip="{x:Static loc:Strings.MainWindow_ManuallyCheckForANewVersion}">
@@ -754,7 +754,7 @@
                                 AutomationProperties.Name="{x:Static loc:Strings.MainWindow_StandardProfileNotice}"
                                 Visibility="{Binding ShowUnverifiedModelBanner, Converter={StaticResource BoolToVisibility}}">
                             <DockPanel>
-                                <Button DockPanel.Dock="Right" Content="Got it" VerticalAlignment="Center" Margin="12,0,0,0"
+                                <Button DockPanel.Dock="Right" Content="{x:Static loc:Strings.MainWindow_GotIt}" VerticalAlignment="Center" Margin="12,0,0,0"
                                         Padding="12,4"
                                         Command="{Binding DismissStandardProfileNoticeCommand}"
                                         AutomationProperties.Name="{x:Static loc:Strings.MainWindow_DismissTheStandardProfileNotice}"
