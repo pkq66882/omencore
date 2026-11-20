@@ -5248,4 +5248,13 @@
   <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
     <value>• Перед применением пресетов создаётся точка восстановления системы • Некоторые изменения могут потребовать перезагрузку • Оптимизации со средним/высоким риском могут повлиять на стабильность системы • Используйте «Откатить всё», чтобы в любой момент вернуть исходные настройки</value>
   </data>
+  <data name="DashboardViewModel_CpuAuthorityLhm" xml:space="preserve">
+    <value> | Авторитетный источник CPU: LibreHardwareMonitor</value>
+  </data>
+  <data name="DashboardViewModel_CpuAuthorityWmi" xml:space="preserve">
+    <value> | Авторитетный источник CPU: WMI BIOS</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifyingState" xml:space="preserve">
+    <value>Проверка состояния оптимизации…</value>
+  </data>
 </root>

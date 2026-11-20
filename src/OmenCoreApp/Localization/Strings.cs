@@ -2069,5 +2069,32 @@ namespace OmenCore.Localization
     public static string MemoryOptimizerView_NativeApiNote => Get(nameof(MemoryOptimizerView_NativeApiNote));
     public static string SystemOptimizerView_ImportantNotesBody => Get(nameof(SystemOptimizerView_ImportantNotesBody));
 
+    // Auto-extracted literals from 
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from
+    public static string DashboardViewModel_CpuAuthorityLhm => Get(nameof(DashboardViewModel_CpuAuthorityLhm));
+    public static string DashboardViewModel_CpuAuthorityWmi => Get(nameof(DashboardViewModel_CpuAuthorityWmi));
+    public static string SystemOptimizerViewModel_VerifyingState => Get(nameof(SystemOptimizerViewModel_VerifyingState));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
     }
 }

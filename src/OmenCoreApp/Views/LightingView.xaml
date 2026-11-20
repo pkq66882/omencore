@@ -405,7 +405,7 @@
                                  palette. AccentBrush is already what "active/selected" means everywhere
                                  else here (the nav rail's selection bar, the Quick Profiles ACTIVE pill). -->
                             <Border Background="#1AFF005C" CornerRadius="8" Padding="8,3" Margin="12,0,0,0" VerticalAlignment="Center">
-                                <TextBlock Text="{Binding CurrentSceneName, StringFormat='Active: {0}'}" FontSize="10" Foreground="{StaticResource AccentBrush}"/>
+                                <TextBlock Text="{Binding CurrentSceneStatusDisplay}" FontSize="10" Foreground="{StaticResource AccentBrush}"/>
                             </Border>
                             <ToggleButton IsChecked="{Binding SceneQuickSelectCardEnabled, Mode=TwoWay}"
                                           Style="{StaticResource ToggleButtonStyle}"

@@ -58,7 +58,8 @@ namespace OmenCore.ViewModels
             // can be safely set from background threads (avoids cross-thread binding errors).
             _optimizerService.StatusChanged += status => 
             {
-                DispatcherHelper.RunOnUiThread(() => HandleServiceStatus(status));
+                DispatcherHelper.RunOnUiThread(() => HandleServiceStatus(
+                    status == "Verifying optimization state..." ? Strings.SystemOptimizerViewModel_VerifyingState : status));
             };
             
             // Initialize collections

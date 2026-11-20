@@ -5248,4 +5248,13 @@
   <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
     <value>• 应用预设前会创建系统还原点 • 部分更改可能需要重启才能生效 • 中/高风险优化可能影响系统稳定性或功能 • 随时可以使用“全部还原”恢复原始设置</value>
   </data>
+  <data name="DashboardViewModel_CpuAuthorityLhm" xml:space="preserve">
+    <value> | CPU 权威来源：LibreHardwareMonitor</value>
+  </data>
+  <data name="DashboardViewModel_CpuAuthorityWmi" xml:space="preserve">
+    <value> | CPU 权威来源：WMI BIOS</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifyingState" xml:space="preserve">
+    <value>正在验证优化状态…</value>
+  </data>
 </root>

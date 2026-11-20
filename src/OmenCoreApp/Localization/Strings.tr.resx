@@ -5248,4 +5248,13 @@
   <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
     <value>• Ön ayarlar uygulanmadan önce bir sistem geri yükleme noktası oluşturulur • Bazı değişiklikler etkili olması için yeniden başlatma gerektirebilir • Orta/Yüksek riskli optimizasyonlar sistem kararlılığını veya özellikleri etkileyebilir • Orijinal ayarlara dönmek için her an "Tümünü Geri Al"ı kullanın</value>
   </data>
+  <data name="DashboardViewModel_CpuAuthorityLhm" xml:space="preserve">
+    <value> | CPU yetkili kaynağı: LibreHardwareMonitor</value>
+  </data>
+  <data name="DashboardViewModel_CpuAuthorityWmi" xml:space="preserve">
+    <value> | CPU yetkili kaynağı: WMI BIOS</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifyingState" xml:space="preserve">
+    <value>Optimizasyon durumu doğrulanıyor…</value>
+  </data>
 </root>
