@@ -1217,14 +1217,14 @@ namespace OmenCore.ViewModels
         private TuningConflictReport? _lastTuningConflictReport;
         private bool _startupRecoveryNoticeVisible;
         private string _startupRecoveryNoticeText = string.Empty;
-        private string _tuningRollbackStatusText = "Safe rollback has not been run this session.";
+        private string _tuningRollbackStatusText = Strings.SystemControlViewModel_RollbackNotRun;
 
         public string TuningConflictBannerText => _lastTuningConflictReport?.BannerText ?? string.Empty;
         public bool TuningConflictBannerVisible => _lastTuningConflictReport?.HasConflicts == true;
         public bool TuningConflictHighRisk => _lastTuningConflictReport?.HasHighRiskConflict == true;
 
         public string TuningDiagnosticsCompactSummary =>
-            $"CPU undervolt: {UndervoltStateLabel}  ·  GPU overclock: {GpuOcStateLabel}  ·  Conflicts: {(TuningConflictBannerVisible ? "detected" : "none")}";
+            string.Format(Strings.SystemControlViewModel_TuningStatusLine, UndervoltStateLabel, GpuOcStateLabel, TuningConflictBannerVisible ? Strings.SystemControlViewModel_ConflictDetected : Strings.SystemControlViewModel_ConflictNone);
 
         public string TuningDiagnosticsCompactDetail
         {

@@ -109,7 +109,7 @@ namespace OmenCore.ViewModels
             new(new ObservableCollection<CorsairDevice>());
         private static readonly ReadOnlyObservableCollection<LogitechDevice> _emptyLogitechDevices = 
             new(new ObservableCollection<LogitechDevice>());
-        private const string RgbObservationNotRecorded = "Not recorded";
+        private static string RgbObservationNotRecorded => Strings.LightingViewModel_NotRecorded;
         private const string RgbObservationProbeColorHex = "#00FF66";
         private string _selectedObservedRgbSurface = RgbObservationNotRecorded;
         private string _rgbSurfaceObservationStatusText = Strings.LightingViewModel_NoSurfaceObservation;
@@ -279,7 +279,7 @@ namespace OmenCore.ViewModels
 
         public string AudioReactiveLevelText => _audioReactiveRgbService == null
             ? "Audio capture unavailable"
-            : $"Level: {Math.Round(_audioReactiveRgbService.CurrentLevel * 100)}%";
+            : string.Format(Strings.LightingViewModel_Level, Math.Round(_audioReactiveRgbService.CurrentLevel * 100));
         
         /// <summary>
         /// Whether scene service is available.
@@ -415,13 +415,37 @@ namespace OmenCore.ViewModels
             };
 
         public System.Windows.Media.SolidColorBrush CorsairStatusBrush => StatusToBrush(GetProviderStatus("corsair"));
-        public string CorsairStatusDetail => _rgbManager?.GetProvider("corsair")?.StatusDetail ?? "Corsair iCUE not configured";
+        public string CorsairStatusDetail
+        {
+            get
+            {
+                var d = _rgbManager?.GetProvider("corsair")?.StatusDetail ?? Strings.LightingViewModel_IcueNotConfigured;
+                if (d == "iCUE not detected") return Strings.LightingViewModel_IcueNotDetected;
+                return d;
+            }
+        }
 
         public System.Windows.Media.SolidColorBrush LogitechStatusBrush => StatusToBrush(GetProviderStatus("logitech"));
-        public string LogitechStatusDetail => _rgbManager?.GetProvider("logitech")?.StatusDetail ?? "Logitech G HUB not configured";
+        public string LogitechStatusDetail
+        {
+            get
+            {
+                var d = _rgbManager?.GetProvider("logitech")?.StatusDetail ?? Strings.LightingViewModel_LogitechNotConfigured;
+                if (d == "Logitech G HUB not detected") return Strings.LightingViewModel_LogitechNotDetected;
+                return d;
+            }
+        }
 
         public System.Windows.Media.SolidColorBrush RazerStatusBrush => StatusToBrush(GetProviderStatus("razer"));
-        public string RazerStatusDetail => _rgbManager?.GetProvider("razer")?.StatusDetail ?? "Razer Synapse not configured";
+        public string RazerStatusDetail
+        {
+            get
+            {
+                var d = _rgbManager?.GetProvider("razer")?.StatusDetail ?? Strings.LightingViewModel_RazerNotConfigured;
+                if (d == "Razer Synapse not detected") return Strings.LightingViewModel_RazerNotDetected;
+                return d;
+            }
+        }
 
         /// <summary>
         /// Human-readable summary of which RGB backends are currently in control.
@@ -605,6 +629,8 @@ namespace OmenCore.ViewModels
         public ObservableCollection<RazerDevice> RazerDevices => _razerDevices;
         public bool HasRazerDevices => _razerDevices.Count > 0;
         public bool IsRazerAvailable => _razerService?.IsAvailable ?? false;
+        public string CurrentSceneStatusDisplay => string.Format(Strings.LightingViewModel_ActiveScene, CurrentSceneName);
+
         public string RazerDeviceStatusText => IsRazerAvailable 
             ? $"{_razerDevices.Count} device(s) detected" 
             : Strings.LightingViewModel_RazerNotDetected;

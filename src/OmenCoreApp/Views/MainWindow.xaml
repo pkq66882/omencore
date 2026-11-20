@@ -337,7 +337,7 @@
                                             <Path Data="{StaticResource IconFan}" Width="12" Height="12" Fill="{StaticResource AccentBlueBrush}" Stretch="Uniform" VerticalAlignment="Center" Margin="0,0,6,0"/>
                                             <TextBlock Text="{x:Static loc:Strings.DashboardView_FanMode}" FontSize="9" FontWeight="Bold" Foreground="{StaticResource TextMutedBrush}" VerticalAlignment="Center"/>
                                         </StackPanel>
-                                        <TextBlock Text="{Binding Dashboard.CurrentFanMode, FallbackValue=--}" 
+                                        <TextBlock Text="{Binding Dashboard.CurrentFanModeDisplay, FallbackValue=--}"
                                                    FontSize="13" FontWeight="SemiBold" 
                                                    Foreground="{StaticResource TextPrimaryBrush}"
                                                    TextTrimming="CharacterEllipsis"/>
@@ -448,11 +448,11 @@
                                                             <Style.Triggers>
                                                                 <DataTrigger Binding="{Binding EcBackend}" Value="None">
                                                                     <Setter Property="Foreground" Value="{StaticResource ErrorBrush}"/>
-                                                                    <Setter Property="Text" Value="No EC"/>
+                                                                    <Setter Property="Text" Value="{x:Static loc:Strings.Setter_NoEc}"/>
                                                                 </DataTrigger>
                                                                 <DataTrigger Binding="{Binding EcBackend}" Value="Error">
                                                                     <Setter Property="Foreground" Value="{StaticResource ErrorBrush}"/>
-                                                                    <Setter Property="Text" Value="EC Err"/>
+                                                                    <Setter Property="Text" Value="{x:Static loc:Strings.Setter_EcErr}"/>
                                                                 </DataTrigger>
                                                             </Style.Triggers>
                                                         </Style>

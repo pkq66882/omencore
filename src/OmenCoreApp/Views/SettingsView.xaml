@@ -135,10 +135,10 @@
                                 <TextBlock FontSize="12" Foreground="{StaticResource TextSecondaryBrush}">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
-                                            <Setter Property="Text" Value="Secure Boot is disabled — legacy unsigned drivers available"/>
+                                            <Setter Property="Text" Value="{x:Static loc:Strings.Setter_SecureBootIsDisabledLegacyUnsignedDriversA}"/>
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding SecureBootEnabled}" Value="True">
-                                                    <Setter Property="Text" Value="Secure Boot enabled — unsigned drivers blocked. PawnIO or WMI BIOS provides compatible access."/>
+                                                    <Setter Property="Text" Value="{x:Static loc:Strings.Setter_SecureBootEnabledUnsignedDriversBlockedPaw}"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
@@ -159,11 +159,11 @@
                                 <TextBlock FontSize="13" FontWeight="SemiBold">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
-                                            <Setter Property="Text" Value="Disabled"/>
+                                            <Setter Property="Text" Value="{x:Static loc:Strings.Setter_Disabled}"/>
                                             <Setter Property="Foreground" Value="{StaticResource SuccessBrush}"/>
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding SecureBootEnabled}" Value="True">
-                                                    <Setter Property="Text" Value="🔒 Enabled"/>
+                                                    <Setter Property="Text" Value="{x:Static loc:Strings.Setter_Enabled}"/>
                                                     <Setter Property="Foreground" Value="{StaticResource WarningBrush}"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
@@ -199,11 +199,11 @@
                                 <TextBlock FontSize="13" FontWeight="SemiBold">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
-                                            <Setter Property="Text" Value="Not Installed"/>
+                                            <Setter Property="Text" Value="{x:Static loc:Strings.Setter_NotInstalled}"/>
                                             <Setter Property="Foreground" Value="{StaticResource ErrorBrush}"/>
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding PawnIOAvailable}" Value="True">
-                                                    <Setter Property="Text" Value="✓ Installed"/>
+                                                    <Setter Property="Text" Value="{x:Static loc:Strings.Setter_Installed_2}"/>
                                                     <Setter Property="Foreground" Value="{StaticResource SuccessBrush}"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
@@ -247,11 +247,11 @@
                                 <TextBlock FontSize="13" FontWeight="SemiBold">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
-                                            <Setter Property="Text" Value="Not Detected"/>
+                                            <Setter Property="Text" Value="{x:Static loc:Strings.Setter_NotDetected}"/>
                                             <Setter Property="Foreground" Value="#808080"/>
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding OghInstalled}" Value="True">
-                                                    <Setter Property="Text" Value="⚠ Running"/>
+                                                    <Setter Property="Text" Value="{x:Static loc:Strings.Setter_Running}"/>
                                                     <Setter Property="Foreground" Value="#FF9800"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
@@ -541,7 +541,7 @@
                                                 <Setter Property="Text" Value=""/>
                                                 <Style.Triggers>
                                                     <DataTrigger Binding="{Binding BiosReliabilityStats.IsUsingLegacyWmi}" Value="True">
-                                                        <Setter Property="Text" Value="Using Legacy WMI (BIOS F.15+ fallback)"/>
+                                                        <Setter Property="Text" Value="{x:Static loc:Strings.Setter_UsingLegacyWmiBiosF15Fallback}"/>
                                                     </DataTrigger>
                                                 </Style.Triggers>
                                             </Style>

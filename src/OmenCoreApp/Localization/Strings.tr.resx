@@ -4957,4 +4957,103 @@
   <data name="SystemControlViewModel_UndervoltingTitle" xml:space="preserve">
     <value>CPU Undervolt</value>
   </data>
+  <data name="Setter_Skipped" xml:space="preserve">
+    <value>ATLANDI</value>
+  </data>
+  <data name="Setter_Failed" xml:space="preserve">
+    <value>BAŞARISIZ</value>
+  </data>
+  <data name="Setter_Enabled" xml:space="preserve">
+    <value>🔒 Etkin</value>
+  </data>
+  <data name="Setter_Installed_2" xml:space="preserve">
+    <value>✓ Yüklü</value>
+  </data>
+  <data name="Setter_Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Setter_NotDetected" xml:space="preserve">
+    <value>Algılanmadı</value>
+  </data>
+  <data name="Setter_NoProfile" xml:space="preserve">
+    <value>Profil yok</value>
+  </data>
+  <data name="Setter_Running" xml:space="preserve">
+    <value>⚠ Çalışıyor</value>
+  </data>
+  <data name="Setter_SecureBootIsDisabledLegacyUnsignedDriversA" xml:space="preserve">
+    <value>Secure Boot devre dışı — eski imzasız sürücüler kullanılabilir</value>
+  </data>
+  <data name="Setter_UsingLegacyWmiBiosF15Fallback" xml:space="preserve">
+    <value>Eski WMI kullanılıyor (BIOS F.15+ geri dönüşü)</value>
+  </data>
+  <data name="Setter_Removed" xml:space="preserve">
+    <value>KALDIRILDI</value>
+  </data>
+  <data name="Setter_SecureBootEnabledUnsignedDriversBlockedPaw" xml:space="preserve">
+    <value>Secure Boot etkin — imzasız sürücüler engellendi. PawnIO veya WMI BIOS uyumlu erişim sağlar.</value>
+  </data>
+  <data name="Setter_Installed" xml:space="preserve">
+    <value>YÜKLÜ</value>
+  </data>
+  <data name="Setter_Disabled" xml:space="preserve">
+    <value>Devre dışı</value>
+  </data>
+  <data name="Setter_NoEc" xml:space="preserve">
+    <value>EC yok</value>
+  </data>
+  <data name="Setter_NotInstalled" xml:space="preserve">
+    <value>Yüklü değil</value>
+  </data>
+  <data name="Setter_EcErr" xml:space="preserve">
+    <value>EC hatası</value>
+  </data>
+  <data name="LightingViewModel_ActiveScene" xml:space="preserve">
+    <value>Etkin: {0}</value>
+  </data>
+  <data name="LightingViewModel_IcueNotDetected" xml:space="preserve">
+    <value>iCUE algılanmadı</value>
+  </data>
+  <data name="LightingViewModel_Level" xml:space="preserve">
+    <value>Seviye: {0}%</value>
+  </data>
+  <data name="LightingViewModel_LogitechNotDetected" xml:space="preserve">
+    <value>Logitech G HUB algılanmadı</value>
+  </data>
+  <data name="LightingViewModel_NotRecorded" xml:space="preserve">
+    <value>Kaydedilmedi</value>
+  </data>
+  <data name="LightingViewModel_RazerNotConfigured" xml:space="preserve">
+    <value>Razer Synapse yapılandırılmadı</value>
+  </data>
+  <data name="SystemControlViewModel_RollbackNotRun" xml:space="preserve">
+    <value>Bu oturumda güvenli geri alma çalıştırılmadı.</value>
+  </data>
+  <data name="SystemControlViewModel_TuningDiagLine" xml:space="preserve">
+    <value>{0}  ·  {1}</value>
+  </data>
+  <data name="SystemControlViewModel_TuningStatusLine" xml:space="preserve">
+    <value>CPU undervolt: {0}  ·  GPU overclock: {1}  ·  Çakışmalar: {2}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_CancelRequested" xml:space="preserve">
+    <value>İptal istendi</value>
+  </data>
+  <data name="BloatwareManagerViewModel_CreatingRestorePoint" xml:space="preserve">
+    <value>Kaldırma öncesi geri yükleme noktası oluşturuluyor…</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreSkipped" xml:space="preserve">
+    <value>Geri yükleme noktası oluşturma kullanıcı tarafından atlandı</value>
+  </data>
+  <data name="LightingViewModel_IcueNotConfigured" xml:space="preserve">
+    <value>Corsair iCUE yapılandırılmadı</value>
+  </data>
+  <data name="LightingViewModel_LogitechNotConfigured" xml:space="preserve">
+    <value>Logitech G HUB yapılandırılmadı</value>
+  </data>
+  <data name="SystemControlViewModel_ConflictDetected" xml:space="preserve">
+    <value>algılandı</value>
+  </data>
+  <data name="SystemControlViewModel_ConflictNone" xml:space="preserve">
+    <value>yok</value>
+  </data>
 </root>

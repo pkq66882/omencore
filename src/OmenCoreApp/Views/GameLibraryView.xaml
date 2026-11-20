@@ -317,11 +317,11 @@
                                                     <TextBlock.Style>
                                                         <Style TargetType="TextBlock">
                                                             <Setter Property="Foreground" Value="#666"/>
-                                                            <Setter Property="Text" Value="No Profile"/>
+                                                            <Setter Property="Text" Value="{x:Static loc:Strings.Setter_NoProfile}"/>
                                                             <Style.Triggers>
                                                                 <DataTrigger Binding="{Binding HasProfile}" Value="True">
                                                                     <Setter Property="Foreground" Value="#7ddf7d"/>
-                                                                    <Setter Property="Text" Value="Profile"/>
+                                                                    <Setter Property="Text" Value="{x:Static loc:Strings.Setter_Profile}"/>
                                                                 </DataTrigger>
                                                             </Style.Triggers>
                                                         </Style>

@@ -271,8 +271,16 @@ namespace OmenCore.ViewModels
                 Categories.Add(cat);
             }
 
-            // Subscribe to service events
-            _service.StatusChanged += status => DispatcherHelper.RunOnUiThread(() => StatusMessage = status);
+            // Subscribe to service events (Core-side status strings are mapped to the catalogs)
+            _service.StatusChanged += status => DispatcherHelper.RunOnUiThread(() =>
+            {
+                var localized = status switch
+                {
+                    "Scanning for bloatware..." => Strings.BloatwareManagerViewModel_Scanning,
+                    _ => status
+                };
+                StatusMessage = localized;
+            });
             _service.AppRemoved += app => DispatcherHelper.RunOnUiThread(UpdateCounts);
             _service.AppRestored += app => DispatcherHelper.RunOnUiThread(UpdateCounts);
 
@@ -603,11 +611,11 @@ namespace OmenCore.ViewModels
 
             if (createRestorePoint != MessageBoxResult.Yes)
             {
-                SetStatusAction("Restore point creation skipped by user");
+                SetStatusAction(Strings.BloatwareManagerViewModel_RestoreSkipped);
                 return true;
             }
 
-            SetStatusAction("Creating pre-removal restore point");
+            SetStatusAction(Strings.BloatwareManagerViewModel_CreatingRestorePoint);
             var restorePointResult = await _service.EnsurePreRemovalRestorePointAsync(selectedCount);
             if (restorePointResult.Success)
             {
@@ -929,7 +937,7 @@ namespace OmenCore.ViewModels
             }
 
             _bulkOperationCancellation?.Cancel();
-            SetStatusAction("Cancel requested");
+            SetStatusAction(Strings.BloatwareManagerViewModel_CancelRequested);
         }
 
         private void RaiseCommandStates()

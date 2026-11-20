@@ -4961,4 +4961,103 @@
   <data name="TuningStatus_VerifiedWarning" xml:space="preserve">
     <value>Verified: warning ({0})</value>
   </data>
+  <data name="Setter_Skipped" xml:space="preserve">
+    <value>SKIPPED</value>
+  </data>
+  <data name="Setter_Failed" xml:space="preserve">
+    <value>FAILED</value>
+  </data>
+  <data name="Setter_Enabled" xml:space="preserve">
+    <value>🔒 Enabled</value>
+  </data>
+  <data name="Setter_Installed_2" xml:space="preserve">
+    <value>✓ Installed</value>
+  </data>
+  <data name="Setter_Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Setter_NotDetected" xml:space="preserve">
+    <value>Not Detected</value>
+  </data>
+  <data name="Setter_NoProfile" xml:space="preserve">
+    <value>No Profile</value>
+  </data>
+  <data name="Setter_Running" xml:space="preserve">
+    <value>⚠ Running</value>
+  </data>
+  <data name="Setter_SecureBootIsDisabledLegacyUnsignedDriversA" xml:space="preserve">
+    <value>Secure Boot is disabled — legacy unsigned drivers available</value>
+  </data>
+  <data name="Setter_UsingLegacyWmiBiosF15Fallback" xml:space="preserve">
+    <value>Using Legacy WMI (BIOS F.15+ fallback)</value>
+  </data>
+  <data name="Setter_Removed" xml:space="preserve">
+    <value>REMOVED</value>
+  </data>
+  <data name="Setter_SecureBootEnabledUnsignedDriversBlockedPaw" xml:space="preserve">
+    <value>Secure Boot enabled — unsigned drivers blocked. PawnIO or WMI BIOS provides compatible access.</value>
+  </data>
+  <data name="Setter_Installed" xml:space="preserve">
+    <value>INSTALLED</value>
+  </data>
+  <data name="Setter_Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="Setter_NoEc" xml:space="preserve">
+    <value>No EC</value>
+  </data>
+  <data name="Setter_NotInstalled" xml:space="preserve">
+    <value>Not Installed</value>
+  </data>
+  <data name="Setter_EcErr" xml:space="preserve">
+    <value>EC Err</value>
+  </data>
+  <data name="LightingViewModel_ActiveScene" xml:space="preserve">
+    <value>Active: {0}</value>
+  </data>
+  <data name="LightingViewModel_IcueNotDetected" xml:space="preserve">
+    <value>iCUE not detected</value>
+  </data>
+  <data name="LightingViewModel_Level" xml:space="preserve">
+    <value>Level: {0}%</value>
+  </data>
+  <data name="LightingViewModel_LogitechNotDetected" xml:space="preserve">
+    <value>Logitech G HUB not detected</value>
+  </data>
+  <data name="LightingViewModel_NotRecorded" xml:space="preserve">
+    <value>Not recorded</value>
+  </data>
+  <data name="LightingViewModel_RazerNotConfigured" xml:space="preserve">
+    <value>Razer Synapse not configured</value>
+  </data>
+  <data name="SystemControlViewModel_RollbackNotRun" xml:space="preserve">
+    <value>Safe rollback has not been run this session.</value>
+  </data>
+  <data name="SystemControlViewModel_TuningDiagLine" xml:space="preserve">
+    <value>{0}  ·  {1}</value>
+  </data>
+  <data name="SystemControlViewModel_TuningStatusLine" xml:space="preserve">
+    <value>CPU undervolt: {0}  ·  GPU overclock: {1}  ·  Conflicts: {2}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_CancelRequested" xml:space="preserve">
+    <value>Cancel requested</value>
+  </data>
+  <data name="BloatwareManagerViewModel_CreatingRestorePoint" xml:space="preserve">
+    <value>Creating pre-removal restore point</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreSkipped" xml:space="preserve">
+    <value>Restore point creation skipped by user</value>
+  </data>
+  <data name="LightingViewModel_IcueNotConfigured" xml:space="preserve">
+    <value>Corsair iCUE not configured</value>
+  </data>
+  <data name="LightingViewModel_LogitechNotConfigured" xml:space="preserve">
+    <value>Logitech G HUB not configured</value>
+  </data>
+  <data name="SystemControlViewModel_ConflictDetected" xml:space="preserve">
+    <value>detected</value>
+  </data>
+  <data name="SystemControlViewModel_ConflictNone" xml:space="preserve">
+    <value>none</value>
+  </data>
 </root>

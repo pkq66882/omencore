@@ -1890,5 +1890,64 @@ namespace OmenCore.Localization
 
     // Auto-extracted literals from TuningView.xaml
 
+    // Auto-extracted literals from DataTrigger setters
+    public static string Setter_Skipped => Get(nameof(Setter_Skipped));
+    public static string Setter_Failed => Get(nameof(Setter_Failed));
+    public static string Setter_Enabled => Get(nameof(Setter_Enabled));
+    public static string Setter_Installed_2 => Get(nameof(Setter_Installed_2));
+    public static string Setter_Profile => Get(nameof(Setter_Profile));
+    public static string Setter_NotDetected => Get(nameof(Setter_NotDetected));
+    public static string Setter_NoProfile => Get(nameof(Setter_NoProfile));
+    public static string Setter_Running => Get(nameof(Setter_Running));
+    public static string Setter_SecureBootIsDisabledLegacyUnsignedDriversA => Get(nameof(Setter_SecureBootIsDisabledLegacyUnsignedDriversA));
+    public static string Setter_UsingLegacyWmiBiosF15Fallback => Get(nameof(Setter_UsingLegacyWmiBiosF15Fallback));
+    public static string Setter_Removed => Get(nameof(Setter_Removed));
+    public static string Setter_SecureBootEnabledUnsignedDriversBlockedPaw => Get(nameof(Setter_SecureBootEnabledUnsignedDriversBlockedPaw));
+    public static string Setter_Installed => Get(nameof(Setter_Installed));
+    public static string Setter_Disabled => Get(nameof(Setter_Disabled));
+    public static string Setter_NoEc => Get(nameof(Setter_NoEc));
+    public static string Setter_NotInstalled => Get(nameof(Setter_NotInstalled));
+    public static string Setter_EcErr => Get(nameof(Setter_EcErr));
+
+    // Auto-extracted literals from 
+    public static string LightingViewModel_ActiveScene => Get(nameof(LightingViewModel_ActiveScene));
+    public static string LightingViewModel_IcueNotDetected => Get(nameof(LightingViewModel_IcueNotDetected));
+    public static string LightingViewModel_Level => Get(nameof(LightingViewModel_Level));
+    public static string LightingViewModel_LogitechNotDetected => Get(nameof(LightingViewModel_LogitechNotDetected));
+    public static string LightingViewModel_NotRecorded => Get(nameof(LightingViewModel_NotRecorded));
+    public static string LightingViewModel_RazerNotConfigured => Get(nameof(LightingViewModel_RazerNotConfigured));
+    public static string SystemControlViewModel_RollbackNotRun => Get(nameof(SystemControlViewModel_RollbackNotRun));
+    public static string SystemControlViewModel_TuningDiagLine => Get(nameof(SystemControlViewModel_TuningDiagLine));
+    public static string SystemControlViewModel_TuningStatusLine => Get(nameof(SystemControlViewModel_TuningStatusLine));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+    public static string BloatwareManagerViewModel_CancelRequested => Get(nameof(BloatwareManagerViewModel_CancelRequested));
+    public static string BloatwareManagerViewModel_CreatingRestorePoint => Get(nameof(BloatwareManagerViewModel_CreatingRestorePoint));
+    public static string BloatwareManagerViewModel_RestoreSkipped => Get(nameof(BloatwareManagerViewModel_RestoreSkipped));
+    public static string LightingViewModel_IcueNotConfigured => Get(nameof(LightingViewModel_IcueNotConfigured));
+    public static string LightingViewModel_LogitechNotConfigured => Get(nameof(LightingViewModel_LogitechNotConfigured));
+    public static string SystemControlViewModel_ConflictDetected => Get(nameof(SystemControlViewModel_ConflictDetected));
+    public static string SystemControlViewModel_ConflictNone => Get(nameof(SystemControlViewModel_ConflictNone));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
     }
 }

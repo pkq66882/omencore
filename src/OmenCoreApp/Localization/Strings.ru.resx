@@ -4957,4 +4957,103 @@
   <data name="SystemControlViewModel_UndervoltingTitle" xml:space="preserve">
     <value>Недовольт CPU</value>
   </data>
+  <data name="Setter_Skipped" xml:space="preserve">
+    <value>ПРОПУЩЕНО</value>
+  </data>
+  <data name="Setter_Failed" xml:space="preserve">
+    <value>СБОЙ</value>
+  </data>
+  <data name="Setter_Enabled" xml:space="preserve">
+    <value>🔒 Включено</value>
+  </data>
+  <data name="Setter_Installed_2" xml:space="preserve">
+    <value>✓ Установлено</value>
+  </data>
+  <data name="Setter_Profile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="Setter_NotDetected" xml:space="preserve">
+    <value>Не обнаружено</value>
+  </data>
+  <data name="Setter_NoProfile" xml:space="preserve">
+    <value>Нет профиля</value>
+  </data>
+  <data name="Setter_Running" xml:space="preserve">
+    <value>⚠ Работает</value>
+  </data>
+  <data name="Setter_SecureBootIsDisabledLegacyUnsignedDriversA" xml:space="preserve">
+    <value>Secure Boot отключён — доступны устаревшие неподписанные драйверы</value>
+  </data>
+  <data name="Setter_UsingLegacyWmiBiosF15Fallback" xml:space="preserve">
+    <value>Используется устаревший WMI (откат BIOS F.15+)</value>
+  </data>
+  <data name="Setter_Removed" xml:space="preserve">
+    <value>УДАЛЕНО</value>
+  </data>
+  <data name="Setter_SecureBootEnabledUnsignedDriversBlockedPaw" xml:space="preserve">
+    <value>Secure Boot включён — неподписанные драйверы блокируются. PawnIO или WMI BIOS дают совместимый доступ.</value>
+  </data>
+  <data name="Setter_Installed" xml:space="preserve">
+    <value>УСТАНОВЛЕНО</value>
+  </data>
+  <data name="Setter_Disabled" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="Setter_NoEc" xml:space="preserve">
+    <value>Нет EC</value>
+  </data>
+  <data name="Setter_NotInstalled" xml:space="preserve">
+    <value>Не установлено</value>
+  </data>
+  <data name="Setter_EcErr" xml:space="preserve">
+    <value>Ошибка EC</value>
+  </data>
+  <data name="LightingViewModel_ActiveScene" xml:space="preserve">
+    <value>Активна: {0}</value>
+  </data>
+  <data name="LightingViewModel_IcueNotDetected" xml:space="preserve">
+    <value>iCUE не обнаружен</value>
+  </data>
+  <data name="LightingViewModel_Level" xml:space="preserve">
+    <value>Уровень: {0}%</value>
+  </data>
+  <data name="LightingViewModel_LogitechNotDetected" xml:space="preserve">
+    <value>Logitech G HUB не обнаружен</value>
+  </data>
+  <data name="LightingViewModel_NotRecorded" xml:space="preserve">
+    <value>Не записано</value>
+  </data>
+  <data name="LightingViewModel_RazerNotConfigured" xml:space="preserve">
+    <value>Razer Synapse не настроен</value>
+  </data>
+  <data name="SystemControlViewModel_RollbackNotRun" xml:space="preserve">
+    <value>Безопасный откат в этом сеансе не выполнялся.</value>
+  </data>
+  <data name="SystemControlViewModel_TuningDiagLine" xml:space="preserve">
+    <value>{0}  ·  {1}</value>
+  </data>
+  <data name="SystemControlViewModel_TuningStatusLine" xml:space="preserve">
+    <value>Недовольт CPU: {0}  ·  Разгон GPU: {1}  ·  Конфликты: {2}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_CancelRequested" xml:space="preserve">
+    <value>Запрошена отмена</value>
+  </data>
+  <data name="BloatwareManagerViewModel_CreatingRestorePoint" xml:space="preserve">
+    <value>Создание точки восстановления перед удалением…</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreSkipped" xml:space="preserve">
+    <value>Создание точки восстановления пропущено пользователем</value>
+  </data>
+  <data name="LightingViewModel_IcueNotConfigured" xml:space="preserve">
+    <value>Corsair iCUE не настроен</value>
+  </data>
+  <data name="LightingViewModel_LogitechNotConfigured" xml:space="preserve">
+    <value>Logitech G HUB не настроен</value>
+  </data>
+  <data name="SystemControlViewModel_ConflictDetected" xml:space="preserve">
+    <value>обнаружены</value>
+  </data>
+  <data name="SystemControlViewModel_ConflictNone" xml:space="preserve">
+    <value>нет</value>
+  </data>
 </root>

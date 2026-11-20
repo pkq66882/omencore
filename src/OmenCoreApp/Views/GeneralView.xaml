@@ -135,7 +135,7 @@
                             <Ellipse Width="8" Height="8" Fill="{StaticResource AccentGreenBrush}" Margin="0,0,8,0" VerticalAlignment="Center"/>
                             <TextBlock Text="{Binding CurrentPerformanceModeDisplay}" FontSize="12" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                             <TextBlock Text=" · " FontSize="12" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center"/>
-                            <TextBlock Text="{Binding CurrentFanMode}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding CurrentFanModeDisplay}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -765,7 +765,7 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.GeneralView_Fans}" Style="{StaticResource GaugeLabel}"/>
-                                        <TextBlock Grid.Column="1" Text="{Binding CurrentFanMode}" 
+                                        <TextBlock Grid.Column="1" Text="{Binding CurrentFanModeDisplay}"
                                                    Style="{StaticResource GaugeValue}" Foreground="{StaticResource TextPrimaryBrush}"/>
                                     </Grid>
                                 </Grid>

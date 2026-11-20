@@ -190,8 +190,17 @@ namespace OmenCore.ViewModels
                 OnPropertyChanged(nameof(FanQuickModeBorder_Max));
                 OnPropertyChanged(nameof(FanQuickModeBorder_Auto));
                 OnPropertyChanged(nameof(FanQuickModeBorder_Custom));
+                OnPropertyChanged(nameof(CurrentFanModeDisplay));
             }
         }
+
+        public string CurrentFanModeDisplay => CurrentFanMode switch
+        {
+            "Max" => Strings.FanControlView_Max,
+            "Custom" => Strings.FanControlView_Custom,
+            "Auto" => Strings.FanControlView_Auto,
+            _ => CurrentFanMode
+        };
 
         public string SelectedProfile
         {

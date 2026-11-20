@@ -367,19 +367,19 @@
                                             <TextBlock FontSize="9" FontWeight="Bold">
                                                 <TextBlock.Style>
                                                     <Style TargetType="TextBlock">
-                                                        <Setter Property="Text" Value="INSTALLED"/>
+                                                        <Setter Property="Text" Value="{x:Static loc:Strings.Setter_Installed}"/>
                                                         <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}"/>
                                                         <Style.Triggers>
                                                             <DataTrigger Binding="{Binding IsRemoved}" Value="True">
-                                                                <Setter Property="Text" Value="REMOVED"/>
+                                                                <Setter Property="Text" Value="{x:Static loc:Strings.Setter_Removed}"/>
                                                                 <Setter Property="Foreground" Value="{DynamicResource TextTertiaryBrush}"/>
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding LastRemovalStatus}" Value="Failed">
-                                                                <Setter Property="Text" Value="FAILED"/>
+                                                                <Setter Property="Text" Value="{x:Static loc:Strings.Setter_Failed}"/>
                                                                 <Setter Property="Foreground" Value="#FF6B6B"/>
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding LastRemovalStatus}" Value="Skipped">
-                                                                <Setter Property="Text" Value="SKIPPED"/>
+                                                                <Setter Property="Text" Value="{x:Static loc:Strings.Setter_Skipped}"/>
                                                                 <Setter Property="Foreground" Value="#FFD166"/>
                                                             </DataTrigger>
                                                         </Style.Triggers>
