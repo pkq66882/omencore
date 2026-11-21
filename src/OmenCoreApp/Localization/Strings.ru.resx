@@ -5395,4 +5395,466 @@
   <data name="DiagnosticsView_UnknownModel" xml:space="preserve">
     <value>Неизвестная модель</value>
   </data>
+  <data name="SystemOptimizer_StatusDone" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="SystemOptimizer_RiskLow" xml:space="preserve">
+    <value>Низкий риск</value>
+  </data>
+  <data name="SystemOptimizer_RiskMedium" xml:space="preserve">
+    <value>Средний риск</value>
+  </data>
+  <data name="SystemOptimizer_RiskHigh" xml:space="preserve">
+    <value>Высокий риск</value>
+  </data>
+  <data name="SystemOptimizer_RiskUnknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightHighRiskBanner" xml:space="preserve">
+    <value>Предпроверка выявила высокорисковые оптимизации: {0}. Проверьте перед применением «Игрового максимума».</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightNoHighRisk" xml:space="preserve">
+    <value>Предпроверка не выявила высокорисковых оптимизаций.</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_SummaryFormat" xml:space="preserve">
+    <value>Предпроверка: низкий {0}, средний {1}, высокий {2}{3}</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_RebootYes" xml:space="preserve">
+    <value> | Перезагрузка: да</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_RebootNo" xml:space="preserve">
+    <value> | Перезагрузка: нет</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_MoreWarnings" xml:space="preserve">
+    <value> (ещё {0})</value>
+  </data>
+  <data name="Optimizer_WarningIdlePower" xml:space="preserve">
+    <value>Повышает энергопотребление в простое; не рекомендуется от батареи.</value>
+  </data>
+  <data name="Optimizer_WarningHddAppLaunch" xml:space="preserve">
+    <value>Может замедлить запуск программ на HDD; полезно на SSD.</value>
+  </data>
+  <data name="Optimizer_WarningSearchSlower" xml:space="preserve">
+    <value>Поиск Windows после этого изменения будет медленнее.</value>
+  </data>
+  <data name="Optimizer_WarningHdrVrr" xml:space="preserve">
+    <value>Некоторые функции HDR и VRR могут не работать в затронутых приложениях.</value>
+  </data>
+  <data name="Optimizer_WarningLegacy16" xml:space="preserve">
+    <value>Некоторые старые 16-битные программы могут не запуститься после этого изменения.</value>
+  </data>
+  <data name="Optimizer_WarningBackupTimestamps" xml:space="preserve">
+    <value>Средства резервного копирования, использующие время последнего доступа, могут неверно определять неизменённые файлы.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ItemEnabled" xml:space="preserve">
+    <value>Включено: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ItemDisabled" xml:space="preserve">
+    <value>Отключено: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ItemEnabledReboot" xml:space="preserve">
+    <value>Включено: {0} (требуется перезагрузка)</value>
+  </data>
+  <data name="SystemOptimizerViewModel_GamingMaxBody" xml:space="preserve">
+    <value>Будут применены все игровые оптимизации для максимальной производительности.&#10;&#10;{0}&#10;{1}&#10;&#10;Перед внесением изменений будет создана точка восстановления системы.&#10;&#10;Продолжить?</value>
+  </data>
+  <data name="SystemOptimizerViewModel_GamingMaxTitle" xml:space="preserve">
+    <value>Применить «Игровой максимум»</value>
+  </data>
+  <data name="SystemOptimizerViewModel_BalancedBody" xml:space="preserve">
+    <value>Будут применены рекомендуемые оптимизации с минимальным риском.&#10;&#10;{0}&#10;{1}&#10;&#10;Перед внесением изменений будет создана точка восстановления системы.&#10;&#10;Продолжить?</value>
+  </data>
+  <data name="SystemOptimizerViewModel_BalancedTitle" xml:space="preserve">
+    <value>Применить «Сбалансированные» оптимизации</value>
+  </data>
+  <data name="SystemOptimizerViewModel_AppliedCount" xml:space="preserve">
+    <value>Применено оптимизаций: {0}/{1}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_AppliedCountFailed" xml:space="preserve">
+    <value>Применено оптимизаций: {0}/{1} (не удалось: {2})</value>
+  </data>
+  <data name="SystemOptimizerViewModel_RebootPromptBody" xml:space="preserve">
+    <value>Для вступления некоторых изменений в силу требуется перезагрузка.&#10;&#10;Перезагрузить сейчас?</value>
+  </data>
+  <data name="SystemOptimizerViewModel_RebootPromptTitle" xml:space="preserve">
+    <value>Требуется перезагрузка</value>
+  </data>
+  <data name="CommonDialog_Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ApplyFailedBody" xml:space="preserve">
+    <value>Не удалось применить оптимизации:&#10;{0}</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerUltimatePerf_Name" xml:space="preserve">
+    <value>План «Максимальная производительность»</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerUltimatePerf_Desc" xml:space="preserve">
+    <value>Устанавливает план электропитания «Максимальная производительность» для максимальной производительности CPU/GPU</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGpuScheduling_Name" xml:space="preserve">
+    <value>Аппаратное планирование GPU</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGpuScheduling_Desc" xml:space="preserve">
+    <value>Включает аппаратно-ускоренное планирование GPU (Windows 10 2004+)</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGameMode_Name" xml:space="preserve">
+    <value>Игровой режим</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGameMode_Desc" xml:space="preserve">
+    <value>Включает игровой режим Windows для лучшей производительности в играх</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerForegroundPriority_Name" xml:space="preserve">
+    <value>Приоритет активных приложений</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerForegroundPriority_Desc" xml:space="preserve">
+    <value>Повышает приоритет CPU для активных приложений</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceTelemetry_Name" xml:space="preserve">
+    <value>Отключить телеметрию</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceTelemetry_Desc" xml:space="preserve">
+    <value>Отключает сбор телеметрии Windows (служба DiagTrack)</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSysmain_Name" xml:space="preserve">
+    <value>Отключить SysMain (Superfetch)</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSysmain_Desc" xml:space="preserve">
+    <value>Отключает службу Superfetch — рекомендуется для систем с SSD</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSearch_Name" xml:space="preserve">
+    <value>Отключить индексацию поиска</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSearch_Desc" xml:space="preserve">
+    <value>Отключает индексацию поиска Windows для снижения нагрузки на диск/CPU</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSearch_Warning" xml:space="preserve">
+    <value>Поиск файлов может замедлиться</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceDiagtrack_Name" xml:space="preserve">
+    <value>Отключить подключённые функции</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceDiagtrack_Desc" xml:space="preserve">
+    <value>Отключает службу подключённых возможностей и телеметрии (DiagTrack)</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpNodelay_Name" xml:space="preserve">
+    <value>TCP без задержки (Nagle)</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpNodelay_Desc" xml:space="preserve">
+    <value>Отключает отложенные подтверждения TCP для снижения задержки</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpAck_Name" xml:space="preserve">
+    <value>Оптимизация TCP ACK</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpAck_Desc" xml:space="preserve">
+    <value>Оптимизирует частоту TCP ACK для более быстрых откликов</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkDeliveryOpt_Name" xml:space="preserve">
+    <value>Отключить P2P-обновления</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkDeliveryOpt_Desc" xml:space="preserve">
+    <value>Отключает P2P-обмен оптимизации доставки</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkNagle_Name" xml:space="preserve">
+    <value>Отключить алгоритм Нейгла</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkNagle_Desc" xml:space="preserve">
+    <value>Уменьшает задержку буферизации TCP — полезно для онлайн-игр</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputMouseAccel_Name" xml:space="preserve">
+    <value>Отключить ускорение мыши</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputMouseAccel_Desc" xml:space="preserve">
+    <value>Отключает «Увеличить точность указателя» для движения мыши 1:1</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameDvr_Name" xml:space="preserve">
+    <value>Отключить Game DVR</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameDvr_Desc" xml:space="preserve">
+    <value>Отключает фоновую запись игр для повышения производительности</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameBar_Name" xml:space="preserve">
+    <value>Отключить Xbox Game Bar</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameBar_Desc" xml:space="preserve">
+    <value>Отключает наложение Xbox Game Bar</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputFullscreenOpt_Name" xml:space="preserve">
+    <value>Оптимизация полноэкранного режима</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputFullscreenOpt_Desc" xml:space="preserve">
+    <value>Настраивает оптимизацию полноэкранного режима для лучшей совместимости</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualTransparency_Name" xml:space="preserve">
+    <value>Отключить прозрачность</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualTransparency_Desc" xml:space="preserve">
+    <value>Отключает эффекты прозрачности Windows</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualAnimations_Name" xml:space="preserve">
+    <value>Отключить анимации</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualAnimations_Desc" xml:space="preserve">
+    <value>Отключает анимацию окон для более отзывчивого интерфейса</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageTrim_Name" xml:space="preserve">
+    <value>TRIM для SSD</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageTrim_Desc" xml:space="preserve">
+    <value>Включает команду TRIM для здоровья и производительности SSD</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageLastAccess_Name" xml:space="preserve">
+    <value>Отключить отметки последнего доступа</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageLastAccess_Desc" xml:space="preserve">
+    <value>Отключает обновление времени последнего доступа NTFS для снижения активности диска</value>
+  </data>
+  <data name="SystemOptimizer_Item_Storage8dot3_Name" xml:space="preserve">
+    <value>Отключить имена 8.3</value>
+  </data>
+  <data name="SystemOptimizer_Item_Storage8dot3_Desc" xml:space="preserve">
+    <value>Отключает создание устаревших коротких имён файлов</value>
+  </data>
+  <data name="SystemOptimizer_Item_Storage8dot3_Warning" xml:space="preserve">
+    <value>Может сломать очень старые программы</value>
+  </data>
+  <data name="UpdateViewModel_CheckingForUpdates" xml:space="preserve">
+    <value>Проверка обновлений...</value>
+  </data>
+  <data name="UpdateViewModel_UpdateAvailableFormat" xml:space="preserve">
+    <value>Доступно обновление: v{0} (текущая {1})</value>
+  </data>
+  <data name="UpdateViewModel_DownloadingFormat" xml:space="preserve">
+    <value>Скачивание v{0} ({1})</value>
+  </data>
+  <data name="UpdateViewModel_InitializingDownload" xml:space="preserve">
+    <value>Инициализация загрузки...</value>
+  </data>
+  <data name="UpdateViewModel_ManualDownloadRequired" xml:space="preserve">
+    <value>Обновление требует ручной загрузки (в примечаниях к выпуску нет SHA256).</value>
+  </data>
+  <data name="UpdateViewModel_DownloadFailedManual" xml:space="preserve">
+    <value>Не удалось скачать. Проверьте примечания к выпуску для ручной загрузки.</value>
+  </data>
+  <data name="UpdateViewModel_InstallBlockedSha" xml:space="preserve">
+    <value>Установка заблокирована до предоставления SHA256</value>
+  </data>
+  <data name="UpdateViewModel_DownloadFailed" xml:space="preserve">
+    <value>Не удалось скачать</value>
+  </data>
+  <data name="UpdateViewModel_Installing" xml:space="preserve">
+    <value>Установка обновления...</value>
+  </data>
+  <data name="UpdateViewModel_LaunchingInstaller" xml:space="preserve">
+    <value>Запуск установщика...</value>
+  </data>
+  <data name="UpdateViewModel_InstallationFailed" xml:space="preserve">
+    <value>Установка не удалась</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="BloatwareManagerViewModel_StatusDonePrefix" xml:space="preserve">
+    <value>Готово: </value>
+  </data>
+  <data name="BloatwareManagerViewModel_StatusFailedPrefix" xml:space="preserve">
+    <value>Сбой: </value>
+  </data>
+  <data name="BloatwareManagerViewModel_InitialStatus" xml:space="preserve">
+    <value>Готово: нажмите «Сканировать» для обнаружения предустановленного ПО</value>
+  </data>
+  <data name="BloatwareManagerViewModel_ScanCompletedFormat" xml:space="preserve">
+    <value>Сканирование завершено: обнаружено элементов: {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_ScanFailedFormat" xml:space="preserve">
+    <value>Сбой сканирования: {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_NotAdminWarn" xml:space="preserve">
+    <value>OmenCore запущен не от имени администратора. Для удаления предустановленного ПО нужны права администратора.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_CannotRemoveNotAdmin" xml:space="preserve">
+    <value>Нельзя удалить: OmenCore запущен не от имени администратора.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_NoLowRisk" xml:space="preserve">
+    <value>Сейчас нет доступных для удаления установленных элементов с низким риском</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveSelectedItem" xml:space="preserve">
+    <value>Удалить выбранный элемент</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveLowRisk" xml:space="preserve">
+    <value>Удалить низкорисковое предустановленное ПО</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovingFormat" xml:space="preserve">
+    <value>Удаление: {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovingProgressFormat" xml:space="preserve">
+    <value>Удаление {0}/{1}: {2}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovedFormat" xml:space="preserve">
+    <value>Удалено: {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovedDetailFormat" xml:space="preserve">
+    <value>Удалено: {0}: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_SkippedNoChange" xml:space="preserve">
+    <value>Пропущено: {0} — изменение состояния не требовалось</value>
+  </data>
+  <data name="BloatwareManagerViewModel_SkippedDetailFormat" xml:space="preserve">
+    <value>Пропущено: {0}: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveFailedFormat" xml:space="preserve">
+    <value>Не удалось удалить: {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveFailedDetailFormat" xml:space="preserve">
+    <value>Не удалось удалить {0}: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovePendingFormat" xml:space="preserve">
+    <value>Удаление {0} ещё в ожидании</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveUnknownFormat" xml:space="preserve">
+    <value>Удаление {0} завершено с неизвестным статусом</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveCompletedDetailFormat" xml:space="preserve">
+    <value>Удаление {0} завершено: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkCanceledFormat" xml:space="preserve">
+    <value>Массовое удаление отменено на «{0}». Удалено: {1}, пропущено: {2}. Подробности — в экспортированном журнале.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkCompleteFormat" xml:space="preserve">
+    <value>Массовое удаление завершено: удалено {0}, пропущено {1} из {2}.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkSkipExampleFormat" xml:space="preserve">
+    <value> Пример пропуска: {0} ({1})</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkStoppedFormat" xml:space="preserve">
+    <value>Массовое удаление остановлено на «{0}»: {1}. Откат восстановил {2}, неудачно {3}, пропущено {4}. Подробности — в экспортированном журнале.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_NoFailureDetail" xml:space="preserve">
+    <value>Нет сведений о сбое</value>
+  </data>
+  <data name="BloatwareManagerViewModel_UnknownItem" xml:space="preserve">
+    <value>неизвестный элемент</value>
+  </data>
+  <data name="BloatwareManagerViewModel_TheCurrentItem" xml:space="preserve">
+    <value>текущий элемент</value>
+  </data>
+  <data name="BloatwareManagerViewModel_PreviewSelectedFormat" xml:space="preserve">
+    <value>Выбрано {0} из {1}.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_PreviewConflictFormat" xml:space="preserve">
+    <value> {0} конфликтночувствительных элементов: перед удалением проверьте вентиляторы, RGB, горячие клавиши, путь обновления и точку восстановления.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_EstimatedUnderMin" xml:space="preserve">
+    <value>Ожидаемое время: менее 1 минуты</value>
+  </data>
+  <data name="BloatwareManagerViewModel_EstimatedAboutFormat" xml:space="preserve">
+    <value>Ожидаемое время: около {0} мин.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_ProgressDoneFormat" xml:space="preserve">
+    <value>{0}/{1} готово</value>
+  </data>
+  <data name="BloatwareManagerViewModel_Waiting" xml:space="preserve">
+    <value>Ожидание...</value>
+  </data>
+  <data name="RgbScene_NameOmenRed" xml:space="preserve">
+    <value>OMEN Красный</value>
+  </data>
+  <data name="RgbScene_NameGaming" xml:space="preserve">
+    <value>Игровая</value>
+  </data>
+  <data name="RgbScene_NameNightMode" xml:space="preserve">
+    <value>Ночной режим</value>
+  </data>
+  <data name="RgbScene_NameWork" xml:space="preserve">
+    <value>Работа</value>
+  </data>
+  <data name="RgbScene_NameRainbow" xml:space="preserve">
+    <value>Радуга</value>
+  </data>
+  <data name="RgbScene_NameHeatWave" xml:space="preserve">
+    <value>Тепловая волна</value>
+  </data>
+  <data name="RgbScene_NameCalmPulse" xml:space="preserve">
+    <value>Спокойный пульс</value>
+  </data>
+  <data name="RgbScene_NameCoolBlue" xml:space="preserve">
+    <value>Холодный синий</value>
+  </data>
+  <data name="RgbScene_NameAmbient" xml:space="preserve">
+    <value>Фоновая</value>
+  </data>
+  <data name="RgbScene_NameAudioReactive" xml:space="preserve">
+    <value>Аудиореактивная</value>
+  </data>
+  <data name="RgbScene_NameLightsOff" xml:space="preserve">
+    <value>Свет выкл.</value>
+  </data>
+  <data name="RgbScene_NamePurpleHaze" xml:space="preserve">
+    <value>Фиолетовая дымка</value>
+  </data>
+  <data name="RgbScene_NameWhite" xml:space="preserve">
+    <value>Белая</value>
+  </data>
+  <data name="RgbScene_NameWaveBlue" xml:space="preserve">
+    <value>Синяя волна</value>
+  </data>
+  <data name="RgbScene_NameWaveRed" xml:space="preserve">
+    <value>Красная волна</value>
+  </data>
+  <data name="RgbScene_NameBreathingGreen" xml:space="preserve">
+    <value>Зелёное дыхание</value>
+  </data>
+  <data name="RgbScene_NameReactivePurple" xml:space="preserve">
+    <value>Реактивный фиолетовый</value>
+  </data>
+  <data name="RgbScene_NameSpectrumFlow" xml:space="preserve">
+    <value>Спектральный поток</value>
+  </data>
+  <data name="RgbScene_NameCyberpunk" xml:space="preserve">
+    <value>Киберпанк</value>
+  </data>
+  <data name="RgbScene_NameSunset" xml:space="preserve">
+    <value>Закат</value>
+  </data>
+  <data name="RgbScene_NameForest" xml:space="preserve">
+    <value>Лес</value>
+  </data>
+  <data name="RgbScene_NameOcean" xml:space="preserve">
+    <value>Океан</value>
+  </data>
+  <data name="RgbScene_NameLava" xml:space="preserve">
+    <value>Лава</value>
+  </data>
+  <data name="RgbScene_NameIce" xml:space="preserve">
+    <value>Лёд</value>
+  </data>
+  <data name="RgbScene_NameStealth" xml:space="preserve">
+    <value>Скрытность</value>
+  </data>
+  <data name="RgbScene_NameOff" xml:space="preserve">
+    <value>Выкл.</value>
+  </data>
+  <data name="RgbScene_NameNone" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="RgbScene_NameCustomFormat" xml:space="preserve">
+    <value>Своя сцена {0}</value>
+  </data>
+  <data name="AudioViz_Pulse" xml:space="preserve">
+    <value>Пульс</value>
+  </data>
+  <data name="AudioViz_Spectrum" xml:space="preserve">
+    <value>Спектр</value>
+  </data>
+  <data name="AudioViz_VuMeter" xml:space="preserve">
+    <value>Индикатор уровня</value>
+  </data>
+  <data name="AudioViz_Wave" xml:space="preserve">
+    <value>Волна</value>
+  </data>
+  <data name="AudioViz_BeatSync" xml:space="preserve">
+    <value>Синхронизация с битом</value>
+  </data>
 </root>

@@ -453,7 +453,7 @@
                                                                              Fill="{Binding PrimaryColor, Converter={StaticResource HexToBrushConverter}}"
                                                                              Stroke="#33000000" StrokeThickness="1"/>
                                                                     <TextBlock Text="{Binding Icon}" FontSize="16" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                                                                    <TextBlock Text="{Binding Name}" FontSize="12" VerticalAlignment="Center"/>
+                                                                    <TextBlock Text="{Binding Name, Converter={StaticResource SceneDisplayName}}" FontSize="12" VerticalAlignment="Center"/>
                                                                 </StackPanel>
                                                             </Border>
                                                             <ControlTemplate.Triggers>
@@ -524,7 +524,13 @@
                             <ComboBox Grid.Column="1" ItemsSource="{Binding AudioVisualizationModes}"
                                       SelectedItem="{Binding SelectedAudioVisualizationMode, Mode=TwoWay}"
                                       Style="{StaticResource ModernComboBox}"
-                                      AutomationProperties.Name="{x:Static loc:Strings.LightingView_AudioReactiveVisualizationMode}"/>
+                                      AutomationProperties.Name="{x:Static loc:Strings.LightingView_AudioReactiveVisualizationMode}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Converter={StaticResource AudioVizModeDisplay}}"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
 
                             <TextBlock Grid.Column="3" Text="{x:Static loc:Strings.LightingView_Sensitivity}" VerticalAlignment="Center"
                                        Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,8,0"/>

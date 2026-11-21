@@ -27,7 +27,7 @@ namespace OmenCore.ViewModels
         private readonly LoggingService _logger;
         private bool _isScanning;
         private bool _isProcessing;
-        private string _statusMessage = "Done: Click Scan to detect bloatware";
+        private string _statusMessage = Strings.BloatwareManagerViewModel_InitialStatus;
         private string _filterText = "";
         private BloatwareCategory? _selectedCategory;
         private BloatwareApp? _selectedApp;
@@ -225,20 +225,20 @@ namespace OmenCore.ViewModels
         }
 
         public string RemovalPreviewEstimatedText => _removalPreviewEstimatedSeconds <= 0
-            ? "Estimated time: less than 1 minute"
-            : $"Estimated time: about {_removalPreviewEstimatedSeconds / 60 + 1} minute(s)";
+            ? Strings.BloatwareManagerViewModel_EstimatedUnderMin
+            : string.Format(Strings.BloatwareManagerViewModel_EstimatedAboutFormat, _removalPreviewEstimatedSeconds / 60 + 1);
 
         public bool HasRemovalPreviewSelection => RemovalPreviewItems.Any(item => item.IsSelected);
 
         public bool CanCancelBulkOperation => IsBulkRemoving || IsBulkRestoring;
 
         public string BulkRemoveProgressText => BulkRemoveTotal > 0
-            ? $"{BulkRemoveProgress}/{BulkRemoveTotal} done"
-            : "Waiting...";
+            ? string.Format(Strings.BloatwareManagerViewModel_ProgressDoneFormat, BulkRemoveProgress, BulkRemoveTotal)
+            : Strings.BloatwareManagerViewModel_Waiting;
 
         public string BulkRestoreProgressText => BulkRestoreTotal > 0
-            ? $"{BulkRestoreProgress}/{BulkRestoreTotal} done"
-            : "Waiting...";
+            ? string.Format(Strings.BloatwareManagerViewModel_ProgressDoneFormat, BulkRestoreProgress, BulkRestoreTotal)
+            : Strings.BloatwareManagerViewModel_Waiting;
 
         public BloatwareManagerViewModel(LoggingService logger)
         {
@@ -287,7 +287,7 @@ namespace OmenCore.ViewModels
             // Warn immediately if not running as admin
             if (!BloatwareManagerService.IsRunningAsAdmin)
             {
-                SetStatusFailed("OmenCore is not running as Administrator. Bloatware removal requires admin rights.");
+                SetStatusFailed(Strings.BloatwareManagerViewModel_NotAdminWarn);
             }
         }
 
@@ -311,12 +311,12 @@ namespace OmenCore.ViewModels
 
                 ApplyFilter();
                 UpdateCounts();
-                SetStatusDone($"Scan completed: {AllApps.Count} items detected");
+                SetStatusDone(string.Format(Strings.BloatwareManagerViewModel_ScanCompletedFormat, AllApps.Count));
             }
             catch (Exception ex)
             {
                 _logger.Error($"Bloatware scan failed: {ex.Message}");
-                SetStatusFailed($"Scan failed: {ex.Message}");
+                SetStatusFailed(string.Format(Strings.BloatwareManagerViewModel_ScanFailedFormat, ex.Message));
             }
             finally
             {
@@ -328,7 +328,7 @@ namespace OmenCore.ViewModels
         {
             if (!BloatwareManagerService.IsRunningAsAdmin)
             {
-                SetStatusFailed("Cannot remove: OmenCore is not running as Administrator.");
+                SetStatusFailed(Strings.BloatwareManagerViewModel_CannotRemoveNotAdmin);
                 return;
             }
 
@@ -337,7 +337,7 @@ namespace OmenCore.ViewModels
                 return;
             }
 
-            BuildRemovalPreview("Remove Selected Item", new List<BloatwareApp> { SelectedApp });
+            BuildRemovalPreview(Strings.BloatwareManagerViewModel_RemoveSelectedItem, new List<BloatwareApp> { SelectedApp });
             await Task.CompletedTask;
         }
 
@@ -346,7 +346,7 @@ namespace OmenCore.ViewModels
             try
             {
                 IsProcessing = true;
-                SetStatusAction($"Removing {app.Name}");
+                SetStatusAction(string.Format(Strings.BloatwareManagerViewModel_RemovingFormat, app.Name));
                 await _service.RemoveAppAsync(app);
                 HasRemovalResults = true;
                 UpdateCounts();
@@ -375,7 +375,7 @@ namespace OmenCore.ViewModels
         {
             if (!BloatwareManagerService.IsRunningAsAdmin)
             {
-                SetStatusFailed("Cannot remove: OmenCore is not running as Administrator.");
+                SetStatusFailed(Strings.BloatwareManagerViewModel_CannotRemoveNotAdmin);
                 return;
             }
 
@@ -384,11 +384,11 @@ namespace OmenCore.ViewModels
             var lowRiskApps = AllApps.Where(a => a.RemovalRisk == RemovalRisk.Low && !a.IsRemoved).ToList();
             if (!lowRiskApps.Any())
             {
-                SetStatusDone("No low-risk installed items are currently available for removal");
+                SetStatusDone(Strings.BloatwareManagerViewModel_NoLowRisk);
                 return;
             }
 
-            BuildRemovalPreview("Remove Low-Risk Bloatware", lowRiskApps);
+            BuildRemovalPreview(Strings.BloatwareManagerViewModel_RemoveLowRisk, lowRiskApps);
             await Task.CompletedTask;
         }
 
@@ -408,15 +408,15 @@ namespace OmenCore.ViewModels
                     {
                         BulkRemoveProgress = index;
                         OnPropertyChanged(nameof(BulkRemoveProgressText));
-                        SetStatusAction($"Removing {index}/{total}: {app.Name}");
+                        SetStatusAction(string.Format(Strings.BloatwareManagerViewModel_RemovingProgressFormat, index, total, app.Name));
                     })),
                     cancellation.Token);
 
                 if (bulkResult.Canceled)
                 {
-                    var canceledAt = bulkResult.CanceledAt?.Name ?? "the current item";
+                    var canceledAt = bulkResult.CanceledAt?.Name ?? Strings.BloatwareManagerViewModel_TheCurrentItem;
                     SetStatusFailed(
-                        $"Bulk remove canceled at {canceledAt}. {bulkResult.Succeeded.Count} removed, {bulkResult.Skipped.Count} skipped. Export log for details.");
+                        string.Format(Strings.BloatwareManagerViewModel_BulkCanceledFormat, canceledAt, bulkResult.Succeeded.Count, bulkResult.Skipped.Count));
                 }
                 else if (bulkResult.Completed)
                 {
@@ -424,15 +424,15 @@ namespace OmenCore.ViewModels
                 }
                 else
                 {
-                    var failedName = bulkResult.FailedAt?.Name ?? "unknown item";
+                    var failedName = bulkResult.FailedAt?.Name ?? Strings.BloatwareManagerViewModel_UnknownItem;
                     var failedDetail = string.IsNullOrWhiteSpace(bulkResult.FailedAt?.LastRemovalDetail)
                         ? string.IsNullOrWhiteSpace(bulkResult.FailedAt?.LastFailureReason)
-                            ? "No failure detail available"
+                            ? Strings.BloatwareManagerViewModel_NoFailureDetail
                             : bulkResult.FailedAt!.LastFailureReason!
                         : bulkResult.FailedAt!.LastRemovalDetail!;
                     SetStatusFailed(
-                        $"Bulk remove stopped at {failedName}: {failedDetail}. Rollback restored {bulkResult.RollbackSucceeded.Count}, " +
-                        $"failed {bulkResult.RollbackFailed.Count}, skipped {bulkResult.RollbackSkipped.Count}. Export log for details.");
+                        string.Format(Strings.BloatwareManagerViewModel_BulkStoppedFormat, failedName, failedDetail,
+                            bulkResult.RollbackSucceeded.Count, bulkResult.RollbackFailed.Count, bulkResult.RollbackSkipped.Count));
                 }
 
                 HasRemovalResults = true;
@@ -460,36 +460,30 @@ namespace OmenCore.ViewModels
             return app.LastRemovalStatus switch
             {
                 RemovalStatus.VerifiedSuccess or RemovalStatus.Succeeded => string.IsNullOrWhiteSpace(detail)
-                    ? $"Removed {app.Name}"
-                    : $"Removed {app.Name}: {detail}",
+                    ? string.Format(Strings.BloatwareManagerViewModel_RemovedFormat, app.Name)
+                    : string.Format(Strings.BloatwareManagerViewModel_RemovedDetailFormat, app.Name, detail),
                 RemovalStatus.Skipped => string.IsNullOrWhiteSpace(detail)
-                    ? $"Skipped {app.Name}: no state change was required"
-                    : $"Skipped {app.Name}: {detail}",
+                    ? string.Format(Strings.BloatwareManagerViewModel_SkippedNoChange, app.Name)
+                    : string.Format(Strings.BloatwareManagerViewModel_SkippedDetailFormat, app.Name, detail),
                 RemovalStatus.Failed => string.IsNullOrWhiteSpace(detail)
-                    ? $"{app.Name} removal failed"
-                    : $"{app.Name} removal failed: {detail}",
-                RemovalStatus.Pending => $"{app.Name} removal is still pending",
+                    ? string.Format(Strings.BloatwareManagerViewModel_RemoveFailedFormat, app.Name)
+                    : string.Format(Strings.BloatwareManagerViewModel_RemoveFailedDetailFormat, app.Name, detail),
+                RemovalStatus.Pending => string.Format(Strings.BloatwareManagerViewModel_RemovePendingFormat, app.Name),
                 _ => string.IsNullOrWhiteSpace(detail)
-                    ? $"{app.Name} removal completed with an unknown status"
-                    : $"{app.Name} removal completed: {detail}"
+                    ? string.Format(Strings.BloatwareManagerViewModel_RemoveUnknownFormat, app.Name)
+                    : string.Format(Strings.BloatwareManagerViewModel_RemoveCompletedDetailFormat, app.Name, detail)
             };
         }
 
         private static string BuildBulkRemovalCompletionMessage(BulkRemovalResult result)
         {
-            var summary = $"Bulk remove complete: {result.Succeeded.Count} removed";
-            if (result.Skipped.Count > 0)
-            {
-                summary += $", {result.Skipped.Count} skipped";
-            }
-
-            summary += $" out of {result.RequestedTotal}.";
+            var summary = string.Format(Strings.BloatwareManagerViewModel_BulkCompleteFormat, result.Succeeded.Count, result.Skipped.Count, result.RequestedTotal);
 
             var firstSkippedWithDetail = result.Skipped
                 .FirstOrDefault(app => !string.IsNullOrWhiteSpace(app.LastRemovalDetail));
             if (firstSkippedWithDetail != null)
             {
-                summary += $" Example skip: {firstSkippedWithDetail.Name} ({firstSkippedWithDetail.LastRemovalDetail})";
+                summary += string.Format(Strings.BloatwareManagerViewModel_BulkSkipExampleFormat, firstSkippedWithDetail.Name, firstSkippedWithDetail.LastRemovalDetail);
             }
 
             return summary;
@@ -536,10 +530,10 @@ namespace OmenCore.ViewModels
                 .ToList();
             var conflictSensitiveCount = selectedApps.Count(app => app.ConflictSensitive || app.RequiresOmenCoreValidation);
 
-            RemovalPreviewSummary = $"Selected {selectedCount} of {totalCount} item(s).";
+            RemovalPreviewSummary = string.Format(Strings.BloatwareManagerViewModel_PreviewSelectedFormat, selectedCount, totalCount);
             if (conflictSensitiveCount > 0)
             {
-                RemovalPreviewSummary += $" {conflictSensitiveCount} conflict-sensitive item(s): verify fan, RGB, hotkeys, update path, and restore point before removal.";
+                RemovalPreviewSummary += string.Format(Strings.BloatwareManagerViewModel_PreviewConflictFormat, conflictSensitiveCount);
             }
 
             OnPropertyChanged(nameof(RemovalPreviewEstimatedText));
@@ -904,12 +898,12 @@ namespace OmenCore.ViewModels
 
         private void SetStatusDone(string details)
         {
-            StatusMessage = $"Done: {details}";
+            StatusMessage = Strings.BloatwareManagerViewModel_StatusDonePrefix + details;
         }
 
         private void SetStatusFailed(string reason)
         {
-            StatusMessage = $"Failed: {reason}";
+            StatusMessage = Strings.BloatwareManagerViewModel_StatusFailedPrefix + reason;
         }
 
         private CancellationTokenSource BeginBulkOperation()

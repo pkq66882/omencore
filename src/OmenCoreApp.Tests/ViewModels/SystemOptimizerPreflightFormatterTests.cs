@@ -40,27 +40,36 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void BuildWarningRollup_UsesLimitAndReportsRemainder()
         {
-            var report = new PreflightReport
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
             {
-                Items = new[] { new PreflightItem { Id = "x", Risk = OptimizationRisk.Low } }
-            };
-            report.Items[0].Warning = "warning one";
-
-            var report2 = new PreflightReport
-            {
-                Items = new[]
+                var report = new PreflightReport
                 {
-                    new PreflightItem { Id = "a", Risk = OptimizationRisk.Low, Warning = "warning one" },
-                    new PreflightItem { Id = "b", Risk = OptimizationRisk.Medium, Warning = "warning two" },
-                    new PreflightItem { Id = "c", Risk = OptimizationRisk.High, Warning = "warning three" },
-                }
-            };
+                    Items = new[] { new PreflightItem { Id = "x", Risk = OptimizationRisk.Low } }
+                };
+                report.Items[0].Warning = "warning one";
 
-            var rollup = SystemOptimizerPreflightFormatter.BuildWarningRollup(report2, maxWarnings: 2);
+                var report2 = new PreflightReport
+                {
+                    Items = new[]
+                    {
+                        new PreflightItem { Id = "a", Risk = OptimizationRisk.Low, Warning = "warning one" },
+                        new PreflightItem { Id = "b", Risk = OptimizationRisk.Medium, Warning = "warning two" },
+                        new PreflightItem { Id = "c", Risk = OptimizationRisk.High, Warning = "warning three" },
+                    }
+                };
 
-            rollup.Should().Contain("warning one");
-            rollup.Should().Contain("warning two");
-            rollup.Should().Contain("(+1 more)");
+                var rollup = SystemOptimizerPreflightFormatter.BuildWarningRollup(report2, maxWarnings: 2);
+
+                rollup.Should().Contain("warning one");
+                rollup.Should().Contain("warning two");
+                rollup.Should().Contain("(+1 more)");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
     }
 }

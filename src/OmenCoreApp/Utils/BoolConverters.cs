@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Globalization;
 using System.Windows.Data;
@@ -18,7 +19,7 @@ namespace OmenCore.Utils
                     return (value is bool b && b) ? parts[0] : parts[1];
                 }
             }
-            return (value is bool boolVal && boolVal) ? "Yes" : "No";
+            return (value is bool boolVal && boolVal) ? Strings.Common_Yes : Strings.Common_No;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -46,8 +47,8 @@ namespace OmenCore.Utils
     /// </summary>
     public class BoolToStringConverter : IValueConverter
     {
-        public string TrueValue { get; set; } = "Yes";
-        public string FalseValue { get; set; } = "No";
+        public string TrueValue { get; set; } = Strings.Common_Yes;
+        public string FalseValue { get; set; } = Strings.Common_No;
         
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

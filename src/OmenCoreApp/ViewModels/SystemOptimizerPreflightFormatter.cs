@@ -8,8 +8,8 @@ namespace OmenCore.ViewModels
     {
         public static string BuildSummary(PreflightReport report)
         {
-            var rebootTag = report.RequiresReboot ? " | Reboot: Yes" : " | Reboot: No";
-            return $"Preflight: Low {report.LowRiskCount}, Medium {report.MediumRiskCount}, High {report.HighRiskCount}{rebootTag}";
+            var rebootTag = report.RequiresReboot ? Strings.SystemOptimizerPreflightFormatter_RebootYes : Strings.SystemOptimizerPreflightFormatter_RebootNo;
+            return string.Format(Strings.SystemOptimizerPreflightFormatter_SummaryFormat, report.LowRiskCount, report.MediumRiskCount, report.HighRiskCount, rebootTag);
         }
 
         public static string BuildWarningRollup(PreflightReport report, int maxWarnings = 2)
@@ -20,8 +20,19 @@ namespace OmenCore.ViewModels
             }
 
             var selected = report.Warnings.Take(maxWarnings).ToList();
-            var suffix = report.Warnings.Count > maxWarnings ? $" (+{report.Warnings.Count - maxWarnings} more)" : string.Empty;
-            return string.Join(" | ", selected) + suffix;
+            var suffix = report.Warnings.Count > maxWarnings ? string.Format(Strings.SystemOptimizerPreflightFormatter_MoreWarnings, report.Warnings.Count - maxWarnings) : string.Empty;
+            return string.Join(" | ", selected.Select(MapWarning)) + suffix;
         }
+
+        private static string MapWarning(string warning) => warning switch
+        {
+            "Increases idle power draw; not recommended on battery." => Strings.Optimizer_WarningIdlePower,
+            "May slow app-launch times on HDDs; beneficial on SSDs." => Strings.Optimizer_WarningHddAppLaunch,
+            "Windows Search will be slower after this change." => Strings.Optimizer_WarningSearchSlower,
+            "Some HDR and variable-refresh features may not work in affected apps." => Strings.Optimizer_WarningHdrVrr,
+            "Some legacy 16-bit or very old programs may fail to launch after this change." => Strings.Optimizer_WarningLegacy16,
+            "Backup tools that rely on last-access timestamps may not detect unchanged files correctly." => Strings.Optimizer_WarningBackupTimestamps,
+            _ => warning
+        };
     }
 }

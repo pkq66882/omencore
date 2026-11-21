@@ -5399,4 +5399,466 @@
   <data name="DiagnosticsView_UnknownModel" xml:space="preserve">
     <value>Unknown model</value>
   </data>
+  <data name="SystemOptimizer_StatusDone" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="SystemOptimizer_RiskLow" xml:space="preserve">
+    <value>Low Risk</value>
+  </data>
+  <data name="SystemOptimizer_RiskMedium" xml:space="preserve">
+    <value>Medium Risk</value>
+  </data>
+  <data name="SystemOptimizer_RiskHigh" xml:space="preserve">
+    <value>High Risk</value>
+  </data>
+  <data name="SystemOptimizer_RiskUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightHighRiskBanner" xml:space="preserve">
+    <value>Preflight found {0} High-risk optimization(s). Review before applying Gaming Max.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightNoHighRisk" xml:space="preserve">
+    <value>Preflight contains no High-risk optimizations.</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_SummaryFormat" xml:space="preserve">
+    <value>Preflight: Low {0}, Medium {1}, High {2}{3}</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_RebootYes" xml:space="preserve">
+    <value> | Reboot: Yes</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_RebootNo" xml:space="preserve">
+    <value> | Reboot: No</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_MoreWarnings" xml:space="preserve">
+    <value> (+{0} more)</value>
+  </data>
+  <data name="Optimizer_WarningIdlePower" xml:space="preserve">
+    <value>Increases idle power draw; not recommended on battery.</value>
+  </data>
+  <data name="Optimizer_WarningHddAppLaunch" xml:space="preserve">
+    <value>May slow app-launch times on HDDs; beneficial on SSDs.</value>
+  </data>
+  <data name="Optimizer_WarningSearchSlower" xml:space="preserve">
+    <value>Windows Search will be slower after this change.</value>
+  </data>
+  <data name="Optimizer_WarningHdrVrr" xml:space="preserve">
+    <value>Some HDR and variable-refresh features may not work in affected apps.</value>
+  </data>
+  <data name="Optimizer_WarningLegacy16" xml:space="preserve">
+    <value>Some legacy 16-bit or very old programs may fail to launch after this change.</value>
+  </data>
+  <data name="Optimizer_WarningBackupTimestamps" xml:space="preserve">
+    <value>Backup tools that rely on last-access timestamps may not detect unchanged files correctly.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ItemEnabled" xml:space="preserve">
+    <value>{0} enabled</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ItemDisabled" xml:space="preserve">
+    <value>{0} disabled</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ItemEnabledReboot" xml:space="preserve">
+    <value>{0} enabled (reboot required)</value>
+  </data>
+  <data name="SystemOptimizerViewModel_GamingMaxBody" xml:space="preserve">
+    <value>This will apply ALL gaming optimizations for maximum performance.&#10;&#10;{0}&#10;{1}&#10;&#10;A system restore point will be created before making changes.&#10;&#10;Continue?</value>
+  </data>
+  <data name="SystemOptimizerViewModel_GamingMaxTitle" xml:space="preserve">
+    <value>Apply Gaming Maximum</value>
+  </data>
+  <data name="SystemOptimizerViewModel_BalancedBody" xml:space="preserve">
+    <value>This will apply recommended optimizations with minimal risk.&#10;&#10;{0}&#10;{1}&#10;&#10;A system restore point will be created before making changes.&#10;&#10;Continue?</value>
+  </data>
+  <data name="SystemOptimizerViewModel_BalancedTitle" xml:space="preserve">
+    <value>Apply Balanced Optimizations</value>
+  </data>
+  <data name="SystemOptimizerViewModel_AppliedCount" xml:space="preserve">
+    <value>Applied {0}/{1} optimizations</value>
+  </data>
+  <data name="SystemOptimizerViewModel_AppliedCountFailed" xml:space="preserve">
+    <value>Applied {0}/{1} optimizations ({2} failed)</value>
+  </data>
+  <data name="SystemOptimizerViewModel_RebootPromptBody" xml:space="preserve">
+    <value>Some changes require a reboot to take effect.&#10;&#10;Reboot now?</value>
+  </data>
+  <data name="SystemOptimizerViewModel_RebootPromptTitle" xml:space="preserve">
+    <value>Reboot Required</value>
+  </data>
+  <data name="CommonDialog_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ApplyFailedBody" xml:space="preserve">
+    <value>Failed to apply optimizations:&#10;{0}</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerUltimatePerf_Name" xml:space="preserve">
+    <value>Ultimate Performance Plan</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerUltimatePerf_Desc" xml:space="preserve">
+    <value>Sets Windows power plan to Ultimate Performance for maximum CPU/GPU performance</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGpuScheduling_Name" xml:space="preserve">
+    <value>Hardware GPU Scheduling</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGpuScheduling_Desc" xml:space="preserve">
+    <value>Enables hardware-accelerated GPU scheduling (Windows 10 2004+)</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGameMode_Name" xml:space="preserve">
+    <value>Game Mode</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGameMode_Desc" xml:space="preserve">
+    <value>Enables Windows Game Mode for better gaming performance</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerForegroundPriority_Name" xml:space="preserve">
+    <value>Foreground Priority Boost</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerForegroundPriority_Desc" xml:space="preserve">
+    <value>Increases CPU priority for foreground applications</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceTelemetry_Name" xml:space="preserve">
+    <value>Disable Telemetry</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceTelemetry_Desc" xml:space="preserve">
+    <value>Disables Windows telemetry data collection (DiagTrack service)</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSysmain_Name" xml:space="preserve">
+    <value>Disable SysMain (Superfetch)</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSysmain_Desc" xml:space="preserve">
+    <value>Disables Superfetch service - recommended for SSD systems</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSearch_Name" xml:space="preserve">
+    <value>Disable Search Indexing</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSearch_Desc" xml:space="preserve">
+    <value>Disables Windows Search indexing for lower disk/CPU usage</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSearch_Warning" xml:space="preserve">
+    <value>May slow down file searches</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceDiagtrack_Name" xml:space="preserve">
+    <value>Disable Connected Experiences</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceDiagtrack_Desc" xml:space="preserve">
+    <value>Disables Connected User Experiences and Telemetry service</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpNodelay_Name" xml:space="preserve">
+    <value>TCP No Delay</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpNodelay_Desc" xml:space="preserve">
+    <value>Disables TCP delayed acknowledgments for lower latency</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpAck_Name" xml:space="preserve">
+    <value>TCP ACK Optimization</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpAck_Desc" xml:space="preserve">
+    <value>Optimizes TCP ACK frequency for faster responses</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkDeliveryOpt_Name" xml:space="preserve">
+    <value>Disable P2P Updates</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkDeliveryOpt_Desc" xml:space="preserve">
+    <value>Disables Delivery Optimization P2P sharing</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkNagle_Name" xml:space="preserve">
+    <value>Disable Nagle Algorithm</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkNagle_Desc" xml:space="preserve">
+    <value>Reduces TCP buffering delay - helpful for online games</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputMouseAccel_Name" xml:space="preserve">
+    <value>Disable Mouse Acceleration</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputMouseAccel_Desc" xml:space="preserve">
+    <value>Disables 'Enhance pointer precision' for 1:1 mouse movement</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameDvr_Name" xml:space="preserve">
+    <value>Disable Game DVR</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameDvr_Desc" xml:space="preserve">
+    <value>Disables background game recording for better performance</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameBar_Name" xml:space="preserve">
+    <value>Disable Xbox Game Bar</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameBar_Desc" xml:space="preserve">
+    <value>Disables the Xbox Game Bar overlay</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputFullscreenOpt_Name" xml:space="preserve">
+    <value>Fullscreen Optimizations</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputFullscreenOpt_Desc" xml:space="preserve">
+    <value>Configures fullscreen optimizations for better compatibility</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualTransparency_Name" xml:space="preserve">
+    <value>Disable Transparency</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualTransparency_Desc" xml:space="preserve">
+    <value>Disables Windows transparency effects</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualAnimations_Name" xml:space="preserve">
+    <value>Disable Animations</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualAnimations_Desc" xml:space="preserve">
+    <value>Disables window animations for snappier UI</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageTrim_Name" xml:space="preserve">
+    <value>TRIM for SSD</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageTrim_Desc" xml:space="preserve">
+    <value>Enables TRIM command for SSD health and performance</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageLastAccess_Name" xml:space="preserve">
+    <value>Disable Last Access Timestamps</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageLastAccess_Desc" xml:space="preserve">
+    <value>Disables NTFS last access time updates for lower disk activity</value>
+  </data>
+  <data name="SystemOptimizer_Item_Storage8dot3_Name" xml:space="preserve">
+    <value>Disable 8.3 Names</value>
+  </data>
+  <data name="SystemOptimizer_Item_Storage8dot3_Desc" xml:space="preserve">
+    <value>Disables legacy short filename creation</value>
+  </data>
+  <data name="SystemOptimizer_Item_Storage8dot3_Warning" xml:space="preserve">
+    <value>May break very old software</value>
+  </data>
+  <data name="UpdateViewModel_CheckingForUpdates" xml:space="preserve">
+    <value>Checking for updates...</value>
+  </data>
+  <data name="UpdateViewModel_UpdateAvailableFormat" xml:space="preserve">
+    <value>Update available: v{0} (Current {1})</value>
+  </data>
+  <data name="UpdateViewModel_DownloadingFormat" xml:space="preserve">
+    <value>Downloading v{0} ({1})</value>
+  </data>
+  <data name="UpdateViewModel_InitializingDownload" xml:space="preserve">
+    <value>Initializing download...</value>
+  </data>
+  <data name="UpdateViewModel_ManualDownloadRequired" xml:space="preserve">
+    <value>Update requires manual download (missing SHA256 in release notes).</value>
+  </data>
+  <data name="UpdateViewModel_DownloadFailedManual" xml:space="preserve">
+    <value>Download failed. Check Release Notes for manual download.</value>
+  </data>
+  <data name="UpdateViewModel_InstallBlockedSha" xml:space="preserve">
+    <value>Install blocked until SHA256 is provided</value>
+  </data>
+  <data name="UpdateViewModel_DownloadFailed" xml:space="preserve">
+    <value>Download failed</value>
+  </data>
+  <data name="UpdateViewModel_Installing" xml:space="preserve">
+    <value>Installing update...</value>
+  </data>
+  <data name="UpdateViewModel_LaunchingInstaller" xml:space="preserve">
+    <value>Launching installer...</value>
+  </data>
+  <data name="UpdateViewModel_InstallationFailed" xml:space="preserve">
+    <value>Installation failed</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="BloatwareManagerViewModel_StatusDonePrefix" xml:space="preserve">
+    <value>Done: </value>
+  </data>
+  <data name="BloatwareManagerViewModel_StatusFailedPrefix" xml:space="preserve">
+    <value>Failed: </value>
+  </data>
+  <data name="BloatwareManagerViewModel_InitialStatus" xml:space="preserve">
+    <value>Done: Click Scan to detect bloatware</value>
+  </data>
+  <data name="BloatwareManagerViewModel_ScanCompletedFormat" xml:space="preserve">
+    <value>Scan completed: {0} items detected</value>
+  </data>
+  <data name="BloatwareManagerViewModel_ScanFailedFormat" xml:space="preserve">
+    <value>Scan failed: {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_NotAdminWarn" xml:space="preserve">
+    <value>OmenCore is not running as Administrator. Bloatware removal requires admin rights.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_CannotRemoveNotAdmin" xml:space="preserve">
+    <value>Cannot remove: OmenCore is not running as Administrator.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_NoLowRisk" xml:space="preserve">
+    <value>No low-risk installed items are currently available for removal</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveSelectedItem" xml:space="preserve">
+    <value>Remove Selected Item</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveLowRisk" xml:space="preserve">
+    <value>Remove Low-Risk Bloatware</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovingFormat" xml:space="preserve">
+    <value>Removing {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovingProgressFormat" xml:space="preserve">
+    <value>Removing {0}/{1}: {2}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovedFormat" xml:space="preserve">
+    <value>Removed {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovedDetailFormat" xml:space="preserve">
+    <value>Removed {0}: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_SkippedNoChange" xml:space="preserve">
+    <value>Skipped {0}: no state change was required</value>
+  </data>
+  <data name="BloatwareManagerViewModel_SkippedDetailFormat" xml:space="preserve">
+    <value>Skipped {0}: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveFailedFormat" xml:space="preserve">
+    <value>{0} removal failed</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveFailedDetailFormat" xml:space="preserve">
+    <value>{0} removal failed: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovePendingFormat" xml:space="preserve">
+    <value>{0} removal is still pending</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveUnknownFormat" xml:space="preserve">
+    <value>{0} removal completed with an unknown status</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveCompletedDetailFormat" xml:space="preserve">
+    <value>{0} removal completed: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkCanceledFormat" xml:space="preserve">
+    <value>Bulk remove canceled at {0}. {1} removed, {2} skipped. Export log for details.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkCompleteFormat" xml:space="preserve">
+    <value>Bulk remove complete: {0} removed, {1} skipped out of {2}.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkSkipExampleFormat" xml:space="preserve">
+    <value> Example skip: {0} ({1})</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkStoppedFormat" xml:space="preserve">
+    <value>Bulk remove stopped at {0}: {1}. Rollback restored {2}, failed {3}, skipped {4}. Export log for details.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_NoFailureDetail" xml:space="preserve">
+    <value>No failure detail available</value>
+  </data>
+  <data name="BloatwareManagerViewModel_UnknownItem" xml:space="preserve">
+    <value>unknown item</value>
+  </data>
+  <data name="BloatwareManagerViewModel_TheCurrentItem" xml:space="preserve">
+    <value>the current item</value>
+  </data>
+  <data name="BloatwareManagerViewModel_PreviewSelectedFormat" xml:space="preserve">
+    <value>Selected {0} of {1} item(s).</value>
+  </data>
+  <data name="BloatwareManagerViewModel_PreviewConflictFormat" xml:space="preserve">
+    <value> {0} conflict-sensitive item(s): verify fan, RGB, hotkeys, update path, and restore point before removal.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_EstimatedUnderMin" xml:space="preserve">
+    <value>Estimated time: less than 1 minute</value>
+  </data>
+  <data name="BloatwareManagerViewModel_EstimatedAboutFormat" xml:space="preserve">
+    <value>Estimated time: about {0} minute(s)</value>
+  </data>
+  <data name="BloatwareManagerViewModel_ProgressDoneFormat" xml:space="preserve">
+    <value>{0}/{1} done</value>
+  </data>
+  <data name="BloatwareManagerViewModel_Waiting" xml:space="preserve">
+    <value>Waiting...</value>
+  </data>
+  <data name="RgbScene_NameOmenRed" xml:space="preserve">
+    <value>OMEN Red</value>
+  </data>
+  <data name="RgbScene_NameGaming" xml:space="preserve">
+    <value>Gaming</value>
+  </data>
+  <data name="RgbScene_NameNightMode" xml:space="preserve">
+    <value>Night Mode</value>
+  </data>
+  <data name="RgbScene_NameWork" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="RgbScene_NameRainbow" xml:space="preserve">
+    <value>Rainbow</value>
+  </data>
+  <data name="RgbScene_NameHeatWave" xml:space="preserve">
+    <value>Heat Wave</value>
+  </data>
+  <data name="RgbScene_NameCalmPulse" xml:space="preserve">
+    <value>Calm Pulse</value>
+  </data>
+  <data name="RgbScene_NameCoolBlue" xml:space="preserve">
+    <value>Cool Blue</value>
+  </data>
+  <data name="RgbScene_NameAmbient" xml:space="preserve">
+    <value>Ambient</value>
+  </data>
+  <data name="RgbScene_NameAudioReactive" xml:space="preserve">
+    <value>Audio Reactive</value>
+  </data>
+  <data name="RgbScene_NameLightsOff" xml:space="preserve">
+    <value>Lights Off</value>
+  </data>
+  <data name="RgbScene_NamePurpleHaze" xml:space="preserve">
+    <value>Purple Haze</value>
+  </data>
+  <data name="RgbScene_NameWhite" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="RgbScene_NameWaveBlue" xml:space="preserve">
+    <value>Wave Blue</value>
+  </data>
+  <data name="RgbScene_NameWaveRed" xml:space="preserve">
+    <value>Wave Red</value>
+  </data>
+  <data name="RgbScene_NameBreathingGreen" xml:space="preserve">
+    <value>Breathing Green</value>
+  </data>
+  <data name="RgbScene_NameReactivePurple" xml:space="preserve">
+    <value>Reactive Purple</value>
+  </data>
+  <data name="RgbScene_NameSpectrumFlow" xml:space="preserve">
+    <value>Spectrum Flow</value>
+  </data>
+  <data name="RgbScene_NameCyberpunk" xml:space="preserve">
+    <value>Cyberpunk</value>
+  </data>
+  <data name="RgbScene_NameSunset" xml:space="preserve">
+    <value>Sunset</value>
+  </data>
+  <data name="RgbScene_NameForest" xml:space="preserve">
+    <value>Forest</value>
+  </data>
+  <data name="RgbScene_NameOcean" xml:space="preserve">
+    <value>Ocean</value>
+  </data>
+  <data name="RgbScene_NameLava" xml:space="preserve">
+    <value>Lava</value>
+  </data>
+  <data name="RgbScene_NameIce" xml:space="preserve">
+    <value>Ice</value>
+  </data>
+  <data name="RgbScene_NameStealth" xml:space="preserve">
+    <value>Stealth</value>
+  </data>
+  <data name="RgbScene_NameOff" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="RgbScene_NameNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="RgbScene_NameCustomFormat" xml:space="preserve">
+    <value>Custom Scene {0}</value>
+  </data>
+  <data name="AudioViz_Pulse" xml:space="preserve">
+    <value>Pulse</value>
+  </data>
+  <data name="AudioViz_Spectrum" xml:space="preserve">
+    <value>Spectrum</value>
+  </data>
+  <data name="AudioViz_VuMeter" xml:space="preserve">
+    <value>VuMeter</value>
+  </data>
+  <data name="AudioViz_Wave" xml:space="preserve">
+    <value>Wave</value>
+  </data>
+  <data name="AudioViz_BeatSync" xml:space="preserve">
+    <value>BeatSync</value>
+  </data>
 </root>

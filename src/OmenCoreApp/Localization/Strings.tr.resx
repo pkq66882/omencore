@@ -5395,4 +5395,466 @@
   <data name="DiagnosticsView_UnknownModel" xml:space="preserve">
     <value>Bilinmeyen model</value>
   </data>
+  <data name="SystemOptimizer_StatusDone" xml:space="preserve">
+    <value>Tamamlandı</value>
+  </data>
+  <data name="SystemOptimizer_RiskLow" xml:space="preserve">
+    <value>Düşük risk</value>
+  </data>
+  <data name="SystemOptimizer_RiskMedium" xml:space="preserve">
+    <value>Orta risk</value>
+  </data>
+  <data name="SystemOptimizer_RiskHigh" xml:space="preserve">
+    <value>Yüksek risk</value>
+  </data>
+  <data name="SystemOptimizer_RiskUnknown" xml:space="preserve">
+    <value>Bilinmeyen</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightHighRiskBanner" xml:space="preserve">
+    <value>Ön kontrol {0} yüksek riskli iyileştirme buldu. "Oyun Maksimum" uygulamadan önce gözden geçirin.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_PreflightNoHighRisk" xml:space="preserve">
+    <value>Ön kontrolde yüksek riskli iyileştirme yok.</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_SummaryFormat" xml:space="preserve">
+    <value>Ön kontrol: Düşük {0}, Orta {1}, Yüksek {2}{3}</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_RebootYes" xml:space="preserve">
+    <value> | Yeniden başlatma: Evet</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_RebootNo" xml:space="preserve">
+    <value> | Yeniden başlatma: Hayır</value>
+  </data>
+  <data name="SystemOptimizerPreflightFormatter_MoreWarnings" xml:space="preserve">
+    <value> (+{0} tane daha)</value>
+  </data>
+  <data name="Optimizer_WarningIdlePower" xml:space="preserve">
+    <value>Boşta güç tüketimini artırır; pilde önerilmez.</value>
+  </data>
+  <data name="Optimizer_WarningHddAppLaunch" xml:space="preserve">
+    <value>HDD'de program açılışını yavaşlatabilir; SSD'de faydalıdır.</value>
+  </data>
+  <data name="Optimizer_WarningSearchSlower" xml:space="preserve">
+    <value>Bu değişiklikten sonra Windows Arama yavaşlar.</value>
+  </data>
+  <data name="Optimizer_WarningHdrVrr" xml:space="preserve">
+    <value>Bazı HDR ve değişken yenileme özellikleri etkilenen uygulamalarda çalışmayabilir.</value>
+  </data>
+  <data name="Optimizer_WarningLegacy16" xml:space="preserve">
+    <value>Bazı eski 16-bit programlar bu değişiklikten sonra açılmayabilir.</value>
+  </data>
+  <data name="Optimizer_WarningBackupTimestamps" xml:space="preserve">
+    <value>Son erişim zaman damgalarına dayanan yedekleme araçları değişmeyen dosyaları yanlış tespit edebilir.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ItemEnabled" xml:space="preserve">
+    <value>Etkinleştirildi: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ItemDisabled" xml:space="preserve">
+    <value>Devre dışı bırakıldı: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ItemEnabledReboot" xml:space="preserve">
+    <value>Etkinleştirildi: {0} (yeniden başlatma gerekli)</value>
+  </data>
+  <data name="SystemOptimizerViewModel_GamingMaxBody" xml:space="preserve">
+    <value>Maksimum performans için TÜM oyun iyileştirmeleri uygulanacak.&#10;&#10;{0}&#10;{1}&#10;&#10;Değişikliklerden önce bir sistem geri yükleme noktası oluşturulacak.&#10;&#10;Devam edilsin mi?</value>
+  </data>
+  <data name="SystemOptimizerViewModel_GamingMaxTitle" xml:space="preserve">
+    <value>"Oyun Maksimum" Uygula</value>
+  </data>
+  <data name="SystemOptimizerViewModel_BalancedBody" xml:space="preserve">
+    <value>Minimum riskle önerilen iyileştirmeler uygulanacak.&#10;&#10;{0}&#10;{1}&#10;&#10;Değişikliklerden önce bir sistem geri yükleme noktası oluşturulacak.&#10;&#10;Devam edilsin mi?</value>
+  </data>
+  <data name="SystemOptimizerViewModel_BalancedTitle" xml:space="preserve">
+    <value>"Dengeli" İyileştirmeleri Uygula</value>
+  </data>
+  <data name="SystemOptimizerViewModel_AppliedCount" xml:space="preserve">
+    <value>İyileştirme uygulandı: {0}/{1}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_AppliedCountFailed" xml:space="preserve">
+    <value>İyileştirme uygulandı: {0}/{1} ({2} başarısız)</value>
+  </data>
+  <data name="SystemOptimizerViewModel_RebootPromptBody" xml:space="preserve">
+    <value>Bazı değişikliklerin etkili olması için yeniden başlatma gerekir.&#10;&#10;Şimdi yeniden başlatılsın mı?</value>
+  </data>
+  <data name="SystemOptimizerViewModel_RebootPromptTitle" xml:space="preserve">
+    <value>Yeniden başlatma gerekli</value>
+  </data>
+  <data name="CommonDialog_Error" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="SystemOptimizerViewModel_ApplyFailedBody" xml:space="preserve">
+    <value>İyileştirmeler uygulanamadı:&#10;{0}</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerUltimatePerf_Name" xml:space="preserve">
+    <value>Ultimate Performans Planı</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerUltimatePerf_Desc" xml:space="preserve">
+    <value>Windows güç planını CPU/GPU için en yüksek performansa ayarlar</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGpuScheduling_Name" xml:space="preserve">
+    <value>Donanım GPU Zamanlaması</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGpuScheduling_Desc" xml:space="preserve">
+    <value>Donanım hızlandırmalı GPU zamanlamayı etkinleştirir (Windows 10 2004+)</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGameMode_Name" xml:space="preserve">
+    <value>Oyun Modu</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerGameMode_Desc" xml:space="preserve">
+    <value>Daha iyi oyun performansı için Windows Oyun Modunu etkinleştirir</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerForegroundPriority_Name" xml:space="preserve">
+    <value>Öncelik Plani Artırımı</value>
+  </data>
+  <data name="SystemOptimizer_Item_PowerForegroundPriority_Desc" xml:space="preserve">
+    <value>Öndeki uygulamalar için CPU önceliğini artırır</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceTelemetry_Name" xml:space="preserve">
+    <value>Telemetriyi Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceTelemetry_Desc" xml:space="preserve">
+    <value>Windows telemetri toplamayı devre dışı bırakır (DiagTrack servisi)</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSysmain_Name" xml:space="preserve">
+    <value>SysMain (Superfetch) Devre Dışı</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSysmain_Desc" xml:space="preserve">
+    <value>Superfetch servisini devre dışı bırakır — SSD sistemler için önerilir</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSearch_Name" xml:space="preserve">
+    <value>Arama Dizine Eklemeyi Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSearch_Desc" xml:space="preserve">
+    <value>Disk/CPU kullanımını azaltmak için Windows Arama dizine eklemeyi devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceSearch_Warning" xml:space="preserve">
+    <value>Dosya aramaları yavaşlayabilir</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceDiagtrack_Name" xml:space="preserve">
+    <value>Bağlı Deneyimleri Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_ServiceDiagtrack_Desc" xml:space="preserve">
+    <value>Bağlı Kullanıcı Deneyimleri ve Telemetri servisini devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpNodelay_Name" xml:space="preserve">
+    <value>TCP Gecikmesiz</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpNodelay_Desc" xml:space="preserve">
+    <value>Düşük gecikme için TCP gecikmeli onayları devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpAck_Name" xml:space="preserve">
+    <value>TCP ACK İyileştirmesi</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkTcpAck_Desc" xml:space="preserve">
+    <value>Daha hızlı yanıtlar için TCP ACK sıklığını iyileştirir</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkDeliveryOpt_Name" xml:space="preserve">
+    <value>P2P Güncellemelerini Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkDeliveryOpt_Desc" xml:space="preserve">
+    <value>Teslim İyileştirmesi P2P paylaşımını devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkNagle_Name" xml:space="preserve">
+    <value>Nagle Algoritmasını Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_NetworkNagle_Desc" xml:space="preserve">
+    <value>TCP arabellekleme gecikmesini azaltır — çevrimiçi oyunlar için faydalıdır</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputMouseAccel_Name" xml:space="preserve">
+    <value>Fare Hızlandırmayı Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputMouseAccel_Desc" xml:space="preserve">
+    <value>1:1 fare hareketi için "İşaretçi hassasiyetini artır" seçeneğini devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameDvr_Name" xml:space="preserve">
+    <value>Game DVR Devre Dışı</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameDvr_Desc" xml:space="preserve">
+    <value>Daha iyi performans için arka plan oyun kaydını devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameBar_Name" xml:space="preserve">
+    <value>Xbox Game Bar Devre Dışı</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputGameBar_Desc" xml:space="preserve">
+    <value>Xbox Game Bar katmanını devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputFullscreenOpt_Name" xml:space="preserve">
+    <value>Tam Ekran İyileştirmeleri</value>
+  </data>
+  <data name="SystemOptimizer_Item_InputFullscreenOpt_Desc" xml:space="preserve">
+    <value>Daha iyi uyumluluk için tam ekran iyileştirmelerini yapılandırır</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualTransparency_Name" xml:space="preserve">
+    <value>Şeffaflığı Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualTransparency_Desc" xml:space="preserve">
+    <value>Windows şeffaflık efektlerini devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualAnimations_Name" xml:space="preserve">
+    <value>Animasyonları Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_VisualAnimations_Desc" xml:space="preserve">
+    <value>Daha hızlı arayüz için pencere animasyonlarını devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageTrim_Name" xml:space="preserve">
+    <value>SSD için TRIM</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageTrim_Desc" xml:space="preserve">
+    <value>SSD sağlığı ve performansı için TRIM komutunu etkinleştirir</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageLastAccess_Name" xml:space="preserve">
+    <value>Son Erişim Zaman Damgalarını Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_StorageLastAccess_Desc" xml:space="preserve">
+    <value>Düşük disk etkinliği için NTFS son erişim zamanı güncellemelerini devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_Storage8dot3_Name" xml:space="preserve">
+    <value>8.3 Adlarını Devre Dışı Bırak</value>
+  </data>
+  <data name="SystemOptimizer_Item_Storage8dot3_Desc" xml:space="preserve">
+    <value>Eski kısa dosya adı oluşturmayı devre dışı bırakır</value>
+  </data>
+  <data name="SystemOptimizer_Item_Storage8dot3_Warning" xml:space="preserve">
+    <value>Çok eski yazılımları bozabilir</value>
+  </data>
+  <data name="UpdateViewModel_CheckingForUpdates" xml:space="preserve">
+    <value>Güncellemeler kontrol ediliyor...</value>
+  </data>
+  <data name="UpdateViewModel_UpdateAvailableFormat" xml:space="preserve">
+    <value>Güncelleme mevcut: v{0} (Mevcut {1})</value>
+  </data>
+  <data name="UpdateViewModel_DownloadingFormat" xml:space="preserve">
+    <value>İndiriliyor v{0} ({1})</value>
+  </data>
+  <data name="UpdateViewModel_InitializingDownload" xml:space="preserve">
+    <value>İndirme başlatılıyor...</value>
+  </data>
+  <data name="UpdateViewModel_ManualDownloadRequired" xml:space="preserve">
+    <value>Güncelleme manuel indirme gerektirir (sürüm notlarında SHA256 eksik).</value>
+  </data>
+  <data name="UpdateViewModel_DownloadFailedManual" xml:space="preserve">
+    <value>İndirme başarısız. Manuel indirme için Sürüm Notlarına bakın.</value>
+  </data>
+  <data name="UpdateViewModel_InstallBlockedSha" xml:space="preserve">
+    <value>SHA256 sağlanana kadar yükleme engellendi</value>
+  </data>
+  <data name="UpdateViewModel_DownloadFailed" xml:space="preserve">
+    <value>İndirme başarısız</value>
+  </data>
+  <data name="UpdateViewModel_Installing" xml:space="preserve">
+    <value>Güncelleme yükleniyor...</value>
+  </data>
+  <data name="UpdateViewModel_LaunchingInstaller" xml:space="preserve">
+    <value>Yükleyici başlatılıyor...</value>
+  </data>
+  <data name="UpdateViewModel_InstallationFailed" xml:space="preserve">
+    <value>Yükleme başarısız</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>Evet</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>Hayır</value>
+  </data>
+  <data name="BloatwareManagerViewModel_StatusDonePrefix" xml:space="preserve">
+    <value>Tamamlandı: </value>
+  </data>
+  <data name="BloatwareManagerViewModel_StatusFailedPrefix" xml:space="preserve">
+    <value>Başarısız: </value>
+  </data>
+  <data name="BloatwareManagerViewModel_InitialStatus" xml:space="preserve">
+    <value>Tamamlandı: Önyazılımı tespit etmek için "Tara"ya tıklayın</value>
+  </data>
+  <data name="BloatwareManagerViewModel_ScanCompletedFormat" xml:space="preserve">
+    <value>Tarama tamamlandı: {0} öğe algılandı</value>
+  </data>
+  <data name="BloatwareManagerViewModel_ScanFailedFormat" xml:space="preserve">
+    <value>Tarama başarısız: {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_NotAdminWarn" xml:space="preserve">
+    <value>OmenCore yönetici olarak çalışmıyor. Önyazılım kaldırma yönetici hakları gerektirir.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_CannotRemoveNotAdmin" xml:space="preserve">
+    <value>Kaldırılamaz: OmenCore yönetici olarak çalışmıyor.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_NoLowRisk" xml:space="preserve">
+    <value>Şu anda kaldırılabilir düşük riskli yüklü öğe yok</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveSelectedItem" xml:space="preserve">
+    <value>Seçili Öğeyi Kaldır</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveLowRisk" xml:space="preserve">
+    <value>Düşük Riskli Önyazılımı Kaldır</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovingFormat" xml:space="preserve">
+    <value>Kaldırılıyor: {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovingProgressFormat" xml:space="preserve">
+    <value>Kaldırılıyor {0}/{1}: {2}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovedFormat" xml:space="preserve">
+    <value>Kaldırıldı: {0}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovedDetailFormat" xml:space="preserve">
+    <value>Kaldırıldı: {0}: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_SkippedNoChange" xml:space="preserve">
+    <value>Atlandı {0}: durum değişikliği gerekli değildi</value>
+  </data>
+  <data name="BloatwareManagerViewModel_SkippedDetailFormat" xml:space="preserve">
+    <value>Atlandı {0}: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveFailedFormat" xml:space="preserve">
+    <value>{0} kaldırma başarısız</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveFailedDetailFormat" xml:space="preserve">
+    <value>{0} kaldırma başarısız: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemovePendingFormat" xml:space="preserve">
+    <value>{0} kaldırma hâlâ beklemede</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveUnknownFormat" xml:space="preserve">
+    <value>{0} kaldırma bilinmeyen durumla tamamlandı</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RemoveCompletedDetailFormat" xml:space="preserve">
+    <value>{0} kaldırma tamamlandı: {1}</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkCanceledFormat" xml:space="preserve">
+    <value>Toplu kaldırma "{0}" öğesinde iptal edildi. {1} kaldırıldı, {2} atlandı. Ayrıntılar için günlüğü dışa aktarın.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkCompleteFormat" xml:space="preserve">
+    <value>Toplu kaldırma tamamlandı: {2} öğeden {0} kaldırıldı, {1} atlandı.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkSkipExampleFormat" xml:space="preserve">
+    <value> Örnek atlama: {0} ({1})</value>
+  </data>
+  <data name="BloatwareManagerViewModel_BulkStoppedFormat" xml:space="preserve">
+    <value>Toplu kaldırma "{0}" öğesinde durduruldu: {1}. Geri alma {2} öğesini kurtardı, {3} başarısız, {4} atlandı. Ayrıntılar için günlüğü dışa aktarın.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_NoFailureDetail" xml:space="preserve">
+    <value>Başarısızlık ayrıntısı yok</value>
+  </data>
+  <data name="BloatwareManagerViewModel_UnknownItem" xml:space="preserve">
+    <value>bilinmeyen öğe</value>
+  </data>
+  <data name="BloatwareManagerViewModel_TheCurrentItem" xml:space="preserve">
+    <value>geçerli öğe</value>
+  </data>
+  <data name="BloatwareManagerViewModel_PreviewSelectedFormat" xml:space="preserve">
+    <value>{1} öğeden {0} tanesi seçildi.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_PreviewConflictFormat" xml:space="preserve">
+    <value> {0} çakışmaya duyarlı öğe: kaldırmadan önce fan, RGB, kısayollar, güncelleme yolu ve geri yükleme noktasını doğrulayın.</value>
+  </data>
+  <data name="BloatwareManagerViewModel_EstimatedUnderMin" xml:space="preserve">
+    <value>Tahmini süre: 1 dakikadan az</value>
+  </data>
+  <data name="BloatwareManagerViewModel_EstimatedAboutFormat" xml:space="preserve">
+    <value>Tahmini süre: yaklaşık {0} dakika</value>
+  </data>
+  <data name="BloatwareManagerViewModel_ProgressDoneFormat" xml:space="preserve">
+    <value>{0}/{1} tamam</value>
+  </data>
+  <data name="BloatwareManagerViewModel_Waiting" xml:space="preserve">
+    <value>Bekleniyor...</value>
+  </data>
+  <data name="RgbScene_NameOmenRed" xml:space="preserve">
+    <value>OMEN Kırmızı</value>
+  </data>
+  <data name="RgbScene_NameGaming" xml:space="preserve">
+    <value>Oyun</value>
+  </data>
+  <data name="RgbScene_NameNightMode" xml:space="preserve">
+    <value>Gece Modu</value>
+  </data>
+  <data name="RgbScene_NameWork" xml:space="preserve">
+    <value>Çalışma</value>
+  </data>
+  <data name="RgbScene_NameRainbow" xml:space="preserve">
+    <value>Gökkuşağı</value>
+  </data>
+  <data name="RgbScene_NameHeatWave" xml:space="preserve">
+    <value>Sıcak Dalga</value>
+  </data>
+  <data name="RgbScene_NameCalmPulse" xml:space="preserve">
+    <value>Sakin Nabız</value>
+  </data>
+  <data name="RgbScene_NameCoolBlue" xml:space="preserve">
+    <value>Serin Mavi</value>
+  </data>
+  <data name="RgbScene_NameAmbient" xml:space="preserve">
+    <value>Ortam</value>
+  </data>
+  <data name="RgbScene_NameAudioReactive" xml:space="preserve">
+    <value>Ses Reaktif</value>
+  </data>
+  <data name="RgbScene_NameLightsOff" xml:space="preserve">
+    <value>Işıklar Kapalı</value>
+  </data>
+  <data name="RgbScene_NamePurpleHaze" xml:space="preserve">
+    <value>Mor Pus</value>
+  </data>
+  <data name="RgbScene_NameWhite" xml:space="preserve">
+    <value>Beyaz</value>
+  </data>
+  <data name="RgbScene_NameWaveBlue" xml:space="preserve">
+    <value>Mavi Dalga</value>
+  </data>
+  <data name="RgbScene_NameWaveRed" xml:space="preserve">
+    <value>Kırmızı Dalga</value>
+  </data>
+  <data name="RgbScene_NameBreathingGreen" xml:space="preserve">
+    <value>Yeşil Nefes</value>
+  </data>
+  <data name="RgbScene_NameReactivePurple" xml:space="preserve">
+    <value>Reaktif Mor</value>
+  </data>
+  <data name="RgbScene_NameSpectrumFlow" xml:space="preserve">
+    <value>Spektrum Akışı</value>
+  </data>
+  <data name="RgbScene_NameCyberpunk" xml:space="preserve">
+    <value>Siberpunk</value>
+  </data>
+  <data name="RgbScene_NameSunset" xml:space="preserve">
+    <value>Gün Batımı</value>
+  </data>
+  <data name="RgbScene_NameForest" xml:space="preserve">
+    <value>Orman</value>
+  </data>
+  <data name="RgbScene_NameOcean" xml:space="preserve">
+    <value>Okyanus</value>
+  </data>
+  <data name="RgbScene_NameLava" xml:space="preserve">
+    <value>Lav</value>
+  </data>
+  <data name="RgbScene_NameIce" xml:space="preserve">
+    <value>Buz</value>
+  </data>
+  <data name="RgbScene_NameStealth" xml:space="preserve">
+    <value>Gizli</value>
+  </data>
+  <data name="RgbScene_NameOff" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="RgbScene_NameNone" xml:space="preserve">
+    <value>Yok</value>
+  </data>
+  <data name="RgbScene_NameCustomFormat" xml:space="preserve">
+    <value>Özel Sahne {0}</value>
+  </data>
+  <data name="AudioViz_Pulse" xml:space="preserve">
+    <value>Nabız</value>
+  </data>
+  <data name="AudioViz_Spectrum" xml:space="preserve">
+    <value>Spektrum</value>
+  </data>
+  <data name="AudioViz_VuMeter" xml:space="preserve">
+    <value>Vu Ölçer</value>
+  </data>
+  <data name="AudioViz_Wave" xml:space="preserve">
+    <value>Dalga</value>
+  </data>
+  <data name="AudioViz_BeatSync" xml:space="preserve">
+    <value>BeatSync</value>
+  </data>
 </root>

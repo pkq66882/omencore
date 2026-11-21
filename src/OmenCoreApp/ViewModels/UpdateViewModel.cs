@@ -158,7 +158,7 @@ namespace OmenCore.ViewModels
                 if (showStatus)
                 {
                     UpdateBannerVisible = true;
-                    UpdateBannerMessage = "Checking for updates...";
+                    UpdateBannerMessage = Strings.UpdateViewModel_CheckingForUpdates;
                 }
 
                 var result = await _autoUpdateService.CheckForUpdatesAsync();
@@ -181,7 +181,7 @@ namespace OmenCore.ViewModels
 
                     _availableUpdate = result.LatestVersion;
                     _updateInstallBlocked = false;
-                    UpdateBannerMessage = $"Update available: v{_availableUpdate.VersionString} (Current {AppVersionLabel})";
+                    UpdateBannerMessage = string.Format(Strings.UpdateViewModel_UpdateAvailableFormat, _availableUpdate.VersionString, AppVersionLabel);
                     UpdateBannerVisible = true;
                 }
                 else
@@ -240,8 +240,8 @@ namespace OmenCore.ViewModels
             {
                 UpdateDownloadInProgress = true;
                 UpdateDownloadProgress = 0;
-                UpdateBannerMessage = $"Downloading v{_availableUpdate.VersionString} ({_availableUpdate.FileSizeFormatted})";
-                UpdateDownloadStatus = "Initializing download...";
+                UpdateBannerMessage = string.Format(Strings.UpdateViewModel_DownloadingFormat, _availableUpdate.VersionString, _availableUpdate.FileSizeFormatted);
+                UpdateDownloadStatus = Strings.UpdateViewModel_InitializingDownload;
 
                 _logging.Info($"Starting update download: v{_availableUpdate.VersionString}");
 
@@ -251,17 +251,17 @@ namespace OmenCore.ViewModels
                 {
                     var hashMissing = string.IsNullOrWhiteSpace(_availableUpdate?.Sha256Hash);
                     UpdateBannerMessage = hashMissing
-                        ? "Update requires manual download (missing SHA256 in release notes)."
-                        : "Download failed. Check Release Notes for manual download.";
-                    UpdateDownloadStatus = hashMissing ? "Install blocked until SHA256 is provided" : "Download failed";
+                        ? Strings.UpdateViewModel_ManualDownloadRequired
+                        : Strings.UpdateViewModel_DownloadFailedManual;
+                    UpdateDownloadStatus = hashMissing ? Strings.UpdateViewModel_InstallBlockedSha : Strings.UpdateViewModel_DownloadFailed;
                     _updateInstallBlocked = hashMissing;
                     _logging.Warn("Update download unavailable; missing hash or download error");
                     RefreshUpdateCommands();
                     return;
                 }
 
-                UpdateBannerMessage = "Installing update...";
-                UpdateDownloadStatus = "Launching installer...";
+                UpdateBannerMessage = Strings.UpdateViewModel_Installing;
+                UpdateDownloadStatus = Strings.UpdateViewModel_LaunchingInstaller;
 
                 _logging.Info($"Installing update from {System.IO.Path.GetFileName(installerPath)}");
 
@@ -270,7 +270,7 @@ namespace OmenCore.ViewModels
                 if (!installResult.Success)
                 {
                     UpdateBannerMessage = installResult.Message;
-                    UpdateDownloadStatus = "Installation failed";
+                    UpdateDownloadStatus = Strings.UpdateViewModel_InstallationFailed;
                     _logging.ErrorWithContext(
                         component: "UpdateViewModel",
                         operation: "InstallUpdateAsync",

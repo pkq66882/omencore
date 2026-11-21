@@ -304,7 +304,7 @@ namespace OmenCore.ViewModels
         /// <summary>
         /// Current scene name for display.
         /// </summary>
-        public string CurrentSceneName => _sceneService?.CurrentScene?.Name ?? "None";
+        public string CurrentSceneName => DisplayNames.Scene(_sceneService?.CurrentScene?.Name ?? "None");
         
         /// <summary>
         /// Current ambient color hex value.
@@ -1635,30 +1635,30 @@ namespace OmenCore.ViewModels
             }
             
             // Initialize keyboard presets
-            KeyboardPresets.Add(new KeyboardPreset { Name = "OMEN Red", Zone1 = "#E6002E", Zone2 = "#E6002E", Zone3 = "#E6002E", Zone4 = "#E6002E" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Gaming", Zone1 = "#FF0000", Zone2 = "#FF4500", Zone3 = "#FF6600", Zone4 = "#FF0000" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Cool Blue", Zone1 = "#0066FF", Zone2 = "#00CCFF", Zone3 = "#00CCFF", Zone4 = "#0066FF" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Rainbow", Zone1 = "#FF0000", Zone2 = "#00FF00", Zone3 = "#0000FF", Zone4 = "#FFFF00" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Purple Haze", Zone1 = "#9400D3", Zone2 = "#8B008B", Zone3 = "#9932CC", Zone4 = "#9400D3" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "White", Zone1 = "#FFFFFF", Zone2 = "#FFFFFF", Zone3 = "#FFFFFF", Zone4 = "#FFFFFF" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameOmenRed, Zone1 = "#E6002E", Zone2 = "#E6002E", Zone3 = "#E6002E", Zone4 = "#E6002E" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameGaming, Zone1 = "#FF0000", Zone2 = "#FF4500", Zone3 = "#FF6600", Zone4 = "#FF0000" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameCoolBlue, Zone1 = "#0066FF", Zone2 = "#00CCFF", Zone3 = "#00CCFF", Zone4 = "#0066FF" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameRainbow, Zone1 = "#FF0000", Zone2 = "#00FF00", Zone3 = "#0000FF", Zone4 = "#FFFF00" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NamePurpleHaze, Zone1 = "#9400D3", Zone2 = "#8B008B", Zone3 = "#9932CC", Zone4 = "#9400D3" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameWhite, Zone1 = "#FFFFFF", Zone2 = "#FFFFFF", Zone3 = "#FFFFFF", Zone4 = "#FFFFFF" });
             
             // New OMEN Light Studio style presets
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Wave Blue", Zone1 = "#0033FF", Zone2 = "#0066FF", Zone3 = "#0099FF", Zone4 = "#00CCFF" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Wave Red", Zone1 = "#FF0000", Zone2 = "#FF3300", Zone3 = "#FF6600", Zone4 = "#FF9900" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Breathing Green", Zone1 = "#00FF00", Zone2 = "#00FF00", Zone3 = "#00FF00", Zone4 = "#00FF00" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Reactive Purple", Zone1 = "#6600FF", Zone2 = "#9900FF", Zone3 = "#CC00FF", Zone4 = "#FF00FF" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Spectrum Flow", Zone1 = "#FF0000", Zone2 = "#FFFF00", Zone3 = "#00FF00", Zone4 = "#00FFFF" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Audio Reactive", Zone1 = "#FF4500", Zone2 = "#FF6600", Zone3 = "#FF8700", Zone4 = "#FFA800" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameWaveBlue, Zone1 = "#0033FF", Zone2 = "#0066FF", Zone3 = "#0099FF", Zone4 = "#00CCFF" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameWaveRed, Zone1 = "#FF0000", Zone2 = "#FF3300", Zone3 = "#FF6600", Zone4 = "#FF9900" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameBreathingGreen, Zone1 = "#00FF00", Zone2 = "#00FF00", Zone3 = "#00FF00", Zone4 = "#00FF00" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameReactivePurple, Zone1 = "#6600FF", Zone2 = "#9900FF", Zone3 = "#CC00FF", Zone4 = "#FF00FF" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameSpectrumFlow, Zone1 = "#FF0000", Zone2 = "#FFFF00", Zone3 = "#00FF00", Zone4 = "#00FFFF" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameAudioReactive, Zone1 = "#FF4500", Zone2 = "#FF6600", Zone3 = "#FF8700", Zone4 = "#FFA800" });
             
             // Additional presets for more variety (v2.7.1)
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Cyberpunk", Zone1 = "#FF00FF", Zone2 = "#00FFFF", Zone3 = "#FF00FF", Zone4 = "#00FFFF" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Sunset", Zone1 = "#FF4500", Zone2 = "#FF6347", Zone3 = "#FF7F50", Zone4 = "#FFA07A" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Forest", Zone1 = "#228B22", Zone2 = "#32CD32", Zone3 = "#90EE90", Zone4 = "#228B22" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Ocean", Zone1 = "#000080", Zone2 = "#0000FF", Zone3 = "#1E90FF", Zone4 = "#00CED1" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Lava", Zone1 = "#8B0000", Zone2 = "#FF0000", Zone3 = "#FF4500", Zone4 = "#FF6600" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Ice", Zone1 = "#E0FFFF", Zone2 = "#B0E0E6", Zone3 = "#87CEEB", Zone4 = "#ADD8E6" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Stealth", Zone1 = "#1A1A1A", Zone2 = "#2D2D2D", Zone3 = "#404040", Zone4 = "#1A1A1A" });
-            KeyboardPresets.Add(new KeyboardPreset { Name = "Off", Zone1 = "#000000", Zone2 = "#000000", Zone3 = "#000000", Zone4 = "#000000" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameCyberpunk, Zone1 = "#FF00FF", Zone2 = "#00FFFF", Zone3 = "#FF00FF", Zone4 = "#00FFFF" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameSunset, Zone1 = "#FF4500", Zone2 = "#FF6347", Zone3 = "#FF7F50", Zone4 = "#FFA07A" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameForest, Zone1 = "#228B22", Zone2 = "#32CD32", Zone3 = "#90EE90", Zone4 = "#228B22" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameOcean, Zone1 = "#000080", Zone2 = "#0000FF", Zone3 = "#1E90FF", Zone4 = "#00CED1" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameLava, Zone1 = "#8B0000", Zone2 = "#FF0000", Zone3 = "#FF4500", Zone4 = "#FF6600" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameIce, Zone1 = "#E0FFFF", Zone2 = "#B0E0E6", Zone3 = "#87CEEB", Zone4 = "#ADD8E6" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameStealth, Zone1 = "#1A1A1A", Zone2 = "#2D2D2D", Zone3 = "#404040", Zone4 = "#1A1A1A" });
+            KeyboardPresets.Add(new KeyboardPreset { Name = Strings.RgbScene_NameOff, Zone1 = "#000000", Zone2 = "#000000", Zone3 = "#000000", Zone4 = "#000000" });
             
             // Only select default preset if we didn't load colors from config
             // (selecting a preset overwrites the colors, which would discard saved colors)

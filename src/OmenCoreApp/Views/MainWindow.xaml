@@ -141,7 +141,7 @@
                             </Image>
                             <TextBlock Foreground="{StaticResource TextSecondaryBrush}" FontSize="11"
                                        VerticalAlignment="Center" Margin="8,0,0,0"
-                                       TextTrimming="CharacterEllipsis" MaxWidth="220">
+                                       TextTrimming="CharacterEllipsis" MaxWidth="340">
                                 <Run Text="{Binding SystemInfo.CpuName, Mode=OneWay}"/>
                                 <Run Text=" ("/><Run Text="{Binding SystemInfo.CpuCores, Mode=OneWay}"/><Run Text="C/"/><Run Text="{Binding SystemInfo.CpuThreads, Mode=OneWay}"/><Run Text="T)"/>
                             </TextBlock>
@@ -182,7 +182,7 @@
                                         </Image>
                                         <TextBlock Text="{Binding Name}" Foreground="{StaticResource TextSecondaryBrush}" FontSize="11"
                                                    VerticalAlignment="Center" Margin="8,0,0,0"
-                                                   TextTrimming="CharacterEllipsis" MaxWidth="220"/>
+                                                   TextTrimming="CharacterEllipsis" MaxWidth="340"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>

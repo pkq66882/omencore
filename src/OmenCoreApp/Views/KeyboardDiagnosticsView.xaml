@@ -11,14 +11,14 @@
 
             <TextBlock Text="{Binding DiagnosticStatus}" Style="{StaticResource BodyText}" Margin="0,8,0,16" />
 
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+            <WrapPanel Margin="0,0,0,16">
                 <Button Content="{x:Static loc:Strings.KeyboardDiagnosticsView_DetectDevices}" Command="{Binding RunDeviceDetectionCommand}" Style="{StaticResource PrimaryButton}" />
                 <Button Content="{x:Static loc:Strings.KeyboardDiagnosticsView_RunTestPattern}" Command="{Binding RunTestPatternCommand}" Margin="8,0,0,0" Style="{StaticResource PrimaryButton}" />
                 <Button Content="{x:Static loc:Strings.KeyboardDiagnosticsView_ClearTestPattern}" Command="{Binding ClearTestPatternCommand}" Margin="8,0,0,0" Style="{StaticResource SecondaryButton}" />
                 <Button Content="{x:Static loc:Strings.KeyboardDiagnosticsView_CollectLogs}" Command="{Binding CollectLogsCommand}" Margin="8,0,0,0" Style="{StaticResource SecondaryButton}" />
                 <Button Content="{x:Static loc:Strings.KeyboardDiagnosticsView_RgbPayloadProbeAdvanced}" Command="{Binding RunColorTableProbeCommand}" Margin="8,0,0,0" Style="{StaticResource SecondaryButton}"
                         ToolTip="{x:Static loc:Strings.KeyboardDiagnosticsView_ExperimentalTries5ColourCommandLayoutsForK}" />
-            </StackPanel>
+            </WrapPanel>
 
             <TextBlock Text="{x:Static loc:Strings.KeyboardDiagnosticsView_DetectedDevices}" Style="{StaticResource Heading3}" Margin="0,8,0,8" />
             <ListBox ItemsSource="{Binding DetectedDevices}" MaxHeight="200">

@@ -32,6 +32,8 @@
             <local:LatestFanSpeedConverter x:Key="LatestFanSpeedConverter" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:ZeroDoubleToPlaceholderConverter x:Key="ZeroDoubleToPlaceholderConverter" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:ModeDisplayNameConverter x:Key="ModeDisplayNameConverter" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:SceneDisplayNameConverter x:Key="SceneDisplayName" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:AudioVizModeDisplayConverter x:Key="AudioVizModeDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

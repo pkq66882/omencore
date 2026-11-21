@@ -12,46 +12,64 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void BuildSingleRemovalOutcomeMessage_WhenSkipped_IncludesDetail()
         {
-            var app = new BloatwareApp
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
             {
-                Name = "Victus Welcome",
-                LastRemovalStatus = RemovalStatus.Skipped,
-                LastRemovalDetail = "Package was already absent before removal attempt."
-            };
+                var app = new BloatwareApp
+                {
+                    Name = "Victus Welcome",
+                    LastRemovalStatus = RemovalStatus.Skipped,
+                    LastRemovalDetail = "Package was already absent before removal attempt."
+                };
 
-            var message = InvokeBuildSingleRemovalOutcomeMessage(app);
+                var message = InvokeBuildSingleRemovalOutcomeMessage(app);
 
-            message.Should().Contain("Skipped");
-            message.Should().Contain(app.Name);
-            message.Should().Contain("already absent");
+                message.Should().Contain("Skipped");
+                message.Should().Contain(app.Name);
+                message.Should().Contain("already absent");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]
         public void BuildBulkRemovalCompletionMessage_WhenSkippedExists_ContainsSkipSummaryAndExample()
         {
-            var result = new BulkRemovalResult
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
             {
-                RequestedTotal = 3,
-                Completed = true
-            };
-            result.Succeeded.Add(new BloatwareApp
-            {
-                Name = "HP Audio Switch",
-                LastRemovalStatus = RemovalStatus.VerifiedSuccess
-            });
-            result.Skipped.Add(new BloatwareApp
-            {
-                Name = "Victus Launcher",
-                LastRemovalStatus = RemovalStatus.Skipped,
-                LastRemovalDetail = "Startup registry value was already absent before removal attempt."
-            });
+                var result = new BulkRemovalResult
+                {
+                    RequestedTotal = 3,
+                    Completed = true
+                };
+                result.Succeeded.Add(new BloatwareApp
+                {
+                    Name = "HP Audio Switch",
+                    LastRemovalStatus = RemovalStatus.VerifiedSuccess
+                });
+                result.Skipped.Add(new BloatwareApp
+                {
+                    Name = "Victus Launcher",
+                    LastRemovalStatus = RemovalStatus.Skipped,
+                    LastRemovalDetail = "Startup registry value was already absent before removal attempt."
+                });
 
-            var message = InvokeBuildBulkRemovalCompletionMessage(result);
+                var message = InvokeBuildBulkRemovalCompletionMessage(result);
 
-            message.Should().Contain("1 removed");
-            message.Should().Contain("1 skipped");
-            message.Should().Contain("Example skip");
-            message.Should().Contain("Victus Launcher");
+                message.Should().Contain("1 removed");
+                message.Should().Contain("1 skipped");
+                message.Should().Contain("Example skip");
+                message.Should().Contain("Victus Launcher");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         private static string InvokeBuildSingleRemovalOutcomeMessage(BloatwareApp app)
