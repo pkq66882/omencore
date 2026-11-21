@@ -5248,4 +5248,145 @@
   <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
     <value>• Ön ayarlar uygulanmadan önce bir sistem geri yükleme noktası oluşturulur • Bazı değişiklikler etkili olması için yeniden başlatma gerektirebilir • Orta/Yüksek riskli optimizasyonlar sistem kararlılığını veya özellikleri etkileyebilir • Orijinal ayarlara dönmek için her an "Tümünü Geri Al"ı kullanın</value>
   </data>
+  <data name="DashboardViewModel_CpuAuthorityLabel" xml:space="preserve">
+    <value>CPU yetkilisi: </value>
+  </data>
+  <data name="SystemControl_StateConfirmed" xml:space="preserve">
+    <value>Onaylandı</value>
+  </data>
+  <data name="SystemControl_StateDegraded" xml:space="preserve">
+    <value>Bozulmuş</value>
+  </data>
+  <data name="SystemControl_StateBlocked" xml:space="preserve">
+    <value>Engellendi</value>
+  </data>
+  <data name="SystemControl_StateOverwritten" xml:space="preserve">
+    <value>Harici üzerine yazıldı</value>
+  </data>
+  <data name="FanControlViewModel_StateConfirmed" xml:space="preserve">
+    <value>Onaylandı</value>
+  </data>
+  <data name="FanControlViewModel_StateDegraded" xml:space="preserve">
+    <value>Bozulmuş</value>
+  </data>
+  <data name="FanControlViewModel_StateBlocked" xml:space="preserve">
+    <value>Engellendi</value>
+  </data>
+  <data name="LightingViewModel_StateConfirmed" xml:space="preserve">
+    <value>Onaylandı</value>
+  </data>
+  <data name="LightingViewModel_StateDegraded" xml:space="preserve">
+    <value>Bozulmuş</value>
+  </data>
+  <data name="LightingViewModel_StateBlocked" xml:space="preserve">
+    <value>Engellendi</value>
+  </data>
+  <data name="LightingViewModel_StateOverwrittenRisk" xml:space="preserve">
+    <value>Üzerine yazma riski</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionEnabled" xml:space="preserve">
+    <value>Etkin</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionDisabled" xml:space="preserve">
+    <value>Devre dışı</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionUnavailable" xml:space="preserve">
+    <value>Kullanılamıyor</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionStatusUnavailable" xml:space="preserve">
+    <value>Bellek sıkıştırma durumu kullanılamıyor</value>
+  </data>
+  <data name="TuningStatus_RequestedPrefix" xml:space="preserve">
+    <value>İstenen: </value>
+  </data>
+  <data name="TuningStatus_AppliedPrefix" xml:space="preserve">
+    <value>Uygulanan: </value>
+  </data>
+  <data name="TuningStatus_ConfirmedPrefix" xml:space="preserve">
+    <value>Onaylandı: </value>
+  </data>
+  <data name="TuningStatus_ConfirmedNa" xml:space="preserve">
+    <value>Onaylandı: yok</value>
+  </data>
+  <data name="TuningStatus_RequestedAppliedNa" xml:space="preserve">
+    <value>İstenen: yok | Uygulanan: yok | Doğrulandı: telemetri bekleniyor</value>
+  </data>
+  <data name="TuningStatus_RequestedAppliedGpuNa" xml:space="preserve">
+    <value>İstenen: yok | Uygulanan: yok | Doğrulandı: GPU ayarlama arka ucu kullanılamıyor</value>
+  </data>
+  <data name="TuningStatus_VerifiedWritesFailed" xml:space="preserve">
+    <value>Doğrulandı: bir veya daha fazla yazma başarısız oldu</value>
+  </data>
+  <data name="TuningStatus_VerifiedMismatchReadback" xml:space="preserve">
+    <value>Doğrulandı: istenen ile geri okuma arasında uyuşmazlık</value>
+  </data>
+  <data name="DiagnosticsView_PowerLimitNotSupported" xml:space="preserve">
+    <value>✗ Desteklenmiyor</value>
+  </data>
+  <data name="DiagnosticsView_PowerLimitFirmwareManaged" xml:space="preserve">
+    <value>✗ Firmware tarafından yönetiliyor (geri okuma 0 W)</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifyingState" xml:space="preserve">
+    <value>İyileştirme durumu doğrulanıyor…</value>
+  </data>
+  <data name="SystemOptimizerViewModel_LastVerifiedAt" xml:space="preserve">
+    <value>Son doğrulama: {0:g}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifiedAgainstCurrentState" xml:space="preserve">
+    <value>Geçerli sistem durumuna göre doğrulandı</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifiedNoDrift" xml:space="preserve">
+    <value>Doğrulandı: sapma algılanmadı</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifiedAutoCorrected" xml:space="preserve">
+    <value>Doğrulandı: {0} hizmet ayarı otomatik düzeltildi</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerificationFailed" xml:space="preserve">
+    <value>Doğrulama başarısız</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoDriftExplanations" xml:space="preserve">
+    <value>Henüz sapma açıklaması yok.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_DriftDetected" xml:space="preserve">
+    <value>Sapma algılandı: {0}</value>
+  </data>
+  <data name="SystemOptimizer_StatusDoneDetails" xml:space="preserve">
+    <value>Tamamlandı: {0}</value>
+  </data>
+  <data name="SystemOptimizer_StatusFailedDetails" xml:space="preserve">
+    <value>Başarısız: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusScanning" xml:space="preserve">
+    <value>Sistem durumu taranıyor</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusRefreshing" xml:space="preserve">
+    <value>İyileştirici durumu yenileniyor</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusApplying" xml:space="preserve">
+    <value>Uygulanıyor: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusReverting" xml:space="preserve">
+    <value>Geri alınıyor: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusRefreshingPreflight" xml:space="preserve">
+    <value>İyileştirici ön kontrolü yenileniyor</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusExportingReport" xml:space="preserve">
+    <value>İyileştirme raporu dışa aktarılıyor</value>
+  </data>
+  <data name="KeyboardDiagnostics_AttemptsFormat" xml:space="preserve">
+    <value>Denemeler: {0} | WMI: {1}✓/{2}✗ (%{3:F0}) | OGH: {4}✓/{5}✗ (%{6:F0}) | EC: {7}✓/{8}✗ (%{9:F0})</value>
+  </data>
+  <data name="KeyboardDiagnostics_NoService" xml:space="preserve">
+    <value>Klavye aydınlatma servisi yok</value>
+  </data>
+  <data name="LightingView_HpBackendFormat" xml:space="preserve">
+    <value>HP: {0}</value>
+  </data>
+  <data name="LightingView_ActiveFormat" xml:space="preserve">
+    <value>Etkin: {0}</value>
+  </data>
+  <data name="SystemControlViewModel_GpuStartupChipPrefix" xml:space="preserve">
+    <value>Başlangıçta: </value>
+  </data>
 </root>

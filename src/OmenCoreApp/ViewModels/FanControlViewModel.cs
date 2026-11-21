@@ -479,9 +479,9 @@ namespace OmenCore.ViewModels
 
         public string FanOwnershipVisualLabel => FanOwnershipVisualState switch
         {
-            "blocked" => "Blocked",
-            "degraded" => "Degraded",
-            _ => "Confirmed"
+            "blocked" => Strings.FanControlViewModel_StateBlocked,
+            "degraded" => Strings.FanControlViewModel_StateDegraded,
+            _ => Strings.FanControlViewModel_StateConfirmed
         };
 
         public bool FanCurvesAvailable => _fanService.FanCurvesAvailable;

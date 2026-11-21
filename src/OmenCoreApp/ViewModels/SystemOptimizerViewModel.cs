@@ -26,7 +26,7 @@ namespace OmenCore.ViewModels
         private readonly SystemOptimizerService _optimizerService;
         
         private bool _isLoading;
-        private string _statusMessage = "Done";
+        private string _statusMessage = Strings.SystemOptimizer_StatusDone;
         private OptimizationState? _currentState;
         private bool _hasUnsavedChanges;
         private int _operationCurrentStep;
@@ -155,7 +155,7 @@ namespace OmenCore.ViewModels
         }
 
         public string LastVerifiedText => LastVerifiedAt.HasValue
-            ? $"Last verified {LastVerifiedAt.Value:g}"
+            ? string.Format(Strings.SystemOptimizerViewModel_LastVerifiedAt, LastVerifiedAt.Value)
             : Strings.SystemOptimizerViewModel_VerificationPending;
 
         public string VerificationSummary
@@ -264,12 +264,12 @@ namespace OmenCore.ViewModels
                     IsLoading = true;
                 }
 
-                SetStatusAction(showOverlay ? "Scanning system state" : "Refreshing optimizer state");
+                SetStatusAction(showOverlay ? Strings.SystemOptimizerViewModel_StatusScanning : Strings.SystemOptimizerViewModel_StatusRefreshing);
                 
                 _currentState = await _optimizerService.VerifyStateAsync();
                 _expectedStateForDrift = _currentState;
                 LastVerifiedAt = _currentState.LastChecked;
-                VerificationSummary = "Verified against current system state";
+                VerificationSummary = Strings.SystemOptimizerViewModel_VerifiedAgainstCurrentState;
                 HasStateDrift = false;
                 _lastDriftSummary = new OptimizationDriftSummary();
                 DriftWarningRollup = "No drift explanations yet.";
@@ -558,7 +558,7 @@ namespace OmenCore.ViewModels
                 }
 
                 item.IsApplying = true;
-                SetStatusAction(desiredState ? $"Applying {item.Name}" : $"Reverting {item.Name}");
+                SetStatusAction(desiredState ? string.Format(Strings.SystemOptimizerViewModel_StatusApplying, item.Name) : string.Format(Strings.SystemOptimizerViewModel_StatusReverting, item.Name));
                 
                 OptimizationResult result;
                 
@@ -694,7 +694,7 @@ namespace OmenCore.ViewModels
                     var item = pendingItems[index];
                     OperationCurrentStep = index + 1;
                     OperationProgressLabel = $"Applying {item.Name}";
-                    SetStatusAction($"Applying {item.Name}");
+                    SetStatusAction(string.Format(Strings.SystemOptimizerViewModel_StatusApplying, item.Name));
 
                     var result = await _optimizerService.ApplyOptimizationAsync(item.Id);
                     if (result.Success)
@@ -818,18 +818,22 @@ namespace OmenCore.ViewModels
 
         private void SetStatusDone(string? details = null)
         {
-            StatusMessage = string.IsNullOrWhiteSpace(details) ? "Done" : $"Done: {details}";
+            StatusMessage = string.IsNullOrWhiteSpace(details) ? Strings.SystemOptimizer_StatusDone : string.Format(Strings.SystemOptimizer_StatusDoneDetails, details);
         }
 
         private void SetStatusFailed(string? reason)
         {
-            StatusMessage = $"Failed: {reason}";
+            StatusMessage = string.Format(Strings.SystemOptimizer_StatusFailedDetails, reason);
         }
 
         private void HandleServiceStatus(string status)
         {
-            StatusMessage = status;
             UpdateOperationProgressFromStatus(status);
+            StatusMessage = status switch
+            {
+                "Verifying optimization state..." => Strings.SystemOptimizerViewModel_VerifyingState,
+                _ => status
+            };
         }
 
         private void UpdateOperationProgressFromStatus(string status)
@@ -883,7 +887,7 @@ namespace OmenCore.ViewModels
                 var driftSummary = SystemOptimizerService.GetDriftExplanations(expectedState, verifiedState);
                 if (!driftSummary.HasDrift)
                 {
-                    VerificationSummary = "Verified: no drift detected";
+                    VerificationSummary = Strings.SystemOptimizerViewModel_VerifiedNoDrift;
                     HasStateDrift = false;
                     _lastDriftSummary = driftSummary;
                     DriftWarningRollup = "No drift explanations yet.";
@@ -909,20 +913,20 @@ namespace OmenCore.ViewModels
                 _lastDriftSummary = driftSummary;
                 DriftWarningRollup = driftSummary.HasDrift
                     ? string.Join(" | ", driftSummary.DriftedItems.Take(3).Select(d => d.Explanation))
-                    : "No drift explanations yet.";
+                    : Strings.SystemOptimizerViewModel_NoDriftExplanations;
                 OnPropertyChanged(nameof(DriftSummaryText));
 
                 HasStateDrift = driftSummary.HasDrift;
                 VerificationSummary = HasStateDrift
-                    ? $"Drift detected: {string.Join(", ", driftSummary.DriftedItems.Select(d => d.Name).Take(3))}"
-                    : $"Verified: auto-corrected {autoCorrectionResults.Count(result => result.Success)} service setting(s)";
+                    ? string.Format(Strings.SystemOptimizerViewModel_DriftDetected, string.Join(", ", driftSummary.DriftedItems.Select(d => d.Name).Take(3)))
+                    : string.Format(Strings.SystemOptimizerViewModel_VerifiedAutoCorrected, autoCorrectionResults.Count(result => result.Success));
 
                 await RefreshPreflightAsync(showStatus: false);
             }
             catch (Exception ex)
             {
                 _logger.Error($"Background optimizer verification failed: {ex.Message}");
-                VerificationSummary = "Verification failed";
+                VerificationSummary = Strings.SystemOptimizerViewModel_VerificationFailed;
             }
         }
 
@@ -932,7 +936,7 @@ namespace OmenCore.ViewModels
             {
                 if (showStatus)
                 {
-                    SetStatusAction("Refreshing optimizer preflight");
+                    SetStatusAction(Strings.SystemOptimizerViewModel_StatusRefreshingPreflight);
                 }
 
                 var report = await _optimizerService.GeneratePreflightReportAsync(includeHighRisk: true);
@@ -960,7 +964,7 @@ namespace OmenCore.ViewModels
         {
             try
             {
-                SetStatusAction("Exporting optimization report");
+                SetStatusAction(Strings.SystemOptimizerViewModel_StatusExportingReport);
                 var exportPath = await _optimizerService.ExportOptimizationReportAsync(_expectedStateForDrift);
                 if (string.IsNullOrWhiteSpace(exportPath))
                 {

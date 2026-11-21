@@ -5248,4 +5248,145 @@
   <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
     <value>• Перед применением пресетов создаётся точка восстановления системы • Некоторые изменения могут потребовать перезагрузку • Оптимизации со средним/высоким риском могут повлиять на стабильность системы • Используйте «Откатить всё», чтобы в любой момент вернуть исходные настройки</value>
   </data>
+  <data name="DashboardViewModel_CpuAuthorityLabel" xml:space="preserve">
+    <value>Источник CPU: </value>
+  </data>
+  <data name="SystemControl_StateConfirmed" xml:space="preserve">
+    <value>Подтверждено</value>
+  </data>
+  <data name="SystemControl_StateDegraded" xml:space="preserve">
+    <value>Ухудшено</value>
+  </data>
+  <data name="SystemControl_StateBlocked" xml:space="preserve">
+    <value>Заблокировано</value>
+  </data>
+  <data name="SystemControl_StateOverwritten" xml:space="preserve">
+    <value>Перезаписано внешним</value>
+  </data>
+  <data name="FanControlViewModel_StateConfirmed" xml:space="preserve">
+    <value>Подтверждено</value>
+  </data>
+  <data name="FanControlViewModel_StateDegraded" xml:space="preserve">
+    <value>Ухудшено</value>
+  </data>
+  <data name="FanControlViewModel_StateBlocked" xml:space="preserve">
+    <value>Заблокировано</value>
+  </data>
+  <data name="LightingViewModel_StateConfirmed" xml:space="preserve">
+    <value>Подтверждено</value>
+  </data>
+  <data name="LightingViewModel_StateDegraded" xml:space="preserve">
+    <value>Ухудшено</value>
+  </data>
+  <data name="LightingViewModel_StateBlocked" xml:space="preserve">
+    <value>Заблокировано</value>
+  </data>
+  <data name="LightingViewModel_StateOverwrittenRisk" xml:space="preserve">
+    <value>Риск перезаписи</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionEnabled" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionDisabled" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionUnavailable" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionStatusUnavailable" xml:space="preserve">
+    <value>Состояние сжатия памяти недоступно</value>
+  </data>
+  <data name="TuningStatus_RequestedPrefix" xml:space="preserve">
+    <value>Запрошено: </value>
+  </data>
+  <data name="TuningStatus_AppliedPrefix" xml:space="preserve">
+    <value>Применено: </value>
+  </data>
+  <data name="TuningStatus_ConfirmedPrefix" xml:space="preserve">
+    <value>Подтверждено: </value>
+  </data>
+  <data name="TuningStatus_ConfirmedNa" xml:space="preserve">
+    <value>Подтверждено: н/д</value>
+  </data>
+  <data name="TuningStatus_RequestedAppliedNa" xml:space="preserve">
+    <value>Запрошено: н/д | Применено: н/д | Проверено: ожидание телеметрии</value>
+  </data>
+  <data name="TuningStatus_RequestedAppliedGpuNa" xml:space="preserve">
+    <value>Запрошено: н/д | Применено: н/д | Проверено: бэкенд настройки GPU недоступен</value>
+  </data>
+  <data name="TuningStatus_VerifiedWritesFailed" xml:space="preserve">
+    <value>Проверено: не удалась одна или несколько записей</value>
+  </data>
+  <data name="TuningStatus_VerifiedMismatchReadback" xml:space="preserve">
+    <value>Проверено: несоответствие запрошенного и считанного</value>
+  </data>
+  <data name="DiagnosticsView_PowerLimitNotSupported" xml:space="preserve">
+    <value>✗ Не поддерживается</value>
+  </data>
+  <data name="DiagnosticsView_PowerLimitFirmwareManaged" xml:space="preserve">
+    <value>✗ Управляется прошивкой (считано 0 Вт)</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifyingState" xml:space="preserve">
+    <value>Проверка состояния оптимизации…</value>
+  </data>
+  <data name="SystemOptimizerViewModel_LastVerifiedAt" xml:space="preserve">
+    <value>Последняя проверка: {0:g}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifiedAgainstCurrentState" xml:space="preserve">
+    <value>Проверено по текущему состоянию системы</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifiedNoDrift" xml:space="preserve">
+    <value>Проверено: дрейф не обнаружен</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifiedAutoCorrected" xml:space="preserve">
+    <value>Проверено: автоматически исправлено параметров служб: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerificationFailed" xml:space="preserve">
+    <value>Проверка не удалась</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoDriftExplanations" xml:space="preserve">
+    <value>Пока нет объяснений дрейфа.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_DriftDetected" xml:space="preserve">
+    <value>Обнаружен дрейф: {0}</value>
+  </data>
+  <data name="SystemOptimizer_StatusDoneDetails" xml:space="preserve">
+    <value>Готово: {0}</value>
+  </data>
+  <data name="SystemOptimizer_StatusFailedDetails" xml:space="preserve">
+    <value>Сбой: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusScanning" xml:space="preserve">
+    <value>Сканирование состояния системы</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusRefreshing" xml:space="preserve">
+    <value>Обновление состояния оптимизатора</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusApplying" xml:space="preserve">
+    <value>Применение: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusReverting" xml:space="preserve">
+    <value>Восстановление: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusRefreshingPreflight" xml:space="preserve">
+    <value>Обновление предпроверки оптимизатора</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusExportingReport" xml:space="preserve">
+    <value>Экспорт отчета об оптимизации</value>
+  </data>
+  <data name="KeyboardDiagnostics_AttemptsFormat" xml:space="preserve">
+    <value>Попытки: {0} | WMI: {1}✓/{2}✗ ({3:F0}%) | OGH: {4}✓/{5}✗ ({6:F0}%) | EC: {7}✓/{8}✗ ({9:F0}%)</value>
+  </data>
+  <data name="KeyboardDiagnostics_NoService" xml:space="preserve">
+    <value>Служба подсветки клавиатуры недоступна</value>
+  </data>
+  <data name="LightingView_HpBackendFormat" xml:space="preserve">
+    <value>HP: {0}</value>
+  </data>
+  <data name="LightingView_ActiveFormat" xml:space="preserve">
+    <value>Активная: {0}</value>
+  </data>
+  <data name="SystemControlViewModel_GpuStartupChipPrefix" xml:space="preserve">
+    <value>При запуске: </value>
+  </data>
 </root>

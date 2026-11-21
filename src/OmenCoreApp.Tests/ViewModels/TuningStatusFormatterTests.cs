@@ -182,21 +182,30 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void BuildGpuOcStatusText_WhenReadbackDiffers_ReturnsMismatchVerification()
         {
-            var text = TuningStatusFormatter.BuildGpuOcStatusText(
-                requestedCore: 150,
-                requestedMemory: 300,
-                requestedPower: 110,
-                requestedVoltage: 20,
-                appliedCore: 100,
-                appliedMemory: 250,
-                appliedPower: 110,
-                appliedVoltage: 20,
-                backendAvailable: true,
-                allWritesSucceeded: true);
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                var text = TuningStatusFormatter.BuildGpuOcStatusText(
+                    requestedCore: 150,
+                    requestedMemory: 300,
+                    requestedPower: 110,
+                    requestedVoltage: 20,
+                    appliedCore: 100,
+                    appliedMemory: 250,
+                    appliedPower: 110,
+                    appliedVoltage: 20,
+                    backendAvailable: true,
+                    allWritesSucceeded: true);
 
-            text.Should().Contain("Requested:");
-            text.Should().Contain("Applied:");
-            text.Should().Contain("Verified: mismatch between requested and readback");
+                text.Should().Contain("Requested:");
+                text.Should().Contain("Applied:");
+                text.Should().Contain("Verified: mismatch between requested and readback");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
     }
 }

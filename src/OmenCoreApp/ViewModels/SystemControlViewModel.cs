@@ -401,11 +401,11 @@ namespace OmenCore.ViewModels
         public string UndervoltSecondChannelSubtitle => IsAmdCpu ? Strings.SystemControlViewModel_RadeonGraphics : Strings.SystemControlViewModel_L3Cache;
 
         public string UndervoltRequestedChipText =>
-            $"Requested: Core {RequestedCoreOffset:+0;-0;0} mV | {UndervoltSecondChannelLabel} {RequestedCacheOffset:+0;-0;0} mV";
+            $"{Strings.TuningStatus_RequestedPrefix}Core {RequestedCoreOffset:+0;-0;0} mV | {UndervoltSecondChannelLabel} {RequestedCacheOffset:+0;-0;0} mV";
 
         public string UndervoltConfirmedChipText => UndervoltStatus == null
-            ? "Confirmed: n/a"
-            : $"Confirmed: Core {UndervoltStatus.CurrentCoreOffsetMv:+0;-0;0} mV | {UndervoltSecondChannelLabel} {UndervoltStatus.CurrentCacheOffsetMv:+0;-0;0} mV";
+            ? Strings.TuningStatus_ConfirmedNa
+            : $"{Strings.TuningStatus_ConfirmedPrefix}Core {UndervoltStatus.CurrentCoreOffsetMv:+0;-0;0} mV | {UndervoltSecondChannelLabel} {UndervoltStatus.CurrentCacheOffsetMv:+0;-0;0} mV";
 
         // Set once an apply, test-apply or startup reapply has actually been attempted. A slider that
         // merely sits at a different value than the hardware is a draft, not a failed apply: GitHub
@@ -474,6 +474,15 @@ namespace OmenCore.ViewModels
             "Blocked" => System.Windows.Media.Brushes.OrangeRed,
             "Overwritten" => System.Windows.Media.Brushes.Orange,
             _ => System.Windows.Media.Brushes.Gray
+        };
+
+        public string UndervoltStateDisplay => UndervoltStateLabel switch
+        {
+            "Confirmed" => Strings.SystemControl_StateConfirmed,
+            "Degraded" => Strings.SystemControl_StateDegraded,
+            "Blocked" => Strings.SystemControl_StateBlocked,
+            "Overwritten" => Strings.SystemControl_StateOverwritten,
+            _ => UndervoltStateLabel
         };
         
         // External controller detection properties
@@ -1224,7 +1233,7 @@ namespace OmenCore.ViewModels
         public bool TuningConflictHighRisk => _lastTuningConflictReport?.HasHighRiskConflict == true;
 
         public string TuningDiagnosticsCompactSummary =>
-            string.Format(Strings.SystemControlViewModel_TuningStatusLine, UndervoltStateLabel, GpuOcStateLabel, TuningConflictBannerVisible ? Strings.SystemControlViewModel_ConflictDetected : Strings.SystemControlViewModel_ConflictNone);
+            string.Format(Strings.SystemControlViewModel_TuningStatusLine, UndervoltStateDisplay, GpuOcStateDisplay, TuningConflictBannerVisible ? Strings.SystemControlViewModel_ConflictDetected : Strings.SystemControlViewModel_ConflictNone);
 
         public string TuningDiagnosticsCompactDetail
         {
@@ -1531,7 +1540,7 @@ namespace OmenCore.ViewModels
         }
 
         public string GpuOcRequestedChipText =>
-            $"Requested: Core {GpuCoreClockOffset:+0;-0;0} MHz | Memory {GpuMemoryClockOffset:+0;-0;0} MHz | Power {GpuPowerLimitPercent}% | Voltage {GpuVoltageOffsetMv:+0;-0;0} mV";
+            $"{Strings.TuningStatus_RequestedPrefix}Core {GpuCoreClockOffset:+0;-0;0} MHz | Memory {GpuMemoryClockOffset:+0;-0;0} MHz | Power {GpuPowerLimitPercent}% | Voltage {GpuVoltageOffsetMv:+0;-0;0} mV";
 
         public string GpuOcConfirmedChipText
         {
@@ -1539,10 +1548,10 @@ namespace OmenCore.ViewModels
             {
                 if (_nvapiService == null || !GpuNvapiAvailable)
                 {
-                    return "Confirmed: n/a";
+                    return Strings.TuningStatus_ConfirmedNa;
                 }
 
-                return $"Confirmed: Core {_nvapiService.CoreClockOffsetMHz:+0;-0;0} MHz | Memory {_nvapiService.MemoryClockOffsetMHz:+0;-0;0} MHz | Power {_nvapiService.PowerLimitPercent}% | Voltage {_nvapiService.VoltageOffsetMv:+0;-0;0} mV";
+                return $"{Strings.TuningStatus_ConfirmedPrefix}Core {_nvapiService.CoreClockOffsetMHz:+0;-0;0} MHz | Memory {_nvapiService.MemoryClockOffsetMHz:+0;-0;0} MHz | Power {_nvapiService.PowerLimitPercent}% | Voltage {_nvapiService.VoltageOffsetMv:+0;-0;0} mV";
             }
         }
 
@@ -1558,7 +1567,7 @@ namespace OmenCore.ViewModels
                 var config = _configService.Config;
                 var confirmedForStartup = config.GpuOc?.ApplyOnStartup == true;
                 var model = _systemInfoService?.GetSystemInfo().Model;
-                return $"Startup: {StartupRestorePolicy.DescribeTuningStartupReapplyState(config, confirmedForStartup, model, _lastShutdownState)}";
+                return $"{Strings.SystemControlViewModel_GpuStartupChipPrefix}{StartupRestorePolicy.DescribeTuningStartupReapplyState(config, confirmedForStartup, model, _lastShutdownState)}";
             }
         }
 
@@ -1623,6 +1632,15 @@ namespace OmenCore.ViewModels
                 return "Confirmed";
             }
         }
+
+        public string GpuOcStateDisplay => GpuOcStateLabel switch
+        {
+            "Confirmed" => Strings.SystemControl_StateConfirmed,
+            "Degraded" => Strings.SystemControl_StateDegraded,
+            "Blocked" => Strings.SystemControl_StateBlocked,
+            "Overwritten" => Strings.SystemControl_StateOverwritten,
+            _ => GpuOcStateLabel
+        };
 
         public string GpuOcStateIconGlyph => GpuOcStateLabel switch
         {

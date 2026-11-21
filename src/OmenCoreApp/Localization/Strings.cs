@@ -2069,5 +2069,55 @@ namespace OmenCore.Localization
     public static string MemoryOptimizerView_NativeApiNote => Get(nameof(MemoryOptimizerView_NativeApiNote));
     public static string SystemOptimizerView_ImportantNotesBody => Get(nameof(SystemOptimizerView_ImportantNotesBody));
 
+    public static string FanControlViewModel_StateBlocked => Get(nameof(FanControlViewModel_StateBlocked));
+    public static string FanControlViewModel_StateConfirmed => Get(nameof(FanControlViewModel_StateConfirmed));
+    public static string FanControlViewModel_StateDegraded => Get(nameof(FanControlViewModel_StateDegraded));
+    public static string KeyboardDiagnostics_AttemptsFormat => Get(nameof(KeyboardDiagnostics_AttemptsFormat));
+    public static string KeyboardDiagnostics_NoService => Get(nameof(KeyboardDiagnostics_NoService));
+    public static string LightingView_ActiveFormat => Get(nameof(LightingView_ActiveFormat));
+    public static string LightingView_HpBackendFormat => Get(nameof(LightingView_HpBackendFormat));
+    public static string LightingViewModel_StateBlocked => Get(nameof(LightingViewModel_StateBlocked));
+    public static string LightingViewModel_StateConfirmed => Get(nameof(LightingViewModel_StateConfirmed));
+    public static string LightingViewModel_StateDegraded => Get(nameof(LightingViewModel_StateDegraded));
+    public static string LightingViewModel_StateOverwrittenRisk => Get(nameof(LightingViewModel_StateOverwrittenRisk));
+    public static string MemoryOptimizer_CompressionDisabled => Get(nameof(MemoryOptimizer_CompressionDisabled));
+    public static string MemoryOptimizer_CompressionEnabled => Get(nameof(MemoryOptimizer_CompressionEnabled));
+    public static string MemoryOptimizer_CompressionStatusUnavailable => Get(nameof(MemoryOptimizer_CompressionStatusUnavailable));
+    public static string MemoryOptimizer_CompressionUnavailable => Get(nameof(MemoryOptimizer_CompressionUnavailable));
+    public static string SystemControl_StateBlocked => Get(nameof(SystemControl_StateBlocked));
+    public static string SystemControl_StateConfirmed => Get(nameof(SystemControl_StateConfirmed));
+    public static string SystemControl_StateDegraded => Get(nameof(SystemControl_StateDegraded));
+    public static string SystemControl_StateOverwritten => Get(nameof(SystemControl_StateOverwritten));
+    public static string SystemControlViewModel_GpuStartupChipPrefix => Get(nameof(SystemControlViewModel_GpuStartupChipPrefix));
+    public static string SystemOptimizer_StatusDone => Get(nameof(SystemOptimizer_StatusDone));
+    public static string SystemOptimizer_StatusDoneDetails => Get(nameof(SystemOptimizer_StatusDoneDetails));
+    public static string SystemOptimizer_StatusFailedDetails => Get(nameof(SystemOptimizer_StatusFailedDetails));
+    public static string SystemOptimizerViewModel_DriftDetected => Get(nameof(SystemOptimizerViewModel_DriftDetected));
+    public static string SystemOptimizerViewModel_LastVerifiedAt => Get(nameof(SystemOptimizerViewModel_LastVerifiedAt));
+    public static string SystemOptimizerViewModel_NoDriftExplanations => Get(nameof(SystemOptimizerViewModel_NoDriftExplanations));
+    public static string SystemOptimizerViewModel_StatusApplying => Get(nameof(SystemOptimizerViewModel_StatusApplying));
+    public static string SystemOptimizerViewModel_StatusExportingReport => Get(nameof(SystemOptimizerViewModel_StatusExportingReport));
+    public static string SystemOptimizerViewModel_StatusRefreshing => Get(nameof(SystemOptimizerViewModel_StatusRefreshing));
+    public static string SystemOptimizerViewModel_StatusRefreshingPreflight => Get(nameof(SystemOptimizerViewModel_StatusRefreshingPreflight));
+    public static string SystemOptimizerViewModel_StatusReverting => Get(nameof(SystemOptimizerViewModel_StatusReverting));
+    public static string SystemOptimizerViewModel_StatusScanning => Get(nameof(SystemOptimizerViewModel_StatusScanning));
+    public static string SystemOptimizerViewModel_VerificationFailed => Get(nameof(SystemOptimizerViewModel_VerificationFailed));
+    public static string SystemOptimizerViewModel_VerifiedAgainstCurrentState => Get(nameof(SystemOptimizerViewModel_VerifiedAgainstCurrentState));
+    public static string SystemOptimizerViewModel_VerifiedAutoCorrected => Get(nameof(SystemOptimizerViewModel_VerifiedAutoCorrected));
+    public static string SystemOptimizerViewModel_VerifiedNoDrift => Get(nameof(SystemOptimizerViewModel_VerifiedNoDrift));
+    public static string SystemOptimizerViewModel_VerifyingState => Get(nameof(SystemOptimizerViewModel_VerifyingState));
+    public static string TuningStatus_AppliedPrefix => Get(nameof(TuningStatus_AppliedPrefix));
+    public static string TuningStatus_ConfirmedNa => Get(nameof(TuningStatus_ConfirmedNa));
+    public static string TuningStatus_ConfirmedPrefix => Get(nameof(TuningStatus_ConfirmedPrefix));
+    public static string TuningStatus_RequestedAppliedGpuNa => Get(nameof(TuningStatus_RequestedAppliedGpuNa));
+    public static string TuningStatus_RequestedAppliedNa => Get(nameof(TuningStatus_RequestedAppliedNa));
+    public static string TuningStatus_RequestedPrefix => Get(nameof(TuningStatus_RequestedPrefix));
+    public static string TuningStatus_VerifiedMismatchReadback => Get(nameof(TuningStatus_VerifiedMismatchReadback));
+    public static string TuningStatus_VerifiedWritesFailed => Get(nameof(TuningStatus_VerifiedWritesFailed));
+
+    public static string DashboardViewModel_CpuAuthorityLabel => Get(nameof(DashboardViewModel_CpuAuthorityLabel));
+    public static string DiagnosticsView_PowerLimitFirmwareManaged => Get(nameof(DiagnosticsView_PowerLimitFirmwareManaged));
+    public static string DiagnosticsView_PowerLimitNotSupported => Get(nameof(DiagnosticsView_PowerLimitNotSupported));
+
     }
 }

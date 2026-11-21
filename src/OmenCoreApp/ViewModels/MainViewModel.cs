@@ -173,7 +173,17 @@ namespace OmenCore.ViewModels
                 return label;
             }
         }
-        public string PowerLimitReadbackLabel => Hardware.PowerLimitReadbackLabel.Describe(DetectedCapabilities?.ModelConfig?.SupportsPowerLimits ?? false, _systemControl?.CpuPowerLimitsStatus?.StartsWith("MSR package limits unavailable", StringComparison.Ordinal) == true);
+        public string PowerLimitReadbackLabel
+        {
+            get
+            {
+                var label = Hardware.PowerLimitReadbackLabel.Describe(DetectedCapabilities?.ModelConfig?.SupportsPowerLimits ?? false, _systemControl?.CpuPowerLimitsStatus?.StartsWith("MSR package limits unavailable", StringComparison.Ordinal) == true);
+                if (label == "✗ Not supported") return Strings.DiagnosticsView_PowerLimitNotSupported;
+                if (label == "✗ Firmware-managed (readback 0 W)") return Strings.DiagnosticsView_PowerLimitFirmwareManaged;
+                if (label == "✓ Supported") return Strings.DiagnosticsView_Supported;
+                return label;
+            }
+        }
 
         public SystemControlViewModel? SystemControl
         {

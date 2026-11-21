@@ -48,9 +48,12 @@ namespace OmenCore.ViewModels
         {
             get
             {
-                if (_keyboardLightingService == null) return "No keyboard lighting service";
+                if (_keyboardLightingService == null) return Strings.KeyboardDiagnostics_NoService;
                 var stats = _keyboardLightingService.GetTelemetry();
-                return $"Attempts: {stats.TotalAttempts} | WMI: {stats.WmiSuccessCount}✓/{stats.WmiFailureCount}✗ ({stats.WmiSuccessRate:F0}%) | OGH: {stats.OghSuccessCount}✓/{stats.OghFailureCount}✗ ({stats.OghSuccessRate:F0}%) | EC: {stats.EcSuccessCount}✓/{stats.EcFailureCount}✗ ({stats.EcSuccessRate:F0}%)";
+                return string.Format(Strings.KeyboardDiagnostics_AttemptsFormat,
+                    stats.TotalAttempts, stats.WmiSuccessCount, stats.WmiFailureCount, stats.WmiSuccessRate,
+                    stats.OghSuccessCount, stats.OghFailureCount, stats.OghSuccessRate,
+                    stats.EcSuccessCount, stats.EcFailureCount, stats.EcSuccessRate);
             }
         }
 

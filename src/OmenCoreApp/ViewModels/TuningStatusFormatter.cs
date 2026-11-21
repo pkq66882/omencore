@@ -25,16 +25,16 @@ namespace OmenCore.ViewModels
         {
             if (status == null)
             {
-                return "Requested: n/a | Applied: n/a | Verified: awaiting telemetry";
+                return Strings.TuningStatus_RequestedAppliedNa;
             }
 
             var requested = isAmdCpu
-                ? $"Requested: Core {requestedCoreMv:+0;-0;0} mV eq., iGPU {requestedCacheMv:+0;-0;0} mV eq."
-                : $"Requested: Core {requestedCoreMv:+0;-0;0} mV, Cache {requestedCacheMv:+0;-0;0} mV";
+                ? $"{Strings.TuningStatus_RequestedPrefix}Core {requestedCoreMv:+0;-0;0} mV eq., iGPU {requestedCacheMv:+0;-0;0} mV eq."
+                : $"{Strings.TuningStatus_RequestedPrefix}Core {requestedCoreMv:+0;-0;0} mV, Cache {requestedCacheMv:+0;-0;0} mV";
 
             var applied = isAmdCpu
-                ? $"Applied: Core {status.CurrentCoreOffsetMv:+0;-0;0} mV eq., iGPU {status.CurrentCacheOffsetMv:+0;-0;0} mV eq."
-                : $"Applied: Core {status.CurrentCoreOffsetMv:+0;-0;0} mV, Cache {status.CurrentCacheOffsetMv:+0;-0;0} mV";
+                ? $"{Strings.TuningStatus_AppliedPrefix}Core {status.CurrentCoreOffsetMv:+0;-0;0} mV eq., iGPU {status.CurrentCacheOffsetMv:+0;-0;0} mV eq."
+                : $"{Strings.TuningStatus_AppliedPrefix}Core {status.CurrentCoreOffsetMv:+0;-0;0} mV, Cache {status.CurrentCacheOffsetMv:+0;-0;0} mV";
 
             string verified;
             if (status.HasExternalController)
@@ -83,24 +83,24 @@ namespace OmenCore.ViewModels
         {
             if (!backendAvailable)
             {
-                return "Requested: n/a | Applied: n/a | Verified: GPU tuning backend unavailable";
+                return Strings.TuningStatus_RequestedAppliedGpuNa;
             }
 
-            var requested = $"Requested: Core {FormatSigned(requestedCore, "MHz")}, Mem {FormatSigned(requestedMemory, "MHz")}, Power {requestedPower}%, Voltage {FormatSigned(requestedVoltage, "mV")}";
-            var applied = $"Applied: Core {FormatSigned(appliedCore, "MHz")}, Mem {FormatSigned(appliedMemory, "MHz")}, Power {appliedPower}%, Voltage {FormatSigned(appliedVoltage, "mV")}";
+            var requested = $"{Strings.TuningStatus_RequestedPrefix}Core {FormatSigned(requestedCore, "MHz")}, Mem {FormatSigned(requestedMemory, "MHz")}, Power {requestedPower}%, Voltage {FormatSigned(requestedVoltage, "mV")}";
+            var applied = $"{Strings.TuningStatus_AppliedPrefix}Core {FormatSigned(appliedCore, "MHz")}, Mem {FormatSigned(appliedMemory, "MHz")}, Power {appliedPower}%, Voltage {FormatSigned(appliedVoltage, "mV")}";
 
             string verified;
             if (!allWritesSucceeded)
             {
-                verified = "Verified: one or more writes failed";
+                verified = Strings.TuningStatus_VerifiedWritesFailed;
             }
             else if (requestedCore == appliedCore && requestedMemory == appliedMemory && requestedPower == appliedPower && requestedVoltage == appliedVoltage)
             {
-                verified = "Verified: readback matches requested";
+                verified = Strings.TuningStatus_VerifiedReadback;
             }
             else
             {
-                verified = "Verified: mismatch between requested and readback";
+                verified = Strings.TuningStatus_VerifiedMismatchReadback;
             }
 
             return $"{requested} | {applied} | {verified}";

@@ -499,9 +499,9 @@ namespace OmenCore.ViewModels
 
         public string RgbOwnershipVisualLabel => RgbOwnershipVisualState switch
         {
-            "overwritten" => "Overwritten risk",
-            "degraded" => "Degraded",
-            _ => "Confirmed"
+            "overwritten" => Strings.LightingViewModel_StateOverwrittenRisk,
+            "degraded" => Strings.LightingViewModel_StateDegraded,
+            _ => Strings.LightingViewModel_StateConfirmed
         };
 
         /// <summary>
@@ -614,9 +614,9 @@ namespace OmenCore.ViewModels
 
         public string LastRgbSyncVisualLabel => LastRgbSyncVisualState switch
         {
-            "blocked" => "Blocked",
-            "degraded" => "Degraded",
-            _ => "Confirmed"
+            "blocked" => Strings.LightingViewModel_StateBlocked,
+            "degraded" => Strings.LightingViewModel_StateDegraded,
+            _ => Strings.LightingViewModel_StateConfirmed
         };
         
         // Razer properties

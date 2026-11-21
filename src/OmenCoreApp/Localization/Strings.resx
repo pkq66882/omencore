@@ -5252,4 +5252,145 @@
   <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
     <value>鈥?A system restore point is created before applying presets 鈥?Some changes may require a restart to take effect 鈥?Medium/High risk optimizations may affect system stability or features 鈥?Use "Revert All" to restore original settings at any time</value>
   </data>
+  <data name="DashboardViewModel_CpuAuthorityLabel" xml:space="preserve">
+    <value>CPU Authority: </value>
+  </data>
+  <data name="SystemControl_StateConfirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="SystemControl_StateDegraded" xml:space="preserve">
+    <value>Degraded</value>
+  </data>
+  <data name="SystemControl_StateBlocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="SystemControl_StateOverwritten" xml:space="preserve">
+    <value>Overwritten</value>
+  </data>
+  <data name="FanControlViewModel_StateConfirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="FanControlViewModel_StateDegraded" xml:space="preserve">
+    <value>Degraded</value>
+  </data>
+  <data name="FanControlViewModel_StateBlocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="LightingViewModel_StateConfirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="LightingViewModel_StateDegraded" xml:space="preserve">
+    <value>Degraded</value>
+  </data>
+  <data name="LightingViewModel_StateBlocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="LightingViewModel_StateOverwrittenRisk" xml:space="preserve">
+    <value>Overwritten risk</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionEnabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionDisabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionUnavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="MemoryOptimizer_CompressionStatusUnavailable" xml:space="preserve">
+    <value>Memory compression status unavailable</value>
+  </data>
+  <data name="TuningStatus_RequestedPrefix" xml:space="preserve">
+    <value>Requested: </value>
+  </data>
+  <data name="TuningStatus_AppliedPrefix" xml:space="preserve">
+    <value>Applied: </value>
+  </data>
+  <data name="TuningStatus_ConfirmedPrefix" xml:space="preserve">
+    <value>Confirmed: </value>
+  </data>
+  <data name="TuningStatus_ConfirmedNa" xml:space="preserve">
+    <value>Confirmed: n/a</value>
+  </data>
+  <data name="TuningStatus_RequestedAppliedNa" xml:space="preserve">
+    <value>Requested: n/a | Applied: n/a | Verified: awaiting telemetry</value>
+  </data>
+  <data name="TuningStatus_RequestedAppliedGpuNa" xml:space="preserve">
+    <value>Requested: n/a | Applied: n/a | Verified: GPU tuning backend unavailable</value>
+  </data>
+  <data name="TuningStatus_VerifiedWritesFailed" xml:space="preserve">
+    <value>Verified: one or more writes failed</value>
+  </data>
+  <data name="TuningStatus_VerifiedMismatchReadback" xml:space="preserve">
+    <value>Verified: mismatch between requested and readback</value>
+  </data>
+  <data name="DiagnosticsView_PowerLimitNotSupported" xml:space="preserve">
+    <value>✗ Not supported</value>
+  </data>
+  <data name="DiagnosticsView_PowerLimitFirmwareManaged" xml:space="preserve">
+    <value>✗ Firmware-managed (readback 0 W)</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifyingState" xml:space="preserve">
+    <value>Verifying optimization state...</value>
+  </data>
+  <data name="SystemOptimizerViewModel_LastVerifiedAt" xml:space="preserve">
+    <value>Last verified {0:g}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifiedAgainstCurrentState" xml:space="preserve">
+    <value>Verified against current system state</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifiedNoDrift" xml:space="preserve">
+    <value>Verified: no drift detected</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerifiedAutoCorrected" xml:space="preserve">
+    <value>Verified: auto-corrected {0} service setting(s)</value>
+  </data>
+  <data name="SystemOptimizerViewModel_VerificationFailed" xml:space="preserve">
+    <value>Verification failed</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoDriftExplanations" xml:space="preserve">
+    <value>No drift explanations yet.</value>
+  </data>
+  <data name="SystemOptimizerViewModel_DriftDetected" xml:space="preserve">
+    <value>Drift detected: {0}</value>
+  </data>
+  <data name="SystemOptimizer_StatusDoneDetails" xml:space="preserve">
+    <value>Done: {0}</value>
+  </data>
+  <data name="SystemOptimizer_StatusFailedDetails" xml:space="preserve">
+    <value>Failed: {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusScanning" xml:space="preserve">
+    <value>Scanning system state</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusRefreshing" xml:space="preserve">
+    <value>Refreshing optimizer state</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusApplying" xml:space="preserve">
+    <value>Applying {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusReverting" xml:space="preserve">
+    <value>Reverting {0}</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusRefreshingPreflight" xml:space="preserve">
+    <value>Refreshing optimizer preflight</value>
+  </data>
+  <data name="SystemOptimizerViewModel_StatusExportingReport" xml:space="preserve">
+    <value>Exporting optimization report</value>
+  </data>
+  <data name="KeyboardDiagnostics_AttemptsFormat" xml:space="preserve">
+    <value>Attempts: {0} | WMI: {1}✓/{2}✗ ({3:F0}%) | OGH: {4}✓/{5}✗ ({6:F0}%) | EC: {7}✓/{8}✗ ({9:F0}%)</value>
+  </data>
+  <data name="KeyboardDiagnostics_NoService" xml:space="preserve">
+    <value>No keyboard lighting service</value>
+  </data>
+  <data name="LightingView_HpBackendFormat" xml:space="preserve">
+    <value>HP: {0}</value>
+  </data>
+  <data name="LightingView_ActiveFormat" xml:space="preserve">
+    <value>Active: {0}</value>
+  </data>
+  <data name="SystemControlViewModel_GpuStartupChipPrefix" xml:space="preserve">
+    <value>Startup: </value>
+  </data>
 </root>

@@ -260,7 +260,7 @@
                                                        FontSize="10"
                                                        FontWeight="Bold"
                                                        Foreground="{Binding SystemControl.UndervoltStateIconBrush}"/>
-                                            <TextBlock Text="{Binding SystemControl.UndervoltStateLabel}"
+                                            <TextBlock Text="{Binding SystemControl.UndervoltStateDisplay}"
                                                        Margin="5,0,0,0"
                                                        FontSize="10"
                                                        FontWeight="SemiBold"

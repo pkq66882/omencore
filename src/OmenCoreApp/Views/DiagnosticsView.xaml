@@ -76,7 +76,7 @@
                     <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="12,0,0,0">
                         <TextBlock Text="{x:Static loc:Strings.HardwareMonitoringDashboard_ActiveAlerts}" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" />
                         <TextBlock Text="{x:Static loc:Strings.DiagnosticsView_Backend}" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" />
-                        <TextBlock Text="{Binding HardwareMonitoringService.MonitoringSource}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" />
+                        <TextBlock Text="{Binding Dashboard.MonitoringSourceText}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" />
 
                         <TextBlock Text="{x:Static loc:Strings.DiagnosticsView_WorkerTimeouts}" FontWeight="SemiBold" Margin="0,8,0,0"/>
                         <TextBlock Text="{Binding HardwareMonitoringService.ConsecutiveTimeouts}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" />
