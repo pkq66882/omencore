@@ -28,7 +28,7 @@ namespace OmenCore.Views
             
             _isCheckingUpdates = true;
             CheckUpdatesButton.IsEnabled = false;
-            SetStatus("Checking for updates...", "TextSecondaryBrush");
+            SetStatus(Strings.AboutWindow_CheckingForUpdates, "TextSecondaryBrush");
             
             try
             {
@@ -37,7 +37,7 @@ namespace OmenCore.Views
                 if (result.UpdateAvailable && result.LatestVersion != null)
                 {
                     var latest = result.LatestVersion;
-                    SetStatus($"Update available: v{latest.VersionString}", "SuccessBrush");
+                    SetStatus(string.Format(Strings.AboutWindow_UpdateAvailableFormat, latest.VersionString), "SuccessBrush");
 
                     if (string.IsNullOrWhiteSpace(latest.DownloadUrl))
                     {
@@ -63,12 +63,12 @@ namespace OmenCore.Views
 
                     if (msgResult == MessageBoxResult.Yes)
                     {
-                        SetStatus("Downloading update...", "TextSecondaryBrush");
+                        SetStatus(Strings.AboutWindow_Downloading, "TextSecondaryBrush");
                         var installerPath = await _updateService.DownloadUpdateAsync(latest);
 
                         if (installerPath != null)
                         {
-                            SetStatus("Installing update...", "TextSecondaryBrush");
+                            SetStatus(Strings.AboutWindow_Installing, "TextSecondaryBrush");
                             var installResult = await _updateService.InstallUpdateAsync(installerPath);
                             if (!installResult.Success)
                             {
@@ -77,7 +77,7 @@ namespace OmenCore.Views
                         }
                         else
                         {
-                                SetStatus("Download failed. Open GitHub releases to install manually.", "AccentBrush");
+                                SetStatus(Strings.AboutWindow_DownloadFailedManual, "AccentBrush");
                                 if (!string.IsNullOrWhiteSpace(latest.ChangelogUrl))
                                 {
                                     var openGitHub = MessageBox.Show(
@@ -93,12 +93,12 @@ namespace OmenCore.Views
                 }
                 else
                 {
-                    SetStatus(result.Message, "TextSecondaryBrush");
+                    SetStatus(result.Message == "You are running the latest version." ? Strings.UpdateViewModel_RunningLatest : result.Message, "TextSecondaryBrush");
                 }
             }
             catch (Exception ex)
             {
-                SetStatus($"Update check failed: {ex.Message}", "AccentBrush");
+                SetStatus(string.Format(Strings.AboutWindow_CheckFailedFormat, ex.Message), "AccentBrush");
             }
             finally
             {

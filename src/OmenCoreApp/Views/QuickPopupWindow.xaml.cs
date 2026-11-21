@@ -144,7 +144,7 @@ namespace OmenCore.Views
 
             _curvePresetName = presetName;
             var tooltip = string.IsNullOrWhiteSpace(presetName)
-                ? "Apply saved fan curve"
+                ? Strings.QuickPopup_ApplySavedCurve
                 : $"Curve: {presetName}";
             if (!string.Equals(FanCustomBtn.ToolTip as string, tooltip, StringComparison.Ordinal))
             {
@@ -202,7 +202,7 @@ namespace OmenCore.Views
             }
 
             _monitoringHealth = normalizedHealth;
-            var healthText = $"Monitoring: {_monitoringHealth}";
+            var healthText = string.Format(Strings.QuickPopup_MonitoringFormat, _monitoringHealth switch { "Healthy" => Strings.TrayIcon_HealthHealthy, "Degraded" => Strings.TrayIcon_HealthDegraded, "Unknown" => Strings.TrayIcon_HealthUnknown, _ => _monitoringHealth ?? string.Empty });
             if (!string.Equals(HealthStatusText.Text, healthText, StringComparison.Ordinal))
             {
                 HealthStatusText.Text = healthText;
@@ -281,7 +281,7 @@ namespace OmenCore.Views
         {
             return _isFanPerformanceLinked
                 ? Strings.QuickPopup_FanPerfLinked
-                : "Fan/Perf: Decoupled - fan stays";
+                : Strings.QuickPopup_FanPerfDecoupled;
         }
 
         private void UpdatePerformanceModeTooltips()
@@ -292,7 +292,7 @@ namespace OmenCore.Views
 
             var tooltip = _isFanPerformanceLinked
                 ? "Apply this performance mode. Linked mode can also update fan policy."
-                : $"Apply this performance mode. Decoupled mode keeps {preservedFanText} active.";
+                : string.Format(Strings.QuickPopup_ApplyModeFormat, preservedFanText);
 
             QuickQuietBtn.ToolTip = tooltip;
             QuickBalancedBtn.ToolTip = tooltip;

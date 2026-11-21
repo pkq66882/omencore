@@ -8,8 +8,20 @@ namespace OmenCoreApp.Tests.Utils
     /// Tests for TrayIconService.BuildFanModeHeaderText — pure formatting logic,
     /// no WPF or hardware dependencies.
     /// </summary>
-    public class TrayFanModeHeaderTests
+    public class TrayFanModeHeaderTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _original = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public TrayFanModeHeaderTests()
+        {
+            // Header formats come from the localization catalogs; pin to en so English assertions hold.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _original;
+        }
         [Fact]
         public void NoRequest_ShowsCurrentModeOnly()
         {

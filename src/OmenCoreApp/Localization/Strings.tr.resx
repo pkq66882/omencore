@@ -6265,4 +6265,220 @@
   <data name="SettingsSearch_MacroProfiles" xml:space="preserve">
     <value>Klavye macro profilleri</value>
   </data>
+  <data name="TrayIcon_MonitorFormat" xml:space="preserve">
+    <value>İzleme: {0}</value>
+  </data>
+  <data name="TrayIcon_RamFormat" xml:space="preserve">
+    <value>RAM: {0}/{1} GB (%{2})</value>
+  </data>
+  <data name="TrayIcon_RamPlaceholder" xml:space="preserve">
+    <value>RAM: —/— GB</value>
+  </data>
+  <data name="TrayIcon_FanFormat" xml:space="preserve">
+    <value>Fan: {0} · {1}</value>
+  </data>
+  <data name="TrayIcon_FanPlaceholder" xml:space="preserve">
+    <value>Fan: Otomatik · —</value>
+  </data>
+  <data name="TrayIcon_FanRpmSingle" xml:space="preserve">
+    <value>Fan: {0} RPM</value>
+  </data>
+  <data name="TrayIcon_FanRpmDual" xml:space="preserve">
+    <value>CPU Fan: {0} · GPU Fan: {1} RPM</value>
+  </data>
+  <data name="TrayIcon_FanNone" xml:space="preserve">
+    <value>Fan: —</value>
+  </data>
+  <data name="TrayIcon_BatteryPlaceholder" xml:space="preserve">
+    <value>Pil: —</value>
+  </data>
+  <data name="TrayIcon_HealthHealthy" xml:space="preserve">
+    <value>Sağlıklı</value>
+  </data>
+  <data name="TrayIcon_HealthDegraded" xml:space="preserve">
+    <value>Bozulmuş</value>
+  </data>
+  <data name="TrayIcon_HealthUnknown" xml:space="preserve">
+    <value>Bilinmeyen</value>
+  </data>
+  <data name="TrayIcon_QuickProfile" xml:space="preserve">
+    <value>Hızlı Profil</value>
+  </data>
+  <data name="TrayIcon_ProfilePerformance" xml:space="preserve">
+    <value>Performans — Oyun soğutma + Performans modu</value>
+  </data>
+  <data name="TrayIcon_ProfileBalanced" xml:space="preserve">
+    <value>Dengeli — Otomatik soğutma + Dengeli mod</value>
+  </data>
+  <data name="TrayIcon_ProfileQuiet" xml:space="preserve">
+    <value>Sessiz — Sessiz fanlar + Güç tasarrufu</value>
+  </data>
+  <data name="TrayIcon_ProfileCustom" xml:space="preserve">
+    <value>Özel — Kullanıcı tanımlı fanlar ve güç ayarları</value>
+  </data>
+  <data name="TrayIcon_MaxFan" xml:space="preserve">
+    <value>Fan Maksimum</value>
+  </data>
+  <data name="TrayIcon_RecentNotifications" xml:space="preserve">
+    <value>Son Bildirimler</value>
+  </data>
+  <data name="TrayIcon_NoNotifications" xml:space="preserve">
+    <value>Henüz bildirim yok</value>
+  </data>
+  <data name="TrayIcon_ClearAll" xml:space="preserve">
+    <value>Tümünü temizle</value>
+  </data>
+  <data name="TrayIcon_ReportProblem" xml:space="preserve">
+    <value>Sorun Bildir</value>
+  </data>
+  <data name="TrayIcon_Advanced" xml:space="preserve">
+    <value>Gelişmiş</value>
+  </data>
+  <data name="TrayIcon_FanControl" xml:space="preserve">
+    <value>Fan Kontrolü</value>
+  </data>
+  <data name="TrayIcon_FanModeFormat" xml:space="preserve">
+    <value>Fan Modu: {0}{1}</value>
+  </data>
+  <data name="TrayIcon_FanModeRequestedFormat" xml:space="preserve">
+    <value>Fan Modu: {0}{1} (istenen: {2})</value>
+  </data>
+  <data name="TrayIcon_FanModeLinkedSuffix" xml:space="preserve">
+    <value> [bağlı]</value>
+  </data>
+  <data name="TrayIcon_PowerProfile" xml:space="preserve">
+    <value>Güç Profili</value>
+  </data>
+  <data name="TrayIcon_PerfFormat" xml:space="preserve">
+    <value>Performans: {0}</value>
+  </data>
+  <data name="TrayIcon_PerfBalanced" xml:space="preserve">
+    <value> Dengeli — Varsayılan</value>
+  </data>
+  <data name="TrayIcon_PerfPerformance" xml:space="preserve">
+    <value> Performans — Maks güç</value>
+  </data>
+  <data name="TrayIcon_PerfQuiet" xml:space="preserve">
+    <value> Güç Tasarrufu — Pil ömrü</value>
+  </data>
+  <data name="TrayIcon_PerfFirmware" xml:space="preserve">
+    <value>Aygıt yazılımı varsayılanı</value>
+  </data>
+  <data name="TrayIcon_GpuPower" xml:space="preserve">
+    <value>GPU Gücü</value>
+  </data>
+  <data name="TrayIcon_GpuPowerFormat" xml:space="preserve">
+    <value>GPU Gücü: {0}</value>
+  </data>
+  <data name="TrayIcon_GpuPowerMin" xml:space="preserve">
+    <value> Minimum — Temel TGP, en iyi pil</value>
+  </data>
+  <data name="TrayIcon_GpuPowerMed" xml:space="preserve">
+    <value> Orta — Özel TGP</value>
+  </data>
+  <data name="TrayIcon_GpuPowerMax" xml:space="preserve">
+    <value> Maksimum — TGP + Dynamic Boost</value>
+  </data>
+  <data name="TrayIcon_GpuPowerExt" xml:space="preserve">
+    <value> Genişletilmiş — PPAB+, maksimum yetmezse deneyin</value>
+  </data>
+  <data name="TrayIcon_KeyboardBacklight" xml:space="preserve">
+    <value>Klavye Arka Işığı</value>
+  </data>
+  <data name="TrayIcon_KeyboardBacklightFormat" xml:space="preserve">
+    <value>Klavye Arka Işığı: {0}</value>
+  </data>
+  <data name="TrayIcon_KbOff" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="TrayIcon_KbLow" xml:space="preserve">
+    <value>Düşük</value>
+  </data>
+  <data name="TrayIcon_KbMedium" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="TrayIcon_KbHigh" xml:space="preserve">
+    <value>Yüksek</value>
+  </data>
+  <data name="TrayIcon_Display" xml:space="preserve">
+    <value>Ekran</value>
+  </data>
+  <data name="TrayIcon_DisplayFormat" xml:space="preserve">
+    <value>Ekran: {0}</value>
+  </data>
+  <data name="TrayIcon_RefreshHigh" xml:space="preserve">
+    <value>Yüksek yenileme — Oyun modu</value>
+  </data>
+  <data name="TrayIcon_RefreshLow" xml:space="preserve">
+    <value>Düşük yenileme — Güç tasarrufu</value>
+  </data>
+  <data name="TrayIcon_ToggleRefresh" xml:space="preserve">
+    <value>Yenileme hızını değiştir</value>
+  </data>
+  <data name="TrayIcon_TurnOffDisplay" xml:space="preserve">
+    <value>Ekranı kapat</value>
+  </data>
+  <data name="TrayIcon_Toggle" xml:space="preserve">
+    <value>Değiştir</value>
+  </data>
+  <data name="TrayIcon_OpenDashboard" xml:space="preserve">
+    <value>Paneli aç</value>
+  </data>
+  <data name="TrayIcon_CheckUpdates" xml:space="preserve">
+    <value>Güncellemeleri denetle</value>
+  </data>
+  <data name="TrayIcon_Exit" xml:space="preserve">
+    <value>OmenCore'dan çık</value>
+  </data>
+  <data name="TrayIcon_LeftClickOpen" xml:space="preserve">
+    <value>Sola tıklayarak paneli aç</value>
+  </data>
+  <data name="TrayIcon_ModeAuto" xml:space="preserve">
+    <value>Otomatik</value>
+  </data>
+  <data name="TrayIcon_ModeMax" xml:space="preserve">
+    <value>Maks</value>
+  </data>
+  <data name="TrayIcon_ModeQuiet" xml:space="preserve">
+    <value>Sessiz</value>
+  </data>
+  <data name="TrayIcon_ModeCustom" xml:space="preserve">
+    <value>Özel</value>
+  </data>
+  <data name="TrayIcon_ModeCurve" xml:space="preserve">
+    <value>Eğri</value>
+  </data>
+  <data name="AboutWindow_CheckingForUpdates" xml:space="preserve">
+    <value>Güncellemeler kontrol ediliyor...</value>
+  </data>
+  <data name="AboutWindow_UpdateAvailableFormat" xml:space="preserve">
+    <value>Güncelleme mevcut: v{0}</value>
+  </data>
+  <data name="AboutWindow_Downloading" xml:space="preserve">
+    <value>Güncelleme indiriliyor...</value>
+  </data>
+  <data name="AboutWindow_Installing" xml:space="preserve">
+    <value>Güncelleme yükleniyor...</value>
+  </data>
+  <data name="AboutWindow_DownloadFailedManual" xml:space="preserve">
+    <value>İndirme başarısız. Manuel yükleme için GitHub sürümlerini açın.</value>
+  </data>
+  <data name="AboutWindow_CheckFailedFormat" xml:space="preserve">
+    <value>Güncelleme kontrolü başarısız: {0}</value>
+  </data>
+  <data name="UpdateViewModel_RunningLatest" xml:space="preserve">
+    <value>En son sürümü çalıştırıyorsunuz.</value>
+  </data>
+  <data name="QuickPopup_MonitoringFormat" xml:space="preserve">
+    <value>İzleme: {0}</value>
+  </data>
+  <data name="QuickPopup_FanPerfDecoupled" xml:space="preserve">
+    <value>Fan/Perf: Ayrık — fan kalır</value>
+  </data>
+  <data name="QuickPopup_ApplyModeFormat" xml:space="preserve">
+    <value>Bu performans modunu uygula. Ayrık modda {0} etkin kalır.</value>
+  </data>
+  <data name="QuickPopup_ApplySavedCurve" xml:space="preserve">
+    <value>Kayıtlı fan eğrisini uygula</value>
+  </data>
 </root>

@@ -15,8 +15,20 @@ namespace OmenCoreApp.Tests.Utils
     /// Uses uninitialized-object construction so private tray logic can be tested
     /// without creating a real TaskbarIcon/WPF tray host.
     /// </summary>
-    public class TrayPerformanceModeBehaviorTests
+    public class TrayPerformanceModeBehaviorTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _original = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public TrayPerformanceModeBehaviorTests()
+        {
+            // Header text comes from the localization catalogs; pin to en so English assertions hold.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _original;
+        }
         [Fact]
         public void UpdatePerformanceModeCheckmarks_NormalizesAliasBeforeSelectingCheckmark()
         {

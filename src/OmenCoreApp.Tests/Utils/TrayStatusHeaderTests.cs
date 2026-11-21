@@ -8,8 +8,20 @@ namespace OmenCoreApp.Tests.Utils
     /// Pure tray-header formatting tests for performance and monitoring health labels.
     /// Ensures status text is stable even with whitespace/empty values.
     /// </summary>
-    public class TrayStatusHeaderTests
+    public class TrayStatusHeaderTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _original = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public TrayStatusHeaderTests()
+        {
+            // Header formats come from the localization catalogs; pin to en so English assertions hold.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _original;
+        }
         [Theory]
         [InlineData("Default", true)]
         [InlineData(" default ", true)]
