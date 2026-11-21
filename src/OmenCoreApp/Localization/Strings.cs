@@ -2108,5 +2108,75 @@ namespace OmenCore.Localization
 
     // Auto-extracted literals from TuningView.xaml
 
+    // Auto-extracted literals from 
+    public static string SystemOptimizer_InputFullscreenDesc => Get(nameof(SystemOptimizer_InputFullscreenDesc));
+    public static string SystemOptimizer_InputFullscreenName => Get(nameof(SystemOptimizer_InputFullscreenName));
+    public static string SystemOptimizer_InputGameBarDesc => Get(nameof(SystemOptimizer_InputGameBarDesc));
+    public static string SystemOptimizer_InputGameBarName => Get(nameof(SystemOptimizer_InputGameBarName));
+    public static string SystemOptimizer_InputGameDvrDesc => Get(nameof(SystemOptimizer_InputGameDvrDesc));
+    public static string SystemOptimizer_InputGameDvrName => Get(nameof(SystemOptimizer_InputGameDvrName));
+    public static string SystemOptimizer_InputMouseAccelDesc => Get(nameof(SystemOptimizer_InputMouseAccelDesc));
+    public static string SystemOptimizer_InputMouseAccelName => Get(nameof(SystemOptimizer_InputMouseAccelName));
+    public static string SystemOptimizer_LastVerified => Get(nameof(SystemOptimizer_LastVerified));
+    public static string SystemOptimizer_NetworkDeliveryDesc => Get(nameof(SystemOptimizer_NetworkDeliveryDesc));
+    public static string SystemOptimizer_NetworkDeliveryName => Get(nameof(SystemOptimizer_NetworkDeliveryName));
+    public static string SystemOptimizer_NetworkNagleDesc => Get(nameof(SystemOptimizer_NetworkNagleDesc));
+    public static string SystemOptimizer_NetworkNagleName => Get(nameof(SystemOptimizer_NetworkNagleName));
+    public static string SystemOptimizer_NetworkTcpAckDesc => Get(nameof(SystemOptimizer_NetworkTcpAckDesc));
+    public static string SystemOptimizer_NetworkTcpAckName => Get(nameof(SystemOptimizer_NetworkTcpAckName));
+    public static string SystemOptimizer_NetworkTcpNoDelayDesc => Get(nameof(SystemOptimizer_NetworkTcpNoDelayDesc));
+    public static string SystemOptimizer_NetworkTcpNoDelayName => Get(nameof(SystemOptimizer_NetworkTcpNoDelayName));
+    public static string SystemOptimizer_NoDrift => Get(nameof(SystemOptimizer_NoDrift));
+    public static string SystemOptimizer_PowerForegroundDesc => Get(nameof(SystemOptimizer_PowerForegroundDesc));
+    public static string SystemOptimizer_PowerForegroundName => Get(nameof(SystemOptimizer_PowerForegroundName));
+    public static string SystemOptimizer_PowerGameModeDesc => Get(nameof(SystemOptimizer_PowerGameModeDesc));
+    public static string SystemOptimizer_PowerGameModeName => Get(nameof(SystemOptimizer_PowerGameModeName));
+    public static string SystemOptimizer_PowerGpuSchedDesc => Get(nameof(SystemOptimizer_PowerGpuSchedDesc));
+    public static string SystemOptimizer_PowerGpuSchedName => Get(nameof(SystemOptimizer_PowerGpuSchedName));
+    public static string SystemOptimizer_PowerUltimatePerfDesc => Get(nameof(SystemOptimizer_PowerUltimatePerfDesc));
+    public static string SystemOptimizer_PowerUltimatePerfName => Get(nameof(SystemOptimizer_PowerUltimatePerfName));
+    public static string SystemOptimizer_PreflightHighRisk => Get(nameof(SystemOptimizer_PreflightHighRisk));
+    public static string SystemOptimizer_PreflightLine => Get(nameof(SystemOptimizer_PreflightLine));
+    public static string SystemOptimizer_ServiceDiagTrackDesc => Get(nameof(SystemOptimizer_ServiceDiagTrackDesc));
+    public static string SystemOptimizer_ServiceDiagTrackName => Get(nameof(SystemOptimizer_ServiceDiagTrackName));
+    public static string SystemOptimizer_ServiceSearchDesc => Get(nameof(SystemOptimizer_ServiceSearchDesc));
+    public static string SystemOptimizer_ServiceSearchName => Get(nameof(SystemOptimizer_ServiceSearchName));
+    public static string SystemOptimizer_ServiceSearchWarn => Get(nameof(SystemOptimizer_ServiceSearchWarn));
+    public static string SystemOptimizer_ServiceSysMainDesc => Get(nameof(SystemOptimizer_ServiceSysMainDesc));
+    public static string SystemOptimizer_ServiceSysMainName => Get(nameof(SystemOptimizer_ServiceSysMainName));
+    public static string SystemOptimizer_ServiceTelemetryDesc => Get(nameof(SystemOptimizer_ServiceTelemetryDesc));
+    public static string SystemOptimizer_ServiceTelemetryName => Get(nameof(SystemOptimizer_ServiceTelemetryName));
+    public static string SystemOptimizer_Storage8dot3Desc => Get(nameof(SystemOptimizer_Storage8dot3Desc));
+    public static string SystemOptimizer_Storage8dot3Name => Get(nameof(SystemOptimizer_Storage8dot3Name));
+    public static string SystemOptimizer_Storage8dot3Warn => Get(nameof(SystemOptimizer_Storage8dot3Warn));
+    public static string SystemOptimizer_StorageLastAccessDesc => Get(nameof(SystemOptimizer_StorageLastAccessDesc));
+    public static string SystemOptimizer_StorageLastAccessName => Get(nameof(SystemOptimizer_StorageLastAccessName));
+    public static string SystemOptimizer_StorageTrimDesc => Get(nameof(SystemOptimizer_StorageTrimDesc));
+    public static string SystemOptimizer_StorageTrimName => Get(nameof(SystemOptimizer_StorageTrimName));
+    public static string SystemOptimizer_VisualAnimationsDesc => Get(nameof(SystemOptimizer_VisualAnimationsDesc));
+    public static string SystemOptimizer_VisualAnimationsName => Get(nameof(SystemOptimizer_VisualAnimationsName));
+    public static string SystemOptimizer_VisualTransparencyDesc => Get(nameof(SystemOptimizer_VisualTransparencyDesc));
+    public static string SystemOptimizer_VisualTransparencyName => Get(nameof(SystemOptimizer_VisualTransparencyName));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
+    // Auto-extracted literals from 
+    public static string SettingsView_BatteryTip100 => Get(nameof(SettingsView_BatteryTip100));
+    public static string SettingsView_BatteryTip6070 => Get(nameof(SettingsView_BatteryTip6070));
+    public static string SettingsView_BatteryTip80 => Get(nameof(SettingsView_BatteryTip80));
+    public static string SettingsView_BatteryTipsTitle => Get(nameof(SettingsView_BatteryTipsTitle));
+    public static string SystemOptimizer_VerificationFailed => Get(nameof(SystemOptimizer_VerificationFailed));
+    public static string SystemOptimizer_VerifiedCurrentState => Get(nameof(SystemOptimizer_VerifiedCurrentState));
+
+    // Auto-extracted literals from AdvancedView.xaml
+
+    // Auto-extracted literals from DashboardView.xaml
+
+    // Auto-extracted literals from TuningView.xaml
+
     }
 }

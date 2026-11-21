@@ -5266,4 +5266,166 @@
   <data name="MemoryOptimizerViewModel_StateUnavailable" xml:space="preserve">
     <value>Недоступно</value>
   </data>
+  <data name="SystemOptimizer_InputFullscreenDesc" xml:space="preserve">
+    <value>Настраивает оптимизации полноэкранного режима для лучшей совместимости</value>
+  </data>
+  <data name="SystemOptimizer_InputFullscreenName" xml:space="preserve">
+    <value>Оптимизации полноэкранного режима</value>
+  </data>
+  <data name="SystemOptimizer_InputGameBarDesc" xml:space="preserve">
+    <value>Отключает оверлей Xbox Game Bar</value>
+  </data>
+  <data name="SystemOptimizer_InputGameBarName" xml:space="preserve">
+    <value>Отключить Xbox Game Bar</value>
+  </data>
+  <data name="SystemOptimizer_InputGameDvrDesc" xml:space="preserve">
+    <value>Отключает фоновую запись игр для лучшей производительности</value>
+  </data>
+  <data name="SystemOptimizer_InputGameDvrName" xml:space="preserve">
+    <value>Отключить игровой DVR</value>
+  </data>
+  <data name="SystemOptimizer_InputMouseAccelDesc" xml:space="preserve">
+    <value>Отключает «Повышенную точность указателя» для движения мыши 1:1</value>
+  </data>
+  <data name="SystemOptimizer_InputMouseAccelName" xml:space="preserve">
+    <value>Отключить ускорение мыши</value>
+  </data>
+  <data name="SystemOptimizer_LastVerified" xml:space="preserve">
+    <value>Последняя проверка {0}</value>
+  </data>
+  <data name="SystemOptimizer_NetworkDeliveryDesc" xml:space="preserve">
+    <value>Отключает P2P-обмен оптимизации доставки</value>
+  </data>
+  <data name="SystemOptimizer_NetworkDeliveryName" xml:space="preserve">
+    <value>Отключить P2P-обновления</value>
+  </data>
+  <data name="SystemOptimizer_NetworkNagleDesc" xml:space="preserve">
+    <value>Уменьшает задержку буферизации TCP — полезно для онлайн-игр</value>
+  </data>
+  <data name="SystemOptimizer_NetworkNagleName" xml:space="preserve">
+    <value>Отключить алгоритм Нэйгла</value>
+  </data>
+  <data name="SystemOptimizer_NetworkTcpAckDesc" xml:space="preserve">
+    <value>Оптимизирует частоту TCP ACK для более быстрых откликов</value>
+  </data>
+  <data name="SystemOptimizer_NetworkTcpAckName" xml:space="preserve">
+    <value>Оптимизация TCP ACK</value>
+  </data>
+  <data name="SystemOptimizer_NetworkTcpNoDelayDesc" xml:space="preserve">
+    <value>Отключает отложенные подтверждения TCP для меньшей задержки</value>
+  </data>
+  <data name="SystemOptimizer_NetworkTcpNoDelayName" xml:space="preserve">
+    <value>TCP без задержки</value>
+  </data>
+  <data name="SystemOptimizer_NoDrift" xml:space="preserve">
+    <value>Проверено: дрейф не обнаружен</value>
+  </data>
+  <data name="SystemOptimizer_PowerForegroundDesc" xml:space="preserve">
+    <value>Повышает приоритет CPU для приложений переднего плана</value>
+  </data>
+  <data name="SystemOptimizer_PowerForegroundName" xml:space="preserve">
+    <value>Приоритет переднего плана</value>
+  </data>
+  <data name="SystemOptimizer_PowerGameModeDesc" xml:space="preserve">
+    <value>Включает игровой режим Windows для лучшей производительности в играх</value>
+  </data>
+  <data name="SystemOptimizer_PowerGameModeName" xml:space="preserve">
+    <value>Игровой режим</value>
+  </data>
+  <data name="SystemOptimizer_PowerGpuSchedDesc" xml:space="preserve">
+    <value>Включает аппаратно-ускоренное планирование GPU (Windows 10 2004+)</value>
+  </data>
+  <data name="SystemOptimizer_PowerGpuSchedName" xml:space="preserve">
+    <value>Аппаратное планирование GPU</value>
+  </data>
+  <data name="SystemOptimizer_PowerUltimatePerfDesc" xml:space="preserve">
+    <value>Устанавливает план электропитания Windows «Максимальная производительность» для максимальной производительности CPU/GPU</value>
+  </data>
+  <data name="SystemOptimizer_PowerUltimatePerfName" xml:space="preserve">
+    <value>План «Максимальная производительность»</value>
+  </data>
+  <data name="SystemOptimizer_PreflightHighRisk" xml:space="preserve">
+    <value>Предпроверка обнаружила {0} оптимизацию(й) высокого риска. Проверьте перед применением Gaming Max.</value>
+  </data>
+  <data name="SystemOptimizer_PreflightLine" xml:space="preserve">
+    <value>Предпроверка: низкий {0}, средний {1}, высокий {2}{3}</value>
+  </data>
+  <data name="SystemOptimizer_ServiceDiagTrackDesc" xml:space="preserve">
+    <value>Отключает службу Connected User Experiences и телеметрии</value>
+  </data>
+  <data name="SystemOptimizer_ServiceDiagTrackName" xml:space="preserve">
+    <value>Отключить подключенные функции</value>
+  </data>
+  <data name="SystemOptimizer_ServiceSearchDesc" xml:space="preserve">
+    <value>Отключает индексацию поиска Windows для снижения нагрузки на диск/CPU</value>
+  </data>
+  <data name="SystemOptimizer_ServiceSearchName" xml:space="preserve">
+    <value>Отключить индексацию поиска</value>
+  </data>
+  <data name="SystemOptimizer_ServiceSearchWarn" xml:space="preserve">
+    <value>Может замедлить поиск файлов</value>
+  </data>
+  <data name="SystemOptimizer_ServiceSysMainDesc" xml:space="preserve">
+    <value>Отключает службу Superfetch — рекомендуется для систем с SSD</value>
+  </data>
+  <data name="SystemOptimizer_ServiceSysMainName" xml:space="preserve">
+    <value>Отключить SysMain (Superfetch)</value>
+  </data>
+  <data name="SystemOptimizer_ServiceTelemetryDesc" xml:space="preserve">
+    <value>Отключает сбор телеметрии Windows (служба DiagTrack)</value>
+  </data>
+  <data name="SystemOptimizer_ServiceTelemetryName" xml:space="preserve">
+    <value>Отключить телеметрию</value>
+  </data>
+  <data name="SystemOptimizer_Storage8dot3Desc" xml:space="preserve">
+    <value>Отключает создание устаревших коротких имён файлов</value>
+  </data>
+  <data name="SystemOptimizer_Storage8dot3Name" xml:space="preserve">
+    <value>Отключить имена 8.3</value>
+  </data>
+  <data name="SystemOptimizer_Storage8dot3Warn" xml:space="preserve">
+    <value>Может сломать очень старое ПО</value>
+  </data>
+  <data name="SystemOptimizer_StorageLastAccessDesc" xml:space="preserve">
+    <value>Отключает обновления времени последнего доступа NTFS для снижения активности диска</value>
+  </data>
+  <data name="SystemOptimizer_StorageLastAccessName" xml:space="preserve">
+    <value>Отключить отметки времени доступа</value>
+  </data>
+  <data name="SystemOptimizer_StorageTrimDesc" xml:space="preserve">
+    <value>Включает команду TRIM для здоровья и производительности SSD</value>
+  </data>
+  <data name="SystemOptimizer_StorageTrimName" xml:space="preserve">
+    <value>TRIM для SSD</value>
+  </data>
+  <data name="SystemOptimizer_VisualAnimationsDesc" xml:space="preserve">
+    <value>Отключает анимации окон для более отзывчивого интерфейса</value>
+  </data>
+  <data name="SystemOptimizer_VisualAnimationsName" xml:space="preserve">
+    <value>Отключить анимации</value>
+  </data>
+  <data name="SystemOptimizer_VisualTransparencyDesc" xml:space="preserve">
+    <value>Отключает эффекты прозрачности Windows</value>
+  </data>
+  <data name="SystemOptimizer_VisualTransparencyName" xml:space="preserve">
+    <value>Отключить прозрачность</value>
+  </data>
+  <data name="SettingsView_BatteryTip100" xml:space="preserve">
+    <value>• 100% — когда нужна полная ёмкость в поездке</value>
+  </data>
+  <data name="SettingsView_BatteryTip6070" xml:space="preserve">
+    <value>• Для максимального срока службы при постоянном питании — 60–70%</value>
+  </data>
+  <data name="SettingsView_BatteryTip80" xml:space="preserve">
+    <value>• Для повседневного использования рекомендуется 80% (срок службы батареи вдвое дольше)</value>
+  </data>
+  <data name="SettingsView_BatteryTipsTitle" xml:space="preserve">
+    <value>💡 Советы по здоровью батареи:</value>
+  </data>
+  <data name="SystemOptimizer_VerificationFailed" xml:space="preserve">
+    <value>Проверка не удалась</value>
+  </data>
+  <data name="SystemOptimizer_VerifiedCurrentState" xml:space="preserve">
+    <value>Проверено по текущему состоянию системы</value>
+  </data>
 </root>

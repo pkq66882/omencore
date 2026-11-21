@@ -10,22 +10,31 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void BuildSummary_IncludesRiskCountsAndRebootFlag()
         {
-            var report = new PreflightReport
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
             {
-                Items = new[]
+                var report = new PreflightReport
                 {
-                    new PreflightItem { Id = "a", Risk = OptimizationRisk.Low, RequiresReboot = false },
-                    new PreflightItem { Id = "b", Risk = OptimizationRisk.Medium, RequiresReboot = true },
-                    new PreflightItem { Id = "c", Risk = OptimizationRisk.High, RequiresReboot = false },
-                }
-            };
+                    Items = new[]
+                    {
+                        new PreflightItem { Id = "a", Risk = OptimizationRisk.Low, RequiresReboot = false },
+                        new PreflightItem { Id = "b", Risk = OptimizationRisk.Medium, RequiresReboot = true },
+                        new PreflightItem { Id = "c", Risk = OptimizationRisk.High, RequiresReboot = false },
+                    }
+                };
 
-            var text = SystemOptimizerPreflightFormatter.BuildSummary(report);
+                var text = SystemOptimizerPreflightFormatter.BuildSummary(report);
 
-            text.Should().Contain("Low 1");
-            text.Should().Contain("Medium 1");
-            text.Should().Contain("High 1");
-            text.Should().Contain("Reboot: Yes");
+                text.Should().Contain("Low 1");
+                text.Should().Contain("Medium 1");
+                text.Should().Contain("High 1");
+                text.Should().Contain("Reboot: Yes");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]
