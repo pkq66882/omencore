@@ -2561,5 +2561,20 @@ namespace OmenCore.Localization
     public static string OptimizeUndo_VisualAnimations => Get(nameof(OptimizeUndo_VisualAnimations));
     public static string OptimizeUndo_VisualTransparency => Get(nameof(OptimizeUndo_VisualTransparency));
 
+    public static string TrayIcon_CpuTempFormat => Get(nameof(TrayIcon_CpuTempFormat));
+    public static string TrayIcon_CpuTempPlaceholder => Get(nameof(TrayIcon_CpuTempPlaceholder));
+    public static string TrayIcon_FanAutoDesc => Get(nameof(TrayIcon_FanAutoDesc));
+    public static string TrayIcon_FanMaxDesc => Get(nameof(TrayIcon_FanMaxDesc));
+    public static string TrayIcon_FanQuietDesc => Get(nameof(TrayIcon_FanQuietDesc));
+    public static string TrayIcon_GpuTempFormat => Get(nameof(TrayIcon_GpuTempFormat));
+    public static string TrayIcon_GpuTempPlaceholder => Get(nameof(TrayIcon_GpuTempPlaceholder));
+    public static string TrayIcon_HealthStale => Get(nameof(TrayIcon_HealthStale));
+    public static string TrayIcon_PerfQuietLabel => Get(nameof(TrayIcon_PerfQuietLabel));
+    public static string TrayIcon_TooltipCpuFormat => Get(nameof(TrayIcon_TooltipCpuFormat));
+    public static string TrayIcon_TooltipFanPerfFormat => Get(nameof(TrayIcon_TooltipFanPerfFormat));
+    public static string TrayIcon_TooltipGpuFormat => Get(nameof(TrayIcon_TooltipGpuFormat));
+
+    public static string TrayIcon_NoDataTooltip => Get(nameof(TrayIcon_NoDataTooltip));
+
     }
 }

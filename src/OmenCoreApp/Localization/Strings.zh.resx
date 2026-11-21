@@ -6694,4 +6694,43 @@
   <data name="BloatDesc_XboxApp" xml:space="preserve">
     <value>Xbox 应用——使用 Xbox Game Pass 请保留</value>
   </data>
+  <data name="TrayIcon_CpuTempPlaceholder" xml:space="preserve">
+    <value>CPU：--°C · --%</value>
+  </data>
+  <data name="TrayIcon_GpuTempPlaceholder" xml:space="preserve">
+    <value>GPU：--°C · --%</value>
+  </data>
+  <data name="TrayIcon_CpuTempFormat" xml:space="preserve">
+    <value>CPU：{0} · {1}%</value>
+  </data>
+  <data name="TrayIcon_GpuTempFormat" xml:space="preserve">
+    <value>GPU：{0} · {1}%</value>
+  </data>
+  <data name="TrayIcon_FanAutoDesc" xml:space="preserve">
+    <value> 自动——系统控制</value>
+  </data>
+  <data name="TrayIcon_FanMaxDesc" xml:space="preserve">
+    <value> 最大——强力散热</value>
+  </data>
+  <data name="TrayIcon_FanQuietDesc" xml:space="preserve">
+    <value> 安静——降低噪音</value>
+  </data>
+  <data name="TrayIcon_HealthStale" xml:space="preserve">
+    <value>已过期</value>
+  </data>
+  <data name="TrayIcon_NoDataTooltip" xml:space="preserve">
+    <value>OmenCore - 暂无数据</value>
+  </data>
+  <data name="TrayIcon_TooltipCpuFormat" xml:space="preserve">
+    <value>CPU：{0} @ {1}%</value>
+  </data>
+  <data name="TrayIcon_TooltipGpuFormat" xml:space="preserve">
+    <value>GPU：{0} @ {1}%{2}</value>
+  </data>
+  <data name="TrayIcon_TooltipFanPerfFormat" xml:space="preserve">
+    <value>风扇/性能：{0}</value>
+  </data>
+  <data name="TrayIcon_PerfQuietLabel" xml:space="preserve">
+    <value> 冷静——风扇静音，延长续航</value>
+  </data>
 </root>

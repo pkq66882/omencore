@@ -146,11 +146,11 @@ namespace OmenCore.Utils
             contextMenu.Items.Add(new Separator());
 
             // ═══ LIVE STATUS ═══
-            _cpuTempMenuItem = new MenuItem { Header = "CPU: --°C · --%", IsEnabled = false };
+            _cpuTempMenuItem = new MenuItem { Header = Strings.TrayIcon_CpuTempPlaceholder, IsEnabled = false };
             _cpuTempMenuItem.FontFamily = AppFonts.Monospace;
             contextMenu.Items.Add(_cpuTempMenuItem);
 
-            _gpuTempMenuItem = new MenuItem { Header = "GPU: --°C · --%", IsEnabled = false };
+            _gpuTempMenuItem = new MenuItem { Header = Strings.TrayIcon_GpuTempPlaceholder, IsEnabled = false };
             _gpuTempMenuItem.FontFamily = AppFonts.Monospace;
             contextMenu.Items.Add(_gpuTempMenuItem);
 
@@ -299,11 +299,11 @@ namespace OmenCore.Utils
             // Fan submenu
             _fanModeMenuItem = new MenuItem { Header = Strings.TrayIcon_FanControl };
             
-            _fanAutoMenuItem = new MenuItem { Header = "✓ Auto — System controlled" };
+            _fanAutoMenuItem = new MenuItem { Header = "✓" + Strings.TrayIcon_FanAutoDesc };
             _fanAutoMenuItem.Click += (s, e) => SetFanMode("Auto");
-            _fanMaxMenuItem = new MenuItem { Header = "   Max — Maximum cooling" };
+            _fanMaxMenuItem = new MenuItem { Header = "  " + Strings.TrayIcon_FanMaxDesc };
             _fanMaxMenuItem.Click += (s, e) => SetFanMode("Max");
-            _fanQuietMenuItem = new MenuItem { Header = "   Quiet — Reduced noise" };
+            _fanQuietMenuItem = new MenuItem { Header = "  " + Strings.TrayIcon_FanQuietDesc };
             _fanQuietMenuItem.Click += (s, e) => SetFanMode("Quiet");
             
             _fanModeMenuItem.Items.Add(_fanAutoMenuItem);
@@ -338,11 +338,11 @@ namespace OmenCore.Utils
             // Performance submenu
             _performanceModeMenuItem = new MenuItem { Header = Strings.TrayIcon_PowerProfile };
             
-            _perfQuietMenuItem = new MenuItem { Header = "   Power Saver — Battery life" };
+            _perfQuietMenuItem = new MenuItem { Header = "  " + Strings.TrayIcon_PerfQuietLabel };
             _perfQuietMenuItem.Click += (s, e) => SetPerformanceMode("Quiet");
-            _perfBalancedMenuItem = new MenuItem { Header = "✓ Balanced — Default" };
+            _perfBalancedMenuItem = new MenuItem { Header = "✓" + Strings.TrayIcon_PerfBalanced };
             _perfBalancedMenuItem.Click += (s, e) => SetPerformanceMode("Balanced");
-            _perfPerformanceMenuItem = new MenuItem { Header = "   Performance — Max power" };
+            _perfPerformanceMenuItem = new MenuItem { Header = "  " + Strings.TrayIcon_PerfPerformance };
             _perfPerformanceMenuItem.Click += (s, e) => SetPerformanceMode("Performance");
             
             _performanceModeMenuItem.Items.Add(_perfQuietMenuItem);
@@ -423,11 +423,11 @@ namespace OmenCore.Utils
             // GPU Power submenu (v2.7.0)
             _gpuPowerMenuItem = new MenuItem { Header = Strings.TrayIcon_GpuPower };
             
-            _gpuPowerMinMenuItem = new MenuItem { Header = "   Minimum — Base TGP, best battery" };
+            _gpuPowerMinMenuItem = new MenuItem { Header = "  " + Strings.TrayIcon_GpuPowerMin };
             _gpuPowerMinMenuItem.Click += (s, e) => RequestGpuPowerChange("Minimum");
-            _gpuPowerMedMenuItem = new MenuItem { Header = "✓ Medium — Custom TGP" };
+            _gpuPowerMedMenuItem = new MenuItem { Header = "✓" + Strings.TrayIcon_GpuPowerMed };
             _gpuPowerMedMenuItem.Click += (s, e) => RequestGpuPowerChange("Medium");
-            _gpuPowerMaxMenuItem = new MenuItem { Header = "   Maximum — TGP + Dynamic Boost" };
+            _gpuPowerMaxMenuItem = new MenuItem { Header = "  " + Strings.TrayIcon_GpuPowerMax };
             _gpuPowerMaxMenuItem.Click += (s, e) => RequestGpuPowerChange("Maximum");
             // Same list as the Tuning page offers; without it a profile set to Extended showed Medium here (#142).
             _gpuPowerExtMenuItem = new MenuItem { Header = GpuPowerExtendedHeader(_currentGpuPowerLevel) };
@@ -466,13 +466,13 @@ namespace OmenCore.Utils
             // Keyboard backlight toggle (v2.7.0)
             _keyboardBacklightMenuItem = new MenuItem { Header = Strings.TrayIcon_KeyboardBacklight };
             
-            var kbOff = new MenuItem { Header = "   Off" };
+            var kbOff = new MenuItem { Header = "  " + Strings.TrayIcon_KbOff };
             kbOff.Click += (s, e) => RequestKeyboardBacklight(0);
-            var kbLow = new MenuItem { Header = "   Low" };
+            var kbLow = new MenuItem { Header = "  " + Strings.TrayIcon_KbLow };
             kbLow.Click += (s, e) => RequestKeyboardBacklight(1);
-            var kbMed = new MenuItem { Header = "   Medium" };
+            var kbMed = new MenuItem { Header = "  " + Strings.TrayIcon_KbMedium };
             kbMed.Click += (s, e) => RequestKeyboardBacklight(2);
-            var kbHigh = new MenuItem { Header = "✓ High" };
+            var kbHigh = new MenuItem { Header = "✓" + Strings.TrayIcon_KbHigh };
             kbHigh.Click += (s, e) => RequestKeyboardBacklight(3);
             var kbToggle = new MenuItem { Header = Strings.TrayIcon_Toggle };
             kbToggle.Click += (s, e) => RequestKeyboardBacklightToggle();
@@ -592,7 +592,7 @@ namespace OmenCore.Utils
         {
             if (_disposed || _latestSample == null)
             {
-                const string noDataTooltip = "OmenCore - No Data";
+                var noDataTooltip = Strings.TrayIcon_NoDataTooltip;
                 if (!string.Equals(_lastTooltipText, noDataTooltip, StringComparison.Ordinal))
                 {
                     _trayIcon.ToolTipText = noDataTooltip;
@@ -649,11 +649,11 @@ namespace OmenCore.Utils
                 
                 var toolTipText = $"OmenCore v{_appVersion}\n" +
                                   $"━━━━━━━━━━━━━━━━━━\n" +
-                                  $"CPU: {cpuTempStr} @ {cpuLoad:F0}%\n" +
-                                  $"GPU: {gpuTempStr} @ {gpuLoad:F0}%{gpuPowerDisplay}\n" +
-                                  $"RAM: {memUsedGb:F1}/{memTotalGb:F1} GB ({memPercent:F0}%)\n" +
-                                  $"{fanLine} | {_currentPerformanceMode}\n" +
-                                  $"Fan/Perf: {(_linkFanToPerformanceMode ? Strings.TrayIcon_Linked : Strings.TrayIcon_Decoupled)}\n" +
+                                  string.Format(Strings.TrayIcon_TooltipCpuFormat, cpuTempStr, cpuLoad.ToString("F0")) + "\n" +
+                                  string.Format(Strings.TrayIcon_TooltipGpuFormat, gpuTempStr, gpuLoad.ToString("F0"), gpuPowerDisplay) + "\n" +
+                                  string.Format(Strings.TrayIcon_RamFormat, memUsedGb.ToString("F1"), memTotalGb.ToString("F1"), memPercent.ToString("F0")) + "\n" +
+                                  $"{fanLine} | {MapPerfMode(_currentPerformanceMode)}\n" +
+                                  string.Format(Strings.TrayIcon_TooltipFanPerfFormat, _linkFanToPerformanceMode ? Strings.TrayIcon_Linked : Strings.TrayIcon_Decoupled) + "\n" +
                                   (powerLine.Length > 0 ? $"{powerLine}\n" : "") +
                                   string.Format(Strings.TrayIcon_MonitorFormat, MapHealth(_monitoringHealth)) + "\n" +
                                   $"━━━━━━━━━━━━━━━━━━\n" +
@@ -664,8 +664,8 @@ namespace OmenCore.Utils
                     _lastTooltipText = toolTipText;
                 }
 
-                SetMenuHeaderIfChanged(_cpuTempMenuItem, $"CPU: {cpuTempStr} · {cpuLoad:F0}%");
-                SetMenuHeaderIfChanged(_gpuTempMenuItem, $"GPU: {gpuTempStr} · {gpuLoad:F0}%");
+                SetMenuHeaderIfChanged(_cpuTempMenuItem, string.Format(Strings.TrayIcon_CpuTempFormat, cpuTempStr, cpuLoad.ToString("F0")));
+                SetMenuHeaderIfChanged(_gpuTempMenuItem, string.Format(Strings.TrayIcon_GpuTempFormat, gpuTempStr, gpuLoad.ToString("F0")));
                 SetMenuHeaderIfChanged(_monitoringHealthMenuItem, BuildMonitoringHealthHeaderText(_monitoringHealth));
                 SetMenuHeaderIfChanged(_ramMenuItem, string.Format(Strings.TrayIcon_RamFormat, memUsedGb.ToString("F1"), memTotalGb.ToString("F1"), memPercent.ToString("F0")));
 
@@ -758,11 +758,11 @@ namespace OmenCore.Utils
             var isQuiet = FanModeNameResolver.IsQuietAlias(activeMode);
 
             if (_fanAutoMenuItem != null)
-                _fanAutoMenuItem.Header = (isAuto ? "✓" : "  ") + " Auto — System controlled";
+                _fanAutoMenuItem.Header = (isAuto ? "✓" : "  ") + Strings.TrayIcon_FanAutoDesc;
             if (_fanMaxMenuItem != null)
-                _fanMaxMenuItem.Header = (isMax ? "✓" : "  ") + " Max — Maximum cooling";
+                _fanMaxMenuItem.Header = (isMax ? "✓" : "  ") + Strings.TrayIcon_FanMaxDesc;
             if (_fanQuietMenuItem != null)
-                _fanQuietMenuItem.Header = (isQuiet ? "✓" : "  ") + " Quiet — Reduced noise";
+                _fanQuietMenuItem.Header = (isQuiet ? "✓" : "  ") + Strings.TrayIcon_FanQuietDesc;
         }
 
         private void SetPerformanceMode(string mode)
@@ -894,11 +894,11 @@ namespace OmenCore.Utils
             try
             {
                 var rate = _displayService.GetCurrentRefreshRate(_displayService.ResolveLaptopPanelTarget());
-                return rate > 0 ? $"{rate}Hz" : "Display";
+                return rate > 0 ? $"{rate}Hz" : Strings.TrayIcon_Display;
             }
             catch
             {
-                return "Display";
+                return Strings.TrayIcon_Display;
             }
         }
 
@@ -1070,7 +1070,7 @@ namespace OmenCore.Utils
             {
                 MonitoringHealthStatus.Healthy => "Healthy",
                 MonitoringHealthStatus.Degraded => "Degraded",
-                MonitoringHealthStatus.Stale => "Stale",
+                MonitoringHealthStatus.Stale => Strings.TrayIcon_HealthStale,
                 _ => "Unknown"
             };
 
@@ -1165,6 +1165,7 @@ namespace OmenCore.Utils
         {
             "Healthy" => Strings.TrayIcon_HealthHealthy,
             "Degraded" => Strings.TrayIcon_HealthDegraded,
+            "Stale" => Strings.TrayIcon_HealthStale,
             "Unknown" => Strings.TrayIcon_HealthUnknown,
             _ => health ?? string.Empty
         };

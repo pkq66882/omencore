@@ -694,14 +694,14 @@
                                     <Button Content="{x:Static loc:Strings.MainWindow_InstallUpdate}"
                                             Command="{Binding Update.InstallUpdateCommand}"
                                             Style="{StaticResource ModernButton}"
-                                            Width="140"
                                             Height="34"
+                                            Padding="18,0"
                                             Margin="0,0,8,0" />
                                     <Button Content="{x:Static loc:Strings.MainWindow_ReleaseNotes}"
                                             Command="{Binding Update.OpenReleaseNotesCommand}"
                                             Style="{StaticResource SecondaryButton}"
-                                            Width="130"
-                                            Height="34" />
+                                            Height="34"
+                                            Padding="18,0" />
                                 </StackPanel>
                                 
                                 <!-- Download Progress -->

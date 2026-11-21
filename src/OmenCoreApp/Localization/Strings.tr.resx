@@ -6694,4 +6694,43 @@
   <data name="BloatDesc_XboxApp" xml:space="preserve">
     <value>Xbox uygulaması — Game Pass kullanıyorsanız tutun</value>
   </data>
+  <data name="TrayIcon_CpuTempPlaceholder" xml:space="preserve">
+    <value>CPU: --°C · --%</value>
+  </data>
+  <data name="TrayIcon_GpuTempPlaceholder" xml:space="preserve">
+    <value>GPU: --°C · --%</value>
+  </data>
+  <data name="TrayIcon_CpuTempFormat" xml:space="preserve">
+    <value>CPU: {0} · %{1}</value>
+  </data>
+  <data name="TrayIcon_GpuTempFormat" xml:space="preserve">
+    <value>GPU: {0} · %{1}</value>
+  </data>
+  <data name="TrayIcon_FanAutoDesc" xml:space="preserve">
+    <value> Otomatik — Sistem kontrolünde</value>
+  </data>
+  <data name="TrayIcon_FanMaxDesc" xml:space="preserve">
+    <value> Maks — Maksimum soğutma</value>
+  </data>
+  <data name="TrayIcon_FanQuietDesc" xml:space="preserve">
+    <value> Sessiz — Azaltılmış gürültü</value>
+  </data>
+  <data name="TrayIcon_HealthStale" xml:space="preserve">
+    <value>Eskimiş</value>
+  </data>
+  <data name="TrayIcon_NoDataTooltip" xml:space="preserve">
+    <value>OmenCore - veri yok</value>
+  </data>
+  <data name="TrayIcon_TooltipCpuFormat" xml:space="preserve">
+    <value>CPU: {0} @ %{1}</value>
+  </data>
+  <data name="TrayIcon_TooltipGpuFormat" xml:space="preserve">
+    <value>GPU: {0} @ %{1}{2}</value>
+  </data>
+  <data name="TrayIcon_TooltipFanPerfFormat" xml:space="preserve">
+    <value>Fan/Performans: {0}</value>
+  </data>
+  <data name="TrayIcon_PerfQuietLabel" xml:space="preserve">
+    <value> Sessiz — sessiz fanlar, uzun pil ömrü</value>
+  </data>
 </root>
