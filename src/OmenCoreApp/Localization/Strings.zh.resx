@@ -6061,4 +6061,7 @@
   <data name="SettingsViewModel_ValueUnavailable" xml:space="preserve">
     <value>不可用</value>
   </data>
+  <data name="SettingsView_DriverBackendParagraph" xml:space="preserve">
+    <value>在现代 Windows 系统上，安全启动和内存完整性可能会阻止旧式驱动。OmenCore 在可用时优先使用免驱动控制路径（WMI/OGH），并推荐 PawnIO 以获得兼容安全启动的 MSR/EC 访问。</value>
+  </data>
 </root>

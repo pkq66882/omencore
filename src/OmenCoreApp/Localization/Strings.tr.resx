@@ -6061,4 +6061,7 @@
   <data name="SettingsViewModel_ValueUnavailable" xml:space="preserve">
     <value>Kullanılamaz</value>
   </data>
+  <data name="SettingsView_DriverBackendParagraph" xml:space="preserve">
+    <value>Modern Windows sistemlerinde Secure Boot ve Bellek Bütünlüğü eski sürücüleri engelleyebilir. OmenCore mümkün olduğunda sürücüsüz kontrol yollarını (WMI/OGH) tercih eder ve Secure Boot uyumlu MSR/EC erişimi için PawnIO önerir.</value>
+  </data>
 </root>

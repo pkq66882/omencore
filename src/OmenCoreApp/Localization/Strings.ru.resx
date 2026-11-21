@@ -6061,4 +6061,7 @@
   <data name="SettingsViewModel_ValueUnavailable" xml:space="preserve">
     <value>Недоступно</value>
   </data>
+  <data name="SettingsView_DriverBackendParagraph" xml:space="preserve">
+    <value>В современных системах Windows Secure Boot и целостность памяти могут блокировать устаревшие драйверы. OmenCore при возможности предпочитает бездрайверные пути управления (WMI/OGH) и рекомендует PawnIO для MSR/EC-доступа, совместимого с Secure Boot.</value>
+  </data>
 </root>

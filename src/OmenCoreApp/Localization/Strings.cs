@@ -2342,5 +2342,7 @@ namespace OmenCore.Localization
     public static string SettingsViewModel_ValueUnavailable => Get(nameof(SettingsViewModel_ValueUnavailable));
     public static string SystemControlViewModel_TccNotAvailableWmi => Get(nameof(SystemControlViewModel_TccNotAvailableWmi));
 
+    public static string SettingsView_DriverBackendParagraph => Get(nameof(SettingsView_DriverBackendParagraph));
+
     }
 }

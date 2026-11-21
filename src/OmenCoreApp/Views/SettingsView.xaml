@@ -1767,8 +1767,7 @@
                         <TextBlock TextWrapping="Wrap" FontSize="13" 
                                    Foreground="{StaticResource TextSecondaryBrush}" 
                                    Margin="0,0,0,12">
-                            On modern Windows systems, Secure Boot and Memory Integrity can block legacy drivers.
-                            OmenCore prefers driverless control paths (WMI/OGH) when available, and recommends PawnIO for Secure Boot compatible MSR/EC access.
+                            <Run Text="{x:Static loc:Strings.SettingsView_DriverBackendParagraph}"/>
                         </TextBlock>
 
                         <StackPanel Orientation="Horizontal">

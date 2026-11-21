@@ -6065,4 +6065,7 @@
   <data name="SettingsViewModel_ValueUnavailable" xml:space="preserve">
     <value>Unavailable</value>
   </data>
+  <data name="SettingsView_DriverBackendParagraph" xml:space="preserve">
+    <value>On modern Windows systems, Secure Boot and Memory Integrity can block legacy drivers. OmenCore prefers driverless control paths (WMI/OGH) when available, and recommends PawnIO for Secure Boot compatible MSR/EC access.</value>
+  </data>
 </root>
