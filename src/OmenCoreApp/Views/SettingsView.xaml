@@ -1120,7 +1120,7 @@
                                         Value="{Binding HardwareWorkerOrphanTimeoutMinutes, Mode=TwoWay}"
                                         Width="130" VerticalAlignment="Center"
                                         IsEnabled="{Binding HardwareWorkerOrphanTimeoutEnabled}"/>
-                                <TextBlock Text="{Binding HardwareWorkerOrphanTimeoutMinutes, StringFormat={}{0} min}"
+                                <TextBlock Text="{Binding HardwareWorkerOrphanTimeoutDisplay}"
                                            FontSize="12" Width="70" TextAlignment="Right"
                                            Foreground="{StaticResource TextPrimaryBrush}"
                                            VerticalAlignment="Center" Margin="8,0,0,0"/>

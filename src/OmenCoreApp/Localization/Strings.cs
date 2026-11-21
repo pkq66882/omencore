@@ -2576,5 +2576,22 @@ namespace OmenCore.Localization
 
     public static string TrayIcon_NoDataTooltip => Get(nameof(TrayIcon_NoDataTooltip));
 
+    public static string AboutWindow_UpdateDownloadFailedBody => Get(nameof(AboutWindow_UpdateDownloadFailedBody));
+    public static string AboutWindow_UpdateDownloadFailedTitle => Get(nameof(AboutWindow_UpdateDownloadFailedTitle));
+    public static string QuickPopupWindow_ActionDisplayOffText => Get(nameof(QuickPopupWindow_ActionDisplayOffText));
+    public static string QuickPopupWindow_ActionDisplayOffTip => Get(nameof(QuickPopupWindow_ActionDisplayOffTip));
+    public static string QuickPopupWindow_ActionLockText => Get(nameof(QuickPopupWindow_ActionLockText));
+    public static string QuickPopupWindow_ActionLockTip => Get(nameof(QuickPopupWindow_ActionLockTip));
+    public static string SettingsView_MinutesFormat => Get(nameof(SettingsView_MinutesFormat));
+    public static string SettingsView_QuickActionDisabled => Get(nameof(SettingsView_QuickActionDisabled));
+    public static string SettingsView_QuickActionDisplayOff => Get(nameof(SettingsView_QuickActionDisplayOff));
+    public static string SettingsView_QuickActionLockWindows => Get(nameof(SettingsView_QuickActionLockWindows));
+    public static string UpdateViewModel_DownloadCorrupted => Get(nameof(UpdateViewModel_DownloadCorrupted));
+    public static string UpdateViewModel_InstallerLaunched => Get(nameof(UpdateViewModel_InstallerLaunched));
+    public static string UpdateViewModel_InstallerNotFound => Get(nameof(UpdateViewModel_InstallerNotFound));
+    public static string UpdateViewModel_InvalidReleaseData => Get(nameof(UpdateViewModel_InvalidReleaseData));
+    public static string UpdateViewModel_NoReleaseData => Get(nameof(UpdateViewModel_NoReleaseData));
+    public static string UpdateViewModel_UpdateAvailable => Get(nameof(UpdateViewModel_UpdateAvailable));
+
     }
 }

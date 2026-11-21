@@ -6733,4 +6733,52 @@
   <data name="TrayIcon_PerfQuietLabel" xml:space="preserve">
     <value> Sessiz — sessiz fanlar, uzun pil ömrü</value>
   </data>
+  <data name="UpdateViewModel_NoReleaseData" xml:space="preserve">
+    <value>GitHub sürüm verisi döndürmedi.</value>
+  </data>
+  <data name="UpdateViewModel_InvalidReleaseData" xml:space="preserve">
+    <value>Sunucudan gelen sürüm verisi geçersiz.</value>
+  </data>
+  <data name="UpdateViewModel_UpdateAvailable" xml:space="preserve">
+    <value>GitHub Releases üzerinden güncelleme mevcut.</value>
+  </data>
+  <data name="UpdateViewModel_InstallerNotFound" xml:space="preserve">
+    <value>Yükleyici dosyası bulunamadı.</value>
+  </data>
+  <data name="UpdateViewModel_DownloadCorrupted" xml:space="preserve">
+    <value>İndirilen dosya geçerli bir Windows yürütülebilir dosyası değil ve bozulmuş olabilir. Tekrar deneyin veya GitHub üzerinden elle indirin.</value>
+  </data>
+  <data name="UpdateViewModel_InstallerLaunched" xml:space="preserve">
+    <value>Güncelleme yükleyicisi başlatıldı. Uygulama yükleme tamamlandıktan sonra yeniden başlayacak.</value>
+  </data>
+  <data name="AboutWindow_UpdateDownloadFailedTitle" xml:space="preserve">
+    <value>Güncelleme indirilemedi</value>
+  </data>
+  <data name="AboutWindow_UpdateDownloadFailedBody" xml:space="preserve">
+    <value>Güncelleme indirilemedi veya doğrulanamadı.&#10;&#10;Elle indirmek için GitHub Releases sayfası açılsın mı?</value>
+  </data>
+  <data name="SettingsView_QuickActionDisplayOff" xml:space="preserve">
+    <value>Ekranı kapat</value>
+  </data>
+  <data name="SettingsView_QuickActionLockWindows" xml:space="preserve">
+    <value>Windows'i kilitle</value>
+  </data>
+  <data name="SettingsView_QuickActionDisabled" xml:space="preserve">
+    <value>Devre dışı</value>
+  </data>
+  <data name="QuickPopupWindow_ActionLockText" xml:space="preserve">
+    <value>Kilitle</value>
+  </data>
+  <data name="QuickPopupWindow_ActionDisplayOffText" xml:space="preserve">
+    <value>Ekran kapalı</value>
+  </data>
+  <data name="QuickPopupWindow_ActionLockTip" xml:space="preserve">
+    <value>Windows'i kilitle</value>
+  </data>
+  <data name="QuickPopupWindow_ActionDisplayOffTip" xml:space="preserve">
+    <value>Ekranı kapat</value>
+  </data>
+  <data name="SettingsView_MinutesFormat" xml:space="preserve">
+    <value>{0} dk</value>
+  </data>
 </root>

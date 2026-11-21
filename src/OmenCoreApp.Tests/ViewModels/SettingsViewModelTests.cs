@@ -17,9 +17,12 @@ namespace OmenCoreApp.Tests.ViewModels
     public class SettingsViewModelTests : IDisposable
     {
         private readonly string _tempDir;
+        private readonly System.Globalization.CultureInfo _originalUICulture = System.Globalization.CultureInfo.CurrentUICulture;
 
         public SettingsViewModelTests()
         {
+            // QuickAccessAction display values are localized; pin to en for canonical assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
             _tempDir = Path.Combine(Path.GetTempPath(), "omen_test_config_" + Guid.NewGuid().ToString("N"));
             Directory.CreateDirectory(_tempDir);
             Environment.SetEnvironmentVariable("OMENCORE_CONFIG_DIR", _tempDir);
@@ -27,6 +30,7 @@ namespace OmenCoreApp.Tests.ViewModels
 
         public void Dispose()
         {
+            System.Globalization.CultureInfo.CurrentUICulture = _originalUICulture;
             try
             {
                 Environment.SetEnvironmentVariable("OMENCORE_CONFIG_DIR", null);

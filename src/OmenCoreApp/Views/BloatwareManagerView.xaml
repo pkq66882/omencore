@@ -453,7 +453,7 @@
                                                     </Style.Triggers>
                                                 </Style>
                                             </Border.Style>
-                                            <TextBlock Text="{Binding RemovalRisk}" FontSize="9" FontWeight="Bold" Foreground="White"/>
+                                            <TextBlock Text="{Binding RemovalRisk, Converter={StaticResource RiskLevelDisplay}}" FontSize="9" FontWeight="Bold" Foreground="White"/>
                                         </Border>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>

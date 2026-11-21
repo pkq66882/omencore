@@ -764,10 +764,10 @@
     <value>移除低风险项</value>
   </data>
   <data name="BloatwareManagerView_ExportBloatwareDryRunReport" xml:space="preserve">
-    <value>导出预装软件模拟运行报告</value>
+    <value>导出预演报告</value>
   </data>
   <data name="BloatwareManagerView_DryRun" xml:space="preserve">
-    <value>模拟运行</value>
+    <value>预演</value>
   </data>
   <data name="BloatwareManagerView_CancelBulkOperation" xml:space="preserve">
     <value>取消批量操作</value>
@@ -1151,7 +1151,7 @@
     <value>⚠ 推断值，尚未验证</value>
   </data>
   <data name="DiagnosticsView_ThisReflectsWhatOmencoreSModelDatabaseKnow" xml:space="preserve">
-    <value>这反映的是 OmenCore 机型数据库对这台机器所检测到的具体主板的认识——某功能显示“不支持”可能是真实的硬件/固件限制，而非 OmenCore 的 bug。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功率加速）；常规标签页中的基本 Auto/Performance/Max 风扇模式由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
+    <value>这反映的是 OmenCore 机型数据库对这台机器所检测到的具体主板的认识——某功能显示“不支持”可能是真实的硬件/固件限制，而非 OmenCore 的 bug。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功率加速）；常规标签页中的基础风扇模式（自动/性能/最大）由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
   </data>
   <data name="DiagnosticsView_CustomFanCurves" xml:space="preserve">
     <value>自定义风扇曲线</value>
@@ -4061,10 +4061,10 @@
     <value>睿频功耗</value>
   </data>
   <data name="TuningView_PowerLimitsLockedByBios" xml:space="preserve">
-    <value>功耗限制被 BIOS 锁定</value>
+    <value>功耗限制已被 BIOS 锁定</value>
   </data>
   <data name="TuningView_MsrRegistersAreWriteLockedUntilRebootMayRe" xml:space="preserve">
-    <value>——MSR 寄存器在重启前为写锁定。可能需要 BIOS 设置或 HP Unleashed Mode。</value>
+    <value>——MSR 寄存器在重启前处于写保护状态，可能需要在 BIOS 中设置，或启用 HP Unleashed 模式。</value>
   </data>
   <data name="TuningView_ApplyPowerLimits" xml:space="preserve">
     <value>应用功耗限制</value>
@@ -4421,7 +4421,7 @@
     <value>不可用</value>
   </data>
   <data name="MainViewModel_CleanupDryDone" xml:space="preserve">
-    <value>模拟运行完成</value>
+    <value>预演完成</value>
   </data>
   <data name="MainViewModel_CleanupDryRunning" xml:space="preserve">
     <value>正在运行清理演练…</value>
@@ -6732,5 +6732,53 @@
   </data>
   <data name="TrayIcon_PerfQuietLabel" xml:space="preserve">
     <value> 冷静——风扇静音，延长续航</value>
+  </data>
+  <data name="UpdateViewModel_NoReleaseData" xml:space="preserve">
+    <value>未能从 GitHub 获取发布数据。</value>
+  </data>
+  <data name="UpdateViewModel_InvalidReleaseData" xml:space="preserve">
+    <value>服务器返回的发布数据无效。</value>
+  </data>
+  <data name="UpdateViewModel_UpdateAvailable" xml:space="preserve">
+    <value>GitHub Releases 上有可用更新。</value>
+  </data>
+  <data name="UpdateViewModel_InstallerNotFound" xml:space="preserve">
+    <value>未找到更新安装程序。</value>
+  </data>
+  <data name="UpdateViewModel_DownloadCorrupted" xml:space="preserve">
+    <value>下载的文件不是有效的 Windows 可执行文件，下载可能已损坏。请重试，或前往 GitHub 手动下载。</value>
+  </data>
+  <data name="UpdateViewModel_InstallerLaunched" xml:space="preserve">
+    <value>更新安装程序已启动，应用将在安装完成后重启。</value>
+  </data>
+  <data name="AboutWindow_UpdateDownloadFailedTitle" xml:space="preserve">
+    <value>更新下载失败</value>
+  </data>
+  <data name="AboutWindow_UpdateDownloadFailedBody" xml:space="preserve">
+    <value>无法下载或验证更新。&#10;&#10;是否打开 GitHub Releases 页面手动下载？</value>
+  </data>
+  <data name="SettingsView_QuickActionDisplayOff" xml:space="preserve">
+    <value>关闭显示器</value>
+  </data>
+  <data name="SettingsView_QuickActionLockWindows" xml:space="preserve">
+    <value>锁定 Windows</value>
+  </data>
+  <data name="SettingsView_QuickActionDisabled" xml:space="preserve">
+    <value>已禁用</value>
+  </data>
+  <data name="QuickPopupWindow_ActionLockText" xml:space="preserve">
+    <value>锁定</value>
+  </data>
+  <data name="QuickPopupWindow_ActionDisplayOffText" xml:space="preserve">
+    <value>熄屏</value>
+  </data>
+  <data name="QuickPopupWindow_ActionLockTip" xml:space="preserve">
+    <value>锁定 Windows</value>
+  </data>
+  <data name="QuickPopupWindow_ActionDisplayOffTip" xml:space="preserve">
+    <value>关闭显示器</value>
+  </data>
+  <data name="SettingsView_MinutesFormat" xml:space="preserve">
+    <value>{0} 分钟</value>
   </data>
 </root>

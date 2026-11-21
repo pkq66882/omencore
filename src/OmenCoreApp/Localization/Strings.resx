@@ -6737,4 +6737,52 @@
   <data name="TrayIcon_PerfQuietLabel" xml:space="preserve">
     <value> 冷静——风扇静音，延长续航</value>
   </data>
+  <data name="UpdateViewModel_NoReleaseData" xml:space="preserve">
+    <value>No release data returned from GitHub.</value>
+  </data>
+  <data name="UpdateViewModel_InvalidReleaseData" xml:space="preserve">
+    <value>Invalid release data from server.</value>
+  </data>
+  <data name="UpdateViewModel_UpdateAvailable" xml:space="preserve">
+    <value>Update available on GitHub releases.</value>
+  </data>
+  <data name="UpdateViewModel_InstallerNotFound" xml:space="preserve">
+    <value>Installer file not found.</value>
+  </data>
+  <data name="UpdateViewModel_DownloadCorrupted" xml:space="preserve">
+    <value>Downloaded file is not a valid Windows executable. The download may have been corrupted. Please try again or download manually from GitHub.</value>
+  </data>
+  <data name="UpdateViewModel_InstallerLaunched" xml:space="preserve">
+    <value>Update installer launched. Application will restart after installation.</value>
+  </data>
+  <data name="AboutWindow_UpdateDownloadFailedTitle" xml:space="preserve">
+    <value>Update Download Failed</value>
+  </data>
+  <data name="AboutWindow_UpdateDownloadFailedBody" xml:space="preserve">
+    <value>The update could not be downloaded or verified.&#10;&#10;Open GitHub releases to download manually?</value>
+  </data>
+  <data name="SettingsView_QuickActionDisplayOff" xml:space="preserve">
+    <value>Display Off</value>
+  </data>
+  <data name="SettingsView_QuickActionLockWindows" xml:space="preserve">
+    <value>Lock Windows</value>
+  </data>
+  <data name="SettingsView_QuickActionDisabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="QuickPopupWindow_ActionLockText" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="QuickPopupWindow_ActionDisplayOffText" xml:space="preserve">
+    <value>Display Off</value>
+  </data>
+  <data name="QuickPopupWindow_ActionLockTip" xml:space="preserve">
+    <value>Lock Windows</value>
+  </data>
+  <data name="QuickPopupWindow_ActionDisplayOffTip" xml:space="preserve">
+    <value>Turn off display</value>
+  </data>
+  <data name="SettingsView_MinutesFormat" xml:space="preserve">
+    <value>{0} min</value>
+  </data>
 </root>

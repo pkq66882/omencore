@@ -291,7 +291,7 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0">
                             <TextBlock FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}"
-                                       Text="{Binding DetectedCapabilities.ModelConfig.ModelName, FallbackValue={x:Static loc:Strings.DiagnosticsView_UnknownModel}}"/>
+                                       Text="{Binding DetectedCapabilities.ModelConfig.ModelName, Converter={StaticResource ModelNameDisplay}, FallbackValue={x:Static loc:Strings.DiagnosticsView_UnknownModel}}"/>
                             <TextBlock FontSize="11" Foreground="{StaticResource TextTertiaryBrush}" Margin="0,2,0,0">
                                 <Run Text="{x:Static loc:Strings.DiagnosticsView_ProductId}"/>
                                 <Run Text="{Binding DetectedCapabilities.ProductId, FallbackValue='?'}"/>

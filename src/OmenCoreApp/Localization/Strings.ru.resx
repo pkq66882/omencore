@@ -6733,4 +6733,52 @@
   <data name="TrayIcon_PerfQuietLabel" xml:space="preserve">
     <value> Тихо — тихие вентиляторы, больше автономность</value>
   </data>
+  <data name="UpdateViewModel_NoReleaseData" xml:space="preserve">
+    <value>GitHub не вернул данные о релизе.</value>
+  </data>
+  <data name="UpdateViewModel_InvalidReleaseData" xml:space="preserve">
+    <value>Неверные данные релиза от сервера.</value>
+  </data>
+  <data name="UpdateViewModel_UpdateAvailable" xml:space="preserve">
+    <value>Доступно обновление на GitHub Releases.</value>
+  </data>
+  <data name="UpdateViewModel_InstallerNotFound" xml:space="preserve">
+    <value>Файл установщика не найден.</value>
+  </data>
+  <data name="UpdateViewModel_DownloadCorrupted" xml:space="preserve">
+    <value>Загруженный файл не является корректным исполняемым файлом Windows и мог быть повреждён. Повторите попытку или скачайте вручную с GitHub.</value>
+  </data>
+  <data name="UpdateViewModel_InstallerLaunched" xml:space="preserve">
+    <value>Установщик обновления запущен. Приложение перезапустится после установки.</value>
+  </data>
+  <data name="AboutWindow_UpdateDownloadFailedTitle" xml:space="preserve">
+    <value>Не удалось скачать обновление</value>
+  </data>
+  <data name="AboutWindow_UpdateDownloadFailedBody" xml:space="preserve">
+    <value>Не удалось скачать или проверить обновление.&#10;&#10;Открыть страницу GitHub Releases для ручной загрузки?</value>
+  </data>
+  <data name="SettingsView_QuickActionDisplayOff" xml:space="preserve">
+    <value>Выключить дисплей</value>
+  </data>
+  <data name="SettingsView_QuickActionLockWindows" xml:space="preserve">
+    <value>Заблокировать Windows</value>
+  </data>
+  <data name="SettingsView_QuickActionDisabled" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="QuickPopupWindow_ActionLockText" xml:space="preserve">
+    <value>Заблок.</value>
+  </data>
+  <data name="QuickPopupWindow_ActionDisplayOffText" xml:space="preserve">
+    <value>Экран выкл.</value>
+  </data>
+  <data name="QuickPopupWindow_ActionLockTip" xml:space="preserve">
+    <value>Заблокировать Windows</value>
+  </data>
+  <data name="QuickPopupWindow_ActionDisplayOffTip" xml:space="preserve">
+    <value>Выключить дисплей</value>
+  </data>
+  <data name="SettingsView_MinutesFormat" xml:space="preserve">
+    <value>{0} мин</value>
+  </data>
 </root>

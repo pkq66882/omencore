@@ -135,4 +135,32 @@ namespace OmenCore.Utils
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
             => throw new NotSupportedException();
     }
+
+    /// Maps canonical bloatware risk levels to localized badges; keeps the enum untouched in data.
+    public class RiskLevelDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => (value?.ToString()) switch
+            {
+                "Low" => Strings.BloatwareManagerView_Low,
+                "Medium" => Strings.BloatwareManagerView_Med,
+                "High" => Strings.BloatwareManagerView_High,
+                _ => value?.ToString() ?? string.Empty
+            };
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+
+    /// Shows the canonical fallback model name ("Unknown OMEN") localized; real model names pass through.
+    public class ModelNameDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => value as string is string s && s == "Unknown OMEN"
+                ? Strings.DiagnosticsView_UnknownModel
+                : value?.ToString() ?? string.Empty;
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
 }

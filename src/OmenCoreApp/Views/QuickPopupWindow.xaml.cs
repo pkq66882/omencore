@@ -456,16 +456,16 @@ namespace OmenCore.Views
                 case "LockWindows":
                     DisplayOffBtn.Visibility = Visibility.Visible;
                     DisplayOffBtn.Tag = "LockWindows";
-                    DisplayOffBtn.ToolTip = "Lock Windows";
+                    DisplayOffBtn.ToolTip = Strings.QuickPopupWindow_ActionLockTip;
                     QuickActionIcon.Text = "🔒";
-                    QuickActionText.Text = "Lock";
+                    QuickActionText.Text = Strings.QuickPopupWindow_ActionLockText;
                     break;
                 default:
                     DisplayOffBtn.Visibility = Visibility.Visible;
                     DisplayOffBtn.Tag = "DisplayOff";
-                    DisplayOffBtn.ToolTip = "Turn off display";
+                    DisplayOffBtn.ToolTip = Strings.QuickPopupWindow_ActionDisplayOffTip;
                     QuickActionIcon.Text = "🌙";
-                    QuickActionText.Text = "Display Off";
+                    QuickActionText.Text = Strings.QuickPopupWindow_ActionDisplayOffText;
                     break;
             }
         }

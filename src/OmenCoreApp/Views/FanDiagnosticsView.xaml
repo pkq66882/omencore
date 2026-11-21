@@ -25,7 +25,7 @@
 
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
                         <Button Content="{x:Static loc:Strings.FanDiagnosticsView_ApplyVerify}" Command="{Binding ApplyAndVerifyCommand}" Style="{StaticResource ModernButton}" />
-                        <Button Content="{x:Static loc:Strings.DashboardView_Refresh}" Command="{Binding RefreshStateCommand}" Margin="8,0,0,0" />
+                        <Button Content="{x:Static loc:Strings.DashboardView_Refresh}" Command="{Binding RefreshStateCommand}" Style="{StaticResource SecondaryButton}" MinWidth="72" Margin="8,0,0,0" />
                     </StackPanel>
                 </StackPanel>
 

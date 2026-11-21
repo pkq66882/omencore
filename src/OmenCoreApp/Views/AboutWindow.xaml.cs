@@ -81,8 +81,8 @@ namespace OmenCore.Views
                                 if (!string.IsNullOrWhiteSpace(latest.ChangelogUrl))
                                 {
                                     var openGitHub = MessageBox.Show(
-                                        "The update could not be downloaded or verified.\n\nOpen GitHub releases to download manually?",
-                                        "Update Download Failed",
+                                        Strings.AboutWindow_UpdateDownloadFailedBody,
+                                        Strings.AboutWindow_UpdateDownloadFailedTitle,
                                         MessageBoxButton.YesNo,
                                         MessageBoxImage.Warning);
                                     if (openGitHub == MessageBoxResult.Yes)
@@ -93,7 +93,7 @@ namespace OmenCore.Views
                 }
                 else
                 {
-                    SetStatus(result.Message == "You are running the latest version." ? Strings.UpdateViewModel_RunningLatest : result.Message, "TextSecondaryBrush");
+                    SetStatus(LocalizeUpdateMessage(result.Message), "TextSecondaryBrush");
                 }
             }
             catch (Exception ex)
@@ -106,6 +106,19 @@ namespace OmenCore.Views
                 CheckUpdatesButton.IsEnabled = true;
             }
         }
+
+        /// Maps canonical Core update status messages to localized strings; unknown text passes through.
+        private static string LocalizeUpdateMessage(string? message) => message switch
+        {
+            "You are running the latest version." => Strings.UpdateViewModel_RunningLatest,
+            "No release data returned from GitHub." => Strings.UpdateViewModel_NoReleaseData,
+            "Invalid release data from server." => Strings.UpdateViewModel_InvalidReleaseData,
+            "Update available on GitHub releases." => Strings.UpdateViewModel_UpdateAvailable,
+            "Installer file not found." => Strings.UpdateViewModel_InstallerNotFound,
+            "Downloaded file is not a valid Windows executable. The download may have been corrupted. Please try again or download manually from GitHub." => Strings.UpdateViewModel_DownloadCorrupted,
+            "Update installer launched. Application will restart after installation." => Strings.UpdateViewModel_InstallerLaunched,
+            _ => message ?? string.Empty
+        };
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {

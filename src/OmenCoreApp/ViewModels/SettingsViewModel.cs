@@ -348,22 +348,29 @@ namespace OmenCore.ViewModels
 
         public bool ShowAdvancedControls => !_liteModeEnabled;
 
-        public string[] QuickAccessActionOptions => new[] { "Display Off", "Lock Windows", "Disabled" };
+        public string[] QuickAccessActionOptions => new[]
+        {
+            Strings.SettingsView_QuickActionDisplayOff,
+            Strings.SettingsView_QuickActionLockWindows,
+            Strings.SettingsView_QuickActionDisabled
+        };
 
         public string QuickAccessAction
         {
             get => _config.QuickAccessAction switch
             {
-                "LockWindows" => "Lock Windows",
-                "Disabled" => "Disabled",
-                _ => "Display Off"
+                "LockWindows" => Strings.SettingsView_QuickActionLockWindows,
+                "Disabled" => Strings.SettingsView_QuickActionDisabled,
+                _ => Strings.SettingsView_QuickActionDisplayOff
             };
             set
             {
                 var normalized = value switch
                 {
-                    "Lock Windows" => "LockWindows",
+                    "LockWindows" or "Lock Windows" => "LockWindows",
+                    var s when s == Strings.SettingsView_QuickActionLockWindows => "LockWindows",
                     "Disabled" => "Disabled",
+                    var s when s == Strings.SettingsView_QuickActionDisabled => "Disabled",
                     _ => "DisplayOff"
                 };
 
@@ -861,10 +868,13 @@ namespace OmenCore.ViewModels
                 {
                     _hardwareWorkerOrphanTimeoutMinutes = Math.Clamp(value, 1, 60);
                     OnPropertyChanged();
+                    OnPropertyChanged(nameof(HardwareWorkerOrphanTimeoutDisplay));
                     SaveSettings();
                 }
             }
         }
+
+        public string HardwareWorkerOrphanTimeoutDisplay => string.Format(Strings.SettingsView_MinutesFormat, HardwareWorkerOrphanTimeoutMinutes);
 
         #endregion
 
