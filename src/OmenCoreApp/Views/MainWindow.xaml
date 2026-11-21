@@ -422,7 +422,7 @@
                                                          Fill="{Binding Dashboard.MonitoringHealthColor, Converter={StaticResource HexToBrushConverter}, FallbackValue=#95A5A6}"/>
                                                 <TextBlock Grid.Column="1" Text="{Binding Dashboard.MonitoringSourceText, FallbackValue=No source}"
                                                            FontSize="9" Foreground="{StaticResource TextMutedBrush}"
-                                                           VerticalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+                                                           VerticalAlignment="Center" TextWrapping="Wrap"/>
                                             </Grid>
                                             <!-- EC backend badge -->
                                             <Border Grid.Column="1" CornerRadius="3" Padding="6,2" VerticalAlignment="Center"
