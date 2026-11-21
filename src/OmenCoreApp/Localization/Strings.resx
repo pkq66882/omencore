@@ -6485,4 +6485,217 @@
   <data name="QuickPopup_ApplySavedCurve" xml:space="preserve">
     <value>Apply saved fan curve</value>
   </data>
+  <data name="OptimizeDetail_PowerUltimatePerf" xml:space="preserve">
+    <value>Switches the active Windows power plan to the highest-performance profile available so CPU and GPU boost behavior stays aggressive during gameplay.</value>
+  </data>
+  <data name="OptimizeDetail_PowerGpuScheduling" xml:space="preserve">
+    <value>Enables Hardware-Accelerated GPU Scheduling so Windows can submit GPU work with lower CPU overhead on supported systems.</value>
+  </data>
+  <data name="OptimizeDetail_PowerGameMode" xml:space="preserve">
+    <value>Turns on Windows Game Mode so the OS prioritizes the active game and reduces background interference.</value>
+  </data>
+  <data name="OptimizeDetail_PowerForegroundPriority" xml:space="preserve">
+    <value>Raises foreground scheduling priority so the active game receives more CPU time relative to background tasks.</value>
+  </data>
+  <data name="OptimizeDetail_ServiceTelemetry" xml:space="preserve">
+    <value>Disables Windows telemetry policy values that control how much diagnostic data the OS is allowed to collect.</value>
+  </data>
+  <data name="OptimizeDetail_ServiceSysmain" xml:space="preserve">
+    <value>Stops and disables SysMain so Windows stops preloading applications in the background, which is often preferable on SSD systems.</value>
+  </data>
+  <data name="OptimizeDetail_ServiceSearch" xml:space="preserve">
+    <value>Stops and disables Windows Search indexing to reduce background disk and CPU usage.</value>
+  </data>
+  <data name="OptimizeDetail_ServiceDiagtrack" xml:space="preserve">
+    <value>Disables the Connected User Experiences and Telemetry service so background telemetry processing is reduced.</value>
+  </data>
+  <data name="OptimizeDetail_NetworkTcpNodelay" xml:space="preserve">
+    <value>Forces TCP to send packets without delayed acknowledgments, reducing latency at the cost of more frequent network traffic.</value>
+  </data>
+  <data name="OptimizeDetail_NetworkTcpAck" xml:space="preserve">
+    <value>Changes TCP acknowledgment behavior so packets are acknowledged immediately instead of being batched.</value>
+  </data>
+  <data name="OptimizeDetail_NetworkDeliveryOpt" xml:space="preserve">
+    <value>Disables Delivery Optimization peer-to-peer update sharing so Windows Update no longer uploads update data to other machines.</value>
+  </data>
+  <data name="OptimizeDetail_NetworkNagle" xml:space="preserve">
+    <value>Adjusts TCP buffering behavior to minimize acknowledgment delay for latency-sensitive workloads.</value>
+  </data>
+  <data name="OptimizeDetail_InputMouseAccel" xml:space="preserve">
+    <value>Disables Enhanced Pointer Precision so mouse movement stays raw and 1:1, which is generally preferred for games.</value>
+  </data>
+  <data name="OptimizeDetail_InputGameDvr" xml:space="preserve">
+    <value>Disables background game recording so Game DVR stops reserving resources while games are running.</value>
+  </data>
+  <data name="OptimizeDetail_InputGameBar" xml:space="preserve">
+    <value>Disables Xbox Game Bar overlays and startup prompts so they do not interrupt gameplay.</value>
+  </data>
+  <data name="OptimizeDetail_InputFullscreenOpt" xml:space="preserve">
+    <value>Tunes fullscreen optimization behavior for games by adjusting Windows GameConfigStore flags.</value>
+  </data>
+  <data name="OptimizeDetail_VisualTransparency" xml:space="preserve">
+    <value>Disables acrylic and transparency effects to reduce compositing overhead and visual distractions.</value>
+  </data>
+  <data name="OptimizeDetail_VisualAnimations" xml:space="preserve">
+    <value>Turns off common shell animations and menu delays so the desktop feels snappier and uses fewer visual effects.</value>
+  </data>
+  <data name="OptimizeDetail_StorageTrim" xml:space="preserve">
+    <value>Enables the NTFS TRIM path so SSDs can reclaim deleted blocks efficiently and maintain performance over time.</value>
+  </data>
+  <data name="OptimizeDetail_StorageLastAccess" xml:space="preserve">
+    <value>Disables NTFS last-access timestamp updates to reduce metadata writes on storage devices.</value>
+  </data>
+  <data name="OptimizeDetail_Storage8dot3" xml:space="preserve">
+    <value>Disables legacy 8.3 short filename generation, which can slightly reduce file-system bookkeeping on modern systems.</value>
+  </data>
+  <data name="OptimizeUndo_PowerUltimatePerf" xml:space="preserve">
+    <value>Restore the Balanced plan with: powercfg /setactive 381b4222-f694-41f0-9685-ff5bb260df2e</value>
+  </data>
+  <data name="OptimizeUndo_PowerGpuScheduling" xml:space="preserve">
+    <value>Set HwSchMode back to 0 or remove it, then reboot Windows.</value>
+  </data>
+  <data name="OptimizeUndo_PowerGameMode" xml:space="preserve">
+    <value>Set AutoGameModeEnabled to 0 or remove the value.</value>
+  </data>
+  <data name="OptimizeUndo_PowerForegroundPriority" xml:space="preserve">
+    <value>Restore the default Win32PrioritySeparation value or remove the override.</value>
+  </data>
+  <data name="OptimizeUndo_ServiceTelemetry" xml:space="preserve">
+    <value>Remove the AllowTelemetry overrides to return to the Windows default policy.</value>
+  </data>
+  <data name="OptimizeUndo_ServiceSysmain" xml:space="preserve">
+    <value>Set the SysMain service back to Automatic and start it from Services.</value>
+  </data>
+  <data name="OptimizeUndo_ServiceSearch" xml:space="preserve">
+    <value>Set the Windows Search service back to Automatic and start it from Services.</value>
+  </data>
+  <data name="OptimizeUndo_ServiceDiagtrack" xml:space="preserve">
+    <value>Set the DiagTrack service back to Automatic and start it from Services.</value>
+  </data>
+  <data name="OptimizeUndo_NetworkTcpNodelay" xml:space="preserve">
+    <value>Remove TcpNoDelay or set it back to 0.</value>
+  </data>
+  <data name="OptimizeUndo_NetworkTcpAck" xml:space="preserve">
+    <value>Remove TcpAckFrequency or restore the default behavior.</value>
+  </data>
+  <data name="OptimizeUndo_NetworkDeliveryOpt" xml:space="preserve">
+    <value>Remove DODownloadMode to let Windows manage Delivery Optimization normally.</value>
+  </data>
+  <data name="OptimizeUndo_NetworkNagle" xml:space="preserve">
+    <value>Remove TCPDelAckTicks to restore the default stack behavior.</value>
+  </data>
+  <data name="OptimizeUndo_InputMouseAccel" xml:space="preserve">
+    <value>Set MouseSpeed back to 1 and restore threshold values, or re-enable pointer precision in Windows mouse settings.</value>
+  </data>
+  <data name="OptimizeUndo_InputGameDvr" xml:space="preserve">
+    <value>Remove the Game DVR policy values or set them back to enabled.</value>
+  </data>
+  <data name="OptimizeUndo_InputGameBar" xml:space="preserve">
+    <value>Remove those Game Bar values or re-enable Xbox Game Bar in Windows Settings.</value>
+  </data>
+  <data name="OptimizeUndo_InputFullscreenOpt" xml:space="preserve">
+    <value>Remove the GameConfigStore fullscreen values to restore Windows defaults.</value>
+  </data>
+  <data name="OptimizeUndo_VisualTransparency" xml:space="preserve">
+    <value>Set EnableTransparency back to 1 or re-enable Transparency Effects in Personalization settings.</value>
+  </data>
+  <data name="OptimizeUndo_VisualAnimations" xml:space="preserve">
+    <value>Restore MinAnimate, MenuShowDelay, and SmoothScroll to their default values if you want the stock Windows UI feel back.</value>
+  </data>
+  <data name="OptimizeUndo_StorageTrim" xml:space="preserve">
+    <value>Run fsutil behavior set DisableDeleteNotify 1 to turn the override back off.</value>
+  </data>
+  <data name="OptimizeUndo_StorageLastAccess" xml:space="preserve">
+    <value>Run fsutil behavior set disablelastaccess 0 to restore timestamp updates.</value>
+  </data>
+  <data name="OptimizeUndo_Storage8dot3" xml:space="preserve">
+    <value>Set NtfsDisable8dot3NameCreation back to 0 if older software depends on DOS-style short names.</value>
+  </data>
+  <data name="BloatDesc_3dMixedReality" xml:space="preserve">
+    <value>3D/Mixed Reality app - rarely used</value>
+  </data>
+  <data name="BloatDesc_AppStartup" xml:space="preserve">
+    <value>App startup - disable if not needed immediately</value>
+  </data>
+  <data name="BloatDesc_CortanaStartup" xml:space="preserve">
+    <value>Cortana assistant startup</value>
+  </data>
+  <data name="BloatDesc_DolbyAudio" xml:space="preserve">
+    <value>Dolby audio enhancement - may affect audio quality</value>
+  </data>
+  <data name="BloatDesc_GrooveMusic" xml:space="preserve">
+    <value>Groove Music / Movies &amp; TV app</value>
+  </data>
+  <data name="BloatDesc_HpOmenSoftware" xml:space="preserve">
+    <value>HP OMEN software - conflict-sensitive until OmenCore fan, RGB, and hotkey control are verified</value>
+  </data>
+  <data name="BloatDesc_HpAudioEnhancement" xml:space="preserve">
+    <value>HP audio enhancement software</value>
+  </data>
+  <data name="BloatDesc_HpDiagnostics" xml:space="preserve">
+    <value>HP diagnostics/telemetry tool - safe to remove</value>
+  </data>
+  <data name="BloatDesc_HpScheduledTask" xml:space="preserve">
+    <value>HP scheduled task</value>
+  </data>
+  <data name="BloatDesc_HpSecurity" xml:space="preserve">
+    <value>HP security software - can conflict with third-party AV</value>
+  </data>
+  <data name="BloatDesc_HpStartupItem" xml:space="preserve">
+    <value>HP software startup item</value>
+  </data>
+  <data name="BloatDesc_HpSystemControl" xml:space="preserve">
+    <value>HP system control software - OmenCore replaces this</value>
+  </data>
+  <data name="BloatDesc_BingNewsWeather" xml:space="preserve">
+    <value>Microsoft Bing news/weather app</value>
+  </data>
+  <data name="BloatDesc_Solitaire" xml:space="preserve">
+    <value>Microsoft Solitaire with ads</value>
+  </data>
+  <data name="BloatDesc_TeamsStartup" xml:space="preserve">
+    <value>Microsoft Teams startup - disable if not using</value>
+  </data>
+  <data name="BloatDesc_VideoEditor" xml:space="preserve">
+    <value>Microsoft video editor</value>
+  </data>
+  <data name="BloatDesc_OmenLighting" xml:space="preserve">
+    <value>OMEN lighting/control component - remove only after OmenCore keyboard lighting and OMEN key behavior are verified</value>
+  </data>
+  <data name="BloatDesc_OnedriveSyncTask" xml:space="preserve">
+    <value>OneDrive scheduled sync task</value>
+  </data>
+  <data name="BloatDesc_OnedriveStartup" xml:space="preserve">
+    <value>OneDrive startup - disable if not using cloud sync</value>
+  </data>
+  <data name="BloatDesc_PhoneLink" xml:space="preserve">
+    <value>Phone Link app</value>
+  </data>
+  <data name="BloatDesc_CasualGame" xml:space="preserve">
+    <value>Pre-installed casual game</value>
+  </data>
+  <data name="BloatDesc_PromoShortcut" xml:space="preserve">
+    <value>Promotional app shortcut</value>
+  </data>
+  <data name="BloatDesc_Skype" xml:space="preserve">
+    <value>Skype messaging app</value>
+  </data>
+  <data name="BloatDesc_SocialMedia" xml:space="preserve">
+    <value>Social media app</value>
+  </data>
+  <data name="BloatDesc_TelemetryTask" xml:space="preserve">
+    <value>Telemetry data collection task</value>
+  </data>
+  <data name="BloatDesc_TrialAntivirus" xml:space="preserve">
+    <value>Trial antivirus - can impact gaming performance</value>
+  </data>
+  <data name="BloatDesc_PeopleApp" xml:space="preserve">
+    <value>Windows People app</value>
+  </data>
+  <data name="BloatDesc_TipsHelp" xml:space="preserve">
+    <value>Windows tips and help app</value>
+  </data>
+  <data name="BloatDesc_XboxApp" xml:space="preserve">
+    <value>Xbox app - keep if you use Xbox Game Pass</value>
+  </data>
 </root>

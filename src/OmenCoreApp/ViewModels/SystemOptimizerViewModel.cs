@@ -1046,12 +1046,66 @@ namespace OmenCore.ViewModels
             foreach (var item in items)
             {
                 var details = GetRiskAssessment(item.Id);
-                item.DetailedDescription = details.DetailedDescription;
+                item.DetailedDescription = LocalizeOptimizerDetail(details.DetailedDescription);
                 item.AffectedRegistryKeys = details.AffectedRegistryKeys;
                 item.ServiceNamesAffected = details.ServiceNamesAffected;
-                item.UndoInstructions = details.UndoInstructions;
+                item.UndoInstructions = LocalizeOptimizerUndo(details.UndoInstructions);
             }
         }
+
+        // Registry paths and service names stay canonical English (they are technical identifiers);
+        // only the human-readable detail and undo text is localized.
+        private static string LocalizeOptimizerDetail(string detail) => detail switch
+        {
+            "Switches the active Windows power plan to the highest-performance profile available so CPU and GPU boost behavior stays aggressive during gameplay." => Strings.OptimizeDetail_PowerUltimatePerf,
+            "Enables Hardware-Accelerated GPU Scheduling so Windows can submit GPU work with lower CPU overhead on supported systems." => Strings.OptimizeDetail_PowerGpuScheduling,
+            "Turns on Windows Game Mode so the OS prioritizes the active game and reduces background interference." => Strings.OptimizeDetail_PowerGameMode,
+            "Raises foreground scheduling priority so the active game receives more CPU time relative to background tasks." => Strings.OptimizeDetail_PowerForegroundPriority,
+            "Disables Windows telemetry policy values that control how much diagnostic data the OS is allowed to collect." => Strings.OptimizeDetail_ServiceTelemetry,
+            "Stops and disables SysMain so Windows stops preloading applications in the background, which is often preferable on SSD systems." => Strings.OptimizeDetail_ServiceSysmain,
+            "Stops and disables Windows Search indexing to reduce background disk and CPU usage." => Strings.OptimizeDetail_ServiceSearch,
+            "Disables the Connected User Experiences and Telemetry service so background telemetry processing is reduced." => Strings.OptimizeDetail_ServiceDiagtrack,
+            "Forces TCP to send packets without delayed acknowledgments, reducing latency at the cost of more frequent network traffic." => Strings.OptimizeDetail_NetworkTcpNodelay,
+            "Changes TCP acknowledgment behavior so packets are acknowledged immediately instead of being batched." => Strings.OptimizeDetail_NetworkTcpAck,
+            "Disables Delivery Optimization peer-to-peer update sharing so Windows Update no longer uploads update data to other machines." => Strings.OptimizeDetail_NetworkDeliveryOpt,
+            "Adjusts TCP buffering behavior to minimize acknowledgment delay for latency-sensitive workloads." => Strings.OptimizeDetail_NetworkNagle,
+            "Disables Enhanced Pointer Precision so mouse movement stays raw and 1:1, which is generally preferred for games." => Strings.OptimizeDetail_InputMouseAccel,
+            "Disables background game recording so Game DVR stops reserving resources while games are running." => Strings.OptimizeDetail_InputGameDvr,
+            "Disables Xbox Game Bar overlays and startup prompts so they do not interrupt gameplay." => Strings.OptimizeDetail_InputGameBar,
+            "Tunes fullscreen optimization behavior for games by adjusting Windows GameConfigStore flags." => Strings.OptimizeDetail_InputFullscreenOpt,
+            "Disables acrylic and transparency effects to reduce compositing overhead and visual distractions." => Strings.OptimizeDetail_VisualTransparency,
+            "Turns off common shell animations and menu delays so the desktop feels snappier and uses fewer visual effects." => Strings.OptimizeDetail_VisualAnimations,
+            "Enables the NTFS TRIM path so SSDs can reclaim deleted blocks efficiently and maintain performance over time." => Strings.OptimizeDetail_StorageTrim,
+            "Disables NTFS last-access timestamp updates to reduce metadata writes on storage devices." => Strings.OptimizeDetail_StorageLastAccess,
+            "Disables legacy 8.3 short filename generation, which can slightly reduce file-system bookkeeping on modern systems." => Strings.OptimizeDetail_Storage8dot3,
+            _ => detail
+        };
+
+        private static string LocalizeOptimizerUndo(string undo) => undo switch
+        {
+            "Restore the Balanced plan with: powercfg /setactive 381b4222-f694-41f0-9685-ff5bb260df2e" => Strings.OptimizeUndo_PowerUltimatePerf,
+            "Set HwSchMode back to 0 or remove it, then reboot Windows." => Strings.OptimizeUndo_PowerGpuScheduling,
+            "Set AutoGameModeEnabled to 0 or remove the value." => Strings.OptimizeUndo_PowerGameMode,
+            "Restore the default Win32PrioritySeparation value or remove the override." => Strings.OptimizeUndo_PowerForegroundPriority,
+            "Remove the AllowTelemetry overrides to return to the Windows default policy." => Strings.OptimizeUndo_ServiceTelemetry,
+            "Set the SysMain service back to Automatic and start it from Services." => Strings.OptimizeUndo_ServiceSysmain,
+            "Set the Windows Search service back to Automatic and start it from Services." => Strings.OptimizeUndo_ServiceSearch,
+            "Set the DiagTrack service back to Automatic and start it from Services." => Strings.OptimizeUndo_ServiceDiagtrack,
+            "Remove TcpNoDelay or set it back to 0." => Strings.OptimizeUndo_NetworkTcpNodelay,
+            "Remove TcpAckFrequency or restore the default behavior." => Strings.OptimizeUndo_NetworkTcpAck,
+            "Remove DODownloadMode to let Windows manage Delivery Optimization normally." => Strings.OptimizeUndo_NetworkDeliveryOpt,
+            "Remove TCPDelAckTicks to restore the default stack behavior." => Strings.OptimizeUndo_NetworkNagle,
+            "Set MouseSpeed back to 1 and restore threshold values, or re-enable pointer precision in Windows mouse settings." => Strings.OptimizeUndo_InputMouseAccel,
+            "Remove the Game DVR policy values or set them back to enabled." => Strings.OptimizeUndo_InputGameDvr,
+            "Remove those Game Bar values or re-enable Xbox Game Bar in Windows Settings." => Strings.OptimizeUndo_InputGameBar,
+            "Remove the GameConfigStore fullscreen values to restore Windows defaults." => Strings.OptimizeUndo_InputFullscreenOpt,
+            "Set EnableTransparency back to 1 or re-enable Transparency Effects in Personalization settings." => Strings.OptimizeUndo_VisualTransparency,
+            "Restore MinAnimate, MenuShowDelay, and SmoothScroll to their default values if you want the stock Windows UI feel back." => Strings.OptimizeUndo_VisualAnimations,
+            "Run fsutil behavior set DisableDeleteNotify 1 to turn the override back off." => Strings.OptimizeUndo_StorageTrim,
+            "Run fsutil behavior set disablelastaccess 0 to restore timestamp updates." => Strings.OptimizeUndo_StorageLastAccess,
+            "Set NtfsDisable8dot3NameCreation back to 0 if older software depends on DOS-style short names." => Strings.OptimizeUndo_Storage8dot3,
+            _ => undo
+        };
 
         private static OptimizationRiskAssessment GetRiskAssessment(string optimizationId)
         {

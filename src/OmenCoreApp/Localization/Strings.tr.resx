@@ -6481,4 +6481,217 @@
   <data name="QuickPopup_ApplySavedCurve" xml:space="preserve">
     <value>Kayıtlı fan eğrisini uygula</value>
   </data>
+  <data name="OptimizeDetail_PowerUltimatePerf" xml:space="preserve">
+    <value>Windows güç planını en yüksek performans profiline alır; oyunlarda CPU/GPU agresif kalır.</value>
+  </data>
+  <data name="OptimizeDetail_PowerGpuScheduling" xml:space="preserve">
+    <value>Donanım hızlandırmalı GPU zamanlamayı etkinleştirir, CPU yükünü azaltır.</value>
+  </data>
+  <data name="OptimizeDetail_PowerGameMode" xml:space="preserve">
+    <value>Windows Oyun Modunu açar: sistem oyunu önceliklendirir.</value>
+  </data>
+  <data name="OptimizeDetail_PowerForegroundPriority" xml:space="preserve">
+    <value>Öndeki uygulamaların önceliğini artırır: oyun daha çok CPU süresi alır.</value>
+  </data>
+  <data name="OptimizeDetail_ServiceTelemetry" xml:space="preserve">
+    <value>Windows telemetri ilkelerini devre dışı bırakır.</value>
+  </data>
+  <data name="OptimizeDetail_ServiceSysmain" xml:space="preserve">
+    <value>SysMain'i durdurur: arka plan ön yüklemesi sona erer.</value>
+  </data>
+  <data name="OptimizeDetail_ServiceSearch" xml:space="preserve">
+    <value>Windows Arama dizine eklemeyi kapatır.</value>
+  </data>
+  <data name="OptimizeDetail_ServiceDiagtrack" xml:space="preserve">
+    <value>DiagTrack servisini devre dışı bırakır.</value>
+  </data>
+  <data name="OptimizeDetail_NetworkTcpNodelay" xml:space="preserve">
+    <value>TCP gecikmeli onayları kapatır: gecikme düşer.</value>
+  </data>
+  <data name="OptimizeDetail_NetworkTcpAck" xml:space="preserve">
+    <value>TCP onayları anında gönderilir.</value>
+  </data>
+  <data name="OptimizeDetail_NetworkDeliveryOpt" xml:space="preserve">
+    <value>Teslim İyileştirmesi P2P paylaşımını kapatır.</value>
+  </data>
+  <data name="OptimizeDetail_NetworkNagle" xml:space="preserve">
+    <value>TCP arabellek gecikmesini en aza indirir.</value>
+  </data>
+  <data name="OptimizeDetail_InputMouseAccel" xml:space="preserve">
+    <value>"İşaretçi hassasiyetini artır"ı kapatır: ham 1:1 hareket.</value>
+  </data>
+  <data name="OptimizeDetail_InputGameDvr" xml:space="preserve">
+    <value>Arka plan oyun kaydını kapatır.</value>
+  </data>
+  <data name="OptimizeDetail_InputGameBar" xml:space="preserve">
+    <value>Xbox Game Bar katmanını kapatır.</value>
+  </data>
+  <data name="OptimizeDetail_InputFullscreenOpt" xml:space="preserve">
+    <value>GameConfigStore bayraklarıyla tam ekran iyileştirmesini ayarlar.</value>
+  </data>
+  <data name="OptimizeDetail_VisualTransparency" xml:space="preserve">
+    <value>Şeffaflık efektlerini kapatır.</value>
+  </data>
+  <data name="OptimizeDetail_VisualAnimations" xml:space="preserve">
+    <value>Kabuk animasyonlarını ve menü gecikmelerini kapatır.</value>
+  </data>
+  <data name="OptimizeDetail_StorageTrim" xml:space="preserve">
+    <value>NTFS TRIM'i etkinleştirir: SSD blokları verimli geri kazanır.</value>
+  </data>
+  <data name="OptimizeDetail_StorageLastAccess" xml:space="preserve">
+    <value>NTFS son erişim zamanı güncellemelerini kapatır.</value>
+  </data>
+  <data name="OptimizeDetail_Storage8dot3" xml:space="preserve">
+    <value>8.3 kısa dosya adı oluşturmayı kapatır.</value>
+  </data>
+  <data name="OptimizeUndo_PowerUltimatePerf" xml:space="preserve">
+    <value>Dengeli plana dön: powercfg /setactive 381b4222-f694-41f0-9685-ff5bb260df2e</value>
+  </data>
+  <data name="OptimizeUndo_PowerGpuScheduling" xml:space="preserve">
+    <value>HwSchMode'yu 0 yapın veya silin, sonra yeniden başlatın.</value>
+  </data>
+  <data name="OptimizeUndo_PowerGameMode" xml:space="preserve">
+    <value>AutoGameModeEnabled'ı 0 yapın veya silin.</value>
+  </data>
+  <data name="OptimizeUndo_PowerForegroundPriority" xml:space="preserve">
+    <value>Varsayılan Win32PrioritySeparation'ı geri getirin.</value>
+  </data>
+  <data name="OptimizeUndo_ServiceTelemetry" xml:space="preserve">
+    <value>AllowTelemetry geçersiz kılmalarını silin.</value>
+  </data>
+  <data name="OptimizeUndo_ServiceSysmain" xml:space="preserve">
+    <value>SysMain'i "Otomatik" yapın ve başlatın.</value>
+  </data>
+  <data name="OptimizeUndo_ServiceSearch" xml:space="preserve">
+    <value>Windows Search'i "Otomatik" yapın ve başlatın.</value>
+  </data>
+  <data name="OptimizeUndo_ServiceDiagtrack" xml:space="preserve">
+    <value>DiagTrack'i "Otomatik" yapın ve başlatın.</value>
+  </data>
+  <data name="OptimizeUndo_NetworkTcpNodelay" xml:space="preserve">
+    <value>TcpNoDelay'i silin veya 0 yapın.</value>
+  </data>
+  <data name="OptimizeUndo_NetworkTcpAck" xml:space="preserve">
+    <value>TcpAckFrequency'yi silin veya varsayılana dönün.</value>
+  </data>
+  <data name="OptimizeUndo_NetworkDeliveryOpt" xml:space="preserve">
+    <value>DODownloadMode'yi silin.</value>
+  </data>
+  <data name="OptimizeUndo_NetworkNagle" xml:space="preserve">
+    <value>TCPDelAckTicks'yi silin.</value>
+  </data>
+  <data name="OptimizeUndo_InputMouseAccel" xml:space="preserve">
+    <value>MouseSpeed'i 1 yapın veya ayarlardan açın.</value>
+  </data>
+  <data name="OptimizeUndo_InputGameDvr" xml:space="preserve">
+    <value>Game DVR ilkelerini silin veya etkinleştirin.</value>
+  </data>
+  <data name="OptimizeUndo_InputGameBar" xml:space="preserve">
+    <value>Bu değerleri silin veya Ayarlar'dan açın.</value>
+  </data>
+  <data name="OptimizeUndo_InputFullscreenOpt" xml:space="preserve">
+    <value>GameConfigStore değerlerini silin.</value>
+  </data>
+  <data name="OptimizeUndo_VisualTransparency" xml:space="preserve">
+    <value>EnableTransparency'yi 1 yapın veya ayarlardan açın.</value>
+  </data>
+  <data name="OptimizeUndo_VisualAnimations" xml:space="preserve">
+    <value>Varsayılanlara dönmek için bu değerleri geri getirin.</value>
+  </data>
+  <data name="OptimizeUndo_StorageTrim" xml:space="preserve">
+    <value>fsutil behavior set DisableDeleteNotify 1 çalıştırın.</value>
+  </data>
+  <data name="OptimizeUndo_StorageLastAccess" xml:space="preserve">
+    <value>fsutil behavior set disablelastaccess 0 çalıştırın.</value>
+  </data>
+  <data name="OptimizeUndo_Storage8dot3" xml:space="preserve">
+    <value>Eski yazılım gerektiriyorsa değeri 0 yapın.</value>
+  </data>
+  <data name="BloatDesc_3dMixedReality" xml:space="preserve">
+    <value>3D/Karma Gerçeklik uygulaması — nadiren kullanılır</value>
+  </data>
+  <data name="BloatDesc_AppStartup" xml:space="preserve">
+    <value>Uygulama başlangıcı — hemen gerekmiyorsa kapatın</value>
+  </data>
+  <data name="BloatDesc_CortanaStartup" xml:space="preserve">
+    <value>Cortana başlangıcı</value>
+  </data>
+  <data name="BloatDesc_DolbyAudio" xml:space="preserve">
+    <value>Dolby ses iyileştirme — ses kalitesini etkileyebilir</value>
+  </data>
+  <data name="BloatDesc_GrooveMusic" xml:space="preserve">
+    <value>Groove Müzik / Film ve TV uygulaması</value>
+  </data>
+  <data name="BloatDesc_HpOmenSoftware" xml:space="preserve">
+    <value>HP OMEN yazılımı — OmenCore kontrolü doğrulanmadan kaldırmayın</value>
+  </data>
+  <data name="BloatDesc_HpAudioEnhancement" xml:space="preserve">
+    <value>HP ses iyileştirme yazılımı</value>
+  </data>
+  <data name="BloatDesc_HpDiagnostics" xml:space="preserve">
+    <value>HP tanılama/telemetri aracı — güvenle kaldırılır</value>
+  </data>
+  <data name="BloatDesc_HpScheduledTask" xml:space="preserve">
+    <value>HP zamanlanmış görevi</value>
+  </data>
+  <data name="BloatDesc_HpSecurity" xml:space="preserve">
+    <value>HP güvenlik yazılımı — üçüncü taraf antivirusla çakışabilir</value>
+  </data>
+  <data name="BloatDesc_HpStartupItem" xml:space="preserve">
+    <value>HP yazılım başlangıç öğesi</value>
+  </data>
+  <data name="BloatDesc_HpSystemControl" xml:space="preserve">
+    <value>HP sistem kontrol yazılımı — OmenCore yerine geçer</value>
+  </data>
+  <data name="BloatDesc_BingNewsWeather" xml:space="preserve">
+    <value>Microsoft Bing haber/hava uygulaması</value>
+  </data>
+  <data name="BloatDesc_Solitaire" xml:space="preserve">
+    <value>Reklamlı Microsoft Solitaire</value>
+  </data>
+  <data name="BloatDesc_TeamsStartup" xml:space="preserve">
+    <value>Teams başlangıcı — kullanmıyorsanız kapatın</value>
+  </data>
+  <data name="BloatDesc_VideoEditor" xml:space="preserve">
+    <value>Microsoft video düzenleyici</value>
+  </data>
+  <data name="BloatDesc_OmenLighting" xml:space="preserve">
+    <value>OMEN aydınlatma/bileşeni — doğrulamadan kaldırmayın</value>
+  </data>
+  <data name="BloatDesc_OnedriveSyncTask" xml:space="preserve">
+    <value>OneDrive zamanlanmış eşitleme görevi</value>
+  </data>
+  <data name="BloatDesc_OnedriveStartup" xml:space="preserve">
+    <value>OneDrive başlangıcı — bulut eşitleme yoksa kapatın</value>
+  </data>
+  <data name="BloatDesc_PhoneLink" xml:space="preserve">
+    <value>Telefon Bağlantısı uygulaması</value>
+  </data>
+  <data name="BloatDesc_CasualGame" xml:space="preserve">
+    <value>Önceden yüklenmiş gündelik oyun</value>
+  </data>
+  <data name="BloatDesc_PromoShortcut" xml:space="preserve">
+    <value>Tanıtılan uygulama kısayolu</value>
+  </data>
+  <data name="BloatDesc_Skype" xml:space="preserve">
+    <value>Skype mesajlaşma uygulaması</value>
+  </data>
+  <data name="BloatDesc_SocialMedia" xml:space="preserve">
+    <value>Sosyal medya uygulaması</value>
+  </data>
+  <data name="BloatDesc_TelemetryTask" xml:space="preserve">
+    <value>Telemetri veri toplama görevi</value>
+  </data>
+  <data name="BloatDesc_TrialAntivirus" xml:space="preserve">
+    <value>Deneme antivirus — oyun performansını etkileyebilir</value>
+  </data>
+  <data name="BloatDesc_PeopleApp" xml:space="preserve">
+    <value>Windows Kişiler uygulaması</value>
+  </data>
+  <data name="BloatDesc_TipsHelp" xml:space="preserve">
+    <value>Windows İpuçları ve Yardım</value>
+  </data>
+  <data name="BloatDesc_XboxApp" xml:space="preserve">
+    <value>Xbox uygulaması — Game Pass kullanıyorsanız tutun</value>
+  </data>
 </root>

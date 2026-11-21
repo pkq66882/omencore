@@ -2384,7 +2384,7 @@
     <value>应用你保存的风扇预设</value>
   </data>
   <data name="MainWindow_ApplySavedFanPreset" xml:space="preserve">
-    <value>应用已保存风扇预设</value>
+    <value>应用已保存的风扇预设</value>
   </data>
   <data name="MainWindow_SwitchPerformanceProfile" xml:space="preserve">
     <value>切换性能方案</value>
@@ -2441,7 +2441,7 @@
     <value>在本笔记本上隐藏此提示</value>
   </data>
   <data name="MainWindow_YourLaptopIsSupportedWithItsFamilySStandar" xml:space="preserve">
-    <value>你的笔记本受支持，使用其所属系列的标准方案</value>
+    <value>你的笔记本受支持，正在使用所属系列的标准配置方案</value>
   </data>
   <data name="MainWindow_NobodyWithThisExactModelHasConfirmedEveryF" xml:space="preserve">
     <value>目前还没有与你这台完全同型号的用户确认过全部功能，因此部分高级选项可能保持关闭。诊断页会显示是哪些以及原因。在 GitHub 或 Discord 提交诊断导出可以让你的机型得到完整确认。</value>
@@ -2744,7 +2744,7 @@
     <value>监控：未知</value>
   </data>
   <data name="QuickPopupWindow_FanPerfDecoupled" xml:space="preserve">
-    <value>风扇/性能：已解耦</value>
+    <value>风扇与性能模式已解耦</value>
   </data>
   <data name="QuickPopupWindow_QuickProfile" xml:space="preserve">
     <value>快速配置</value>
@@ -4439,7 +4439,7 @@
     <value>正在创建还原点…</value>
   </data>
   <data name="MainViewModel_LinkStatusDecoupled" xml:space="preserve">
-    <value>已解耦：风扇独立</value>
+    <value>已与性能模式解耦，风扇独立控制</value>
   </data>
   <data name="MainViewModel_LinkStatusLinked" xml:space="preserve">
     <value>已联动：风扇跟随性能</value>
@@ -5261,7 +5261,7 @@
     <value>已阻止</value>
   </data>
   <data name="SystemControl_StateOverwritten" xml:space="preserve">
-    <value>已被外部覆盖</value>
+    <value>外部已接管</value>
   </data>
   <data name="FanControlViewModel_StateConfirmed" xml:space="preserve">
     <value>已确认</value>
@@ -6104,7 +6104,7 @@
     <value>• 可放心分享——不含个人数据，只有硬件设置</value>
   </data>
   <data name="SettingsView_ProfileInfoContent3" xml:space="preserve">
-    <value>• 导出诊断会生成排障包（日志、配置、硬件状态）</value>
+    <value>• 导出诊断会生成故障排查包（日志、配置、硬件状态）</value>
   </data>
   <data name="SettingsView_Tagline" xml:space="preserve">
     <value>HP OMEN Gaming Hub 的轻量替代品</value>
@@ -6167,7 +6167,7 @@
     <value>使用官方 HP 驱动、BIOS 更新和支持工具，让你的 OMEN 笔记本保持最新。使用官方 HP 驱动可确保最佳兼容性与性能。</value>
   </data>
   <data name="SettingsView_FanAccelerateParagraph" xml:space="preserve">
-    <value>以最大转速运行风扇以增加气流，帮助吹落松动的灰尘颗粒。</value>
+    <value>让风扇以最高转速运行，增强气流，吹落松动的灰尘。</value>
   </data>
   <data name="SettingsView_BloatwareMovedParagraph" xml:space="preserve">
     <value>预装软件移除已移至独立标签页，提供逐项风险评级、选择性移除、恢复能力和完整列表。</value>
@@ -6317,7 +6317,7 @@
     <value>自定义——用户自定义风扇与电源设置</value>
   </data>
   <data name="TrayIcon_MaxFan" xml:space="preserve">
-    <value>风扇最大</value>
+    <value>风扇全速</value>
   </data>
   <data name="TrayIcon_RecentNotifications" xml:space="preserve">
     <value>最近通知</value>
@@ -6371,7 +6371,7 @@
     <value>GPU 功率：{0}</value>
   </data>
   <data name="TrayIcon_GpuPowerMin" xml:space="preserve">
-    <value> 最小——基础 TGP，电池最优</value>
+    <value> 最小——基础 TGP，电池续航最佳</value>
   </data>
   <data name="TrayIcon_GpuPowerMed" xml:space="preserve">
     <value> 中等——自定义 TGP</value>
@@ -6473,12 +6473,225 @@
     <value>监控状态：{0}</value>
   </data>
   <data name="QuickPopup_FanPerfDecoupled" xml:space="preserve">
-    <value>风扇/性能：已解耦——风扇保持</value>
+    <value>风扇与性能模式已解耦，风扇设置保持不变</value>
   </data>
   <data name="QuickPopup_ApplyModeFormat" xml:space="preserve">
     <value>应用此性能模式。解耦模式下 {0} 保持不变。</value>
   </data>
   <data name="QuickPopup_ApplySavedCurve" xml:space="preserve">
     <value>应用已保存的风扇曲线</value>
+  </data>
+  <data name="OptimizeDetail_PowerUltimatePerf" xml:space="preserve">
+    <value>将当前 Windows 电源计划切换为最高性能档，让 CPU/GPU 在游戏中保持激进加速。</value>
+  </data>
+  <data name="OptimizeDetail_PowerGpuScheduling" xml:space="preserve">
+    <value>启用硬件加速 GPU 计划（HAGS），降低提交 GPU 任务的 CPU 开销（需系统支持）。</value>
+  </data>
+  <data name="OptimizeDetail_PowerGameMode" xml:space="preserve">
+    <value>开启 Windows 游戏模式，系统优先保障当前游戏、减少后台干扰。</value>
+  </data>
+  <data name="OptimizeDetail_PowerForegroundPriority" xml:space="preserve">
+    <value>提高前台程序调度优先级，让当前游戏分到更多 CPU 时间。</value>
+  </data>
+  <data name="OptimizeDetail_ServiceTelemetry" xml:space="preserve">
+    <value>禁用 Windows 遥测策略值，限制系统可收集的诊断数据量。</value>
+  </data>
+  <data name="OptimizeDetail_ServiceSysmain" xml:space="preserve">
+    <value>停止并禁用 SysMain，不再后台预加载应用——固态硬盘用户通常更建议关闭。</value>
+  </data>
+  <data name="OptimizeDetail_ServiceSearch" xml:space="preserve">
+    <value>停止并禁用 Windows 搜索索引，降低后台磁盘/CPU 占用。</value>
+  </data>
+  <data name="OptimizeDetail_ServiceDiagtrack" xml:space="preserve">
+    <value>禁用"互联用户体验与遥测"服务，减少后台遥测处理。</value>
+  </data>
+  <data name="OptimizeDetail_NetworkTcpNodelay" xml:space="preserve">
+    <value>强制 TCP 立即确认数据包、不做延迟合并，降低延迟（网络包量略增）。</value>
+  </data>
+  <data name="OptimizeDetail_NetworkTcpAck" xml:space="preserve">
+    <value>调整 TCP 确认行为，数据包即时确认而非批量合并。</value>
+  </data>
+  <data name="OptimizeDetail_NetworkDeliveryOpt" xml:space="preserve">
+    <value>禁用传递优化的 P2P 共享，Windows 更新不再向其他电脑上传更新数据。</value>
+  </data>
+  <data name="OptimizeDetail_NetworkNagle" xml:space="preserve">
+    <value>调整 TCP 缓冲行为，为延迟敏感场景（网游）减少确认延迟。</value>
+  </data>
+  <data name="OptimizeDetail_InputMouseAccel" xml:space="preserve">
+    <value>禁用"提高指针精确度"，鼠标移动保持原始 1:1——游戏玩家通常更偏好这种手感。</value>
+  </data>
+  <data name="OptimizeDetail_InputGameDvr" xml:space="preserve">
+    <value>禁用后台游戏录制，游戏中 Game DVR 不再占用资源。</value>
+  </data>
+  <data name="OptimizeDetail_InputGameBar" xml:space="preserve">
+    <value>禁用 Xbox 游戏栏悬浮层和启动提示，游戏中不再被打断。</value>
+  </data>
+  <data name="OptimizeDetail_InputFullscreenOpt" xml:space="preserve">
+    <value>调整 Windows GameConfigStore 标志，改变游戏的全屏优化行为。</value>
+  </data>
+  <data name="OptimizeDetail_VisualTransparency" xml:space="preserve">
+    <value>禁用亚克力/透明效果，降低合成开销、减少视觉干扰。</value>
+  </data>
+  <data name="OptimizeDetail_VisualAnimations" xml:space="preserve">
+    <value>关闭常用 shell 动画和菜单延迟，桌面更跟手。</value>
+  </data>
+  <data name="OptimizeDetail_StorageTrim" xml:space="preserve">
+    <value>启用 NTFS TRIM，让 SSD 高效回收已删除数据块、长期保持性能。</value>
+  </data>
+  <data name="OptimizeDetail_StorageLastAccess" xml:space="preserve">
+    <value>禁用 NTFS"最后访问时间"更新，减少磁盘元数据写入。</value>
+  </data>
+  <data name="OptimizeDetail_Storage8dot3" xml:space="preserve">
+    <value>禁用旧式 8.3 短文件名生成，减轻现代系统上的文件系统簿记负担。</value>
+  </data>
+  <data name="OptimizeUndo_PowerUltimatePerf" xml:space="preserve">
+    <value>恢复均衡方案：powercfg /setactive 381b4222-f694-41f0-9685-ff5bb260df2e</value>
+  </data>
+  <data name="OptimizeUndo_PowerGpuScheduling" xml:space="preserve">
+    <value>将 HwSchMode 改回 0 或删除该值，然后重启 Windows。</value>
+  </data>
+  <data name="OptimizeUndo_PowerGameMode" xml:space="preserve">
+    <value>将 AutoGameModeEnabled 设为 0 或删除该值。</value>
+  </data>
+  <data name="OptimizeUndo_PowerForegroundPriority" xml:space="preserve">
+    <value>恢复默认 Win32PrioritySeparation 值或删除该覆盖项。</value>
+  </data>
+  <data name="OptimizeUndo_ServiceTelemetry" xml:space="preserve">
+    <value>删除 AllowTelemetry 覆盖项，恢复 Windows 默认策略。</value>
+  </data>
+  <data name="OptimizeUndo_ServiceSysmain" xml:space="preserve">
+    <value>在服务管理器中将 SysMain 启动类型改回"自动"并启动。</value>
+  </data>
+  <data name="OptimizeUndo_ServiceSearch" xml:space="preserve">
+    <value>在服务管理器中将 Windows Search 启动类型改回"自动"并启动。</value>
+  </data>
+  <data name="OptimizeUndo_ServiceDiagtrack" xml:space="preserve">
+    <value>在服务管理器中将 DiagTrack 启动类型改回"自动"并启动。</value>
+  </data>
+  <data name="OptimizeUndo_NetworkTcpNodelay" xml:space="preserve">
+    <value>删除 TcpNoDelay 或改回 0。</value>
+  </data>
+  <data name="OptimizeUndo_NetworkTcpAck" xml:space="preserve">
+    <value>删除 TcpAckFrequency 或恢复默认行为。</value>
+  </data>
+  <data name="OptimizeUndo_NetworkDeliveryOpt" xml:space="preserve">
+    <value>删除 DODownloadMode，让 Windows 正常管理传递优化。</value>
+  </data>
+  <data name="OptimizeUndo_NetworkNagle" xml:space="preserve">
+    <value>删除 TCPDelAckTicks，恢复协议栈默认行为。</value>
+  </data>
+  <data name="OptimizeUndo_InputMouseAccel" xml:space="preserve">
+    <value>将 MouseSpeed 改回 1 并恢复阈值，或在 Windows 鼠标设置中重新开启指针精确度。</value>
+  </data>
+  <data name="OptimizeUndo_InputGameDvr" xml:space="preserve">
+    <value>删除 Game DVR 策略值或重新设为启用。</value>
+  </data>
+  <data name="OptimizeUndo_InputGameBar" xml:space="preserve">
+    <value>删除这些 Game Bar 值，或在 Windows 设置中重新启用 Xbox 游戏栏。</value>
+  </data>
+  <data name="OptimizeUndo_InputFullscreenOpt" xml:space="preserve">
+    <value>删除 GameConfigStore 全屏相关值，恢复 Windows 默认。</value>
+  </data>
+  <data name="OptimizeUndo_VisualTransparency" xml:space="preserve">
+    <value>将 EnableTransparency 改回 1，或在个性化设置中重新开启透明效果。</value>
+  </data>
+  <data name="OptimizeUndo_VisualAnimations" xml:space="preserve">
+    <value>想找回 Windows 原生手感时，把 MinAnimate、MenuShowDelay、SmoothScroll 恢复默认即可。</value>
+  </data>
+  <data name="OptimizeUndo_StorageTrim" xml:space="preserve">
+    <value>运行 fsutil behavior set DisableDeleteNotify 1 即可关闭此覆盖。</value>
+  </data>
+  <data name="OptimizeUndo_StorageLastAccess" xml:space="preserve">
+    <value>运行 fsutil behavior set disablelastaccess 0 即可恢复时间戳更新。</value>
+  </data>
+  <data name="OptimizeUndo_Storage8dot3" xml:space="preserve">
+    <value>如果旧软件依赖 DOS 短文件名，将 NtfsDisable8dot3NameCreation 改回 0。</value>
+  </data>
+  <data name="BloatDesc_3dMixedReality" xml:space="preserve">
+    <value>3D/混合现实应用——很少使用</value>
+  </data>
+  <data name="BloatDesc_AppStartup" xml:space="preserve">
+    <value>应用启动项——无需开机即启可禁用</value>
+  </data>
+  <data name="BloatDesc_CortanaStartup" xml:space="preserve">
+    <value>Cortana 助手启动项</value>
+  </data>
+  <data name="BloatDesc_DolbyAudio" xml:space="preserve">
+    <value>杜比音效增强——可能影响音质</value>
+  </data>
+  <data name="BloatDesc_GrooveMusic" xml:space="preserve">
+    <value>Groove 音乐/影视应用</value>
+  </data>
+  <data name="BloatDesc_HpOmenSoftware" xml:space="preserve">
+    <value>HP OMEN 软件——请先验证 OmenCore 的风扇、RGB 和热键控制正常，再考虑移除</value>
+  </data>
+  <data name="BloatDesc_HpAudioEnhancement" xml:space="preserve">
+    <value>HP 音效增强软件</value>
+  </data>
+  <data name="BloatDesc_HpDiagnostics" xml:space="preserve">
+    <value>HP 诊断/遥测工具——可安全移除</value>
+  </data>
+  <data name="BloatDesc_HpScheduledTask" xml:space="preserve">
+    <value>HP 计划任务</value>
+  </data>
+  <data name="BloatDesc_HpSecurity" xml:space="preserve">
+    <value>HP 安全软件——可能与第三方杀毒软件冲突</value>
+  </data>
+  <data name="BloatDesc_HpStartupItem" xml:space="preserve">
+    <value>HP 软件启动项</value>
+  </data>
+  <data name="BloatDesc_HpSystemControl" xml:space="preserve">
+    <value>HP 系统控制软件——OmenCore 已取代其功能</value>
+  </data>
+  <data name="BloatDesc_BingNewsWeather" xml:space="preserve">
+    <value>微软必应资讯/天气应用</value>
+  </data>
+  <data name="BloatDesc_Solitaire" xml:space="preserve">
+    <value>微软纸牌合集（含广告）</value>
+  </data>
+  <data name="BloatDesc_TeamsStartup" xml:space="preserve">
+    <value>Microsoft Teams 启动项——不用可禁用</value>
+  </data>
+  <data name="BloatDesc_VideoEditor" xml:space="preserve">
+    <value>微软视频编辑器</value>
+  </data>
+  <data name="BloatDesc_OmenLighting" xml:space="preserve">
+    <value>OMEN 灯效/控制组件——请先验证 OmenCore 键盘灯效和 OMEN 键行为正常，再移除</value>
+  </data>
+  <data name="BloatDesc_OnedriveSyncTask" xml:space="preserve">
+    <value>OneDrive 计划同步任务</value>
+  </data>
+  <data name="BloatDesc_OnedriveStartup" xml:space="preserve">
+    <value>OneDrive 启动项——不用云同步可禁用</value>
+  </data>
+  <data name="BloatDesc_PhoneLink" xml:space="preserve">
+    <value>手机连接应用</value>
+  </data>
+  <data name="BloatDesc_CasualGame" xml:space="preserve">
+    <value>预装休闲游戏</value>
+  </data>
+  <data name="BloatDesc_PromoShortcut" xml:space="preserve">
+    <value>推广应用快捷方式</value>
+  </data>
+  <data name="BloatDesc_Skype" xml:space="preserve">
+    <value>Skype 通讯应用</value>
+  </data>
+  <data name="BloatDesc_SocialMedia" xml:space="preserve">
+    <value>社交媒体应用</value>
+  </data>
+  <data name="BloatDesc_TelemetryTask" xml:space="preserve">
+    <value>遥测数据收集任务</value>
+  </data>
+  <data name="BloatDesc_TrialAntivirus" xml:space="preserve">
+    <value>试用版杀毒软件——可能影响游戏性能</value>
+  </data>
+  <data name="BloatDesc_PeopleApp" xml:space="preserve">
+    <value>Windows 人脉应用</value>
+  </data>
+  <data name="BloatDesc_TipsHelp" xml:space="preserve">
+    <value>Windows 提示与帮助应用</value>
+  </data>
+  <data name="BloatDesc_XboxApp" xml:space="preserve">
+    <value>Xbox 应用——使用 Xbox Game Pass 请保留</value>
   </data>
 </root>

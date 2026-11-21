@@ -306,6 +306,7 @@ namespace OmenCore.ViewModels
 
                 foreach (var app in apps)
                 {
+                    app.Description = LocalizeBloatDescription(app.Description);
                     AllApps.Add(app);
                 }
 
@@ -516,6 +517,40 @@ namespace OmenCore.ViewModels
             UpdateRemovalPreviewSummary();
         }
 
+
+        private static string LocalizeBloatDescription(string? description) => description switch
+        {
+            "3D/Mixed Reality app - rarely used" => Strings.BloatDesc_3dMixedReality,
+            "App startup - disable if not needed immediately" => Strings.BloatDesc_AppStartup,
+            "Cortana assistant startup" => Strings.BloatDesc_CortanaStartup,
+            "Dolby audio enhancement - may affect audio quality" => Strings.BloatDesc_DolbyAudio,
+            "Groove Music / Movies & TV app" => Strings.BloatDesc_GrooveMusic,
+            "HP OMEN software - conflict-sensitive until OmenCore fan, RGB, and hotkey control are verified" => Strings.BloatDesc_HpOmenSoftware,
+            "HP audio enhancement software" => Strings.BloatDesc_HpAudioEnhancement,
+            "HP diagnostics/telemetry tool - safe to remove" => Strings.BloatDesc_HpDiagnostics,
+            "HP scheduled task" => Strings.BloatDesc_HpScheduledTask,
+            "HP security software - can conflict with third-party AV" => Strings.BloatDesc_HpSecurity,
+            "HP software startup item" => Strings.BloatDesc_HpStartupItem,
+            "HP system control software - OmenCore replaces this" => Strings.BloatDesc_HpSystemControl,
+            "Microsoft Bing news/weather app" => Strings.BloatDesc_BingNewsWeather,
+            "Microsoft Solitaire with ads" => Strings.BloatDesc_Solitaire,
+            "Microsoft Teams startup - disable if not using" => Strings.BloatDesc_TeamsStartup,
+            "Microsoft video editor" => Strings.BloatDesc_VideoEditor,
+            "OMEN lighting/control component - remove only after OmenCore keyboard lighting and OMEN key behavior are verified" => Strings.BloatDesc_OmenLighting,
+            "OneDrive scheduled sync task" => Strings.BloatDesc_OnedriveSyncTask,
+            "OneDrive startup - disable if not using cloud sync" => Strings.BloatDesc_OnedriveStartup,
+            "Phone Link app" => Strings.BloatDesc_PhoneLink,
+            "Pre-installed casual game" => Strings.BloatDesc_CasualGame,
+            "Promotional app shortcut" => Strings.BloatDesc_PromoShortcut,
+            "Skype messaging app" => Strings.BloatDesc_Skype,
+            "Social media app" => Strings.BloatDesc_SocialMedia,
+            "Telemetry data collection task" => Strings.BloatDesc_TelemetryTask,
+            "Trial antivirus - can impact gaming performance" => Strings.BloatDesc_TrialAntivirus,
+            "Windows People app" => Strings.BloatDesc_PeopleApp,
+            "Windows tips and help app" => Strings.BloatDesc_TipsHelp,
+            "Xbox app - keep if you use Xbox Game Pass" => Strings.BloatDesc_XboxApp,
+            _ => description ?? string.Empty
+        };
         private void UpdateRemovalPreviewSummary()
         {
             var selectedCount = RemovalPreviewItems.Count(item => item.IsSelected);
