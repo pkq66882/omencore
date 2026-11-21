@@ -6068,4 +6068,97 @@
   <data name="SettingsView_DriverBackendParagraph" xml:space="preserve">
     <value>On modern Windows systems, Secure Boot and Memory Integrity can block legacy drivers. OmenCore prefers driverless control paths (WMI/OGH) when available, and recommends PawnIO for Secure Boot compatible MSR/EC access.</value>
   </data>
+  <data name="SettingsView_TipLabel" xml:space="preserve">
+    <value>💡 Tip:</value>
+  </data>
+  <data name="SettingsView_TipDriversBody" xml:space="preserve">
+    <value>HP Support Assistant can automatically detect and install the correct drivers for your system. Install it from the Microsoft Store or HP's website for the best experience.</value>
+  </data>
+  <data name="SettingsView_NoteLabel" xml:space="preserve">
+    <value>⚠️ Note:</value>
+  </data>
+  <data name="SettingsView_NoteFanCleanerBody1" xml:space="preserve">
+    <value>This is NOT the same as HP's "Fan Cleaner" feature (OMEN Max only) which actually reverses fan direction. That requires special omnidirectional fans that most OMEN laptops don't have.</value>
+  </data>
+  <data name="SettingsView_NoteFanCleanerBody2" xml:space="preserve">
+    <value>For thorough cleaning, use compressed air or open the chassis.</value>
+  </data>
+  <data name="SettingsView_TipDisableFeatures" xml:space="preserve">
+    <value>Disable unused features to reduce CPU/memory usage. Restart OmenCore for changes to take effect.</value>
+  </data>
+  <data name="SettingsView_BatteryTipsTitle" xml:space="preserve">
+    <value>💡 Battery Health Tips:</value>
+  </data>
+  <data name="SettingsView_BatteryTip80" xml:space="preserve">
+    <value> is recommended for daily use (doubles battery lifespan)</value>
+  </data>
+  <data name="SettingsView_BatteryTip6070" xml:space="preserve">
+    <value> for maximum longevity if always plugged in</value>
+  </data>
+  <data name="SettingsView_BatteryTip100" xml:space="preserve">
+    <value> when you need full capacity for travel</value>
+  </data>
+  <data name="SettingsView_ProfileInfoTitle" xml:space="preserve">
+    <value>💡 Profile Info:</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent1" xml:space="preserve">
+    <value>• Profiles include fan curves, performance modes, GPU OC settings, battery/hysteresis config</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent2" xml:space="preserve">
+    <value>• Safe to share - no personal data included, just hardware settings</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent3" xml:space="preserve">
+    <value>• Diagnostics export creates a troubleshooting bundle (logs, config, hardware status)</value>
+  </data>
+  <data name="SettingsView_Tagline" xml:space="preserve">
+    <value>A lightweight replacement for HP OMEN Gaming Hub</value>
+  </data>
+  <data name="OnboardingWindow_AllSet" xml:space="preserve">
+    <value>You're all set! Here are a few things to try first:</value>
+  </data>
+  <data name="FanControlViewModel_ThermalActive" xml:space="preserve">
+    <value>⚠️ Active - CPU at {0}°C</value>
+  </data>
+  <data name="FanControlViewModel_ThermalNormal" xml:space="preserve">
+    <value>✓ Normal</value>
+  </data>
+  <data name="FanControlViewModel_LastUpdatedFormat" xml:space="preserve">
+    <value>Updated: {0}</value>
+  </data>
+  <data name="GameLibraryViewModel_ProfileStatusFormat" xml:space="preserve">
+    <value>Profile: {0}</value>
+  </data>
+  <data name="GameLibraryViewModel_NoProfile" xml:space="preserve">
+    <value>No profile</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreReused" xml:space="preserve">
+    <value>Reusing recent restore point</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreCreated" xml:space="preserve">
+    <value>Restore point created</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreNow" xml:space="preserve">
+    <value>now</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleAllRefused" xml:space="preserve">
+    <value>The keyboard refused every profile. Nothing changed.</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCyclePartialFormat" xml:space="preserve">
+    <value>{0} of {1} written; the keyboard refused {2}. Press Fn+1 to step the cycle.</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleWrittenFormat" xml:space="preserve">
+    <value>{0} profile(s) written{1}. Showing {2}. Press Fn+1 for the next, Fn+2 for the previous — this works with OmenCore closed.</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleRefusedFlash" xml:space="preserve">
+    <value> (the keyboard refused the save-to-flash)</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_ResultPass" xml:space="preserve">
+    <value>✅ PASS</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_ResultFail" xml:space="preserve">
+    <value>❌ FAIL</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_DiagnosticComplete" xml:space="preserve">
+    <value>=== DIAGNOSTIC COMPLETE: {0} ===</value>
+  </data>
 </root>

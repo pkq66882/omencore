@@ -426,16 +426,17 @@ namespace OmenCore.ViewModels
             var active = ordered.LastOrDefault();
 
             if (refused.Count == ordered.Count)
-                FnCycleStatus = "The keyboard refused every profile. Nothing changed.";
+                FnCycleStatus = Strings.DeviceLightingViewModel_FnCycleAllRefused;
             else if (refused.Count > 0)
                 FnCycleStatus =
-                    $"{written} of {ordered.Count} written; the keyboard refused {string.Join(", ", refused)}. " +
-                    $"Press Fn+1 to step the cycle.";
+                    string.Format(Strings.DeviceLightingViewModel_FnCyclePartialFormat,
+                        written, ordered.Count, string.Join(", ", refused.Select(DisplayNames.Fx)));
             else
                 FnCycleStatus =
-                    $"{written} profile(s) written{(flashed ? "" : " (the keyboard refused the save-to-flash)")}. " +
-                    $"Showing {active?.DisplayName}. Press Fn+1 for the next, Fn+2 for the previous — " +
-                    $"this works with OmenCore closed.";
+                    string.Format(Strings.DeviceLightingViewModel_FnCycleWrittenFormat,
+                        written,
+                        flashed ? string.Empty : Strings.DeviceLightingViewModel_FnCycleRefusedFlash,
+                        active?.DisplayName ?? string.Empty);
 
             _logging.Info($"[FnCycle] Wrote {written}/{ordered.Count} profiles, flash={flashed}");
         }

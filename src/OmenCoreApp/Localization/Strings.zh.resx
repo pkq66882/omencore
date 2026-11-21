@@ -6064,4 +6064,97 @@
   <data name="SettingsView_DriverBackendParagraph" xml:space="preserve">
     <value>在现代 Windows 系统上，安全启动和内存完整性可能会阻止旧式驱动。OmenCore 在可用时优先使用免驱动控制路径（WMI/OGH），并推荐 PawnIO 以获得兼容安全启动的 MSR/EC 访问。</value>
   </data>
+  <data name="SettingsView_TipLabel" xml:space="preserve">
+    <value>💡 提示：</value>
+  </data>
+  <data name="SettingsView_TipDriversBody" xml:space="preserve">
+    <value>HP Support Assistant 可自动检测并安装适合你系统的驱动。可从 Microsoft Store 或 HP 官网安装，获得最佳体验。</value>
+  </data>
+  <data name="SettingsView_NoteLabel" xml:space="preserve">
+    <value>⚠️ 注意：</value>
+  </data>
+  <data name="SettingsView_NoteFanCleanerBody1" xml:space="preserve">
+    <value>这与 HP 的“风扇清洁”功能（仅 OMEN Max）不是一回事——那个功能会真正反转风扇方向，需要多数 OMEN 笔记本没有的特殊全向风扇。</value>
+  </data>
+  <data name="SettingsView_NoteFanCleanerBody2" xml:space="preserve">
+    <value>深度清洁请使用压缩空气或拆开底盖。</value>
+  </data>
+  <data name="SettingsView_TipDisableFeatures" xml:space="preserve">
+    <value>禁用不用的功能可降低 CPU/内存占用。更改需重启 OmenCore 后生效。</value>
+  </data>
+  <data name="SettingsView_BatteryTipsTitle" xml:space="preserve">
+    <value>💡 电池健康提示：</value>
+  </data>
+  <data name="SettingsView_BatteryTip80" xml:space="preserve">
+    <value> 适合日常使用（可使电池寿命翻倍）</value>
+  </data>
+  <data name="SettingsView_BatteryTip6070" xml:space="preserve">
+    <value> 常年插电时用于最大化电池寿命</value>
+  </data>
+  <data name="SettingsView_BatteryTip100" xml:space="preserve">
+    <value> 出行需要满容量时使用</value>
+  </data>
+  <data name="SettingsView_ProfileInfoTitle" xml:space="preserve">
+    <value>💡 配置方案信息：</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent1" xml:space="preserve">
+    <value>• 方案包含风扇曲线、性能模式、GPU 超频设置、电池/迟滞配置</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent2" xml:space="preserve">
+    <value>• 可放心分享——不含个人数据，只有硬件设置</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent3" xml:space="preserve">
+    <value>• 导出诊断会生成排障包（日志、配置、硬件状态）</value>
+  </data>
+  <data name="SettingsView_Tagline" xml:space="preserve">
+    <value>HP OMEN Gaming Hub 的轻量替代品</value>
+  </data>
+  <data name="OnboardingWindow_AllSet" xml:space="preserve">
+    <value>一切就绪！先试试这几项：</value>
+  </data>
+  <data name="FanControlViewModel_ThermalActive" xml:space="preserve">
+    <value>⚠️ 激活——CPU {0}°C</value>
+  </data>
+  <data name="FanControlViewModel_ThermalNormal" xml:space="preserve">
+    <value>✓ 正常</value>
+  </data>
+  <data name="FanControlViewModel_LastUpdatedFormat" xml:space="preserve">
+    <value>更新时间：{0}</value>
+  </data>
+  <data name="GameLibraryViewModel_ProfileStatusFormat" xml:space="preserve">
+    <value>配置方案：{0}</value>
+  </data>
+  <data name="GameLibraryViewModel_NoProfile" xml:space="preserve">
+    <value>无配置方案</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreReused" xml:space="preserve">
+    <value>复用最近的还原点</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreCreated" xml:space="preserve">
+    <value>已创建还原点</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreNow" xml:space="preserve">
+    <value>刚刚</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleAllRefused" xml:space="preserve">
+    <value>键盘拒绝了全部方案。未做任何更改。</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCyclePartialFormat" xml:space="preserve">
+    <value>已写入 {0}/{1} 项；键盘拒绝了 {2}。按 Fn+1 切换循环。</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleWrittenFormat" xml:space="preserve">
+    <value>已写入 {0} 个方案{1}。当前显示：{2}。按 Fn+1 下一个、Fn+2 上一个——关闭 OmenCore 后依然有效。</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleRefusedFlash" xml:space="preserve">
+    <value>（键盘拒绝了写入闪存的保存）</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_ResultPass" xml:space="preserve">
+    <value>✅ 通过</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_ResultFail" xml:space="preserve">
+    <value>❌ 失败</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_DiagnosticComplete" xml:space="preserve">
+    <value>=== 诊断完成：{0} ===</value>
+  </data>
 </root>

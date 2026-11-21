@@ -715,11 +715,11 @@ namespace OmenCore.ViewModels
         
         /// <summary>Human-readable thermal protection status.</summary>
         public string ThermalProtectionStatusText => ThermalProtectionActive 
-            ? $"⚠️ Active - CPU at {CurrentTemperature:F0}°C" 
-            : "✓ Normal";
+            ? string.Format(Strings.FanControlViewModel_ThermalActive, CurrentTemperature.ToString("F0"))
+            : Strings.FanControlViewModel_ThermalNormal;
         
         /// <summary>When the fan telemetry was last updated.</summary>
-        public string LastTelemetryUpdatedText => $"Updated: {DateTime.Now:HH:mm:ss}";
+        public string LastTelemetryUpdatedText => string.Format(Strings.FanControlViewModel_LastUpdatedFormat, DateTime.Now.ToString("HH:mm:ss"));
         
         /// <summary>Shows which source is being used for RPM readings.</summary>
         public string RpmSourceDisplay => _fanService.Backend;

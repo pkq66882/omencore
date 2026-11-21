@@ -501,7 +501,7 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string ProfileStatusText => HasProfile ? $"Profile: {ProfileName}" : "No profile";
+        public string ProfileStatusText => HasProfile ? string.Format(Strings.GameLibraryViewModel_ProfileStatusFormat, ProfileName) : Strings.GameLibraryViewModel_NoProfile;
         public string ProfileStatusIcon => HasProfile ? "✓" : "○";
 
         public string PlatformIcon => Platform switch

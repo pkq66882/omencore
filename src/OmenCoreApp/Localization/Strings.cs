@@ -2344,5 +2344,38 @@ namespace OmenCore.Localization
 
     public static string SettingsView_DriverBackendParagraph => Get(nameof(SettingsView_DriverBackendParagraph));
 
+    public static string BloatwareManagerViewModel_RestoreCreated => Get(nameof(BloatwareManagerViewModel_RestoreCreated));
+    public static string BloatwareManagerViewModel_RestoreNow => Get(nameof(BloatwareManagerViewModel_RestoreNow));
+    public static string BloatwareManagerViewModel_RestoreReused => Get(nameof(BloatwareManagerViewModel_RestoreReused));
+    public static string DeviceLightingViewModel_FnCycleAllRefused => Get(nameof(DeviceLightingViewModel_FnCycleAllRefused));
+    public static string DeviceLightingViewModel_FnCyclePartialFormat => Get(nameof(DeviceLightingViewModel_FnCyclePartialFormat));
+    public static string FanControlViewModel_LastUpdatedFormat => Get(nameof(FanControlViewModel_LastUpdatedFormat));
+    public static string FanControlViewModel_ThermalActive => Get(nameof(FanControlViewModel_ThermalActive));
+    public static string FanControlViewModel_ThermalNormal => Get(nameof(FanControlViewModel_ThermalNormal));
+    public static string GameLibraryViewModel_NoProfile => Get(nameof(GameLibraryViewModel_NoProfile));
+    public static string GameLibraryViewModel_ProfileStatusFormat => Get(nameof(GameLibraryViewModel_ProfileStatusFormat));
+    public static string OnboardingWindow_AllSet => Get(nameof(OnboardingWindow_AllSet));
+    public static string SettingsView_BatteryTip100 => Get(nameof(SettingsView_BatteryTip100));
+    public static string SettingsView_BatteryTip6070 => Get(nameof(SettingsView_BatteryTip6070));
+    public static string SettingsView_BatteryTip80 => Get(nameof(SettingsView_BatteryTip80));
+    public static string SettingsView_BatteryTipsTitle => Get(nameof(SettingsView_BatteryTipsTitle));
+    public static string SettingsView_NoteFanCleanerBody1 => Get(nameof(SettingsView_NoteFanCleanerBody1));
+    public static string SettingsView_NoteFanCleanerBody2 => Get(nameof(SettingsView_NoteFanCleanerBody2));
+    public static string SettingsView_NoteLabel => Get(nameof(SettingsView_NoteLabel));
+    public static string SettingsView_ProfileInfoContent1 => Get(nameof(SettingsView_ProfileInfoContent1));
+    public static string SettingsView_ProfileInfoContent2 => Get(nameof(SettingsView_ProfileInfoContent2));
+    public static string SettingsView_ProfileInfoContent3 => Get(nameof(SettingsView_ProfileInfoContent3));
+    public static string SettingsView_ProfileInfoTitle => Get(nameof(SettingsView_ProfileInfoTitle));
+    public static string SettingsView_Tagline => Get(nameof(SettingsView_Tagline));
+    public static string SettingsView_TipDisableFeatures => Get(nameof(SettingsView_TipDisableFeatures));
+    public static string SettingsView_TipDriversBody => Get(nameof(SettingsView_TipDriversBody));
+    public static string SettingsView_TipLabel => Get(nameof(SettingsView_TipLabel));
+
+    public static string DeviceLightingViewModel_FnCycleRefusedFlash => Get(nameof(DeviceLightingViewModel_FnCycleRefusedFlash));
+    public static string DeviceLightingViewModel_FnCycleWrittenFormat => Get(nameof(DeviceLightingViewModel_FnCycleWrittenFormat));
+    public static string FanDiagnosticsViewModel_DiagnosticComplete => Get(nameof(FanDiagnosticsViewModel_DiagnosticComplete));
+    public static string FanDiagnosticsViewModel_ResultFail => Get(nameof(FanDiagnosticsViewModel_ResultFail));
+    public static string FanDiagnosticsViewModel_ResultPass => Get(nameof(FanDiagnosticsViewModel_ResultPass));
+
     }
 }

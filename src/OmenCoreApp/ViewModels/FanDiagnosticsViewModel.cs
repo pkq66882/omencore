@@ -420,7 +420,8 @@ namespace OmenCore.ViewModels
                 };
                 
                 var summary = new System.Text.StringBuilder();
-                summary.AppendLine($"=== DIAGNOSTIC COMPLETE: {(overallPassed ? "✅ PASS" : "❌ FAIL")} ===");
+                summary.AppendLine(string.Format(Strings.FanDiagnosticsViewModel_DiagnosticComplete,
+                    overallPassed ? Strings.FanDiagnosticsViewModel_ResultPass : Strings.FanDiagnosticsViewModel_ResultFail));
                 // Report the sources this run actually read from, not RpmSourceDisplay - that is
                 // the "current state" panel's property, refreshed on its own schedule, and it read
                 // "?" on a run whose every result was EcDirect. A header that disagrees with the

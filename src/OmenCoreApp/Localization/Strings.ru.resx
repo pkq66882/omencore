@@ -6064,4 +6064,97 @@
   <data name="SettingsView_DriverBackendParagraph" xml:space="preserve">
     <value>В современных системах Windows Secure Boot и целостность памяти могут блокировать устаревшие драйверы. OmenCore при возможности предпочитает бездрайверные пути управления (WMI/OGH) и рекомендует PawnIO для MSR/EC-доступа, совместимого с Secure Boot.</value>
   </data>
+  <data name="SettingsView_TipLabel" xml:space="preserve">
+    <value>💡 Подсказка:</value>
+  </data>
+  <data name="SettingsView_TipDriversBody" xml:space="preserve">
+    <value>HP Support Assistant может автоматически определять и устанавливать нужные драйверы. Установите его из Microsoft Store или с сайта HP.</value>
+  </data>
+  <data name="SettingsView_NoteLabel" xml:space="preserve">
+    <value>⚠️ Примечание:</value>
+  </data>
+  <data name="SettingsView_NoteFanCleanerBody1" xml:space="preserve">
+    <value>Это не то же самое, что функция HP «Очистка вентилятора» (только OMEN Max), которая реально меняет направление вращения. Для этого нужны особые всенаправленные вентиляторы, которых у большинства OMEN нет.</value>
+  </data>
+  <data name="SettingsView_NoteFanCleanerBody2" xml:space="preserve">
+    <value>Для тщательной очистки используйте сжатый воздух или вскройте корпус.</value>
+  </data>
+  <data name="SettingsView_TipDisableFeatures" xml:space="preserve">
+    <value>Отключите неиспользуемые функции, чтобы снизить нагрузку на CPU/память. Изменения вступят в силу после перезапуска OmenCore.</value>
+  </data>
+  <data name="SettingsView_BatteryTipsTitle" xml:space="preserve">
+    <value>💡 Советы по здоровью батареи:</value>
+  </data>
+  <data name="SettingsView_BatteryTip80" xml:space="preserve">
+    <value> рекомендуется для ежедневного использования (удваивает срок службы батареи)</value>
+  </data>
+  <data name="SettingsView_BatteryTip6070" xml:space="preserve">
+    <value> для максимального срока службы при постоянном подключении</value>
+  </data>
+  <data name="SettingsView_BatteryTip100" xml:space="preserve">
+    <value> когда нужна полная ёмкость в поездке</value>
+  </data>
+  <data name="SettingsView_ProfileInfoTitle" xml:space="preserve">
+    <value>💡 Информация о профиле:</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent1" xml:space="preserve">
+    <value>• Профили включают кривые вентиляторов, режимы производительности, разгон GPU, конфигурацию батареи/гистерезиса</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent2" xml:space="preserve">
+    <value>• Можно безопасно делиться — личных данных нет, только настройки оборудования</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent3" xml:space="preserve">
+    <value>• Экспорт диагностики создаёт пакет для поиска проблем (журналы, конфигурация, состояние оборудования)</value>
+  </data>
+  <data name="SettingsView_Tagline" xml:space="preserve">
+    <value>Лёгкая замена HP OMEN Gaming Hub</value>
+  </data>
+  <data name="OnboardingWindow_AllSet" xml:space="preserve">
+    <value>Всё готово! Вот с чего можно начать:</value>
+  </data>
+  <data name="FanControlViewModel_ThermalActive" xml:space="preserve">
+    <value>⚠️ Активно — CPU {0}°C</value>
+  </data>
+  <data name="FanControlViewModel_ThermalNormal" xml:space="preserve">
+    <value>✓ Норма</value>
+  </data>
+  <data name="FanControlViewModel_LastUpdatedFormat" xml:space="preserve">
+    <value>Обновлено: {0}</value>
+  </data>
+  <data name="GameLibraryViewModel_ProfileStatusFormat" xml:space="preserve">
+    <value>Профиль: {0}</value>
+  </data>
+  <data name="GameLibraryViewModel_NoProfile" xml:space="preserve">
+    <value>Нет профиля</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreReused" xml:space="preserve">
+    <value>Повторно используется недавняя точка восстановления</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreCreated" xml:space="preserve">
+    <value>Точка восстановления создана</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreNow" xml:space="preserve">
+    <value>сейчас</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleAllRefused" xml:space="preserve">
+    <value>Клавиатура отклонила все профили. Ничего не изменено.</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCyclePartialFormat" xml:space="preserve">
+    <value>Записано {0} из {1}; клавиатура отклонила {2}. Нажмите Fn+1 для переключения цикла.</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleWrittenFormat" xml:space="preserve">
+    <value>Записано профилей: {0}{1}. Показан: {2}. Fn+1 — следующий, Fn+2 — предыдущий — работает при закрытом OmenCore.</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleRefusedFlash" xml:space="preserve">
+    <value> (клавиатура отклонила сохранение во флеш-память)</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_ResultPass" xml:space="preserve">
+    <value>✅ ПРОЙДЕНО</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_ResultFail" xml:space="preserve">
+    <value>❌ НЕ ПРОЙДЕНО</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_DiagnosticComplete" xml:space="preserve">
+    <value>=== ДИАГНОСТИКА ЗАВЕРШЕНА: {0} ===</value>
+  </data>
 </root>

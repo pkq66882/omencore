@@ -6064,4 +6064,97 @@
   <data name="SettingsView_DriverBackendParagraph" xml:space="preserve">
     <value>Modern Windows sistemlerinde Secure Boot ve Bellek Bütünlüğü eski sürücüleri engelleyebilir. OmenCore mümkün olduğunda sürücüsüz kontrol yollarını (WMI/OGH) tercih eder ve Secure Boot uyumlu MSR/EC erişimi için PawnIO önerir.</value>
   </data>
+  <data name="SettingsView_TipLabel" xml:space="preserve">
+    <value>💡 İpucu:</value>
+  </data>
+  <data name="SettingsView_TipDriversBody" xml:space="preserve">
+    <value>HP Support Assistant sisteminiz için doğru sürücüleri otomatik algılayıp kurabilir. En iyi deneyim için Microsoft Store'dan veya HP sitesinden yükleyin.</value>
+  </data>
+  <data name="SettingsView_NoteLabel" xml:space="preserve">
+    <value>⚠️ Not:</value>
+  </data>
+  <data name="SettingsView_NoteFanCleanerBody1" xml:space="preserve">
+    <value>Bu, HP'nin "Fan Temizleyici" özelliği (yalnızca OMEN Max) ile aynı değildir — o, fan yönünü gerçekten tersine çevirir ve çoğu OMEN'de bulunmayan özel omni-direksiyonlu fanlar gerektirir.</value>
+  </data>
+  <data name="SettingsView_NoteFanCleanerBody2" xml:space="preserve">
+    <value>Derinlemesine temizlik için basınçlı hava kullanın veya kasayı açın.</value>
+  </data>
+  <data name="SettingsView_TipDisableFeatures" xml:space="preserve">
+    <value>Kullanılmayan özellikleri devre dışı bırakmak CPU/bellek kullanımını azaltır. Değişiklikler OmenCore yeniden başlatıldığında geçerli olur.</value>
+  </data>
+  <data name="SettingsView_BatteryTipsTitle" xml:space="preserve">
+    <value>💡 Pil Sağlığı İpuçları:</value>
+  </data>
+  <data name="SettingsView_BatteryTip80" xml:space="preserve">
+    <value> günlük kullanım için önerilir (pil ömrünü ikiye katlar)</value>
+  </data>
+  <data name="SettingsView_BatteryTip6070" xml:space="preserve">
+    <value> sürekli takılıyken maksimum ömür için</value>
+  </data>
+  <data name="SettingsView_BatteryTip100" xml:space="preserve">
+    <value> seyahat için tam kapasite gerektiğinde</value>
+  </data>
+  <data name="SettingsView_ProfileInfoTitle" xml:space="preserve">
+    <value>💡 Profil Bilgisi:</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent1" xml:space="preserve">
+    <value>• Profiller fan eğrilerini, performans modlarını, GPU OC ayarlarını, pil/histerezis yapılandırmasını içerir</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent2" xml:space="preserve">
+    <value>• Paylaşımı güvenlidir — kişisel veri içermez, yalnızca donanım ayarları</value>
+  </data>
+  <data name="SettingsView_ProfileInfoContent3" xml:space="preserve">
+    <value>• Tanılama dışa aktarma, sorun giderme paketi oluşturur (günlükler, yapılandırma, donanım durumu)</value>
+  </data>
+  <data name="SettingsView_Tagline" xml:space="preserve">
+    <value>HP OMEN Gaming Hub'ın hafif bir alternatifi</value>
+  </data>
+  <data name="OnboardingWindow_AllSet" xml:space="preserve">
+    <value>Her şey hazır! Önce şunları deneyebilirsiniz:</value>
+  </data>
+  <data name="FanControlViewModel_ThermalActive" xml:space="preserve">
+    <value>⚠️ Etkin — CPU {0}°C</value>
+  </data>
+  <data name="FanControlViewModel_ThermalNormal" xml:space="preserve">
+    <value>✓ Normal</value>
+  </data>
+  <data name="FanControlViewModel_LastUpdatedFormat" xml:space="preserve">
+    <value>Güncellendi: {0}</value>
+  </data>
+  <data name="GameLibraryViewModel_ProfileStatusFormat" xml:space="preserve">
+    <value>Profil: {0}</value>
+  </data>
+  <data name="GameLibraryViewModel_NoProfile" xml:space="preserve">
+    <value>Profil yok</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreReused" xml:space="preserve">
+    <value>Yakın geri yükleme noktası yeniden kullanılıyor</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreCreated" xml:space="preserve">
+    <value>Geri yükleme noktası oluşturuldu</value>
+  </data>
+  <data name="BloatwareManagerViewModel_RestoreNow" xml:space="preserve">
+    <value>şimdi</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleAllRefused" xml:space="preserve">
+    <value>Klavye tüm profilleri reddetti. Hiçbir şey değişmedi.</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCyclePartialFormat" xml:space="preserve">
+    <value>{0}/{1} yazıldı; klavye {2} öğesini reddetti. Döngüyü adımlandırmak için Fn+1'e basın.</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleWrittenFormat" xml:space="preserve">
+    <value>{0} profil yazıldı{1}. Görüntülenen: {2}. Fn+1 sonraki, Fn+2 önceki — OmenCore kapalıyken de çalışır.</value>
+  </data>
+  <data name="DeviceLightingViewModel_FnCycleRefusedFlash" xml:space="preserve">
+    <value> (klavye flash'a kaydetmeyi reddetti)</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_ResultPass" xml:space="preserve">
+    <value>✅ GEÇTİ</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_ResultFail" xml:space="preserve">
+    <value>❌ KALDI</value>
+  </data>
+  <data name="FanDiagnosticsViewModel_DiagnosticComplete" xml:space="preserve">
+    <value>=== TANI TAMAMLANDI: {0} ===</value>
+  </data>
 </root>

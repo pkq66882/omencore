@@ -613,8 +613,8 @@ namespace OmenCore.ViewModels
             var restorePointResult = await _service.EnsurePreRemovalRestorePointAsync(selectedCount);
             if (restorePointResult.Success)
             {
-                var createdAtText = restorePointResult.CreatedAt?.ToString("yyyy-MM-dd HH:mm:ss") ?? "now";
-                var prefix = restorePointResult.ReusedExisting ? "Reusing recent restore point" : "Restore point created";
+                var createdAtText = restorePointResult.CreatedAt?.ToString("yyyy-MM-dd HH:mm:ss") ?? Strings.BloatwareManagerViewModel_RestoreNow;
+                var prefix = restorePointResult.ReusedExisting ? Strings.BloatwareManagerViewModel_RestoreReused : Strings.BloatwareManagerViewModel_RestoreCreated;
                 SetStatusDone($"{prefix} ({createdAtText})");
                 return true;
             }

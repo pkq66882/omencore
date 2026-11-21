@@ -125,9 +125,7 @@
                 <StackPanel x:Name="Page3" Visibility="Collapsed">
                     <TextBlock Text="{x:Static loc:Strings.OnboardingWindow_QuickStart}" FontSize="28" FontWeight="Bold"
                                Foreground="{StaticResource TextPrimaryBrush}" Margin="0,0,0,12"/>
-                    <TextBlock TextWrapping="Wrap" FontSize="14" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,0,20">
-                        You're all set! Here are a few things to try first:
-                    </TextBlock>
+                    <TextBlock Text="{x:Static loc:Strings.OnboardingWindow_AllSet}" TextWrapping="Wrap" FontSize="14" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,0,20"/>
 
                     <Border Style="{StaticResource SurfaceCard}" Padding="16" Margin="0,0,0,10">
                         <StackPanel Orientation="Horizontal">
