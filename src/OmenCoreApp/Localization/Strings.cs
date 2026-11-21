@@ -2272,5 +2272,48 @@ namespace OmenCore.Localization
     public static string UpdateViewModel_ManualDownloadRequired => Get(nameof(UpdateViewModel_ManualDownloadRequired));
     public static string UpdateViewModel_UpdateAvailableFormat => Get(nameof(UpdateViewModel_UpdateAvailableFormat));
 
+    public static string Common_Loading => Get(nameof(Common_Loading));
+    public static string DeviceLighting_BarOff => Get(nameof(DeviceLighting_BarOff));
+    public static string DeviceLighting_BarRefused => Get(nameof(DeviceLighting_BarRefused));
+    public static string DeviceLighting_BarRefusedCmd => Get(nameof(DeviceLighting_BarRefusedCmd));
+    public static string DeviceLighting_BarUpdated => Get(nameof(DeviceLighting_BarUpdated));
+    public static string DeviceLighting_CustomColorsFormat => Get(nameof(DeviceLighting_CustomColorsFormat));
+    public static string DeviceLighting_FnCycleEmptyHint => Get(nameof(DeviceLighting_FnCycleEmptyHint));
+    public static string DeviceLighting_FnCycleLimitation => Get(nameof(DeviceLighting_FnCycleLimitation));
+    public static string DeviceLighting_LightBarLimitation => Get(nameof(DeviceLighting_LightBarLimitation));
+    public static string DeviceLighting_NoStateRead => Get(nameof(DeviceLighting_NoStateRead));
+    public static string DeviceLighting_OnKeyboardNowFormat => Get(nameof(DeviceLighting_OnKeyboardNowFormat));
+    public static string KeyboardDir_Anticlockwise => Get(nameof(KeyboardDir_Anticlockwise));
+    public static string KeyboardDir_Clockwise => Get(nameof(KeyboardDir_Clockwise));
+    public static string KeyboardDir_Down => Get(nameof(KeyboardDir_Down));
+    public static string KeyboardDir_Inward => Get(nameof(KeyboardDir_Inward));
+    public static string KeyboardDir_LeftToRight => Get(nameof(KeyboardDir_LeftToRight));
+    public static string KeyboardDir_Outward => Get(nameof(KeyboardDir_Outward));
+    public static string KeyboardDir_RightToLeft => Get(nameof(KeyboardDir_RightToLeft));
+    public static string KeyboardDir_Up => Get(nameof(KeyboardDir_Up));
+    public static string KeyboardFx_AudioPulse => Get(nameof(KeyboardFx_AudioPulse));
+    public static string KeyboardFx_Breathing => Get(nameof(KeyboardFx_Breathing));
+    public static string KeyboardFx_ColourCycle => Get(nameof(KeyboardFx_ColourCycle));
+    public static string KeyboardFx_Confetti => Get(nameof(KeyboardFx_Confetti));
+    public static string KeyboardFx_Ghosting => Get(nameof(KeyboardFx_Ghosting));
+    public static string KeyboardFx_OmenX => Get(nameof(KeyboardFx_OmenX));
+    public static string KeyboardFx_Raindrop => Get(nameof(KeyboardFx_Raindrop));
+    public static string KeyboardFx_Ripple => Get(nameof(KeyboardFx_Ripple));
+    public static string KeyboardFx_Starlight => Get(nameof(KeyboardFx_Starlight));
+    public static string KeyboardFx_Sun => Get(nameof(KeyboardFx_Sun));
+    public static string KeyboardFx_Swipe => Get(nameof(KeyboardFx_Swipe));
+    public static string KeyboardFx_Wave => Get(nameof(KeyboardFx_Wave));
+    public static string KeyboardMap_DimAlwaysSuffix => Get(nameof(KeyboardMap_DimAlwaysSuffix));
+    public static string KeyboardMap_DimFullFormat => Get(nameof(KeyboardMap_DimFullFormat));
+    public static string KeyboardMap_DimNoSelection => Get(nameof(KeyboardMap_DimNoSelection));
+    public static string KeyboardMap_DimPartialFormat => Get(nameof(KeyboardMap_DimPartialFormat));
+    public static string KeyboardMap_NoKeyMap => Get(nameof(KeyboardMap_NoKeyMap));
+    public static string KeyboardSpeed_Fast => Get(nameof(KeyboardSpeed_Fast));
+    public static string KeyboardSpeed_Medium => Get(nameof(KeyboardSpeed_Medium));
+    public static string KeyboardSpeed_Slow => Get(nameof(KeyboardSpeed_Slow));
+    public static string KeyboardTheme_Jungle => Get(nameof(KeyboardTheme_Jungle));
+    public static string KeyboardTheme_Volcano => Get(nameof(KeyboardTheme_Volcano));
+    public static string SystemOptimizerViewModel_NoDriftSinceLast => Get(nameof(SystemOptimizerViewModel_NoDriftSinceLast));
+
     }
 }

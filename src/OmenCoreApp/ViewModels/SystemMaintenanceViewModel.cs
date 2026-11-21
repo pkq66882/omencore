@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -231,7 +232,7 @@ namespace OmenCore.ViewModels
 
         public bool IsNotLoading => !IsLoading;
 
-        private string _loadingMessage = "Loading...";
+        private string _loadingMessage = Strings.Common_Loading;
         public string LoadingMessage
         {
             get => _loadingMessage;

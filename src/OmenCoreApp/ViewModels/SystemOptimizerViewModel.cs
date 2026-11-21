@@ -37,7 +37,7 @@ namespace OmenCore.ViewModels
         private string _verificationSummary = Strings.SystemOptimizerViewModel_VerificationPending;
         private bool _hasStateDrift;
         private OptimizationDriftSummary _lastDriftSummary = new();
-        private string _driftWarningRollup = "No drift explanations yet.";
+        private string _driftWarningRollup = Strings.SystemOptimizerViewModel_NoDriftExplanations;
         private string _lastExportedReportPath = string.Empty;
         private OptimizationState? _expectedStateForDrift;
         private string _preflightSummary = Strings.SystemOptimizerViewModel_PreflightNotLoaded;
@@ -172,7 +172,7 @@ namespace OmenCore.ViewModels
 
         public string DriftSummaryText => _lastDriftSummary.HasDrift
             ? _lastDriftSummary.OneLinerSummary
-            : "No drift detected since last verification.";
+            : Strings.SystemOptimizerViewModel_NoDriftSinceLast;
 
         public string DriftWarningRollup
         {
@@ -272,7 +272,7 @@ namespace OmenCore.ViewModels
                 VerificationSummary = Strings.SystemOptimizerViewModel_VerifiedAgainstCurrentState;
                 HasStateDrift = false;
                 _lastDriftSummary = new OptimizationDriftSummary();
-                DriftWarningRollup = "No drift explanations yet.";
+                DriftWarningRollup = Strings.SystemOptimizerViewModel_NoDriftExplanations;
                 OnPropertyChanged(nameof(DriftSummaryText));
 
                 await RefreshPreflightAsync(showStatus: false);
@@ -886,7 +886,7 @@ namespace OmenCore.ViewModels
                     VerificationSummary = Strings.SystemOptimizerViewModel_VerifiedNoDrift;
                     HasStateDrift = false;
                     _lastDriftSummary = driftSummary;
-                    DriftWarningRollup = "No drift explanations yet.";
+                    DriftWarningRollup = Strings.SystemOptimizerViewModel_NoDriftExplanations;
                     OnPropertyChanged(nameof(DriftSummaryText));
                     return;
                 }

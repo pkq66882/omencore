@@ -5861,4 +5861,130 @@
   <data name="AudioViz_BeatSync" xml:space="preserve">
     <value>BeatSync</value>
   </data>
+  <data name="KeyboardFx_ColourCycle" xml:space="preserve">
+    <value>Colour cycle</value>
+  </data>
+  <data name="KeyboardFx_Starlight" xml:space="preserve">
+    <value>Starlight</value>
+  </data>
+  <data name="KeyboardFx_Breathing" xml:space="preserve">
+    <value>Breathing</value>
+  </data>
+  <data name="KeyboardFx_Ghosting" xml:space="preserve">
+    <value>Ghosting</value>
+  </data>
+  <data name="KeyboardFx_Ripple" xml:space="preserve">
+    <value>Ripple</value>
+  </data>
+  <data name="KeyboardFx_Wave" xml:space="preserve">
+    <value>Wave</value>
+  </data>
+  <data name="KeyboardFx_OmenX" xml:space="preserve">
+    <value>OMEN X</value>
+  </data>
+  <data name="KeyboardFx_Raindrop" xml:space="preserve">
+    <value>Raindrop</value>
+  </data>
+  <data name="KeyboardFx_AudioPulse" xml:space="preserve">
+    <value>Audio pulse</value>
+  </data>
+  <data name="KeyboardFx_Confetti" xml:space="preserve">
+    <value>Confetti</value>
+  </data>
+  <data name="KeyboardFx_Sun" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="KeyboardFx_Swipe" xml:space="preserve">
+    <value>Swipe</value>
+  </data>
+  <data name="KeyboardTheme_Volcano" xml:space="preserve">
+    <value>Volcano</value>
+  </data>
+  <data name="KeyboardTheme_Jungle" xml:space="preserve">
+    <value>Jungle</value>
+  </data>
+  <data name="KeyboardSpeed_Slow" xml:space="preserve">
+    <value>Slow</value>
+  </data>
+  <data name="KeyboardSpeed_Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="KeyboardSpeed_Fast" xml:space="preserve">
+    <value>Fast</value>
+  </data>
+  <data name="KeyboardDir_LeftToRight" xml:space="preserve">
+    <value>Left to right</value>
+  </data>
+  <data name="KeyboardDir_RightToLeft" xml:space="preserve">
+    <value>Right to left</value>
+  </data>
+  <data name="KeyboardDir_Up" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="KeyboardDir_Down" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="KeyboardDir_Inward" xml:space="preserve">
+    <value>Inward</value>
+  </data>
+  <data name="KeyboardDir_Outward" xml:space="preserve">
+    <value>Outward</value>
+  </data>
+  <data name="KeyboardDir_Clockwise" xml:space="preserve">
+    <value>Clockwise</value>
+  </data>
+  <data name="KeyboardDir_Anticlockwise" xml:space="preserve">
+    <value>Anticlockwise</value>
+  </data>
+  <data name="DeviceLighting_BarUpdated" xml:space="preserve">
+    <value>Light bar updated.</value>
+  </data>
+  <data name="DeviceLighting_BarRefused" xml:space="preserve">
+    <value>The light bar refused the update.</value>
+  </data>
+  <data name="DeviceLighting_BarOff" xml:space="preserve">
+    <value>Light bar off.</value>
+  </data>
+  <data name="DeviceLighting_BarRefusedCmd" xml:space="preserve">
+    <value>The light bar refused the command.</value>
+  </data>
+  <data name="DeviceLighting_LightBarLimitation" xml:space="preserve">
+    <value>Run OmenCore as administrator for light bar brightness and animations — those go through HP's BIOS interface, which Windows restricts. Colour works either way.</value>
+  </data>
+  <data name="DeviceLighting_NoStateRead" xml:space="preserve">
+    <value>The keyboard did not answer a state read.</value>
+  </data>
+  <data name="DeviceLighting_OnKeyboardNowFormat" xml:space="preserve">
+    <value>On the keyboard now: {0}, {1}, {2}.</value>
+  </data>
+  <data name="DeviceLighting_CustomColorsFormat" xml:space="preserve">
+    <value>{0} custom colour(s)</value>
+  </data>
+  <data name="DeviceLighting_FnCycleEmptyHint" xml:space="preserve">
+    <value>Nothing staged yet. Set up an effect above, then choose "Add to cycle".</value>
+  </data>
+  <data name="DeviceLighting_FnCycleLimitation" xml:space="preserve">
+    <value>Writing adds to or updates what the keyboard already holds. There is no command to remove an entry, so a profile taken off this list stays on the keyboard until something overwrites that effect type.</value>
+  </data>
+  <data name="KeyboardMap_DimNoSelection" xml:space="preserve">
+    <value>Applies on the next Apply. Select keys to dim them independently.</value>
+  </data>
+  <data name="KeyboardMap_DimFullFormat" xml:space="preserve">
+    <value>{0} selected, at full. Applies on the next Apply.</value>
+  </data>
+  <data name="KeyboardMap_DimPartialFormat" xml:space="preserve">
+    <value>{0} selected at {1}% — they land at {2}% once the master's {3}% is applied.</value>
+  </data>
+  <data name="KeyboardMap_DimAlwaysSuffix" xml:space="preserve">
+    <value> A running keyboard effect cannot be dimmed — the MCU draws those itself.</value>
+  </data>
+  <data name="KeyboardMap_NoKeyMap" xml:space="preserve">
+    <value>No measured key map on this machine.</value>
+  </data>
+  <data name="Common_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoDriftSinceLast" xml:space="preserve">
+    <value>No drift detected since last verification.</value>
+  </data>
 </root>

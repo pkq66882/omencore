@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -223,17 +224,17 @@ namespace OmenCore.ViewModels
         {
             get
             {
-                const string always = " A running keyboard effect cannot be dimmed — the MCU draws those itself.";
+                var always = Strings.KeyboardMap_DimAlwaysSuffix;
 
                 if (!HasSelection)
-                    return "Applies on the next Apply. Select keys to dim them independently." + always;
+                    return Strings.KeyboardMap_DimNoSelection + always;
 
                 int selection = SelectionBrightness;
                 if (selection >= 100)
-                    return $"{SelectedCount} selected, at full. Applies on the next Apply." + always;
+                    return string.Format(Strings.KeyboardMap_DimFullFormat, SelectedCount) + always;
 
-                return $"{SelectedCount} selected at {selection}% — they land at " +
-                       $"{Brightness * selection / 100}% once the master's {Brightness}% is applied." + always;
+                return string.Format(Strings.KeyboardMap_DimPartialFormat, SelectedCount, selection,
+                    Brightness * selection / 100, Brightness) + always;
             }
         }
 
@@ -653,7 +654,7 @@ namespace OmenCore.ViewModels
             var map = _keyboard?.GetMeasuredKeyMap() ?? Array.Empty<HidLampArray.LampInfo>();
             if (map.Count == 0)
             {
-                Status = "No measured key map on this machine.";
+                Status = Strings.KeyboardMap_NoKeyMap;
                 return;
             }
 

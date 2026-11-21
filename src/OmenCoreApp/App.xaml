@@ -34,6 +34,7 @@
             <local:ModeDisplayNameConverter x:Key="ModeDisplayNameConverter" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:SceneDisplayNameConverter x:Key="SceneDisplayName" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:AudioVizModeDisplayConverter x:Key="AudioVizModeDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:FxNameDisplayConverter x:Key="FxNameDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

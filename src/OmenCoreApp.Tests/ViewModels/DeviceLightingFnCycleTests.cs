@@ -162,7 +162,16 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void The_limitation_is_stated_in_the_card_rather_than_only_on_removal()
         {
-            New().FnCycleLimitation.Should().Contain("no command to remove");
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                New().FnCycleLimitation.Should().Contain("no command to remove");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]
@@ -209,27 +218,45 @@ namespace OmenCoreApp.Tests.ViewModels
         [Fact]
         public void The_summary_reads_the_way_the_effects_card_is_set()
         {
-            var vm = New();
-            vm.Speed = "Slow";
-            vm.Direction = "Up";
-            Stage(vm, DojoKeyboardMcu.Effect.Wave, "#AABBCC");
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                var vm = New();
+                vm.Speed = "Slow";
+                vm.Direction = "Up";
+                Stage(vm, DojoKeyboardMcu.Effect.Wave, "#AABBCC");
 
-            vm.FnCycleSlots.Single().Summary.Should().Contain("#AABBCC").And.Contain("slow").And.Contain("up");
+                vm.FnCycleSlots.Single().Summary.Should().Contain("#AABBCC").And.Contain("slow").And.Contain("up");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]
         public void A_preset_profile_summarises_by_theme_rather_than_a_colour_it_will_not_use()
         {
-            var vm = New();
-            vm.SelectedEffect = vm.Effects.First(e => e.Wire == DojoKeyboardMcu.Effect.Ripple);
-            vm.SelectedTheme = vm.Themes.First(t => t.Name == "Ocean");
-            vm.UseCustomColors = false;
-            vm.StageCurrentEffectCommand.Execute(null);
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
+            {
+                var vm = New();
+                vm.SelectedEffect = vm.Effects.First(e => e.Wire == DojoKeyboardMcu.Effect.Ripple);
+                vm.SelectedTheme = vm.Themes.First(t => t.Name == "Ocean");
+                vm.UseCustomColors = false;
+                vm.StageCurrentEffectCommand.Execute(null);
 
-            var summary = vm.FnCycleSlots.Single().Summary;
+                var summary = vm.FnCycleSlots.Single().Summary;
 
-            summary.Should().Contain("Ocean");
-            summary.Should().NotContain("#");
+                summary.Should().Contain("Ocean");
+                summary.Should().NotContain("#");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
     }
 }

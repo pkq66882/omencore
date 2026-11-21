@@ -5857,4 +5857,130 @@
   <data name="AudioViz_BeatSync" xml:space="preserve">
     <value>BeatSync</value>
   </data>
+  <data name="KeyboardFx_ColourCycle" xml:space="preserve">
+    <value>Renk döngüsü</value>
+  </data>
+  <data name="KeyboardFx_Starlight" xml:space="preserve">
+    <value>Yıldız ışığı</value>
+  </data>
+  <data name="KeyboardFx_Breathing" xml:space="preserve">
+    <value>Nefes</value>
+  </data>
+  <data name="KeyboardFx_Ghosting" xml:space="preserve">
+    <value>Hayalet</value>
+  </data>
+  <data name="KeyboardFx_Ripple" xml:space="preserve">
+    <value>Halka</value>
+  </data>
+  <data name="KeyboardFx_Wave" xml:space="preserve">
+    <value>Dalga</value>
+  </data>
+  <data name="KeyboardFx_OmenX" xml:space="preserve">
+    <value>OMEN X</value>
+  </data>
+  <data name="KeyboardFx_Raindrop" xml:space="preserve">
+    <value>Yağmur damlası</value>
+  </data>
+  <data name="KeyboardFx_AudioPulse" xml:space="preserve">
+    <value>Ses nabzı</value>
+  </data>
+  <data name="KeyboardFx_Confetti" xml:space="preserve">
+    <value>Konfeti</value>
+  </data>
+  <data name="KeyboardFx_Sun" xml:space="preserve">
+    <value>Güneş</value>
+  </data>
+  <data name="KeyboardFx_Swipe" xml:space="preserve">
+    <value>Kaydırma</value>
+  </data>
+  <data name="KeyboardTheme_Volcano" xml:space="preserve">
+    <value>Volkan</value>
+  </data>
+  <data name="KeyboardTheme_Jungle" xml:space="preserve">
+    <value>Orman</value>
+  </data>
+  <data name="KeyboardSpeed_Slow" xml:space="preserve">
+    <value>Yavaş</value>
+  </data>
+  <data name="KeyboardSpeed_Medium" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="KeyboardSpeed_Fast" xml:space="preserve">
+    <value>Hızlı</value>
+  </data>
+  <data name="KeyboardDir_LeftToRight" xml:space="preserve">
+    <value>Soldan sağa</value>
+  </data>
+  <data name="KeyboardDir_RightToLeft" xml:space="preserve">
+    <value>Sağdan sola</value>
+  </data>
+  <data name="KeyboardDir_Up" xml:space="preserve">
+    <value>Yukarı</value>
+  </data>
+  <data name="KeyboardDir_Down" xml:space="preserve">
+    <value>Aşağı</value>
+  </data>
+  <data name="KeyboardDir_Inward" xml:space="preserve">
+    <value>İçe</value>
+  </data>
+  <data name="KeyboardDir_Outward" xml:space="preserve">
+    <value>Dışa</value>
+  </data>
+  <data name="KeyboardDir_Clockwise" xml:space="preserve">
+    <value>Saat yönünde</value>
+  </data>
+  <data name="KeyboardDir_Anticlockwise" xml:space="preserve">
+    <value>Saat tersi</value>
+  </data>
+  <data name="DeviceLighting_BarUpdated" xml:space="preserve">
+    <value>Işık çubuğu güncellendi.</value>
+  </data>
+  <data name="DeviceLighting_BarRefused" xml:space="preserve">
+    <value>Işık çubuğu güncellemeyi reddetti.</value>
+  </data>
+  <data name="DeviceLighting_BarOff" xml:space="preserve">
+    <value>Işık çubuğu kapalı.</value>
+  </data>
+  <data name="DeviceLighting_BarRefusedCmd" xml:space="preserve">
+    <value>Işık çubuğu komutu reddetti.</value>
+  </data>
+  <data name="DeviceLighting_LightBarLimitation" xml:space="preserve">
+    <value>Işık çubuğu parlaklığı ve animasyonları için OmenCore'u yönetici olarak çalıştırın — bunlar Windows'un kısıtladığı HP BIOS arayüzünden geçer. Renk her durumda çalışır.</value>
+  </data>
+  <data name="DeviceLighting_NoStateRead" xml:space="preserve">
+    <value>Klavye durum okumasına yanıt vermedi.</value>
+  </data>
+  <data name="DeviceLighting_OnKeyboardNowFormat" xml:space="preserve">
+    <value>Şu anda klavyede: {0}, {1}, {2}.</value>
+  </data>
+  <data name="DeviceLighting_CustomColorsFormat" xml:space="preserve">
+    <value>{0} özel renk</value>
+  </data>
+  <data name="DeviceLighting_FnCycleEmptyHint" xml:space="preserve">
+    <value>Henüz bir şey eklenmedi. Yukarıda bir efekt ayarlayın ve "Döngüye ekle"yi seçin.</value>
+  </data>
+  <data name="DeviceLighting_FnCycleLimitation" xml:space="preserve">
+    <value>Yazma, klavyenin zaten tuttuğuna ekler veya günceller. Kaldırma komutu yoktur, bu listeden çıkarılan profil o efekt türünün üzerine yazılana kadar klavyede kalır.</value>
+  </data>
+  <data name="KeyboardMap_DimNoSelection" xml:space="preserve">
+    <value>Bir sonraki "Uygula"da geçerli olur. Tuşları ayrı ayrı karartmak için seçin.</value>
+  </data>
+  <data name="KeyboardMap_DimFullFormat" xml:space="preserve">
+    <value>{0} seçildi, tam parlaklıkta. Bir sonraki "Uygula"da geçerli olur.</value>
+  </data>
+  <data name="KeyboardMap_DimPartialFormat" xml:space="preserve">
+    <value>{0} tuşu %{1} seçildi — %{3} ana parlaklık uygulandığında %{2} olur.</value>
+  </data>
+  <data name="KeyboardMap_DimAlwaysSuffix" xml:space="preserve">
+    <value> Çalışan klavye efekti karartılamaz — MCU bunları kendisi çizer.</value>
+  </data>
+  <data name="KeyboardMap_NoKeyMap" xml:space="preserve">
+    <value>Bu makinede ölçülmüş tuş haritası yok.</value>
+  </data>
+  <data name="Common_Loading" xml:space="preserve">
+    <value>Yükleniyor...</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoDriftSinceLast" xml:space="preserve">
+    <value>Son doğrulamadan beri sapma algılanmadı.</value>
+  </data>
 </root>

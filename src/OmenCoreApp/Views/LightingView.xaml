@@ -1659,12 +1659,16 @@
                             <StackPanel Margin="0,0,16,8">
                                 <TextBlock Text="{x:Static loc:Strings.LightingView_Speed}" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                 <ComboBox Width="100" Style="{StaticResource ModernComboBox}"
-                                          ItemsSource="{Binding Speeds}" SelectedItem="{Binding Speed, Mode=TwoWay}"/>
+                                          ItemsSource="{Binding Speeds}" SelectedItem="{Binding Speed, Mode=TwoWay}">
+                                <ComboBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Converter={StaticResource FxNameDisplay}}"/></DataTemplate></ComboBox.ItemTemplate>
+                            </ComboBox>
                             </StackPanel>
                             <StackPanel Margin="0,0,16,8">
                                 <TextBlock Text="{x:Static loc:Strings.LightingView_Direction}" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                 <ComboBox Width="130" Style="{StaticResource ModernComboBox}"
-                                          ItemsSource="{Binding Directions}" SelectedItem="{Binding Direction, Mode=TwoWay}"/>
+                                          ItemsSource="{Binding Directions}" SelectedItem="{Binding Direction, Mode=TwoWay}">
+                                <ComboBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Converter={StaticResource FxNameDisplay}}"/></DataTemplate></ComboBox.ItemTemplate>
+                            </ComboBox>
                             </StackPanel>
                         </WrapPanel>
 

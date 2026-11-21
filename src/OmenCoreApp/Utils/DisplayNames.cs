@@ -61,8 +61,63 @@ namespace OmenCore.Utils
             AudioVisualizationMode.BeatSync => Strings.AudioViz_BeatSync,
             _ => mode.ToString()
         };
-    }
+        /// <summary>Maps keyboard-effect/theme/speed/direction names (and light-bar effect names)
+        /// to localized display strings. Wire/data values stay canonical English.</summary>
+        public static string Fx(string? name)
+        {
+            if (string.IsNullOrWhiteSpace(name)) return name ?? string.Empty;
+            return name switch
+            {
+                "Colour cycle" => Strings.KeyboardFx_ColourCycle,
+                "Starlight" => Strings.KeyboardFx_Starlight,
+                "Breathing" => Strings.KeyboardFx_Breathing,
+                "Ghosting" => Strings.KeyboardFx_Ghosting,
+                "Ripple" => Strings.KeyboardFx_Ripple,
+                "Wave" => Strings.KeyboardFx_Wave,
+                "OMEN X" => Strings.KeyboardFx_OmenX,
+                "Raindrop" => Strings.KeyboardFx_Raindrop,
+                "Audio pulse" => Strings.KeyboardFx_AudioPulse,
+                "Confetti" => Strings.KeyboardFx_Confetti,
+                "Sun" => Strings.KeyboardFx_Sun,
+                "Swipe" => Strings.KeyboardFx_Swipe,
+                "Volcano" => Strings.KeyboardTheme_Volcano,
+                "Jungle" => Strings.KeyboardTheme_Jungle,
+                "Ocean" => Strings.RgbScene_NameOcean,
+                "Rainbow" => Strings.RgbScene_NameRainbow,
+                "Slow" => Strings.KeyboardSpeed_Slow,
+                "Medium" => Strings.KeyboardSpeed_Medium,
+                "Fast" => Strings.KeyboardSpeed_Fast,
+                "Left to right" => Strings.KeyboardDir_LeftToRight,
+                "Right to left" => Strings.KeyboardDir_RightToLeft,
+                "Up" => Strings.KeyboardDir_Up,
+                "Down" => Strings.KeyboardDir_Down,
+                "Inward" => Strings.KeyboardDir_Inward,
+                "Outward" => Strings.KeyboardDir_Outward,
+                "Clockwise" => Strings.KeyboardDir_Clockwise,
+                "Anticlockwise" => Strings.KeyboardDir_Anticlockwise,
+                _ when Regex.IsMatch(name, @"^(\d+) custom colour\(s\)$")
+                    => string.Format(Strings.DeviceLighting_CustomColorsFormat, Regex.Replace(name, @"\D", "")),
+                _ => name
+            };
+        }
 
+        public static string Fx(object? value) => value switch
+        {
+            null => string.Empty,
+            string s => Fx(s),
+            _ => Fx(value.ToString())
+        };
+    }
+    /// <summary>Displays canonical English option names (speeds, directions, effects, themes)
+    /// in the current UI language while keeping the underlying values unchanged.</summary>
+    public class FxNameDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => DisplayNames.Fx(value);
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
     public class SceneDisplayNameConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

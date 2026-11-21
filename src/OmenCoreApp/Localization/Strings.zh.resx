@@ -5857,4 +5857,130 @@
   <data name="AudioViz_BeatSync" xml:space="preserve">
     <value>节拍同步</value>
   </data>
+  <data name="KeyboardFx_ColourCycle" xml:space="preserve">
+    <value>色彩循环</value>
+  </data>
+  <data name="KeyboardFx_Starlight" xml:space="preserve">
+    <value>星光</value>
+  </data>
+  <data name="KeyboardFx_Breathing" xml:space="preserve">
+    <value>呼吸</value>
+  </data>
+  <data name="KeyboardFx_Ghosting" xml:space="preserve">
+    <value>幻影</value>
+  </data>
+  <data name="KeyboardFx_Ripple" xml:space="preserve">
+    <value>涟漪</value>
+  </data>
+  <data name="KeyboardFx_Wave" xml:space="preserve">
+    <value>波浪</value>
+  </data>
+  <data name="KeyboardFx_OmenX" xml:space="preserve">
+    <value>OMEN X</value>
+  </data>
+  <data name="KeyboardFx_Raindrop" xml:space="preserve">
+    <value>雨滴</value>
+  </data>
+  <data name="KeyboardFx_AudioPulse" xml:space="preserve">
+    <value>音频脉冲</value>
+  </data>
+  <data name="KeyboardFx_Confetti" xml:space="preserve">
+    <value>彩屑</value>
+  </data>
+  <data name="KeyboardFx_Sun" xml:space="preserve">
+    <value>阳光</value>
+  </data>
+  <data name="KeyboardFx_Swipe" xml:space="preserve">
+    <value>掠影</value>
+  </data>
+  <data name="KeyboardTheme_Volcano" xml:space="preserve">
+    <value>火山</value>
+  </data>
+  <data name="KeyboardTheme_Jungle" xml:space="preserve">
+    <value>丛林</value>
+  </data>
+  <data name="KeyboardSpeed_Slow" xml:space="preserve">
+    <value>慢速</value>
+  </data>
+  <data name="KeyboardSpeed_Medium" xml:space="preserve">
+    <value>中速</value>
+  </data>
+  <data name="KeyboardSpeed_Fast" xml:space="preserve">
+    <value>快速</value>
+  </data>
+  <data name="KeyboardDir_LeftToRight" xml:space="preserve">
+    <value>从左到右</value>
+  </data>
+  <data name="KeyboardDir_RightToLeft" xml:space="preserve">
+    <value>从右到左</value>
+  </data>
+  <data name="KeyboardDir_Up" xml:space="preserve">
+    <value>向上</value>
+  </data>
+  <data name="KeyboardDir_Down" xml:space="preserve">
+    <value>向下</value>
+  </data>
+  <data name="KeyboardDir_Inward" xml:space="preserve">
+    <value>向内</value>
+  </data>
+  <data name="KeyboardDir_Outward" xml:space="preserve">
+    <value>向外</value>
+  </data>
+  <data name="KeyboardDir_Clockwise" xml:space="preserve">
+    <value>顺时针</value>
+  </data>
+  <data name="KeyboardDir_Anticlockwise" xml:space="preserve">
+    <value>逆时针</value>
+  </data>
+  <data name="DeviceLighting_BarUpdated" xml:space="preserve">
+    <value>灯条已更新。</value>
+  </data>
+  <data name="DeviceLighting_BarRefused" xml:space="preserve">
+    <value>灯条拒绝了更新。</value>
+  </data>
+  <data name="DeviceLighting_BarOff" xml:space="preserve">
+    <value>灯条已熄灭。</value>
+  </data>
+  <data name="DeviceLighting_BarRefusedCmd" xml:space="preserve">
+    <value>灯条拒绝了该命令。</value>
+  </data>
+  <data name="DeviceLighting_LightBarLimitation" xml:space="preserve">
+    <value>需以管理员身份运行 OmenCore 才能调节灯条亮度与动画——这两者经由 HP 的 BIOS 接口，受 Windows 限制。颜色设置不受影响。</value>
+  </data>
+  <data name="DeviceLighting_NoStateRead" xml:space="preserve">
+    <value>键盘未响应状态读取。</value>
+  </data>
+  <data name="DeviceLighting_OnKeyboardNowFormat" xml:space="preserve">
+    <value>键盘当前：{0}，{1}，{2}。</value>
+  </data>
+  <data name="DeviceLighting_CustomColorsFormat" xml:space="preserve">
+    <value>{0} 个自定义颜色</value>
+  </data>
+  <data name="DeviceLighting_FnCycleEmptyHint" xml:space="preserve">
+    <value>暂无内容。先在上方设置灯效，再选择“加入循环”。</value>
+  </data>
+  <data name="DeviceLighting_FnCycleLimitation" xml:space="preserve">
+    <value>写入只会新增或更新键盘上已有的内容。没有删除命令——从列表移除的方案仍保留在键盘上，直到被同类灯效覆盖。</value>
+  </data>
+  <data name="KeyboardMap_DimNoSelection" xml:space="preserve">
+    <value>下次“应用”时生效。选择按键可独立调暗。</value>
+  </data>
+  <data name="KeyboardMap_DimFullFormat" xml:space="preserve">
+    <value>已选 {0} 个，亮度为满。下次“应用”时生效。</value>
+  </data>
+  <data name="KeyboardMap_DimPartialFormat" xml:space="preserve">
+    <value>已选 {0} 个，亮度 {1}%——应用总亮度 {3}% 后实际为 {2}%。</value>
+  </data>
+  <data name="KeyboardMap_DimAlwaysSuffix" xml:space="preserve">
+    <value> 正在运行的键盘灯效无法调暗——由 MCU 自行绘制。</value>
+  </data>
+  <data name="KeyboardMap_NoKeyMap" xml:space="preserve">
+    <value>本机没有测量的按键布局。</value>
+  </data>
+  <data name="Common_Loading" xml:space="preserve">
+    <value>加载中…</value>
+  </data>
+  <data name="SystemOptimizerViewModel_NoDriftSinceLast" xml:space="preserve">
+    <value>自上次验证以来未检测到偏移。</value>
+  </data>
 </root>

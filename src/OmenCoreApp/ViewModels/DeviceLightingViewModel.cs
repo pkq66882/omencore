@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -272,16 +273,17 @@ namespace OmenCore.ViewModels
             var current = _keyboard?.ReadDeviceEffect();
             if (current == null)
             {
-                Status = "The keyboard did not answer a state read.";
+                Status = Strings.DeviceLighting_NoStateRead;
                 return;
             }
 
             var r = current.Value;
             string palette = r.ColorNumber == DojoKeyboardMcu.ColorNumberPreset
-                ? r.ShowMode.ToString()
-                : $"{r.ColorNumber + 1} custom colour(s)";
+                ? DisplayNames.Fx(r.ShowMode.ToString())
+                : string.Format(Strings.DeviceLighting_CustomColorsFormat, r.ColorNumber + 1);
 
-            Status = $"On the keyboard now: {r.Effect}, {palette}, {r.Speed.ToString().ToLowerInvariant()}.";
+            Status = string.Format(Strings.DeviceLighting_OnKeyboardNowFormat,
+                DisplayNames.Fx(r.Effect.ToString()), palette, DisplayNames.Fx(r.Speed.ToString()));
         }
 
         // ── The Fn+1 / Fn+2 cycle ──────────────────────────────────────────────────
@@ -316,7 +318,7 @@ namespace OmenCore.ViewModels
         /// than presenting a blank area and two buttons.</summary>
         public string FnCycleEmptyHint => FnCycleSlots.Count > 0
             ? string.Empty
-            : "Nothing staged yet. Set up an effect above, then choose \"Add to cycle\".";
+            : Strings.DeviceLighting_FnCycleEmptyHint;
 
         private string _fnCycleStatus = string.Empty;
         public string FnCycleStatus
@@ -331,10 +333,7 @@ namespace OmenCore.ViewModels
         /// and then presses Fn+1 will find four - and with no readback there is nothing in the UI
         /// that could have shown them the fourth.
         /// </summary>
-        public string FnCycleLimitation =>
-            "Writing adds to or updates what the keyboard already holds. There is no command to " +
-            "remove an entry, so a profile taken off this list stays on the keyboard until " +
-            "something overwrites that effect type.";
+        public string FnCycleLimitation => Strings.DeviceLighting_FnCycleLimitation;
 
         /// <summary>Live warning about the staged set, or empty. Same two black-by-design traps the
         /// effects card warns about, checked across the whole set before any frame goes out.</summary>
@@ -499,7 +498,7 @@ namespace OmenCore.ViewModels
                         ? $"{Model.PrimaryColorHex} → {Model.SecondaryColorHex}"
                         : Model.Theme;
 
-                    return $"{palette} · {Model.Speed.ToLowerInvariant()} · {Model.Direction.ToLowerInvariant()}";
+                    return $"{DisplayNames.Fx(palette)} · {DisplayNames.Fx(Model.Speed).ToLowerInvariant()} · {DisplayNames.Fx(Model.Direction).ToLowerInvariant()}";
                 }
             }
 
@@ -560,8 +559,7 @@ namespace OmenCore.ViewModels
         /// <summary>Shown when unelevated, so the missing controls are explained rather than absent.</summary>
         public string LightBarLimitation => SupportsLightBarEffects
             ? string.Empty
-            : "Run OmenCore as administrator for light bar brightness and animations — those go through " +
-              "HP's BIOS interface, which Windows restricts. Colour works either way.";
+            : Strings.DeviceLighting_LightBarLimitation;
 
         public ICommand ApplyLightBarColorCommand { get; }
         public ICommand ApplyLightBarEffectCommand { get; }
@@ -572,7 +570,7 @@ namespace OmenCore.ViewModels
             if (_keyboard == null) return;
 
             bool ok = _keyboard.SetLightBarColors(new[] { ToRgb(BarColorHex) }, (byte)BarBrightness);
-            BarStatus = ok ? "Light bar updated." : "The light bar refused the update.";
+            BarStatus = ok ? Strings.DeviceLighting_BarUpdated : Strings.DeviceLighting_BarRefused;
             RefreshLightBar();
         }
 
@@ -599,7 +597,7 @@ namespace OmenCore.ViewModels
         private void LightBarOff()
         {
             if (_keyboard == null) return;
-            BarStatus = _keyboard.SetLightBarOff() ? "Light bar off." : "The light bar refused the command.";
+            BarStatus = _keyboard.SetLightBarOff() ? Strings.DeviceLighting_BarOff : Strings.DeviceLighting_BarRefusedCmd;
         }
 
         private void RefreshLightBar()
@@ -629,17 +627,17 @@ namespace OmenCore.ViewModels
 
         public record EffectOption(string Name, DojoKeyboardMcu.Effect Wire)
         {
-            public override string ToString() => Name;
+            public override string ToString() => DisplayNames.Fx(Name);
         }
 
         public record ThemeOption(string Name, DojoKeyboardMcu.ShowMode Wire)
         {
-            public override string ToString() => Name;
+            public override string ToString() => DisplayNames.Fx(Name);
         }
 
         public record LightBarEffectOption(string Name, HpWmiBios.LightBarEffect Wire)
         {
-            public override string ToString() => Name;
+            public override string ToString() => DisplayNames.Fx(Name);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using OmenCore.Localization;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -7,7 +8,7 @@ namespace OmenCore.ViewModels
     public class ViewModelBase : INotifyPropertyChanged
     {
         private bool _isLoading;
-        private string _loadingMessage = "Loading...";
+        private string _loadingMessage = Strings.Common_Loading;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
