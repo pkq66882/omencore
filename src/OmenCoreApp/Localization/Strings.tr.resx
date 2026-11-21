@@ -6175,4 +6175,94 @@
   <data name="SettingsViewModel_FanCleaningNonHp" xml:space="preserve">
     <value>✗ HP olmayan OMEN sistemi algılandı: {0} {1}. Fan temizleme kullanılamaz.</value>
   </data>
+  <data name="AboutWindow_VersionFormat" xml:space="preserve">
+    <value>Sürüm {0}</value>
+  </data>
+  <data name="SettingsSearch_TabGeneral" xml:space="preserve">
+    <value>Genel</value>
+  </data>
+  <data name="SettingsSearch_TabAppearance" xml:space="preserve">
+    <value>Görünüm</value>
+  </data>
+  <data name="SettingsSearch_TabFanControl" xml:space="preserve">
+    <value>Fan Kontrolü</value>
+  </data>
+  <data name="SettingsSearch_TabAdvanced" xml:space="preserve">
+    <value>Gelişmiş</value>
+  </data>
+  <data name="SettingsSearch_TabLighting" xml:space="preserve">
+    <value>Aydınlatma</value>
+  </data>
+  <data name="SettingsSearch_TabScheduler" xml:space="preserve">
+    <value>Zamanlayıcı</value>
+  </data>
+  <data name="SettingsSearch_TabStatus" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="SettingsSearch_StartWithWindows" xml:space="preserve">
+    <value>Windows ile başlat</value>
+  </data>
+  <data name="SettingsSearch_MinimizeToTray" xml:space="preserve">
+    <value>Kapatınca tepsiye küçült</value>
+  </data>
+  <data name="SettingsSearch_PollingInterval" xml:space="preserve">
+    <value>İzleme yoklama aralığı</value>
+  </data>
+  <data name="SettingsSearch_AutoUpdateChecks" xml:space="preserve">
+    <value>Otomatik güncelleme kontrolü</value>
+  </data>
+  <data name="SettingsSearch_ThemeSelection" xml:space="preserve">
+    <value>Koyu/açık tema seçimi</value>
+  </data>
+  <data name="SettingsSearch_AccentColour" xml:space="preserve">
+    <value>Vurgu rengi özelleştirme</value>
+  </data>
+  <data name="SettingsSearch_FanPresets" xml:space="preserve">
+    <value>Fan ön ayarları ve özel eğri</value>
+  </data>
+  <data name="SettingsSearch_FanCurvePoints" xml:space="preserve">
+    <value>Fan eğrisi sıcaklık noktaları</value>
+  </data>
+  <data name="SettingsSearch_PerformanceModes" xml:space="preserve">
+    <value>Performans ve güç modları</value>
+  </data>
+  <data name="SettingsSearch_UndervoltSettings" xml:space="preserve">
+    <value>CPU undervolting ayarları</value>
+  </data>
+  <data name="SettingsSearch_GpuOc" xml:space="preserve">
+    <value>GPU overclock ve güç artışı</value>
+  </data>
+  <data name="SettingsSearch_KeyboardRgb" xml:space="preserve">
+    <value>Klavye 4 bölgeli RGB aydınlatma</value>
+  </data>
+  <data name="SettingsSearch_ScheduleRules" xml:space="preserve">
+    <value>Gün içi otomasyon kuralları</value>
+  </data>
+  <data name="SettingsSearch_AutomationRules" xml:space="preserve">
+    <value>Pil ve AC tabanlı otomasyon kuralları</value>
+  </data>
+  <data name="SettingsSearch_LiteMode" xml:space="preserve">
+    <value>Gelişmiş sekmeleri gizleyen yeni başlayan dostu arayüz modu</value>
+  </data>
+  <data name="SettingsSearch_DriverStatus" xml:space="preserve">
+    <value>PawnIO sürücü durumu</value>
+  </data>
+  <data name="SettingsSearch_BiosCheck" xml:space="preserve">
+    <value>BIOS sürümü ve güncelleme kontrolü</value>
+  </data>
+  <data name="SettingsSearch_LogSettings" xml:space="preserve">
+    <value>Günlük ayrıntısı ve tanılama</value>
+  </data>
+  <data name="SettingsSearch_Hotkeys" xml:space="preserve">
+    <value>Kısayol etkinleştirme/odak ayarları</value>
+  </data>
+  <data name="SettingsSearch_Notifications" xml:space="preserve">
+    <value>Sistem bildirimleri</value>
+  </data>
+  <data name="SettingsSearch_BatteryLimit" xml:space="preserve">
+    <value>Pil şarj sınırı</value>
+  </data>
+  <data name="SettingsSearch_MacroProfiles" xml:space="preserve">
+    <value>Klavye macro profilleri</value>
+  </data>
 </root>

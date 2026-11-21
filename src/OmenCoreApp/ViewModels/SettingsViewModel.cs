@@ -2678,30 +2678,32 @@ namespace OmenCore.ViewModels
 
         public bool SettingsSearchVisible => !string.IsNullOrWhiteSpace(_settingsSearchQuery);
 
-        private static readonly (string Term, string TabName, string Description)[] _searchCatalog = new[]
+        // Terms carry both English and Chinese keywords so search works in either UI language.
+        // TabName/Description resolve through the localization catalogs at query time.
+        private static (string Term, string TabName, string Description)[] BuildSearchCatalog() => new[]
         {
-            ("startup", "General", "Start with Windows"),
-            ("tray", "General", "Minimize to tray on close"),
-            ("polling", "General", "Monitoring polling interval"),
-            ("update", "General", "Automatic update checks"),
-            ("theme", "Appearance", "Dark / light theme selection"),
-            ("color", "Appearance", "Accent colour customisation"),
-            ("fan", "Fan Control", "Fan presets and custom curve"),
-            ("temperature", "Fan Control", "Fan curve temperature points"),
-            ("performance", "Advanced", "Performance and power modes"),
-            ("undervolt", "Advanced", "CPU undervolting settings"),
-            ("gpu", "Advanced", "GPU overclocking and power boost"),
-            ("lighting", "Lighting", "Keyboard 4-zone RGB lighting"),
-            ("schedule", "Scheduler", "Time-of-day automation rules"),
-            ("automation", "Scheduler", "Battery and AC-based automation rules"),
-            ("lite", "General", "Beginner-friendly UI mode that hides advanced tabs"),
-            ("driver", "Status", "PawnIO driver status"),
-            ("bios", "Status", "BIOS version and update check"),
-            ("log", "General", "Log verbosity and diagnostics"),
-            ("hotkey", "General", "Hotkey enable/focus settings"),
-            ("notification", "General", "System notifications"),
-            ("battery", "Advanced", "Battery charge limit"),
-            ("macro", "Advanced", "Keyboard macro profiles"),
+            ("startup 启动 开机", Strings.SettingsSearch_TabGeneral, Strings.SettingsSearch_StartWithWindows),
+            ("tray tray 托盘 最小化", Strings.SettingsSearch_TabGeneral, Strings.SettingsSearch_MinimizeToTray),
+            ("polling polling 轮询 间隔", Strings.SettingsSearch_TabGeneral, Strings.SettingsSearch_PollingInterval),
+            ("update update 更新", Strings.SettingsSearch_TabGeneral, Strings.SettingsSearch_AutoUpdateChecks),
+            ("theme theme 主题", Strings.SettingsSearch_TabAppearance, Strings.SettingsSearch_ThemeSelection),
+            ("color colour color 颜色 强调色", Strings.SettingsSearch_TabAppearance, Strings.SettingsSearch_AccentColour),
+            ("fan fan 风扇", Strings.SettingsSearch_TabFanControl, Strings.SettingsSearch_FanPresets),
+            ("temperature temperature 温度 曲线", Strings.SettingsSearch_TabFanControl, Strings.SettingsSearch_FanCurvePoints),
+            ("performance performance 性能 电源", Strings.SettingsSearch_TabAdvanced, Strings.SettingsSearch_PerformanceModes),
+            ("undervolt undervolt 降压", Strings.SettingsSearch_TabAdvanced, Strings.SettingsSearch_UndervoltSettings),
+            ("gpu gpu 显卡", Strings.SettingsSearch_TabAdvanced, Strings.SettingsSearch_GpuOc),
+            ("lighting lighting 灯光 灯效", Strings.SettingsSearch_TabLighting, Strings.SettingsSearch_KeyboardRgb),
+            ("schedule schedule 计划 定时", Strings.SettingsSearch_TabScheduler, Strings.SettingsSearch_ScheduleRules),
+            ("automation automation 自动化", Strings.SettingsSearch_TabScheduler, Strings.SettingsSearch_AutomationRules),
+            ("lite lite 精简 新手", Strings.SettingsSearch_TabGeneral, Strings.SettingsSearch_LiteMode),
+            ("driver driver 驱动", Strings.SettingsSearch_TabStatus, Strings.SettingsSearch_DriverStatus),
+            ("bios bios", Strings.SettingsSearch_TabStatus, Strings.SettingsSearch_BiosCheck),
+            ("log log 日志", Strings.SettingsSearch_TabGeneral, Strings.SettingsSearch_LogSettings),
+            ("hotkey hotkey 热键 快捷键", Strings.SettingsSearch_TabGeneral, Strings.SettingsSearch_Hotkeys),
+            ("notification notification 通知", Strings.SettingsSearch_TabGeneral, Strings.SettingsSearch_Notifications),
+            ("battery battery 电池", Strings.SettingsSearch_TabAdvanced, Strings.SettingsSearch_BatteryLimit),
+            ("macro macro 宏", Strings.SettingsSearch_TabAdvanced, Strings.SettingsSearch_MacroProfiles),
         };
 
         public IEnumerable<SettingsSearchResult> SettingsSearchResults
@@ -2711,8 +2713,8 @@ namespace OmenCore.ViewModels
                 if (string.IsNullOrWhiteSpace(_settingsSearchQuery))
                     return Enumerable.Empty<SettingsSearchResult>();
                 var q = _settingsSearchQuery.Trim().ToLowerInvariant();
-                return _searchCatalog
-                    .Where(e => e.Term.Contains(q) || e.Description.ToLowerInvariant().Contains(q) || e.TabName.ToLowerInvariant().Contains(q))
+                return BuildSearchCatalog()
+                    .Where(e => e.Term.ToLowerInvariant().Contains(q) || e.Description.ToLowerInvariant().Contains(q) || e.TabName.ToLowerInvariant().Contains(q))
                     .Select(e => new SettingsSearchResult(e.TabName, e.Description))
                     .Take(8);
             }

@@ -6175,4 +6175,94 @@
   <data name="SettingsViewModel_FanCleaningNonHp" xml:space="preserve">
     <value>✗ Обнаружена система не-HP OMEN: {0} {1}. Очистка вентиляторов недоступна.</value>
   </data>
+  <data name="AboutWindow_VersionFormat" xml:space="preserve">
+    <value>Версия {0}</value>
+  </data>
+  <data name="SettingsSearch_TabGeneral" xml:space="preserve">
+    <value>Общие</value>
+  </data>
+  <data name="SettingsSearch_TabAppearance" xml:space="preserve">
+    <value>Внешний вид</value>
+  </data>
+  <data name="SettingsSearch_TabFanControl" xml:space="preserve">
+    <value>Управление вентиляторами</value>
+  </data>
+  <data name="SettingsSearch_TabAdvanced" xml:space="preserve">
+    <value>Дополнительно</value>
+  </data>
+  <data name="SettingsSearch_TabLighting" xml:space="preserve">
+    <value>Подсветка</value>
+  </data>
+  <data name="SettingsSearch_TabScheduler" xml:space="preserve">
+    <value>Планировщик</value>
+  </data>
+  <data name="SettingsSearch_TabStatus" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="SettingsSearch_StartWithWindows" xml:space="preserve">
+    <value>Автозапуск с Windows</value>
+  </data>
+  <data name="SettingsSearch_MinimizeToTray" xml:space="preserve">
+    <value>Сворачивать в трей при закрытии</value>
+  </data>
+  <data name="SettingsSearch_PollingInterval" xml:space="preserve">
+    <value>Интервал опроса мониторинга</value>
+  </data>
+  <data name="SettingsSearch_AutoUpdateChecks" xml:space="preserve">
+    <value>Автоматическая проверка обновлений</value>
+  </data>
+  <data name="SettingsSearch_ThemeSelection" xml:space="preserve">
+    <value>Выбор тёмной/светлой темы</value>
+  </data>
+  <data name="SettingsSearch_AccentColour" xml:space="preserve">
+    <value>Настройка акцентного цвета</value>
+  </data>
+  <data name="SettingsSearch_FanPresets" xml:space="preserve">
+    <value>Пресеты вентиляторов и своя кривая</value>
+  </data>
+  <data name="SettingsSearch_FanCurvePoints" xml:space="preserve">
+    <value>Точки температуры кривой вентилятора</value>
+  </data>
+  <data name="SettingsSearch_PerformanceModes" xml:space="preserve">
+    <value>Режимы производительности и питания</value>
+  </data>
+  <data name="SettingsSearch_UndervoltSettings" xml:space="preserve">
+    <value>Настройки понижения напряжения CPU</value>
+  </data>
+  <data name="SettingsSearch_GpuOc" xml:space="preserve">
+    <value>Разгон GPU и ускорение мощности</value>
+  </data>
+  <data name="SettingsSearch_KeyboardRgb" xml:space="preserve">
+    <value>4-зонная RGB-подсветка клавиатуры</value>
+  </data>
+  <data name="SettingsSearch_ScheduleRules" xml:space="preserve">
+    <value>Правила автоматизации по времени суток</value>
+  </data>
+  <data name="SettingsSearch_AutomationRules" xml:space="preserve">
+    <value>Правила по батарее и сети</value>
+  </data>
+  <data name="SettingsSearch_LiteMode" xml:space="preserve">
+    <value>Простой режим интерфейса, скрывающий продвинутые вкладки</value>
+  </data>
+  <data name="SettingsSearch_DriverStatus" xml:space="preserve">
+    <value>Статус драйвера PawnIO</value>
+  </data>
+  <data name="SettingsSearch_BiosCheck" xml:space="preserve">
+    <value>Версия BIOS и проверка обновлений</value>
+  </data>
+  <data name="SettingsSearch_LogSettings" xml:space="preserve">
+    <value>Детализация журнала и диагностика</value>
+  </data>
+  <data name="SettingsSearch_Hotkeys" xml:space="preserve">
+    <value>Настройки горячих клавиш</value>
+  </data>
+  <data name="SettingsSearch_Notifications" xml:space="preserve">
+    <value>Системные уведомления</value>
+  </data>
+  <data name="SettingsSearch_BatteryLimit" xml:space="preserve">
+    <value>Ограничение заряда батареи</value>
+  </data>
+  <data name="SettingsSearch_MacroProfiles" xml:space="preserve">
+    <value>Макропрофили клавиатуры</value>
+  </data>
 </root>

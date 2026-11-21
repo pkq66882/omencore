@@ -543,7 +543,7 @@
     <value>Close (Esc)</value>
   </data>
   <data name="AboutWindow_Version300" xml:space="preserve">
-    <value>Version 3.0.0</value>
+    <value>Version</value>
   </data>
   <data name="AboutWindow_AdvancedThermalPowerAndRgbControlForHpOmen" xml:space="preserve">
     <value>Advanced thermal, power, and RGB control for HP OMEN gaming laptops and desktops.</value>
@@ -6178,5 +6178,95 @@
   </data>
   <data name="SettingsViewModel_FanCleaningNonHp" xml:space="preserve">
     <value>✗ Non-HP OMEN system detected: {0} {1}. Fan cleaning unavailable.</value>
+  </data>
+  <data name="AboutWindow_VersionFormat" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="SettingsSearch_TabGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SettingsSearch_TabAppearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="SettingsSearch_TabFanControl" xml:space="preserve">
+    <value>Fan Control</value>
+  </data>
+  <data name="SettingsSearch_TabAdvanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="SettingsSearch_TabLighting" xml:space="preserve">
+    <value>Lighting</value>
+  </data>
+  <data name="SettingsSearch_TabScheduler" xml:space="preserve">
+    <value>Scheduler</value>
+  </data>
+  <data name="SettingsSearch_TabStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SettingsSearch_StartWithWindows" xml:space="preserve">
+    <value>Start with Windows</value>
+  </data>
+  <data name="SettingsSearch_MinimizeToTray" xml:space="preserve">
+    <value>Minimize to tray on close</value>
+  </data>
+  <data name="SettingsSearch_PollingInterval" xml:space="preserve">
+    <value>Monitoring polling interval</value>
+  </data>
+  <data name="SettingsSearch_AutoUpdateChecks" xml:space="preserve">
+    <value>Automatic update checks</value>
+  </data>
+  <data name="SettingsSearch_ThemeSelection" xml:space="preserve">
+    <value>Dark / light theme selection</value>
+  </data>
+  <data name="SettingsSearch_AccentColour" xml:space="preserve">
+    <value>Accent colour customisation</value>
+  </data>
+  <data name="SettingsSearch_FanPresets" xml:space="preserve">
+    <value>Fan presets and custom curve</value>
+  </data>
+  <data name="SettingsSearch_FanCurvePoints" xml:space="preserve">
+    <value>Fan curve temperature points</value>
+  </data>
+  <data name="SettingsSearch_PerformanceModes" xml:space="preserve">
+    <value>Performance and power modes</value>
+  </data>
+  <data name="SettingsSearch_UndervoltSettings" xml:space="preserve">
+    <value>CPU undervolting settings</value>
+  </data>
+  <data name="SettingsSearch_GpuOc" xml:space="preserve">
+    <value>GPU overclocking and power boost</value>
+  </data>
+  <data name="SettingsSearch_KeyboardRgb" xml:space="preserve">
+    <value>Keyboard 4-zone RGB lighting</value>
+  </data>
+  <data name="SettingsSearch_ScheduleRules" xml:space="preserve">
+    <value>Time-of-day automation rules</value>
+  </data>
+  <data name="SettingsSearch_AutomationRules" xml:space="preserve">
+    <value>Battery and AC-based automation rules</value>
+  </data>
+  <data name="SettingsSearch_LiteMode" xml:space="preserve">
+    <value>Beginner-friendly UI mode that hides advanced tabs</value>
+  </data>
+  <data name="SettingsSearch_DriverStatus" xml:space="preserve">
+    <value>PawnIO driver status</value>
+  </data>
+  <data name="SettingsSearch_BiosCheck" xml:space="preserve">
+    <value>BIOS version and update check</value>
+  </data>
+  <data name="SettingsSearch_LogSettings" xml:space="preserve">
+    <value>Log verbosity and diagnostics</value>
+  </data>
+  <data name="SettingsSearch_Hotkeys" xml:space="preserve">
+    <value>Hotkey enable/focus settings</value>
+  </data>
+  <data name="SettingsSearch_Notifications" xml:space="preserve">
+    <value>System notifications</value>
+  </data>
+  <data name="SettingsSearch_BatteryLimit" xml:space="preserve">
+    <value>Battery charge limit</value>
+  </data>
+  <data name="SettingsSearch_MacroProfiles" xml:space="preserve">
+    <value>Keyboard macro profiles</value>
   </data>
 </root>

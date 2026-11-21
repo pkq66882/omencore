@@ -45,7 +45,8 @@
                         Padding="0"/>
             </Grid>
             
-            <StackPanel Grid.Row="1">
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
                 <Border Background="{StaticResource SurfaceMediumBrush}" 
                         BorderBrush="{StaticResource BorderBrush}" 
                         BorderThickness="1" 
@@ -128,6 +129,7 @@
                             ToolTip="{x:Static loc:Strings.AboutWindow_CloseThisWindowEsc}" />
                 </StackPanel>
             </StackPanel>
+                </ScrollViewer>
         </Grid>
     </Border>
 </Window>

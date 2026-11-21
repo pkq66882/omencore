@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -18,7 +19,7 @@ namespace OmenCore.Views
         {
             InitializeComponent();
             _updateService = new AutoUpdateService(App.Logging, "https://api.github.com/repos/theantipopau/omencore/releases/latest");
-            VersionText.Text = $"Version {AppVersionProvider.GetVersionString()}";
+            VersionText.Text = string.Format(Strings.AboutWindow_VersionFormat, AppVersionProvider.GetVersionString());
         }
 
         private async void CheckUpdatesClicked(object sender, RoutedEventArgs e)

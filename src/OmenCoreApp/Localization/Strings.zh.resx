@@ -539,7 +539,7 @@
     <value>关闭（Esc）</value>
   </data>
   <data name="AboutWindow_Version300" xml:space="preserve">
-    <value>版本 3.0.0</value>
+    <value>版本</value>
   </data>
   <data name="AboutWindow_AdvancedThermalPowerAndRgbControlForHpOmen" xml:space="preserve">
     <value>面向 HP OMEN 游戏本和台式机的高级散热、功耗与 RGB 控制。</value>
@@ -764,10 +764,10 @@
     <value>移除低风险项</value>
   </data>
   <data name="BloatwareManagerView_ExportBloatwareDryRunReport" xml:space="preserve">
-    <value>导出预装软件演练报告</value>
+    <value>导出预装软件模拟运行报告</value>
   </data>
   <data name="BloatwareManagerView_DryRun" xml:space="preserve">
-    <value>演练</value>
+    <value>模拟运行</value>
   </data>
   <data name="BloatwareManagerView_CancelBulkOperation" xml:space="preserve">
     <value>取消批量操作</value>
@@ -4421,7 +4421,7 @@
     <value>不可用</value>
   </data>
   <data name="MainViewModel_CleanupDryDone" xml:space="preserve">
-    <value>演练完成</value>
+    <value>模拟运行完成</value>
   </data>
   <data name="MainViewModel_CleanupDryRunning" xml:space="preserve">
     <value>正在运行清理演练…</value>
@@ -5615,7 +5615,7 @@
     <value>禁用旧式短文件名生成</value>
   </data>
   <data name="SystemOptimizer_Item_Storage8dot3_Warning" xml:space="preserve">
-    <value>可能导致极老的软件无法运行</value>
+    <value>可能导致非常老旧的软件无法运行</value>
   </data>
   <data name="UpdateViewModel_CheckingForUpdates" xml:space="preserve">
     <value>正在检查更新…</value>
@@ -5885,7 +5885,7 @@
     <value>音频脉冲</value>
   </data>
   <data name="KeyboardFx_Confetti" xml:space="preserve">
-    <value>彩屑</value>
+    <value>彩色纸屑</value>
   </data>
   <data name="KeyboardFx_Sun" xml:space="preserve">
     <value>阳光</value>
@@ -6174,5 +6174,95 @@
   </data>
   <data name="SettingsViewModel_FanCleaningNonHp" xml:space="preserve">
     <value>✗ 检测到非 HP OMEN 系统：{0} {1}。风扇清洁不可用。</value>
+  </data>
+  <data name="AboutWindow_VersionFormat" xml:space="preserve">
+    <value>版本 {0}</value>
+  </data>
+  <data name="SettingsSearch_TabGeneral" xml:space="preserve">
+    <value>常规</value>
+  </data>
+  <data name="SettingsSearch_TabAppearance" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="SettingsSearch_TabFanControl" xml:space="preserve">
+    <value>风扇控制</value>
+  </data>
+  <data name="SettingsSearch_TabAdvanced" xml:space="preserve">
+    <value>高级</value>
+  </data>
+  <data name="SettingsSearch_TabLighting" xml:space="preserve">
+    <value>灯效</value>
+  </data>
+  <data name="SettingsSearch_TabScheduler" xml:space="preserve">
+    <value>计划任务</value>
+  </data>
+  <data name="SettingsSearch_TabStatus" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="SettingsSearch_StartWithWindows" xml:space="preserve">
+    <value>开机自启动</value>
+  </data>
+  <data name="SettingsSearch_MinimizeToTray" xml:space="preserve">
+    <value>关闭时最小化到托盘</value>
+  </data>
+  <data name="SettingsSearch_PollingInterval" xml:space="preserve">
+    <value>监控轮询间隔</value>
+  </data>
+  <data name="SettingsSearch_AutoUpdateChecks" xml:space="preserve">
+    <value>自动检查更新</value>
+  </data>
+  <data name="SettingsSearch_ThemeSelection" xml:space="preserve">
+    <value>深色/浅色主题选择</value>
+  </data>
+  <data name="SettingsSearch_AccentColour" xml:space="preserve">
+    <value>强调色自定义</value>
+  </data>
+  <data name="SettingsSearch_FanPresets" xml:space="preserve">
+    <value>风扇预设与自定义曲线</value>
+  </data>
+  <data name="SettingsSearch_FanCurvePoints" xml:space="preserve">
+    <value>风扇曲线温度点</value>
+  </data>
+  <data name="SettingsSearch_PerformanceModes" xml:space="preserve">
+    <value>性能与电源模式</value>
+  </data>
+  <data name="SettingsSearch_UndervoltSettings" xml:space="preserve">
+    <value>CPU 降压设置</value>
+  </data>
+  <data name="SettingsSearch_GpuOc" xml:space="preserve">
+    <value>GPU 超频与功率加速</value>
+  </data>
+  <data name="SettingsSearch_KeyboardRgb" xml:space="preserve">
+    <value>键盘四分区 RGB 灯效</value>
+  </data>
+  <data name="SettingsSearch_ScheduleRules" xml:space="preserve">
+    <value>按时间自动执行的规则</value>
+  </data>
+  <data name="SettingsSearch_AutomationRules" xml:space="preserve">
+    <value>基于电池/电源的自动化规则</value>
+  </data>
+  <data name="SettingsSearch_LiteMode" xml:space="preserve">
+    <value>适合新手的精简界面（隐藏高级标签页）</value>
+  </data>
+  <data name="SettingsSearch_DriverStatus" xml:space="preserve">
+    <value>PawnIO 驱动状态</value>
+  </data>
+  <data name="SettingsSearch_BiosCheck" xml:space="preserve">
+    <value>BIOS 版本与更新检查</value>
+  </data>
+  <data name="SettingsSearch_LogSettings" xml:space="preserve">
+    <value>日志详细程度与诊断</value>
+  </data>
+  <data name="SettingsSearch_Hotkeys" xml:space="preserve">
+    <value>热键启用/聚焦设置</value>
+  </data>
+  <data name="SettingsSearch_Notifications" xml:space="preserve">
+    <value>系统通知</value>
+  </data>
+  <data name="SettingsSearch_BatteryLimit" xml:space="preserve">
+    <value>电池充电上限</value>
+  </data>
+  <data name="SettingsSearch_MacroProfiles" xml:space="preserve">
+    <value>键盘宏方案</value>
   </data>
 </root>

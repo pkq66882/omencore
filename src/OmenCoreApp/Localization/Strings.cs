@@ -2384,5 +2384,36 @@ namespace OmenCore.Localization
     public static string SettingsViewModel_BiosCheckHint => Get(nameof(SettingsViewModel_BiosCheckHint));
     public static string SettingsViewModel_FanCleaningNonHp => Get(nameof(SettingsViewModel_FanCleaningNonHp));
 
+    public static string AboutWindow_VersionFormat => Get(nameof(AboutWindow_VersionFormat));
+    public static string SettingsSearch_AccentColour => Get(nameof(SettingsSearch_AccentColour));
+    public static string SettingsSearch_AutomationRules => Get(nameof(SettingsSearch_AutomationRules));
+    public static string SettingsSearch_AutoUpdateChecks => Get(nameof(SettingsSearch_AutoUpdateChecks));
+    public static string SettingsSearch_BatteryLimit => Get(nameof(SettingsSearch_BatteryLimit));
+    public static string SettingsSearch_BiosCheck => Get(nameof(SettingsSearch_BiosCheck));
+    public static string SettingsSearch_DriverStatus => Get(nameof(SettingsSearch_DriverStatus));
+    public static string SettingsSearch_FanCurvePoints => Get(nameof(SettingsSearch_FanCurvePoints));
+    public static string SettingsSearch_FanPresets => Get(nameof(SettingsSearch_FanPresets));
+    public static string SettingsSearch_GpuOc => Get(nameof(SettingsSearch_GpuOc));
+    public static string SettingsSearch_Hotkeys => Get(nameof(SettingsSearch_Hotkeys));
+    public static string SettingsSearch_KeyboardRgb => Get(nameof(SettingsSearch_KeyboardRgb));
+    public static string SettingsSearch_LiteMode => Get(nameof(SettingsSearch_LiteMode));
+    public static string SettingsSearch_LogSettings => Get(nameof(SettingsSearch_LogSettings));
+    public static string SettingsSearch_MacroProfiles => Get(nameof(SettingsSearch_MacroProfiles));
+    public static string SettingsSearch_MinimizeToTray => Get(nameof(SettingsSearch_MinimizeToTray));
+    public static string SettingsSearch_Notifications => Get(nameof(SettingsSearch_Notifications));
+    public static string SettingsSearch_PerformanceModes => Get(nameof(SettingsSearch_PerformanceModes));
+    public static string SettingsSearch_PollingInterval => Get(nameof(SettingsSearch_PollingInterval));
+    public static string SettingsSearch_ScheduleRules => Get(nameof(SettingsSearch_ScheduleRules));
+    public static string SettingsSearch_StartWithWindows => Get(nameof(SettingsSearch_StartWithWindows));
+    public static string SettingsSearch_TabAdvanced => Get(nameof(SettingsSearch_TabAdvanced));
+    public static string SettingsSearch_TabAppearance => Get(nameof(SettingsSearch_TabAppearance));
+    public static string SettingsSearch_TabFanControl => Get(nameof(SettingsSearch_TabFanControl));
+    public static string SettingsSearch_TabGeneral => Get(nameof(SettingsSearch_TabGeneral));
+    public static string SettingsSearch_TabLighting => Get(nameof(SettingsSearch_TabLighting));
+    public static string SettingsSearch_TabScheduler => Get(nameof(SettingsSearch_TabScheduler));
+    public static string SettingsSearch_TabStatus => Get(nameof(SettingsSearch_TabStatus));
+    public static string SettingsSearch_ThemeSelection => Get(nameof(SettingsSearch_ThemeSelection));
+    public static string SettingsSearch_UndervoltSettings => Get(nameof(SettingsSearch_UndervoltSettings));
+
     }
 }
