@@ -611,7 +611,7 @@
     <value>均衡性能模式：推荐，自动管理功耗与风扇</value>
   </data>
   <data name="AdvancedView_Balanced" xml:space="preserve">
-    <value>均衡</value>
+    <value>平衡</value>
   </data>
   <data name="AdvancedView_Recommended" xml:space="preserve">
     <value>推荐</value>
@@ -626,7 +626,7 @@
     <value>性能模式：最大功率、高风扇转速</value>
   </data>
   <data name="AdvancedView_Performance" xml:space="preserve">
-    <value>性能</value>
+    <value>狂暴</value>
   </data>
   <data name="AdvancedView_MaximumPower" xml:space="preserve">
     <value>最大功率</value>
@@ -2750,7 +2750,7 @@
     <value>快速配置</value>
   </data>
   <data name="QuickPopupWindow_Perform" xml:space="preserve">
-    <value>性能</value>
+    <value>狂暴</value>
   </data>
   <data name="QuickPopupWindow_OpenFullDashboard" xml:space="preserve">
     <value>打开完整面板</value>
@@ -4544,7 +4544,7 @@
     <value>关闭</value>
   </data>
   <data name="AdvancedView_Quiet" xml:space="preserve">
-    <value>安静</value>
+    <value>冷静</value>
   </data>
   <data name="AdvancedView_Apply" xml:space="preserve">
     <value>应用</value>
@@ -4853,7 +4853,7 @@
     <value>提交 {0} • 页面文件 {1}</value>
   </data>
   <data name="PerformanceMode_Performance" xml:space="preserve">
-    <value>性能</value>
+    <value>狂暴</value>
   </data>
   <data name="SettingsViewModel_AcPowerConnected" xml:space="preserve">
     <value>交流电源已连接</value>
@@ -4946,10 +4946,10 @@
     <value>正在扫描游戏库…</value>
   </data>
   <data name="PerformanceMode_Balanced" xml:space="preserve">
-    <value>均衡</value>
+    <value>平衡</value>
   </data>
   <data name="PerformanceMode_Quiet" xml:space="preserve">
-    <value>安静</value>
+    <value>冷静</value>
   </data>
   <data name="SettingsViewModel_OnBattery" xml:space="preserve">
     <value>使用电池</value>
@@ -6302,19 +6302,19 @@
     <value>未知</value>
   </data>
   <data name="TrayIcon_QuickProfile" xml:space="preserve">
-    <value>快速方案</value>
+    <value>一键切换方案</value>
   </data>
   <data name="TrayIcon_ProfilePerformance" xml:space="preserve">
-    <value>性能——游戏散热 + 性能模式</value>
+    <value>狂暴——游戏散热 + 狂暴模式</value>
   </data>
   <data name="TrayIcon_ProfileBalanced" xml:space="preserve">
-    <value>均衡——自动散热 + 均衡模式</value>
+    <value>平衡——自动散热 + 平衡模式</value>
   </data>
   <data name="TrayIcon_ProfileQuiet" xml:space="preserve">
-    <value>安静——风扇静音 + 省电模式</value>
+    <value>冷静——风扇静音，延长续航</value>
   </data>
   <data name="TrayIcon_ProfileCustom" xml:space="preserve">
-    <value>自定义——用户自定义风扇与电源设置</value>
+    <value>自定义——用户自定义的风扇与电源设置</value>
   </data>
   <data name="TrayIcon_MaxFan" xml:space="preserve">
     <value>风扇全速</value>
@@ -6353,10 +6353,10 @@
     <value>性能模式：{0}</value>
   </data>
   <data name="TrayIcon_PerfBalanced" xml:space="preserve">
-    <value> 均衡——默认</value>
+    <value> 平衡——默认</value>
   </data>
   <data name="TrayIcon_PerfPerformance" xml:space="preserve">
-    <value> 性能——最大功率</value>
+    <value> 狂暴——最大功率</value>
   </data>
   <data name="TrayIcon_PerfQuiet" xml:space="preserve">
     <value> 省电——延长电池续航</value>
