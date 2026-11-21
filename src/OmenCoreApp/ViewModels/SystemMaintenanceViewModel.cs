@@ -33,7 +33,7 @@ namespace OmenCore.ViewModels
 
         #region GPU Mode Switching
 
-        private string _currentGpuMode = "Detecting...";
+        private string _currentGpuMode = Strings.GpuSwitch_Detecting;
         public string CurrentGpuMode
         {
             get => _currentGpuMode;
@@ -52,8 +52,8 @@ namespace OmenCore.ViewModels
         public bool GpuModeSwitchingUnsupported => !GpuModeSwitchingSupported;
 
         public string GpuModeSwitchingStatusText => GpuModeSwitchingSupported
-            ? "BIOS WMI GPU switching is available."
-            : $"GPU mode switching is unavailable through OmenCore: {_gpuSwitchService.UnsupportedReason}";
+            ? Strings.GpuSwitch_Available
+            : string.Format(Strings.GpuSwitch_UnavailableFormat, LocalizeUnsupportedReason(_gpuSwitchService.UnsupportedReason));
 
         public ObservableCollection<GpuSwitchMode> GpuSwitchModes { get; } = new();
         public GpuSwitchMode? SelectedGpuMode { get; set; }
@@ -126,15 +126,15 @@ namespace OmenCore.ViewModels
             try
             {
                 var states = _telemetryServices.Query();
-                if (states.Count == 0) { HpTelemetryStatus = "No HP telemetry services found on this system."; return; }
+                if (states.Count == 0) { HpTelemetryStatus = Strings.Telemetry_NoServices; return; }
                 var off = states.Count(s => s.StartType == HpTelemetryServiceControl.Disabled);
-                HpTelemetryStatus = $"{states.Count} HP service(s) found, {off} disabled" +
-                                    (states.Any(s => s.Managed) ? " (Restore available)." : ".");
+                HpTelemetryStatus = string.Format(Strings.Telemetry_SummaryFormat, states.Count, off) +
+                                    (states.Any(s => s.Managed) ? Strings.Telemetry_RestoreAvailable : Strings.Telemetry_Period);
             }
             catch (Exception ex)
             {
                 _logging.Warn($"HP telemetry status failed: {ex.Message}");
-                HpTelemetryStatus = "Could not read HP service state.";
+                HpTelemetryStatus = Strings.Telemetry_ReadFailed;
             }
         }
 
@@ -147,13 +147,13 @@ namespace OmenCore.ViewModels
                 System.Windows.Application.Current?.Dispatcher.Invoke(() =>
                 {
                     RefreshHpTelemetryStatus();
-                    HpTelemetryStatus += " " + result.Describe(disable ? "Disabled" : "Restored");
+                    HpTelemetryStatus += " " + DescribeTelemetryResult(result, disable);
                 });
             }
             catch (Exception ex)
             {
                 _logging.Warn($"HP telemetry change failed: {ex.Message}");
-                System.Windows.Application.Current?.Dispatcher.Invoke(() => HpTelemetryStatus = "Failed: " + ex.Message);
+                System.Windows.Application.Current?.Dispatcher.Invoke(() => HpTelemetryStatus = Strings.Telemetry_FailedPrefix + ex.Message);
             }
         });
 
@@ -189,7 +189,7 @@ namespace OmenCore.ViewModels
 
         public bool HasCleanupSteps => OmenCleanupSteps.Count > 0;
 
-        private string _cleanupStatus = "Status: Not checked";
+        private string _cleanupStatus = Strings.Cleanup_StatusNotChecked;
         public string CleanupStatus
         {
             get => _cleanupStatus;
@@ -298,13 +298,7 @@ namespace OmenCore.ViewModels
             try
             {
                 var mode = _gpuSwitchService.DetectCurrentMode();
-                CurrentGpuMode = mode switch
-                {
-                    GpuSwitchMode.Hybrid => "Hybrid (MSHybrid/Optimus)",
-                    GpuSwitchMode.Discrete => "Discrete GPU Only",
-                    GpuSwitchMode.Integrated => "Integrated GPU Only",
-                    _ => "Unknown"
-                };
+                CurrentGpuMode = ModeName(mode);
                 _logging.Info($"Detected GPU mode: {CurrentGpuMode}");
             }
             catch (Exception ex)
@@ -314,7 +308,7 @@ namespace OmenCore.ViewModels
                     operation: "DetectGpuMode",
                     message: "Failed to detect GPU mode",
                     ex: ex);
-                CurrentGpuMode = "Detection Failed";
+                CurrentGpuMode = Strings.GpuSwitch_ModeDetectionFailed;
             }
         }
 
@@ -346,10 +340,8 @@ namespace OmenCore.ViewModels
 
                     // Show restart prompt
                     var result = System.Windows.MessageBox.Show(
-                        $"GPU mode has been set to {targetMode}.\n\n" +
-                        "A system restart is required for changes to take effect.\n\n" +
-                        "Would you like to restart now?",
-                        "Restart Required - OmenCore",
+                        string.Format(Strings.GpuSwitch_RestartBodyFormat, ModeName(targetMode)),
+                        Strings.GpuSwitch_RestartTitle,
                         System.Windows.MessageBoxButton.YesNo,
                         System.Windows.MessageBoxImage.Question);
 
@@ -363,8 +355,8 @@ namespace OmenCore.ViewModels
                 {
                     _logging.Error("✗ GPU mode switch failed");
                     System.Windows.MessageBox.Show(
-                        "Failed to switch GPU mode. Please check the logs for details.",
-                        "GPU Mode Switch Failed",
+                        Strings.GpuSwitch_FailedBody,
+                        Strings.GpuSwitch_FailedTitle,
                         System.Windows.MessageBoxButton.OK,
                         System.Windows.MessageBoxImage.Error);
                 }
@@ -448,9 +440,9 @@ namespace OmenCore.ViewModels
                     };
 
                     var result = await _cleanupService.CleanupAsync(options);
-                    CleanupStatus = result.Success ? "✓ Cleanup complete - restart recommended" : "⚠ Cleanup failed";
+                    CleanupStatus = result.Success ? Strings.Cleanup_Complete : Strings.Cleanup_Failed;
                     CleanupComplete = result.Success;
-                }, "Running HP Omen cleanup...");
+                }, Strings.Cleanup_Running);
             }
             finally
             {
@@ -463,8 +455,9 @@ namespace OmenCore.ViewModels
         {
             System.Windows.Application.Current?.Dispatcher?.BeginInvoke(() =>
             {
-                OmenCleanupSteps.Add(step);
-                CleanupStatus = step;
+                var localized = LocalizeCleanupStep(step);
+                OmenCleanupSteps.Add(localized);
+                CleanupStatus = localized;
                 OnPropertyChanged(nameof(HasCleanupSteps));
             });
         }
@@ -484,13 +477,71 @@ namespace OmenCore.ViewModels
                 {
                     _logging.Error($"✗ Failed to create restore point: {result.Message}");
                 }
-            }, "Creating system restore point...");
+            }, Strings.Cleanup_CreatingRestorePoint);
         }
 
         public void Dispose()
         {
             // Nothing persistent to unhook: _cleanupService.StepCompleted is subscribed and
             // unsubscribed entirely within RunCleanupAsync's own try/finally.
+        }
+
+        /// <summary>Localized display name for the GPU switch selector and restart prompt.</summary>
+        private static string ModeName(GpuSwitchMode mode) => mode switch
+        {
+            GpuSwitchMode.Hybrid => Strings.GpuSwitch_ModeHybrid,
+            GpuSwitchMode.Discrete => Strings.GpuSwitch_ModeDiscrete,
+            GpuSwitchMode.Integrated => Strings.GpuSwitch_ModeIntegrated,
+            _ => Strings.GpuSwitch_ModeUnknown
+        };
+
+        /// <summary>Maps Core's canonical English unsupported reasons (GpuSwitchService) to UI text.</summary>
+        private static string LocalizeUnsupportedReason(string? reason)
+        {
+            if (string.IsNullOrEmpty(reason)) return string.Empty;
+            if (reason == "Could not detect system information") return Strings.GpuSwitch_ReasonNoSysInfo;
+            if (reason == "GPU mode switching only supported on HP systems") return Strings.GpuSwitch_ReasonNotHp;
+            const string omenPrefix = "GPU mode switching only supported on HP OMEN models (detected: ";
+            if (reason.StartsWith(omenPrefix, StringComparison.Ordinal))
+                return string.Format(Strings.GpuSwitch_ReasonNotOmenFormat, reason.Substring(omenPrefix.Length).TrimEnd(')'));
+            if (reason == "HP BIOS does not support GPU mode switching via WMI") return Strings.GpuSwitch_ReasonBiosNoWmi;
+            const string errorPrefix = "Error checking GPU mode support: ";
+            if (reason.StartsWith(errorPrefix, StringComparison.Ordinal))
+                return string.Format(Strings.GpuSwitch_ReasonErrorFormat, reason.Substring(errorPrefix.Length));
+            return reason;
+        }
+
+        /// <summary>Builds the localized telemetry result line Core's Result.Describe would print.</summary>
+        private static string DescribeTelemetryResult(HpTelemetryServiceControl.Result result, bool disable)
+        {
+            if (result.Failed > 0)
+                return string.Format(Strings.Telemetry_ResultFailedFormat,
+                    disable ? Strings.Telemetry_VerbDisabled : Strings.Telemetry_VerbRestored,
+                    result.Changed, result.Failed);
+            if (result.Changed == 0) return Strings.Telemetry_NothingToChange;
+            return string.Format(disable ? Strings.Telemetry_ResultDisabledFormat : Strings.Telemetry_ResultRestoredFormat, result.Changed);
+        }
+
+        /// <summary>Keeps Core's "[n/m] " progress prefix and localizes the step message itself.</summary>
+        private static string LocalizeCleanupStep(string step)
+        {
+            var close = step.IndexOf("] ", StringComparison.Ordinal);
+            if (!step.StartsWith("[", StringComparison.Ordinal) || close < 0) return step;
+            var prefix = step.Substring(0, close + 2);
+            var message = step.Substring(close + 2);
+            var localized = message switch
+            {
+                "Killed running OMEN processes" => Strings.Cleanup_StepKilledProcesses,
+                "Removing Store packages (this may take a minute)..." => Strings.Cleanup_StepStorePackages,
+                "Running legacy uninstallers (this may take a few minutes)..." => Strings.Cleanup_StepLegacyUninstallers,
+                "Cleaning up services and scheduled tasks..." => Strings.Cleanup_StepServicesTasks,
+                "⚠ OmenCap detected in DriverStore - see log for removal instructions" => Strings.Cleanup_StepOmenCap,
+                "Firewall rules preserved per user preference" => Strings.Cleanup_StepFirewallPreserved,
+                "✓ Cleanup completed successfully" => Strings.Cleanup_StepCompleted,
+                "⚠ Cleanup cancelled" => Strings.Cleanup_StepCancelled,
+                _ => message
+            };
+            return prefix + localized;
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)

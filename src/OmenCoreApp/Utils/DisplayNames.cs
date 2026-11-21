@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Windows.Data;
 using OmenCore.Localization;
+using OmenCore.Models;
 using OmenCore.Services;
 
 namespace OmenCore.Utils
@@ -14,6 +15,25 @@ namespace OmenCore.Utils
     /// </summary>
     public static class DisplayNames
     {
+        /// <summary>Localized GPU switch mode name for the selector and restart prompt.</summary>
+        public static string GpuSwitchName(GpuSwitchMode mode) => mode switch
+        {
+            GpuSwitchMode.Hybrid => Strings.GpuSwitch_ModeHybrid,
+            GpuSwitchMode.Discrete => Strings.GpuSwitch_ModeDiscrete,
+            GpuSwitchMode.Integrated => Strings.GpuSwitch_ModeIntegrated,
+            _ => Strings.GpuSwitch_ModeUnknown
+        };
+
+        /// <summary>Localized boost level name; unknown values pass through.</summary>
+        public static string BoostLevel(string? level) => level switch
+        {
+            "Minimum" => Strings.GpuBoost_LevelMinimum,
+            "Medium" => Strings.GpuBoost_LevelMedium,
+            "Maximum" => Strings.GpuBoost_LevelMaximum,
+            "Extended" => Strings.GpuBoost_LevelExtended,
+            _ => level ?? string.Empty
+        };
+
         public static string Scene(string? name)
         {
             if (string.IsNullOrWhiteSpace(name)) return name ?? string.Empty;
@@ -159,6 +179,26 @@ namespace OmenCore.Utils
             => value as string is string s && s == "Unknown OMEN"
                 ? Strings.DiagnosticsView_UnknownModel
                 : value?.ToString() ?? string.Empty;
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+
+    /// Displays the GPU switch enum localized in the selector; the enum itself is unchanged.
+    public class GpuSwitchModeDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => value is GpuSwitchMode mode ? DisplayNames.GpuSwitchName(mode) : value?.ToString() ?? string.Empty;
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+
+    /// Displays canonical boost levels ("Minimum"/"Medium"/...) localized; the stored value is unchanged.
+    public class GpuBoostLevelDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => DisplayNames.BoostLevel(value as string);
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
             => throw new NotSupportedException();

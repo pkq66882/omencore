@@ -6781,4 +6781,361 @@
   <data name="SettingsView_MinutesFormat" xml:space="preserve">
     <value>{0} dk</value>
   </data>
+  <data name="CapabilityReason_ThisBoard" xml:space="preserve">
+    <value>bu kart</value>
+  </data>
+  <data name="CapabilityReason_FanControl_Safety" xml:space="preserve">
+    <value>OMEN masaüstülerinde fan yazma, model bazında doğrulama tamamlanana kadar devre dışı; izleme çalışmaya devam eder.</value>
+  </data>
+  <data name="CapabilityReason_FanControl_ModelDbFormat" xml:space="preserve">
+    <value>Model veritabanı, {0} için çalışan bir yazılım fan denetimi olmadığını kaydediyor.</value>
+  </data>
+  <data name="CapabilityReason_Backend_SecureBoot" xml:space="preserve">
+    <value>Güvenli Önyükleme açık ve PawnIO yüklü değil; bu nedenle EC ve MSR fan yolları açılamıyor.</value>
+  </data>
+  <data name="CapabilityReason_Backend_OghNotRunning" xml:space="preserve">
+    <value>HP WMI BIOS kullanılamıyor ve tek yedek yol olan OMEN Gaming Hub yüklü ama çalışmıyor.</value>
+  </data>
+  <data name="CapabilityReason_Backend_None" xml:space="preserve">
+    <value>Kullanılabilir fan denetim arka ucu yok: HP WMI BIOS yanıt vermedi ve EC sürücüsü yüklü değil.</value>
+  </data>
+  <data name="CapabilityReason_FanControl_NotPresent" xml:space="preserve">
+    <value>Bu kart için çalışan bir fan denetim arka ucu algılanmadı.</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_Safety" xml:space="preserve">
+    <value>OMEN masaüstülerinde fan eğrileri fan yazmayla birlikte engellenir; izleme çalışmaya devam eder.</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_ModelDb" xml:space="preserve">
+    <value>Model veritabanı, bu kartın ürün yazılımının özel fan eğrisi saklamadığını kaydediyor.</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_NotReadyFormat" xml:space="preserve">
+    <value>Bir eğri çalışan fan yazma gerektirir, bu oturumda yok: {0}</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_NotPresent" xml:space="preserve">
+    <value>Bu kartta kullanılabilir özel fan eğrisi algılanmadı.</value>
+  </data>
+  <data name="CapabilityReason_Independent_NotReady" xml:space="preserve">
+    <value>Bağımsız eğriler, burada kullanılamayan fan eğrisi düzenleyicisini gerektirir.</value>
+  </data>
+  <data name="CapabilityReason_Independent_ModelDb" xml:space="preserve">
+    <value>Model veritabanı, bu kartın iki fanı tek eğriden sürdüğünü kaydediyor.</value>
+  </data>
+  <data name="CapabilityReason_Independent_NotPresent" xml:space="preserve">
+    <value>Bu kartta bağımsız CPU/GPU eğrileri algılanmadı.</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_ModelDb" xml:space="preserve">
+    <value>Victus kartları GPU Güç Artışı düzeylerini yalnızca model veritabanı HP ürün yazılımının bunları desteklediğini doğruladığında kabul eder.</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_DriverMissing" xml:space="preserve">
+    <value>HP WMI BIOS GPU güç arayüzü bulunamadı; hızlandırma düzeylerinin uygulanacağı bir yer yok.</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_NotPresent" xml:space="preserve">
+    <value>Bu kartta GPU Güç Artışı algılanmadı.</value>
+  </data>
+  <data name="CapabilityReason_Mux_ModelDb" xml:space="preserve">
+    <value>Model veritabanı bu kart için MUX anahtarı listelemiyor; grafik doğrudan bağlı.</value>
+  </data>
+  <data name="CapabilityReason_Mux_NotPresent" xml:space="preserve">
+    <value>Bu kartta MUX anahtarı algılanmadı.</value>
+  </data>
+  <data name="CapabilityReason_Lighting_ModelDb" xml:space="preserve">
+    <value>Model veritabanı bu kartta renk adreslenebilir klavye aydınlatması kaydetmiyor.</value>
+  </data>
+  <data name="CapabilityReason_Lighting_NotPresent" xml:space="preserve">
+    <value>Ürün yazılımı renk adreslenebilir klavye aydınlatması bildirmiyor; varsa yalnızca düz arka ışık kullanılabilir.</value>
+  </data>
+  <data name="CapabilityReason_PerKey_ModelDb" xml:space="preserve">
+    <value>Bu kartın klavyesi tuş bazında değil bölge bazında adreslenir; tuş bazlı efektler uygulanmaz.</value>
+  </data>
+  <data name="CapabilityReason_PerKey_NotPresent" xml:space="preserve">
+    <value>Bu kartta tuş bazında adreslenebilir klavye bildirilmedi.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_ModelDb" xml:space="preserve">
+    <value>Model veritabanı, bu kartın ürün yazılımının CPU voltaj düşürmeyi kabul etmediğini kaydediyor.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_DriverMissing" xml:space="preserve">
+    <value>Güvenli Önyükleme açık ve PawnIO yüklü değil; voltaj düşürme için MSR erişimi kullanılamıyor.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_NotPresent" xml:space="preserve">
+    <value>Bu kartta CPU voltaj düşürme yolu (MSR, PawnIO veya eğri iyileştirici) bulunamadı.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_Timeout" xml:space="preserve">
+    <value>Voltaj düşürme sondası zaman aşımına uğradı</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_UnknownBlock" xml:space="preserve">
+    <value>Bilinmeyen engelleme nedeni</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_ModelDbDisabledFormat" xml:space="preserve">
+    <value>Model veritabanına göre voltaj düşürme devre dışı ({0} desteklemiyor)</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_NotReadyFormat" xml:space="preserve">
+    <value>Voltaj düşürme şu anda kullanılamıyor: {0}</value>
+  </data>
+  <data name="CapabilityReason_PerfModes_DriverMissing" xml:space="preserve">
+    <value>HP performans modu arayüzü bulunamadı; mod seçici Windows güç planlarına geri döner.</value>
+  </data>
+  <data name="GpuSwitch_Detecting" xml:space="preserve">
+    <value>Algılanıyor...</value>
+  </data>
+  <data name="GpuSwitch_Available" xml:space="preserve">
+    <value>BIOS WMI ile GPU geçişi kullanılabilir.</value>
+  </data>
+  <data name="GpuSwitch_UnavailableFormat" xml:space="preserve">
+    <value>OmenCore üzerinden GPU modu geçişi kullanılamıyor: {0}</value>
+  </data>
+  <data name="GpuSwitch_ModeHybrid" xml:space="preserve">
+    <value>Hibrit (MSHybrid/Optimus)</value>
+  </data>
+  <data name="GpuSwitch_ModeDiscrete" xml:space="preserve">
+    <value>Yalnızca harici GPU</value>
+  </data>
+  <data name="GpuSwitch_ModeIntegrated" xml:space="preserve">
+    <value>Yalnızca tümleşik GPU</value>
+  </data>
+  <data name="GpuSwitch_ModeUnknown" xml:space="preserve">
+    <value>Bilinmiyor</value>
+  </data>
+  <data name="GpuSwitch_ModeDetectionFailed" xml:space="preserve">
+    <value>Algılama başarısız</value>
+  </data>
+  <data name="GpuSwitch_RestartTitle" xml:space="preserve">
+    <value>Yeniden başlatma gerekli - OmenCore</value>
+  </data>
+  <data name="GpuSwitch_RestartBodyFormat" xml:space="preserve">
+    <value>GPU modu {0} olarak ayarlandı.&#10;&#10;Değişikliklerin geçerli olması için yeniden başlatma gerekir.&#10;&#10;Şimdi yeniden başlatılsın mı?</value>
+  </data>
+  <data name="GpuSwitch_FailedTitle" xml:space="preserve">
+    <value>GPU modu geçişi başarısız</value>
+  </data>
+  <data name="GpuSwitch_FailedBody" xml:space="preserve">
+    <value>GPU modu değiştirilemedi. Ayrıntılar için günlüklere bakın.</value>
+  </data>
+  <data name="GpuSwitch_ReasonNoSysInfo" xml:space="preserve">
+    <value>Sistem bilgisi algılanamadı</value>
+  </data>
+  <data name="GpuSwitch_ReasonNotHp" xml:space="preserve">
+    <value>GPU modu geçişi yalnızca HP sistemlerinde desteklenir</value>
+  </data>
+  <data name="GpuSwitch_ReasonNotOmenFormat" xml:space="preserve">
+    <value>GPU modu geçişi yalnızca HP OMEN modellerinde desteklenir (algılanan: {0})</value>
+  </data>
+  <data name="GpuSwitch_ReasonBiosNoWmi" xml:space="preserve">
+    <value>HP BIOS, WMI ile GPU modu geçişini desteklemiyor</value>
+  </data>
+  <data name="GpuSwitch_ReasonErrorFormat" xml:space="preserve">
+    <value>GPU modu desteği denetlenirken hata: {0}</value>
+  </data>
+  <data name="Telemetry_NoServices" xml:space="preserve">
+    <value>Bu sistemde HP telemetri hizmeti bulunamadı.</value>
+  </data>
+  <data name="Telemetry_SummaryFormat" xml:space="preserve">
+    <value>{0} HP hizmeti bulundu, {1} tanesi devre dışı</value>
+  </data>
+  <data name="Telemetry_RestoreAvailable" xml:space="preserve">
+    <value> (Geri yükleme kullanılabilir).</value>
+  </data>
+  <data name="Telemetry_Period" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="Telemetry_ReadFailed" xml:space="preserve">
+    <value>HP hizmet durumu okunamadı.</value>
+  </data>
+  <data name="Telemetry_ResultFailedFormat" xml:space="preserve">
+    <value>{0}: {1} hizmet değiştirildi, {2} başarısız (yönetici olarak çalıştırın).</value>
+  </data>
+  <data name="Telemetry_NothingToChange" xml:space="preserve">
+    <value>Değiştirilecek bir şey yok.</value>
+  </data>
+  <data name="Telemetry_ResultDisabledFormat" xml:space="preserve">
+    <value>{0} hizmet devre dışı bırakıldı.</value>
+  </data>
+  <data name="Telemetry_ResultRestoredFormat" xml:space="preserve">
+    <value>{0} hizmet geri yüklendi.</value>
+  </data>
+  <data name="Telemetry_VerbDisabled" xml:space="preserve">
+    <value>Devre dışı bırakıldı</value>
+  </data>
+  <data name="Telemetry_VerbRestored" xml:space="preserve">
+    <value>Geri yüklendi</value>
+  </data>
+  <data name="Telemetry_FailedPrefix" xml:space="preserve">
+    <value>Başarısız: </value>
+  </data>
+  <data name="Cleanup_StatusNotChecked" xml:space="preserve">
+    <value>Durum: denetlenmedi</value>
+  </data>
+  <data name="Cleanup_Complete" xml:space="preserve">
+    <value>✓ Temizlik tamamlandı - yeniden başlatma önerilir</value>
+  </data>
+  <data name="Cleanup_Failed" xml:space="preserve">
+    <value>⚠ Temizlik başarısız</value>
+  </data>
+  <data name="Cleanup_Running" xml:space="preserve">
+    <value>HP Omen temizliği çalışıyor...</value>
+  </data>
+  <data name="Cleanup_CreatingRestorePoint" xml:space="preserve">
+    <value>Sistem geri yükleme noktası oluşturuluyor...</value>
+  </data>
+  <data name="Cleanup_StepKilledProcesses" xml:space="preserve">
+    <value>Çalışan OMEN işlemleri sonlandırıldı</value>
+  </data>
+  <data name="Cleanup_StepStorePackages" xml:space="preserve">
+    <value>Store paketleri kaldırılıyor (bir dakika sürebilir)...</value>
+  </data>
+  <data name="Cleanup_StepLegacyUninstallers" xml:space="preserve">
+    <value>Eski kaldırıcılar çalıştırılıyor (birkaç dakika sürebilir)...</value>
+  </data>
+  <data name="Cleanup_StepServicesTasks" xml:space="preserve">
+    <value>Hizmetler ve zamanlanmış görevler temizleniyor...</value>
+  </data>
+  <data name="Cleanup_StepOmenCap" xml:space="preserve">
+    <value>⚠ DriverStore'da OmenCap algılandı - kaldırma talimatları için günlüğe bakın</value>
+  </data>
+  <data name="Cleanup_StepFirewallPreserved" xml:space="preserve">
+    <value>Güvenlik duvarı kuralları kullanıcı tercihine göre korundu</value>
+  </data>
+  <data name="Cleanup_StepCompleted" xml:space="preserve">
+    <value>✓ Temizlik başarıyla tamamlandı</value>
+  </data>
+  <data name="Cleanup_StepCancelled" xml:space="preserve">
+    <value>⚠ Temizlik iptal edildi</value>
+  </data>
+  <data name="GpuBoost_LevelMinimum" xml:space="preserve">
+    <value>Minimum</value>
+  </data>
+  <data name="GpuBoost_LevelMedium" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="GpuBoost_LevelMaximum" xml:space="preserve">
+    <value>Maksimum</value>
+  </data>
+  <data name="GpuBoost_LevelExtended" xml:space="preserve">
+    <value>Genişletilmiş</value>
+  </data>
+  <data name="GpuBoost_NotAvailable" xml:space="preserve">
+    <value>Bu modelde kullanılamaz</value>
+  </data>
+  <data name="GpuBoost_VictusNoTgp" xml:space="preserve">
+    <value>Desteklenmiyor — HP Victus BIOS özel TGP/PPAB denetimi sunmuyor</value>
+  </data>
+  <data name="GpuBoost_DetectedWmiFormat" xml:space="preserve">
+    <value>{0} (WMI ile algılandı)</value>
+  </data>
+  <data name="GpuBoost_DetectedWmiSavedFormat" xml:space="preserve">
+    <value>{0} (WMI ile algılandı; kayıtlı tercih '{1}' henüz uygulanmadı)</value>
+  </data>
+  <data name="GpuBoost_DetectedOghFormat" xml:space="preserve">
+    <value>{0} (OGH ile algılandı)</value>
+  </data>
+  <data name="GpuBoost_EcExperimentalFormat" xml:space="preserve">
+    <value>EC modu 0x{0} (deneysel) - Kullanıcı ayarı uygulanacak</value>
+  </data>
+  <data name="GpuBoost_DegradedWarning" xml:space="preserve">
+    <value>⚠️ Komut gönderildi ancak GPU gücü değişmemiş olabilir (BIOS WMI bozuk)</value>
+  </data>
+  <data name="GpuBoost_NvapiPercentFormat" xml:space="preserve">
+    <value>{0} + NVAPI %{1} sınırı</value>
+  </data>
+  <data name="GpuBoost_NvapiAvailableFormat" xml:space="preserve">
+    <value>{0} (NVAPI güç limitleri kullanılabilir)</value>
+  </data>
+  <data name="GpuBoost_Applied" xml:space="preserve">
+    <value>Uygulandı</value>
+  </data>
+  <data name="GpuBoost_AppliedWmiFormat" xml:space="preserve">
+    <value>✓ {0} ({1})</value>
+  </data>
+  <data name="GpuBoost_AppliedWmiRestoredFormat" xml:space="preserve">
+    <value>✓ {0} ({1}) - Geri yüklendi</value>
+  </data>
+  <data name="GpuBoost_DetailBaseTgp" xml:space="preserve">
+    <value>yalnızca temel TGP</value>
+  </data>
+  <data name="GpuBoost_DetailCustomTgp" xml:space="preserve">
+    <value>özel TGP</value>
+  </data>
+  <data name="GpuBoost_DetailCustomTgpDynamic" xml:space="preserve">
+    <value>özel TGP + Dynamic Boost +15W</value>
+  </data>
+  <data name="GpuBoost_DetailPpabPlus" xml:space="preserve">
+    <value>RTX 5080 için PPAB+, destekleniyorsa +25W</value>
+  </data>
+  <data name="GpuBoost_DetailOghCustomTgp" xml:space="preserve">
+    <value>özel TGP</value>
+  </data>
+  <data name="GpuBoost_DetailDynamicBoost" xml:space="preserve">
+    <value>Dynamic Boost</value>
+  </data>
+  <data name="GpuBoost_DetailPpab" xml:space="preserve">
+    <value>PPAB+</value>
+  </data>
+  <data name="GpuBoost_DetailEcBaseTgp" xml:space="preserve">
+    <value>temel TGP</value>
+  </data>
+  <data name="GpuBoost_DetailDynamicBoost15W" xml:space="preserve">
+    <value>Dynamic Boost +15W</value>
+  </data>
+  <data name="GpuBoost_DetailPpab25W" xml:space="preserve">
+    <value>PPAB+ +25W</value>
+  </data>
+  <data name="GpuBoost_AppliedOghFormat" xml:space="preserve">
+    <value>✓ {0} ({1}, OGH ile)</value>
+  </data>
+  <data name="GpuBoost_AppliedEcFormat" xml:space="preserve">
+    <value>✓ {0} ({1}, EC ile)</value>
+  </data>
+  <data name="GpuBoost_AppliedViaOgh" xml:space="preserve">
+    <value>OGH ile uygulandı</value>
+  </data>
+  <data name="GpuBoost_AppliedViaEc" xml:space="preserve">
+    <value>EC ile uygulandı</value>
+  </data>
+  <data name="GpuBoost_ApplyFailedWmiEc" xml:space="preserve">
+    <value>Başarısız - WMI/EC komutları bu modelde desteklenmiyor</value>
+  </data>
+  <data name="GpuBoost_RestoreNoChange" xml:space="preserve">
+    <value>⚠️ GPU gücü geri yükleme denendi ancak BIOS geri okuması değişiklik göstermiyor</value>
+  </data>
+  <data name="GpuBoost_RestoredOghFormat" xml:space="preserve">
+    <value>✓ {0} (OGH ile) - Geri yüklendi</value>
+  </data>
+  <data name="GpuBoost_RestoredEcFormat" xml:space="preserve">
+    <value>✓ {0} ({1}, EC ile) - Geri yüklendi</value>
+  </data>
+  <data name="GpuBoost_RestoredFormat" xml:space="preserve">
+    <value>✓ {0} - Geri yüklendi</value>
+  </data>
+  <data name="GpuBoost_DescriptionMinimum" xml:space="preserve">
+    <value>Yalnızca temel TGP - Daha düşük güç, daha sessiz çalışma, daha iyi pil ömrü</value>
+  </data>
+  <data name="GpuBoost_DescriptionMedium" xml:space="preserve">
+    <value>Özel TGP etkin - Dengeli performans ve sıcaklık</value>
+  </data>
+  <data name="GpuBoost_DescriptionMaximum" xml:space="preserve">
+    <value>Özel TGP + Dynamic Boost (PPAB) - Maksimum GPU gücü (+15W)</value>
+  </data>
+  <data name="GpuBoost_DescriptionExtended" xml:space="preserve">
+    <value>Genişletilmiş Artış (PPAB+) - Maksimum, GPU'nun nominal TGP'sine ulaşmıyorsa deneyin (RTX 50 serisi ve üzeri)</value>
+  </data>
+  <data name="GpuBoost_DescriptionSelect" xml:space="preserve">
+    <value>GPU güç düzeyini seçin</value>
+  </data>
+  <data name="GpuBoost_StatusUnavailable" xml:space="preserve">
+    <value>Bu sistemde GPU Güç Artışı kullanılamıyor</value>
+  </data>
+  <data name="GpuBoost_NvapiNote" xml:space="preserve">
+    <value> (NVAPI güç limitleri ince ayar için kullanılabilir)</value>
+  </data>
+  <data name="GpuBoost_VisualBlocked" xml:space="preserve">
+    <value>Engellendi</value>
+  </data>
+  <data name="GpuBoost_VisualDegraded" xml:space="preserve">
+    <value>Bozuk</value>
+  </data>
+  <data name="GpuBoost_VisualConfirmed" xml:space="preserve">
+    <value>Onaylandı</value>
+  </data>
+  <data name="GpuBoost_WattageCustom" xml:space="preserve">
+    <value>Özel</value>
+  </data>
 </root>

@@ -4439,7 +4439,7 @@
     <value>正在创建还原点…</value>
   </data>
   <data name="MainViewModel_LinkStatusDecoupled" xml:space="preserve">
-    <value>已与性能模式解耦，风扇独立控制</value>
+    <value>已与性能模式解耦</value>
   </data>
   <data name="MainViewModel_LinkStatusLinked" xml:space="preserve">
     <value>已联动：风扇跟随性能</value>
@@ -6780,5 +6780,362 @@
   </data>
   <data name="SettingsView_MinutesFormat" xml:space="preserve">
     <value>{0} 分钟</value>
+  </data>
+  <data name="CapabilityReason_ThisBoard" xml:space="preserve">
+    <value>此主板</value>
+  </data>
+  <data name="CapabilityReason_FanControl_Safety" xml:space="preserve">
+    <value>在逐机型验证完成前，OMEN 台式机的风扇写入被禁用；监控功能不受影响。</value>
+  </data>
+  <data name="CapabilityReason_FanControl_ModelDbFormat" xml:space="preserve">
+    <value>机型数据库记录 {0} 没有可用的软件风扇控制。</value>
+  </data>
+  <data name="CapabilityReason_Backend_SecureBoot" xml:space="preserve">
+    <value>安全启动已启用且未安装 PawnIO，EC 与 MSR 风扇通道都无法打开。</value>
+  </data>
+  <data name="CapabilityReason_Backend_OghNotRunning" xml:space="preserve">
+    <value>HP WMI BIOS 不可用，而唯一的回退方案 OMEN Gaming Hub 虽已安装但未运行。</value>
+  </data>
+  <data name="CapabilityReason_Backend_None" xml:space="preserve">
+    <value>没有可用的风扇控制后端：HP WMI BIOS 未响应，也未安装 EC 驱动。</value>
+  </data>
+  <data name="CapabilityReason_FanControl_NotPresent" xml:space="preserve">
+    <value>未在此主板上检测到可用的风扇控制后端。</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_Safety" xml:space="preserve">
+    <value>在 OMEN 台式机上，风扇曲线与风扇写入一同被禁用；监控功能不受影响。</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_ModelDb" xml:space="preserve">
+    <value>机型数据库记录该主板固件无法保存自定义风扇曲线。</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_NotReadyFormat" xml:space="preserve">
+    <value>风扇曲线需要可用的风扇写入，而本次会话不具备：{0}</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_NotPresent" xml:space="preserve">
+    <value>未检测到此主板可用的自定义风扇曲线。</value>
+  </data>
+  <data name="CapabilityReason_Independent_NotReady" xml:space="preserve">
+    <value>独立曲线需要风扇曲线编辑器，而该编辑器当前不可用。</value>
+  </data>
+  <data name="CapabilityReason_Independent_ModelDb" xml:space="preserve">
+    <value>机型数据库记录该主板的两只风扇由同一条曲线驱动。</value>
+  </data>
+  <data name="CapabilityReason_Independent_NotPresent" xml:space="preserve">
+    <value>未检测到此主板的 CPU/GPU 独立曲线。</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_ModelDb" xml:space="preserve">
+    <value>Victus 机型只有在机型数据库确认 HP 固件支持时，才接受 GPU 功率加速档位。</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_DriverMissing" xml:space="preserve">
+    <value>未找到 HP WMI BIOS 的 GPU 功率接口，加速档位无处可施。</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_NotPresent" xml:space="preserve">
+    <value>未检测到此主板的 GPU 功率加速。</value>
+  </data>
+  <data name="CapabilityReason_Mux_ModelDb" xml:space="preserve">
+    <value>机型数据库未列出该主板的 MUX 开关；显卡为直连。</value>
+  </data>
+  <data name="CapabilityReason_Mux_NotPresent" xml:space="preserve">
+    <value>未检测到此主板的 MUX 开关。</value>
+  </data>
+  <data name="CapabilityReason_Lighting_ModelDb" xml:space="preserve">
+    <value>机型数据库记录该主板的键盘不支持彩色寻址灯效。</value>
+  </data>
+  <data name="CapabilityReason_Lighting_NotPresent" xml:space="preserve">
+    <value>固件报告键盘无彩色寻址灯效；仅有普通背光（如有）。</value>
+  </data>
+  <data name="CapabilityReason_PerKey_ModelDb" xml:space="preserve">
+    <value>该主板键盘为分区寻址而非逐键寻址，逐键灯效不适用。</value>
+  </data>
+  <data name="CapabilityReason_PerKey_NotPresent" xml:space="preserve">
+    <value>此主板未报告支持逐键寻址的键盘。</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_ModelDb" xml:space="preserve">
+    <value>机型数据库记录该主板固件不接受 CPU 降压。</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_DriverMissing" xml:space="preserve">
+    <value>安全启动已启用且未安装 PawnIO，降压所需的 MSR 访问不可用。</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_NotPresent" xml:space="preserve">
+    <value>未在此主板上找到 CPU 降压通道（MSR、PawnIO 或曲线优化器）。</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_Timeout" xml:space="preserve">
+    <value>降压探测超时</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_UnknownBlock" xml:space="preserve">
+    <value>未知阻塞原因</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_ModelDbDisabledFormat" xml:space="preserve">
+    <value>按机型数据库禁用了降压（机型 {0} 不支持）</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_NotReadyFormat" xml:space="preserve">
+    <value>降压当前不可用：{0}</value>
+  </data>
+  <data name="CapabilityReason_PerfModes_DriverMissing" xml:space="preserve">
+    <value>未找到 HP 的性能模式接口，模式选择器将回退到 Windows 电源计划。</value>
+  </data>
+  <data name="GpuSwitch_Detecting" xml:space="preserve">
+    <value>检测中…</value>
+  </data>
+  <data name="GpuSwitch_Available" xml:space="preserve">
+    <value>可通过 BIOS WMI 切换 GPU。</value>
+  </data>
+  <data name="GpuSwitch_UnavailableFormat" xml:space="preserve">
+    <value>OmenCore 无法切换 GPU 模式：{0}</value>
+  </data>
+  <data name="GpuSwitch_ModeHybrid" xml:space="preserve">
+    <value>混合（MSHybrid/Optimus）</value>
+  </data>
+  <data name="GpuSwitch_ModeDiscrete" xml:space="preserve">
+    <value>仅独立显卡</value>
+  </data>
+  <data name="GpuSwitch_ModeIntegrated" xml:space="preserve">
+    <value>仅集成显卡</value>
+  </data>
+  <data name="GpuSwitch_ModeUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="GpuSwitch_ModeDetectionFailed" xml:space="preserve">
+    <value>检测失败</value>
+  </data>
+  <data name="GpuSwitch_RestartTitle" xml:space="preserve">
+    <value>需要重启 - OmenCore</value>
+  </data>
+  <data name="GpuSwitch_RestartBodyFormat" xml:space="preserve">
+    <value>GPU 模式已设为 {0}。&#10;&#10;需要重启系统才能使更改生效。&#10;&#10;是否立即重启？</value>
+  </data>
+  <data name="GpuSwitch_FailedTitle" xml:space="preserve">
+    <value>GPU 模式切换失败</value>
+  </data>
+  <data name="GpuSwitch_FailedBody" xml:space="preserve">
+    <value>切换 GPU 模式失败，详情请查看日志。</value>
+  </data>
+  <data name="GpuSwitch_ReasonNoSysInfo" xml:space="preserve">
+    <value>无法检测系统信息</value>
+  </data>
+  <data name="GpuSwitch_ReasonNotHp" xml:space="preserve">
+    <value>GPU 模式切换仅支持 HP 系统</value>
+  </data>
+  <data name="GpuSwitch_ReasonNotOmenFormat" xml:space="preserve">
+    <value>GPU 模式切换仅支持 HP OMEN 机型（检测到：{0}）</value>
+  </data>
+  <data name="GpuSwitch_ReasonBiosNoWmi" xml:space="preserve">
+    <value>HP BIOS 不支持通过 WMI 切换 GPU 模式</value>
+  </data>
+  <data name="GpuSwitch_ReasonErrorFormat" xml:space="preserve">
+    <value>检查 GPU 模式支持情况时出错：{0}</value>
+  </data>
+  <data name="Telemetry_NoServices" xml:space="preserve">
+    <value>未在此系统上找到 HP 遥测服务。</value>
+  </data>
+  <data name="Telemetry_SummaryFormat" xml:space="preserve">
+    <value>找到 {0} 个 HP 服务，已禁用 {1} 个</value>
+  </data>
+  <data name="Telemetry_RestoreAvailable" xml:space="preserve">
+    <value>（可恢复）。</value>
+  </data>
+  <data name="Telemetry_Period" xml:space="preserve">
+    <value>。</value>
+  </data>
+  <data name="Telemetry_ReadFailed" xml:space="preserve">
+    <value>无法读取 HP 服务状态。</value>
+  </data>
+  <data name="Telemetry_ResultFailedFormat" xml:space="preserve">
+    <value>{0}：已更改 {1} 个服务，{2} 个失败（请以管理员身份运行）。</value>
+  </data>
+  <data name="Telemetry_NothingToChange" xml:space="preserve">
+    <value>没有需要更改的服务。</value>
+  </data>
+  <data name="Telemetry_ResultDisabledFormat" xml:space="preserve">
+    <value>已禁用 {0} 个服务。</value>
+  </data>
+  <data name="Telemetry_ResultRestoredFormat" xml:space="preserve">
+    <value>已恢复 {0} 个服务。</value>
+  </data>
+  <data name="Telemetry_VerbDisabled" xml:space="preserve">
+    <value>已禁用</value>
+  </data>
+  <data name="Telemetry_VerbRestored" xml:space="preserve">
+    <value>已恢复</value>
+  </data>
+  <data name="Telemetry_FailedPrefix" xml:space="preserve">
+    <value>失败：</value>
+  </data>
+  <data name="Cleanup_StatusNotChecked" xml:space="preserve">
+    <value>状态：未检查</value>
+  </data>
+  <data name="Cleanup_Complete" xml:space="preserve">
+    <value>✓ 清理完成——建议重启</value>
+  </data>
+  <data name="Cleanup_Failed" xml:space="preserve">
+    <value>⚠ 清理失败</value>
+  </data>
+  <data name="Cleanup_Running" xml:space="preserve">
+    <value>正在清理 HP Omen…</value>
+  </data>
+  <data name="Cleanup_CreatingRestorePoint" xml:space="preserve">
+    <value>正在创建系统还原点…</value>
+  </data>
+  <data name="Cleanup_StepKilledProcesses" xml:space="preserve">
+    <value>已结束正在运行的 OMEN 进程</value>
+  </data>
+  <data name="Cleanup_StepStorePackages" xml:space="preserve">
+    <value>正在移除商店应用包（可能需要一分钟）…</value>
+  </data>
+  <data name="Cleanup_StepLegacyUninstallers" xml:space="preserve">
+    <value>正在运行旧版卸载程序（可能需要几分钟）…</value>
+  </data>
+  <data name="Cleanup_StepServicesTasks" xml:space="preserve">
+    <value>正在清理服务与计划任务…</value>
+  </data>
+  <data name="Cleanup_StepOmenCap" xml:space="preserve">
+    <value>⚠ 在 DriverStore 中检测到 OmenCap——移除方法请见日志</value>
+  </data>
+  <data name="Cleanup_StepFirewallPreserved" xml:space="preserve">
+    <value>已按用户偏好保留防火墙规则</value>
+  </data>
+  <data name="Cleanup_StepCompleted" xml:space="preserve">
+    <value>✓ 清理已成功完成</value>
+  </data>
+  <data name="Cleanup_StepCancelled" xml:space="preserve">
+    <value>⚠ 清理已取消</value>
+  </data>
+  <data name="GpuBoost_LevelMinimum" xml:space="preserve">
+    <value>最低</value>
+  </data>
+  <data name="GpuBoost_LevelMedium" xml:space="preserve">
+    <value>中等</value>
+  </data>
+  <data name="GpuBoost_LevelMaximum" xml:space="preserve">
+    <value>最大</value>
+  </data>
+  <data name="GpuBoost_LevelExtended" xml:space="preserve">
+    <value>扩展</value>
+  </data>
+  <data name="GpuBoost_NotAvailable" xml:space="preserve">
+    <value>此机型不可用</value>
+  </data>
+  <data name="GpuBoost_VictusNoTgp" xml:space="preserve">
+    <value>不支持——HP Victus BIOS 不开放自定义 TGP/PPAB 控制</value>
+  </data>
+  <data name="GpuBoost_DetectedWmiFormat" xml:space="preserve">
+    <value>{0}（通过 WMI 检测）</value>
+  </data>
+  <data name="GpuBoost_DetectedWmiSavedFormat" xml:space="preserve">
+    <value>{0}（通过 WMI 检测；已保存的偏好“{1}”尚未应用）</value>
+  </data>
+  <data name="GpuBoost_DetectedOghFormat" xml:space="preserve">
+    <value>{0}（通过 OGH 检测）</value>
+  </data>
+  <data name="GpuBoost_EcExperimentalFormat" xml:space="preserve">
+    <value>EC 模式 0x{0}（实验性）——将应用用户设置</value>
+  </data>
+  <data name="GpuBoost_DegradedWarning" xml:space="preserve">
+    <value>⚠️ 命令已发送，但 GPU 功率可能未变（BIOS WMI 降级）</value>
+  </data>
+  <data name="GpuBoost_NvapiPercentFormat" xml:space="preserve">
+    <value>{0} + NVAPI {1}% 功耗上限</value>
+  </data>
+  <data name="GpuBoost_NvapiAvailableFormat" xml:space="preserve">
+    <value>{0}（NVAPI 功耗上限可用）</value>
+  </data>
+  <data name="GpuBoost_Applied" xml:space="preserve">
+    <value>已应用</value>
+  </data>
+  <data name="GpuBoost_AppliedWmiFormat" xml:space="preserve">
+    <value>✓ {0}（{1}）</value>
+  </data>
+  <data name="GpuBoost_AppliedWmiRestoredFormat" xml:space="preserve">
+    <value>✓ {0}（{1}）——已恢复</value>
+  </data>
+  <data name="GpuBoost_DetailBaseTgp" xml:space="preserve">
+    <value>仅基础 TGP</value>
+  </data>
+  <data name="GpuBoost_DetailCustomTgp" xml:space="preserve">
+    <value>自定义 TGP</value>
+  </data>
+  <data name="GpuBoost_DetailCustomTgpDynamic" xml:space="preserve">
+    <value>自定义 TGP + Dynamic Boost +15W</value>
+  </data>
+  <data name="GpuBoost_DetailPpabPlus" xml:space="preserve">
+    <value>PPAB+（RTX 5080 起，支持时 +25W）</value>
+  </data>
+  <data name="GpuBoost_DetailOghCustomTgp" xml:space="preserve">
+    <value>自定义 TGP</value>
+  </data>
+  <data name="GpuBoost_DetailDynamicBoost" xml:space="preserve">
+    <value>Dynamic Boost</value>
+  </data>
+  <data name="GpuBoost_DetailPpab" xml:space="preserve">
+    <value>PPAB+</value>
+  </data>
+  <data name="GpuBoost_DetailEcBaseTgp" xml:space="preserve">
+    <value>基础 TGP</value>
+  </data>
+  <data name="GpuBoost_DetailDynamicBoost15W" xml:space="preserve">
+    <value>Dynamic Boost +15W</value>
+  </data>
+  <data name="GpuBoost_DetailPpab25W" xml:space="preserve">
+    <value>PPAB+ +25W</value>
+  </data>
+  <data name="GpuBoost_AppliedOghFormat" xml:space="preserve">
+    <value>✓ {0}（{1}，通过 OGH）</value>
+  </data>
+  <data name="GpuBoost_AppliedEcFormat" xml:space="preserve">
+    <value>✓ {0}（{1}，通过 EC）</value>
+  </data>
+  <data name="GpuBoost_AppliedViaOgh" xml:space="preserve">
+    <value>已通过 OGH 应用</value>
+  </data>
+  <data name="GpuBoost_AppliedViaEc" xml:space="preserve">
+    <value>已通过 EC 应用</value>
+  </data>
+  <data name="GpuBoost_ApplyFailedWmiEc" xml:space="preserve">
+    <value>失败——此机型不支持 WMI/EC 命令</value>
+  </data>
+  <data name="GpuBoost_RestoreNoChange" xml:space="preserve">
+    <value>⚠️ 已尝试恢复 GPU 功率，但 BIOS 回读显示无变化</value>
+  </data>
+  <data name="GpuBoost_RestoredOghFormat" xml:space="preserve">
+    <value>✓ {0}（通过 OGH）——已恢复</value>
+  </data>
+  <data name="GpuBoost_RestoredEcFormat" xml:space="preserve">
+    <value>✓ {0}（{1}，通过 EC）——已恢复</value>
+  </data>
+  <data name="GpuBoost_RestoredFormat" xml:space="preserve">
+    <value>✓ {0}——已恢复</value>
+  </data>
+  <data name="GpuBoost_DescriptionMinimum" xml:space="preserve">
+    <value>仅基础 TGP——功耗更低、更安静、续航更长</value>
+  </data>
+  <data name="GpuBoost_DescriptionMedium" xml:space="preserve">
+    <value>启用自定义 TGP——性能与散热均衡</value>
+  </data>
+  <data name="GpuBoost_DescriptionMaximum" xml:space="preserve">
+    <value>自定义 TGP + Dynamic Boost（PPAB）——GPU 功耗最大化（+15W）</value>
+  </data>
+  <data name="GpuBoost_DescriptionExtended" xml:space="preserve">
+    <value>扩展加速（PPAB+）——若“最大”达不到显卡标称 TGP 可尝试（RTX 50 系列起）</value>
+  </data>
+  <data name="GpuBoost_DescriptionSelect" xml:space="preserve">
+    <value>选择 GPU 功率档位</value>
+  </data>
+  <data name="GpuBoost_StatusUnavailable" xml:space="preserve">
+    <value>此系统不支持 GPU 功率加速</value>
+  </data>
+  <data name="GpuBoost_NvapiNote" xml:space="preserve">
+    <value>（NVAPI 功耗上限可用于精细调节）</value>
+  </data>
+  <data name="GpuBoost_VisualBlocked" xml:space="preserve">
+    <value>已阻止</value>
+  </data>
+  <data name="GpuBoost_VisualDegraded" xml:space="preserve">
+    <value>已降级</value>
+  </data>
+  <data name="GpuBoost_VisualConfirmed" xml:space="preserve">
+    <value>已确认</value>
+  </data>
+  <data name="GpuBoost_WattageCustom" xml:space="preserve">
+    <value>自定义</value>
   </data>
 </root>

@@ -904,7 +904,17 @@ namespace OmenCore.ViewModels
             _capabilities?.CapabilityReasons ?? Array.Empty<CapabilityReason>();
 
         private string ReasonText(CapabilityFeature feature) =>
-            CapabilityReasonResolver.ReasonText(_capabilities, feature);
+            CapabilityReasonText.Localize(_capabilities, feature);
+
+        /// <summary>Localized name of a canonical boost level ("Minimum"/"Medium"/...).</summary>
+        private static string BoostLevelName(string? level) => level switch
+        {
+            "Minimum" => Strings.GpuBoost_LevelMinimum,
+            "Medium" => Strings.GpuBoost_LevelMedium,
+            "Maximum" => Strings.GpuBoost_LevelMaximum,
+            "Extended" => Strings.GpuBoost_LevelExtended,
+            _ => level ?? string.Empty
+        };
 
         public string FanControlReason => ReasonText(CapabilityFeature.FanControl);
         public bool HasFanControlReason => !string.IsNullOrEmpty(FanControlReason);
@@ -927,9 +937,7 @@ namespace OmenCore.ViewModels
         public string PerformanceModesReason => ReasonText(CapabilityFeature.PerformanceModes);
 
         /// <summary>All unavailable capabilities on one line, for the diagnostics page and reports.</summary>
-        public string CapabilityReasonSummary => _capabilities == null
-            ? string.Empty
-            : string.Join("; ", CapabilityReasons.Where(r => !r.Available).Select(r => $"{r.Feature}: {r.Message}"));
+        public string CapabilityReasonSummary => CapabilityReasonText.Summary(_capabilities);
 
         private void RaiseCapabilityReasonProperties()
         {
@@ -1012,18 +1020,18 @@ namespace OmenCore.ViewModels
 
         public string GpuPowerBoostVisualLabel => GpuPowerBoostVisualState switch
         {
-            "blocked" => "Blocked",
-            "degraded" => "Degraded",
-            _ => "Confirmed"
+            "blocked" => Strings.GpuBoost_VisualBlocked,
+            "degraded" => Strings.GpuBoost_VisualDegraded,
+            _ => Strings.GpuBoost_VisualConfirmed
         };
         
         public string GpuPowerBoostDescription => GpuPowerBoostLevel switch
         {
-            "Minimum" => "Base TGP only - Lower power, quieter operation, better battery life",
-            "Medium" => "Custom TGP enabled - Balanced performance and thermals",
-            "Maximum" => "Custom TGP + Dynamic Boost (PPAB) - Maximum GPU wattage (+15W boost)",
-            "Extended" => "Extended Boost (PPAB+) - Try if Maximum doesn't reach your GPU's rated TGP (RTX 50-series and up)",
-            _ => "Select GPU power level"
+            "Minimum" => Strings.GpuBoost_DescriptionMinimum,
+            "Medium" => Strings.GpuBoost_DescriptionMedium,
+            "Maximum" => Strings.GpuBoost_DescriptionMaximum,
+            "Extended" => Strings.GpuBoost_DescriptionExtended,
+            _ => Strings.GpuBoost_DescriptionSelect
         };
 
         // "EXTRA POWER" badge on the GPU Power Boost card - was previously a hardcoded "+15W",
@@ -1036,7 +1044,7 @@ namespace OmenCore.ViewModels
         {
             "Maximum" => "+15W",
             "Extended" => "+25W",
-            "Medium" => "Custom",
+            "Medium" => Strings.GpuBoost_WattageCustom,
             _ => "+0W"
         };
 
@@ -1045,10 +1053,9 @@ namespace OmenCore.ViewModels
             get
             {
                 if (!GpuPowerBoostAvailable)
-                    return "GPU Power Boost not available on this system";
+                    return Strings.GpuBoost_StatusUnavailable;
 
-                var nvapiNote = GpuPowerLimitAvailable ?
-                    " (NVAPI power limits available for fine-tuning)" : "";
+                var nvapiNote = GpuPowerLimitAvailable ? Strings.GpuBoost_NvapiNote : "";
 
                 return $"{GpuPowerBoostDescription}{nvapiNote}";
             }
@@ -3750,7 +3757,7 @@ namespace OmenCore.ViewModels
                 if (victusModelConfig?.SupportsGpuPowerBoost != true)
                 {
                     GpuPowerBoostAvailable = false;
-                    GpuPowerBoostStatus = "Not supported — HP Victus BIOS does not expose custom TGP/PPAB control";
+                    GpuPowerBoostStatus = Strings.GpuBoost_VictusNoTgp;
                     _logging.Info("GPU Power Boost: skipped — HP Victus does not support WMI TGP/PPAB control");
                     return;
                 }
@@ -3802,8 +3809,8 @@ namespace OmenCore.ViewModels
                     // make the status text say so explicitly instead of just naming the detected
                     // level, so this doesn't read as "Maximum is active" when it isn't yet.
                     GpuPowerBoostStatus = (hasSavedPreference && !string.Equals(detectedLevel, savedLevel, StringComparison.OrdinalIgnoreCase))
-                        ? $"{detectedLevel} (detected via WMI; saved preference '{savedLevel}' not yet applied)"
-                        : $"{detectedLevel} (detected via WMI)";
+                        ? string.Format(Strings.GpuBoost_DetectedWmiSavedFormat, BoostLevelName(detectedLevel), BoostLevelName(savedLevel ?? ""))
+                        : string.Format(Strings.GpuBoost_DetectedWmiFormat, BoostLevelName(detectedLevel));
                     _logging.Info($"✓ GPU Power Boost available via WMI BIOS. Detected: {detectedLevel}, User pref: {savedLevel ?? "none"}");
                     return;
                 }
@@ -3833,7 +3840,7 @@ namespace OmenCore.ViewModels
                     {
                         GpuPowerBoostLevel = mappedLevel;
                     }
-                    GpuPowerBoostStatus = $"{mappedLevel} (detected via OGH)";
+                    GpuPowerBoostStatus = string.Format(Strings.GpuBoost_DetectedOghFormat, BoostLevelName(mappedLevel));
                     _logging.Info($"✓ GPU Power Boost available via OGH. Detected: {mappedLevel}, User pref: {savedLevel ?? "none"}");
                     return;
                 }
@@ -3875,7 +3882,7 @@ namespace OmenCore.ViewModels
                                 _ => "Medium"
                             };
                         }
-                        GpuPowerBoostStatus = $"EC mode 0x{perfMode:X2} (experimental) - User setting will be applied";
+                        GpuPowerBoostStatus = string.Format(Strings.GpuBoost_EcExperimentalFormat, perfMode.ToString("X2"));
                         _logging.Info($"✓ GPU Power Boost enabled via EC. EC=0x{perfMode:X2}, User pref: {savedLevel ?? "none"}");
                         return;
                     }
@@ -3890,7 +3897,7 @@ namespace OmenCore.ViewModels
             if (!GpuPowerBoostAvailable)
             {
                 GpuPowerBoostAvailable = false;
-                GpuPowerBoostStatus = "Not available on this model";
+                GpuPowerBoostStatus = Strings.GpuBoost_NotAvailable;
                 _logging.Info("GPU Power Boost: No functional backend found");
             }
             else
@@ -3979,18 +3986,18 @@ namespace OmenCore.ViewModels
 
                     var baseStatus = GpuPowerBoostLevel switch
                     {
-                        "Minimum" => "✓ Minimum (Base TGP only)",
-                        "Medium" => "✓ Medium (Custom TGP enabled)",
-                        "Maximum" => "✓ Maximum (Custom TGP + Dynamic Boost +15W)",
-                        "Extended" => "✓ Extended (PPAB+ for RTX 5080, +25W if supported)",
-                        _ => "Applied"
+                        "Minimum" => string.Format(Strings.GpuBoost_AppliedWmiFormat, Strings.GpuBoost_LevelMinimum, Strings.GpuBoost_DetailBaseTgp),
+                        "Medium" => string.Format(Strings.GpuBoost_AppliedWmiFormat, Strings.GpuBoost_LevelMedium, Strings.GpuBoost_DetailCustomTgp),
+                        "Maximum" => string.Format(Strings.GpuBoost_AppliedWmiFormat, Strings.GpuBoost_LevelMaximum, Strings.GpuBoost_DetailCustomTgpDynamic),
+                        "Extended" => string.Format(Strings.GpuBoost_AppliedWmiFormat, Strings.GpuBoost_LevelExtended, Strings.GpuBoost_DetailPpabPlus),
+                        _ => Strings.GpuBoost_Applied
                     };
 
                     if (!readbackMatch)
                     {
                         // BIOS accepted the command but hardware state didn't change — surface this clearly.
                         _logging.Warn($"⚠️ GPU power command accepted by BIOS but readback shows no change. This BIOS may not support WMI GPU power control (BIOS WMI reliability may be degraded).");
-                        GpuPowerBoostStatus = "⚠️ Command sent but GPU power may not have changed (BIOS WMI degraded)";
+                        GpuPowerBoostStatus = Strings.GpuBoost_DegradedWarning;
                         // Still save so it re-attempts on next launch
                         SaveGpuPowerBoostToConfig();
                         return;
@@ -4005,11 +4012,11 @@ namespace OmenCore.ViewModels
                     // available" - misleading, since none were.
                     if (GpuPowerLimitAvailable && GpuPowerLimitPercent != 100)
                     {
-                        GpuPowerBoostStatus = $"{baseStatus} + NVAPI {GpuPowerLimitPercent}% limit";
+                        GpuPowerBoostStatus = string.Format(Strings.GpuBoost_NvapiPercentFormat, baseStatus, GpuPowerLimitPercent);
                     }
                     else if (GpuPowerLimitAvailable)
                     {
-                        GpuPowerBoostStatus = $"{baseStatus} (NVAPI power limits available)";
+                        GpuPowerBoostStatus = string.Format(Strings.GpuBoost_NvapiAvailableFormat, baseStatus);
                     }
                     else
                     {
@@ -4040,11 +4047,11 @@ namespace OmenCore.ViewModels
                 {
                     GpuPowerBoostStatus = GpuPowerBoostLevel switch
                     {
-                        "Minimum" => "✓ Minimum (Base TGP only, via OGH)",
-                        "Medium" => "✓ Medium (Custom TGP, via OGH)",
-                        "Maximum" => "✓ Maximum (Dynamic Boost, via OGH)",
-                        "Extended" => "✓ Extended (PPAB+, via OGH)",
-                        _ => "Applied via OGH"
+                        "Minimum" => string.Format(Strings.GpuBoost_AppliedOghFormat, Strings.GpuBoost_LevelMinimum, Strings.GpuBoost_DetailBaseTgp),
+                        "Medium" => string.Format(Strings.GpuBoost_AppliedOghFormat, Strings.GpuBoost_LevelMedium, Strings.GpuBoost_DetailOghCustomTgp),
+                        "Maximum" => string.Format(Strings.GpuBoost_AppliedOghFormat, Strings.GpuBoost_LevelMaximum, Strings.GpuBoost_DetailDynamicBoost),
+                        "Extended" => string.Format(Strings.GpuBoost_AppliedOghFormat, Strings.GpuBoost_LevelExtended, Strings.GpuBoost_DetailPpab),
+                        _ => Strings.GpuBoost_AppliedViaOgh
                     };
                     _logging.Info($"✓ GPU Power Boost set to: {GpuPowerBoostLevel} via OGH");
                     
@@ -4061,10 +4068,10 @@ namespace OmenCore.ViewModels
             {
                 GpuPowerBoostStatus = GpuPowerBoostLevel switch
                 {
-                    "Minimum" => "✓ Minimum (Base TGP, via EC)",
-                    "Medium" => "✓ Medium (Custom TGP, via EC)",
-                    "Maximum" => "✓ Maximum (Dynamic Boost +15W, via EC)",
-                    _ => "Applied via EC"
+                    "Minimum" => string.Format(Strings.GpuBoost_AppliedEcFormat, Strings.GpuBoost_LevelMinimum, Strings.GpuBoost_DetailEcBaseTgp),
+                    "Medium" => string.Format(Strings.GpuBoost_AppliedEcFormat, Strings.GpuBoost_LevelMedium, Strings.GpuBoost_DetailCustomTgp),
+                    "Maximum" => string.Format(Strings.GpuBoost_AppliedEcFormat, Strings.GpuBoost_LevelMaximum, Strings.GpuBoost_DetailDynamicBoost15W),
+                    _ => Strings.GpuBoost_AppliedViaEc
                 };
                 _logging.Info($"✓ GPU Power Boost set to: {GpuPowerBoostLevel} via EC (experimental)");
 
@@ -4078,7 +4085,7 @@ namespace OmenCore.ViewModels
             // instead of the generic message, which read as if EC support were simply missing.
             GpuPowerBoostStatus = string.Equals(GpuPowerBoostLevel, "Extended", StringComparison.OrdinalIgnoreCase)
                 ? Strings.SystemControlViewModel_TccNotAvailableWmi
-                : "Failed - WMI/EC commands not supported on this model";
+                : Strings.GpuBoost_ApplyFailedWmiEc;
             _logging.Warn($"Failed to set GPU Power Boost to: {GpuPowerBoostLevel} - WMI and EC methods unavailable");
         }
 
@@ -4224,13 +4231,13 @@ namespace OmenCore.ViewModels
                         GpuPowerBoostStatus = readbackOk
                             ? savedLevel switch
                             {
-                                "Minimum" => "✓ Minimum (Base TGP only) - Restored",
-                                "Medium" => "✓ Medium (Custom TGP) - Restored",
-                                "Maximum" => "✓ Maximum (Dynamic Boost) - Restored",
-                                "Extended" => "✓ Extended (PPAB+) - Restored",
-                                _ => $"✓ {savedLevel} - Restored"
+                                "Minimum" => string.Format(Strings.GpuBoost_AppliedWmiRestoredFormat, Strings.GpuBoost_LevelMinimum, Strings.GpuBoost_DetailBaseTgp),
+                                "Medium" => string.Format(Strings.GpuBoost_AppliedWmiRestoredFormat, Strings.GpuBoost_LevelMedium, Strings.GpuBoost_DetailCustomTgp),
+                                "Maximum" => string.Format(Strings.GpuBoost_AppliedWmiRestoredFormat, Strings.GpuBoost_LevelMaximum, Strings.GpuBoost_DetailDynamicBoost),
+                                "Extended" => string.Format(Strings.GpuBoost_AppliedWmiRestoredFormat, Strings.GpuBoost_LevelExtended, Strings.GpuBoost_DetailPpab),
+                                _ => string.Format(Strings.GpuBoost_RestoredFormat, BoostLevelName(savedLevel))
                             }
-                            : "⚠️ GPU power restore attempted but BIOS readback shows no change";
+                            : Strings.GpuBoost_RestoreNoChange;
                     });
                     return;
                 }
@@ -4256,7 +4263,7 @@ namespace OmenCore.ViewModels
                     {
                         GpuPowerBoostAvailable = true;
                         GpuPowerBoostLevel = savedLevel;
-                        GpuPowerBoostStatus = $"✓ {savedLevel} (via OGH) - Restored";
+                        GpuPowerBoostStatus = string.Format(Strings.GpuBoost_RestoredOghFormat, BoostLevelName(savedLevel));
                     });
                     return;
                 }
@@ -4302,11 +4309,11 @@ namespace OmenCore.ViewModels
                                 GpuPowerBoostLevel = savedLevel;
                                 GpuPowerBoostStatus = savedLevel switch
                                 {
-                                    "Minimum" => "✓ Minimum (Base TGP, via EC) - Restored",
-                                    "Medium" => "✓ Medium (Custom TGP, via EC) - Restored",
-                                    "Maximum" => "✓ Maximum (Dynamic Boost +15W, via EC) - Restored",
-                                    "Extended" => "✓ Extended (PPAB+ +25W, via EC) - Restored",
-                                    _ => $"✓ {savedLevel} (via EC) - Restored"
+                                    "Minimum" => string.Format(Strings.GpuBoost_RestoredEcFormat, Strings.GpuBoost_LevelMinimum, Strings.GpuBoost_DetailEcBaseTgp),
+                                    "Medium" => string.Format(Strings.GpuBoost_RestoredEcFormat, Strings.GpuBoost_LevelMedium, Strings.GpuBoost_DetailCustomTgp),
+                                    "Maximum" => string.Format(Strings.GpuBoost_RestoredEcFormat, Strings.GpuBoost_LevelMaximum, Strings.GpuBoost_DetailDynamicBoost15W),
+                                    "Extended" => string.Format(Strings.GpuBoost_RestoredEcFormat, Strings.GpuBoost_LevelExtended, Strings.GpuBoost_DetailPpab25W),
+                                    _ => string.Format(Strings.GpuBoost_RestoredFormat, BoostLevelName(savedLevel))
                                 };
                             });
                             return;

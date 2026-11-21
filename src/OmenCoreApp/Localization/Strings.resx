@@ -6785,4 +6785,361 @@
   <data name="SettingsView_MinutesFormat" xml:space="preserve">
     <value>{0} min</value>
   </data>
+  <data name="CapabilityReason_ThisBoard" xml:space="preserve">
+    <value>this board</value>
+  </data>
+  <data name="CapabilityReason_FanControl_Safety" xml:space="preserve">
+    <value>Fan writes are disabled on OMEN desktops until per-model validation; monitoring still works.</value>
+  </data>
+  <data name="CapabilityReason_FanControl_ModelDbFormat" xml:space="preserve">
+    <value>The model database records that {0} has no working software fan control.</value>
+  </data>
+  <data name="CapabilityReason_Backend_SecureBoot" xml:space="preserve">
+    <value>Secure Boot is enabled and PawnIO is not installed, so neither the EC nor MSR fan path can open.</value>
+  </data>
+  <data name="CapabilityReason_Backend_OghNotRunning" xml:space="preserve">
+    <value>HP WMI BIOS is unavailable and OMEN Gaming Hub (the only fallback here) is installed but not running.</value>
+  </data>
+  <data name="CapabilityReason_Backend_None" xml:space="preserve">
+    <value>No fan-control backend is available: HP WMI BIOS did not answer and no EC driver is installed.</value>
+  </data>
+  <data name="CapabilityReason_FanControl_NotPresent" xml:space="preserve">
+    <value>No working fan-control backend was detected for this board.</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_Safety" xml:space="preserve">
+    <value>Fan curves are blocked with fan writes on OMEN desktops; monitoring still works.</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_ModelDb" xml:space="preserve">
+    <value>The model database records that this board's firmware does not hold a custom fan curve.</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_NotReadyFormat" xml:space="preserve">
+    <value>A curve needs working fan writes, and this session has none: {0}</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_NotPresent" xml:space="preserve">
+    <value>Custom fan curves were not detected as usable on this board.</value>
+  </data>
+  <data name="CapabilityReason_Independent_NotReady" xml:space="preserve">
+    <value>Independent curves need the fan curve editor, which is unavailable here.</value>
+  </data>
+  <data name="CapabilityReason_Independent_ModelDb" xml:space="preserve">
+    <value>The model database records that this board drives both fans from one curve.</value>
+  </data>
+  <data name="CapabilityReason_Independent_NotPresent" xml:space="preserve">
+    <value>Independent CPU/GPU curves were not detected on this board.</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_ModelDb" xml:space="preserve">
+    <value>Victus boards accept GPU Power Boost levels only where the model database has confirmed HP's firmware honours them.</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_DriverMissing" xml:space="preserve">
+    <value>No HP WMI BIOS GPU power interface was found, so boost levels have nowhere to go.</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_NotPresent" xml:space="preserve">
+    <value>GPU Power Boost was not detected on this board.</value>
+  </data>
+  <data name="CapabilityReason_Mux_ModelDb" xml:space="preserve">
+    <value>The model database lists no MUX switch for this board; graphics are wired directly.</value>
+  </data>
+  <data name="CapabilityReason_Mux_NotPresent" xml:space="preserve">
+    <value>No MUX switch was detected on this board.</value>
+  </data>
+  <data name="CapabilityReason_Lighting_ModelDb" xml:space="preserve">
+    <value>The model database records no colour-addressable keyboard lighting on this board.</value>
+  </data>
+  <data name="CapabilityReason_Lighting_NotPresent" xml:space="preserve">
+    <value>Firmware reports no colour-addressable keyboard lighting; only a plain backlight, if any, is available.</value>
+  </data>
+  <data name="CapabilityReason_PerKey_ModelDb" xml:space="preserve">
+    <value>This board's keyboard is zone-addressable, not per-key; per-key effects do not apply.</value>
+  </data>
+  <data name="CapabilityReason_PerKey_NotPresent" xml:space="preserve">
+    <value>No per-key addressable keyboard was reported on this board.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_ModelDb" xml:space="preserve">
+    <value>The model database records that this board's firmware does not accept a CPU undervolt.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_DriverMissing" xml:space="preserve">
+    <value>Secure Boot is enabled and PawnIO is not installed, so MSR access for undervolting is unavailable.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_NotPresent" xml:space="preserve">
+    <value>No CPU undervolt path (MSR, PawnIO or curve optimiser) was found on this board.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_Timeout" xml:space="preserve">
+    <value>Undervolt probe timed out</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_UnknownBlock" xml:space="preserve">
+    <value>Unknown block reason</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_ModelDbDisabledFormat" xml:space="preserve">
+    <value>Undervolt disabled per model database (not supported on {0})</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_NotReadyFormat" xml:space="preserve">
+    <value>Undervolting is currently unavailable: {0}</value>
+  </data>
+  <data name="CapabilityReason_PerfModes_DriverMissing" xml:space="preserve">
+    <value>HP's performance-mode interface was not found, so the mode selector falls back to Windows power plans.</value>
+  </data>
+  <data name="GpuSwitch_Detecting" xml:space="preserve">
+    <value>Detecting...</value>
+  </data>
+  <data name="GpuSwitch_Available" xml:space="preserve">
+    <value>BIOS WMI GPU switching is available.</value>
+  </data>
+  <data name="GpuSwitch_UnavailableFormat" xml:space="preserve">
+    <value>GPU mode switching is unavailable through OmenCore: {0}</value>
+  </data>
+  <data name="GpuSwitch_ModeHybrid" xml:space="preserve">
+    <value>Hybrid (MSHybrid/Optimus)</value>
+  </data>
+  <data name="GpuSwitch_ModeDiscrete" xml:space="preserve">
+    <value>Discrete GPU Only</value>
+  </data>
+  <data name="GpuSwitch_ModeIntegrated" xml:space="preserve">
+    <value>Integrated GPU Only</value>
+  </data>
+  <data name="GpuSwitch_ModeUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="GpuSwitch_ModeDetectionFailed" xml:space="preserve">
+    <value>Detection Failed</value>
+  </data>
+  <data name="GpuSwitch_RestartTitle" xml:space="preserve">
+    <value>Restart Required - OmenCore</value>
+  </data>
+  <data name="GpuSwitch_RestartBodyFormat" xml:space="preserve">
+    <value>GPU mode has been set to {0}.&#10;&#10;A system restart is required for changes to take effect.&#10;&#10;Would you like to restart now?</value>
+  </data>
+  <data name="GpuSwitch_FailedTitle" xml:space="preserve">
+    <value>GPU Mode Switch Failed</value>
+  </data>
+  <data name="GpuSwitch_FailedBody" xml:space="preserve">
+    <value>Failed to switch GPU mode. Please check the logs for details.</value>
+  </data>
+  <data name="GpuSwitch_ReasonNoSysInfo" xml:space="preserve">
+    <value>Could not detect system information</value>
+  </data>
+  <data name="GpuSwitch_ReasonNotHp" xml:space="preserve">
+    <value>GPU mode switching only supported on HP systems</value>
+  </data>
+  <data name="GpuSwitch_ReasonNotOmenFormat" xml:space="preserve">
+    <value>GPU mode switching only supported on HP OMEN models (detected: {0})</value>
+  </data>
+  <data name="GpuSwitch_ReasonBiosNoWmi" xml:space="preserve">
+    <value>HP BIOS does not support GPU mode switching via WMI</value>
+  </data>
+  <data name="GpuSwitch_ReasonErrorFormat" xml:space="preserve">
+    <value>Error checking GPU mode support: {0}</value>
+  </data>
+  <data name="Telemetry_NoServices" xml:space="preserve">
+    <value>No HP telemetry services found on this system.</value>
+  </data>
+  <data name="Telemetry_SummaryFormat" xml:space="preserve">
+    <value>{0} HP service(s) found, {1} disabled</value>
+  </data>
+  <data name="Telemetry_RestoreAvailable" xml:space="preserve">
+    <value> (Restore available).</value>
+  </data>
+  <data name="Telemetry_Period" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="Telemetry_ReadFailed" xml:space="preserve">
+    <value>Could not read HP service state.</value>
+  </data>
+  <data name="Telemetry_ResultFailedFormat" xml:space="preserve">
+    <value>{0}: {1} service(s) changed, {2} failed (run as administrator).</value>
+  </data>
+  <data name="Telemetry_NothingToChange" xml:space="preserve">
+    <value>Nothing to change.</value>
+  </data>
+  <data name="Telemetry_ResultDisabledFormat" xml:space="preserve">
+    <value>{0} service(s) disabled.</value>
+  </data>
+  <data name="Telemetry_ResultRestoredFormat" xml:space="preserve">
+    <value>{0} service(s) restored.</value>
+  </data>
+  <data name="Telemetry_VerbDisabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="Telemetry_VerbRestored" xml:space="preserve">
+    <value>Restored</value>
+  </data>
+  <data name="Telemetry_FailedPrefix" xml:space="preserve">
+    <value>Failed: </value>
+  </data>
+  <data name="Cleanup_StatusNotChecked" xml:space="preserve">
+    <value>Status: Not checked</value>
+  </data>
+  <data name="Cleanup_Complete" xml:space="preserve">
+    <value>✓ Cleanup complete - restart recommended</value>
+  </data>
+  <data name="Cleanup_Failed" xml:space="preserve">
+    <value>⚠ Cleanup failed</value>
+  </data>
+  <data name="Cleanup_Running" xml:space="preserve">
+    <value>Running HP Omen cleanup...</value>
+  </data>
+  <data name="Cleanup_CreatingRestorePoint" xml:space="preserve">
+    <value>Creating system restore point...</value>
+  </data>
+  <data name="Cleanup_StepKilledProcesses" xml:space="preserve">
+    <value>Killed running OMEN processes</value>
+  </data>
+  <data name="Cleanup_StepStorePackages" xml:space="preserve">
+    <value>Removing Store packages (this may take a minute)...</value>
+  </data>
+  <data name="Cleanup_StepLegacyUninstallers" xml:space="preserve">
+    <value>Running legacy uninstallers (this may take a few minutes)...</value>
+  </data>
+  <data name="Cleanup_StepServicesTasks" xml:space="preserve">
+    <value>Cleaning up services and scheduled tasks...</value>
+  </data>
+  <data name="Cleanup_StepOmenCap" xml:space="preserve">
+    <value>⚠ OmenCap detected in DriverStore - see log for removal instructions</value>
+  </data>
+  <data name="Cleanup_StepFirewallPreserved" xml:space="preserve">
+    <value>Firewall rules preserved per user preference</value>
+  </data>
+  <data name="Cleanup_StepCompleted" xml:space="preserve">
+    <value>✓ Cleanup completed successfully</value>
+  </data>
+  <data name="Cleanup_StepCancelled" xml:space="preserve">
+    <value>⚠ Cleanup cancelled</value>
+  </data>
+  <data name="GpuBoost_LevelMinimum" xml:space="preserve">
+    <value>Minimum</value>
+  </data>
+  <data name="GpuBoost_LevelMedium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="GpuBoost_LevelMaximum" xml:space="preserve">
+    <value>Maximum</value>
+  </data>
+  <data name="GpuBoost_LevelExtended" xml:space="preserve">
+    <value>Extended</value>
+  </data>
+  <data name="GpuBoost_NotAvailable" xml:space="preserve">
+    <value>Not available on this model</value>
+  </data>
+  <data name="GpuBoost_VictusNoTgp" xml:space="preserve">
+    <value>Not supported — HP Victus BIOS does not expose custom TGP/PPAB control</value>
+  </data>
+  <data name="GpuBoost_DetectedWmiFormat" xml:space="preserve">
+    <value>{0} (detected via WMI)</value>
+  </data>
+  <data name="GpuBoost_DetectedWmiSavedFormat" xml:space="preserve">
+    <value>{0} (detected via WMI; saved preference '{1}' not yet applied)</value>
+  </data>
+  <data name="GpuBoost_DetectedOghFormat" xml:space="preserve">
+    <value>{0} (detected via OGH)</value>
+  </data>
+  <data name="GpuBoost_EcExperimentalFormat" xml:space="preserve">
+    <value>EC mode 0x{0} (experimental) - User setting will be applied</value>
+  </data>
+  <data name="GpuBoost_DegradedWarning" xml:space="preserve">
+    <value>⚠️ Command sent but GPU power may not have changed (BIOS WMI degraded)</value>
+  </data>
+  <data name="GpuBoost_NvapiPercentFormat" xml:space="preserve">
+    <value>{0} + NVAPI {1}% limit</value>
+  </data>
+  <data name="GpuBoost_NvapiAvailableFormat" xml:space="preserve">
+    <value>{0} (NVAPI power limits available)</value>
+  </data>
+  <data name="GpuBoost_Applied" xml:space="preserve">
+    <value>Applied</value>
+  </data>
+  <data name="GpuBoost_AppliedWmiFormat" xml:space="preserve">
+    <value>✓ {0} ({1})</value>
+  </data>
+  <data name="GpuBoost_AppliedWmiRestoredFormat" xml:space="preserve">
+    <value>✓ {0} ({1}) - Restored</value>
+  </data>
+  <data name="GpuBoost_DetailBaseTgp" xml:space="preserve">
+    <value>Base TGP only</value>
+  </data>
+  <data name="GpuBoost_DetailCustomTgp" xml:space="preserve">
+    <value>Custom TGP</value>
+  </data>
+  <data name="GpuBoost_DetailCustomTgpDynamic" xml:space="preserve">
+    <value>Custom TGP + Dynamic Boost +15W</value>
+  </data>
+  <data name="GpuBoost_DetailPpabPlus" xml:space="preserve">
+    <value>PPAB+ for RTX 5080, +25W if supported</value>
+  </data>
+  <data name="GpuBoost_DetailOghCustomTgp" xml:space="preserve">
+    <value>Custom TGP</value>
+  </data>
+  <data name="GpuBoost_DetailDynamicBoost" xml:space="preserve">
+    <value>Dynamic Boost</value>
+  </data>
+  <data name="GpuBoost_DetailPpab" xml:space="preserve">
+    <value>PPAB+</value>
+  </data>
+  <data name="GpuBoost_DetailEcBaseTgp" xml:space="preserve">
+    <value>Base TGP</value>
+  </data>
+  <data name="GpuBoost_DetailDynamicBoost15W" xml:space="preserve">
+    <value>Dynamic Boost +15W</value>
+  </data>
+  <data name="GpuBoost_DetailPpab25W" xml:space="preserve">
+    <value>PPAB+ +25W</value>
+  </data>
+  <data name="GpuBoost_AppliedOghFormat" xml:space="preserve">
+    <value>✓ {0} ({1}, via OGH)</value>
+  </data>
+  <data name="GpuBoost_AppliedEcFormat" xml:space="preserve">
+    <value>✓ {0} ({1}, via EC)</value>
+  </data>
+  <data name="GpuBoost_AppliedViaOgh" xml:space="preserve">
+    <value>Applied via OGH</value>
+  </data>
+  <data name="GpuBoost_AppliedViaEc" xml:space="preserve">
+    <value>Applied via EC</value>
+  </data>
+  <data name="GpuBoost_ApplyFailedWmiEc" xml:space="preserve">
+    <value>Failed - WMI/EC commands not supported on this model</value>
+  </data>
+  <data name="GpuBoost_RestoreNoChange" xml:space="preserve">
+    <value>⚠️ GPU power restore attempted but BIOS readback shows no change</value>
+  </data>
+  <data name="GpuBoost_RestoredOghFormat" xml:space="preserve">
+    <value>✓ {0} (via OGH) - Restored</value>
+  </data>
+  <data name="GpuBoost_RestoredEcFormat" xml:space="preserve">
+    <value>✓ {0} ({1}, via EC) - Restored</value>
+  </data>
+  <data name="GpuBoost_RestoredFormat" xml:space="preserve">
+    <value>✓ {0} - Restored</value>
+  </data>
+  <data name="GpuBoost_DescriptionMinimum" xml:space="preserve">
+    <value>Base TGP only - Lower power, quieter operation, better battery life</value>
+  </data>
+  <data name="GpuBoost_DescriptionMedium" xml:space="preserve">
+    <value>Custom TGP enabled - Balanced performance and thermals</value>
+  </data>
+  <data name="GpuBoost_DescriptionMaximum" xml:space="preserve">
+    <value>Custom TGP + Dynamic Boost (PPAB) - Maximum GPU wattage (+15W boost)</value>
+  </data>
+  <data name="GpuBoost_DescriptionExtended" xml:space="preserve">
+    <value>Extended Boost (PPAB+) - Try if Maximum doesn't reach your GPU's rated TGP (RTX 50-series and up)</value>
+  </data>
+  <data name="GpuBoost_DescriptionSelect" xml:space="preserve">
+    <value>Select GPU power level</value>
+  </data>
+  <data name="GpuBoost_StatusUnavailable" xml:space="preserve">
+    <value>GPU Power Boost not available on this system</value>
+  </data>
+  <data name="GpuBoost_NvapiNote" xml:space="preserve">
+    <value> (NVAPI power limits available for fine-tuning)</value>
+  </data>
+  <data name="GpuBoost_VisualBlocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="GpuBoost_VisualDegraded" xml:space="preserve">
+    <value>Degraded</value>
+  </data>
+  <data name="GpuBoost_VisualConfirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="GpuBoost_WattageCustom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
 </root>

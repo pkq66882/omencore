@@ -37,6 +37,14 @@
             <local:FxNameDisplayConverter x:Key="FxNameDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:RiskLevelDisplayConverter x:Key="RiskLevelDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:ModelNameDisplayConverter x:Key="ModelNameDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:GpuSwitchModeDisplayConverter x:Key="GpuSwitchModeDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:GpuBoostLevelDisplayConverter x:Key="GpuBoostLevelDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <DataTemplate x:Key="GpuSwitchModeItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource GpuSwitchModeDisplay}}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="GpuBoostLevelItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource GpuBoostLevelDisplay}}"/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

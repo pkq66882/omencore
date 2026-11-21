@@ -422,6 +422,7 @@
                                   Style="{StaticResource ModernComboBox}"
                                   ItemsSource="{Binding SystemControl.GpuPowerBoostLevels}"
                                   SelectedItem="{Binding SystemControl.GpuPowerBoostLevel}"
+                                  ItemTemplate="{StaticResource GpuBoostLevelItemTemplate}"
                                   Margin="0,0,12,0"
                                   AutomationProperties.Name="{x:Static loc:Strings.AdvancedView_GpuPowerBoostLevel}"/>
 
@@ -495,6 +496,7 @@
                                   Style="{StaticResource ModernComboBox}"
                                   ItemsSource="{Binding SystemControl.Maintenance.GpuSwitchModes}"
                                   SelectedItem="{Binding SystemControl.Maintenance.SelectedGpuMode}"
+                                  ItemTemplate="{StaticResource GpuSwitchModeItemTemplate}"
                                   IsEnabled="{Binding SystemControl.Maintenance.GpuModeSwitchingSupported}"
                                   Margin="0,0,12,0"
                                   AutomationProperties.Name="{x:Static loc:Strings.AdvancedView_SwitchGpuModeTo}"/>

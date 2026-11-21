@@ -6781,4 +6781,361 @@
   <data name="SettingsView_MinutesFormat" xml:space="preserve">
     <value>{0} мин</value>
   </data>
+  <data name="CapabilityReason_ThisBoard" xml:space="preserve">
+    <value>эта плата</value>
+  </data>
+  <data name="CapabilityReason_FanControl_Safety" xml:space="preserve">
+    <value>Запись скорости вентилятора на настольных OMEN отключена до проверки по каждой модели; мониторинг продолжает работать.</value>
+  </data>
+  <data name="CapabilityReason_FanControl_ModelDbFormat" xml:space="preserve">
+    <value>База моделей указывает, что {0} не имеет рабочего программного управления вентиляторами.</value>
+  </data>
+  <data name="CapabilityReason_Backend_SecureBoot" xml:space="preserve">
+    <value>Включена безопасная загрузка и не установлен PawnIO, поэтому ни путь EC, ни путь MSR недоступны.</value>
+  </data>
+  <data name="CapabilityReason_Backend_OghNotRunning" xml:space="preserve">
+    <value>HP WMI BIOS недоступен, а OMEN Gaming Hub (единственный запасной вариант) установлен, но не запущен.</value>
+  </data>
+  <data name="CapabilityReason_Backend_None" xml:space="preserve">
+    <value>Нет доступного бэкенда управления вентиляторами: HP WMI BIOS не ответил, драйвер EC не установлен.</value>
+  </data>
+  <data name="CapabilityReason_FanControl_NotPresent" xml:space="preserve">
+    <value>Для этой платы не обнаружено рабочего бэкенда управления вентиляторами.</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_Safety" xml:space="preserve">
+    <value>На настольных OMEN кривые вентиляторов блокируются вместе с записью; мониторинг работает.</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_ModelDb" xml:space="preserve">
+    <value>База моделей указывает, что прошивка этой платы не сохраняет пользовательскую кривую вентиляторов.</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_NotReadyFormat" xml:space="preserve">
+    <value>Кривой нужна рабочая запись вентиляторов, а в этом сеансе её нет: {0}</value>
+  </data>
+  <data name="CapabilityReason_FanCurves_NotPresent" xml:space="preserve">
+    <value>Пользовательские кривые вентиляторов не обнаружены как рабочие на этой плате.</value>
+  </data>
+  <data name="CapabilityReason_Independent_NotReady" xml:space="preserve">
+    <value>Независимым кривым нужен редактор кривых вентиляторов, недоступный здесь.</value>
+  </data>
+  <data name="CapabilityReason_Independent_ModelDb" xml:space="preserve">
+    <value>База моделей указывает, что эта плата управляет обоими вентиляторами одной кривой.</value>
+  </data>
+  <data name="CapabilityReason_Independent_NotPresent" xml:space="preserve">
+    <value>Независимые кривые CPU/GPU на этой плате не обнаружены.</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_ModelDb" xml:space="preserve">
+    <value>Платы Victus принимают уровни GPU Power Boost только там, где база моделей подтверждает поддержку прошивкой HP.</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_DriverMissing" xml:space="preserve">
+    <value>Интерфейс питания GPU в HP WMI BIOS не найден, поэтому уровни ускорения применить некуда.</value>
+  </data>
+  <data name="CapabilityReason_GpuBoost_NotPresent" xml:space="preserve">
+    <value>GPU Power Boost на этой плате не обнаружен.</value>
+  </data>
+  <data name="CapabilityReason_Mux_ModelDb" xml:space="preserve">
+    <value>База моделей не указывает MUX-переключатель для этой платы; графика подключена напрямую.</value>
+  </data>
+  <data name="CapabilityReason_Mux_NotPresent" xml:space="preserve">
+    <value>MUX-переключатель на этой плате не обнаружен.</value>
+  </data>
+  <data name="CapabilityReason_Lighting_ModelDb" xml:space="preserve">
+    <value>База моделей не указывает цветоадресуемую подсветку клавиатуры для этой платы.</value>
+  </data>
+  <data name="CapabilityReason_Lighting_NotPresent" xml:space="preserve">
+    <value>Прошивка сообщает об отсутствии цветоадресуемой подсветки; доступна только обычная подсветка, если она есть.</value>
+  </data>
+  <data name="CapabilityReason_PerKey_ModelDb" xml:space="preserve">
+    <value>Клавиатура этой платы адресуется по зонам, а не по клавишам; эффекты для каждой клавиши неприменимы.</value>
+  </data>
+  <data name="CapabilityReason_PerKey_NotPresent" xml:space="preserve">
+    <value>На этой плате не обнаружена клавиатура с адресацией по каждой клавише.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_ModelDb" xml:space="preserve">
+    <value>База моделей указывает, что прошивка этой платы не принимает снижение напряжения CPU.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_DriverMissing" xml:space="preserve">
+    <value>Включена безопасная загрузка и не установлен PawnIO, поэтому доступ к MSR для снижения напряжения недоступен.</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_NotPresent" xml:space="preserve">
+    <value>На этой плате не найден путь снижения напряжения CPU (MSR, PawnIO или оптимизатор кривой).</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_Timeout" xml:space="preserve">
+    <value>Время проверки снижения напряжения истекло</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_UnknownBlock" xml:space="preserve">
+    <value>Неизвестная причина блокировки</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_ModelDbDisabledFormat" xml:space="preserve">
+    <value>Снижение напряжения отключено базой моделей (не поддерживается на {0})</value>
+  </data>
+  <data name="CapabilityReason_Undervolt_NotReadyFormat" xml:space="preserve">
+    <value>Снижение напряжения сейчас недоступно: {0}</value>
+  </data>
+  <data name="CapabilityReason_PerfModes_DriverMissing" xml:space="preserve">
+    <value>Интерфейс режимов производительности HP не найден, поэтому выбор режима переходит на планы питания Windows.</value>
+  </data>
+  <data name="GpuSwitch_Detecting" xml:space="preserve">
+    <value>Обнаружение...</value>
+  </data>
+  <data name="GpuSwitch_Available" xml:space="preserve">
+    <value>Переключение GPU через BIOS WMI доступно.</value>
+  </data>
+  <data name="GpuSwitch_UnavailableFormat" xml:space="preserve">
+    <value>Переключение режима GPU через OmenCore недоступно: {0}</value>
+  </data>
+  <data name="GpuSwitch_ModeHybrid" xml:space="preserve">
+    <value>Гибридный (MSHybrid/Optimus)</value>
+  </data>
+  <data name="GpuSwitch_ModeDiscrete" xml:space="preserve">
+    <value>Только дискретная GPU</value>
+  </data>
+  <data name="GpuSwitch_ModeIntegrated" xml:space="preserve">
+    <value>Только встроенная GPU</value>
+  </data>
+  <data name="GpuSwitch_ModeUnknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="GpuSwitch_ModeDetectionFailed" xml:space="preserve">
+    <value>Не удалось определить</value>
+  </data>
+  <data name="GpuSwitch_RestartTitle" xml:space="preserve">
+    <value>Требуется перезагрузка - OmenCore</value>
+  </data>
+  <data name="GpuSwitch_RestartBodyFormat" xml:space="preserve">
+    <value>Режим GPU установлен: {0}.&#10;&#10;Для применения изменений требуется перезагрузка.&#10;&#10;Перезагрузить сейчас?</value>
+  </data>
+  <data name="GpuSwitch_FailedTitle" xml:space="preserve">
+    <value>Не удалось переключить режим GPU</value>
+  </data>
+  <data name="GpuSwitch_FailedBody" xml:space="preserve">
+    <value>Не удалось переключить режим GPU. Подробности в журнале.</value>
+  </data>
+  <data name="GpuSwitch_ReasonNoSysInfo" xml:space="preserve">
+    <value>Не удалось определить сведения о системе</value>
+  </data>
+  <data name="GpuSwitch_ReasonNotHp" xml:space="preserve">
+    <value>Переключение режима GPU поддерживается только на системах HP</value>
+  </data>
+  <data name="GpuSwitch_ReasonNotOmenFormat" xml:space="preserve">
+    <value>Переключение режима GPU поддерживается только на моделях HP OMEN (обнаружено: {0})</value>
+  </data>
+  <data name="GpuSwitch_ReasonBiosNoWmi" xml:space="preserve">
+    <value>BIOS HP не поддерживает переключение режима GPU через WMI</value>
+  </data>
+  <data name="GpuSwitch_ReasonErrorFormat" xml:space="preserve">
+    <value>Ошибка при проверке поддержки режима GPU: {0}</value>
+  </data>
+  <data name="Telemetry_NoServices" xml:space="preserve">
+    <value>На этой системе не найдены службы телеметрии HP.</value>
+  </data>
+  <data name="Telemetry_SummaryFormat" xml:space="preserve">
+    <value>Найдено служб HP: {0}, отключено: {1}</value>
+  </data>
+  <data name="Telemetry_RestoreAvailable" xml:space="preserve">
+    <value> (Доступно восстановление).</value>
+  </data>
+  <data name="Telemetry_Period" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="Telemetry_ReadFailed" xml:space="preserve">
+    <value>Не удалось прочитать состояние служб HP.</value>
+  </data>
+  <data name="Telemetry_ResultFailedFormat" xml:space="preserve">
+    <value>{0}: изменено служб — {1}, сбоев — {2} (запустите от имени администратора).</value>
+  </data>
+  <data name="Telemetry_NothingToChange" xml:space="preserve">
+    <value>Нечего изменять.</value>
+  </data>
+  <data name="Telemetry_ResultDisabledFormat" xml:space="preserve">
+    <value>Отключено служб: {0}.</value>
+  </data>
+  <data name="Telemetry_ResultRestoredFormat" xml:space="preserve">
+    <value>Восстановлено служб: {0}.</value>
+  </data>
+  <data name="Telemetry_VerbDisabled" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="Telemetry_VerbRestored" xml:space="preserve">
+    <value>Восстановлено</value>
+  </data>
+  <data name="Telemetry_FailedPrefix" xml:space="preserve">
+    <value>Ошибка: </value>
+  </data>
+  <data name="Cleanup_StatusNotChecked" xml:space="preserve">
+    <value>Статус: не проверено</value>
+  </data>
+  <data name="Cleanup_Complete" xml:space="preserve">
+    <value>✓ Очистка завершена — рекомендуется перезагрузка</value>
+  </data>
+  <data name="Cleanup_Failed" xml:space="preserve">
+    <value>⚠ Очистка не удалась</value>
+  </data>
+  <data name="Cleanup_Running" xml:space="preserve">
+    <value>Выполняется очистка HP Omen...</value>
+  </data>
+  <data name="Cleanup_CreatingRestorePoint" xml:space="preserve">
+    <value>Создание точки восстановления системы...</value>
+  </data>
+  <data name="Cleanup_StepKilledProcesses" xml:space="preserve">
+    <value>Завершены запущенные процессы OMEN</value>
+  </data>
+  <data name="Cleanup_StepStorePackages" xml:space="preserve">
+    <value>Удаление пакетов Store (может занять минуту)...</value>
+  </data>
+  <data name="Cleanup_StepLegacyUninstallers" xml:space="preserve">
+    <value>Запуск старых деинсталляторов (может занять несколько минут)...</value>
+  </data>
+  <data name="Cleanup_StepServicesTasks" xml:space="preserve">
+    <value>Очистка служб и запланированных задач...</value>
+  </data>
+  <data name="Cleanup_StepOmenCap" xml:space="preserve">
+    <value>⚠ В DriverStore обнаружен OmenCap — инструкции по удалению см. в журнале</value>
+  </data>
+  <data name="Cleanup_StepFirewallPreserved" xml:space="preserve">
+    <value>Правила брандмауэра сохранены согласно настройке пользователя</value>
+  </data>
+  <data name="Cleanup_StepCompleted" xml:space="preserve">
+    <value>✓ Очистка успешно завершена</value>
+  </data>
+  <data name="Cleanup_StepCancelled" xml:space="preserve">
+    <value>⚠ Очистка отменена</value>
+  </data>
+  <data name="GpuBoost_LevelMinimum" xml:space="preserve">
+    <value>Минимум</value>
+  </data>
+  <data name="GpuBoost_LevelMedium" xml:space="preserve">
+    <value>Средний</value>
+  </data>
+  <data name="GpuBoost_LevelMaximum" xml:space="preserve">
+    <value>Максимум</value>
+  </data>
+  <data name="GpuBoost_LevelExtended" xml:space="preserve">
+    <value>Расширенный</value>
+  </data>
+  <data name="GpuBoost_NotAvailable" xml:space="preserve">
+    <value>Недоступно на этой модели</value>
+  </data>
+  <data name="GpuBoost_VictusNoTgp" xml:space="preserve">
+    <value>Не поддерживается — BIOS HP Victus не предоставляет управление TGP/PPAB</value>
+  </data>
+  <data name="GpuBoost_DetectedWmiFormat" xml:space="preserve">
+    <value>{0} (обнаружено через WMI)</value>
+  </data>
+  <data name="GpuBoost_DetectedWmiSavedFormat" xml:space="preserve">
+    <value>{0} (обнаружено через WMI; сохранённый выбор «{1}» ещё не применён)</value>
+  </data>
+  <data name="GpuBoost_DetectedOghFormat" xml:space="preserve">
+    <value>{0} (обнаружено через OGH)</value>
+  </data>
+  <data name="GpuBoost_EcExperimentalFormat" xml:space="preserve">
+    <value>Режим EC 0x{0} (экспериментальный) — будет применена настройка пользователя</value>
+  </data>
+  <data name="GpuBoost_DegradedWarning" xml:space="preserve">
+    <value>⚠️ Команда отправлена, но питание GPU могло не измениться (WMI BIOS деградировало)</value>
+  </data>
+  <data name="GpuBoost_NvapiPercentFormat" xml:space="preserve">
+    <value>{0} + лимит NVAPI {1}%</value>
+  </data>
+  <data name="GpuBoost_NvapiAvailableFormat" xml:space="preserve">
+    <value>{0} (лимиты питания NVAPI доступны)</value>
+  </data>
+  <data name="GpuBoost_Applied" xml:space="preserve">
+    <value>Применено</value>
+  </data>
+  <data name="GpuBoost_AppliedWmiFormat" xml:space="preserve">
+    <value>✓ {0} ({1})</value>
+  </data>
+  <data name="GpuBoost_AppliedWmiRestoredFormat" xml:space="preserve">
+    <value>✓ {0} ({1}) — восстановлено</value>
+  </data>
+  <data name="GpuBoost_DetailBaseTgp" xml:space="preserve">
+    <value>только базовый TGP</value>
+  </data>
+  <data name="GpuBoost_DetailCustomTgp" xml:space="preserve">
+    <value>пользовательский TGP</value>
+  </data>
+  <data name="GpuBoost_DetailCustomTgpDynamic" xml:space="preserve">
+    <value>пользовательский TGP + Dynamic Boost +15W</value>
+  </data>
+  <data name="GpuBoost_DetailPpabPlus" xml:space="preserve">
+    <value>PPAB+ для RTX 5080, +25W при поддержке</value>
+  </data>
+  <data name="GpuBoost_DetailOghCustomTgp" xml:space="preserve">
+    <value>пользовательский TGP</value>
+  </data>
+  <data name="GpuBoost_DetailDynamicBoost" xml:space="preserve">
+    <value>Dynamic Boost</value>
+  </data>
+  <data name="GpuBoost_DetailPpab" xml:space="preserve">
+    <value>PPAB+</value>
+  </data>
+  <data name="GpuBoost_DetailEcBaseTgp" xml:space="preserve">
+    <value>базовый TGP</value>
+  </data>
+  <data name="GpuBoost_DetailDynamicBoost15W" xml:space="preserve">
+    <value>Dynamic Boost +15W</value>
+  </data>
+  <data name="GpuBoost_DetailPpab25W" xml:space="preserve">
+    <value>PPAB+ +25W</value>
+  </data>
+  <data name="GpuBoost_AppliedOghFormat" xml:space="preserve">
+    <value>✓ {0} ({1}, через OGH)</value>
+  </data>
+  <data name="GpuBoost_AppliedEcFormat" xml:space="preserve">
+    <value>✓ {0} ({1}, через EC)</value>
+  </data>
+  <data name="GpuBoost_AppliedViaOgh" xml:space="preserve">
+    <value>Применено через OGH</value>
+  </data>
+  <data name="GpuBoost_AppliedViaEc" xml:space="preserve">
+    <value>Применено через EC</value>
+  </data>
+  <data name="GpuBoost_ApplyFailedWmiEc" xml:space="preserve">
+    <value>Не удалось — команды WMI/EC не поддерживаются на этой модели</value>
+  </data>
+  <data name="GpuBoost_RestoreNoChange" xml:space="preserve">
+    <value>⚠️ Попытка восстановления питания GPU выполнена, но обратное чтение BIOS не показывает изменений</value>
+  </data>
+  <data name="GpuBoost_RestoredOghFormat" xml:space="preserve">
+    <value>✓ {0} (через OGH) — восстановлено</value>
+  </data>
+  <data name="GpuBoost_RestoredEcFormat" xml:space="preserve">
+    <value>✓ {0} ({1}, через EC) — восстановлено</value>
+  </data>
+  <data name="GpuBoost_RestoredFormat" xml:space="preserve">
+    <value>✓ {0} — восстановлено</value>
+  </data>
+  <data name="GpuBoost_DescriptionMinimum" xml:space="preserve">
+    <value>Только базовый TGP — меньше энергопотребление, тише работа, дольше батарея</value>
+  </data>
+  <data name="GpuBoost_DescriptionMedium" xml:space="preserve">
+    <value>Пользовательский TGP включён — баланс производительности и нагрева</value>
+  </data>
+  <data name="GpuBoost_DescriptionMaximum" xml:space="preserve">
+    <value>Пользовательский TGP + Dynamic Boost (PPAB) — максимальная мощность GPU (+15W)</value>
+  </data>
+  <data name="GpuBoost_DescriptionExtended" xml:space="preserve">
+    <value>Расширенное ускорение (PPAB+) — если «Максимум» не достигает паспортного TGP (RTX 50 и новее)</value>
+  </data>
+  <data name="GpuBoost_DescriptionSelect" xml:space="preserve">
+    <value>Выберите уровень питания GPU</value>
+  </data>
+  <data name="GpuBoost_StatusUnavailable" xml:space="preserve">
+    <value>GPU Power Boost недоступен на этой системе</value>
+  </data>
+  <data name="GpuBoost_NvapiNote" xml:space="preserve">
+    <value> (лимиты питания NVAPI доступны для тонкой настройки)</value>
+  </data>
+  <data name="GpuBoost_VisualBlocked" xml:space="preserve">
+    <value>Заблокировано</value>
+  </data>
+  <data name="GpuBoost_VisualDegraded" xml:space="preserve">
+    <value>Деградировано</value>
+  </data>
+  <data name="GpuBoost_VisualConfirmed" xml:space="preserve">
+    <value>Подтверждено</value>
+  </data>
+  <data name="GpuBoost_WattageCustom" xml:space="preserve">
+    <value>Своё</value>
+  </data>
 </root>
