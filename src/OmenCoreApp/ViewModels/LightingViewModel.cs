@@ -2611,6 +2611,12 @@ namespace OmenCore.ViewModels
                     ? RgbObservationNotRecorded
                     : config.ObservedSurface.Trim();
 
+                // Values saved before localization persist as English - normalize them.
+                if (observedSurface == "Not recorded")
+                {
+                    observedSurface = RgbObservationNotRecorded;
+                }
+
                 if (!RgbObservedSurfaceOptions.Contains(observedSurface))
                 {
                     RgbObservedSurfaceOptions.Add(observedSurface);

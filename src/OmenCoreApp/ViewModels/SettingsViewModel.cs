@@ -3852,7 +3852,7 @@ namespace OmenCore.ViewModels
             }
             else
             {
-                FanCleaningStatusText = $"✗ Non-HP OMEN system detected: {systemInfo.Manufacturer} {systemInfo.Model}. Fan cleaning unavailable.";
+                FanCleaningStatusText = string.Format(Strings.SettingsViewModel_FanCleaningNonHp, systemInfo.Manufacturer, systemInfo.Model);
                 FanCleaningStatusIcon = "M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"; // X
                 FanCleaningStatusColor = new SolidColorBrush(Color.FromRgb(229, 115, 115)); // Red
                 CanStartFanCleaning = false;
@@ -4397,7 +4397,7 @@ namespace OmenCore.ViewModels
                 // Use Model for display (full name like "HP OMEN by HP Laptop 17-ck2xxx")
                 SystemModel = !string.IsNullOrEmpty(sysInfo.Model) ? sysInfo.Model : sysInfo.ProductName ?? "Unknown HP Product";
                 CurrentBiosVersion = sysInfo.BiosVersion ?? "Unknown";
-                BiosCheckStatus = "Click 'Check for Updates' to check HP for BIOS updates";
+                BiosCheckStatus = Strings.SettingsViewModel_BiosCheckHint;
                 BiosStatusColor = Brushes.Gray;
             }
             catch (Exception ex)

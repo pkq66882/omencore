@@ -6157,4 +6157,22 @@
   <data name="FanDiagnosticsViewModel_DiagnosticComplete" xml:space="preserve">
     <value>=== ДИАГНОСТИКА ЗАВЕРШЕНА: {0} ===</value>
   </data>
+  <data name="SettingsViewModel_BiosCheckHint" xml:space="preserve">
+    <value>Нажмите «Проверить обновления», чтобы проверить BIOS на сайте HP</value>
+  </data>
+  <data name="SettingsView_BiosInfoParagraph" xml:space="preserve">
+    <value>Проверяйте обновления BIOS на сайте HP. Всегда читайте примечания к выпуску перед обновлением. Обновления BIOS могут улучшить стабильность, безопасность и совместимость.</value>
+  </data>
+  <data name="SettingsView_HpDriversParagraph" xml:space="preserve">
+    <value>Держите ноутбук OMEN в актуальном состоянии с официальными драйверами HP, обновлениями BIOS и инструментами поддержки. Официальные драйверы HP обеспечивают лучшую совместимость и производительность.</value>
+  </data>
+  <data name="SettingsView_FanAccelerateParagraph" xml:space="preserve">
+    <value>Запускает вентиляторы на максимальной скорости, чтобы усилить поток воздуха и удалить слабо закреплённую пыль.</value>
+  </data>
+  <data name="SettingsView_BloatwareMovedParagraph" xml:space="preserve">
+    <value>Удаление предустановленного ПО переехало на отдельную вкладку: оценки риска для каждого приложения, выборочное удаление, восстановление и полный список.</value>
+  </data>
+  <data name="SettingsViewModel_FanCleaningNonHp" xml:space="preserve">
+    <value>✗ Обнаружена система не-HP OMEN: {0} {1}. Очистка вентиляторов недоступна.</value>
+  </data>
 </root>

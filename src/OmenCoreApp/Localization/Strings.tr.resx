@@ -6157,4 +6157,22 @@
   <data name="FanDiagnosticsViewModel_DiagnosticComplete" xml:space="preserve">
     <value>=== TANI TAMAMLANDI: {0} ===</value>
   </data>
+  <data name="SettingsViewModel_BiosCheckHint" xml:space="preserve">
+    <value>HP BIOS güncellemelerini kontrol etmek için "Güncellemeleri Denetle"ye tıklayın</value>
+  </data>
+  <data name="SettingsView_BiosInfoParagraph" xml:space="preserve">
+    <value>BIOS güncellemeleri için HP sitesini kontrol edin. Güncellemeden önce her zaman sürüm notlarını okuyun. BIOS güncellemeleri kararlılığı, güvenliği ve uyumluluğu iyileştirebilir.</value>
+  </data>
+  <data name="SettingsView_HpDriversParagraph" xml:space="preserve">
+    <value>Resmi HP sürücüleri, BIOS güncellemeleri ve destek araçlarıyla OMEN dizüstünüzü güncel tutun. Resmi HP sürücüleri en iyi uyumluluk ve performansı sağlar.</value>
+  </data>
+  <data name="SettingsView_FanAccelerateParagraph" xml:space="preserve">
+    <value>Fanları maksimum hızda çalıştırarak hava akışını artırır ve gevşek toz parçacıklarının atılmasına yardımcı olur.</value>
+  </data>
+  <data name="SettingsView_BloatwareMovedParagraph" xml:space="preserve">
+    <value>Önyazılım kaldırma, uygulama başına risk derecelendirmesi, seçici kaldırma, geri yükleme ve tam liste içeren kendi sekmesine taşındı.</value>
+  </data>
+  <data name="SettingsViewModel_FanCleaningNonHp" xml:space="preserve">
+    <value>✗ HP olmayan OMEN sistemi algılandı: {0} {1}. Fan temizleme kullanılamaz.</value>
+  </data>
 </root>

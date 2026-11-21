@@ -2377,5 +2377,12 @@ namespace OmenCore.Localization
     public static string FanDiagnosticsViewModel_ResultFail => Get(nameof(FanDiagnosticsViewModel_ResultFail));
     public static string FanDiagnosticsViewModel_ResultPass => Get(nameof(FanDiagnosticsViewModel_ResultPass));
 
+    public static string SettingsView_BiosInfoParagraph => Get(nameof(SettingsView_BiosInfoParagraph));
+    public static string SettingsView_BloatwareMovedParagraph => Get(nameof(SettingsView_BloatwareMovedParagraph));
+    public static string SettingsView_FanAccelerateParagraph => Get(nameof(SettingsView_FanAccelerateParagraph));
+    public static string SettingsView_HpDriversParagraph => Get(nameof(SettingsView_HpDriversParagraph));
+    public static string SettingsViewModel_BiosCheckHint => Get(nameof(SettingsViewModel_BiosCheckHint));
+    public static string SettingsViewModel_FanCleaningNonHp => Get(nameof(SettingsViewModel_FanCleaningNonHp));
+
     }
 }

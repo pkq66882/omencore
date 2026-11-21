@@ -1885,8 +1885,7 @@
                         <TextBlock TextWrapping="Wrap" FontSize="12" 
                                    Foreground="{StaticResource TextSecondaryBrush}" 
                                    Margin="0,0,0,12">
-                            Check HP's website for BIOS updates. Always read the release notes before updating BIOS.
-                            BIOS updates can improve stability, security, and compatibility.
+                            <Run Text="{x:Static loc:Strings.SettingsView_BiosInfoParagraph}"/>
                         </TextBlock>
 
                         <StackPanel Orientation="Horizontal">
@@ -1925,8 +1924,7 @@
                         <TextBlock TextWrapping="Wrap" FontSize="13" 
                                    Foreground="{StaticResource TextSecondaryBrush}" 
                                    Margin="0,0,0,16">
-                            Keep your OMEN laptop up to date with official HP drivers, BIOS updates, and support tools.
-                            Using official HP drivers ensures best compatibility and performance.
+                            <Run Text="{x:Static loc:Strings.SettingsView_HpDriversParagraph}"/>
                         </TextBlock>
 
                         <!-- Quick Links Grid -->
@@ -2003,7 +2001,7 @@
                         <TextBlock TextWrapping="Wrap" FontSize="13" 
                                    Foreground="{StaticResource TextSecondaryBrush}" 
                                    Margin="0,0,0,12">
-                            Runs fans at maximum speed to increase airflow and help dislodge loose dust particles.
+                            <Run Text="{x:Static loc:Strings.SettingsView_FanAccelerateParagraph}"/>
                         </TextBlock>
                         
                         <!-- Important disclaimer -->
@@ -2087,8 +2085,7 @@
                         <TextBlock TextWrapping="Wrap" FontSize="13"
                                    Foreground="{StaticResource TextSecondaryBrush}"
                                    Margin="0,0,0,16">
-                            Bloatware removal has moved to its own dedicated tab with per-app risk ratings,
-                            selective removal, restore capability, and a full item list.
+                            <Run Text="{x:Static loc:Strings.SettingsView_BloatwareMovedParagraph}"/>
                         </TextBlock>
 
                         <Button AutomationProperties.Name="{x:Static loc:Strings.SettingsView_OpenBloatwareManager}" Content="{x:Static loc:Strings.SettingsView_OpenBloatwareManager_2}"

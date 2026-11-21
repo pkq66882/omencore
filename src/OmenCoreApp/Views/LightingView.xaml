@@ -356,7 +356,7 @@
             
             <!-- Sync All Button -->
             <Button Grid.Column="1" Command="{Binding SyncAllRgbCommand}"
-                    VerticalAlignment="Top" Margin="0,0,0,0"
+                    VerticalAlignment="Top" Margin="0,0,24,0"
                     ToolTip="{x:Static loc:Strings.LightingView_SyncCurrentColorAcrossAllConnectedRgbDevic}"
                     AutomationProperties.Name="{x:Static loc:Strings.LightingView_SyncAllRgbDevices}">
                 <Button.Style>

@@ -6161,4 +6161,22 @@
   <data name="FanDiagnosticsViewModel_DiagnosticComplete" xml:space="preserve">
     <value>=== DIAGNOSTIC COMPLETE: {0} ===</value>
   </data>
+  <data name="SettingsViewModel_BiosCheckHint" xml:space="preserve">
+    <value>Click 'Check for Updates' to check HP for BIOS updates</value>
+  </data>
+  <data name="SettingsView_BiosInfoParagraph" xml:space="preserve">
+    <value>Check HP's website for BIOS updates. Always read the release notes before updating BIOS. BIOS updates can improve stability, security, and compatibility.</value>
+  </data>
+  <data name="SettingsView_HpDriversParagraph" xml:space="preserve">
+    <value>Keep your OMEN laptop up to date with official HP drivers, BIOS updates, and support tools. Using official HP drivers ensures best compatibility and performance.</value>
+  </data>
+  <data name="SettingsView_FanAccelerateParagraph" xml:space="preserve">
+    <value>Runs fans at maximum speed to increase airflow and help dislodge loose dust particles.</value>
+  </data>
+  <data name="SettingsView_BloatwareMovedParagraph" xml:space="preserve">
+    <value>Bloatware removal has moved to its own dedicated tab with per-app risk ratings, selective removal, restore capability, and a full item list.</value>
+  </data>
+  <data name="SettingsViewModel_FanCleaningNonHp" xml:space="preserve">
+    <value>✗ Non-HP OMEN system detected: {0} {1}. Fan cleaning unavailable.</value>
+  </data>
 </root>

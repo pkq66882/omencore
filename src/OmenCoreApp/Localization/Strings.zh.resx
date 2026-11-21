@@ -6157,4 +6157,22 @@
   <data name="FanDiagnosticsViewModel_DiagnosticComplete" xml:space="preserve">
     <value>=== 诊断完成：{0} ===</value>
   </data>
+  <data name="SettingsViewModel_BiosCheckHint" xml:space="preserve">
+    <value>点击“检查更新”以在 HP 检查 BIOS 更新</value>
+  </data>
+  <data name="SettingsView_BiosInfoParagraph" xml:space="preserve">
+    <value>请到 HP 官网检查 BIOS 更新。更新 BIOS 前务必阅读发行说明。BIOS 更新可提升稳定性、安全性与兼容性。</value>
+  </data>
+  <data name="SettingsView_HpDriversParagraph" xml:space="preserve">
+    <value>使用官方 HP 驱动、BIOS 更新和支持工具，让你的 OMEN 笔记本保持最新。使用官方 HP 驱动可确保最佳兼容性与性能。</value>
+  </data>
+  <data name="SettingsView_FanAccelerateParagraph" xml:space="preserve">
+    <value>以最大转速运行风扇以增加气流，帮助吹落松动的灰尘颗粒。</value>
+  </data>
+  <data name="SettingsView_BloatwareMovedParagraph" xml:space="preserve">
+    <value>预装软件移除已移至独立标签页，提供逐项风险评级、选择性移除、恢复能力和完整列表。</value>
+  </data>
+  <data name="SettingsViewModel_FanCleaningNonHp" xml:space="preserve">
+    <value>✗ 检测到非 HP OMEN 系统：{0} {1}。风扇清洁不可用。</value>
+  </data>
 </root>
