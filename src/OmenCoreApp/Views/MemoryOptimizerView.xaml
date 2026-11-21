@@ -533,6 +533,7 @@
                                     <ComboBox Grid.Column="1"
                                               ItemsSource="{Binding AutoCleanProfileOptions}"
                                               SelectedItem="{Binding SelectedAutoCleanProfile, Mode=TwoWay}"
+                                              ItemTemplate="{StaticResource CleanProfileItemTemplate}"
                                               MinWidth="140"/>
                                 </Grid>
 

@@ -317,12 +317,14 @@
                         <Label Content="{x:Static loc:Strings.GameProfileManagerView_FanPreset}"/>
                         <ComboBox ItemsSource="{Binding FanPresets}"
                                   SelectedItem="{Binding SelectedProfile.FanPresetName}"
+                                  ItemTemplate="{StaticResource FanPresetItemTemplate}"
                                   Margin="0,0,0,12"/>
 
                         <!-- Performance Mode -->
                         <Label Content="{x:Static loc:Strings.AdvancedView_PerformanceMode}"/>
                         <ComboBox ItemsSource="{Binding PerformanceModes}"
                                   SelectedItem="{Binding SelectedProfile.PerformanceModeName}"
+                                  ItemTemplate="{StaticResource PerfModeItemTemplate}"
                                   Margin="0,0,0,12"/>
 
                         <!-- CPU Undervolt -->
@@ -349,12 +351,14 @@
                         <Label Content="{x:Static loc:Strings.GameProfileManagerView_KeyboardLightingProfile}"/>
                         <ComboBox ItemsSource="{Binding KeyboardProfiles}"
                                   SelectedItem="{Binding SelectedProfile.KeyboardLightingProfileName}"
+                                  ItemTemplate="{StaticResource KeyboardProfileItemTemplate}"
                                   Margin="0,0,0,12"/>
 
                         <!-- Peripheral Lighting -->
                         <Label Content="{x:Static loc:Strings.GameProfileManagerView_PeripheralLightingProfile}"/>
                         <ComboBox ItemsSource="{Binding PeripheralProfiles}"
                                   SelectedItem="{Binding SelectedProfile.PeripheralLightingProfileName}"
+                                  ItemTemplate="{StaticResource PeripheralProfileItemTemplate}"
                                   Margin="0,0,0,12"/>
 
                         <Separator Margin="0,8,0,16"/>

@@ -7138,4 +7138,199 @@
   <data name="GpuBoost_WattageCustom" xml:space="preserve">
     <value>Своё</value>
   </data>
+  <data name="SettingsView_BackendAuto" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="SettingsView_BackendWmiBios" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="SettingsView_BackendWmi" xml:space="preserve">
+    <value>WMI</value>
+  </data>
+  <data name="SettingsView_BackendEc" xml:space="preserve">
+    <value>EC</value>
+  </data>
+  <data name="Osd_PositionTopLeft" xml:space="preserve">
+    <value>Сверху слева</value>
+  </data>
+  <data name="Osd_PositionTopCenter" xml:space="preserve">
+    <value>Сверху по центру</value>
+  </data>
+  <data name="Osd_PositionTopRight" xml:space="preserve">
+    <value>Сверху справа</value>
+  </data>
+  <data name="Osd_PositionBottomLeft" xml:space="preserve">
+    <value>Снизу слева</value>
+  </data>
+  <data name="Osd_PositionBottomCenter" xml:space="preserve">
+    <value>Снизу по центру</value>
+  </data>
+  <data name="Osd_PositionBottomRight" xml:space="preserve">
+    <value>Снизу справа</value>
+  </data>
+  <data name="Osd_TargetPrimary" xml:space="preserve">
+    <value>Основной дисплей</value>
+  </data>
+  <data name="Osd_TargetActiveWindow" xml:space="preserve">
+    <value>Активное окно</value>
+  </data>
+  <data name="Osd_TargetMouseCursor" xml:space="preserve">
+    <value>Дисплей с курсором мыши</value>
+  </data>
+  <data name="Osd_DensityCompact" xml:space="preserve">
+    <value>Компактный</value>
+  </data>
+  <data name="Osd_DensityBalanced" xml:space="preserve">
+    <value>Сбалансированный</value>
+  </data>
+  <data name="Osd_DensityComfortable" xml:space="preserve">
+    <value>Просторный</value>
+  </data>
+  <data name="Osd_AccentCyan" xml:space="preserve">
+    <value>Голубой</value>
+  </data>
+  <data name="Osd_AccentOrange" xml:space="preserve">
+    <value>Оранжевый</value>
+  </data>
+  <data name="Osd_AccentTeal" xml:space="preserve">
+    <value>Бирюзовый</value>
+  </data>
+  <data name="Osd_AccentMagenta" xml:space="preserve">
+    <value>Пурпурный</value>
+  </data>
+  <data name="OmenKeyAction_ShowQuickPopup" xml:space="preserve">
+    <value>Открыть быструю панель</value>
+  </data>
+  <data name="OmenKeyAction_ShowWindow" xml:space="preserve">
+    <value>Показать или скрыть OmenCore</value>
+  </data>
+  <data name="OmenKeyAction_CyclePerformance" xml:space="preserve">
+    <value>Переключение режимов производительности</value>
+  </data>
+  <data name="OmenKeyAction_CycleFanMode" xml:space="preserve">
+    <value>Переключение режимов вентиляторов</value>
+  </data>
+  <data name="OmenKeyAction_ToggleMaxCooling" xml:space="preserve">
+    <value>Максимальное охлаждение вкл/выкл</value>
+  </data>
+  <data name="OmenKeyAction_ToggleOsd" xml:space="preserve">
+    <value>Показать или скрыть экранный дисплей (OSD)</value>
+  </data>
+  <data name="OmenKeyAction_LaunchExternalApp" xml:space="preserve">
+    <value>Запустить приложение</value>
+  </data>
+  <data name="OmenKeyAction_DoNothing" xml:space="preserve">
+    <value>Ничего не делать (блокировать клавишу)</value>
+  </data>
+  <data name="FanPreset_Auto" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="FanPreset_Quiet" xml:space="preserve">
+    <value>Тихий</value>
+  </data>
+  <data name="FanPreset_Extreme" xml:space="preserve">
+    <value>Экстремальный</value>
+  </data>
+  <data name="FanPreset_Max" xml:space="preserve">
+    <value>Максимум</value>
+  </data>
+  <data name="FanPreset_Default" xml:space="preserve">
+    <value>По умолчанию</value>
+  </data>
+  <data name="FanPreset_Silent" xml:space="preserve">
+    <value>Бесшумный</value>
+  </data>
+  <data name="FanPreset_Balanced" xml:space="preserve">
+    <value>Сбалансированный</value>
+  </data>
+  <data name="FanPreset_Performance" xml:space="preserve">
+    <value>Производительный</value>
+  </data>
+  <data name="PerfMode_Silent" xml:space="preserve">
+    <value>Тихий</value>
+  </data>
+  <data name="PerfMode_Balanced" xml:space="preserve">
+    <value>Сбалансированный</value>
+  </data>
+  <data name="PerfMode_Performance" xml:space="preserve">
+    <value>Производительный</value>
+  </data>
+  <data name="PerfMode_Turbo" xml:space="preserve">
+    <value>Турбо</value>
+  </data>
+  <data name="PerfMode_Comfort" xml:space="preserve">
+    <value>Комфортный</value>
+  </data>
+  <data name="KeyboardProfile_Default" xml:space="preserve">
+    <value>По умолчанию</value>
+  </data>
+  <data name="KeyboardProfile_GameMode" xml:space="preserve">
+    <value>Игровой режим</value>
+  </data>
+  <data name="KeyboardProfile_Ambient" xml:space="preserve">
+    <value>Ambient</value>
+  </data>
+  <data name="KeyboardProfile_Custom1" xml:space="preserve">
+    <value>Пользовательский 1</value>
+  </data>
+  <data name="KeyboardProfile_Custom2" xml:space="preserve">
+    <value>Пользовательский 2</value>
+  </data>
+  <data name="Peripheral_Default" xml:space="preserve">
+    <value>По умолчанию</value>
+  </data>
+  <data name="Peripheral_RgbWave" xml:space="preserve">
+    <value>RGB-волна</value>
+  </data>
+  <data name="Peripheral_StaticBlue" xml:space="preserve">
+    <value>Постоянный синий</value>
+  </data>
+  <data name="Peripheral_Breathing" xml:space="preserve">
+    <value>Дыхание</value>
+  </data>
+  <data name="Peripheral_Reactive" xml:space="preserve">
+    <value>Реактивный</value>
+  </data>
+  <data name="CleanProfile_Aggressive" xml:space="preserve">
+    <value>Агрессивный</value>
+  </data>
+  <data name="CleanProfile_Balanced" xml:space="preserve">
+    <value>Сбалансированный</value>
+  </data>
+  <data name="CleanProfile_Conservative" xml:space="preserve">
+    <value>Консервативный</value>
+  </data>
+  <data name="CleanProfile_OffPeakOnly" xml:space="preserve">
+    <value>Только вне пиков</value>
+  </data>
+  <data name="CleanProfile_Manual" xml:space="preserve">
+    <value>Вручную</value>
+  </data>
+  <data name="Speed_Slow" xml:space="preserve">
+    <value>Медленно</value>
+  </data>
+  <data name="Speed_Medium" xml:space="preserve">
+    <value>Средне</value>
+  </data>
+  <data name="Speed_Fast" xml:space="preserve">
+    <value>Быстро</value>
+  </data>
+  <data name="Battery_Below" xml:space="preserve">
+    <value>Ниже</value>
+  </data>
+  <data name="Battery_Above" xml:space="preserve">
+    <value>Выше</value>
+  </data>
+  <data name="AcPower_Connected" xml:space="preserve">
+    <value>Подключено</value>
+  </data>
+  <data name="AcPower_Disconnected" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="Lid_Closed" xml:space="preserve">
+    <value>Закрыта</value>
+  </data>
+  <data name="Lid_Open" xml:space="preserve">
+    <value>Открыта</value>
+  </data>
 </root>

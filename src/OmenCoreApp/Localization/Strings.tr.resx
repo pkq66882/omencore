@@ -7138,4 +7138,199 @@
   <data name="GpuBoost_WattageCustom" xml:space="preserve">
     <value>Özel</value>
   </data>
+  <data name="SettingsView_BackendAuto" xml:space="preserve">
+    <value>Otomatik</value>
+  </data>
+  <data name="SettingsView_BackendWmiBios" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="SettingsView_BackendWmi" xml:space="preserve">
+    <value>WMI</value>
+  </data>
+  <data name="SettingsView_BackendEc" xml:space="preserve">
+    <value>EC</value>
+  </data>
+  <data name="Osd_PositionTopLeft" xml:space="preserve">
+    <value>Sol üst</value>
+  </data>
+  <data name="Osd_PositionTopCenter" xml:space="preserve">
+    <value>Üst orta</value>
+  </data>
+  <data name="Osd_PositionTopRight" xml:space="preserve">
+    <value>Sağ üst</value>
+  </data>
+  <data name="Osd_PositionBottomLeft" xml:space="preserve">
+    <value>Sol alt</value>
+  </data>
+  <data name="Osd_PositionBottomCenter" xml:space="preserve">
+    <value>Alt orta</value>
+  </data>
+  <data name="Osd_PositionBottomRight" xml:space="preserve">
+    <value>Sağ alt</value>
+  </data>
+  <data name="Osd_TargetPrimary" xml:space="preserve">
+    <value>Birincil ekran</value>
+  </data>
+  <data name="Osd_TargetActiveWindow" xml:space="preserve">
+    <value>Etkin pencere</value>
+  </data>
+  <data name="Osd_TargetMouseCursor" xml:space="preserve">
+    <value>Fare imlecinin bulunduğu ekran</value>
+  </data>
+  <data name="Osd_DensityCompact" xml:space="preserve">
+    <value>Kompakt</value>
+  </data>
+  <data name="Osd_DensityBalanced" xml:space="preserve">
+    <value>Dengeli</value>
+  </data>
+  <data name="Osd_DensityComfortable" xml:space="preserve">
+    <value>Rahat</value>
+  </data>
+  <data name="Osd_AccentCyan" xml:space="preserve">
+    <value>Camgöbeği</value>
+  </data>
+  <data name="Osd_AccentOrange" xml:space="preserve">
+    <value>Turuncu</value>
+  </data>
+  <data name="Osd_AccentTeal" xml:space="preserve">
+    <value>Deniz mavisi</value>
+  </data>
+  <data name="Osd_AccentMagenta" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="OmenKeyAction_ShowQuickPopup" xml:space="preserve">
+    <value>Hızlı paneli aç</value>
+  </data>
+  <data name="OmenKeyAction_ShowWindow" xml:space="preserve">
+    <value>OmenCore'u göster veya gizle</value>
+  </data>
+  <data name="OmenKeyAction_CyclePerformance" xml:space="preserve">
+    <value>Performans modlarını sırayla değiştir</value>
+  </data>
+  <data name="OmenKeyAction_CycleFanMode" xml:space="preserve">
+    <value>Fan modlarını sırayla değiştir</value>
+  </data>
+  <data name="OmenKeyAction_ToggleMaxCooling" xml:space="preserve">
+    <value>Maksimum soğutma aç/kapat</value>
+  </data>
+  <data name="OmenKeyAction_ToggleOsd" xml:space="preserve">
+    <value>Ekran üstü göstergeyi göster veya gizle</value>
+  </data>
+  <data name="OmenKeyAction_LaunchExternalApp" xml:space="preserve">
+    <value>Bir uygulama başlat</value>
+  </data>
+  <data name="OmenKeyAction_DoNothing" xml:space="preserve">
+    <value>Hiçbir şey yapma (tuşu engelle)</value>
+  </data>
+  <data name="FanPreset_Auto" xml:space="preserve">
+    <value>Otomatik</value>
+  </data>
+  <data name="FanPreset_Quiet" xml:space="preserve">
+    <value>Sessiz</value>
+  </data>
+  <data name="FanPreset_Extreme" xml:space="preserve">
+    <value>Aşırı</value>
+  </data>
+  <data name="FanPreset_Max" xml:space="preserve">
+    <value>Maksimum</value>
+  </data>
+  <data name="FanPreset_Default" xml:space="preserve">
+    <value>Varsayılan</value>
+  </data>
+  <data name="FanPreset_Silent" xml:space="preserve">
+    <value>Sessiz</value>
+  </data>
+  <data name="FanPreset_Balanced" xml:space="preserve">
+    <value>Dengeli</value>
+  </data>
+  <data name="FanPreset_Performance" xml:space="preserve">
+    <value>Performans</value>
+  </data>
+  <data name="PerfMode_Silent" xml:space="preserve">
+    <value>Sessiz</value>
+  </data>
+  <data name="PerfMode_Balanced" xml:space="preserve">
+    <value>Dengeli</value>
+  </data>
+  <data name="PerfMode_Performance" xml:space="preserve">
+    <value>Performans</value>
+  </data>
+  <data name="PerfMode_Turbo" xml:space="preserve">
+    <value>Turbo</value>
+  </data>
+  <data name="PerfMode_Comfort" xml:space="preserve">
+    <value>Konfor</value>
+  </data>
+  <data name="KeyboardProfile_Default" xml:space="preserve">
+    <value>Varsayılan</value>
+  </data>
+  <data name="KeyboardProfile_GameMode" xml:space="preserve">
+    <value>Oyun modu</value>
+  </data>
+  <data name="KeyboardProfile_Ambient" xml:space="preserve">
+    <value>Ambient</value>
+  </data>
+  <data name="KeyboardProfile_Custom1" xml:space="preserve">
+    <value>Özel 1</value>
+  </data>
+  <data name="KeyboardProfile_Custom2" xml:space="preserve">
+    <value>Özel 2</value>
+  </data>
+  <data name="Peripheral_Default" xml:space="preserve">
+    <value>Varsayılan</value>
+  </data>
+  <data name="Peripheral_RgbWave" xml:space="preserve">
+    <value>RGB dalga</value>
+  </data>
+  <data name="Peripheral_StaticBlue" xml:space="preserve">
+    <value>Sabit mavi</value>
+  </data>
+  <data name="Peripheral_Breathing" xml:space="preserve">
+    <value>Nefes</value>
+  </data>
+  <data name="Peripheral_Reactive" xml:space="preserve">
+    <value>Tepkisel</value>
+  </data>
+  <data name="CleanProfile_Aggressive" xml:space="preserve">
+    <value>Agresif</value>
+  </data>
+  <data name="CleanProfile_Balanced" xml:space="preserve">
+    <value>Dengeli</value>
+  </data>
+  <data name="CleanProfile_Conservative" xml:space="preserve">
+    <value>Tutucu</value>
+  </data>
+  <data name="CleanProfile_OffPeakOnly" xml:space="preserve">
+    <value>Yalnızca yoğun olmayan saatler</value>
+  </data>
+  <data name="CleanProfile_Manual" xml:space="preserve">
+    <value>Manuel</value>
+  </data>
+  <data name="Speed_Slow" xml:space="preserve">
+    <value>Yavaş</value>
+  </data>
+  <data name="Speed_Medium" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="Speed_Fast" xml:space="preserve">
+    <value>Hızlı</value>
+  </data>
+  <data name="Battery_Below" xml:space="preserve">
+    <value>Altında</value>
+  </data>
+  <data name="Battery_Above" xml:space="preserve">
+    <value>Üstünde</value>
+  </data>
+  <data name="AcPower_Connected" xml:space="preserve">
+    <value>Bağlı</value>
+  </data>
+  <data name="AcPower_Disconnected" xml:space="preserve">
+    <value>Bağlı değil</value>
+  </data>
+  <data name="Lid_Closed" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="Lid_Open" xml:space="preserve">
+    <value>Açık</value>
+  </data>
 </root>

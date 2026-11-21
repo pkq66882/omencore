@@ -548,7 +548,7 @@
     <value>✓ WMI/EC 风扇控制，支持自定义曲线</value>
   </data>
   <data name="AboutWindow_CpuUndervoltIntelCurveOptimizerAmd" xml:space="preserve">
-    <value>✓ CPU 降压（Intel）与 Curve Optimizer（AMD）</value>
+    <value>✓ CPU 降压（Intel）与曲线优化（AMD）</value>
   </data>
   <data name="AboutWindow_GpuDynamicBoostTgpPpab" xml:space="preserve">
     <value>✓ GPU Dynamic Boost（TGP/PPAB）</value>
@@ -1142,7 +1142,7 @@
     <value>机型能力</value>
   </data>
   <data name="DiagnosticsView_ProductId" xml:space="preserve">
-    <value>Product ID：</value>
+    <value>产品 ID：</value>
   </data>
   <data name="DiagnosticsView_UserVerifiedProfile" xml:space="preserve">
     <value>✓ 用户验证过的方案</value>
@@ -2981,7 +2981,7 @@
     <value>将最大风扇模式恢复为自动</value>
   </data>
   <data name="SettingsView_OffKeepsMaxUntilYouChangeItCooldownHandsTh" xml:space="preserve">
-    <value>关闭：保持 Max 直到你手动更改。Cooldown：CPU 和 GPU 连续 2 分钟低于 60°C 后交还 BIOS 自动。Timer：到达所设时间后交还。尚未在硬件上确认。</value>
+    <value>关闭：保持最大散热，直到你手动更改。冷却：CPU 与 GPU 连续 2 分钟低于 60°C 后交还 BIOS 自动控制。计时：到达设定时间后交还。尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_Minutes" xml:space="preserve">
     <value>分钟</value>
@@ -3356,7 +3356,7 @@
     <value>键盘后端</value>
   </data>
   <data name="SettingsView_AutoWmiBiosWmiEcSetSpecificIfAutoDetection" xml:space="preserve">
-    <value>Auto = WMI BIOS → WMI → EC。自动检测失败时请指定具体后端。</value>
+    <value>自动 = WMI BIOS → WMI → EC。自动检测失败时请指定具体后端。</value>
   </data>
   <data name="SettingsView_InvertRgbZoneOrder" xml:space="preserve">
     <value>反转 RGB 分区顺序</value>
@@ -4097,7 +4097,7 @@
     <value>持续功耗</value>
   </data>
   <data name="TuningView_TctlLimit" xml:space="preserve">
-    <value>TCTL 限制</value>
+    <value>Tctl 限制</value>
   </data>
   <data name="TuningView_ThrottlePoint" xml:space="preserve">
     <value>降频点</value>
@@ -4865,7 +4865,7 @@
     <value>尚未读取——按“刷新”向 SMU 查询当前运行值。</value>
   </data>
   <data name="SystemControlViewModel_CurveOptimizerTitle" xml:space="preserve">
-    <value>CPU Curve Optimizer（AMD）</value>
+    <value>CPU 曲线优化（AMD Curve Optimizer）</value>
   </data>
   <data name="SystemControlViewModel_DetectedLimits" xml:space="preserve">
     <value>检测到的 {0} 限制：核心 {1}，显存 {2}，功耗 {3}。</value>
@@ -4925,7 +4925,7 @@
     <value>已验证：失败（{0}）</value>
   </data>
   <data name="TuningStatus_VerifiedNearestStep" xml:space="preserve">
-    <value>已验证：应用到最接近的 Curve Optimizer 档位（每档 {0} mV 等效）</value>
+    <value>已验证：应用到了最接近的曲线优化档位（每档约 {0} mV）</value>
   </data>
   <data name="TuningStatus_VerifiedWarning" xml:space="preserve">
     <value>已验证：警告（{0}）</value>
@@ -5165,7 +5165,7 @@
     <value>开：全屏和无边框窗口游戏在内存压力不紧迫时只做轻度工作集修剪。</value>
   </data>
   <data name="SystemControlViewModel_ApplyCurveOptimizer" xml:space="preserve">
-    <value>应用 Curve Optimizer</value>
+    <value>应用曲线优化</value>
   </data>
   <data name="SystemControlViewModel_ApplyUndervolt" xml:space="preserve">
     <value>应用降压</value>
@@ -6521,7 +6521,7 @@
     <value>禁用"提高指针精确度"，鼠标移动保持原始 1:1——游戏玩家通常更偏好这种手感。</value>
   </data>
   <data name="OptimizeDetail_InputGameDvr" xml:space="preserve">
-    <value>禁用后台游戏录制，游戏中 Game DVR 不再占用资源。</value>
+    <value>禁用后台游戏录制，游戏中的“游戏 DVR”不再占用资源。</value>
   </data>
   <data name="OptimizeDetail_InputGameBar" xml:space="preserve">
     <value>禁用 Xbox 游戏栏悬浮层和启动提示，游戏中不再被打断。</value>
@@ -6533,7 +6533,7 @@
     <value>禁用亚克力/透明效果，降低合成开销、减少视觉干扰。</value>
   </data>
   <data name="OptimizeDetail_VisualAnimations" xml:space="preserve">
-    <value>关闭常用 shell 动画和菜单延迟，桌面更跟手。</value>
+    <value>关闭常用的界面动画和菜单延迟，操作更跟手。</value>
   </data>
   <data name="OptimizeDetail_StorageTrim" xml:space="preserve">
     <value>启用 NTFS TRIM，让 SSD 高效回收已删除数据块、长期保持性能。</value>
@@ -6584,10 +6584,10 @@
     <value>将 MouseSpeed 改回 1 并恢复阈值，或在 Windows 鼠标设置中重新开启指针精确度。</value>
   </data>
   <data name="OptimizeUndo_InputGameDvr" xml:space="preserve">
-    <value>删除 Game DVR 策略值或重新设为启用。</value>
+    <value>删除“游戏 DVR”策略值，或重新设为启用。</value>
   </data>
   <data name="OptimizeUndo_InputGameBar" xml:space="preserve">
-    <value>删除这些 Game Bar 值，或在 Windows 设置中重新启用 Xbox 游戏栏。</value>
+    <value>删除这些“游戏栏”策略值，或在 Windows 设置中重新启用 Xbox 游戏栏。</value>
   </data>
   <data name="OptimizeUndo_InputFullscreenOpt" xml:space="preserve">
     <value>删除 GameConfigStore 全屏相关值，恢复 Windows 默认。</value>
@@ -7137,5 +7137,200 @@
   </data>
   <data name="GpuBoost_WattageCustom" xml:space="preserve">
     <value>自定义</value>
+  </data>
+  <data name="SettingsView_BackendAuto" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="SettingsView_BackendWmiBios" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="SettingsView_BackendWmi" xml:space="preserve">
+    <value>WMI</value>
+  </data>
+  <data name="SettingsView_BackendEc" xml:space="preserve">
+    <value>EC</value>
+  </data>
+  <data name="Osd_PositionTopLeft" xml:space="preserve">
+    <value>左上</value>
+  </data>
+  <data name="Osd_PositionTopCenter" xml:space="preserve">
+    <value>上中</value>
+  </data>
+  <data name="Osd_PositionTopRight" xml:space="preserve">
+    <value>右上</value>
+  </data>
+  <data name="Osd_PositionBottomLeft" xml:space="preserve">
+    <value>左下</value>
+  </data>
+  <data name="Osd_PositionBottomCenter" xml:space="preserve">
+    <value>下中</value>
+  </data>
+  <data name="Osd_PositionBottomRight" xml:space="preserve">
+    <value>右下</value>
+  </data>
+  <data name="Osd_TargetPrimary" xml:space="preserve">
+    <value>主显示器</value>
+  </data>
+  <data name="Osd_TargetActiveWindow" xml:space="preserve">
+    <value>活动窗口</value>
+  </data>
+  <data name="Osd_TargetMouseCursor" xml:space="preserve">
+    <value>鼠标所在显示器</value>
+  </data>
+  <data name="Osd_DensityCompact" xml:space="preserve">
+    <value>紧凑</value>
+  </data>
+  <data name="Osd_DensityBalanced" xml:space="preserve">
+    <value>均衡</value>
+  </data>
+  <data name="Osd_DensityComfortable" xml:space="preserve">
+    <value>舒适</value>
+  </data>
+  <data name="Osd_AccentCyan" xml:space="preserve">
+    <value>青色</value>
+  </data>
+  <data name="Osd_AccentOrange" xml:space="preserve">
+    <value>橙色</value>
+  </data>
+  <data name="Osd_AccentTeal" xml:space="preserve">
+    <value>蓝绿</value>
+  </data>
+  <data name="Osd_AccentMagenta" xml:space="preserve">
+    <value>品红</value>
+  </data>
+  <data name="OmenKeyAction_ShowQuickPopup" xml:space="preserve">
+    <value>打开快速面板</value>
+  </data>
+  <data name="OmenKeyAction_ShowWindow" xml:space="preserve">
+    <value>显示或隐藏 OmenCore</value>
+  </data>
+  <data name="OmenKeyAction_CyclePerformance" xml:space="preserve">
+    <value>循环切换性能模式</value>
+  </data>
+  <data name="OmenKeyAction_CycleFanMode" xml:space="preserve">
+    <value>循环切换风扇模式</value>
+  </data>
+  <data name="OmenKeyAction_ToggleMaxCooling" xml:space="preserve">
+    <value>最大散热 开/关</value>
+  </data>
+  <data name="OmenKeyAction_ToggleOsd" xml:space="preserve">
+    <value>显示或隐藏屏幕叠加（OSD）</value>
+  </data>
+  <data name="OmenKeyAction_LaunchExternalApp" xml:space="preserve">
+    <value>启动外部应用</value>
+  </data>
+  <data name="OmenKeyAction_DoNothing" xml:space="preserve">
+    <value>不执行操作（拦截该键）</value>
+  </data>
+  <data name="FanPreset_Auto" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="FanPreset_Quiet" xml:space="preserve">
+    <value>安静</value>
+  </data>
+  <data name="FanPreset_Extreme" xml:space="preserve">
+    <value>极致</value>
+  </data>
+  <data name="FanPreset_Max" xml:space="preserve">
+    <value>最大</value>
+  </data>
+  <data name="FanPreset_Default" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="FanPreset_Silent" xml:space="preserve">
+    <value>静音</value>
+  </data>
+  <data name="FanPreset_Balanced" xml:space="preserve">
+    <value>平衡</value>
+  </data>
+  <data name="FanPreset_Performance" xml:space="preserve">
+    <value>性能</value>
+  </data>
+  <data name="PerfMode_Silent" xml:space="preserve">
+    <value>冷静</value>
+  </data>
+  <data name="PerfMode_Balanced" xml:space="preserve">
+    <value>平衡</value>
+  </data>
+  <data name="PerfMode_Performance" xml:space="preserve">
+    <value>狂暴</value>
+  </data>
+  <data name="PerfMode_Turbo" xml:space="preserve">
+    <value>疾速</value>
+  </data>
+  <data name="PerfMode_Comfort" xml:space="preserve">
+    <value>舒适</value>
+  </data>
+  <data name="KeyboardProfile_Default" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="KeyboardProfile_GameMode" xml:space="preserve">
+    <value>游戏模式</value>
+  </data>
+  <data name="KeyboardProfile_Ambient" xml:space="preserve">
+    <value>氛围</value>
+  </data>
+  <data name="KeyboardProfile_Custom1" xml:space="preserve">
+    <value>自定义 1</value>
+  </data>
+  <data name="KeyboardProfile_Custom2" xml:space="preserve">
+    <value>自定义 2</value>
+  </data>
+  <data name="Peripheral_Default" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="Peripheral_RgbWave" xml:space="preserve">
+    <value>RGB 波浪</value>
+  </data>
+  <data name="Peripheral_StaticBlue" xml:space="preserve">
+    <value>常亮蓝</value>
+  </data>
+  <data name="Peripheral_Breathing" xml:space="preserve">
+    <value>呼吸</value>
+  </data>
+  <data name="Peripheral_Reactive" xml:space="preserve">
+    <value>响应式</value>
+  </data>
+  <data name="CleanProfile_Aggressive" xml:space="preserve">
+    <value>激进</value>
+  </data>
+  <data name="CleanProfile_Balanced" xml:space="preserve">
+    <value>均衡</value>
+  </data>
+  <data name="CleanProfile_Conservative" xml:space="preserve">
+    <value>保守</value>
+  </data>
+  <data name="CleanProfile_OffPeakOnly" xml:space="preserve">
+    <value>仅闲时</value>
+  </data>
+  <data name="CleanProfile_Manual" xml:space="preserve">
+    <value>手动</value>
+  </data>
+  <data name="Speed_Slow" xml:space="preserve">
+    <value>慢</value>
+  </data>
+  <data name="Speed_Medium" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="Speed_Fast" xml:space="preserve">
+    <value>快</value>
+  </data>
+  <data name="Battery_Below" xml:space="preserve">
+    <value>低于</value>
+  </data>
+  <data name="Battery_Above" xml:space="preserve">
+    <value>高于</value>
+  </data>
+  <data name="AcPower_Connected" xml:space="preserve">
+    <value>已接通</value>
+  </data>
+  <data name="AcPower_Disconnected" xml:space="preserve">
+    <value>已断开</value>
+  </data>
+  <data name="Lid_Closed" xml:space="preserve">
+    <value>已合上</value>
+  </data>
+  <data name="Lid_Open" xml:space="preserve">
+    <value>已打开</value>
   </data>
 </root>

@@ -6735,7 +6735,7 @@
     <value>Fan/Perf: {0}</value>
   </data>
   <data name="TrayIcon_PerfQuietLabel" xml:space="preserve">
-    <value> 冷静——风扇静音，延长续航</value>
+    <value> Quiet — Silent fans, longer battery life</value>
   </data>
   <data name="UpdateViewModel_NoReleaseData" xml:space="preserve">
     <value>No release data returned from GitHub.</value>
@@ -7141,5 +7141,200 @@
   </data>
   <data name="GpuBoost_WattageCustom" xml:space="preserve">
     <value>Custom</value>
+  </data>
+  <data name="SettingsView_BackendAuto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="SettingsView_BackendWmiBios" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="SettingsView_BackendWmi" xml:space="preserve">
+    <value>WMI</value>
+  </data>
+  <data name="SettingsView_BackendEc" xml:space="preserve">
+    <value>EC</value>
+  </data>
+  <data name="Osd_PositionTopLeft" xml:space="preserve">
+    <value>Top Left</value>
+  </data>
+  <data name="Osd_PositionTopCenter" xml:space="preserve">
+    <value>Top Center</value>
+  </data>
+  <data name="Osd_PositionTopRight" xml:space="preserve">
+    <value>Top Right</value>
+  </data>
+  <data name="Osd_PositionBottomLeft" xml:space="preserve">
+    <value>Bottom Left</value>
+  </data>
+  <data name="Osd_PositionBottomCenter" xml:space="preserve">
+    <value>Bottom Center</value>
+  </data>
+  <data name="Osd_PositionBottomRight" xml:space="preserve">
+    <value>Bottom Right</value>
+  </data>
+  <data name="Osd_TargetPrimary" xml:space="preserve">
+    <value>Primary display</value>
+  </data>
+  <data name="Osd_TargetActiveWindow" xml:space="preserve">
+    <value>Active window</value>
+  </data>
+  <data name="Osd_TargetMouseCursor" xml:space="preserve">
+    <value>Display with mouse cursor</value>
+  </data>
+  <data name="Osd_DensityCompact" xml:space="preserve">
+    <value>Compact</value>
+  </data>
+  <data name="Osd_DensityBalanced" xml:space="preserve">
+    <value>Balanced</value>
+  </data>
+  <data name="Osd_DensityComfortable" xml:space="preserve">
+    <value>Comfortable</value>
+  </data>
+  <data name="Osd_AccentCyan" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="Osd_AccentOrange" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="Osd_AccentTeal" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="Osd_AccentMagenta" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="OmenKeyAction_ShowQuickPopup" xml:space="preserve">
+    <value>Open the quick panel</value>
+  </data>
+  <data name="OmenKeyAction_ShowWindow" xml:space="preserve">
+    <value>Show or hide OmenCore</value>
+  </data>
+  <data name="OmenKeyAction_CyclePerformance" xml:space="preserve">
+    <value>Cycle performance modes</value>
+  </data>
+  <data name="OmenKeyAction_CycleFanMode" xml:space="preserve">
+    <value>Cycle fan modes</value>
+  </data>
+  <data name="OmenKeyAction_ToggleMaxCooling" xml:space="preserve">
+    <value>Max cooling on / off</value>
+  </data>
+  <data name="OmenKeyAction_ToggleOsd" xml:space="preserve">
+    <value>Show or hide the on-screen display</value>
+  </data>
+  <data name="OmenKeyAction_LaunchExternalApp" xml:space="preserve">
+    <value>Launch an app</value>
+  </data>
+  <data name="OmenKeyAction_DoNothing" xml:space="preserve">
+    <value>Do nothing (block the key)</value>
+  </data>
+  <data name="FanPreset_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="FanPreset_Quiet" xml:space="preserve">
+    <value>Quiet</value>
+  </data>
+  <data name="FanPreset_Extreme" xml:space="preserve">
+    <value>Extreme</value>
+  </data>
+  <data name="FanPreset_Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="FanPreset_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="FanPreset_Silent" xml:space="preserve">
+    <value>Silent</value>
+  </data>
+  <data name="FanPreset_Balanced" xml:space="preserve">
+    <value>Balanced</value>
+  </data>
+  <data name="FanPreset_Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="PerfMode_Silent" xml:space="preserve">
+    <value>Silent</value>
+  </data>
+  <data name="PerfMode_Balanced" xml:space="preserve">
+    <value>Balanced</value>
+  </data>
+  <data name="PerfMode_Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="PerfMode_Turbo" xml:space="preserve">
+    <value>Turbo</value>
+  </data>
+  <data name="PerfMode_Comfort" xml:space="preserve">
+    <value>Comfort</value>
+  </data>
+  <data name="KeyboardProfile_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="KeyboardProfile_GameMode" xml:space="preserve">
+    <value>Game Mode</value>
+  </data>
+  <data name="KeyboardProfile_Ambient" xml:space="preserve">
+    <value>Ambient</value>
+  </data>
+  <data name="KeyboardProfile_Custom1" xml:space="preserve">
+    <value>Custom 1</value>
+  </data>
+  <data name="KeyboardProfile_Custom2" xml:space="preserve">
+    <value>Custom 2</value>
+  </data>
+  <data name="Peripheral_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="Peripheral_RgbWave" xml:space="preserve">
+    <value>RGB Wave</value>
+  </data>
+  <data name="Peripheral_StaticBlue" xml:space="preserve">
+    <value>Static Blue</value>
+  </data>
+  <data name="Peripheral_Breathing" xml:space="preserve">
+    <value>Breathing</value>
+  </data>
+  <data name="Peripheral_Reactive" xml:space="preserve">
+    <value>Reactive</value>
+  </data>
+  <data name="CleanProfile_Aggressive" xml:space="preserve">
+    <value>Aggressive</value>
+  </data>
+  <data name="CleanProfile_Balanced" xml:space="preserve">
+    <value>Balanced</value>
+  </data>
+  <data name="CleanProfile_Conservative" xml:space="preserve">
+    <value>Conservative</value>
+  </data>
+  <data name="CleanProfile_OffPeakOnly" xml:space="preserve">
+    <value>OffPeakOnly</value>
+  </data>
+  <data name="CleanProfile_Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="Speed_Slow" xml:space="preserve">
+    <value>Slow</value>
+  </data>
+  <data name="Speed_Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Speed_Fast" xml:space="preserve">
+    <value>Fast</value>
+  </data>
+  <data name="Battery_Below" xml:space="preserve">
+    <value>Below</value>
+  </data>
+  <data name="Battery_Above" xml:space="preserve">
+    <value>Above</value>
+  </data>
+  <data name="AcPower_Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="AcPower_Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="Lid_Closed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="Lid_Open" xml:space="preserve">
+    <value>Open</value>
   </data>
 </root>

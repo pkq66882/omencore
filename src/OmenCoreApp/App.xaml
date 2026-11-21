@@ -45,6 +45,37 @@
             <DataTemplate x:Key="GpuBoostLevelItemTemplate">
                 <TextBlock Text="{Binding Converter={StaticResource GpuBoostLevelDisplay}}"/>
             </DataTemplate>
+            <local:SettingsTokenDisplayConverter x:Key="SettingsTokenDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <DataTemplate x:Key="SettingsTokenItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="FanPresetItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=FanPreset}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="PerfModeItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=PerfMode}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="KeyboardProfileItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=KeyboardProfile}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="PeripheralProfileItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=Peripheral}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="CleanProfileItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=CleanProfile}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="SpeedItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=Speed}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="BatteryConditionItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=BatteryCondition}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="AcPowerItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=AcPower}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="LidItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=Lid}"/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

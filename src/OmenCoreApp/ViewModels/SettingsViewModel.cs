@@ -1535,7 +1535,22 @@ namespace OmenCore.ViewModels
         // Key = the string stored in config, Value = what the list shows. ToggleFanMode and
         // TogglePerformanceMode are older aliases of the Cycle actions; the getter maps them so a
         // saved alias still selects its entry.
-        public IReadOnlyList<KeyValuePair<string, string>> OmenKeyActionOptions => OmenKeyActionChoices;
+        public IReadOnlyList<KeyValuePair<string, string>> OmenKeyActionOptions =>
+            OmenKeyActionChoices.Select(c => new KeyValuePair<string, string>(c.Key, LocalizeOmenKeyAction(c.Key))).ToList();
+
+        /// <summary>Display labels for the OMEN-key action selector; the stored keys stay canonical.</summary>
+        private static string LocalizeOmenKeyAction(string key) => key switch
+        {
+            "ShowQuickPopup" => Strings.OmenKeyAction_ShowQuickPopup,
+            "ShowWindow" => Strings.OmenKeyAction_ShowWindow,
+            "CyclePerformance" => Strings.OmenKeyAction_CyclePerformance,
+            "CycleFanMode" => Strings.OmenKeyAction_CycleFanMode,
+            "ToggleMaxCooling" => Strings.OmenKeyAction_ToggleMaxCooling,
+            "ToggleOsd" => Strings.OmenKeyAction_ToggleOsd,
+            "LaunchExternalApp" => Strings.OmenKeyAction_LaunchExternalApp,
+            "DoNothing" => Strings.OmenKeyAction_DoNothing,
+            _ => key
+        };
 
         internal static readonly IReadOnlyList<KeyValuePair<string, string>> OmenKeyActionChoices = new[]
         {
