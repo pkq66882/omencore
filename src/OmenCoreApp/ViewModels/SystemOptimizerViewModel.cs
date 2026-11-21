@@ -58,8 +58,7 @@ namespace OmenCore.ViewModels
             // can be safely set from background threads (avoids cross-thread binding errors).
             _optimizerService.StatusChanged += status => 
             {
-                DispatcherHelper.RunOnUiThread(() => HandleServiceStatus(
-                    status == "Verifying optimization state..." ? Strings.SystemOptimizerViewModel_VerifyingState : status));
+                DispatcherHelper.RunOnUiThread(() => HandleServiceStatus(status));
             };
             
             // Initialize collections
@@ -156,7 +155,7 @@ namespace OmenCore.ViewModels
         }
 
         public string LastVerifiedText => LastVerifiedAt.HasValue
-            ? string.Format(Strings.SystemOptimizer_LastVerified, LastVerifiedAt.Value.ToString("g"))
+            ? $"Last verified {LastVerifiedAt.Value:g}"
             : Strings.SystemOptimizerViewModel_VerificationPending;
 
         public string VerificationSummary
@@ -226,7 +225,7 @@ namespace OmenCore.ViewModels
         }
 
         public string PreflightRiskBannerText => PreflightHasHighRisk
-            ? string.Format(Strings.SystemOptimizer_PreflightHighRisk, PreflightHighRiskCount)
+            ? $"Preflight found {PreflightHighRiskCount} High-risk optimization(s). Review before applying Gaming Max."
             : "Preflight contains no High-risk optimizations.";
 
         // Optimization Collections
@@ -270,7 +269,7 @@ namespace OmenCore.ViewModels
                 _currentState = await _optimizerService.VerifyStateAsync();
                 _expectedStateForDrift = _currentState;
                 LastVerifiedAt = _currentState.LastChecked;
-                VerificationSummary = Strings.SystemOptimizer_VerifiedCurrentState;
+                VerificationSummary = "Verified against current system state";
                 HasStateDrift = false;
                 _lastDriftSummary = new OptimizationDriftSummary();
                 DriftWarningRollup = "No drift explanations yet.";
@@ -311,8 +310,8 @@ namespace OmenCore.ViewModels
                 PowerOptimizations.Add(new OptimizationItem
                 {
                     Id = "power_ultimate_perf",
-                    Name = Strings.SystemOptimizer_PowerUltimatePerfName,
-                    Description = Strings.SystemOptimizer_PowerUltimatePerfDesc,
+                    Name = "Ultimate Performance Plan",
+                    Description = "Sets Windows power plan to Ultimate Performance for maximum CPU/GPU performance",
                     IsEnabled = _currentState.Power.UltimatePerformancePlan,
                     Risk = OptimizationRisk.Low,
                     Category = "Power",
@@ -321,8 +320,8 @@ namespace OmenCore.ViewModels
                 PowerOptimizations.Add(new OptimizationItem
                 {
                     Id = "power_gpu_scheduling",
-                    Name = Strings.SystemOptimizer_PowerGpuSchedName,
-                    Description = Strings.SystemOptimizer_PowerGpuSchedDesc,
+                    Name = "Hardware GPU Scheduling",
+                    Description = "Enables hardware-accelerated GPU scheduling (Windows 10 2004+)",
                     IsEnabled = _currentState.Power.HardwareGpuScheduling,
                     Risk = OptimizationRisk.Low,
                     Category = "Power",
@@ -331,8 +330,8 @@ namespace OmenCore.ViewModels
                 PowerOptimizations.Add(new OptimizationItem
                 {
                     Id = "power_game_mode",
-                    Name = Strings.SystemOptimizer_PowerGameModeName,
-                    Description = Strings.SystemOptimizer_PowerGameModeDesc,
+                    Name = "Game Mode",
+                    Description = "Enables Windows Game Mode for better gaming performance",
                     IsEnabled = _currentState.Power.GameModeEnabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Power",
@@ -341,8 +340,8 @@ namespace OmenCore.ViewModels
                 PowerOptimizations.Add(new OptimizationItem
                 {
                     Id = "power_foreground_priority",
-                    Name = Strings.SystemOptimizer_PowerForegroundName,
-                    Description = Strings.SystemOptimizer_PowerForegroundDesc,
+                    Name = "Foreground Priority Boost",
+                    Description = "Increases CPU priority for foreground applications",
                     IsEnabled = _currentState.Power.ForegroundPriority,
                     Risk = OptimizationRisk.Low,
                     Category = "Power",
@@ -354,8 +353,8 @@ namespace OmenCore.ViewModels
                 ServiceOptimizations.Add(new OptimizationItem
                 {
                     Id = "service_telemetry",
-                    Name = Strings.SystemOptimizer_ServiceTelemetryName,
-                    Description = Strings.SystemOptimizer_ServiceTelemetryDesc,
+                    Name = "Disable Telemetry",
+                    Description = "Disables Windows telemetry data collection (DiagTrack service)",
                     IsEnabled = _currentState.Services.TelemetryDisabled,
                     Risk = OptimizationRisk.Medium,
                     Category = "Services",
@@ -364,8 +363,8 @@ namespace OmenCore.ViewModels
                 ServiceOptimizations.Add(new OptimizationItem
                 {
                     Id = "service_sysmain",
-                    Name = Strings.SystemOptimizer_ServiceSysMainName,
-                    Description = Strings.SystemOptimizer_ServiceSysMainDesc,
+                    Name = "Disable SysMain (Superfetch)",
+                    Description = "Disables Superfetch service - recommended for SSD systems",
                     IsEnabled = _currentState.Services.SysMainDisabled,
                     Risk = OptimizationRisk.Medium,
                     Category = "Services",
@@ -374,19 +373,19 @@ namespace OmenCore.ViewModels
                 ServiceOptimizations.Add(new OptimizationItem
                 {
                     Id = "service_search",
-                    Name = Strings.SystemOptimizer_ServiceSearchName,
-                    Description = Strings.SystemOptimizer_ServiceSearchDesc,
+                    Name = "Disable Search Indexing",
+                    Description = "Disables Windows Search indexing for lower disk/CPU usage",
                     IsEnabled = _currentState.Services.SearchIndexingDisabled,
                     Risk = OptimizationRisk.Medium,
-                    Warning = Strings.SystemOptimizer_ServiceSearchWarn,
+                    Warning = "May slow down file searches",
                     Category = "Services",
                     OnToggleAsync = ToggleOptimizationAsync
                 });
                 ServiceOptimizations.Add(new OptimizationItem
                 {
                     Id = "service_diagtrack",
-                    Name = Strings.SystemOptimizer_ServiceDiagTrackName,
-                    Description = Strings.SystemOptimizer_ServiceDiagTrackDesc,
+                    Name = "Disable Connected Experiences",
+                    Description = "Disables Connected User Experiences and Telemetry service",
                     IsEnabled = _currentState.Services.DiagTrackDisabled,
                     Risk = OptimizationRisk.Medium,
                     Category = "Services",
@@ -398,8 +397,8 @@ namespace OmenCore.ViewModels
                 NetworkOptimizations.Add(new OptimizationItem
                 {
                     Id = "network_tcp_nodelay",
-                    Name = Strings.SystemOptimizer_NetworkTcpNoDelayName,
-                    Description = Strings.SystemOptimizer_NetworkTcpNoDelayDesc,
+                    Name = "TCP No Delay",
+                    Description = "Disables TCP delayed acknowledgments for lower latency",
                     IsEnabled = _currentState.Network.TcpNoDelay,
                     Risk = OptimizationRisk.Low,
                     Category = "Network",
@@ -408,8 +407,8 @@ namespace OmenCore.ViewModels
                 NetworkOptimizations.Add(new OptimizationItem
                 {
                     Id = "network_tcp_ack",
-                    Name = Strings.SystemOptimizer_NetworkTcpAckName,
-                    Description = Strings.SystemOptimizer_NetworkTcpAckDesc,
+                    Name = "TCP ACK Optimization",
+                    Description = "Optimizes TCP ACK frequency for faster responses",
                     IsEnabled = _currentState.Network.TcpAckFrequency,
                     Risk = OptimizationRisk.Low,
                     Category = "Network",
@@ -418,8 +417,8 @@ namespace OmenCore.ViewModels
                 NetworkOptimizations.Add(new OptimizationItem
                 {
                     Id = "network_delivery_opt",
-                    Name = Strings.SystemOptimizer_NetworkDeliveryName,
-                    Description = Strings.SystemOptimizer_NetworkDeliveryDesc,
+                    Name = "Disable P2P Updates",
+                    Description = "Disables Delivery Optimization P2P sharing",
                     IsEnabled = _currentState.Network.DeliveryOptimizationDisabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Network",
@@ -428,8 +427,8 @@ namespace OmenCore.ViewModels
                 NetworkOptimizations.Add(new OptimizationItem
                 {
                     Id = "network_nagle",
-                    Name = Strings.SystemOptimizer_NetworkNagleName,
-                    Description = Strings.SystemOptimizer_NetworkNagleDesc,
+                    Name = "Disable Nagle Algorithm",
+                    Description = "Reduces TCP buffering delay - helpful for online games",
                     IsEnabled = _currentState.Network.NagleDisabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Network",
@@ -441,8 +440,8 @@ namespace OmenCore.ViewModels
                 InputOptimizations.Add(new OptimizationItem
                 {
                     Id = "input_mouse_accel",
-                    Name = Strings.SystemOptimizer_InputMouseAccelName,
-                    Description = Strings.SystemOptimizer_InputMouseAccelDesc,
+                    Name = "Disable Mouse Acceleration",
+                    Description = "Disables 'Enhance pointer precision' for 1:1 mouse movement",
                     IsEnabled = _currentState.Input.MouseAccelerationDisabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Input",
@@ -451,8 +450,8 @@ namespace OmenCore.ViewModels
                 InputOptimizations.Add(new OptimizationItem
                 {
                     Id = "input_game_dvr",
-                    Name = Strings.SystemOptimizer_InputGameDvrName,
-                    Description = Strings.SystemOptimizer_InputGameDvrDesc,
+                    Name = "Disable Game DVR",
+                    Description = "Disables background game recording for better performance",
                     IsEnabled = _currentState.Input.GameDvrDisabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Input",
@@ -461,8 +460,8 @@ namespace OmenCore.ViewModels
                 InputOptimizations.Add(new OptimizationItem
                 {
                     Id = "input_game_bar",
-                    Name = Strings.SystemOptimizer_InputGameBarName,
-                    Description = Strings.SystemOptimizer_InputGameBarDesc,
+                    Name = "Disable Xbox Game Bar",
+                    Description = "Disables the Xbox Game Bar overlay",
                     IsEnabled = _currentState.Input.GameBarDisabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Input",
@@ -471,8 +470,8 @@ namespace OmenCore.ViewModels
                 InputOptimizations.Add(new OptimizationItem
                 {
                     Id = "input_fullscreen_opt",
-                    Name = Strings.SystemOptimizer_InputFullscreenName,
-                    Description = Strings.SystemOptimizer_InputFullscreenDesc,
+                    Name = "Fullscreen Optimizations",
+                    Description = "Configures fullscreen optimizations for better compatibility",
                     IsEnabled = _currentState.Input.FullscreenOptimizationsDisabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Input",
@@ -484,8 +483,8 @@ namespace OmenCore.ViewModels
                 VisualOptimizations.Add(new OptimizationItem
                 {
                     Id = "visual_transparency",
-                    Name = Strings.SystemOptimizer_VisualTransparencyName,
-                    Description = Strings.SystemOptimizer_VisualTransparencyDesc,
+                    Name = "Disable Transparency",
+                    Description = "Disables Windows transparency effects",
                     IsEnabled = _currentState.Visual.TransparencyDisabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Visual",
@@ -494,8 +493,8 @@ namespace OmenCore.ViewModels
                 VisualOptimizations.Add(new OptimizationItem
                 {
                     Id = "visual_animations",
-                    Name = Strings.SystemOptimizer_VisualAnimationsName,
-                    Description = Strings.SystemOptimizer_VisualAnimationsDesc,
+                    Name = "Disable Animations",
+                    Description = "Disables window animations for snappier UI",
                     IsEnabled = _currentState.Visual.AnimationsDisabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Visual",
@@ -509,8 +508,8 @@ namespace OmenCore.ViewModels
                     StorageOptimizations.Add(new OptimizationItem
                     {
                         Id = "storage_trim",
-                        Name = Strings.SystemOptimizer_StorageTrimName,
-                        Description = Strings.SystemOptimizer_StorageTrimDesc,
+                        Name = "TRIM for SSD",
+                        Description = "Enables TRIM command for SSD health and performance",
                         IsEnabled = _currentState.Storage.TrimEnabled,
                         Risk = OptimizationRisk.Low,
                         Category = "Storage",
@@ -520,8 +519,8 @@ namespace OmenCore.ViewModels
                 StorageOptimizations.Add(new OptimizationItem
                 {
                     Id = "storage_last_access",
-                    Name = Strings.SystemOptimizer_StorageLastAccessName,
-                    Description = Strings.SystemOptimizer_StorageLastAccessDesc,
+                    Name = "Disable Last Access Timestamps",
+                    Description = "Disables NTFS last access time updates for lower disk activity",
                     IsEnabled = _currentState.Storage.LastAccessDisabled,
                     Risk = OptimizationRisk.Low,
                     Category = "Storage",
@@ -530,11 +529,11 @@ namespace OmenCore.ViewModels
                 StorageOptimizations.Add(new OptimizationItem
                 {
                     Id = "storage_8dot3",
-                    Name = Strings.SystemOptimizer_Storage8dot3Name,
-                    Description = Strings.SystemOptimizer_Storage8dot3Desc,
+                    Name = "Disable 8.3 Names",
+                    Description = "Disables legacy short filename creation",
                     IsEnabled = _currentState.Storage.ShortNamesDisabled,
                     Risk = OptimizationRisk.Low,
-                    Warning = Strings.SystemOptimizer_Storage8dot3Warn,
+                    Warning = "May break very old software",
                     Category = "Storage",
                     OnToggleAsync = ToggleOptimizationAsync
                 });
@@ -884,7 +883,7 @@ namespace OmenCore.ViewModels
                 var driftSummary = SystemOptimizerService.GetDriftExplanations(expectedState, verifiedState);
                 if (!driftSummary.HasDrift)
                 {
-                    VerificationSummary = Strings.SystemOptimizer_NoDrift;
+                    VerificationSummary = "Verified: no drift detected";
                     HasStateDrift = false;
                     _lastDriftSummary = driftSummary;
                     DriftWarningRollup = "No drift explanations yet.";
@@ -923,7 +922,7 @@ namespace OmenCore.ViewModels
             catch (Exception ex)
             {
                 _logger.Error($"Background optimizer verification failed: {ex.Message}");
-                VerificationSummary = Strings.SystemOptimizer_VerificationFailed;
+                VerificationSummary = "Verification failed";
             }
         }
 

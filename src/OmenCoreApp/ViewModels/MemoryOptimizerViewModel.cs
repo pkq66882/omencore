@@ -402,7 +402,7 @@ namespace OmenCore.ViewModels
         public string PageFileText => $"{UsedPageFileMB / 1024.0:F1} / {TotalPageFileMB / 1024.0:F1} GB";
         public string StandbyListText => $"{StandbyListMB} MB";
         public string ModifiedPageListText => $"{ModifiedPageListMB} MB";
-        public string CompressedMemoryText => CompressedMemoryMB.HasValue ? $"{CompressedMemoryMB.Value} MB" : (MemoryCompressionEnabled ? Strings.MemoryOptimizerViewModel_Enabled : Strings.MemoryOptimizerViewModel_StateUnavailable);
+        public string CompressedMemoryText => CompressedMemoryMB.HasValue ? $"{CompressedMemoryMB.Value} MB" : (MemoryCompressionEnabled ? "Enabled" : "Unavailable");
         public string PhysicalMemorySummary => string.Format(Strings.MemoryOptimizerViewModel_PhysicalSummary, UsedPhysicalGB, AvailablePhysicalGB, (SystemCacheMB / 1024.0).ToString("F1"));
         public string VirtualMemorySummary => string.Format(Strings.MemoryOptimizerViewModel_VirtualSummary, CommitText, PageFileText);
         public IEnumerable<double> RecentMemoryLoadHistory => _memoryHistory.Select(sample => (double)sample.LoadPercent);
@@ -611,7 +611,7 @@ namespace OmenCore.ViewModels
 
         public string MemoryCompressionStatusText => !MemoryCompressionSupported
             ? "Memory compression status unavailable"
-            : (MemoryCompressionEnabled ? Strings.MemoryOptimizerViewModel_Enabled : Strings.MemoryOptimizerViewModel_Disabled);
+            : (MemoryCompressionEnabled ? "Enabled" : "Disabled");
 
         public string NewExcludedProcessName
         {

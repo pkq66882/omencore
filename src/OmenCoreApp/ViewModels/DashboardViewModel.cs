@@ -940,9 +940,7 @@ namespace OmenCore.ViewModels
         /// </summary>
         public string MonitoringSourceText => (_monitoringService.MonitoringSource ?? string.Empty)
             .Replace("WMI BIOS + NVAPI (Self-Sustaining)", Strings.DashboardViewModel_SourceWmiNvapiSelfSustaining)
-            .Replace("WMI BIOS (Self-Sustaining)", Strings.DashboardViewModel_SourceWmiSelfSustaining)
-            .Replace(" | CPU Authority: WMI BIOS", Strings.DashboardViewModel_CpuAuthorityWmi)
-            .Replace(" | CPU Authority: LibreHardwareMonitor", Strings.DashboardViewModel_CpuAuthorityLhm);
+            .Replace("WMI BIOS (Self-Sustaining)", Strings.DashboardViewModel_SourceWmiSelfSustaining);
         
         /// <summary>
         /// Color for health status indicator.

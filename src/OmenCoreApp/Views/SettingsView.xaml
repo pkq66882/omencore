@@ -2858,13 +2858,13 @@
                         <Border Background="#1A4CAF50" CornerRadius="4" Padding="12" Margin="0,0,0,0">
                             <TextBlock TextWrapping="Wrap" FontSize="12" 
                                        Foreground="{StaticResource TextSecondaryBrush}">
-                                <Run FontWeight="SemiBold" Foreground="#81C784" Text="{x:Static loc:Strings.SettingsView_BatteryTipsTitle}"/>
+                                <Run FontWeight="SemiBold" Foreground="#81C784">💡 Battery Health Tips:</Run>
                                 <LineBreak/>
-                                <Run Text="{x:Static loc:Strings.SettingsView_BatteryTip80}"/>
+                                • <Run FontWeight="SemiBold">80%</Run> is recommended for daily use (doubles battery lifespan)
                                 <LineBreak/>
-                                <Run Text="{x:Static loc:Strings.SettingsView_BatteryTip6070}"/>
+                                • <Run FontWeight="SemiBold">60-70%</Run> for maximum longevity if always plugged in
                                 <LineBreak/>
-                                <Run Text="{x:Static loc:Strings.SettingsView_BatteryTip100}"/>
+                                • <Run FontWeight="SemiBold">100%</Run> when you need full capacity for travel
                             </TextBlock>
                         </Border>
                     </StackPanel>

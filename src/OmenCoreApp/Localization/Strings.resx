@@ -5190,246 +5190,66 @@
     <value>flat</value>
   </data>
   <data name="Monitor_QualityGood" xml:space="preserve">
-    <value>Good</value>
+    <value></value>
   </data>
   <data name="Monitor_QualityFair" xml:space="preserve">
-    <value>Fair</value>
+    <value></value>
   </data>
   <data name="Monitor_QualityPoor" xml:space="preserve">
-    <value>Poor</value>
+    <value></value>
   </data>
   <data name="Monitor_TempNormal" xml:space="preserve">
-    <value>Normal</value>
+    <value></value>
   </data>
   <data name="Monitor_TempWarm" xml:space="preserve">
-    <value>Warm</value>
+    <value></value>
   </data>
   <data name="Monitor_TempHot" xml:space="preserve">
-    <value>Hot</value>
+    <value></value>
   </data>
   <data name="Monitor_TempCritical" xml:space="preserve">
-    <value>Critical</value>
+    <value></value>
   </data>
   <data name="Monitor_ThermalCool" xml:space="preserve">
-    <value>Cool</value>
+    <value></value>
   </data>
   <data name="Monitor_ThermalOptimal" xml:space="preserve">
-    <value>Optimal</value>
+    <value></value>
   </data>
   <data name="Monitor_TrendUp" xml:space="preserve">
-    <value>up</value>
+    <value></value>
   </data>
   <data name="Monitor_TrendDown" xml:space="preserve">
-    <value>down</value>
+    <value></value>
   </data>
   <data name="SystemControlViewModel_CurrentFormat" xml:space="preserve">
-    <value>Current: {0}W</value>
+    <value></value>
   </data>
   <data name="SystemControlViewModel_IgpuOffset" xml:space="preserve">
-    <value>IGPU OFFSET</value>
+    <value></value>
   </data>
   <data name="SystemControlViewModel_CacheOffset" xml:space="preserve">
-    <value>CACHE OFFSET</value>
+    <value></value>
   </data>
   <data name="SystemControlViewModel_RadeonGraphics" xml:space="preserve">
-    <value>Radeon graphics</value>
+    <value></value>
   </data>
   <data name="SystemControlViewModel_L3Cache" xml:space="preserve">
-    <value>L3 Cache</value>
+    <value></value>
   </data>
   <data name="DiagnosticsView_EstimatedFromFanLevel" xml:space="preserve">
-    <value>鉁?Estimated from fan level</value>
+    <value></value>
   </data>
   <data name="DashboardViewModel_SourceWmiSelfSustaining" xml:space="preserve">
-    <value>WMI BIOS (Self-Sustaining)</value>
+    <value></value>
   </data>
   <data name="DashboardViewModel_SourceWmiNvapiSelfSustaining" xml:space="preserve">
-    <value>WMI BIOS + NVAPI (Self-Sustaining)</value>
+    <value></value>
   </data>
   <data name="MemoryOptimizerView_NativeApiNote" xml:space="preserve">
-    <value>Memory is cleaned using Windows Native API (NtSetSystemInformation). Requires administrator privileges. Stats refresh every 2 seconds.</value>
+    <value></value>
   </data>
   <data name="SystemOptimizerView_ImportantNotesBody" xml:space="preserve">
-    <value>鈥?A system restore point is created before applying presets 鈥?Some changes may require a restart to take effect 鈥?Medium/High risk optimizations may affect system stability or features 鈥?Use "Revert All" to restore original settings at any time</value>
-  </data>
-  <data name="DashboardViewModel_CpuAuthorityLhm" xml:space="preserve">
-    <value> | CPU Authority: LibreHardwareMonitor</value>
-  </data>
-  <data name="DashboardViewModel_CpuAuthorityWmi" xml:space="preserve">
-    <value> | CPU Authority: WMI BIOS</value>
-  </data>
-  <data name="SystemOptimizerViewModel_VerifyingState" xml:space="preserve">
-    <value>Verifying optimization state...</value>
-  </data>
-  <data name="MemoryOptimizerViewModel_Disabled" xml:space="preserve">
-    <value>Disabled</value>
-  </data>
-  <data name="MemoryOptimizerViewModel_Enabled" xml:space="preserve">
-    <value>Enabled</value>
-  </data>
-  <data name="MemoryOptimizerViewModel_StateUnavailable" xml:space="preserve">
-    <value>Unavailable</value>
-  </data>
-  <data name="SystemOptimizer_InputFullscreenDesc" xml:space="preserve">
-    <value>Configures fullscreen optimizations for better compatibility</value>
-  </data>
-  <data name="SystemOptimizer_InputFullscreenName" xml:space="preserve">
-    <value>Fullscreen Optimizations</value>
-  </data>
-  <data name="SystemOptimizer_InputGameBarDesc" xml:space="preserve">
-    <value>Disables the Xbox Game Bar overlay</value>
-  </data>
-  <data name="SystemOptimizer_InputGameBarName" xml:space="preserve">
-    <value>Disable Xbox Game Bar</value>
-  </data>
-  <data name="SystemOptimizer_InputGameDvrDesc" xml:space="preserve">
-    <value>Disables background game recording for better performance</value>
-  </data>
-  <data name="SystemOptimizer_InputGameDvrName" xml:space="preserve">
-    <value>Disable Game DVR</value>
-  </data>
-  <data name="SystemOptimizer_InputMouseAccelDesc" xml:space="preserve">
-    <value>Disables 'Enhance pointer precision' for 1:1 mouse movement</value>
-  </data>
-  <data name="SystemOptimizer_InputMouseAccelName" xml:space="preserve">
-    <value>Disable Mouse Acceleration</value>
-  </data>
-  <data name="SystemOptimizer_LastVerified" xml:space="preserve">
-    <value>Last verified {0}</value>
-  </data>
-  <data name="SystemOptimizer_NetworkDeliveryDesc" xml:space="preserve">
-    <value>Disables Delivery Optimization P2P sharing</value>
-  </data>
-  <data name="SystemOptimizer_NetworkDeliveryName" xml:space="preserve">
-    <value>Disable P2P Updates</value>
-  </data>
-  <data name="SystemOptimizer_NetworkNagleDesc" xml:space="preserve">
-    <value>Reduces TCP buffering delay - helpful for online games</value>
-  </data>
-  <data name="SystemOptimizer_NetworkNagleName" xml:space="preserve">
-    <value>Disable Nagle Algorithm</value>
-  </data>
-  <data name="SystemOptimizer_NetworkTcpAckDesc" xml:space="preserve">
-    <value>Optimizes TCP ACK frequency for faster responses</value>
-  </data>
-  <data name="SystemOptimizer_NetworkTcpAckName" xml:space="preserve">
-    <value>TCP ACK Optimization</value>
-  </data>
-  <data name="SystemOptimizer_NetworkTcpNoDelayDesc" xml:space="preserve">
-    <value>Disables TCP delayed acknowledgments for lower latency</value>
-  </data>
-  <data name="SystemOptimizer_NetworkTcpNoDelayName" xml:space="preserve">
-    <value>TCP No Delay</value>
-  </data>
-  <data name="SystemOptimizer_NoDrift" xml:space="preserve">
-    <value>Verified: no drift detected</value>
-  </data>
-  <data name="SystemOptimizer_PowerForegroundDesc" xml:space="preserve">
-    <value>Increases CPU priority for foreground applications</value>
-  </data>
-  <data name="SystemOptimizer_PowerForegroundName" xml:space="preserve">
-    <value>Foreground Priority Boost</value>
-  </data>
-  <data name="SystemOptimizer_PowerGameModeDesc" xml:space="preserve">
-    <value>Enables Windows Game Mode for better gaming performance</value>
-  </data>
-  <data name="SystemOptimizer_PowerGameModeName" xml:space="preserve">
-    <value>Game Mode</value>
-  </data>
-  <data name="SystemOptimizer_PowerGpuSchedDesc" xml:space="preserve">
-    <value>Enables hardware-accelerated GPU scheduling (Windows 10 2004+)</value>
-  </data>
-  <data name="SystemOptimizer_PowerGpuSchedName" xml:space="preserve">
-    <value>Hardware GPU Scheduling</value>
-  </data>
-  <data name="SystemOptimizer_PowerUltimatePerfDesc" xml:space="preserve">
-    <value>Sets Windows power plan to Ultimate Performance for maximum CPU/GPU performance</value>
-  </data>
-  <data name="SystemOptimizer_PowerUltimatePerfName" xml:space="preserve">
-    <value>Ultimate Performance Plan</value>
-  </data>
-  <data name="SystemOptimizer_PreflightHighRisk" xml:space="preserve">
-    <value>Preflight found {0} High-risk optimization(s). Review before applying Gaming Max.</value>
-  </data>
-  <data name="SystemOptimizer_PreflightLine" xml:space="preserve">
-    <value>Preflight: Low {0}, Medium {1}, High {2}{3}</value>
-  </data>
-  <data name="SystemOptimizer_ServiceDiagTrackDesc" xml:space="preserve">
-    <value>Disables Connected User Experiences and Telemetry service</value>
-  </data>
-  <data name="SystemOptimizer_ServiceDiagTrackName" xml:space="preserve">
-    <value>Disable Connected Experiences</value>
-  </data>
-  <data name="SystemOptimizer_ServiceSearchDesc" xml:space="preserve">
-    <value>Disables Windows Search indexing for lower disk/CPU usage</value>
-  </data>
-  <data name="SystemOptimizer_ServiceSearchName" xml:space="preserve">
-    <value>Disable Search Indexing</value>
-  </data>
-  <data name="SystemOptimizer_ServiceSearchWarn" xml:space="preserve">
-    <value>May slow down file searches</value>
-  </data>
-  <data name="SystemOptimizer_ServiceSysMainDesc" xml:space="preserve">
-    <value>Disables Superfetch service - recommended for SSD systems</value>
-  </data>
-  <data name="SystemOptimizer_ServiceSysMainName" xml:space="preserve">
-    <value>Disable SysMain (Superfetch)</value>
-  </data>
-  <data name="SystemOptimizer_ServiceTelemetryDesc" xml:space="preserve">
-    <value>Disables Windows telemetry data collection (DiagTrack service)</value>
-  </data>
-  <data name="SystemOptimizer_ServiceTelemetryName" xml:space="preserve">
-    <value>Disable Telemetry</value>
-  </data>
-  <data name="SystemOptimizer_Storage8dot3Desc" xml:space="preserve">
-    <value>Disables legacy short filename creation</value>
-  </data>
-  <data name="SystemOptimizer_Storage8dot3Name" xml:space="preserve">
-    <value>Disable 8.3 Names</value>
-  </data>
-  <data name="SystemOptimizer_Storage8dot3Warn" xml:space="preserve">
-    <value>May break very old software</value>
-  </data>
-  <data name="SystemOptimizer_StorageLastAccessDesc" xml:space="preserve">
-    <value>Disables NTFS last access time updates for lower disk activity</value>
-  </data>
-  <data name="SystemOptimizer_StorageLastAccessName" xml:space="preserve">
-    <value>Disable Last Access Timestamps</value>
-  </data>
-  <data name="SystemOptimizer_StorageTrimDesc" xml:space="preserve">
-    <value>Enables TRIM command for SSD health and performance</value>
-  </data>
-  <data name="SystemOptimizer_StorageTrimName" xml:space="preserve">
-    <value>TRIM for SSD</value>
-  </data>
-  <data name="SystemOptimizer_VisualAnimationsDesc" xml:space="preserve">
-    <value>Disables window animations for snappier UI</value>
-  </data>
-  <data name="SystemOptimizer_VisualAnimationsName" xml:space="preserve">
-    <value>Disable Animations</value>
-  </data>
-  <data name="SystemOptimizer_VisualTransparencyDesc" xml:space="preserve">
-    <value>Disables Windows transparency effects</value>
-  </data>
-  <data name="SystemOptimizer_VisualTransparencyName" xml:space="preserve">
-    <value>Disable Transparency</value>
-  </data>
-  <data name="SettingsView_BatteryTip100" xml:space="preserve">
-    <value>• 出行需要满容量时充至 100%</value>
-  </data>
-  <data name="SettingsView_BatteryTip6070" xml:space="preserve">
-    <value>• 长期插电使用建议保持在 60-70%（最大程度延长寿命）</value>
-  </data>
-  <data name="SettingsView_BatteryTip80" xml:space="preserve">
-    <value>• 建议日常使用保持在 80%（电池寿命翻倍）</value>
-  </data>
-  <data name="SettingsView_BatteryTipsTitle" xml:space="preserve">
-    <value>💡 Battery Health Tips:</value>
-  </data>
-  <data name="SystemOptimizer_VerificationFailed" xml:space="preserve">
-    <value>Verification failed</value>
-  </data>
-  <data name="SystemOptimizer_VerifiedCurrentState" xml:space="preserve">
-    <value>Verified against current system state</value>
+    <value></value>
   </data>
 </root>

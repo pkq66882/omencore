@@ -9,7 +9,7 @@ namespace OmenCore.ViewModels
         public static string BuildSummary(PreflightReport report)
         {
             var rebootTag = report.RequiresReboot ? " | Reboot: Yes" : " | Reboot: No";
-            return string.Format(Strings.SystemOptimizer_PreflightLine, report.LowRiskCount, report.MediumRiskCount, report.HighRiskCount, rebootTag);
+            return $"Preflight: Low {report.LowRiskCount}, Medium {report.MediumRiskCount}, High {report.HighRiskCount}{rebootTag}";
         }
 
         public static string BuildWarningRollup(PreflightReport report, int maxWarnings = 2)
