@@ -5983,4 +5983,82 @@
   <data name="SystemOptimizerViewModel_NoDriftSinceLast" xml:space="preserve">
     <value>С момента последней проверки дрейф не обнаружен.</value>
   </data>
+  <data name="SettingsViewModel_DriverPawnIoInstalled" xml:space="preserve">
+    <value>PawnIO установлен</value>
+  </data>
+  <data name="SettingsViewModel_DriverPawnIoDetail" xml:space="preserve">
+    <value>✓ Доступен драйверный бэкенд, совместимый с Secure Boot (рекомендуется). Не вызывает ложных срабатываний Windows Defender.</value>
+  </data>
+  <data name="SettingsViewModel_DriverXtuConflict" xml:space="preserve">
+    <value>Обнаружен конфликт XTU</value>
+  </data>
+  <data name="SettingsViewModel_DriverXtuDetail" xml:space="preserve">
+    <value>Служба Intel XTU ({0}) может блокировать понижение напряжения. Остановите XTU, чтобы использовать понижение OmenCore. PawnIO остаётся рекомендуемым бэкендом.</value>
+  </data>
+  <data name="SettingsViewModel_DriverNone" xml:space="preserve">
+    <value>Драйверный бэкенд не обнаружен</value>
+  </data>
+  <data name="SettingsViewModel_ReasonSecureBoot" xml:space="preserve">
+    <value>Включена Secure Boot</value>
+  </data>
+  <data name="SettingsViewModel_ReasonMemoryIntegrity" xml:space="preserve">
+    <value>Включена целостность памяти (HVCI)</value>
+  </data>
+  <data name="SettingsViewModel_DriverBlockedDetail" xml:space="preserve">
+    <value>Устаревшие драйверы заблокированы ({0}). Установите PawnIO (pawnio.eu) для MSR/EC-доступа, совместимого с Secure Boot — без ложных срабатываний Defender и с включёнными функциями безопасности.</value>
+  </data>
+  <data name="SettingsViewModel_DriverInstallPawnIo" xml:space="preserve">
+    <value>Установите PawnIO (рекомендуется — без ложных срабатываний Defender). OmenCore больше не поддерживает устаревший низкоуровневый бэкенд.</value>
+  </data>
+  <data name="SettingsViewModel_DriverCheckFailed" xml:space="preserve">
+    <value>Проверка не удалась</value>
+  </data>
+  <data name="SettingsViewModel_JoinSeparator" xml:space="preserve">
+    <value>、</value>
+  </data>
+  <data name="SettingsViewModel_PlatformHpOmen" xml:space="preserve">
+    <value>Система HP (обнаружен OMEN/Victus)</value>
+  </data>
+  <data name="SettingsViewModel_PlatformHp" xml:space="preserve">
+    <value>Система HP</value>
+  </data>
+  <data name="SettingsViewModel_PlatformNonHp" xml:space="preserve">
+    <value>Не-HP или неизвестный производитель</value>
+  </data>
+  <data name="SettingsViewModel_IdentitySummaryFormat" xml:space="preserve">
+    <value>{0} через {1} ({2} уверенность) на {3}. Клавиатура: {4} через {5} ({6} уверенность).</value>
+  </data>
+  <data name="SettingsViewModel_BadgeUnknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="SettingsViewModel_BadgeExactMatch" xml:space="preserve">
+    <value>Точное совпадение</value>
+  </data>
+  <data name="SettingsViewModel_BadgeUnverified" xml:space="preserve">
+    <value>Непроверенный профиль</value>
+  </data>
+  <data name="SettingsViewModel_BadgeInferred" xml:space="preserve">
+    <value>Выведенное совпадение</value>
+  </data>
+  <data name="SettingsViewModel_BadgeFamilyFallback" xml:space="preserve">
+    <value>Семейный резерв</value>
+  </data>
+  <data name="SettingsViewModel_BadgeDefaultFallback" xml:space="preserve">
+    <value>Резерв по умолчанию</value>
+  </data>
+  <data name="SettingsViewModel_BadgeFallback" xml:space="preserve">
+    <value>Резерв</value>
+  </data>
+  <data name="Common_NotAvailable" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
+  <data name="SystemControlViewModel_TccNotAvailableWmi" xml:space="preserve">
+    <value>Недоступно — этот BIOS не применяет Extended через WMI, и отдельного EC-уровня выше Maximum нет</value>
+  </data>
+  <data name="SettingsViewModel_IdentityAnalysisFailed" xml:space="preserve">
+    <value>Анализ идентификации модели не удался.</value>
+  </data>
+  <data name="SettingsViewModel_ValueUnavailable" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
 </root>

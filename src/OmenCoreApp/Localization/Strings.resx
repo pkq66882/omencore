@@ -5987,4 +5987,82 @@
   <data name="SystemOptimizerViewModel_NoDriftSinceLast" xml:space="preserve">
     <value>No drift detected since last verification.</value>
   </data>
+  <data name="SettingsViewModel_DriverPawnIoInstalled" xml:space="preserve">
+    <value>PawnIO Installed</value>
+  </data>
+  <data name="SettingsViewModel_DriverPawnIoDetail" xml:space="preserve">
+    <value>✓ Secure Boot compatible driver backend available (recommended). Won't trigger Windows Defender false positives.</value>
+  </data>
+  <data name="SettingsViewModel_DriverXtuConflict" xml:space="preserve">
+    <value>XTU Conflict Detected</value>
+  </data>
+  <data name="SettingsViewModel_DriverXtuDetail" xml:space="preserve">
+    <value>Intel XTU service ({0}) may block undervolting. Stop XTU to use OmenCore undervolting. PawnIO remains the recommended backend.</value>
+  </data>
+  <data name="SettingsViewModel_DriverNone" xml:space="preserve">
+    <value>No Driver Backend Detected</value>
+  </data>
+  <data name="SettingsViewModel_ReasonSecureBoot" xml:space="preserve">
+    <value>Secure Boot is enabled</value>
+  </data>
+  <data name="SettingsViewModel_ReasonMemoryIntegrity" xml:space="preserve">
+    <value>Memory Integrity (HVCI) is enabled</value>
+  </data>
+  <data name="SettingsViewModel_DriverBlockedDetail" xml:space="preserve">
+    <value>Legacy drivers blocked ({0}). Install PawnIO (pawnio.eu) for Secure Boot compatible MSR/EC access - avoids Defender false positives and works with security features enabled.</value>
+  </data>
+  <data name="SettingsViewModel_DriverInstallPawnIo" xml:space="preserve">
+    <value>Install PawnIO (recommended - no Defender false positives). OmenCore no longer supports the legacy low-level backend.</value>
+  </data>
+  <data name="SettingsViewModel_DriverCheckFailed" xml:space="preserve">
+    <value>Check Failed</value>
+  </data>
+  <data name="SettingsViewModel_JoinSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="SettingsViewModel_PlatformHpOmen" xml:space="preserve">
+    <value>HP system (OMEN/Victus detected)</value>
+  </data>
+  <data name="SettingsViewModel_PlatformHp" xml:space="preserve">
+    <value>HP system</value>
+  </data>
+  <data name="SettingsViewModel_PlatformNonHp" xml:space="preserve">
+    <value>Non-HP or unknown manufacturer</value>
+  </data>
+  <data name="SettingsViewModel_IdentitySummaryFormat" xml:space="preserve">
+    <value>{0} via {1} ({2} confidence) on {3}. Keyboard: {4} via {5} ({6} confidence).</value>
+  </data>
+  <data name="SettingsViewModel_BadgeUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="SettingsViewModel_BadgeExactMatch" xml:space="preserve">
+    <value>Exact match</value>
+  </data>
+  <data name="SettingsViewModel_BadgeUnverified" xml:space="preserve">
+    <value>Unverified profile</value>
+  </data>
+  <data name="SettingsViewModel_BadgeInferred" xml:space="preserve">
+    <value>Inferred match</value>
+  </data>
+  <data name="SettingsViewModel_BadgeFamilyFallback" xml:space="preserve">
+    <value>Family fallback</value>
+  </data>
+  <data name="SettingsViewModel_BadgeDefaultFallback" xml:space="preserve">
+    <value>Default fallback</value>
+  </data>
+  <data name="SettingsViewModel_BadgeFallback" xml:space="preserve">
+    <value>Fallback</value>
+  </data>
+  <data name="Common_NotAvailable" xml:space="preserve">
+    <value>Not available</value>
+  </data>
+  <data name="SystemControlViewModel_TccNotAvailableWmi" xml:space="preserve">
+    <value>Not available - this BIOS doesn't apply Extended via WMI, and no distinct EC fallback level exists beyond Maximum</value>
+  </data>
+  <data name="SettingsViewModel_IdentityAnalysisFailed" xml:space="preserve">
+    <value>Model identity analysis failed.</value>
+  </data>
+  <data name="SettingsViewModel_ValueUnavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
 </root>

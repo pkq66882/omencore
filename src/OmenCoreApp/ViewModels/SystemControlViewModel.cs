@@ -4077,7 +4077,7 @@ namespace OmenCore.ViewModels
             // identical to Maximum, so there is nothing distinct to fall back to. Say so
             // instead of the generic message, which read as if EC support were simply missing.
             GpuPowerBoostStatus = string.Equals(GpuPowerBoostLevel, "Extended", StringComparison.OrdinalIgnoreCase)
-                ? "Not available - this BIOS doesn't apply Extended via WMI, and no distinct EC fallback level exists beyond Maximum"
+                ? Strings.SystemControlViewModel_TccNotAvailableWmi
                 : "Failed - WMI/EC commands not supported on this model";
             _logging.Warn($"Failed to set GPU Power Boost to: {GpuPowerBoostLevel} - WMI and EC methods unavailable");
         }

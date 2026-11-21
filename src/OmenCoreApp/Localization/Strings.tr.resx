@@ -5983,4 +5983,82 @@
   <data name="SystemOptimizerViewModel_NoDriftSinceLast" xml:space="preserve">
     <value>Son doğrulamadan beri sapma algılanmadı.</value>
   </data>
+  <data name="SettingsViewModel_DriverPawnIoInstalled" xml:space="preserve">
+    <value>PawnIO yüklü</value>
+  </data>
+  <data name="SettingsViewModel_DriverPawnIoDetail" xml:space="preserve">
+    <value>✓ Secure Boot uyumlu sürücü arka ucu mevcut (önerilir). Windows Defender yanlış pozitiflerini tetiklemez.</value>
+  </data>
+  <data name="SettingsViewModel_DriverXtuConflict" xml:space="preserve">
+    <value>XTU çakışması algılandı</value>
+  </data>
+  <data name="SettingsViewModel_DriverXtuDetail" xml:space="preserve">
+    <value>Intel XTU servisi ({0}) undervolting'i engelleyebilir. OmenCore undervolting için XTU'yu durdurun. PawnIO önerilen arka uç olarak kalır.</value>
+  </data>
+  <data name="SettingsViewModel_DriverNone" xml:space="preserve">
+    <value>Sürücü arka ucu algılanmadı</value>
+  </data>
+  <data name="SettingsViewModel_ReasonSecureBoot" xml:space="preserve">
+    <value>Secure Boot etkin</value>
+  </data>
+  <data name="SettingsViewModel_ReasonMemoryIntegrity" xml:space="preserve">
+    <value>Bellek bütünlüğü (HVCI) etkin</value>
+  </data>
+  <data name="SettingsViewModel_DriverBlockedDetail" xml:space="preserve">
+    <value>Eski sürücüler engellendi ({0}). Secure Boot uyumlu MSR/EC erişimi için PawnIO yükleyin (pawnio.eu) — Defender yanlış pozitifleri olmadan ve güvenlik özellikleri etkinken çalışır.</value>
+  </data>
+  <data name="SettingsViewModel_DriverInstallPawnIo" xml:space="preserve">
+    <value>PawnIO yükleyin (önerilir — Defender yanlış pozitifleri yok). OmenCore artık eski düşük seviye arka ucu desteklemiyor.</value>
+  </data>
+  <data name="SettingsViewModel_DriverCheckFailed" xml:space="preserve">
+    <value>Kontrol başarısız</value>
+  </data>
+  <data name="SettingsViewModel_JoinSeparator" xml:space="preserve">
+    <value>、</value>
+  </data>
+  <data name="SettingsViewModel_PlatformHpOmen" xml:space="preserve">
+    <value>HP sistemi (OMEN/Victus algılandı)</value>
+  </data>
+  <data name="SettingsViewModel_PlatformHp" xml:space="preserve">
+    <value>HP sistemi</value>
+  </data>
+  <data name="SettingsViewModel_PlatformNonHp" xml:space="preserve">
+    <value>HP dışı veya bilinmeyen üretici</value>
+  </data>
+  <data name="SettingsViewModel_IdentitySummaryFormat" xml:space="preserve">
+    <value>{0}, {1} üzerinden ({2} güven), {3} üzerinde. Klavye: {4}, {5} üzerinden ({6} güven).</value>
+  </data>
+  <data name="SettingsViewModel_BadgeUnknown" xml:space="preserve">
+    <value>Bilinmeyen</value>
+  </data>
+  <data name="SettingsViewModel_BadgeExactMatch" xml:space="preserve">
+    <value>Tam eşleşme</value>
+  </data>
+  <data name="SettingsViewModel_BadgeUnverified" xml:space="preserve">
+    <value>Doğrulanmamış profil</value>
+  </data>
+  <data name="SettingsViewModel_BadgeInferred" xml:space="preserve">
+    <value>Çıkarılmış eşleşme</value>
+  </data>
+  <data name="SettingsViewModel_BadgeFamilyFallback" xml:space="preserve">
+    <value>Aile yedeği</value>
+  </data>
+  <data name="SettingsViewModel_BadgeDefaultFallback" xml:space="preserve">
+    <value>Varsayılan yedek</value>
+  </data>
+  <data name="SettingsViewModel_BadgeFallback" xml:space="preserve">
+    <value>Yedek</value>
+  </data>
+  <data name="Common_NotAvailable" xml:space="preserve">
+    <value>Kullanılamaz</value>
+  </data>
+  <data name="SystemControlViewModel_TccNotAvailableWmi" xml:space="preserve">
+    <value>Kullanılamaz — bu BIOS Extended'ı WMI üzerinden uygulamıyor ve Maximum ötesinde ayrı EC yedek seviyesi yok</value>
+  </data>
+  <data name="SettingsViewModel_IdentityAnalysisFailed" xml:space="preserve">
+    <value>Model kimliği analizi başarısız oldu.</value>
+  </data>
+  <data name="SettingsViewModel_ValueUnavailable" xml:space="preserve">
+    <value>Kullanılamaz</value>
+  </data>
 </root>

@@ -2315,5 +2315,32 @@ namespace OmenCore.Localization
     public static string KeyboardTheme_Volcano => Get(nameof(KeyboardTheme_Volcano));
     public static string SystemOptimizerViewModel_NoDriftSinceLast => Get(nameof(SystemOptimizerViewModel_NoDriftSinceLast));
 
+    public static string Common_NotAvailable => Get(nameof(Common_NotAvailable));
+    public static string SettingsViewModel_BadgeDefaultFallback => Get(nameof(SettingsViewModel_BadgeDefaultFallback));
+    public static string SettingsViewModel_BadgeExactMatch => Get(nameof(SettingsViewModel_BadgeExactMatch));
+    public static string SettingsViewModel_BadgeFallback => Get(nameof(SettingsViewModel_BadgeFallback));
+    public static string SettingsViewModel_BadgeFamilyFallback => Get(nameof(SettingsViewModel_BadgeFamilyFallback));
+    public static string SettingsViewModel_BadgeInferred => Get(nameof(SettingsViewModel_BadgeInferred));
+    public static string SettingsViewModel_BadgeUnknown => Get(nameof(SettingsViewModel_BadgeUnknown));
+    public static string SettingsViewModel_BadgeUnverified => Get(nameof(SettingsViewModel_BadgeUnverified));
+    public static string SettingsViewModel_DriverBlockedDetail => Get(nameof(SettingsViewModel_DriverBlockedDetail));
+    public static string SettingsViewModel_DriverCheckFailed => Get(nameof(SettingsViewModel_DriverCheckFailed));
+    public static string SettingsViewModel_DriverInstallPawnIo => Get(nameof(SettingsViewModel_DriverInstallPawnIo));
+    public static string SettingsViewModel_DriverNone => Get(nameof(SettingsViewModel_DriverNone));
+    public static string SettingsViewModel_DriverPawnIoDetail => Get(nameof(SettingsViewModel_DriverPawnIoDetail));
+    public static string SettingsViewModel_DriverPawnIoInstalled => Get(nameof(SettingsViewModel_DriverPawnIoInstalled));
+    public static string SettingsViewModel_DriverXtuConflict => Get(nameof(SettingsViewModel_DriverXtuConflict));
+    public static string SettingsViewModel_DriverXtuDetail => Get(nameof(SettingsViewModel_DriverXtuDetail));
+    public static string SettingsViewModel_IdentityAnalysisFailed => Get(nameof(SettingsViewModel_IdentityAnalysisFailed));
+    public static string SettingsViewModel_IdentitySummaryFormat => Get(nameof(SettingsViewModel_IdentitySummaryFormat));
+    public static string SettingsViewModel_JoinSeparator => Get(nameof(SettingsViewModel_JoinSeparator));
+    public static string SettingsViewModel_PlatformHp => Get(nameof(SettingsViewModel_PlatformHp));
+    public static string SettingsViewModel_PlatformHpOmen => Get(nameof(SettingsViewModel_PlatformHpOmen));
+    public static string SettingsViewModel_PlatformNonHp => Get(nameof(SettingsViewModel_PlatformNonHp));
+    public static string SettingsViewModel_ReasonMemoryIntegrity => Get(nameof(SettingsViewModel_ReasonMemoryIntegrity));
+    public static string SettingsViewModel_ReasonSecureBoot => Get(nameof(SettingsViewModel_ReasonSecureBoot));
+    public static string SettingsViewModel_ValueUnavailable => Get(nameof(SettingsViewModel_ValueUnavailable));
+    public static string SystemControlViewModel_TccNotAvailableWmi => Get(nameof(SystemControlViewModel_TccNotAvailableWmi));
+
     }
 }

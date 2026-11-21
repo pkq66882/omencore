@@ -3076,7 +3076,17 @@ namespace OmenCore.ViewModels
                 ModelIdentityResolvedModel = summary.ResolvedModel == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : summary.ResolvedModel;
                 ModelIdentityResolutionSource = LocalizeSource(summary.ResolutionSource);
                 ModelIdentityConfidence = LocalizeConfidence(summary.Confidence);
-                ModelIdentityBadgeText = summary.BadgeText;
+                ModelIdentityBadgeText = summary.BadgeText switch
+                {
+                    "Unknown" => Strings.SettingsViewModel_BadgeUnknown,
+                    "Exact match" => Strings.SettingsViewModel_BadgeExactMatch,
+                    "Unverified profile" => Strings.SettingsViewModel_BadgeUnverified,
+                    "Inferred match" => Strings.SettingsViewModel_BadgeInferred,
+                    "Family fallback" => Strings.SettingsViewModel_BadgeFamilyFallback,
+                    "Default fallback" => Strings.SettingsViewModel_BadgeDefaultFallback,
+                    "Fallback" => Strings.SettingsViewModel_BadgeFallback,
+                    _ => summary.BadgeText
+                };
                 ModelIdentityBadgeTone = summary.BadgeTone;
                 ModelIdentityKeyboardModel = LocalizeModelValue(summary.KeyboardModel);
                 ModelIdentityKeyboardSource = LocalizeSource(summary.KeyboardResolutionSource);
@@ -3104,9 +3114,9 @@ namespace OmenCore.ViewModels
             catch (Exception ex)
             {
                 _logging.Warn($"Failed to build model identity summary: {ex.Message}");
-                ModelIdentitySummary = "Model identity analysis failed.";
+                ModelIdentitySummary = Strings.SettingsViewModel_IdentityAnalysisFailed;
                 ModelIdentityResolvedModel = "Unknown";
-                ModelIdentityResolutionSource = "Unavailable";
+                ModelIdentityResolutionSource = Strings.SettingsViewModel_ValueUnavailable;
                 ModelIdentityConfidence = "Unknown";
                 ModelIdentityBadgeText = "Unavailable";
                 ModelIdentityBadgeTone = "error";
@@ -3179,7 +3189,7 @@ namespace OmenCore.ViewModels
         /// <summary>
         /// Summary text for BIOS reliability.
         /// </summary>
-        public string BiosReliabilityText => _biosReliabilityStats?.Summary ?? "Not available";
+        public string BiosReliabilityText => _biosReliabilityStats?.Summary ?? Strings.Common_NotAvailable;
         
         /// <summary>
         /// Color for BIOS reliability indicator.
@@ -4043,34 +4053,32 @@ namespace OmenCore.ViewModels
 
                 if (pawnIoAvailable)
                 {
-                    DriverStatusText = "PawnIO Installed";
-                    DriverStatusDetail = "✓ Secure Boot compatible driver backend available (recommended). Won't trigger Windows Defender false positives.";
+                    DriverStatusText = Strings.SettingsViewModel_DriverPawnIoInstalled;
+                    DriverStatusDetail = Strings.SettingsViewModel_DriverPawnIoDetail;
                     DriverStatusColor = new SolidColorBrush(Color.FromRgb(102, 187, 106)); // Green
                 }
                 else if (xtuRunning)
                 {
-                    DriverStatusText = "XTU Conflict Detected";
-                    DriverStatusDetail = $"Intel XTU service ({xtuServiceName}) may block undervolting. Stop XTU to use OmenCore undervolting. PawnIO remains the recommended backend.";
+                    DriverStatusText = Strings.SettingsViewModel_DriverXtuConflict;
+                    DriverStatusDetail = string.Format(Strings.SettingsViewModel_DriverXtuDetail, xtuServiceName);
                     DriverStatusColor = new SolidColorBrush(Color.FromRgb(255, 183, 77)); // Orange
                 }
                 else
                 {
-                    DriverStatusText = "No Driver Backend Detected";
+                    DriverStatusText = Strings.SettingsViewModel_DriverNone;
 
                     if (secureBootEnabled || memoryIntegrityEnabled)
                     {
                         var reasons = new List<string>();
-                        if (secureBootEnabled) reasons.Add("Secure Boot is enabled");
-                        if (memoryIntegrityEnabled) reasons.Add("Memory Integrity (HVCI) is enabled");
+                        if (secureBootEnabled) reasons.Add(Strings.SettingsViewModel_ReasonSecureBoot);
+                        if (memoryIntegrityEnabled) reasons.Add(Strings.SettingsViewModel_ReasonMemoryIntegrity);
 
                         DriverStatusDetail =
-                            $"Legacy drivers blocked ({string.Join(", ", reasons)}). " +
-                            "Install PawnIO (pawnio.eu) for Secure Boot compatible MSR/EC access - avoids Defender false positives and works with security features enabled.";
+                            string.Format(Strings.SettingsViewModel_DriverBlockedDetail, string.Join(Strings.SettingsViewModel_JoinSeparator, reasons));
                     }
                     else
                     {
-                        DriverStatusDetail =
-                            "Install PawnIO (recommended - no Defender false positives). OmenCore no longer supports the legacy low-level backend.";
+                        DriverStatusDetail = Strings.SettingsViewModel_DriverInstallPawnIo;
                     }
 
                     DriverStatusColor = new SolidColorBrush(Color.FromRgb(239, 83, 80)); // Red
@@ -4078,7 +4086,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                DriverStatusText = "Check Failed";
+                DriverStatusText = Strings.SettingsViewModel_DriverCheckFailed;
                 DriverStatusDetail = ex.Message;
                 DriverStatusColor = new SolidColorBrush(Color.FromRgb(255, 183, 77)); // Orange
             }

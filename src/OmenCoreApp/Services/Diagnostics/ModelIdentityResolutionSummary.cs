@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Text;
 using OmenCore.Hardware;
@@ -258,11 +259,28 @@ namespace OmenCore.Services.Diagnostics
 
         private static string BuildShortSummary(ModelIdentityResolutionSummary summary)
         {
-            var platformQualifier = summary.IsHpSystem
-                    ? (summary.HasOmenVictusHint ? "HP system (OMEN/Victus detected)" : "HP system")
-                : "Non-HP or unknown manufacturer";
+            string Src(string s) => s switch
+            {
+                "Default fallback" => Strings.SettingsViewModel_BadgeDefaultFallback,
+                "No database match" => Strings.SettingsViewModel_SourceNoDatabaseMatch,
+                _ => s
+            };
+            string Conf(string c) => c switch
+            {
+                "Low" => Strings.SettingsViewModel_ConfidenceLow,
+                "Medium" => Strings.SettingsViewModel_ConfidenceMedium,
+                "High" => Strings.SettingsViewModel_ConfidenceHigh,
+                _ => c
+            };
+            string Model(string m) => m == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : m;
 
-            return $"{summary.ResolvedModel} via {summary.ResolutionSource} ({summary.Confidence} confidence) on {platformQualifier}. Keyboard: {summary.KeyboardModel} via {summary.KeyboardResolutionSource} ({summary.KeyboardConfidence} confidence).";
+            var platformQualifier = summary.IsHpSystem
+                    ? (summary.HasOmenVictusHint ? Strings.SettingsViewModel_PlatformHpOmen : Strings.SettingsViewModel_PlatformHp)
+                : Strings.SettingsViewModel_PlatformNonHp;
+
+            return string.Format(Strings.SettingsViewModel_IdentitySummaryFormat,
+                Model(summary.ResolvedModel), Src(summary.ResolutionSource), Conf(summary.Confidence), platformQualifier,
+                Model(summary.KeyboardModel), Src(summary.KeyboardResolutionSource), Conf(summary.KeyboardConfidence));
         }
 
         private static string BuildClipboardSummary(ModelIdentityResolutionSummary summary)

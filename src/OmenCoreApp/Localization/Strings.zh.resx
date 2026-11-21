@@ -5983,4 +5983,82 @@
   <data name="SystemOptimizerViewModel_NoDriftSinceLast" xml:space="preserve">
     <value>自上次验证以来未检测到偏移。</value>
   </data>
+  <data name="SettingsViewModel_DriverPawnIoInstalled" xml:space="preserve">
+    <value>PawnIO 已安装</value>
+  </data>
+  <data name="SettingsViewModel_DriverPawnIoDetail" xml:space="preserve">
+    <value>✓ 兼容安全启动的驱动后端可用（推荐）。不会触发 Windows Defender 误报。</value>
+  </data>
+  <data name="SettingsViewModel_DriverXtuConflict" xml:space="preserve">
+    <value>检测到 XTU 冲突</value>
+  </data>
+  <data name="SettingsViewModel_DriverXtuDetail" xml:space="preserve">
+    <value>Intel XTU 服务（{0}）可能阻止降压。请停止 XTU 以使用 OmenCore 降压。PawnIO 仍是推荐后端。</value>
+  </data>
+  <data name="SettingsViewModel_DriverNone" xml:space="preserve">
+    <value>未检测到驱动后端</value>
+  </data>
+  <data name="SettingsViewModel_ReasonSecureBoot" xml:space="preserve">
+    <value>安全启动已启用</value>
+  </data>
+  <data name="SettingsViewModel_ReasonMemoryIntegrity" xml:space="preserve">
+    <value>内存完整性（HVCI）已启用</value>
+  </data>
+  <data name="SettingsViewModel_DriverBlockedDetail" xml:space="preserve">
+    <value>旧式驱动被阻止（{0}）。安装 PawnIO（pawnio.eu）以获得兼容安全启动的 MSR/EC 访问——避免 Defender 误报，并在安全功能开启时正常工作。</value>
+  </data>
+  <data name="SettingsViewModel_DriverInstallPawnIo" xml:space="preserve">
+    <value>安装 PawnIO（推荐——无 Defender 误报）。OmenCore 已不再支持旧式底层后端。</value>
+  </data>
+  <data name="SettingsViewModel_DriverCheckFailed" xml:space="preserve">
+    <value>检查失败</value>
+  </data>
+  <data name="SettingsViewModel_JoinSeparator" xml:space="preserve">
+    <value>、</value>
+  </data>
+  <data name="SettingsViewModel_PlatformHpOmen" xml:space="preserve">
+    <value>HP 系统（检测到 OMEN/Victus）</value>
+  </data>
+  <data name="SettingsViewModel_PlatformHp" xml:space="preserve">
+    <value>HP 系统</value>
+  </data>
+  <data name="SettingsViewModel_PlatformNonHp" xml:space="preserve">
+    <value>非 HP 或未知制造商</value>
+  </data>
+  <data name="SettingsViewModel_IdentitySummaryFormat" xml:space="preserve">
+    <value>{0}，经 {1} 解析（置信度：{2}），运行在 {3}。键盘：{4}，经 {5} 解析（置信度：{6}）。</value>
+  </data>
+  <data name="SettingsViewModel_BadgeUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="SettingsViewModel_BadgeExactMatch" xml:space="preserve">
+    <value>精确匹配</value>
+  </data>
+  <data name="SettingsViewModel_BadgeUnverified" xml:space="preserve">
+    <value>未验证配置</value>
+  </data>
+  <data name="SettingsViewModel_BadgeInferred" xml:space="preserve">
+    <value>推断匹配</value>
+  </data>
+  <data name="SettingsViewModel_BadgeFamilyFallback" xml:space="preserve">
+    <value>系列回退</value>
+  </data>
+  <data name="SettingsViewModel_BadgeDefaultFallback" xml:space="preserve">
+    <value>默认回退</value>
+  </data>
+  <data name="SettingsViewModel_BadgeFallback" xml:space="preserve">
+    <value>回退</value>
+  </data>
+  <data name="Common_NotAvailable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="SystemControlViewModel_TccNotAvailableWmi" xml:space="preserve">
+    <value>不可用——此 BIOS 不通过 WMI 应用 Extended，且 Maximum 之外没有独立的 EC 回退档位</value>
+  </data>
+  <data name="SettingsViewModel_IdentityAnalysisFailed" xml:space="preserve">
+    <value>机型识别分析失败。</value>
+  </data>
+  <data name="SettingsViewModel_ValueUnavailable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
 </root>
