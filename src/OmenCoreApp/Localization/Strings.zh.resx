@@ -5389,4 +5389,10 @@
   <data name="SystemControlViewModel_GpuStartupChipPrefix" xml:space="preserve">
     <value>启动时：</value>
   </data>
+  <data name="DiagnosticsView_ModelNotesUnrecognized" xml:space="preserve">
+    <value>完全未识别的机型（无 ProductId、名称模式或系列匹配）——采用保守默认值，大多数可写入功能会隐藏，直到该主板加入机型数据库。</value>
+  </data>
+  <data name="DiagnosticsView_UnknownModel" xml:space="preserve">
+    <value>未知机型</value>
+  </data>
 </root>

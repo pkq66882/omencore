@@ -5389,4 +5389,10 @@
   <data name="SystemControlViewModel_GpuStartupChipPrefix" xml:space="preserve">
     <value>При запуске: </value>
   </data>
+  <data name="DiagnosticsView_ModelNotesUnrecognized" xml:space="preserve">
+    <value>Полностью нераспознанная модель (нет ProductId, совпадения по имени или семейству) — консервативные значения по умолчанию, большинство функций записи скрыто, пока плата не добавлена в базу данных.</value>
+  </data>
+  <data name="DiagnosticsView_UnknownModel" xml:space="preserve">
+    <value>Неизвестная модель</value>
+  </data>
 </root>

@@ -173,6 +173,19 @@ namespace OmenCore.ViewModels
                 return label;
             }
         }
+        public string ModelNotesText
+        {
+            get
+            {
+                var notes = DetectedCapabilities?.ModelConfig?.Notes;
+                if (notes == "Truly unrecognized model (no ProductId, name-pattern, or family match) - conservative defaults, most write-capable features hidden until this board is added to the database")
+                {
+                    return Strings.DiagnosticsView_ModelNotesUnrecognized;
+                }
+                return notes;
+            }
+        }
+
         public string PowerLimitReadbackLabel
         {
             get

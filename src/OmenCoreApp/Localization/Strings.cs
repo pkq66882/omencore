@@ -2119,5 +2119,8 @@ namespace OmenCore.Localization
     public static string DiagnosticsView_PowerLimitFirmwareManaged => Get(nameof(DiagnosticsView_PowerLimitFirmwareManaged));
     public static string DiagnosticsView_PowerLimitNotSupported => Get(nameof(DiagnosticsView_PowerLimitNotSupported));
 
+    public static string DiagnosticsView_ModelNotesUnrecognized => Get(nameof(DiagnosticsView_ModelNotesUnrecognized));
+    public static string DiagnosticsView_UnknownModel => Get(nameof(DiagnosticsView_UnknownModel));
+
     }
 }

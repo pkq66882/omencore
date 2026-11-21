@@ -5393,4 +5393,10 @@
   <data name="SystemControlViewModel_GpuStartupChipPrefix" xml:space="preserve">
     <value>Startup: </value>
   </data>
+  <data name="DiagnosticsView_ModelNotesUnrecognized" xml:space="preserve">
+    <value>Truly unrecognized model (no ProductId, name-pattern, or family match) - conservative defaults, most write-capable features hidden until this board is added to the database</value>
+  </data>
+  <data name="DiagnosticsView_UnknownModel" xml:space="preserve">
+    <value>Unknown model</value>
+  </data>
 </root>

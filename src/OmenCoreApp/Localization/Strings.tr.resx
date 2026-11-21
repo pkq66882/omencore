@@ -5389,4 +5389,10 @@
   <data name="SystemControlViewModel_GpuStartupChipPrefix" xml:space="preserve">
     <value>Başlangıçta: </value>
   </data>
+  <data name="DiagnosticsView_ModelNotesUnrecognized" xml:space="preserve">
+    <value>Tamamen tanınmayan model (ProductId, ad deseni veya aile eşleşmesi yok) — muhafazakar varsayılanlar, bu kart veritabanına eklenene kadar yazılabilir özelliklerin çoğu gizlidir.</value>
+  </data>
+  <data name="DiagnosticsView_UnknownModel" xml:space="preserve">
+    <value>Bilinmeyen model</value>
+  </data>
 </root>
