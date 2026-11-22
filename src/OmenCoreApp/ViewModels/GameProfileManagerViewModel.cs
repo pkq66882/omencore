@@ -202,7 +202,7 @@ namespace OmenCore.ViewModels
 
         private void CreateProfile()
         {
-            var profile = _profileService.CreateProfile("New Game Profile", "game.exe");
+            var profile = _profileService.CreateProfile(Strings.GameProfile_DefaultNewProfileName, "game.exe");
             FilterProfiles();
             SelectedProfile = profile;
             _logging.Info("Created new game profile");

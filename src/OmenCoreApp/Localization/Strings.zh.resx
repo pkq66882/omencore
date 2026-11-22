@@ -167,7 +167,7 @@
     <value>启用匿名灯光遥测</value>
   </data>
   <data name="SettingsTelemetryHelp" xml:space="preserve">
-    <value>匿名分享 Corsair PID 成功/失败次数的聚合统计，帮助我们改进设备兼容性。不会收集任何可用于识别设备的信息。</value>
+    <value>匿名分享 Corsair 设备（按 PID 区分）的成功/失败次数汇总，帮助我们改进设备兼容性。不会收集任何可用于识别你设备的信息。</value>
   </data>
   <data name="DiagnosticExportControl_DiagnosticExport" xml:space="preserve">
     <value>诊断导出</value>
@@ -563,7 +563,7 @@
     <value>✓ V2 键盘引擎（单键 EC 与 WMI 灯效）</value>
   </data>
   <data name="AboutWindow_GuidedFanDiagnostics" xml:space="preserve">
-    <value>✓ 引导式风扇诊断</value>
+    <value>✓ 分步风扇诊断</value>
   </data>
   <data name="AboutWindow_MemoryOptimizer" xml:space="preserve">
     <value>✓ 内存优化器</value>
@@ -1520,13 +1520,13 @@
     <value>档位：</value>
   </data>
   <data name="FanDiagnosticsView_GuidedFanVerification" xml:space="preserve">
-    <value>引导式风扇验证</value>
+    <value>分步风扇验证</value>
   </data>
   <data name="FanDiagnosticsView_Tests3060100" xml:space="preserve">
     <value>测试：30% → 60% → 100%</value>
   </data>
   <data name="FanDiagnosticsView_RunGuidedFanVerification" xml:space="preserve">
-    <value>运行引导式风扇验证</value>
+    <value>开始分步验证</value>
   </data>
   <data name="FanDiagnosticsView_VerificationResults" xml:space="preserve">
     <value>验证结果</value>
@@ -2891,7 +2891,7 @@
     <value>原因：</value>
   </data>
   <data name="SettingsView_UltraLowBlockers" xml:space="preserve">
-    <value>超低级阻挡项：</value>
+    <value>超低节奏受阻原因：</value>
   </data>
   <data name="SettingsView_StartupSafeModeGuard" xml:space="preserve">
     <value>启动安全模式守卫</value>
@@ -6884,13 +6884,13 @@
     <value>OmenCore 无法切换 GPU 模式：{0}</value>
   </data>
   <data name="GpuSwitch_ModeHybrid" xml:space="preserve">
-    <value>混合（MSHybrid/Optimus）</value>
+    <value>混合模式（MSHybrid/Optimus）</value>
   </data>
   <data name="GpuSwitch_ModeDiscrete" xml:space="preserve">
-    <value>仅独立显卡</value>
+    <value>独显模式</value>
   </data>
   <data name="GpuSwitch_ModeIntegrated" xml:space="preserve">
-    <value>仅集成显卡</value>
+    <value>核显模式</value>
   </data>
   <data name="GpuSwitch_ModeUnknown" xml:space="preserve">
     <value>未知</value>
@@ -8316,5 +8316,56 @@
   </data>
   <data name="DiagnosticExport_SaveDialogTitle" xml:space="preserve">
     <value>保存诊断导出</value>
+  </data>
+  <data name="Settings_HistoryCountFormat" xml:space="preserve">
+    <value>{0} 个数据点</value>
+  </data>
+  <data name="Settings_CadenceReasonUnavailable" xml:space="preserve">
+    <value>节奏信息不可用</value>
+  </data>
+  <data name="Settings_CadenceReasonOverlay" xml:space="preserve">
+    <value>OSD 可见时强制活动节奏（1 秒）</value>
+  </data>
+  <data name="Settings_CadenceReasonGpuIdle" xml:space="preserve">
+    <value>GPU 已确认后台空闲，已降低频率以减少空闲功耗</value>
+  </data>
+  <data name="Settings_CadenceReasonLowOverheadTray" xml:space="preserve">
+    <value>低开销/仅托盘：应用已最小化，且无活动风扇曲线或保持</value>
+  </data>
+  <data name="Settings_CadenceReasonLowOverhead" xml:space="preserve">
+    <value>低开销：使用固定空闲节奏以减少轮询开销</value>
+  </data>
+  <data name="Settings_CadenceReasonUiActive" xml:space="preserve">
+    <value>界面活动：主窗口可见或正在交互</value>
+  </data>
+  <data name="Settings_CadenceReasonTrayOnly" xml:space="preserve">
+    <value>仅托盘：应用已最小化，且无活动风扇曲线或保持</value>
+  </data>
+  <data name="Settings_CadenceReasonIdleBackground" xml:space="preserve">
+    <value>后台空闲：窗口未激活，但风扇活动需要标准空闲节奏</value>
+  </data>
+  <data name="Settings_BlockerLowOverheadOff" xml:space="preserve">
+    <value>未启用低开销模式</value>
+  </data>
+  <data name="Settings_BlockerWindowActive" xml:space="preserve">
+    <value>主窗口处于活动状态</value>
+  </data>
+  <data name="Settings_BlockerOsdVisible" xml:space="preserve">
+    <value>OSD 可见</value>
+  </data>
+  <data name="Settings_BlockerFanDiag" xml:space="preserve">
+    <value>风扇诊断进行中</value>
+  </data>
+  <data name="Settings_BlockerCurve" xml:space="preserve">
+    <value>风扇曲线启用中</value>
+  </data>
+  <data name="Settings_BlockerHold" xml:space="preserve">
+    <value>风扇转速保持启用中</value>
+  </data>
+  <data name="Settings_BlockerNone" xml:space="preserve">
+    <value>无——应用隐藏到托盘后即可进入超低节奏</value>
+  </data>
+  <data name="GameProfile_DefaultNewProfileName" xml:space="preserve">
+    <value>新游戏方案</value>
   </data>
 </root>

@@ -8321,4 +8321,55 @@
   <data name="DiagnosticExport_SaveDialogTitle" xml:space="preserve">
     <value>Save Diagnostic Export</value>
   </data>
+  <data name="Settings_HistoryCountFormat" xml:space="preserve">
+    <value>{0} points</value>
+  </data>
+  <data name="Settings_CadenceReasonUnavailable" xml:space="preserve">
+    <value>Cadence unavailable</value>
+  </data>
+  <data name="Settings_CadenceReasonOverlay" xml:space="preserve">
+    <value>OSD visible forces active 1s cadence</value>
+  </data>
+  <data name="Settings_CadenceReasonGpuIdle" xml:space="preserve">
+    <value>GPU confirmed idle in the background, backed off to reduce idle-power keep-awake cost</value>
+  </data>
+  <data name="Settings_CadenceReasonLowOverheadTray" xml:space="preserve">
+    <value>low-overhead/tray-only: app minimized with no active fan curve/hold</value>
+  </data>
+  <data name="Settings_CadenceReasonLowOverhead" xml:space="preserve">
+    <value>low-overhead: fixed idle cadence to reduce polling overhead</value>
+  </data>
+  <data name="Settings_CadenceReasonUiActive" xml:space="preserve">
+    <value>ui-active: main window visible/interactive</value>
+  </data>
+  <data name="Settings_CadenceReasonTrayOnly" xml:space="preserve">
+    <value>tray-only: app minimized with no active fan curve/hold</value>
+  </data>
+  <data name="Settings_CadenceReasonIdleBackground" xml:space="preserve">
+    <value>idle-background: window inactive but fan activity requires standard idle cadence</value>
+  </data>
+  <data name="Settings_BlockerLowOverheadOff" xml:space="preserve">
+    <value>Low overhead mode disabled</value>
+  </data>
+  <data name="Settings_BlockerWindowActive" xml:space="preserve">
+    <value>Main window active</value>
+  </data>
+  <data name="Settings_BlockerOsdVisible" xml:space="preserve">
+    <value>OSD visible</value>
+  </data>
+  <data name="Settings_BlockerFanDiag" xml:space="preserve">
+    <value>Fan diagnostics active</value>
+  </data>
+  <data name="Settings_BlockerCurve" xml:space="preserve">
+    <value>Fan curve active</value>
+  </data>
+  <data name="Settings_BlockerHold" xml:space="preserve">
+    <value>Fan hold active</value>
+  </data>
+  <data name="Settings_BlockerNone" xml:space="preserve">
+    <value>None - ultra-low cadence eligible when the app is hidden to tray</value>
+  </data>
+  <data name="GameProfile_DefaultNewProfileName" xml:space="preserve">
+    <value>New Game Profile</value>
+  </data>
 </root>

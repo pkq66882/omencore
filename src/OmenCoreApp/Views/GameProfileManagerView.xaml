@@ -335,6 +335,7 @@
                         <!-- GPU Mode -->
                         <Label Content="{x:Static loc:Strings.GameProfileManagerView_GpuMode}"/>
                         <ComboBox ItemsSource="{Binding GpuModes}"
+                                  ItemTemplate="{StaticResource GpuSwitchModeItemTemplate}"
                                   SelectedItem="{Binding SelectedProfile.GpuMode}"
                                   Margin="0,0,0,12"/>
 

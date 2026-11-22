@@ -952,7 +952,7 @@
                                         IsSnapToTickEnabled="True"
                                         Value="{Binding HistoryCount}"
                                         Width="120" VerticalAlignment="Center"/>
-                                <TextBlock Text="{Binding HistoryCount, StringFormat={}{0} points}" 
+                                <TextBlock Text="{Binding HistoryCountText}" 
                                            FontSize="12" Width="60" TextAlignment="Right"
                                            Foreground="{StaticResource TextPrimaryBrush}"
                                            VerticalAlignment="Center" Margin="8,0,0,0"/>

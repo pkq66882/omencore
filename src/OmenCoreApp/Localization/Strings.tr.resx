@@ -8317,4 +8317,55 @@
   <data name="DiagnosticExport_SaveDialogTitle" xml:space="preserve">
     <value>Tanılama dışa aktarımını kaydet</value>
   </data>
+  <data name="Settings_HistoryCountFormat" xml:space="preserve">
+    <value>{0} nokta</value>
+  </data>
+  <data name="Settings_CadenceReasonUnavailable" xml:space="preserve">
+    <value>Ritim bilgisi kullanılamıyor</value>
+  </data>
+  <data name="Settings_CadenceReasonOverlay" xml:space="preserve">
+    <value>OSD görünürken etkin ritim (1 sn) zorunlu</value>
+  </data>
+  <data name="Settings_CadenceReasonGpuIdle" xml:space="preserve">
+    <value>GPU arka planda boşta; boşta güç tüketimini azaltmak için yavaşlatıldı</value>
+  </data>
+  <data name="Settings_CadenceReasonLowOverheadTray" xml:space="preserve">
+    <value>Düşük ek yük/yalnızca tepsi: uygulama simge durumunda, etkin fan eğrisi/tutma yok</value>
+  </data>
+  <data name="Settings_CadenceReasonLowOverhead" xml:space="preserve">
+    <value>Düşük ek yük: yoklama yükünü azaltmak için sabit boşta ritmi</value>
+  </data>
+  <data name="Settings_CadenceReasonUiActive" xml:space="preserve">
+    <value>Arayüz etkin: ana pencere görünür/etkileşimde</value>
+  </data>
+  <data name="Settings_CadenceReasonTrayOnly" xml:space="preserve">
+    <value>Yalnızca tepsi: uygulama simge durumunda, etkin fan eğrisi/tutma yok</value>
+  </data>
+  <data name="Settings_CadenceReasonIdleBackground" xml:space="preserve">
+    <value>Arka plan boşta: pencere etkin değil ancak fan etkinliği standart boşta ritmi gerektiriyor</value>
+  </data>
+  <data name="Settings_BlockerLowOverheadOff" xml:space="preserve">
+    <value>Düşük ek yük modu kapalı</value>
+  </data>
+  <data name="Settings_BlockerWindowActive" xml:space="preserve">
+    <value>Ana pencere etkin</value>
+  </data>
+  <data name="Settings_BlockerOsdVisible" xml:space="preserve">
+    <value>OSD görünür</value>
+  </data>
+  <data name="Settings_BlockerFanDiag" xml:space="preserve">
+    <value>Fan tanılama etkin</value>
+  </data>
+  <data name="Settings_BlockerCurve" xml:space="preserve">
+    <value>Fan eğrisi etkin</value>
+  </data>
+  <data name="Settings_BlockerHold" xml:space="preserve">
+    <value>Fan tutma etkin</value>
+  </data>
+  <data name="Settings_BlockerNone" xml:space="preserve">
+    <value>Yok - uygulama tepsiye gizlendiğinde ultra düşük ritim kullanılabilir</value>
+  </data>
+  <data name="GameProfile_DefaultNewProfileName" xml:space="preserve">
+    <value>Yeni oyun profili</value>
+  </data>
 </root>

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "mimosa-hook-status/v1",
+  "recordedAt": "2026-11-22T19:23:13.388Z",
+  "sessionId": "sess_6a92684d-e142-4332-8cf9-d914e79bfcff",
+  "event": "PostToolUse",
+  "toolName": "Write",
+  "file": "C:\\Users\\xyzxiaoz\\.zcode\\workspace\\ddd28c00-e1d3-4b46-8337-8bbfcc30d16c\\l10n-tools\\Apply-Round24.ps1",
+  "outcome": "clear",
+  "coverage": "complete",
+  "findingCount": 0,
+  "durationMs": 8,
+  "hostState": "hook_complete",
+  "reportHint": ".mimosa/reports/"
+}

@@ -3115,5 +3115,23 @@ namespace OmenCore.Localization
     public static string Nvidia_SelectVbiosTitle => Get(nameof(Nvidia_SelectVbiosTitle));
     public static string Nvidia_VbiosFilter => Get(nameof(Nvidia_VbiosFilter));
 
+    public static string GameProfile_DefaultNewProfileName => Get(nameof(GameProfile_DefaultNewProfileName));
+    public static string Settings_BlockerCurve => Get(nameof(Settings_BlockerCurve));
+    public static string Settings_BlockerFanDiag => Get(nameof(Settings_BlockerFanDiag));
+    public static string Settings_BlockerHold => Get(nameof(Settings_BlockerHold));
+    public static string Settings_BlockerLowOverheadOff => Get(nameof(Settings_BlockerLowOverheadOff));
+    public static string Settings_BlockerNone => Get(nameof(Settings_BlockerNone));
+    public static string Settings_BlockerOsdVisible => Get(nameof(Settings_BlockerOsdVisible));
+    public static string Settings_BlockerWindowActive => Get(nameof(Settings_BlockerWindowActive));
+    public static string Settings_CadenceReasonGpuIdle => Get(nameof(Settings_CadenceReasonGpuIdle));
+    public static string Settings_CadenceReasonIdleBackground => Get(nameof(Settings_CadenceReasonIdleBackground));
+    public static string Settings_CadenceReasonLowOverhead => Get(nameof(Settings_CadenceReasonLowOverhead));
+    public static string Settings_CadenceReasonLowOverheadTray => Get(nameof(Settings_CadenceReasonLowOverheadTray));
+    public static string Settings_CadenceReasonOverlay => Get(nameof(Settings_CadenceReasonOverlay));
+    public static string Settings_CadenceReasonTrayOnly => Get(nameof(Settings_CadenceReasonTrayOnly));
+    public static string Settings_CadenceReasonUiActive => Get(nameof(Settings_CadenceReasonUiActive));
+    public static string Settings_CadenceReasonUnavailable => Get(nameof(Settings_CadenceReasonUnavailable));
+    public static string Settings_HistoryCountFormat => Get(nameof(Settings_HistoryCountFormat));
+
     }
 }

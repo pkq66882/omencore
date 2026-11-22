@@ -713,6 +713,8 @@ namespace OmenCore.ViewModels
 
         #region Monitoring Settings
 
+        public string HistoryCountText => string.Format(Strings.Settings_HistoryCountFormat, HistoryCount);
+
         public int HistoryCount
         {
             get => _historyCount;
@@ -722,6 +724,7 @@ namespace OmenCore.ViewModels
                 {
                     _historyCount = value;
                     OnPropertyChanged();
+                    OnPropertyChanged(nameof(HistoryCountText));
                     SaveSettings();
                 }
             }
@@ -773,7 +776,27 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string MonitoringCadenceReason => _hardwareMonitoringService?.CurrentCadenceReason ?? "Cadence unavailable";
+        public string MonitoringCadenceReason =>
+            LocalizeCadenceReason(_hardwareMonitoringService?.CurrentCadenceReason);
+
+        /// <summary>Maps Core's canonical cadence reason codes to UI sentences; unknown text passes through.</summary>
+        private static string LocalizeCadenceReason(string? reason)
+        {
+            if (string.IsNullOrWhiteSpace(reason)) return Strings.Settings_CadenceReasonUnavailable;
+            var colon = reason.IndexOf(':');
+            var code = colon > 0 ? reason.Substring(0, colon).Trim() : reason.Trim();
+            return code switch
+            {
+                "overlay-realtime" => Strings.Settings_CadenceReasonOverlay,
+                "gpu-deep-idle" => Strings.Settings_CadenceReasonGpuIdle,
+                "low-overhead/tray-only" => Strings.Settings_CadenceReasonLowOverheadTray,
+                "low-overhead" => Strings.Settings_CadenceReasonLowOverhead,
+                "ui-active" => Strings.Settings_CadenceReasonUiActive,
+                "tray-only" => Strings.Settings_CadenceReasonTrayOnly,
+                "idle-background" => Strings.Settings_CadenceReasonIdleBackground,
+                _ => reason
+            };
+        }
 
         public string MonitoringCadenceBlockers
         {
@@ -785,39 +808,39 @@ namespace OmenCore.ViewModels
 
                 if (!lowOverheadEnabled)
                 {
-                    blockers.Add("Low overhead mode disabled");
+                    blockers.Add(Strings.Settings_BlockerLowOverheadOff);
                 }
 
                 if (transition != null)
                 {
                     if (transition.UiWindowActive)
                     {
-                        blockers.Add("Main window active");
+                        blockers.Add(Strings.Settings_BlockerWindowActive);
                     }
 
                     if (transition.OverlayRealtimeMode)
                     {
-                        blockers.Add("OSD visible");
+                        blockers.Add(Strings.Settings_BlockerOsdVisible);
                     }
                 }
 
                 if (_fanService?.IsDiagnosticModeActive == true)
                 {
-                    blockers.Add("Fan diagnostics active");
+                    blockers.Add(Strings.Settings_BlockerFanDiag);
                 }
 
                 if (_fanService?.IsCurveActive == true)
                 {
-                    blockers.Add("Fan curve active");
+                    blockers.Add(Strings.Settings_BlockerCurve);
                 }
 
                 if (_fanService?.IsHoldActive == true)
                 {
-                    blockers.Add("Fan hold active");
+                    blockers.Add(Strings.Settings_BlockerHold);
                 }
 
                 return blockers.Count == 0
-                    ? "None - ultra-low cadence eligible when the app is hidden to tray"
+                    ? Strings.Settings_BlockerNone
                     : string.Join(", ", blockers.Distinct(StringComparer.Ordinal));
             }
         }
