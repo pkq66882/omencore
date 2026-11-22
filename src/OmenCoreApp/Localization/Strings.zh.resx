@@ -743,7 +743,7 @@
     <value>预装软件管理器</value>
   </data>
   <data name="BloatwareManagerView_RemovePreInstalledBloatwareToImproveSystem" xml:space="preserve">
-    <value>移除预装的无用软件，提升系统性能、减少杂乱。低风险项可安全移除。</value>
+    <value>清理不需要的预装软件，释放系统资源、减少后台干扰。低风险项目可安全移除。</value>
   </data>
   <data name="BloatwareManagerView_Detected" xml:space="preserve">
     <value>已检测</value>
@@ -2972,7 +2972,7 @@
     <value>返回自动模式时不钉住风扇档位（实验性）</value>
   </data>
   <data name="SettingsView_ForLaptopsWhoseFansStayNear2000RpmAtHighTe" xml:space="preserve">
-    <value>适用于高温下风扇持续停留在约 2000 RPM、直到恢复 OEM 方案才变化的机型。跳过 OmenCore 在交还控制权给 BIOS 时发送的风扇档位提示。默认关闭；重启后生效。尚未在硬件上确认。</value>
+    <value>适用于高温时风扇长期徘徊在 2000 RPM 左右、直到切换回 OEM 预设才恢复的机型。启用后将跳过 OmenCore 把控制权交还 BIOS 时发送的风扇档位提示。默认关闭；重启后生效。尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAuto" xml:space="preserve">
     <value>返回自动时不钉住风扇档位</value>
@@ -3017,7 +3017,7 @@
     <value>性能模式下的出厂风扇曲线（实验性）</value>
   </data>
   <data name="SettingsView_OnThisBoardTheFirmwareSOwnAutoParksTheFans" xml:space="preserve">
-    <value>此主板的固件自动模式在重负载下把风扇压得过低。此选项改用 HP 自家的性能模式曲线，仅在性能模式激活且风扇处于自动时运行。尚未在硬件上确认；关闭后风扇回到 BIOS 自动。默认关闭。</value>
+    <value>该主板的固件自动模式在重负载下会把风扇转速压得过低。此选项改用 HP 自有的性能模式曲线，仅在性能模式激活且风扇处于自动时生效。尚未在真机上验证；关闭后风扇恢复 BIOS 自动控制。默认关闭。</value>
   </data>
   <data name="SettingsView_FactoryFanCurveInPerformanceMode" xml:space="preserve">
     <value>性能模式下的出厂风扇曲线</value>
@@ -5666,7 +5666,7 @@
     <value>完成：点击“扫描”检测预装软件</value>
   </data>
   <data name="BloatwareManagerViewModel_ScanCompletedFormat" xml:space="preserve">
-    <value>扫描完成：检测到 {0} 项</value>
+    <value>检测到 {0} 项</value>
   </data>
   <data name="BloatwareManagerViewModel_ScanFailedFormat" xml:space="preserve">
     <value>扫描失败：{0}</value>
@@ -8112,5 +8112,56 @@
   </data>
   <data name="Settings_ModelNotAnalyzed" xml:space="preserve">
     <value>尚未分析机型身份。</value>
+  </data>
+  <data name="QuickPopup_MonitoringTelemetryFormat" xml:space="preserve">
+    <value>监控：{0}</value>
+  </data>
+  <data name="QuickPopup_ToggleRefreshRateFormat" xml:space="preserve">
+    <value>切换 {0} 的刷新率。再次点击可切换到下一个显示器。</value>
+  </data>
+  <data name="Lighting_BackendNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="BloatwareCategory_Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="BloatwareCategory_OemSoftware" xml:space="preserve">
+    <value>OEM 软件</value>
+  </data>
+  <data name="BloatwareCategory_WindowsApps" xml:space="preserve">
+    <value>Windows 应用</value>
+  </data>
+  <data name="BloatwareCategory_Antivirus" xml:space="preserve">
+    <value>杀毒软件</value>
+  </data>
+  <data name="BloatwareCategory_Games" xml:space="preserve">
+    <value>游戏</value>
+  </data>
+  <data name="BloatwareCategory_Social" xml:space="preserve">
+    <value>社交</value>
+  </data>
+  <data name="BloatwareCategory_Communication" xml:space="preserve">
+    <value>通信</value>
+  </data>
+  <data name="BloatwareCategory_Promotional" xml:space="preserve">
+    <value>推广</value>
+  </data>
+  <data name="BloatwareCategory_Telemetry" xml:space="preserve">
+    <value>遥测</value>
+  </data>
+  <data name="BloatwareCategory_Startup" xml:space="preserve">
+    <value>启动项</value>
+  </data>
+  <data name="BloatwareType_AppxPackage" xml:space="preserve">
+    <value>应用包（Appx）</value>
+  </data>
+  <data name="BloatwareType_Win32App" xml:space="preserve">
+    <value>桌面应用（Win32）</value>
+  </data>
+  <data name="BloatwareType_StartupItem" xml:space="preserve">
+    <value>启动项</value>
+  </data>
+  <data name="BloatwareType_ScheduledTask" xml:space="preserve">
+    <value>计划任务</value>
   </data>
 </root>

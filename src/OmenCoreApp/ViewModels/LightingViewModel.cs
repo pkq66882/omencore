@@ -507,7 +507,14 @@ namespace OmenCore.ViewModels
         /// <summary>
         /// Active HP keyboard lighting backend path name (e.g. "WMI BIOS", "V2:ColorTable", "EC").
         /// </summary>
-        public string HpKeyboardActiveBackend => _keyboardLightingService?.BackendType ?? "N/A";
+        public string HpKeyboardActiveBackend
+        {
+            get
+            {
+                var backend = _keyboardLightingService?.BackendType ?? "N/A";
+                return string.Equals(backend, "None", StringComparison.Ordinal) ? Strings.Lighting_BackendNone : backend;
+            }
+        }
 
         /// <summary>
         /// True when a known RGB conflict process (OMEN Light Studio, OmenCap, OGH) is detected running.
@@ -799,8 +806,15 @@ namespace OmenCore.ViewModels
         
         /// <summary>
         /// Backend type for keyboard lighting (WMI BIOS, WMI, EC, or None).
+        /// Canonical value: persisted to the observation block, so it must stay English.
         /// </summary>
         public string KeyboardLightingBackend => _keyboardLightingService?.BackendType ?? "None";
+
+        /// <summary>Display-only form of <see cref="KeyboardLightingBackend"/> for the keyboard card chip.</summary>
+        public string KeyboardLightingBackendDisplay =>
+            string.Equals(KeyboardLightingBackend, "None", StringComparison.Ordinal)
+                ? Strings.Lighting_BackendNone
+                : KeyboardLightingBackend;
         
         /// <summary>
         /// Helpful status/hint message for keyboard lighting.

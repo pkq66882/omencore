@@ -421,7 +421,7 @@
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <Border Style="{StaticResource StatusBadge}" Background="{StaticResource SurfaceMediumBrush}">
-                                            <TextBlock Text="{Binding Category}" FontSize="10" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                            <TextBlock Text="{Binding Category, Converter={StaticResource BloatwareCategoryDisplay}}" FontSize="10" Foreground="{StaticResource TextSecondaryBrush}"/>
                                         </Border>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
@@ -429,7 +429,7 @@
                             <GridViewColumn Header="{x:Static loc:Strings.BloatwareManagerView_Type}" Width="100">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding Type}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                        <TextBlock Text="{Binding Type, Converter={StaticResource BloatwareTypeDisplay}}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}"/>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>

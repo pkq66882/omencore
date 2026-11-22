@@ -8117,4 +8117,55 @@
   <data name="Settings_ModelNotAnalyzed" xml:space="preserve">
     <value>Model identity has not been analyzed yet.</value>
   </data>
+  <data name="QuickPopup_MonitoringTelemetryFormat" xml:space="preserve">
+    <value>Monitoring: {0}</value>
+  </data>
+  <data name="QuickPopup_ToggleRefreshRateFormat" xml:space="preserve">
+    <value>Toggle refresh rate for {0}. Click again to move to the next display.</value>
+  </data>
+  <data name="Lighting_BackendNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="BloatwareCategory_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="BloatwareCategory_OemSoftware" xml:space="preserve">
+    <value>OEM software</value>
+  </data>
+  <data name="BloatwareCategory_WindowsApps" xml:space="preserve">
+    <value>Windows apps</value>
+  </data>
+  <data name="BloatwareCategory_Antivirus" xml:space="preserve">
+    <value>Antivirus</value>
+  </data>
+  <data name="BloatwareCategory_Games" xml:space="preserve">
+    <value>Games</value>
+  </data>
+  <data name="BloatwareCategory_Social" xml:space="preserve">
+    <value>Social</value>
+  </data>
+  <data name="BloatwareCategory_Communication" xml:space="preserve">
+    <value>Communication</value>
+  </data>
+  <data name="BloatwareCategory_Promotional" xml:space="preserve">
+    <value>Promotional</value>
+  </data>
+  <data name="BloatwareCategory_Telemetry" xml:space="preserve">
+    <value>Telemetry</value>
+  </data>
+  <data name="BloatwareCategory_Startup" xml:space="preserve">
+    <value>Startup</value>
+  </data>
+  <data name="BloatwareType_AppxPackage" xml:space="preserve">
+    <value>Appx package</value>
+  </data>
+  <data name="BloatwareType_Win32App" xml:space="preserve">
+    <value>Win32 app</value>
+  </data>
+  <data name="BloatwareType_StartupItem" xml:space="preserve">
+    <value>Startup item</value>
+  </data>
+  <data name="BloatwareType_ScheduledTask" xml:space="preserve">
+    <value>Scheduled task</value>
+  </data>
 </root>

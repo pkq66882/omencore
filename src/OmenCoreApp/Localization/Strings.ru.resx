@@ -8113,4 +8113,55 @@
   <data name="Settings_ModelNotAnalyzed" xml:space="preserve">
     <value>Сведения о модели ещё не проанализированы.</value>
   </data>
+  <data name="QuickPopup_MonitoringTelemetryFormat" xml:space="preserve">
+    <value>Мониторинг: {0}</value>
+  </data>
+  <data name="QuickPopup_ToggleRefreshRateFormat" xml:space="preserve">
+    <value>Переключить частоту обновления для {0}. Нажмите снова для перехода к следующему дисплею.</value>
+  </data>
+  <data name="Lighting_BackendNone" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="BloatwareCategory_Unknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="BloatwareCategory_OemSoftware" xml:space="preserve">
+    <value>ПО OEM</value>
+  </data>
+  <data name="BloatwareCategory_WindowsApps" xml:space="preserve">
+    <value>Приложения Windows</value>
+  </data>
+  <data name="BloatwareCategory_Antivirus" xml:space="preserve">
+    <value>Антивирус</value>
+  </data>
+  <data name="BloatwareCategory_Games" xml:space="preserve">
+    <value>Игры</value>
+  </data>
+  <data name="BloatwareCategory_Social" xml:space="preserve">
+    <value>Социальные сети</value>
+  </data>
+  <data name="BloatwareCategory_Communication" xml:space="preserve">
+    <value>Связь</value>
+  </data>
+  <data name="BloatwareCategory_Promotional" xml:space="preserve">
+    <value>Рекламное</value>
+  </data>
+  <data name="BloatwareCategory_Telemetry" xml:space="preserve">
+    <value>Телеметрия</value>
+  </data>
+  <data name="BloatwareCategory_Startup" xml:space="preserve">
+    <value>Автозапуск</value>
+  </data>
+  <data name="BloatwareType_AppxPackage" xml:space="preserve">
+    <value>Пакет Appx</value>
+  </data>
+  <data name="BloatwareType_Win32App" xml:space="preserve">
+    <value>Приложение Win32</value>
+  </data>
+  <data name="BloatwareType_StartupItem" xml:space="preserve">
+    <value>Элемент автозапуска</value>
+  </data>
+  <data name="BloatwareType_ScheduledTask" xml:space="preserve">
+    <value>Запланированная задача</value>
+  </data>
 </root>

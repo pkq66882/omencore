@@ -202,7 +202,7 @@ namespace OmenCore.Views
             }
 
             _monitoringHealth = normalizedHealth;
-            var healthText = string.Format(Strings.QuickPopup_MonitoringFormat, _monitoringHealth switch { "Healthy" => Strings.TrayIcon_HealthHealthy, "Degraded" => Strings.TrayIcon_HealthDegraded, "Unknown" => Strings.TrayIcon_HealthUnknown, _ => _monitoringHealth ?? string.Empty });
+            var healthText = string.Format(Strings.QuickPopup_MonitoringFormat, LocalizeHealth(_monitoringHealth));
             if (!string.Equals(HealthStatusText.Text, healthText, StringComparison.Ordinal))
             {
                 HealthStatusText.Text = healthText;
@@ -264,9 +264,19 @@ namespace OmenCore.Views
                 sample.GpuTemperatureC > 0 ? sample.GpuTemperatureC.ToString("0") : "—",
                 $"{sample.CpuLoadPercent:0}%",
                 $"{sample.GpuLoadPercent:0}%",
-                $"Monitoring: {_monitoringHealth}",
+                string.Format(Strings.QuickPopup_MonitoringTelemetryFormat, LocalizeHealth(_monitoringHealth)),
                 BuildLinkModeText());
         }
+
+        /// <summary>Localized monitoring health used by the header and telemetry block.</summary>
+        private static string LocalizeHealth(string? health) => health switch
+        {
+            "Healthy" => Strings.TrayIcon_HealthHealthy,
+            "Degraded" => Strings.TrayIcon_HealthDegraded,
+            "Stale" => Strings.TrayIcon_HealthStale,
+            "Unknown" => Strings.TrayIcon_HealthUnknown,
+            _ => health ?? string.Empty
+        };
 
         private void UpdateLinkModeText()
         {
@@ -362,7 +372,7 @@ namespace OmenCore.Views
 
             var targetLabel = $"D{_activeDisplayTargetIndex + 1}";
             RefreshRateText.Text = currentRate > 0 ? $"{targetLabel} {currentRate}Hz" : $"{targetLabel} N/A";
-            RefreshRateBtn.ToolTip = $"Toggle refresh rate for {target.FriendlyName}. Click again to move to the next display.";
+            RefreshRateBtn.ToolTip = string.Format(Strings.QuickPopup_ToggleRefreshRateFormat, target.FriendlyName);
         }
 
         private void RefreshDisplayTargets()

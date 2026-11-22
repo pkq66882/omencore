@@ -1278,7 +1278,7 @@
                                        Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                             <Border Background="#1AE6002E" CornerRadius="8" Padding="8,3" Margin="12,0,0,0" VerticalAlignment="Center">
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding KeyboardLightingBackend}" FontSize="10" Foreground="{StaticResource AccentBrush}"/>
+                                    <TextBlock Text="{Binding KeyboardLightingBackendDisplay}" FontSize="10" Foreground="{StaticResource AccentBrush}"/>
                                 </StackPanel>
                             </Border>
                             <ToggleButton IsChecked="{Binding HpOmenKeyboardCardEnabled, Mode=TwoWay}"

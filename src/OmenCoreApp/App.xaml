@@ -47,6 +47,8 @@
             </DataTemplate>
             <local:SettingsTokenDisplayConverter x:Key="SettingsTokenDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:MinutesDisplayConverter x:Key="MinutesDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:BloatwareCategoryDisplayConverter x:Key="BloatwareCategoryDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:BloatwareTypeDisplayConverter x:Key="BloatwareTypeDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <DataTemplate x:Key="SettingsTokenItemTemplate">
                 <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}}"/>
             </DataTemplate>

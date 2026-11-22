@@ -24,6 +24,32 @@ namespace OmenCore.Utils
             _ => Strings.GpuSwitch_ModeUnknown
         };
 
+        /// <summary>Localized bloatware category name; unknown values pass through.</summary>
+        public static string BloatwareCategory(object? value) => value?.ToString() switch
+        {
+            "OemSoftware" => Strings.BloatwareCategory_OemSoftware,
+            "WindowsApps" => Strings.BloatwareCategory_WindowsApps,
+            "Antivirus" => Strings.BloatwareCategory_Antivirus,
+            "Games" => Strings.BloatwareCategory_Games,
+            "Social" => Strings.BloatwareCategory_Social,
+            "Communication" => Strings.BloatwareCategory_Communication,
+            "Promotional" => Strings.BloatwareCategory_Promotional,
+            "Telemetry" => Strings.BloatwareCategory_Telemetry,
+            "Startup" => Strings.BloatwareCategory_Startup,
+            "Unknown" or null => Strings.BloatwareCategory_Unknown,
+            var s => s
+        };
+
+        /// <summary>Localized bloatware item type; unknown values pass through.</summary>
+        public static string BloatwareType(object? value) => value?.ToString() switch
+        {
+            "AppxPackage" => Strings.BloatwareType_AppxPackage,
+            "Win32App" => Strings.BloatwareType_Win32App,
+            "StartupItem" => Strings.BloatwareType_StartupItem,
+            "ScheduledTask" => Strings.BloatwareType_ScheduledTask,
+            var s => s ?? string.Empty
+        };
+
         /// <summary>Localized boost level name; unknown values pass through.</summary>
         public static string BoostLevel(string? level) => level switch
         {
@@ -334,6 +360,26 @@ namespace OmenCore.Utils
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             => value is int minutes ? string.Format(Strings.SettingsView_MinutesFormat, minutes) : value?.ToString() ?? string.Empty;
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+
+    /// Localized bloatware category for the list column; the enum itself is unchanged.
+    public class BloatwareCategoryDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => DisplayNames.BloatwareCategory(value);
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+
+    /// Localized bloatware item type for the list column; the enum itself is unchanged.
+    public class BloatwareTypeDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => DisplayNames.BloatwareType(value);
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
             => throw new NotSupportedException();

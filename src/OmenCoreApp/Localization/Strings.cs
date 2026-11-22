@@ -3043,5 +3043,23 @@ namespace OmenCore.Localization
     public static string SystemControl_RememberedGpuBoostFormat => Get(nameof(SystemControl_RememberedGpuBoostFormat));
     public static string SystemControl_RememberedLightingFormat => Get(nameof(SystemControl_RememberedLightingFormat));
 
+    public static string BloatwareCategory_Antivirus => Get(nameof(BloatwareCategory_Antivirus));
+    public static string BloatwareCategory_Communication => Get(nameof(BloatwareCategory_Communication));
+    public static string BloatwareCategory_Games => Get(nameof(BloatwareCategory_Games));
+    public static string BloatwareCategory_OemSoftware => Get(nameof(BloatwareCategory_OemSoftware));
+    public static string BloatwareCategory_Promotional => Get(nameof(BloatwareCategory_Promotional));
+    public static string BloatwareCategory_Social => Get(nameof(BloatwareCategory_Social));
+    public static string BloatwareCategory_Startup => Get(nameof(BloatwareCategory_Startup));
+    public static string BloatwareCategory_Telemetry => Get(nameof(BloatwareCategory_Telemetry));
+    public static string BloatwareCategory_Unknown => Get(nameof(BloatwareCategory_Unknown));
+    public static string BloatwareCategory_WindowsApps => Get(nameof(BloatwareCategory_WindowsApps));
+    public static string BloatwareType_AppxPackage => Get(nameof(BloatwareType_AppxPackage));
+    public static string BloatwareType_ScheduledTask => Get(nameof(BloatwareType_ScheduledTask));
+    public static string BloatwareType_StartupItem => Get(nameof(BloatwareType_StartupItem));
+    public static string BloatwareType_Win32App => Get(nameof(BloatwareType_Win32App));
+    public static string Lighting_BackendNone => Get(nameof(Lighting_BackendNone));
+    public static string QuickPopup_MonitoringTelemetryFormat => Get(nameof(QuickPopup_MonitoringTelemetryFormat));
+    public static string QuickPopup_ToggleRefreshRateFormat => Get(nameof(QuickPopup_ToggleRefreshRateFormat));
+
     }
 }
