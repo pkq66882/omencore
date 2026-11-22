@@ -7717,4 +7717,400 @@
   <data name="ZoneName_FarRight" xml:space="preserve">
     <value>En sağ</value>
   </data>
+  <data name="SystemControl_ModeMemoryNothingFormat" xml:space="preserve">
+    <value>'{0}' için hatırlanacak bir şey yok - fan durumu okunamadı.</value>
+  </data>
+  <data name="MaxAutoReturn_Off" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="MaxAutoReturn_Cooldown" xml:space="preserve">
+    <value>Soğuma</value>
+  </data>
+  <data name="MaxAutoReturn_Timer" xml:space="preserve">
+    <value>Zamanlayıcı</value>
+  </data>
+  <data name="RgbSurface_KeyboardZones" xml:space="preserve">
+    <value>Klavye bölgeleri değişti</value>
+  </data>
+  <data name="RgbSurface_PerKey" xml:space="preserve">
+    <value>Tuş bazlı ışıklar değişti</value>
+  </data>
+  <data name="RgbSurface_LightBar" xml:space="preserve">
+    <value>Işık çubuğu değişti</value>
+  </data>
+  <data name="RgbSurface_SingleBacklight" xml:space="preserve">
+    <value>Tek arka ışık değişti</value>
+  </data>
+  <data name="RgbSurface_NothingChanged" xml:space="preserve">
+    <value>Hiçbir şey değişmedi</value>
+  </data>
+  <data name="RgbSurface_Other" xml:space="preserve">
+    <value>Farklı veya bilinmeyen yüzey değişti</value>
+  </data>
+  <data name="FanPreset_Gaming" xml:space="preserve">
+    <value>Oyun</value>
+  </data>
+  <data name="PerfMode_Quiet" xml:space="preserve">
+    <value>Sessiz</value>
+  </data>
+  <data name="FanControl_ModeDirect" xml:space="preserve">
+    <value>Doğrudan</value>
+  </data>
+  <data name="SystemControl_NothingRemembered" xml:space="preserve">
+    <value>Henüz yok - yalnızca güç limitleri</value>
+  </data>
+  <data name="SystemControl_RememberedFanCurve" xml:space="preserve">
+    <value>fan eğrisi</value>
+  </data>
+  <data name="SystemControl_RememberedFanPresetFormat" xml:space="preserve">
+    <value>fan ön ayarı '{0}'</value>
+  </data>
+  <data name="SystemControl_RememberedGpuBoostFormat" xml:space="preserve">
+    <value>GPU artışı '{0}'</value>
+  </data>
+  <data name="SystemControl_RememberedLightingFormat" xml:space="preserve">
+    <value>aydınlatma '{0}'</value>
+  </data>
+  <data name="SystemControl_RememberedChargeLimitFormat" xml:space="preserve">
+    <value>şarj limiti %{0}</value>
+  </data>
+  <data name="SystemControl_RememberedChargeLimitOn" xml:space="preserve">
+    <value>şarj limiti açık</value>
+  </data>
+  <data name="SystemControl_RememberedFullCharge" xml:space="preserve">
+    <value>tam şarj</value>
+  </data>
+  <data name="SystemControl_ModeMemoryRememberedFormat" xml:space="preserve">
+    <value>'{0}' artık şunları hatırlıyor: {1}</value>
+  </data>
+  <data name="App_DriverPromptBody" xml:space="preserve">
+    <value>Bazı donanım denetim özellikleri bir sürücü arka ucu gerektirir.&#10;&#10;Sisteminize göre şunları kullanabilirsiniz:&#10;• PawnIO (Güvenli Önyükleme uyumlu)&#10;• Yalnızca WMI modu (izleme ve birçok denetim çalışır)&#10;&#10;Desteklenen arka uç yoksa şu özellikler devre dışı kalabilir:&#10;• Doğrudan EC fan denetimi (bazı modeller)&#10;• CPU voltaj düşürme ve TCC ofseti (Intel MSR)&#10;&#10;Önerilen: {0}&#10;&#10;PawnIO eklemek için OmenCore yükleyicisini kullanın veya sürücü gerektiren özellikler olmadan devam edin.</value>
+  </data>
+  <data name="App_DriverPromptTitle" xml:space="preserve">
+    <value>İsteğe bağlı sürücü arka ucu - OmenCore</value>
+  </data>
+  <data name="DiagnosticExport_ExportFailedFormat" xml:space="preserve">
+    <value>Dışa aktarma başarısız: {0}</value>
+  </data>
+  <data name="DiagnosticExport_ExportErrorTitle" xml:space="preserve">
+    <value>Dışa aktarma hatası</value>
+  </data>
+  <data name="FanCalibration_CalibrationUnavailableTitle" xml:space="preserve">
+    <value>Kalibrasyon kullanılamıyor</value>
+  </data>
+  <data name="FanCalibration_StartConfirmBody" xml:space="preserve">
+    <value>Fan kalibrasyonu %0–%100 hızları test eder ve 5-10 dakika sürebilir.&#10;&#10;• Dizüstü bilgisayarınızın iyi havalandırıldığından emin olun&#10;• İşlemi kesmeyin&#10;• Fanlar farklı hızlarda çalışacak&#10;&#10;Kalibrasyona devam edilsin mi?</value>
+  </data>
+  <data name="FanCalibration_StartConfirmTitle" xml:space="preserve">
+    <value>Fan kalibrasyonunu başlat</value>
+  </data>
+  <data name="FanCalibration_LoadedFormat" xml:space="preserve">
+    <value>{0} için kalibrasyon verisi yüklendi ({1} fan profili).</value>
+  </data>
+  <data name="FanCalibration_LoadedTitle" xml:space="preserve">
+    <value>Kalibrasyon yüklendi</value>
+  </data>
+  <data name="FanCalibration_NothingToSaveBody" xml:space="preserve">
+    <value>Kaydedilecek başarılı kalibrasyon sonucu yok. Önce kalibrasyonu çalıştırın.</value>
+  </data>
+  <data name="FanCalibration_NothingToSaveTitle" xml:space="preserve">
+    <value>Kaydedilecek bir şey yok</value>
+  </data>
+  <data name="FanCalibration_SavedFormat" xml:space="preserve">
+    <value>{0} için kalibrasyon verisi kaydedildi.</value>
+  </data>
+  <data name="FanCalibration_SavedTitle" xml:space="preserve">
+    <value>Kalibrasyon kaydedildi</value>
+  </data>
+  <data name="FanCalibration_SaveFailedFormat" xml:space="preserve">
+    <value>Kalibrasyon kaydedilemedi: {0}</value>
+  </data>
+  <data name="FanCalibration_SaveErrorTitle" xml:space="preserve">
+    <value>Kaydetme hatası</value>
+  </data>
+  <data name="FanCalibration_CalibrationFailedFormat" xml:space="preserve">
+    <value>Kalibrasyon başarısız: {0}</value>
+  </data>
+  <data name="FanCalibration_CalibrationErrorTitle" xml:space="preserve">
+    <value>Kalibrasyon hatası</value>
+  </data>
+  <data name="FanCalibration_ClearConfirmBody" xml:space="preserve">
+    <value>Bu modelin tüm kalibrasyon verileri silinecek.&#10;&#10;Emin misiniz?</value>
+  </data>
+  <data name="FanCalibration_ClearConfirmTitle" xml:space="preserve">
+    <value>Kalibrasyon verilerini temizle</value>
+  </data>
+  <data name="CurveRecovery_OverheatBodyFormat" xml:space="preserve">
+    <value>Fan eğriniz sürekli aşırı ısınmaya neden oldu!&#10;&#10;Sıcaklıklar {1} dakikadan uzun süre {0}°C'yi aştı.&#10;&#10;OmenCore otomatik olarak önceki fan eğrinize geri döndü:&#10;"{2}"&#10;&#10;Lütfen fan eğrinizi gözden geçirin ve yüksek sıcaklıklarda yeterli soğutmayı sağlayın.</value>
+  </data>
+  <data name="CurveRecovery_Title" xml:space="preserve">
+    <value>Eğri kurtarma</value>
+  </data>
+  <data name="AsyncRelayCommand_OperationFailedFormat" xml:space="preserve">
+    <value>İşlem başarısız: {0}&#10;&#10;Ayrıntılar için günlüklere bakın.&#10;&#10;İpucu: OmenCore'u yeniden başlatmayı veya ayarları kontrol etmeyi deneyin.</value>
+  </data>
+  <data name="AsyncRelayCommand_OperationFailedTitle" xml:space="preserve">
+    <value>İşlem başarısız</value>
+  </data>
+  <data name="Bloatware_NoAppsSelected" xml:space="preserve">
+    <value>Kaldırma önizlemesinde uygulama seçilmedi.</value>
+  </data>
+  <data name="Bloatware_RiskyConfirmBody" xml:space="preserve">
+    <value>Seçilen öğelerden biri veya birkaçı orta/yüksek riskli. Kaldırmaya devam edilsin mi?</value>
+  </data>
+  <data name="Bloatware_RiskyConfirmTitle" xml:space="preserve">
+    <value>Riskli kaldırmayı onayla</value>
+  </data>
+  <data name="Bloatware_RestorePointAskFormat" xml:space="preserve">
+    <value>{0} öğe kaldırılmadan önce Windows geri yükleme noktası oluşturulsun mu?&#10;&#10;Sistem değişikliklerinden önce önerilir.</value>
+  </data>
+  <data name="Bloatware_RestorePointAskTitle" xml:space="preserve">
+    <value>Geri yükleme noktası oluştur</value>
+  </data>
+  <data name="Bloatware_RestorePointFailedFormat" xml:space="preserve">
+    <value>Geri yükleme noktası oluşturulamadı:&#10;{0}&#10;&#10;Geri yükleme noktası olmadan kaldırmaya devam edilsin mi?</value>
+  </data>
+  <data name="Bloatware_RestorePointFailedTitle" xml:space="preserve">
+    <value>Geri yükleme noktası oluşturulamadı</value>
+  </data>
+  <data name="Bloatware_ProceedWithoutRestore" xml:space="preserve">
+    <value>Kullanıcı seçimiyle geri yükleme noktası olmadan devam ediliyor</value>
+  </data>
+  <data name="Bloatware_CanceledNoRestore" xml:space="preserve">
+    <value>Geri yükleme noktası oluşturulmadığı için kaldırma iptal edildi</value>
+  </data>
+  <data name="Bloatware_RestoreAllFormat" xml:space="preserve">
+    <value>{0} kaldırılmış öğe geri yüklenecek.&#10;&#10;Bağımlılıklar veya ayarlar özgün kaynaklarından yeniden yüklenecek.&#10;&#10;Devam edilsin mi?</value>
+  </data>
+  <data name="Bloatware_RestoreAllTitle" xml:space="preserve">
+    <value>Kaldırılan tüm ön yüklü yazılımları geri yükle</value>
+  </data>
+  <data name="GameProfile_DeleteConfirmFormat" xml:space="preserve">
+    <value>'{0}' profili silinsin mi?</value>
+  </data>
+  <data name="GameProfile_DeleteConfirmTitle" xml:space="preserve">
+    <value>Silmeyi onayla</value>
+  </data>
+  <data name="GameProfile_DeleteFailedFormat" xml:space="preserve">
+    <value>Profil silinemedi: {0}</value>
+  </data>
+  <data name="GameProfile_ImportFailedFormat" xml:space="preserve">
+    <value>Profiller içe aktarılamadı: {0}</value>
+  </data>
+  <data name="GameProfile_ExportFailedFormat" xml:space="preserve">
+    <value>Profiller dışa aktarılamadı: {0}</value>
+  </data>
+  <data name="GameProfile_SaveFailedFormat" xml:space="preserve">
+    <value>Profiller kaydedilemedi: {0}</value>
+  </data>
+  <data name="GameProfile_ErrorTitle" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="GameProfile_ExportedFormat" xml:space="preserve">
+    <value>{0} profil dışa aktarıldı</value>
+  </data>
+  <data name="GameProfile_ExportCompleteTitle" xml:space="preserve">
+    <value>Dışa aktarım tamamlandı</value>
+  </data>
+  <data name="GameProfile_ExportDialogTitle" xml:space="preserve">
+    <value>Oyun profillerini dışa aktar</value>
+  </data>
+  <data name="GameProfile_JsonFilter" xml:space="preserve">
+    <value>JSON Dosyaları (*.json)|*.json|Tüm Dosyalar (*.*)|*.*</value>
+  </data>
+  <data name="Lighting_DpiChangeConfirmBody" xml:space="preserve">
+    <value>Bu, seçili cihazdaki donanım DPI ayarlarını değiştirir. Devam edilsin mi?</value>
+  </data>
+  <data name="Lighting_DpiChangeTitle" xml:space="preserve">
+    <value>DPI değişikliğini onayla</value>
+  </data>
+  <data name="Lighting_DpiRestoreConfirmBody" xml:space="preserve">
+    <value>DPI aşamaları kayıtlı varsayılanlara (yoksa yerleşiklere) döndürülecek. Devam edilsin mi?</value>
+  </data>
+  <data name="Lighting_DpiRestoreTitle" xml:space="preserve">
+    <value>DPI varsayılanlarını geri yükle</value>
+  </data>
+  <data name="Lighting_DpiDeleteConfirmFormat" xml:space="preserve">
+    <value>'{0}' DPI profili silinsin mi? Bu işlem geri alınamaz.</value>
+  </data>
+  <data name="Lighting_DpiDeleteTitle" xml:space="preserve">
+    <value>DPI profilini sil</value>
+  </data>
+  <data name="Main_OpenProfileManagerFailedFormat" xml:space="preserve">
+    <value>Profil yöneticisi açılamadı: {0}</value>
+  </data>
+  <data name="Main_ErrorTitle" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="Main_RestorePointFailedStepFormat" xml:space="preserve">
+    <value>⚠ Geri yükleme noktası başarısız: {0}</value>
+  </data>
+  <data name="Main_CleanupCanceledNoRestorePoint" xml:space="preserve">
+    <value>⚠ Temizlik iptal edildi - geri yükleme noktası yok</value>
+  </data>
+  <data name="Main_CleanupCanceledByUser" xml:space="preserve">
+    <value>Temizlik kullanıcı tarafından iptal edildi</value>
+  </data>
+  <data name="Main_RestorePointFailedBody" xml:space="preserve">
+    <value>Sistem geri yükleme noktası oluşturulamadı:&#10;{0}&#10;&#10;Bu genellikle sisteminizde Sistem Geri Yükleme'nin kapalı olmasından kaynaklanır.&#10;&#10;Yine de temizliğe devam edilsin mi?&#10;&#10;Not: Geri yükleme noktası olmadan temizliği kolayca geri alamazsınız.</value>
+  </data>
+  <data name="Main_RestorePointFailedTitle" xml:space="preserve">
+    <value>Geri yükleme noktası başarısız - OmenCore</value>
+  </data>
+  <data name="Main_ImportCompleteBody" xml:space="preserve">
+    <value>Yapılandırma başarıyla içe aktarıldı!&#10;&#10;Tüm değişikliklerin etkili olması için OmenCore'u yeniden başlatın.</value>
+  </data>
+  <data name="Main_ImportCompleteTitle" xml:space="preserve">
+    <value>İçe aktarma tamamlandı</value>
+  </data>
+  <data name="Main_ReportModelBodyFormat" xml:space="preserve">
+    <value>Tanılama paketi oluşturuldu ve model bilgisi panoya kopyalandı.&#10;&#10;Model: {0}&#10;Yol: {1}</value>
+  </data>
+  <data name="Main_ReportModelTitle" xml:space="preserve">
+    <value>Modeli bildir</value>
+  </data>
+  <data name="Main_ReportFailedFormat" xml:space="preserve">
+    <value>Tanılama paketi oluşturulamadı: {0}</value>
+  </data>
+  <data name="Settings_EcDangerBody" xml:space="preserve">
+    <value>🛑 TEHLİKE: YÜKSEK RİSKLİ DENEYSEL ÖZELLİK 🛑&#10;&#10;Doğrudan EC klavye yazma şunlara neden olabilir:&#10;• Zorla yeniden başlatma gerektiren CİDDİ SİSTEM ÇÖKMELERİ&#10;• Ekran parlaklığının en düşükte kalması (siyah ekran)&#10;• Klavye/ekran denetleyicisi arızası&#10;• Diğer öngörülemeyen EC sorunları&#10;&#10;EC klavye kayıtları (0xB2-0xBE) modele göre değişir. Yanlış adreslere yazma çeşitli OMEN modellerinde çökmelere yol açtı.&#10;&#10;Etkinleştirdikten sonra ekran kararırsa:&#10;1. Dizüstünü yeniden başlatın (güç tuşunu 10 sn basılı tutun)&#10;2. Yapılandırmayı silin: %APPDATA%\\OmenCore\\config.json&#10;3. Veya OmenCore'u yeniden yükleyin&#10;&#10;Yalnızca modelinizde WMI klavye aydınlatması çalışmıyorsa etkinleştirin.&#10;&#10;RİSKİ KABUL EDEREK ETKİNLEŞTİR?</value>
+  </data>
+  <data name="Settings_EcDangerTitle" xml:space="preserve">
+    <value>⚠️ Deneysel özellik uyarısı</value>
+  </data>
+  <data name="Settings_EcBackendBody" xml:space="preserve">
+    <value>⚠️ EC Arka Ucu Seçildi ⚠️&#10;&#10;Klavye denetimi için EC kullanmak 'EC klavyesini etkinleştir' seçeneğini gerektirir.&#10;&#10;Deneysel EC klavye desteği etkinleştirilsin mi?&#10;(Uyarı: Bazı modellerde sistem çökmelerine neden olabilir)</value>
+  </data>
+  <data name="Settings_EcBackendTitle" xml:space="preserve">
+    <value>EC klavyesi etkinleştirilsin mi?</value>
+  </data>
+  <data name="Settings_AutoStartAdminBody" xml:space="preserve">
+    <value>Otomatik başlatma, zamanlanmış görev oluşturmak için yönetici hakları gerektirir.&#10;&#10;Etkinleştirmek için:&#10;1. OmenCore'a sağ tıklayın → 'Yönetici olarak çalıştır'&#10;2. Ayarlar'a gidip 'Windows ile başlat'ı yeniden etkinleştirin&#10;&#10;Veya yükleyiciyi 'Windows ile başlat' seçeneğiyle yeniden çalıştırın.</value>
+  </data>
+  <data name="Settings_AutoStartAdminTitle" xml:space="preserve">
+    <value>Yönetici gerekli</value>
+  </data>
+  <data name="Settings_FanCleaningConfirmBody" xml:space="preserve">
+    <value>Fan temizleme döngüsü 20 saniye çalışacak.&#10;&#10;⚠️ ÖNEMLİ:&#10;• Dizüstünüzü düz, sağlam bir yüzeye koyun&#10;• Havalandırma deliklerinin kapalı olmadığından emin olun&#10;• Fanlar kısa süreliğine yön değiştirir&#10;• Olağandışı fan sesleri duyabilirsiniz - bu normaldir&#10;&#10;Fan temizliğine devam edilsin mi?</value>
+  </data>
+  <data name="Settings_FanCleaningConfirmTitle" xml:space="preserve">
+    <value>Fan toz temizliği</value>
+  </data>
+  <data name="Settings_FanCleaningFailedFormat" xml:space="preserve">
+    <value>Fan temizliği başarısız: {0}</value>
+  </data>
+  <data name="Settings_ResetDefaultsConfirmBody" xml:space="preserve">
+    <value>Tüm ayarlar varsayılan değerlerine sıfırlanacak.&#10;&#10;Buna şunlar dahil:&#10;• İzleme ayarları&#10;• Bildirim tercihleri&#10;• Kısayol ayarları&#10;• Güncelleme tercihleri&#10;&#10;Sıfırlamaya devam edilsin mi?</value>
+  </data>
+  <data name="Settings_ResetDefaultsConfirmTitle" xml:space="preserve">
+    <value>Varsayılanlara sıfırla</value>
+  </data>
+  <data name="Settings_ResetFailedFormat" xml:space="preserve">
+    <value>Ayarlar sıfırlanamadı: {0}</value>
+  </data>
+  <data name="Settings_EcResetConfirmBody" xml:space="preserve">
+    <value>Bu, Gömülü Denetleyiciyi (EC) fabrika varsayılanlarına sıfırlar.&#10;&#10;Bu işlem:&#10;• Fanların BIOS denetimini geri yükler&#10;• Tüm manuel fan hızı geçersiz kılmalarını temizler&#10;• Fan artırma modunu sıfırlar&#10;• Termal ilke zamanlayıcılarını sıfırlar&#10;&#10;Şu durumlarda kullanın:&#10;• Fan hızları BIOS'ta takılı görünüyorsa&#10;• BIOS yanlış fan değerleri gösteriyorsa&#10;• Fabrika fan davranışını tamamen geri yüklemek istiyorsanız&#10;&#10;Sıfırlamadan sonra uygulama Otomatik moda geçer.&#10;&#10;Devam edilsin mi?</value>
+  </data>
+  <data name="Settings_EcResetConfirmTitle" xml:space="preserve">
+    <value>EC'yi varsayılana sıfırla</value>
+  </data>
+  <data name="Settings_EcResetFailedBody" xml:space="preserve">
+    <value>Fan hizmeti kullanılamıyor. EC sıfırlaması yapılamaz.</value>
+  </data>
+  <data name="Settings_EcResetFailedTitle" xml:space="preserve">
+    <value>EC sıfırlama başarısız</value>
+  </data>
+  <data name="Settings_EcResetSuccessBody" xml:space="preserve">
+    <value>EC fabrika varsayılanlarına sıfırlandı.&#10;&#10;BIOS artık fanları tamamen denetlemeli.&#10;BIOS görüntüleri hâlâ yanlış değerler gösteriyorsa,&#10;dizüstünüzü yeniden başlatmayı deneyin.</value>
+  </data>
+  <data name="Settings_EcResetSuccessTitle" xml:space="preserve">
+    <value>EC sıfırlama başarılı</value>
+  </data>
+  <data name="Settings_EcResetPartialBody" xml:space="preserve">
+    <value>EC sıfırlaması kısmen tamamlanmış olabilir.&#10;&#10;Bazı sistemlerde tüm değişikliklerin geçerli olması için&#10;tam yeniden başlatma gerekebilir.</value>
+  </data>
+  <data name="Settings_EcResetPartialTitle" xml:space="preserve">
+    <value>EC sıfırlama sonucu</value>
+  </data>
+  <data name="Settings_EcResetErrorFormat" xml:space="preserve">
+    <value>EC sıfırlanamadı: {0}</value>
+  </data>
+  <data name="Settings_PawnIoInstallBody" xml:space="preserve">
+    <value>OmenCore gelişmiş donanım özellikleri için PawnIO önerir.&#10;&#10;PawnIO, şunlar için Güvenli Önyükleme uyumlu MSR/EC erişimi sağlar:&#10;• CPU voltaj düşürme (Intel/AMD)&#10;• TCC ofset denetimi&#10;• EC tabanlı fan denetimi yedeği&#10;&#10;PawnIO web sitesini açmak için Tamam'a tıklayın.</value>
+  </data>
+  <data name="Settings_PawnIoInstallTitle" xml:space="preserve">
+    <value>PawnIO sürücüsünü yükle</value>
+  </data>
+  <data name="Settings_BloatwareRemoveBodyFormat" xml:space="preserve">
+    <value>{0} HP ön yüklü yazılım paketi kaldırılacak.&#10;&#10;⚠️ UYARI:&#10;• Bu işlem geri alınamaz&#10;• Bazı HP özellikleri çalışmayı durdurabilir&#10;• HP Support Assistant KALDIRILMAZ&#10;• Realtek ses/ağ sürücülerine DOKUNULMAZ&#10;• Sistem yeniden başlatma gerekebilir&#10;&#10;Kaldırmaya devam edilsin mi?</value>
+  </data>
+  <data name="Settings_BloatwareRemoveTitle" xml:space="preserve">
+    <value>HP ön yüklü yazılımını kaldır - onay gerekli</value>
+  </data>
+  <data name="Settings_BloatwareRemovalCompleteTitle" xml:space="preserve">
+    <value>Ön yüklü yazılım kaldırma tamamlandı</value>
+  </data>
+  <data name="Settings_BloatwareFailedPackagesFormat" xml:space="preserve">
+    <value>{0} paket kaldırılamadı.</value>
+  </data>
+  <data name="Settings_BloatwareNeedsAdmin" xml:space="preserve">
+    <value>Bazı paketler yönetici hakları gerektirir.&#10;OmenCore'a sağ tıklayın → 'Yönetici olarak çalıştır' ve tekrar deneyin.</value>
+  </data>
+  <data name="Settings_BloatwareRestartNote" xml:space="preserve">
+    <value>Bazı değişiklikler sistem yeniden başlatması gerektirebilir.</value>
+  </data>
+  <data name="Settings_ImportFailedBody" xml:space="preserve">
+    <value>Profil içe aktarılamadı. Dosya bozuk veya uyumsuz olabilir.</value>
+  </data>
+  <data name="Settings_ImportFailedTitle" xml:space="preserve">
+    <value>İçe aktarma başarısız</value>
+  </data>
+  <data name="Settings_ImportConfirmFormat" xml:space="preserve">
+    <value>{0} dosyasından profil içe aktarılsın mı?&#10;&#10;Şunlar uygulanacak:&#10;• {1} fan ön ayarı&#10;• {2} performans modu&#10;• {3} GPU OC profili&#10;• Pil ve histerezis ayarları&#10;&#10;Mevcut ayarların üzerine yazılacak.</value>
+  </data>
+  <data name="Settings_ImportConfirmTitle" xml:space="preserve">
+    <value>Profil içe aktar</value>
+  </data>
+  <data name="Settings_ProfileImportCompleteBody" xml:space="preserve">
+    <value>Profil başarıyla içe aktarıldı!&#10;&#10;Ayarlar uygulandı. Bazı değişiklikler uygulamanın yeniden başlatılmasını gerektirebilir.</value>
+  </data>
+  <data name="Settings_ProfileImportCompleteTitle" xml:space="preserve">
+    <value>İçe aktarma tamamlandı</value>
+  </data>
+  <data name="Settings_ImportErrorFormat" xml:space="preserve">
+    <value>Profil içe aktarılamadı: {0}</value>
+  </data>
+  <data name="Settings_ImportErrorTitle" xml:space="preserve">
+    <value>İçe aktarma hatası</value>
+  </data>
+  <data name="Settings_ImportDialogTitle" xml:space="preserve">
+    <value>OmenCore profilini içe aktar</value>
+  </data>
+  <data name="Settings_ProfileFilter" xml:space="preserve">
+    <value>OmenCore Profili (*.omencore)|*.omencore|Tüm Dosyalar (*.*)|*.*</value>
+  </data>
+  <data name="Settings_ExportDialogTitle" xml:space="preserve">
+    <value>OmenCore profilini dışa aktar</value>
+  </data>
+  <data name="Settings_ProfileExportedBodyFormat" xml:space="preserve">
+    <value>Profil başarıyla dışa aktarıldı!&#10;&#10;Dosya: {0}&#10;Konum: {1}</value>
+  </data>
+  <data name="Settings_ExportCompleteTitle" xml:space="preserve">
+    <value>Dışa aktarım tamamlandı</value>
+  </data>
+  <data name="Settings_ExportErrorFormat" xml:space="preserve">
+    <value>Profil dışa aktarılamadı: {0}</value>
+  </data>
+  <data name="Settings_ExportDiagDialogTitle" xml:space="preserve">
+    <value>Tanılama paketini dışa aktar</value>
+  </data>
+  <data name="Settings_DiagExportedBodyFormat" xml:space="preserve">
+    <value>Tanılama paketi başarıyla dışa aktarıldı!&#10;&#10;Dosya: {0}&#10;Konum: {1}&#10;&#10;Bu ZIP dosyasını sorun giderme için GitHub issue'larına ekleyebilirsiniz.</value>
+  </data>
+  <data name="Settings_ExportDiagErrorFormat" xml:space="preserve">
+    <value>Tanılama dışa aktarılamadı: {0}</value>
+  </data>
+  <data name="Settings_ModelNotAnalyzed" xml:space="preserve">
+    <value>Model kimliği henüz analiz edilmedi.</value>
+  </data>
 </root>

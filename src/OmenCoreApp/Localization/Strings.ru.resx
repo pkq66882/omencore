@@ -7717,4 +7717,400 @@
   <data name="ZoneName_FarRight" xml:space="preserve">
     <value>Крайняя правая</value>
   </data>
+  <data name="SystemControl_ModeMemoryNothingFormat" xml:space="preserve">
+    <value>«{0}» нечего запоминать — не удалось прочитать состояние вентиляторов.</value>
+  </data>
+  <data name="MaxAutoReturn_Off" xml:space="preserve">
+    <value>Выкл</value>
+  </data>
+  <data name="MaxAutoReturn_Cooldown" xml:space="preserve">
+    <value>Остывание</value>
+  </data>
+  <data name="MaxAutoReturn_Timer" xml:space="preserve">
+    <value>Таймер</value>
+  </data>
+  <data name="RgbSurface_KeyboardZones" xml:space="preserve">
+    <value>Изменены зоны клавиатуры</value>
+  </data>
+  <data name="RgbSurface_PerKey" xml:space="preserve">
+    <value>Изменены отдельные клавиши</value>
+  </data>
+  <data name="RgbSurface_LightBar" xml:space="preserve">
+    <value>Изменена световая полоса</value>
+  </data>
+  <data name="RgbSurface_SingleBacklight" xml:space="preserve">
+    <value>Изменена одиночная подсветка</value>
+  </data>
+  <data name="RgbSurface_NothingChanged" xml:space="preserve">
+    <value>Ничего не изменилось</value>
+  </data>
+  <data name="RgbSurface_Other" xml:space="preserve">
+    <value>Изменена другая/неизвестная поверхность</value>
+  </data>
+  <data name="FanPreset_Gaming" xml:space="preserve">
+    <value>Игровой</value>
+  </data>
+  <data name="PerfMode_Quiet" xml:space="preserve">
+    <value>Тихий</value>
+  </data>
+  <data name="FanControl_ModeDirect" xml:space="preserve">
+    <value>Прямое управление</value>
+  </data>
+  <data name="SystemControl_NothingRemembered" xml:space="preserve">
+    <value>Пока ничего — только лимиты мощности</value>
+  </data>
+  <data name="SystemControl_RememberedFanCurve" xml:space="preserve">
+    <value>кривая вентиляторов</value>
+  </data>
+  <data name="SystemControl_RememberedFanPresetFormat" xml:space="preserve">
+    <value>пресет вентиляторов «{0}»</value>
+  </data>
+  <data name="SystemControl_RememberedGpuBoostFormat" xml:space="preserve">
+    <value>ускорение GPU «{0}»</value>
+  </data>
+  <data name="SystemControl_RememberedLightingFormat" xml:space="preserve">
+    <value>подсветка «{0}»</value>
+  </data>
+  <data name="SystemControl_RememberedChargeLimitFormat" xml:space="preserve">
+    <value>лимит заряда {0}%</value>
+  </data>
+  <data name="SystemControl_RememberedChargeLimitOn" xml:space="preserve">
+    <value>лимит заряда включён</value>
+  </data>
+  <data name="SystemControl_RememberedFullCharge" xml:space="preserve">
+    <value>полный заряд</value>
+  </data>
+  <data name="SystemControl_ModeMemoryRememberedFormat" xml:space="preserve">
+    <value>«{0}» теперь запоминает: {1}</value>
+  </data>
+  <data name="App_DriverPromptBody" xml:space="preserve">
+    <value>Для части функций управления оборудованием нужен драйверный бэкенд.&#10;&#10;В зависимости от системы доступно:&#10;• PawnIO (совместим с безопасной загрузкой)&#10;• Режим только WMI (мониторинг и многие функции работают)&#10;&#10;Без поддерживаемого бэкенда могут быть отключены:&#10;• Прямое управление вентиляторами через EC (некоторые модели)&#10;• Снижение напряжения CPU и смещение TCC (Intel MSR)&#10;&#10;Рекомендуется: {0}&#10;&#10;Добавьте PawnIO через установщик OmenCore или продолжите без функций, требующих драйвера.</value>
+  </data>
+  <data name="App_DriverPromptTitle" xml:space="preserve">
+    <value>Дополнительный драйверный бэкенд - OmenCore</value>
+  </data>
+  <data name="DiagnosticExport_ExportFailedFormat" xml:space="preserve">
+    <value>Экспорт не удался: {0}</value>
+  </data>
+  <data name="DiagnosticExport_ExportErrorTitle" xml:space="preserve">
+    <value>Ошибка экспорта</value>
+  </data>
+  <data name="FanCalibration_CalibrationUnavailableTitle" xml:space="preserve">
+    <value>Калибровка недоступна</value>
+  </data>
+  <data name="FanCalibration_StartConfirmBody" xml:space="preserve">
+    <value>Калибровка проверит скорости от 0% до 100% и может занять 5–10 минут.&#10;&#10;• Обеспечьте хорошую вентиляцию ноутбука&#10;• Не прерывайте процесс&#10;• Вентиляторы будут работать на разных оборотах&#10;&#10;Продолжить калибровку?</value>
+  </data>
+  <data name="FanCalibration_StartConfirmTitle" xml:space="preserve">
+    <value>Начать калибровку вентиляторов</value>
+  </data>
+  <data name="FanCalibration_LoadedFormat" xml:space="preserve">
+    <value>Загружены данные калибровки для {0} ({1} профилей вентиляторов).</value>
+  </data>
+  <data name="FanCalibration_LoadedTitle" xml:space="preserve">
+    <value>Калибровка загружена</value>
+  </data>
+  <data name="FanCalibration_NothingToSaveBody" xml:space="preserve">
+    <value>Нет успешной калибровки для сохранения. Сначала выполните калибровку.</value>
+  </data>
+  <data name="FanCalibration_NothingToSaveTitle" xml:space="preserve">
+    <value>Нечего сохранять</value>
+  </data>
+  <data name="FanCalibration_SavedFormat" xml:space="preserve">
+    <value>Данные калибровки сохранены для {0}.</value>
+  </data>
+  <data name="FanCalibration_SavedTitle" xml:space="preserve">
+    <value>Калибровка сохранена</value>
+  </data>
+  <data name="FanCalibration_SaveFailedFormat" xml:space="preserve">
+    <value>Не удалось сохранить калибровку: {0}</value>
+  </data>
+  <data name="FanCalibration_SaveErrorTitle" xml:space="preserve">
+    <value>Ошибка сохранения</value>
+  </data>
+  <data name="FanCalibration_CalibrationFailedFormat" xml:space="preserve">
+    <value>Калибровка не удалась: {0}</value>
+  </data>
+  <data name="FanCalibration_CalibrationErrorTitle" xml:space="preserve">
+    <value>Ошибка калибровки</value>
+  </data>
+  <data name="FanCalibration_ClearConfirmBody" xml:space="preserve">
+    <value>Все данные калибровки этой модели будут удалены.&#10;&#10;Вы уверены?</value>
+  </data>
+  <data name="FanCalibration_ClearConfirmTitle" xml:space="preserve">
+    <value>Удалить данные калибровки</value>
+  </data>
+  <data name="CurveRecovery_OverheatBodyFormat" xml:space="preserve">
+    <value>Ваша кривая вентиляторов вызвала длительный перегрев!&#10;&#10;Температура превышала {0}°C более {1} минут.&#10;&#10;OmenCore автоматически вернулся к предыдущей кривой:&#10;«{2}»&#10;&#10;Проверьте кривую и обеспечьте достаточное охлаждение при высоких температурах.</value>
+  </data>
+  <data name="CurveRecovery_Title" xml:space="preserve">
+    <value>Восстановление кривой</value>
+  </data>
+  <data name="AsyncRelayCommand_OperationFailedFormat" xml:space="preserve">
+    <value>Операция не удалась: {0}&#10;&#10;Подробности в журнале.&#10;&#10;Совет: перезапустите OmenCore или проверьте настройки.</value>
+  </data>
+  <data name="AsyncRelayCommand_OperationFailedTitle" xml:space="preserve">
+    <value>Операция не удалась</value>
+  </data>
+  <data name="Bloatware_NoAppsSelected" xml:space="preserve">
+    <value>В предпросмотре удаления не выбрано ни одного приложения.</value>
+  </data>
+  <data name="Bloatware_RiskyConfirmBody" xml:space="preserve">
+    <value>Среди выбранных есть элементы среднего/высокого риска. Продолжить удаление?</value>
+  </data>
+  <data name="Bloatware_RiskyConfirmTitle" xml:space="preserve">
+    <value>Подтвердите рискованное удаление</value>
+  </data>
+  <data name="Bloatware_RestorePointAskFormat" xml:space="preserve">
+    <value>Создать точку восстановления Windows перед удалением ({0} шт.)?&#10;&#10;Рекомендуется перед изменениями системы.</value>
+  </data>
+  <data name="Bloatware_RestorePointAskTitle" xml:space="preserve">
+    <value>Создать точку восстановления</value>
+  </data>
+  <data name="Bloatware_RestorePointFailedFormat" xml:space="preserve">
+    <value>Не удалось создать точку восстановления:&#10;{0}&#10;&#10;Продолжить удаление без точки восстановления?</value>
+  </data>
+  <data name="Bloatware_RestorePointFailedTitle" xml:space="preserve">
+    <value>Не удалось создать точку восстановления</value>
+  </data>
+  <data name="Bloatware_ProceedWithoutRestore" xml:space="preserve">
+    <value>Продолжение без точки восстановления по выбору пользователя</value>
+  </data>
+  <data name="Bloatware_CanceledNoRestore" xml:space="preserve">
+    <value>Удаление отменено: точка восстановления не создана</value>
+  </data>
+  <data name="Bloatware_RestoreAllFormat" xml:space="preserve">
+    <value>Будет восстановлено элементов: {0}.&#10;&#10;Зависимости и настройки будут переустановлены из исходных источников.&#10;&#10;Продолжить?</value>
+  </data>
+  <data name="Bloatware_RestoreAllTitle" xml:space="preserve">
+    <value>Восстановить всё удалённое ПО</value>
+  </data>
+  <data name="GameProfile_DeleteConfirmFormat" xml:space="preserve">
+    <value>Удалить профиль «{0}»?</value>
+  </data>
+  <data name="GameProfile_DeleteConfirmTitle" xml:space="preserve">
+    <value>Подтвердите удаление</value>
+  </data>
+  <data name="GameProfile_DeleteFailedFormat" xml:space="preserve">
+    <value>Не удалось удалить профиль: {0}</value>
+  </data>
+  <data name="GameProfile_ImportFailedFormat" xml:space="preserve">
+    <value>Не удалось импортировать профили: {0}</value>
+  </data>
+  <data name="GameProfile_ExportFailedFormat" xml:space="preserve">
+    <value>Не удалось экспортировать профили: {0}</value>
+  </data>
+  <data name="GameProfile_SaveFailedFormat" xml:space="preserve">
+    <value>Не удалось сохранить профили: {0}</value>
+  </data>
+  <data name="GameProfile_ErrorTitle" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="GameProfile_ExportedFormat" xml:space="preserve">
+    <value>Экспортировано профилей: {0}</value>
+  </data>
+  <data name="GameProfile_ExportCompleteTitle" xml:space="preserve">
+    <value>Экспорт завершён</value>
+  </data>
+  <data name="GameProfile_ExportDialogTitle" xml:space="preserve">
+    <value>Экспорт игровых профилей</value>
+  </data>
+  <data name="GameProfile_JsonFilter" xml:space="preserve">
+    <value>Файлы JSON (*.json)|*.json|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="Lighting_DpiChangeConfirmBody" xml:space="preserve">
+    <value>Это изменит аппаратные настройки DPI выбранного устройства. Продолжить?</value>
+  </data>
+  <data name="Lighting_DpiChangeTitle" xml:space="preserve">
+    <value>Подтвердите изменение DPI</value>
+  </data>
+  <data name="Lighting_DpiRestoreConfirmBody" xml:space="preserve">
+    <value>DPI будут восстановлены к сохранённым значениям (или встроенным, если их нет). Продолжить?</value>
+  </data>
+  <data name="Lighting_DpiRestoreTitle" xml:space="preserve">
+    <value>Восстановить значения DPI по умолчанию</value>
+  </data>
+  <data name="Lighting_DpiDeleteConfirmFormat" xml:space="preserve">
+    <value>Удалить профиль DPI «{0}»? Это нельзя отменить.</value>
+  </data>
+  <data name="Lighting_DpiDeleteTitle" xml:space="preserve">
+    <value>Удалить профиль DPI</value>
+  </data>
+  <data name="Main_OpenProfileManagerFailedFormat" xml:space="preserve">
+    <value>Не удалось открыть менеджер профилей: {0}</value>
+  </data>
+  <data name="Main_ErrorTitle" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Main_RestorePointFailedStepFormat" xml:space="preserve">
+    <value>⚠ Точка восстановления не создана: {0}</value>
+  </data>
+  <data name="Main_CleanupCanceledNoRestorePoint" xml:space="preserve">
+    <value>⚠ Очистка отменена — нет точки восстановления</value>
+  </data>
+  <data name="Main_CleanupCanceledByUser" xml:space="preserve">
+    <value>Очистка отменена пользователем</value>
+  </data>
+  <data name="Main_RestorePointFailedBody" xml:space="preserve">
+    <value>Не удалось создать точку восстановления системы:&#10;{0}&#10;&#10;Обычно это из-за отключённого восстановления системы.&#10;&#10;Продолжить очистку? &#10;&#10;Примечание: без точки восстановления очистку будет сложно отменить.</value>
+  </data>
+  <data name="Main_RestorePointFailedTitle" xml:space="preserve">
+    <value>Точка восстановления не создана - OmenCore</value>
+  </data>
+  <data name="Main_ImportCompleteBody" xml:space="preserve">
+    <value>Конфигурация успешно импортирована!&#10;&#10;Перезапустите OmenCore, чтобы применить изменения.</value>
+  </data>
+  <data name="Main_ImportCompleteTitle" xml:space="preserve">
+    <value>Импорт завершён</value>
+  </data>
+  <data name="Main_ReportModelBodyFormat" xml:space="preserve">
+    <value>Пакет диагностики создан, сведения о модели скопированы.&#10;&#10;Модель: {0}&#10;Путь: {1}</value>
+  </data>
+  <data name="Main_ReportModelTitle" xml:space="preserve">
+    <value>Сообщить о модели</value>
+  </data>
+  <data name="Main_ReportFailedFormat" xml:space="preserve">
+    <value>Не удалось создать пакет диагностики: {0}</value>
+  </data>
+  <data name="Settings_EcDangerBody" xml:space="preserve">
+    <value>🛑 ОПАСНО: ЭКСПЕРИМЕНТАЛЬНАЯ ФУНКЦИЯ 🛑&#10;&#10;Прямая запись в EC клавиатуры может вызвать:&#10;• ЖЁСТКИЕ СБОИ системы с принудительной перезагрузкой&#10;• Яркость экрана на минимуме (чёрный экран)&#10;• Сбой контроллера клавиатуры/дисплея&#10;• Другие непредсказуемые проблемы EC&#10;&#10;Регистры EC (0xB2–0xBE) зависят от модели. Запись по неверным адресам вызывала сбои на разных моделях OMEN.&#10;&#10;Если экран почернел:&#10;1. Перезагрузите ноутбук (удерживайте питание 10 с)&#10;2. Удалите конфиг: %APPDATA%\\OmenCore\\config.json&#10;3. Или переустановите OmenCore&#10;&#10;Включайте только если подсветка через WMI не работает.&#10;&#10;ВКЛЮЧИТЬ НА СВОЙ РИСК?</value>
+  </data>
+  <data name="Settings_EcDangerTitle" xml:space="preserve">
+    <value>⚠️ Предупреждение об экспериментальной функции</value>
+  </data>
+  <data name="Settings_EcBackendBody" xml:space="preserve">
+    <value>⚠️ Выбран бэкенд EC ⚠️&#10;&#10;Для управления клавиатурой через EC нужен пункт «Включить EC-клавиатуру».&#10;&#10;Включить экспериментальную поддержку? &#10;(Внимание: на некоторых моделях возможны сбои)</value>
+  </data>
+  <data name="Settings_EcBackendTitle" xml:space="preserve">
+    <value>Включить EC-клавиатуру?</value>
+  </data>
+  <data name="Settings_AutoStartAdminBody" xml:space="preserve">
+    <value>Автозапуск требует прав администратора для создания задачи.&#10;&#10;Чтобы включить:&#10;1. ПКМ по OmenCore → «Запуск от имени администратора»&#10;2. В настройках снова включите «Запускать вместе с Windows»&#10;&#10;Или переустановите с отмеченным пунктом «Запускать вместе с Windows».</value>
+  </data>
+  <data name="Settings_AutoStartAdminTitle" xml:space="preserve">
+    <value>Требуются права администратора</value>
+  </data>
+  <data name="Settings_FanCleaningConfirmBody" xml:space="preserve">
+    <value>Запустится 20-секундный цикл очистки вентиляторов.&#10;&#10;⚠️ ВАЖНО:&#10;• Поставьте ноутбук на ровную поверхность&#10;• Не перекрывайте вентиляционные отверстия&#10;• Вентиляторы кратко изменят направление&#10;• Возможны необычные звуки — это нормально&#10;&#10;Продолжить очистку?</value>
+  </data>
+  <data name="Settings_FanCleaningConfirmTitle" xml:space="preserve">
+    <value>Очистка вентиляторов от пыли</value>
+  </data>
+  <data name="Settings_FanCleaningFailedFormat" xml:space="preserve">
+    <value>Очистка вентиляторов не удалась: {0}</value>
+  </data>
+  <data name="Settings_ResetDefaultsConfirmBody" xml:space="preserve">
+    <value>Все настройки будут сброшены к значениям по умолчанию.&#10;&#10;Включая:&#10;• Настройки мониторинга&#10;• Уведомления&#10;• Горячие клавиши&#10;• Параметры обновлений&#10;&#10;Продолжить?</value>
+  </data>
+  <data name="Settings_ResetDefaultsConfirmTitle" xml:space="preserve">
+    <value>Сброс к значениям по умолчанию</value>
+  </data>
+  <data name="Settings_ResetFailedFormat" xml:space="preserve">
+    <value>Не удалось сбросить настройки: {0}</value>
+  </data>
+  <data name="Settings_EcResetConfirmBody" xml:space="preserve">
+    <value>Сброс EC к заводским настройкам.&#10;&#10;Действие:&#10;• Вернёт управление вентиляторами BIOS&#10;• Сбросит все ручные настройки скорости&#10;• Сбросит режим усиления вентиляторов&#10;• Сбросит таймеры тепловой политики&#10;&#10;Используйте, если:&#10;• Скорость вентиляторов «застряла» в BIOS&#10;• BIOS показывает неверные значения&#10;• Нужно полностью вернуть заводское поведение&#10;&#10;После сброса приложение применит авторежим.&#10;&#10;Продолжить?</value>
+  </data>
+  <data name="Settings_EcResetConfirmTitle" xml:space="preserve">
+    <value>Сброс EC к значениям по умолчанию</value>
+  </data>
+  <data name="Settings_EcResetFailedBody" xml:space="preserve">
+    <value>Служба вентиляторов недоступна. Сброс EC невозможен.</value>
+  </data>
+  <data name="Settings_EcResetFailedTitle" xml:space="preserve">
+    <value>Сброс EC не удался</value>
+  </data>
+  <data name="Settings_EcResetSuccessBody" xml:space="preserve">
+    <value>EC сброшен к заводским настройкам.&#10;&#10;Теперь BIOS должен полностью управлять вентиляторами.&#10;Если значения в BIOS по-прежнему неверны,&#10;перезагрузите ноутбук.</value>
+  </data>
+  <data name="Settings_EcResetSuccessTitle" xml:space="preserve">
+    <value>Сброс EC выполнен</value>
+  </data>
+  <data name="Settings_EcResetPartialBody" xml:space="preserve">
+    <value>Сброс EC мог выполниться частично.&#10;&#10;Некоторым системам нужна полная перезагрузка&#10;для применения изменений.</value>
+  </data>
+  <data name="Settings_EcResetPartialTitle" xml:space="preserve">
+    <value>Результат сброса EC</value>
+  </data>
+  <data name="Settings_EcResetErrorFormat" xml:space="preserve">
+    <value>Не удалось сбросить EC: {0}</value>
+  </data>
+  <data name="Settings_PawnIoInstallBody" xml:space="preserve">
+    <value>OmenCore рекомендует PawnIO для продвинутых функций.&#10;&#10;PawnIO даёт совместимый с безопасной загрузкой доступ MSR/EC для:&#10;• Снижения напряжения CPU (Intel/AMD)&#10;• Управления смещением TCC&#10;• Резервного управления вентиляторами через EC&#10;&#10;Нажмите ОК, чтобы открыть сайт PawnIO.</value>
+  </data>
+  <data name="Settings_PawnIoInstallTitle" xml:space="preserve">
+    <value>Установить драйвер PawnIO</value>
+  </data>
+  <data name="Settings_BloatwareRemoveBodyFormat" xml:space="preserve">
+    <value>Будет удалено пакетов HP: {0}.&#10;&#10;⚠️ ВНИМАНИЕ:&#10;• Действие необратимо&#10;• Часть функций HP может перестать работать&#10;• HP Support Assistant НЕ будет удалён&#10;• Драйверы Realtek (аудио/сеть) НЕ затрагиваются&#10;• Может потребоваться перезагрузка&#10;&#10;Продолжить?</value>
+  </data>
+  <data name="Settings_BloatwareRemoveTitle" xml:space="preserve">
+    <value>Удаление предустановленного ПО HP - требуется подтверждение</value>
+  </data>
+  <data name="Settings_BloatwareRemovalCompleteTitle" xml:space="preserve">
+    <value>Удаление предустановленного ПО завершено</value>
+  </data>
+  <data name="Settings_BloatwareFailedPackagesFormat" xml:space="preserve">
+    <value>Не удалось удалить пакетов: {0}.</value>
+  </data>
+  <data name="Settings_BloatwareNeedsAdmin" xml:space="preserve">
+    <value>Некоторым пакетам нужны права администратора.&#10;ПКМ по OmenCore → «Запуск от имени администратора» и повторите.</value>
+  </data>
+  <data name="Settings_BloatwareRestartNote" xml:space="preserve">
+    <value>Некоторые изменения могут потребовать перезагрузки.</value>
+  </data>
+  <data name="Settings_ImportFailedBody" xml:space="preserve">
+    <value>Не удалось импортировать профиль. Файл повреждён или несовместим.</value>
+  </data>
+  <data name="Settings_ImportFailedTitle" xml:space="preserve">
+    <value>Импорт не удался</value>
+  </data>
+  <data name="Settings_ImportConfirmFormat" xml:space="preserve">
+    <value>Импортировать профиль из {0}?&#10;&#10;Будет применено:&#10;• пресетов вентиляторов: {1}&#10;• режимов производительности: {2}&#10;• профилей разгона GPU: {3}&#10;• Настройки батареи и гистерезиса&#10;&#10;Текущие настройки будут перезаписаны.</value>
+  </data>
+  <data name="Settings_ImportConfirmTitle" xml:space="preserve">
+    <value>Импорт профиля</value>
+  </data>
+  <data name="Settings_ProfileImportCompleteBody" xml:space="preserve">
+    <value>Профиль успешно импортирован!&#10;&#10;Настройки применены. Часть изменений может потребовать перезапуска.</value>
+  </data>
+  <data name="Settings_ProfileImportCompleteTitle" xml:space="preserve">
+    <value>Импорт завершён</value>
+  </data>
+  <data name="Settings_ImportErrorFormat" xml:space="preserve">
+    <value>Не удалось импортировать профиль: {0}</value>
+  </data>
+  <data name="Settings_ImportErrorTitle" xml:space="preserve">
+    <value>Ошибка импорта</value>
+  </data>
+  <data name="Settings_ImportDialogTitle" xml:space="preserve">
+    <value>Импорт профиля OmenCore</value>
+  </data>
+  <data name="Settings_ProfileFilter" xml:space="preserve">
+    <value>Профиль OmenCore (*.omencore)|*.omencore|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="Settings_ExportDialogTitle" xml:space="preserve">
+    <value>Экспорт профиля OmenCore</value>
+  </data>
+  <data name="Settings_ProfileExportedBodyFormat" xml:space="preserve">
+    <value>Профиль успешно экспортирован!&#10;&#10;Файл: {0}&#10;Расположение: {1}</value>
+  </data>
+  <data name="Settings_ExportCompleteTitle" xml:space="preserve">
+    <value>Экспорт завершён</value>
+  </data>
+  <data name="Settings_ExportErrorFormat" xml:space="preserve">
+    <value>Не удалось экспортировать профиль: {0}</value>
+  </data>
+  <data name="Settings_ExportDiagDialogTitle" xml:space="preserve">
+    <value>Экспорт пакета диагностики</value>
+  </data>
+  <data name="Settings_DiagExportedBodyFormat" xml:space="preserve">
+    <value>Пакет диагностики успешно экспортирован!&#10;&#10;Файл: {0}&#10;Расположение: {1}&#10;&#10;Этот ZIP можно приложить к issue на GitHub.</value>
+  </data>
+  <data name="Settings_ExportDiagErrorFormat" xml:space="preserve">
+    <value>Не удалось экспортировать диагностику: {0}</value>
+  </data>
+  <data name="Settings_ModelNotAnalyzed" xml:space="preserve">
+    <value>Сведения о модели ещё не проанализированы.</value>
+  </data>
 </root>

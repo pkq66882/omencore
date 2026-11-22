@@ -7717,4 +7717,400 @@
   <data name="ZoneName_FarRight" xml:space="preserve">
     <value>最右侧</value>
   </data>
+  <data name="SystemControl_ModeMemoryNothingFormat" xml:space="preserve">
+    <value>“{0}”暂无可记忆内容——无法读取当前风扇状态。</value>
+  </data>
+  <data name="MaxAutoReturn_Off" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="MaxAutoReturn_Cooldown" xml:space="preserve">
+    <value>冷却</value>
+  </data>
+  <data name="MaxAutoReturn_Timer" xml:space="preserve">
+    <value>计时</value>
+  </data>
+  <data name="RgbSurface_KeyboardZones" xml:space="preserve">
+    <value>键盘分区变化</value>
+  </data>
+  <data name="RgbSurface_PerKey" xml:space="preserve">
+    <value>逐键灯效变化</value>
+  </data>
+  <data name="RgbSurface_LightBar" xml:space="preserve">
+    <value>灯条变化</value>
+  </data>
+  <data name="RgbSurface_SingleBacklight" xml:space="preserve">
+    <value>单区背光变化</value>
+  </data>
+  <data name="RgbSurface_NothingChanged" xml:space="preserve">
+    <value>无变化</value>
+  </data>
+  <data name="RgbSurface_Other" xml:space="preserve">
+    <value>其他或未知表面变化</value>
+  </data>
+  <data name="FanPreset_Gaming" xml:space="preserve">
+    <value>游戏</value>
+  </data>
+  <data name="PerfMode_Quiet" xml:space="preserve">
+    <value>冷静</value>
+  </data>
+  <data name="FanControl_ModeDirect" xml:space="preserve">
+    <value>直接控制</value>
+  </data>
+  <data name="SystemControl_NothingRemembered" xml:space="preserve">
+    <value>暂无——目前仅记住功耗限制</value>
+  </data>
+  <data name="SystemControl_RememberedFanCurve" xml:space="preserve">
+    <value>自定义风扇曲线</value>
+  </data>
+  <data name="SystemControl_RememberedFanPresetFormat" xml:space="preserve">
+    <value>风扇预设“{0}”</value>
+  </data>
+  <data name="SystemControl_RememberedGpuBoostFormat" xml:space="preserve">
+    <value>GPU 加速“{0}”</value>
+  </data>
+  <data name="SystemControl_RememberedLightingFormat" xml:space="preserve">
+    <value>灯效方案“{0}”</value>
+  </data>
+  <data name="SystemControl_RememberedChargeLimitFormat" xml:space="preserve">
+    <value>充电上限 {0}%</value>
+  </data>
+  <data name="SystemControl_RememberedChargeLimitOn" xml:space="preserve">
+    <value>已启用充电上限</value>
+  </data>
+  <data name="SystemControl_RememberedFullCharge" xml:space="preserve">
+    <value>满电充电</value>
+  </data>
+  <data name="SystemControl_ModeMemoryRememberedFormat" xml:space="preserve">
+    <value>“{0}”现在会记住：{1}</value>
+  </data>
+  <data name="App_DriverPromptBody" xml:space="preserve">
+    <value>部分硬件控制功能需要驱动后端。&#10;&#10;视系统情况，你可以使用：&#10;• PawnIO（兼容安全启动）&#10;• 仅 WMI 模式（监控和多数控制仍可用）&#10;&#10;没有受支持的驱动后端时，以下功能可能被禁用：&#10;• 直接 EC 风扇控制（部分机型）&#10;• CPU 降压与 TCC 偏移（Intel MSR）&#10;&#10;推荐：{0}&#10;&#10;请使用 OmenCore 安装程序添加 PawnIO，或在没有驱动相关功能的情况下继续。</value>
+  </data>
+  <data name="App_DriverPromptTitle" xml:space="preserve">
+    <value>可选驱动后端 - OmenCore</value>
+  </data>
+  <data name="DiagnosticExport_ExportFailedFormat" xml:space="preserve">
+    <value>导出失败：{0}</value>
+  </data>
+  <data name="DiagnosticExport_ExportErrorTitle" xml:space="preserve">
+    <value>导出错误</value>
+  </data>
+  <data name="FanCalibration_CalibrationUnavailableTitle" xml:space="preserve">
+    <value>无法校准</value>
+  </data>
+  <data name="FanCalibration_StartConfirmBody" xml:space="preserve">
+    <value>风扇校准会测试 0%–100% 的转速，可能需要 5–10 分钟。&#10;&#10;• 请确保笔记本通风良好&#10;• 校准过程中请勿中断&#10;• 风扇会以不同转速运行&#10;&#10;是否继续校准？</value>
+  </data>
+  <data name="FanCalibration_StartConfirmTitle" xml:space="preserve">
+    <value>开始风扇校准</value>
+  </data>
+  <data name="FanCalibration_LoadedFormat" xml:space="preserve">
+    <value>已载入 {0} 的校准数据（{1} 个风扇配置）。</value>
+  </data>
+  <data name="FanCalibration_LoadedTitle" xml:space="preserve">
+    <value>校准已载入</value>
+  </data>
+  <data name="FanCalibration_NothingToSaveBody" xml:space="preserve">
+    <value>没有可保存的成功校准结果，请先运行校准。</value>
+  </data>
+  <data name="FanCalibration_NothingToSaveTitle" xml:space="preserve">
+    <value>无可保存内容</value>
+  </data>
+  <data name="FanCalibration_SavedFormat" xml:space="preserve">
+    <value>{0} 的校准数据已保存。</value>
+  </data>
+  <data name="FanCalibration_SavedTitle" xml:space="preserve">
+    <value>校准已保存</value>
+  </data>
+  <data name="FanCalibration_SaveFailedFormat" xml:space="preserve">
+    <value>保存校准失败：{0}</value>
+  </data>
+  <data name="FanCalibration_SaveErrorTitle" xml:space="preserve">
+    <value>保存错误</value>
+  </data>
+  <data name="FanCalibration_CalibrationFailedFormat" xml:space="preserve">
+    <value>校准失败：{0}</value>
+  </data>
+  <data name="FanCalibration_CalibrationErrorTitle" xml:space="preserve">
+    <value>校准错误</value>
+  </data>
+  <data name="FanCalibration_ClearConfirmBody" xml:space="preserve">
+    <value>这将移除该机型的全部校准数据。&#10;&#10;确定继续？</value>
+  </data>
+  <data name="FanCalibration_ClearConfirmTitle" xml:space="preserve">
+    <value>清除校准数据</value>
+  </data>
+  <data name="CurveRecovery_OverheatBodyFormat" xml:space="preserve">
+    <value>你的风扇曲线导致持续过热！&#10;&#10;温度超过 {0}°C 已持续 {1} 分钟以上。&#10;&#10;OmenCore 已自动回退到之前的风扇曲线：&#10;“{2}”&#10;&#10;请检查风扇曲线，确保高温下有足够散热。</value>
+  </data>
+  <data name="CurveRecovery_Title" xml:space="preserve">
+    <value>曲线恢复</value>
+  </data>
+  <data name="AsyncRelayCommand_OperationFailedFormat" xml:space="preserve">
+    <value>操作失败：{0}&#10;&#10;详情请查看日志。&#10;&#10;提示：尝试重启 OmenCore，或检查设置是否有误。</value>
+  </data>
+  <data name="AsyncRelayCommand_OperationFailedTitle" xml:space="preserve">
+    <value>操作失败</value>
+  </data>
+  <data name="Bloatware_NoAppsSelected" xml:space="preserve">
+    <value>移除预览中未选择任何应用。</value>
+  </data>
+  <data name="Bloatware_RiskyConfirmBody" xml:space="preserve">
+    <value>所选项目中包含中/高风险项，仍要继续移除？</value>
+  </data>
+  <data name="Bloatware_RiskyConfirmTitle" xml:space="preserve">
+    <value>确认移除高风险项</value>
+  </data>
+  <data name="Bloatware_RestorePointAskFormat" xml:space="preserve">
+    <value>移除 {0} 项前是否创建 Windows 还原点？&#10;&#10;建议在进行系统更改前创建。</value>
+  </data>
+  <data name="Bloatware_RestorePointAskTitle" xml:space="preserve">
+    <value>创建还原点</value>
+  </data>
+  <data name="Bloatware_RestorePointFailedFormat" xml:space="preserve">
+    <value>无法创建还原点：&#10;{0}&#10;&#10;是否在没有还原点的情况下继续移除？</value>
+  </data>
+  <data name="Bloatware_RestorePointFailedTitle" xml:space="preserve">
+    <value>还原点创建失败</value>
+  </data>
+  <data name="Bloatware_ProceedWithoutRestore" xml:space="preserve">
+    <value>已按用户选择在无还原点的情况下继续</value>
+  </data>
+  <data name="Bloatware_CanceledNoRestore" xml:space="preserve">
+    <value>因未创建还原点，移除已取消</value>
+  </data>
+  <data name="Bloatware_RestoreAllFormat" xml:space="preserve">
+    <value>将恢复 {0} 个已移除项。&#10;&#10;依赖项或设置会从其原始来源重新安装。&#10;&#10;继续？</value>
+  </data>
+  <data name="Bloatware_RestoreAllTitle" xml:space="preserve">
+    <value>恢复全部已移除的预装软件</value>
+  </data>
+  <data name="GameProfile_DeleteConfirmFormat" xml:space="preserve">
+    <value>确定删除方案“{0}”？</value>
+  </data>
+  <data name="GameProfile_DeleteConfirmTitle" xml:space="preserve">
+    <value>确认删除</value>
+  </data>
+  <data name="GameProfile_DeleteFailedFormat" xml:space="preserve">
+    <value>删除方案失败：{0}</value>
+  </data>
+  <data name="GameProfile_ImportFailedFormat" xml:space="preserve">
+    <value>导入方案失败：{0}</value>
+  </data>
+  <data name="GameProfile_ExportFailedFormat" xml:space="preserve">
+    <value>导出方案失败：{0}</value>
+  </data>
+  <data name="GameProfile_SaveFailedFormat" xml:space="preserve">
+    <value>保存方案失败：{0}</value>
+  </data>
+  <data name="GameProfile_ErrorTitle" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="GameProfile_ExportedFormat" xml:space="preserve">
+    <value>已导出 {0} 个方案</value>
+  </data>
+  <data name="GameProfile_ExportCompleteTitle" xml:space="preserve">
+    <value>导出完成</value>
+  </data>
+  <data name="GameProfile_ExportDialogTitle" xml:space="preserve">
+    <value>导出游戏方案</value>
+  </data>
+  <data name="GameProfile_JsonFilter" xml:space="preserve">
+    <value>JSON 文件 (*.json)|*.json|所有文件 (*.*)|*.*</value>
+  </data>
+  <data name="Lighting_DpiChangeConfirmBody" xml:space="preserve">
+    <value>这会更改所选设备的硬件 DPI 设置，是否继续？</value>
+  </data>
+  <data name="Lighting_DpiChangeTitle" xml:space="preserve">
+    <value>确认更改 DPI</value>
+  </data>
+  <data name="Lighting_DpiRestoreConfirmBody" xml:space="preserve">
+    <value>这会将 DPI 档位恢复为已保存的默认值（若无则为内置默认值）。是否继续？</value>
+  </data>
+  <data name="Lighting_DpiRestoreTitle" xml:space="preserve">
+    <value>恢复 DPI 默认值</value>
+  </data>
+  <data name="Lighting_DpiDeleteConfirmFormat" xml:space="preserve">
+    <value>确定删除 DPI 方案“{0}”？此操作无法撤销。</value>
+  </data>
+  <data name="Lighting_DpiDeleteTitle" xml:space="preserve">
+    <value>删除 DPI 方案</value>
+  </data>
+  <data name="Main_OpenProfileManagerFailedFormat" xml:space="preserve">
+    <value>打开方案管理器失败：{0}</value>
+  </data>
+  <data name="Main_ErrorTitle" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Main_RestorePointFailedStepFormat" xml:space="preserve">
+    <value>⚠ 还原点创建失败：{0}</value>
+  </data>
+  <data name="Main_CleanupCanceledNoRestorePoint" xml:space="preserve">
+    <value>⚠ 清理已取消——未创建还原点</value>
+  </data>
+  <data name="Main_CleanupCanceledByUser" xml:space="preserve">
+    <value>用户已取消清理</value>
+  </data>
+  <data name="Main_RestorePointFailedBody" xml:space="preserve">
+    <value>创建系统还原点失败：&#10;{0}&#10;&#10;这通常是因为系统中的“系统还原”被禁用。&#10;&#10;仍要继续清理吗？&#10;&#10;注意：没有还原点，清理操作将难以轻松撤销。</value>
+  </data>
+  <data name="Main_RestorePointFailedTitle" xml:space="preserve">
+    <value>还原点创建失败 - OmenCore</value>
+  </data>
+  <data name="Main_ImportCompleteBody" xml:space="preserve">
+    <value>配置导入成功！&#10;&#10;请重启 OmenCore 以使全部更改生效。</value>
+  </data>
+  <data name="Main_ImportCompleteTitle" xml:space="preserve">
+    <value>导入完成</value>
+  </data>
+  <data name="Main_ReportModelBodyFormat" xml:space="preserve">
+    <value>诊断包已创建，机型信息已复制到剪贴板。&#10;&#10;机型：{0}&#10;路径：{1}</value>
+  </data>
+  <data name="Main_ReportModelTitle" xml:space="preserve">
+    <value>报告机型</value>
+  </data>
+  <data name="Main_ReportFailedFormat" xml:space="preserve">
+    <value>创建诊断包失败：{0}</value>
+  </data>
+  <data name="Settings_EcDangerBody" xml:space="preserve">
+    <value>🛑 危险：高风险实验性功能 🛑&#10;&#10;直接向 EC 写入键盘数据可能导致：&#10;• 系统硬崩溃，需要强制重启&#10;• 屏幕亮度卡在最低（黑屏）&#10;• 键盘/显示控制器故障&#10;• 其他不可预测的 EC 相关问题&#10;&#10;EC 键盘寄存器（0xB2–0xBE）因机型而异。写错地址曾在多种 OMEN 机型上导致系统崩溃和显示异常。&#10;&#10;如果启用后屏幕变黑：&#10;1. 重启笔记本（长按电源键 10 秒）&#10;2. 删除配置：%APPDATA%\\OmenCore\\config.json&#10;3. 或重新安装 OmenCore&#10;&#10;仅当你的机型 WMI 键盘灯效不可用时才启用。&#10;&#10;自行承担风险启用？</value>
+  </data>
+  <data name="Settings_EcDangerTitle" xml:space="preserve">
+    <value>⚠️ 实验性功能警告</value>
+  </data>
+  <data name="Settings_EcBackendBody" xml:space="preserve">
+    <value>⚠️ 已选择 EC 后端 ⚠️&#10;&#10;使用 EC 控制键盘需要勾选“启用 EC 键盘”。&#10;&#10;是否启用实验性 EC 键盘支持？&#10;（警告：部分机型上可能导致系统崩溃）</value>
+  </data>
+  <data name="Settings_EcBackendTitle" xml:space="preserve">
+    <value>启用 EC 键盘？</value>
+  </data>
+  <data name="Settings_AutoStartAdminBody" xml:space="preserve">
+    <value>开机自启需要管理员权限才能创建计划任务。&#10;&#10;启用方法：&#10;1. 右键 OmenCore，选择“以管理员身份运行”&#10;2. 进入设置，再次启用“随 Windows 启动”&#10;&#10;或者重新运行安装程序并勾选“随 Windows 启动”。</value>
+  </data>
+  <data name="Settings_AutoStartAdminTitle" xml:space="preserve">
+    <value>需要管理员权限</value>
+  </data>
+  <data name="Settings_FanCleaningConfirmBody" xml:space="preserve">
+    <value>将运行 20 秒的风扇除尘循环。&#10;&#10;⚠️ 重要：&#10;• 请将笔记本放在平稳的平面上&#10;• 确保通风口未被遮挡&#10;• 风扇会短暂反转方向&#10;• 可能听到异常风扇声——属正常现象&#10;&#10;是否继续除尘？</value>
+  </data>
+  <data name="Settings_FanCleaningConfirmTitle" xml:space="preserve">
+    <value>风扇除尘清洁</value>
+  </data>
+  <data name="Settings_FanCleaningFailedFormat" xml:space="preserve">
+    <value>风扇清洁失败：{0}</value>
+  </data>
+  <data name="Settings_ResetDefaultsConfirmBody" xml:space="preserve">
+    <value>这会将所有设置恢复为默认值。&#10;&#10;包括：&#10;• 监控设置&#10;• 通知偏好&#10;• 热键设置&#10;• 更新偏好&#10;&#10;是否继续重置？</value>
+  </data>
+  <data name="Settings_ResetDefaultsConfirmTitle" xml:space="preserve">
+    <value>恢复默认设置</value>
+  </data>
+  <data name="Settings_ResetFailedFormat" xml:space="preserve">
+    <value>恢复默认设置失败：{0}</value>
+  </data>
+  <data name="Settings_EcResetConfirmBody" xml:space="preserve">
+    <value>这会将嵌入式控制器（EC）恢复为出厂默认值。&#10;&#10;此操作将：&#10;• 恢复 BIOS 对风扇的控制&#10;• 清除所有手动风扇转速覆盖&#10;• 重置风扇加速模式&#10;• 重置散热策略计时器&#10;&#10;适用场景：&#10;• 风扇转速似乎被 BIOS 卡住&#10;• BIOS 显示的风扇读数不正确&#10;• 希望完全恢复出厂风扇行为&#10;&#10;重置后应用会自动切换到自动模式。&#10;&#10;是否继续？</value>
+  </data>
+  <data name="Settings_EcResetConfirmTitle" xml:space="preserve">
+    <value>恢复 EC 默认值</value>
+  </data>
+  <data name="Settings_EcResetFailedBody" xml:space="preserve">
+    <value>风扇服务不可用，无法执行 EC 重置。</value>
+  </data>
+  <data name="Settings_EcResetFailedTitle" xml:space="preserve">
+    <value>EC 重置失败</value>
+  </data>
+  <data name="Settings_EcResetSuccessBody" xml:space="preserve">
+    <value>EC 已恢复为出厂默认值。&#10;&#10;BIOS 现在应完全控制风扇。&#10;如果 BIOS 显示仍然不正确，&#10;请尝试重启笔记本。</value>
+  </data>
+  <data name="Settings_EcResetSuccessTitle" xml:space="preserve">
+    <value>EC 重置成功</value>
+  </data>
+  <data name="Settings_EcResetPartialBody" xml:space="preserve">
+    <value>EC 重置可能只完成了一部分。&#10;&#10;部分系统需要完全重启&#10;才能使所有更改生效。</value>
+  </data>
+  <data name="Settings_EcResetPartialTitle" xml:space="preserve">
+    <value>EC 重置结果</value>
+  </data>
+  <data name="Settings_EcResetErrorFormat" xml:space="preserve">
+    <value>重置 EC 失败：{0}</value>
+  </data>
+  <data name="Settings_PawnIoInstallBody" xml:space="preserve">
+    <value>OmenCore 建议使用 PawnIO 以获得高级硬件功能。&#10;&#10;PawnIO 提供兼容安全启动的 MSR/EC 访问，用于：&#10;• CPU 降压（Intel/AMD）&#10;• TCC 偏移控制&#10;• 基于 EC 的风扇控制回退&#10;&#10;点击“确定”打开 PawnIO 网站。</value>
+  </data>
+  <data name="Settings_PawnIoInstallTitle" xml:space="preserve">
+    <value>安装 PawnIO 驱动</value>
+  </data>
+  <data name="Settings_BloatwareRemoveBodyFormat" xml:space="preserve">
+    <value>将移除 {0} 个 HP 预装软件包。&#10;&#10;⚠️ 警告：&#10;• 此操作无法撤销&#10;• 部分 HP 功能可能停止工作&#10;• 不会移除 HP Support Assistant&#10;• 不会触碰 Realtek 音频/网络驱动&#10;• 可能需要重启系统&#10;&#10;是否继续移除？</value>
+  </data>
+  <data name="Settings_BloatwareRemoveTitle" xml:space="preserve">
+    <value>移除 HP 预装软件 - 需要确认</value>
+  </data>
+  <data name="Settings_BloatwareRemovalCompleteTitle" xml:space="preserve">
+    <value>预装软件移除完成</value>
+  </data>
+  <data name="Settings_BloatwareFailedPackagesFormat" xml:space="preserve">
+    <value>{0} 个软件包无法移除。</value>
+  </data>
+  <data name="Settings_BloatwareNeedsAdmin" xml:space="preserve">
+    <value>部分软件包需要管理员权限。&#10;请右键 OmenCore →“以管理员身份运行”后重试。</value>
+  </data>
+  <data name="Settings_BloatwareRestartNote" xml:space="preserve">
+    <value>部分更改可能需要重启系统。</value>
+  </data>
+  <data name="Settings_ImportFailedBody" xml:space="preserve">
+    <value>导入方案失败。文件可能已损坏或不兼容。</value>
+  </data>
+  <data name="Settings_ImportFailedTitle" xml:space="preserve">
+    <value>导入失败</value>
+  </data>
+  <data name="Settings_ImportConfirmFormat" xml:space="preserve">
+    <value>从 {0} 导入方案？&#10;&#10;将应用：&#10;• {1} 个风扇预设&#10;• {2} 个性能模式&#10;• {3} 个 GPU 超频方案&#10;• 电池与滞后设置&#10;&#10;现有设置将被覆盖。</value>
+  </data>
+  <data name="Settings_ImportConfirmTitle" xml:space="preserve">
+    <value>导入方案</value>
+  </data>
+  <data name="Settings_ProfileImportCompleteBody" xml:space="preserve">
+    <value>方案导入成功！&#10;&#10;设置已应用。部分更改可能需要重启应用。</value>
+  </data>
+  <data name="Settings_ProfileImportCompleteTitle" xml:space="preserve">
+    <value>导入完成</value>
+  </data>
+  <data name="Settings_ImportErrorFormat" xml:space="preserve">
+    <value>导入方案失败：{0}</value>
+  </data>
+  <data name="Settings_ImportErrorTitle" xml:space="preserve">
+    <value>导入错误</value>
+  </data>
+  <data name="Settings_ImportDialogTitle" xml:space="preserve">
+    <value>导入 OmenCore 方案</value>
+  </data>
+  <data name="Settings_ProfileFilter" xml:space="preserve">
+    <value>OmenCore 方案 (*.omencore)|*.omencore|所有文件 (*.*)|*.*</value>
+  </data>
+  <data name="Settings_ExportDialogTitle" xml:space="preserve">
+    <value>导出 OmenCore 方案</value>
+  </data>
+  <data name="Settings_ProfileExportedBodyFormat" xml:space="preserve">
+    <value>方案导出成功！&#10;&#10;文件：{0}&#10;位置：{1}</value>
+  </data>
+  <data name="Settings_ExportCompleteTitle" xml:space="preserve">
+    <value>导出完成</value>
+  </data>
+  <data name="Settings_ExportErrorFormat" xml:space="preserve">
+    <value>导出方案失败：{0}</value>
+  </data>
+  <data name="Settings_ExportDiagDialogTitle" xml:space="preserve">
+    <value>导出诊断包</value>
+  </data>
+  <data name="Settings_DiagExportedBodyFormat" xml:space="preserve">
+    <value>诊断包导出成功！&#10;&#10;文件：{0}&#10;位置：{1}&#10;&#10;可将此 ZIP 附件上传到 GitHub issue 以便排障。</value>
+  </data>
+  <data name="Settings_ExportDiagErrorFormat" xml:space="preserve">
+    <value>导出诊断失败：{0}</value>
+  </data>
+  <data name="Settings_ModelNotAnalyzed" xml:space="preserve">
+    <value>尚未分析机型身份。</value>
+  </data>
 </root>

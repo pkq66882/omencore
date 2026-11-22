@@ -1279,10 +1279,12 @@
                             <ComboBox Grid.Column="1" Margin="12,0,0,0" VerticalAlignment="Center"
                                       SelectedItem="{Binding MaxAutoReturnMode, Mode=TwoWay}"
                                       ItemsSource="{Binding MaxAutoReturnModeOptions}"
+                                      ItemTemplate="{StaticResource MaxAutoReturnItemTemplate}"
                                       AutomationProperties.Name="{x:Static loc:Strings.SettingsView_ReturnMaxFanModeToAuto}"/>
                             <ComboBox Grid.Column="2" Margin="8,0,0,0" VerticalAlignment="Center" MinWidth="64"
                                       SelectedItem="{Binding MaxAutoReturnTimerMinutes, Mode=TwoWay}"
                                       ItemsSource="{Binding MaxAutoReturnTimerOptions}"
+                                      ItemTemplate="{StaticResource MinutesItemTemplate}"
                                       Visibility="{Binding MaxAutoReturnUsesTimer, Converter={StaticResource BooleanToVisibilityConverter}}"
                                       ToolTip="{x:Static loc:Strings.SettingsView_Minutes}"
                                       AutomationProperties.Name="{x:Static loc:Strings.SettingsView_MaxFanAutoReturnTimerMinutes}"/>

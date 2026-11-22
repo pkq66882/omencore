@@ -51,6 +51,7 @@ namespace OmenCore.Utils
                 "Silent" => Strings.FanPreset_Silent,
                 "Balanced" => Strings.FanPreset_Balanced,
                 "Performance" => Strings.FanPreset_Performance,
+                "Gaming" => Strings.FanPreset_Gaming,
                 _ => token ?? string.Empty
             },
             "PerfMode" => token switch
@@ -60,6 +61,24 @@ namespace OmenCore.Utils
                 "Performance" => Strings.PerfMode_Performance,
                 "Turbo" => Strings.PerfMode_Turbo,
                 "Comfort" => Strings.PerfMode_Comfort,
+                "Quiet" => Strings.PerfMode_Quiet,
+                _ => token ?? string.Empty
+            },
+            "MaxAutoReturn" => token switch
+            {
+                "Off" => Strings.MaxAutoReturn_Off,
+                "Cooldown" => Strings.MaxAutoReturn_Cooldown,
+                "Timer" => Strings.MaxAutoReturn_Timer,
+                _ => token ?? string.Empty
+            },
+            "RgbSurface" => token switch
+            {
+                "Keyboard zones changed" => Strings.RgbSurface_KeyboardZones,
+                "Per-key keys changed" => Strings.RgbSurface_PerKey,
+                "Light bar changed" => Strings.RgbSurface_LightBar,
+                "Single backlight changed" => Strings.RgbSurface_SingleBacklight,
+                "Nothing changed" => Strings.RgbSurface_NothingChanged,
+                "Different or unknown surface changed" => Strings.RgbSurface_Other,
                 _ => token ?? string.Empty
             },
             "KeyboardProfile" => token switch
@@ -305,6 +324,16 @@ namespace OmenCore.Utils
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             => DisplayNames.BoostLevel(value as string);
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+
+    /// Formats an integer minute value with the localized "{0} 分钟" pattern.
+    public class MinutesDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => value is int minutes ? string.Format(Strings.SettingsView_MinutesFormat, minutes) : value?.ToString() ?? string.Empty;
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
             => throw new NotSupportedException();

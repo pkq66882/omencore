@@ -2386,7 +2386,7 @@ namespace OmenCore.ViewModels
                     operation: "OpenGameProfileManager",
                     message: "Failed to open game profile manager",
                     ex: ex);
-                MessageBox.Show($"Failed to open profile manager: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(string.Format(Strings.Main_OpenProfileManagerFailedFormat, ex.Message), Strings.Main_ErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -2649,22 +2649,19 @@ namespace OmenCore.ViewModels
                 if (!restoreResult.Success)
                 {
                     _logging.Warn($"Restore point creation failed: {restoreResult.Message}");
-                    OmenCleanupSteps.Add($"⚠ Restore point failed: {restoreResult.Message}");
+                    OmenCleanupSteps.Add(string.Format(Strings.Main_RestorePointFailedStepFormat, restoreResult.Message));
                     
                     // Ask user if they want to continue anyway
                     var continueAnyway = System.Windows.MessageBox.Show(
-                        $"System Restore point creation failed:\n{restoreResult.Message}\n\n" +
-                        "This is often because System Restore is disabled on your system.\n\n" +
-                        "Do you want to continue with the cleanup anyway?\n\n" +
-                        "Note: Without a restore point, you cannot easily undo the cleanup.",
-                        "Restore Point Failed - OmenCore",
+                        string.Format(Strings.Main_RestorePointFailedBody, restoreResult.Message),
+                        Strings.Main_RestorePointFailedTitle,
                         System.Windows.MessageBoxButton.YesNo,
                         System.Windows.MessageBoxImage.Warning);
                     
                     if (continueAnyway != System.Windows.MessageBoxResult.Yes)
                     {
-                        CleanupStatus = "⚠ Cleanup cancelled - no restore point";
-                        OmenCleanupSteps.Add("Cleanup cancelled by user");
+                        CleanupStatus = Strings.Main_CleanupCanceledNoRestorePoint;
+                        OmenCleanupSteps.Add(Strings.Main_CleanupCanceledByUser);
                         _logging.Info("OGH cleanup cancelled by user due to restore point failure");
                         PushEvent("OGH cleanup cancelled");
                         CleanupInProgress = false;
@@ -3087,8 +3084,8 @@ namespace OmenCore.ViewModels
                         
                         // Notify user to restart
                         MessageBox.Show(
-                            "Configuration imported successfully!\n\nPlease restart OmenCore for all changes to take effect.",
-                            "Import Complete",
+                            Strings.Main_ImportCompleteBody,
+                            Strings.Main_ImportCompleteTitle,
                             MessageBoxButton.OK,
                             MessageBoxImage.Information);
                     }
@@ -3142,8 +3139,8 @@ namespace OmenCore.ViewModels
                     if (Application.Current != null)
                     {
                         MessageBox.Show(
-                            $"Diagnostics bundle created and model info copied to clipboard.\n\nModel: {model}\nPath: {exportedPath}",
-                            "Report Model",
+                            string.Format(Strings.Main_ReportModelBodyFormat, model, exportedPath),
+                            Strings.Main_ReportModelTitle,
                             MessageBoxButton.OK,
                             MessageBoxImage.Information);
                     }
@@ -3165,7 +3162,7 @@ namespace OmenCore.ViewModels
                     ex: ex);
                 PushEvent($"✗ Report model failed: {ex.Message}");
                 if (Application.Current != null)
-                    MessageBox.Show($"Failed to create diagnostics bundle: {ex.Message}", "Report Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(string.Format(Strings.Main_ReportFailedFormat, ex.Message), Strings.Main_ReportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             await Task.CompletedTask;

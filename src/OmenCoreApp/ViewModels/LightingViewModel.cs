@@ -2074,8 +2074,8 @@ namespace OmenCore.ViewModels
             if (!skipConfirmation)
             {
                 var res = MessageBox.Show(
-                    "This will change the hardware DPI settings on the selected device. Do you want to continue?",
-                    "Confirm DPI Change",
+                    Strings.Lighting_DpiChangeConfirmBody,
+                    Strings.Lighting_DpiChangeTitle,
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Warning,
                     MessageBoxResult.No);
@@ -2177,8 +2177,8 @@ namespace OmenCore.ViewModels
             if (!skipConfirmation)
             {
                 var res = MessageBox.Show(
-                    "This will restore DPI stages to their saved defaults (or built-in defaults if none). Continue?",
-                    "Restore DPI Defaults",
+                    Strings.Lighting_DpiRestoreConfirmBody,
+                    Strings.Lighting_DpiRestoreTitle,
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question,
                     MessageBoxResult.No);
@@ -2327,8 +2327,8 @@ namespace OmenCore.ViewModels
             }
 
             var res = MessageBox.Show(
-                $"Are you sure you want to delete the DPI profile '{SelectedCorsairDpiProfile.Name}'? This cannot be undone.",
-                "Delete DPI Profile",
+                string.Format(Strings.Lighting_DpiDeleteConfirmFormat, SelectedCorsairDpiProfile.Name),
+                Strings.Lighting_DpiDeleteTitle,
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Warning,
                 MessageBoxResult.No);

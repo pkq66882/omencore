@@ -7721,4 +7721,400 @@
   <data name="ZoneName_FarRight" xml:space="preserve">
     <value>Far Right</value>
   </data>
+  <data name="SystemControl_ModeMemoryNothingFormat" xml:space="preserve">
+    <value>'{0}' has nothing to remember - the fan state could not be read.</value>
+  </data>
+  <data name="MaxAutoReturn_Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="MaxAutoReturn_Cooldown" xml:space="preserve">
+    <value>Cooldown</value>
+  </data>
+  <data name="MaxAutoReturn_Timer" xml:space="preserve">
+    <value>Timer</value>
+  </data>
+  <data name="RgbSurface_KeyboardZones" xml:space="preserve">
+    <value>Keyboard zones changed</value>
+  </data>
+  <data name="RgbSurface_PerKey" xml:space="preserve">
+    <value>Per-key keys changed</value>
+  </data>
+  <data name="RgbSurface_LightBar" xml:space="preserve">
+    <value>Light bar changed</value>
+  </data>
+  <data name="RgbSurface_SingleBacklight" xml:space="preserve">
+    <value>Single backlight changed</value>
+  </data>
+  <data name="RgbSurface_NothingChanged" xml:space="preserve">
+    <value>Nothing changed</value>
+  </data>
+  <data name="RgbSurface_Other" xml:space="preserve">
+    <value>Different or unknown surface changed</value>
+  </data>
+  <data name="FanPreset_Gaming" xml:space="preserve">
+    <value>Gaming</value>
+  </data>
+  <data name="PerfMode_Quiet" xml:space="preserve">
+    <value>Quiet</value>
+  </data>
+  <data name="FanControl_ModeDirect" xml:space="preserve">
+    <value>Direct</value>
+  </data>
+  <data name="SystemControl_NothingRemembered" xml:space="preserve">
+    <value>Nothing yet - power limits only</value>
+  </data>
+  <data name="SystemControl_RememberedFanCurve" xml:space="preserve">
+    <value>fan curve</value>
+  </data>
+  <data name="SystemControl_RememberedFanPresetFormat" xml:space="preserve">
+    <value>fan preset '{0}'</value>
+  </data>
+  <data name="SystemControl_RememberedGpuBoostFormat" xml:space="preserve">
+    <value>GPU boost '{0}'</value>
+  </data>
+  <data name="SystemControl_RememberedLightingFormat" xml:space="preserve">
+    <value>lighting '{0}'</value>
+  </data>
+  <data name="SystemControl_RememberedChargeLimitFormat" xml:space="preserve">
+    <value>charge limit {0}%</value>
+  </data>
+  <data name="SystemControl_RememberedChargeLimitOn" xml:space="preserve">
+    <value>charge limit on</value>
+  </data>
+  <data name="SystemControl_RememberedFullCharge" xml:space="preserve">
+    <value>full charge</value>
+  </data>
+  <data name="SystemControl_ModeMemoryRememberedFormat" xml:space="preserve">
+    <value>'{0}' now remembers: {1}</value>
+  </data>
+  <data name="App_DriverPromptBody" xml:space="preserve">
+    <value>Some hardware-control features require a driver backend.&#10;&#10;Depending on your system, you can use:&#10;• PawnIO (Secure Boot compatible)&#10;• WMI-only mode (monitoring and many controls still work)&#10;&#10;Without a supported driver backend, these features may be disabled:&#10;• Direct EC fan control (some models)&#10;• CPU undervolting and TCC offset (Intel MSR)&#10;&#10;Recommended: {0}&#10;&#10;Use the OmenCore installer to add PawnIO, or continue without driver-dependent features.</value>
+  </data>
+  <data name="App_DriverPromptTitle" xml:space="preserve">
+    <value>Optional Driver Backend - OmenCore</value>
+  </data>
+  <data name="DiagnosticExport_ExportFailedFormat" xml:space="preserve">
+    <value>Export failed: {0}</value>
+  </data>
+  <data name="DiagnosticExport_ExportErrorTitle" xml:space="preserve">
+    <value>Export Error</value>
+  </data>
+  <data name="FanCalibration_CalibrationUnavailableTitle" xml:space="preserve">
+    <value>Calibration Unavailable</value>
+  </data>
+  <data name="FanCalibration_StartConfirmBody" xml:space="preserve">
+    <value>Fan calibration will test speeds from 0% to 100% and may take 5-10 minutes.&#10;&#10;• Ensure your laptop has good ventilation&#10;• Do not interrupt the process&#10;• Fans will run at various speeds&#10;&#10;Continue with calibration?</value>
+  </data>
+  <data name="FanCalibration_StartConfirmTitle" xml:space="preserve">
+    <value>Start Fan Calibration</value>
+  </data>
+  <data name="FanCalibration_LoadedFormat" xml:space="preserve">
+    <value>Loaded calibration data for {0} ({1} fan profile(s)).</value>
+  </data>
+  <data name="FanCalibration_LoadedTitle" xml:space="preserve">
+    <value>Calibration Loaded</value>
+  </data>
+  <data name="FanCalibration_NothingToSaveBody" xml:space="preserve">
+    <value>No successful calibration result is available to save. Run calibration first.</value>
+  </data>
+  <data name="FanCalibration_NothingToSaveTitle" xml:space="preserve">
+    <value>Nothing to Save</value>
+  </data>
+  <data name="FanCalibration_SavedFormat" xml:space="preserve">
+    <value>Calibration data saved for {0}.</value>
+  </data>
+  <data name="FanCalibration_SavedTitle" xml:space="preserve">
+    <value>Calibration Saved</value>
+  </data>
+  <data name="FanCalibration_SaveFailedFormat" xml:space="preserve">
+    <value>Failed to save calibration: {0}</value>
+  </data>
+  <data name="FanCalibration_SaveErrorTitle" xml:space="preserve">
+    <value>Save Error</value>
+  </data>
+  <data name="FanCalibration_CalibrationFailedFormat" xml:space="preserve">
+    <value>Calibration failed: {0}</value>
+  </data>
+  <data name="FanCalibration_CalibrationErrorTitle" xml:space="preserve">
+    <value>Calibration Error</value>
+  </data>
+  <data name="FanCalibration_ClearConfirmBody" xml:space="preserve">
+    <value>This will remove all calibration data for this model.&#10;&#10;Are you sure?</value>
+  </data>
+  <data name="FanCalibration_ClearConfirmTitle" xml:space="preserve">
+    <value>Clear Calibration Data</value>
+  </data>
+  <data name="CurveRecovery_OverheatBodyFormat" xml:space="preserve">
+    <value>Your fan curve caused sustained overheating!&#10;&#10;Temperatures exceeded {0}°C for over {1} minutes.&#10;&#10;OmenCore has automatically reverted to your previous fan curve:&#10;"{2}"&#10;&#10;Please review your fan curve and ensure adequate cooling at high temperatures.</value>
+  </data>
+  <data name="CurveRecovery_Title" xml:space="preserve">
+    <value>Curve Recovery</value>
+  </data>
+  <data name="AsyncRelayCommand_OperationFailedFormat" xml:space="preserve">
+    <value>Operation failed: {0}&#10;&#10;Check logs for details.&#10;&#10;Tip: Try restarting OmenCore or check Settings for any misconfigurations.</value>
+  </data>
+  <data name="AsyncRelayCommand_OperationFailedTitle" xml:space="preserve">
+    <value>Operation Failed</value>
+  </data>
+  <data name="Bloatware_NoAppsSelected" xml:space="preserve">
+    <value>No apps selected in removal preview.</value>
+  </data>
+  <data name="Bloatware_RiskyConfirmBody" xml:space="preserve">
+    <value>One or more selected items are Medium/High risk. Continue with removal?</value>
+  </data>
+  <data name="Bloatware_RiskyConfirmTitle" xml:space="preserve">
+    <value>Confirm Risky Removal</value>
+  </data>
+  <data name="Bloatware_RestorePointAskFormat" xml:space="preserve">
+    <value>Create a Windows restore point before removing {0} item(s)?&#10;&#10;Recommended for safety before system changes.</value>
+  </data>
+  <data name="Bloatware_RestorePointAskTitle" xml:space="preserve">
+    <value>Create Restore Point</value>
+  </data>
+  <data name="Bloatware_RestorePointFailedFormat" xml:space="preserve">
+    <value>Restore point could not be created:&#10;{0}&#10;&#10;Continue removal without a restore point?</value>
+  </data>
+  <data name="Bloatware_RestorePointFailedTitle" xml:space="preserve">
+    <value>Restore Point Creation Failed</value>
+  </data>
+  <data name="Bloatware_ProceedWithoutRestore" xml:space="preserve">
+    <value>Proceeding without restore point by user choice</value>
+  </data>
+  <data name="Bloatware_CanceledNoRestore" xml:space="preserve">
+    <value>Removal canceled because restore point was not created</value>
+  </data>
+  <data name="Bloatware_RestoreAllFormat" xml:space="preserve">
+    <value>This will restore {0} removed items.&#10;&#10;Any dependencies or settings will be re-installed from their original sources.&#10;&#10;Continue?</value>
+  </data>
+  <data name="Bloatware_RestoreAllTitle" xml:space="preserve">
+    <value>Restore All Removed Bloatware</value>
+  </data>
+  <data name="GameProfile_DeleteConfirmFormat" xml:space="preserve">
+    <value>Delete profile '{0}'?</value>
+  </data>
+  <data name="GameProfile_DeleteConfirmTitle" xml:space="preserve">
+    <value>Confirm Delete</value>
+  </data>
+  <data name="GameProfile_DeleteFailedFormat" xml:space="preserve">
+    <value>Failed to delete profile: {0}</value>
+  </data>
+  <data name="GameProfile_ImportFailedFormat" xml:space="preserve">
+    <value>Failed to import profiles: {0}</value>
+  </data>
+  <data name="GameProfile_ExportFailedFormat" xml:space="preserve">
+    <value>Failed to export profiles: {0}</value>
+  </data>
+  <data name="GameProfile_SaveFailedFormat" xml:space="preserve">
+    <value>Failed to save profiles: {0}</value>
+  </data>
+  <data name="GameProfile_ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="GameProfile_ExportedFormat" xml:space="preserve">
+    <value>Exported {0} profile(s)</value>
+  </data>
+  <data name="GameProfile_ExportCompleteTitle" xml:space="preserve">
+    <value>Export Complete</value>
+  </data>
+  <data name="GameProfile_ExportDialogTitle" xml:space="preserve">
+    <value>Export Game Profiles</value>
+  </data>
+  <data name="GameProfile_JsonFilter" xml:space="preserve">
+    <value>JSON Files (*.json)|*.json|All Files (*.*)|*.*</value>
+  </data>
+  <data name="Lighting_DpiChangeConfirmBody" xml:space="preserve">
+    <value>This will change the hardware DPI settings on the selected device. Do you want to continue?</value>
+  </data>
+  <data name="Lighting_DpiChangeTitle" xml:space="preserve">
+    <value>Confirm DPI Change</value>
+  </data>
+  <data name="Lighting_DpiRestoreConfirmBody" xml:space="preserve">
+    <value>This will restore DPI stages to their saved defaults (or built-in defaults if none). Continue?</value>
+  </data>
+  <data name="Lighting_DpiRestoreTitle" xml:space="preserve">
+    <value>Restore DPI Defaults</value>
+  </data>
+  <data name="Lighting_DpiDeleteConfirmFormat" xml:space="preserve">
+    <value>Are you sure you want to delete the DPI profile '{0}'? This cannot be undone.</value>
+  </data>
+  <data name="Lighting_DpiDeleteTitle" xml:space="preserve">
+    <value>Delete DPI Profile</value>
+  </data>
+  <data name="Main_OpenProfileManagerFailedFormat" xml:space="preserve">
+    <value>Failed to open profile manager: {0}</value>
+  </data>
+  <data name="Main_ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Main_RestorePointFailedStepFormat" xml:space="preserve">
+    <value>⚠ Restore point failed: {0}</value>
+  </data>
+  <data name="Main_CleanupCanceledNoRestorePoint" xml:space="preserve">
+    <value>⚠ Cleanup cancelled - no restore point</value>
+  </data>
+  <data name="Main_CleanupCanceledByUser" xml:space="preserve">
+    <value>Cleanup cancelled by user</value>
+  </data>
+  <data name="Main_RestorePointFailedBody" xml:space="preserve">
+    <value>System Restore point creation failed:&#10;{0}&#10;&#10;This is often because System Restore is disabled on your system.&#10;&#10;Do you want to continue with the cleanup anyway?&#10;&#10;Note: Without a restore point, you cannot easily undo the cleanup.</value>
+  </data>
+  <data name="Main_RestorePointFailedTitle" xml:space="preserve">
+    <value>Restore Point Failed - OmenCore</value>
+  </data>
+  <data name="Main_ImportCompleteBody" xml:space="preserve">
+    <value>Configuration imported successfully!&#10;&#10;Please restart OmenCore for all changes to take effect.</value>
+  </data>
+  <data name="Main_ImportCompleteTitle" xml:space="preserve">
+    <value>Import Complete</value>
+  </data>
+  <data name="Main_ReportModelBodyFormat" xml:space="preserve">
+    <value>Diagnostics bundle created and model info copied to clipboard.&#10;&#10;Model: {0}&#10;Path: {1}</value>
+  </data>
+  <data name="Main_ReportModelTitle" xml:space="preserve">
+    <value>Report Model</value>
+  </data>
+  <data name="Main_ReportFailedFormat" xml:space="preserve">
+    <value>Failed to create diagnostics bundle: {0}</value>
+  </data>
+  <data name="Settings_EcDangerBody" xml:space="preserve">
+    <value>🛑 DANGER: HIGH-RISK EXPERIMENTAL FEATURE 🛑&#10;&#10;Direct EC keyboard writes can cause:&#10;• HARD SYSTEM CRASHES requiring forced restart&#10;• Screen brightness stuck at minimum (black screen)&#10;• Keyboard/display controller malfunction&#10;• Other unpredictable EC-related issues&#10;&#10;EC keyboard registers (0xB2-0xBE) vary by laptop model. Writing to wrong addresses has caused system crashes and display issues on various OMEN models.&#10;&#10;If your screen goes black after enabling this:&#10;1. Restart your laptop (hold power 10 seconds)&#10;2. Delete config: %APPDATA%\\OmenCore\\config.json&#10;3. Or reinstall OmenCore&#10;&#10;Only enable this if WMI keyboard lighting doesn't work on your model.&#10;&#10;ENABLE AT YOUR OWN RISK?</value>
+  </data>
+  <data name="Settings_EcDangerTitle" xml:space="preserve">
+    <value>⚠️ Experimental Feature Warning</value>
+  </data>
+  <data name="Settings_EcBackendBody" xml:space="preserve">
+    <value>⚠️ EC Backend Selected ⚠️&#10;&#10;Using EC for keyboard control requires 'Enable EC keyboard' to be checked.&#10;&#10;Would you like to enable experimental EC keyboard support?&#10;(Warning: This may cause system crashes on some models)</value>
+  </data>
+  <data name="Settings_EcBackendTitle" xml:space="preserve">
+    <value>Enable EC Keyboard?</value>
+  </data>
+  <data name="Settings_AutoStartAdminBody" xml:space="preserve">
+    <value>Auto-start requires administrator privileges to create a scheduled task.&#10;&#10;To enable auto-start:&#10;1. Right-click OmenCore and select 'Run as administrator'&#10;2. Go to Settings and enable 'Start with Windows' again&#10;&#10;Or, re-run the installer with the 'Start with Windows' option checked.</value>
+  </data>
+  <data name="Settings_AutoStartAdminTitle" xml:space="preserve">
+    <value>Administrator Required</value>
+  </data>
+  <data name="Settings_FanCleaningConfirmBody" xml:space="preserve">
+    <value>This will run the fan cleaning cycle for 20 seconds.&#10;&#10;⚠️ IMPORTANT:&#10;• Place your laptop on a flat, stable surface&#10;• Ensure vents are not blocked&#10;• The fans will briefly reverse direction&#10;• You may hear unusual fan sounds - this is normal&#10;&#10;Continue with fan cleaning?</value>
+  </data>
+  <data name="Settings_FanCleaningConfirmTitle" xml:space="preserve">
+    <value>Fan Dust Cleaning</value>
+  </data>
+  <data name="Settings_FanCleaningFailedFormat" xml:space="preserve">
+    <value>Fan cleaning failed: {0}</value>
+  </data>
+  <data name="Settings_ResetDefaultsConfirmBody" xml:space="preserve">
+    <value>This will reset all settings to their default values.&#10;&#10;This includes:&#10;• Monitoring settings&#10;• Notification preferences&#10;• Hotkey settings&#10;• Update preferences&#10;&#10;Continue with reset?</value>
+  </data>
+  <data name="Settings_ResetDefaultsConfirmTitle" xml:space="preserve">
+    <value>Reset to Defaults</value>
+  </data>
+  <data name="Settings_ResetFailedFormat" xml:space="preserve">
+    <value>Failed to reset settings: {0}</value>
+  </data>
+  <data name="Settings_EcResetConfirmBody" xml:space="preserve">
+    <value>This will reset the Embedded Controller (EC) to factory defaults.&#10;&#10;This action will:&#10;• Restore BIOS control of fans&#10;• Clear all manual fan speed overrides&#10;• Reset fan boost mode&#10;• Reset thermal policy timers&#10;&#10;Use this if:&#10;• Fan speeds appear stuck in BIOS&#10;• BIOS shows incorrect fan readings&#10;• You want to completely restore factory fan behavior&#10;&#10;The app will apply Auto mode after reset.&#10;&#10;Do you want to continue?</value>
+  </data>
+  <data name="Settings_EcResetConfirmTitle" xml:space="preserve">
+    <value>Reset EC to Defaults</value>
+  </data>
+  <data name="Settings_EcResetFailedBody" xml:space="preserve">
+    <value>Fan service is not available. EC reset cannot be performed.</value>
+  </data>
+  <data name="Settings_EcResetFailedTitle" xml:space="preserve">
+    <value>EC Reset Failed</value>
+  </data>
+  <data name="Settings_EcResetSuccessBody" xml:space="preserve">
+    <value>EC has been reset to factory defaults.&#10;&#10;BIOS should now have full control of fans.&#10;If your BIOS displays still show incorrect values,&#10;try restarting your laptop.</value>
+  </data>
+  <data name="Settings_EcResetSuccessTitle" xml:space="preserve">
+    <value>EC Reset Successful</value>
+  </data>
+  <data name="Settings_EcResetPartialBody" xml:space="preserve">
+    <value>EC reset may have partially completed.&#10;&#10;Some systems may require a full restart&#10;for all changes to take effect.</value>
+  </data>
+  <data name="Settings_EcResetPartialTitle" xml:space="preserve">
+    <value>EC Reset Result</value>
+  </data>
+  <data name="Settings_EcResetErrorFormat" xml:space="preserve">
+    <value>Failed to reset EC: {0}</value>
+  </data>
+  <data name="Settings_PawnIoInstallBody" xml:space="preserve">
+    <value>OmenCore recommends PawnIO for advanced hardware features.&#10;&#10;PawnIO provides Secure Boot compatible MSR/EC access for:&#10;• CPU undervolting (Intel/AMD)&#10;• TCC offset control&#10;• EC-based fan control fallback&#10;&#10;Click OK to open the PawnIO website.</value>
+  </data>
+  <data name="Settings_PawnIoInstallTitle" xml:space="preserve">
+    <value>Install PawnIO Driver</value>
+  </data>
+  <data name="Settings_BloatwareRemoveBodyFormat" xml:space="preserve">
+    <value>This will remove {0} HP bloatware package(s).&#10;&#10;⚠️ WARNING:&#10;• This action cannot be undone&#10;• Some HP features may stop working&#10;• HP Support Assistant will NOT be removed&#10;• Realtek audio/network drivers will NOT be touched&#10;• System restart may be required&#10;&#10;Continue with removal?</value>
+  </data>
+  <data name="Settings_BloatwareRemoveTitle" xml:space="preserve">
+    <value>Remove HP Bloatware - Confirmation Required</value>
+  </data>
+  <data name="Settings_BloatwareRemovalCompleteTitle" xml:space="preserve">
+    <value>Bloatware Removal Complete</value>
+  </data>
+  <data name="Settings_BloatwareFailedPackagesFormat" xml:space="preserve">
+    <value>{0} package(s) could not be removed.</value>
+  </data>
+  <data name="Settings_BloatwareNeedsAdmin" xml:space="preserve">
+    <value>Some packages require administrator privileges.&#10;Right-click OmenCore → 'Run as administrator' and try again.</value>
+  </data>
+  <data name="Settings_BloatwareRestartNote" xml:space="preserve">
+    <value>Some changes may require a system restart.</value>
+  </data>
+  <data name="Settings_ImportFailedBody" xml:space="preserve">
+    <value>Failed to import profile. The file may be corrupted or incompatible.</value>
+  </data>
+  <data name="Settings_ImportFailedTitle" xml:space="preserve">
+    <value>Import Failed</value>
+  </data>
+  <data name="Settings_ImportConfirmFormat" xml:space="preserve">
+    <value>Import profile from {0}?&#10;&#10;This will apply:&#10;• {1} fan preset(s)&#10;• {2} performance mode(s)&#10;• {3} GPU OC profile(s)&#10;• Battery &amp; hysteresis settings&#10;&#10;Existing settings will be overwritten.</value>
+  </data>
+  <data name="Settings_ImportConfirmTitle" xml:space="preserve">
+    <value>Import Profile</value>
+  </data>
+  <data name="Settings_ProfileImportCompleteBody" xml:space="preserve">
+    <value>Profile imported successfully!&#10;&#10;Settings have been applied. Some changes may require restarting the app.</value>
+  </data>
+  <data name="Settings_ProfileImportCompleteTitle" xml:space="preserve">
+    <value>Import Complete</value>
+  </data>
+  <data name="Settings_ImportErrorFormat" xml:space="preserve">
+    <value>Failed to import profile: {0}</value>
+  </data>
+  <data name="Settings_ImportErrorTitle" xml:space="preserve">
+    <value>Import Error</value>
+  </data>
+  <data name="Settings_ImportDialogTitle" xml:space="preserve">
+    <value>Import OmenCore Profile</value>
+  </data>
+  <data name="Settings_ProfileFilter" xml:space="preserve">
+    <value>OmenCore Profile (*.omencore)|*.omencore|All Files (*.*)|*.*</value>
+  </data>
+  <data name="Settings_ExportDialogTitle" xml:space="preserve">
+    <value>Export OmenCore Profile</value>
+  </data>
+  <data name="Settings_ProfileExportedBodyFormat" xml:space="preserve">
+    <value>Profile exported successfully!&#10;&#10;File: {0}&#10;Location: {1}</value>
+  </data>
+  <data name="Settings_ExportCompleteTitle" xml:space="preserve">
+    <value>Export Complete</value>
+  </data>
+  <data name="Settings_ExportErrorFormat" xml:space="preserve">
+    <value>Failed to export profile: {0}</value>
+  </data>
+  <data name="Settings_ExportDiagDialogTitle" xml:space="preserve">
+    <value>Export Diagnostics Bundle</value>
+  </data>
+  <data name="Settings_DiagExportedBodyFormat" xml:space="preserve">
+    <value>Diagnostics bundle exported successfully!&#10;&#10;File: {0}&#10;Location: {1}&#10;&#10;You can attach this ZIP file to GitHub issues for troubleshooting.</value>
+  </data>
+  <data name="Settings_ExportDiagErrorFormat" xml:space="preserve">
+    <value>Failed to export diagnostics: {0}</value>
+  </data>
+  <data name="Settings_ModelNotAnalyzed" xml:space="preserve">
+    <value>Model identity has not been analyzed yet.</value>
+  </data>
 </root>

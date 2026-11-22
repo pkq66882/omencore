@@ -46,6 +46,7 @@
                 <TextBlock Text="{Binding Converter={StaticResource GpuBoostLevelDisplay}}"/>
             </DataTemplate>
             <local:SettingsTokenDisplayConverter x:Key="SettingsTokenDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:MinutesDisplayConverter x:Key="MinutesDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <DataTemplate x:Key="SettingsTokenItemTemplate">
                 <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}}"/>
             </DataTemplate>
@@ -75,6 +76,15 @@
             </DataTemplate>
             <DataTemplate x:Key="LidItemTemplate">
                 <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=Lid}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="MaxAutoReturnItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=MaxAutoReturn}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="RgbSurfaceItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=RgbSurface}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="MinutesItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource MinutesDisplay}}"/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>

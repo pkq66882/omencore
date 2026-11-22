@@ -260,6 +260,7 @@
                                 <ComboBox Grid.Column="1"
                                           ItemsSource="{Binding RgbObservedSurfaceOptions}"
                                           SelectedItem="{Binding SelectedObservedRgbSurface, Mode=TwoWay}"
+                                          ItemTemplate="{StaticResource RgbSurfaceItemTemplate}"
                                           MinHeight="30"
                                           VerticalAlignment="Center"
                                           ToolTip="{x:Static loc:Strings.LightingView_RecordThePhysicalRgbOrBacklightSurfaceThat}"

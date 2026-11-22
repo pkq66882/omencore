@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -1185,16 +1186,8 @@ namespace OmenCore
             var recommendedBackend = "PawnIO (bundled with installer builds)";
 
             var result = MessageBox.Show(
-                "Some hardware-control features require a driver backend.\n\n" +
-                "Depending on your system, you can use:\n" +
-                "• PawnIO (Secure Boot compatible)\n" +
-                "• WMI-only mode (monitoring and many controls still work)\n\n" +
-                "Without a supported driver backend, these features may be disabled:\n" +
-                "• Direct EC fan control (some models)\n" +
-                "• CPU undervolting and TCC offset (Intel MSR)\n\n" +
-                $"Recommended: {recommendedBackend}\n\n" +
-                "Use the OmenCore installer to add PawnIO, or continue without driver-dependent features.",
-                "Optional Driver Backend - OmenCore",
+                string.Format(Strings.App_DriverPromptBody, recommendedBackend),
+                Strings.App_DriverPromptTitle,
                 MessageBoxButton.OK,
                 MessageBoxImage.Warning);
 

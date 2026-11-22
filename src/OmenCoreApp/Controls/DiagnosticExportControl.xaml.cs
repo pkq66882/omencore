@@ -113,7 +113,7 @@ namespace OmenCore.Controls
             {
                 ProgressText.Text = $"Export failed: {ex.Message}";
                 _logging.Error($"Diagnostic export failed: {ex.Message}", ex);
-                MessageBox.Show($"Export failed: {ex.Message}", "Export Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(string.Format(Strings.DiagnosticExport_ExportFailedFormat, ex.Message), Strings.DiagnosticExport_ExportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
             {

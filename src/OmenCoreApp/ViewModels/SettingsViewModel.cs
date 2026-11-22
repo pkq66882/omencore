@@ -100,10 +100,10 @@ namespace OmenCore.ViewModels
         private bool _pawnIOAvailable;
         private bool _oghInstalled;
         private string _resumeRecoveryStatus = "No recent resume activity";
-        private string _resumeRecoverySummary = "No suspend/resume recovery timeline recorded yet.";
+        private string _resumeRecoverySummary = Strings.SettingsViewModel_NoTimelineSummary;
         private string _resumeRecoveryTimeline = "No timeline recorded yet.";
         private string _resumeRecoveryLastUpdated = "No recent resume event";
-        private string _modelIdentitySummary = "Model identity has not been analyzed yet.";
+        private string _modelIdentitySummary = Strings.Settings_ModelNotAnalyzed;
         private string _modelIdentityResolvedModel = "Unknown";
         private string _modelIdentityResolutionSource = "Unknown";
         private string _modelIdentityConfidence = "Unknown";
@@ -1613,21 +1613,8 @@ namespace OmenCore.ViewModels
                     if (value)
                     {
                         var result = MessageBox.Show(
-                            "🛑 DANGER: HIGH-RISK EXPERIMENTAL FEATURE 🛑\n\n" +
-                            "Direct EC keyboard writes can cause:\n" +
-                            "• HARD SYSTEM CRASHES requiring forced restart\n" +
-                            "• Screen brightness stuck at minimum (black screen)\n" +
-                            "• Keyboard/display controller malfunction\n" +
-                            "• Other unpredictable EC-related issues\n\n" +
-                            "EC keyboard registers (0xB2-0xBE) vary by laptop model. Writing to wrong addresses " +
-                            "has caused system crashes and display issues on various OMEN models.\n\n" +
-                            "If your screen goes black after enabling this:\n" +
-                            "1. Restart your laptop (hold power 10 seconds)\n" +
-                            "2. Delete config: %APPDATA%\\OmenCore\\config.json\n" +
-                            "3. Or reinstall OmenCore\n\n" +
-                            "Only enable this if WMI keyboard lighting doesn't work on your model.\n\n" +
-                            "ENABLE AT YOUR OWN RISK?",
-                            "⚠️ Experimental Feature Warning",
+                            Strings.Settings_EcDangerBody,
+                            Strings.Settings_EcDangerTitle,
                             MessageBoxButton.YesNo,
                             MessageBoxImage.Stop,
                             MessageBoxResult.No);
@@ -1716,11 +1703,8 @@ namespace OmenCore.ViewModels
                     if (value == "Ec" && !_config.ExperimentalEcKeyboardEnabled)
                     {
                         var result = MessageBox.Show(
-                            "⚠️ EC Backend Selected ⚠️\n\n" +
-                            "Using EC for keyboard control requires 'Enable EC keyboard' to be checked.\n\n" +
-                            "Would you like to enable experimental EC keyboard support?\n" +
-                            "(Warning: This may cause system crashes on some models)",
-                            "Enable EC Keyboard?",
+                            Strings.Settings_EcBackendBody,
+                            Strings.Settings_EcBackendTitle,
                             MessageBoxButton.YesNo,
                             MessageBoxImage.Warning,
                             MessageBoxResult.No);
@@ -3692,12 +3676,8 @@ namespace OmenCore.ViewModels
                             OnPropertyChanged(nameof(StartWithWindows));
                             
                             System.Windows.MessageBox.Show(
-                                "Auto-start requires administrator privileges to create a scheduled task.\n\n" +
-                                "To enable auto-start:\n" +
-                                "1. Right-click OmenCore and select 'Run as administrator'\n" +
-                                "2. Go to Settings and enable 'Start with Windows' again\n\n" +
-                                "Or, re-run the installer with the 'Start with Windows' option checked.",
-                                "Administrator Required",
+                                Strings.Settings_AutoStartAdminBody,
+                                Strings.Settings_AutoStartAdminTitle,
                                 System.Windows.MessageBoxButton.OK,
                                 System.Windows.MessageBoxImage.Warning);
                         }
@@ -3915,14 +3895,8 @@ namespace OmenCore.ViewModels
         private async Task StartFanCleaningAsync()
         {
             var result = MessageBox.Show(
-                "This will run the fan cleaning cycle for 20 seconds.\n\n" +
-                "⚠️ IMPORTANT:\n" +
-                "• Place your laptop on a flat, stable surface\n" +
-                "• Ensure vents are not blocked\n" +
-                "• The fans will briefly reverse direction\n" +
-                "• You may hear unusual fan sounds - this is normal\n\n" +
-                "Continue with fan cleaning?",
-                "Fan Dust Cleaning",
+                Strings.Settings_FanCleaningConfirmBody,
+                Strings.Settings_FanCleaningConfirmTitle,
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Warning);
 
@@ -3966,7 +3940,7 @@ namespace OmenCore.ViewModels
                     operation: "StartFanCleaningAsync",
                     message: "Fan cleaning failed",
                     ex: ex);
-                MessageBox.Show($"Fan cleaning failed: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(string.Format(Strings.Settings_FanCleaningFailedFormat, ex.Message), Strings.Main_ErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
             {
@@ -4007,14 +3981,8 @@ namespace OmenCore.ViewModels
         private void ResetToDefaults()
         {
             var result = MessageBox.Show(
-                "This will reset all settings to their default values.\n\n" +
-                "This includes:\n" +
-                "• Monitoring settings\n" +
-                "• Notification preferences\n" +
-                "• Hotkey settings\n" +
-                "• Update preferences\n\n" +
-                "Continue with reset?",
-                "Reset to Defaults",
+                Strings.Settings_ResetDefaultsConfirmBody,
+                Strings.Settings_ResetDefaultsConfirmTitle,
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
 
@@ -4056,7 +4024,7 @@ namespace OmenCore.ViewModels
                     operation: "ResetToDefaults",
                     message: "Failed to reset settings",
                     ex: ex);
-                MessageBox.Show($"Failed to reset settings: {ex.Message}", 
+                MessageBox.Show(string.Format(Strings.Settings_ResetFailedFormat, ex.Message), 
                     "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -4211,19 +4179,8 @@ namespace OmenCore.ViewModels
         private void ResetEcToDefaults()
         {
             var result = MessageBox.Show(
-                "This will reset the Embedded Controller (EC) to factory defaults.\n\n" +
-                "This action will:\n" +
-                "• Restore BIOS control of fans\n" +
-                "• Clear all manual fan speed overrides\n" +
-                "• Reset fan boost mode\n" +
-                "• Reset thermal policy timers\n\n" +
-                "Use this if:\n" +
-                "• Fan speeds appear stuck in BIOS\n" +
-                "• BIOS shows incorrect fan readings\n" +
-                "• You want to completely restore factory fan behavior\n\n" +
-                "The app will apply Auto mode after reset.\n\n" +
-                "Do you want to continue?",
-                "Reset EC to Defaults",
+                Strings.Settings_EcResetConfirmBody,
+                Strings.Settings_EcResetConfirmTitle,
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Warning);
             
@@ -4237,8 +4194,8 @@ namespace OmenCore.ViewModels
                 if (_fanService == null)
                 {
                     MessageBox.Show(
-                        "Fan service is not available. EC reset cannot be performed.",
-                        "EC Reset Failed",
+                        Strings.Settings_EcResetFailedBody,
+                        Strings.Settings_EcResetFailedTitle,
                         MessageBoxButton.OK,
                         MessageBoxImage.Error);
                     return;
@@ -4249,11 +4206,8 @@ namespace OmenCore.ViewModels
                 if (success)
                 {
                     MessageBox.Show(
-                        "EC has been reset to factory defaults.\n\n" +
-                        "BIOS should now have full control of fans.\n" +
-                        "If your BIOS displays still show incorrect values,\n" +
-                        "try restarting your laptop.",
-                        "EC Reset Successful",
+                        Strings.Settings_EcResetSuccessBody,
+                        Strings.Settings_EcResetSuccessTitle,
                         MessageBoxButton.OK,
                         MessageBoxImage.Information);
                     
@@ -4262,10 +4216,8 @@ namespace OmenCore.ViewModels
                 else
                 {
                     MessageBox.Show(
-                        "EC reset may have partially completed.\n\n" +
-                        "Some systems may require a full restart\n" +
-                        "for all changes to take effect.",
-                        "EC Reset Result",
+                        Strings.Settings_EcResetPartialBody,
+                        Strings.Settings_EcResetPartialTitle,
                         MessageBoxButton.OK,
                         MessageBoxImage.Warning);
                     
@@ -4280,8 +4232,8 @@ namespace OmenCore.ViewModels
                     message: "EC reset failed",
                     ex: ex);
                 MessageBox.Show(
-                    $"Failed to reset EC: {ex.Message}",
-                    "EC Reset Failed",
+                    string.Format(Strings.Settings_EcResetErrorFormat, ex.Message),
+                    Strings.Settings_EcResetFailedTitle,
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
             }
@@ -4291,13 +4243,8 @@ namespace OmenCore.ViewModels
         {
             // Show info about what will be installed
             var result = MessageBox.Show(
-                "OmenCore recommends PawnIO for advanced hardware features.\n\n" +
-                "PawnIO provides Secure Boot compatible MSR/EC access for:\n" +
-                "• CPU undervolting (Intel/AMD)\n" +
-                "• TCC offset control\n" +
-                "• EC-based fan control fallback\n\n" +
-                "Click OK to open the PawnIO website.",
-                "Install PawnIO Driver", 
+                Strings.Settings_PawnIoInstallBody,
+                Strings.Settings_PawnIoInstallTitle, 
                 MessageBoxButton.OKCancel, 
                 MessageBoxImage.Information);
                 
@@ -4718,15 +4665,8 @@ namespace OmenCore.ViewModels
             }
             
             var result = MessageBox.Show(
-                $"This will remove {BloatwareCount} HP bloatware package(s).\n\n" +
-                "⚠️ WARNING:\n" +
-                "• This action cannot be undone\n" +
-                "• Some HP features may stop working\n" +
-                "• HP Support Assistant will NOT be removed\n" +
-                "• Realtek audio/network drivers will NOT be touched\n" +
-                "• System restart may be required\n\n" +
-                "Continue with removal?",
-                "Remove HP Bloatware - Confirmation Required",
+                string.Format(Strings.Settings_BloatwareRemoveBodyFormat, BloatwareCount),
+                Strings.Settings_BloatwareRemoveTitle,
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Warning);
                 
@@ -4872,16 +4812,16 @@ namespace OmenCore.ViewModels
                 var msgText = $"Removed {removed} bloatware package(s).";
                 if (failed > 0)
                 {
-                    msgText += $"\n\n{failed} package(s) could not be removed.";
+                    msgText += "\n\n" + string.Format(Strings.Settings_BloatwareFailedPackagesFormat, failed);
                     if (failedNames.Any(n => n.Contains("needs admin")))
                     {
-                        msgText += "\n\nSome packages require administrator privileges.\nRight-click OmenCore → 'Run as administrator' and try again.";
+                        msgText += "\n\n" + Strings.Settings_BloatwareNeedsAdmin;
                     }
                 }
-                msgText += "\n\nSome changes may require a system restart.";
+                msgText += "\n\n" + Strings.Settings_BloatwareRestartNote;
                 
                 MessageBox.Show(msgText,
-                    "Bloatware Removal Complete",
+                    Strings.Settings_BloatwareRemovalCompleteTitle,
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
             }
@@ -4911,8 +4851,8 @@ namespace OmenCore.ViewModels
             {
                 var dialog = new Microsoft.Win32.OpenFileDialog
                 {
-                    Title = "Import OmenCore Profile",
-                    Filter = "OmenCore Profile (*.omencore)|*.omencore|All Files (*.*)|*.*",
+                    Title = Strings.Settings_ImportDialogTitle,
+                    Filter = Strings.Settings_ProfileFilter,
                     DefaultExt = ".omencore"
                 };
                 
@@ -4927,8 +4867,8 @@ namespace OmenCore.ViewModels
                 if (profile == null)
                 {
                     MessageBox.Show(
-                        "Failed to import profile. The file may be corrupted or incompatible.",
-                        "Import Failed",
+                        Strings.Settings_ImportFailedBody,
+                        Strings.Settings_ImportFailedTitle,
                         MessageBoxButton.OK,
                         MessageBoxImage.Error);
                     return;
@@ -4936,14 +4876,8 @@ namespace OmenCore.ViewModels
                 
                 // Show import options dialog
                 var result = MessageBox.Show(
-                    $"Import profile from {Path.GetFileName(fileName)}?\n\n" +
-                    $"This will apply:\n" +
-                    $"• {profile.FanPresets?.Count ?? 0} fan preset(s)\n" +
-                    $"• {profile.PerformanceModes?.Count ?? 0} performance mode(s)\n" +
-                    $"• {profile.GpuOcProfiles?.Count ?? 0} GPU OC profile(s)\n" +
-                    $"• Battery & hysteresis settings\n\n" +
-                    "Existing settings will be overwritten.",
-                    "Import Profile",
+                    string.Format(Strings.Settings_ImportConfirmFormat, Path.GetFileName(fileName), profile.FanPresets?.Count ?? 0, profile.PerformanceModes?.Count ?? 0, profile.GpuOcProfiles?.Count ?? 0),
+                    Strings.Settings_ImportConfirmTitle,
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question);
                 
@@ -4956,9 +4890,8 @@ namespace OmenCore.ViewModels
                 _logging.Info($"Profile imported successfully from {fileName}");
                 
                 MessageBox.Show(
-                    "Profile imported successfully!\n\n" +
-                    "Settings have been applied. Some changes may require restarting the app.",
-                    "Import Complete",
+                    Strings.Settings_ProfileImportCompleteBody,
+                    Strings.Settings_ProfileImportCompleteTitle,
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
             }
@@ -4969,7 +4902,7 @@ namespace OmenCore.ViewModels
                     operation: "ImportProfileAsync",
                     message: "Failed to import profile",
                     ex: ex);
-                MessageBox.Show($"Failed to import profile: {ex.Message}", "Import Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(string.Format(Strings.Settings_ImportErrorFormat, ex.Message), Strings.Settings_ImportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         
@@ -4979,8 +4912,8 @@ namespace OmenCore.ViewModels
             {
                 var dialog = new Microsoft.Win32.SaveFileDialog
                 {
-                    Title = "Export OmenCore Profile",
-                    Filter = "OmenCore Profile (*.omencore)|*.omencore|All Files (*.*)|*.*",
+                    Title = Strings.Settings_ExportDialogTitle,
+                    Filter = Strings.Settings_ProfileFilter,
                     DefaultExt = ".omencore",
                     FileName = $"omencore-profile-{DateTime.Now:yyyy-MM-dd}.omencore"
                 };
@@ -4993,10 +4926,8 @@ namespace OmenCore.ViewModels
                 _logging.Info($"Profile exported successfully to {dialog.FileName}");
                 
                 MessageBox.Show(
-                    $"Profile exported successfully!\\n\\n" +
-                    $"File: {Path.GetFileName(dialog.FileName)}\\n" +
-                    $"Location: {Path.GetDirectoryName(dialog.FileName)}",
-                    "Export Complete",
+                    string.Format(Strings.Settings_ProfileExportedBodyFormat, Path.GetFileName(dialog.FileName), Path.GetDirectoryName(dialog.FileName)),
+                    Strings.Settings_ExportCompleteTitle,
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
             }
@@ -5007,7 +4938,7 @@ namespace OmenCore.ViewModels
                     operation: "ExportProfileAsync",
                     message: "Failed to export profile",
                     ex: ex);
-                MessageBox.Show($"Failed to export profile: {ex.Message}", "Export Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(string.Format(Strings.Settings_ExportErrorFormat, ex.Message), Strings.DiagnosticExport_ExportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         
@@ -5017,7 +4948,7 @@ namespace OmenCore.ViewModels
             {
                 var dialog = new Microsoft.Win32.SaveFileDialog
                 {
-                    Title = "Export Diagnostics Bundle",
+                    Title = Strings.Settings_ExportDiagDialogTitle,
                     Filter = "ZIP Archive (*.zip)|*.zip|All Files (*.*)|*.*",
                     DefaultExt = ".zip",
                     FileName = $"omencore-diagnostics-{DateTime.Now:yyyy-MM-dd-HHmmss}.zip"
@@ -5045,11 +4976,8 @@ namespace OmenCore.ViewModels
                 _logging.Info($"Diagnostics exported successfully to {dialog.FileName}");
                 
                 MessageBox.Show(
-                    $"Diagnostics bundle exported successfully!\\n\\n" +
-                    $"File: {Path.GetFileName(dialog.FileName)}\\n" +
-                    $"Location: {Path.GetDirectoryName(dialog.FileName)}\\n\\n" +
-                    "You can attach this ZIP file to GitHub issues for troubleshooting.",
-                    "Export Complete",
+                    string.Format(Strings.Settings_DiagExportedBodyFormat, Path.GetFileName(dialog.FileName), Path.GetDirectoryName(dialog.FileName)),
+                    Strings.Settings_ExportCompleteTitle,
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
             }
@@ -5060,7 +4988,7 @@ namespace OmenCore.ViewModels
                     operation: "ExportDiagnosticsAsync",
                     message: "Failed to export diagnostics",
                     ex: ex);
-                MessageBox.Show($"Failed to export diagnostics: {ex.Message}", "Export Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(string.Format(Strings.Settings_ExportDiagErrorFormat, ex.Message), Strings.DiagnosticExport_ExportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         

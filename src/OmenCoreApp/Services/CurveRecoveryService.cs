@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using OmenCore.Models;
 using OmenCore.Utils;
 using OmenCore.Services.Diagnostics;
@@ -146,12 +147,8 @@ namespace OmenCore.Services
                             DispatcherHelper.RunOnUiThread(() =>
                             {
                                 System.Windows.MessageBox.Show(
-                                    $"Your fan curve caused sustained overheating!\n\n" +
-                                    $"Temperatures exceeded {OverheatThresholdC}°C for over {SustainedOverheatSeconds / 60} minutes.\n\n" +
-                                    $"OmenCore has automatically reverted to your previous fan curve:\n" +
-                                    $"\"{_lastKnownGoodPreset.Name}\"\n\n" +
-                                    $"Please review your fan curve and ensure adequate cooling at high temperatures.",
-                                    "Curve Recovery",
+                                    string.Format(Strings.CurveRecovery_OverheatBodyFormat, OverheatThresholdC, SustainedOverheatSeconds / 60, _lastKnownGoodPreset.Name),
+                                    Strings.CurveRecovery_Title,
                                     System.Windows.MessageBoxButton.OK,
                                     System.Windows.MessageBoxImage.Warning);
                             });

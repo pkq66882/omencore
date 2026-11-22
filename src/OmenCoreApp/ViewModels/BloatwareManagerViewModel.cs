@@ -590,15 +590,15 @@ namespace OmenCore.ViewModels
 
             if (!selectedApps.Any())
             {
-                SetStatusFailed("No apps selected in removal preview.");
+                SetStatusFailed(Strings.Bloatware_NoAppsSelected);
                 return;
             }
 
             if (selectedApps.Any(app => app.RemovalRisk >= RemovalRisk.Medium))
             {
                 var confirmation = MessageBox.Show(
-                    "One or more selected items are Medium/High risk. Continue with removal?",
-                    "Confirm Risky Removal",
+                    Strings.Bloatware_RiskyConfirmBody,
+                    Strings.Bloatware_RiskyConfirmTitle,
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Warning);
 
@@ -633,8 +633,8 @@ namespace OmenCore.ViewModels
             }
 
             var createRestorePoint = MessageBox.Show(
-                $"Create a Windows restore point before removing {selectedCount} item(s)?\n\nRecommended for safety before system changes.",
-                "Create Restore Point",
+                string.Format(Strings.Bloatware_RestorePointAskFormat, selectedCount),
+                Strings.Bloatware_RestorePointAskTitle,
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
 
@@ -655,18 +655,18 @@ namespace OmenCore.ViewModels
             }
 
             var continueWithoutRestorePoint = MessageBox.Show(
-                $"Restore point could not be created:\n{restorePointResult.Message}\n\nContinue removal without a restore point?",
-                "Restore Point Creation Failed",
+                string.Format(Strings.Bloatware_RestorePointFailedFormat, restorePointResult.Message),
+                Strings.Bloatware_RestorePointFailedTitle,
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Warning);
 
             if (continueWithoutRestorePoint == MessageBoxResult.Yes)
             {
-                SetStatusFailed("Proceeding without restore point by user choice");
+                SetStatusFailed(Strings.Bloatware_ProceedWithoutRestore);
                 return true;
             }
 
-            SetStatusFailed("Removal canceled because restore point was not created");
+            SetStatusFailed(Strings.Bloatware_CanceledNoRestore);
             return false;
         }
 
@@ -763,8 +763,8 @@ namespace OmenCore.ViewModels
             if (!removedApps.Any()) return;
 
             var result = MessageBox.Show(
-                $"This will restore {removedApps.Count} removed items.\n\nAny dependencies or settings will be re-installed from their original sources.\n\nContinue?",
-                "Restore All Removed Bloatware",
+                string.Format(Strings.Bloatware_RestoreAllFormat, removedApps.Count),
+                Strings.Bloatware_RestoreAllTitle,
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
 

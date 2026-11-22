@@ -296,7 +296,23 @@ namespace OmenCore.ViewModels
             }
         }
         
-        public string CurrentFanModeName => IsConstantSelected ? "Direct" : SelectedPreset?.Name ?? "Auto";
+        public string CurrentFanModeName => IsConstantSelected
+            ? Strings.FanControl_ModeDirect
+            : FanModePresetDisplayName(SelectedPreset?.Name);
+
+        /// <summary>Localized fan preset label for the page chip; unknown presets fall back to Auto.</summary>
+        private static string FanModePresetDisplayName(string? name) => name switch
+        {
+            "Quiet" => Strings.FanPreset_Quiet,
+            "Silent" => Strings.FanPreset_Silent,
+            "Extreme" => Strings.FanPreset_Extreme,
+            "Max" => Strings.FanPreset_Max,
+            "Default" => Strings.FanPreset_Default,
+            "Balanced" => Strings.FanPreset_Balanced,
+            "Performance" => Strings.FanPreset_Performance,
+            "Gaming" => Strings.FanPreset_Gaming,
+            _ => Strings.FanPreset_Auto
+        };
         
         // Unified preset selection state for RadioButton cards
         private string _activeFanMode = "Auto";

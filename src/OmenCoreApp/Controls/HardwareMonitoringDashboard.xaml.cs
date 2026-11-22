@@ -982,7 +982,7 @@ namespace OmenCore.Controls
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Export failed: {ex.Message}", "Export Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(string.Format(Strings.DiagnosticExport_ExportFailedFormat, ex.Message), Strings.DiagnosticExport_ExportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

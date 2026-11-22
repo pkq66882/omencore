@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -43,8 +44,8 @@ namespace OmenCore.Utils
                 System.Windows.Application.Current?.Dispatcher?.BeginInvoke(() =>
                 {
                     System.Windows.MessageBox.Show(
-                        $"Operation failed: {ex.Message}\n\nCheck logs for details.\n\nTip: Try restarting OmenCore or check Settings for any misconfigurations.",
-                        "Operation Failed",
+                        string.Format(Strings.AsyncRelayCommand_OperationFailedFormat, ex.Message),
+                        Strings.AsyncRelayCommand_OperationFailedTitle,
                         System.Windows.MessageBoxButton.OK,
                         System.Windows.MessageBoxImage.Error);
                 });

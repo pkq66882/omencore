@@ -891,6 +891,15 @@ namespace OmenCore.ViewModels
             CapabilityReasonText.Localize(_capabilities, feature);
 
         /// <summary>Localized name of a canonical boost level ("Minimum"/"Medium"/...).</summary>
+        /// <summary>Localized performance-mode name used in status sentences.</summary>
+        private static string LocalizePerformanceModeName(string? name) => name switch
+        {
+            "Balanced" => Strings.PerformanceMode_Balanced,
+            "Performance" => Strings.PerformanceMode_Performance,
+            "Quiet" => Strings.PerformanceMode_Quiet,
+            _ => name ?? string.Empty
+        };
+
         private static string BoostLevelName(string? level) => level switch
         {
             "Minimum" => Strings.GpuBoost_LevelMinimum,
@@ -5336,8 +5345,51 @@ namespace OmenCore.ViewModels
         public ICommand RememberCurrentStateToModeCommand { get; }
 
         /// <summary>What the selected mode will change beyond its power limits (5.0.0, WP-43).</summary>
-        public string SelectedPerformanceModeEffectsSummary =>
-            SelectedPerformanceMode?.RememberedEffectsSummary ?? "Nothing yet - power limits only";
+        public string SelectedPerformanceModeEffectsSummary => BuildRememberedEffectsSummary(SelectedPerformanceMode);
+
+        /// <summary>Localized fan preset label used inside the remembered-effects sentence.</summary>
+        private static string FanPresetDisplayName(string? name) => name switch
+        {
+            "Quiet" => Strings.FanPreset_Quiet,
+            "Silent" => Strings.FanPreset_Silent,
+            "Extreme" => Strings.FanPreset_Extreme,
+            "Max" => Strings.FanPreset_Max,
+            "Default" => Strings.FanPreset_Default,
+            "Balanced" => Strings.FanPreset_Balanced,
+            "Performance" => Strings.FanPreset_Performance,
+            "Gaming" => Strings.FanPreset_Gaming,
+            _ => Strings.FanPreset_Auto
+        };
+
+        /// <summary>Rebuilds Core's remembered-effects labels localized (Core keeps canonical English).</summary>
+        private static string BuildRememberedEffectsSummary(PerformanceMode? mode)
+        {
+            if (mode == null) return Strings.SystemControl_NothingRemembered;
+
+            var parts = new List<string>();
+            if (mode.FanCurve is { Count: > 0 })
+                parts.Add(Strings.SystemControl_RememberedFanCurve);
+            else if (!string.IsNullOrWhiteSpace(mode.FanPresetName))
+                parts.Add(string.Format(Strings.SystemControl_RememberedFanPresetFormat, FanPresetDisplayName(mode.FanPresetName)));
+
+            if (!string.IsNullOrWhiteSpace(mode.GpuPowerBoostLevel))
+                parts.Add(string.Format(Strings.SystemControl_RememberedGpuBoostFormat, BoostLevelName(mode.GpuPowerBoostLevel)));
+
+            if (mode.RefreshRateHz is > 0)
+                parts.Add($"{mode.RefreshRateHz} Hz");
+
+            if (!string.IsNullOrWhiteSpace(mode.LightingProfileName))
+                parts.Add(string.Format(Strings.SystemControl_RememberedLightingFormat, mode.LightingProfileName));
+
+            if (mode.ChargeLimitEnabled == true)
+                parts.Add(mode.ChargeThresholdPercent.HasValue
+                    ? string.Format(Strings.SystemControl_RememberedChargeLimitFormat, mode.ChargeThresholdPercent.Value)
+                    : Strings.SystemControl_RememberedChargeLimitOn);
+            else if (mode.ChargeLimitEnabled == false)
+                parts.Add(Strings.SystemControl_RememberedFullCharge);
+
+            return parts.Count == 0 ? Strings.SystemControl_NothingRemembered : string.Join("、", parts);
+        }
 
         private string _modeMemoryStatusText = string.Empty;
 
@@ -5395,8 +5447,8 @@ namespace OmenCore.ViewModels
             OnPropertyChanged(nameof(SelectedPerformanceModeEffectsSummary));
 
             ModeMemoryStatusText = selected.HasRememberedEffects
-                ? $"'{selected.Name}' now remembers: {selected.RememberedEffectsSummary}"
-                : $"'{selected.Name}' has nothing to remember - the fan state could not be read.";
+                ? string.Format(Strings.SystemControl_ModeMemoryRememberedFormat, LocalizePerformanceModeName(selected.Name), BuildRememberedEffectsSummary(selected))
+                : string.Format(Strings.SystemControl_ModeMemoryNothingFormat, LocalizePerformanceModeName(selected.Name));
 
             _logging.Info($"Performance mode '{selected.Name}' remembered current state: {selected.RememberedEffectsSummary}");
         }
