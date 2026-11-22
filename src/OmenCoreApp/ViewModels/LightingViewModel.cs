@@ -1546,18 +1546,18 @@ namespace OmenCore.ViewModels
             SaveRgbSurfaceObservationCommand = new RelayCommand(_ => SaveRgbSurfaceObservation());
             ApplyAllZonesSameColorCommand = new AsyncRelayCommand(async _ => await ApplyAllZonesSameColorAsync());
             ApplyQuickColorCommand = new AsyncRelayCommand(async param => await ApplyQuickColorAsync(param as string));
-            SetZone1ColorCommand = new RelayCommand(_ => OpenColorPickerForZone(1, "WASD"));
-            SetZone2ColorCommand = new RelayCommand(_ => OpenColorPickerForZone(2, "Left"));
-            SetZone3ColorCommand = new RelayCommand(_ => OpenColorPickerForZone(3, "Right"));
-            SetZone4ColorCommand = new RelayCommand(_ => OpenColorPickerForZone(4, "Far Right"));
+            SetZone1ColorCommand = new RelayCommand(_ => OpenColorPickerForZone(1, Strings.ZoneName_Wasd));
+            SetZone2ColorCommand = new RelayCommand(_ => OpenColorPickerForZone(2, Strings.ZoneName_Left));
+            SetZone3ColorCommand = new RelayCommand(_ => OpenColorPickerForZone(3, Strings.ZoneName_Right));
+            SetZone4ColorCommand = new RelayCommand(_ => OpenColorPickerForZone(4, Strings.ZoneName_FarRight));
             SetZoneColorByIndexCommand = new RelayCommand(param =>
             {
                 var zoneName = param switch
                 {
-                    1 => "WASD",
-                    2 => "Left",
-                    3 => "Right",
-                    4 => "Far Right",
+                    1 => Strings.ZoneName_Wasd,
+                    2 => Strings.ZoneName_Left,
+                    3 => Strings.ZoneName_Right,
+                    4 => Strings.ZoneName_FarRight,
                     _ => null
                 };
                 if (zoneName != null && param is int zoneIndex)

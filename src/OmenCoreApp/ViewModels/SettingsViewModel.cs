@@ -764,11 +764,11 @@ namespace OmenCore.ViewModels
                 var intervalMs = _hardwareMonitoringService?.CurrentCadenceIntervalMs ?? 0;
                 return intervalMs switch
                 {
-                    1000 => "Active (1s)",
-                    5000 => "Idle background (5s)",
-                    10000 => "Tray-only ultra-low (10s)",
-                    > 0 => $"Custom ({intervalMs} ms)",
-                    _ => "Initializing"
+                    1000 => Strings.Settings_MonitorActive1s,
+                    5000 => Strings.Settings_MonitorIdle5s,
+                    10000 => Strings.Settings_MonitorTrayOnly10s,
+                    > 0 => string.Format(Strings.Settings_MonitorCustomFormat, intervalMs),
+                    _ => Strings.Settings_MonitorInitializing
                 };
             }
         }
@@ -3043,6 +3043,11 @@ namespace OmenCore.ViewModels
                         string.Format(Strings.SettingsViewModel_StandaloneOptionalDegradation,
                             s.Substring("Optional degradation: fully standalone, but ".Length, s.Length - "Optional degradation: fully standalone, but ".Length - " optional component(s) unavailable (OGH and HP-SEU are not required for core operation)".Length)),
                     "OmenCore is running fully standalone without HP dependencies" => Strings.SettingsViewModel_StandaloneFully,
+                    "Critical degradation: direct HP WMI BIOS interface is unavailable; fallback backend is active (core fan control works, some HP-dependent features may be limited)" => Strings.Settings_StandaloneDirectWmiUnavailable,
+                    var s when s.StartsWith("Critical degradation: missing ") && s.Contains(" required component(s): ") =>
+                        string.Format(Strings.Settings_StandaloneCriticalMissingFormat,
+                            s.Substring("Critical degradation: missing ".Length, s.IndexOf(" required component(s): ", StringComparison.Ordinal) - "Critical degradation: missing ".Length),
+                            s.Substring(s.IndexOf(" required component(s): ", StringComparison.Ordinal) + " required component(s): ".Length)),
                     _ => audit.Summary
                 };
             }
@@ -3065,12 +3070,20 @@ namespace OmenCore.ViewModels
             var statusMap = new System.Collections.Generic.Dictionary<string, string>
             {
                 ["No recent resume activity"] = Strings.SettingsViewModel_NoRecentResumeActivity,
-                ["No recent resume event"] = Strings.SettingsViewModel_NoRecentResumeEvent
+                ["No recent resume event"] = Strings.SettingsViewModel_NoRecentResumeEvent,
+                ["Suspended"] = Strings.Settings_ResumeStatusSuspended,
+                ["Recovering"] = Strings.Settings_ResumeStatusRecovering,
+                ["Healthy"] = Strings.Settings_ResumeStatusHealthy,
+                ["Attention Needed"] = Strings.Settings_ResumeStatusAttentionNeeded
             };
             ResumeRecoveryStatus = statusMap.TryGetValue(_resumeRecoveryDiagnostics.Status, out var st) ? st : _resumeRecoveryDiagnostics.Status;
-            ResumeRecoverySummary = _resumeRecoveryDiagnostics.Summary == "No suspend/resume recovery timeline recorded yet."
-                ? Strings.SettingsViewModel_NoTimelineSummary
-                : _resumeRecoveryDiagnostics.Summary;
+            ResumeRecoverySummary = _resumeRecoveryDiagnostics.Summary switch
+            {
+                "No suspend/resume recovery timeline recorded yet." => Strings.SettingsViewModel_NoTimelineSummary,
+                "System suspend detected. Waiting for resume recovery to begin." => Strings.Settings_ResumeSummarySuspended,
+                "Resume detected. Recovery timeline is being collected." => Strings.Settings_ResumeSummaryRecovering,
+                var s => s
+            };
             ResumeRecoveryTimeline = _resumeRecoveryDiagnostics.TimelineText == "No timeline recorded yet."
                 ? Strings.SettingsViewModel_NoTimelineRecorded
                 : _resumeRecoveryDiagnostics.TimelineText;
@@ -3216,7 +3229,20 @@ namespace OmenCore.ViewModels
         /// <summary>
         /// Summary text for BIOS reliability.
         /// </summary>
-        public string BiosReliabilityText => _biosReliabilityStats?.Summary ?? Strings.Common_NotAvailable;
+        public string BiosReliabilityText => _biosReliabilityStats is { } stats
+            ? string.Format(Strings.Settings_BiosReliabilitySummaryFormat, stats.Successes, stats.TotalAttempts,
+                stats.SuccessRate.ToString("F1"), LocalizeBiosRating(stats.HealthRating))
+            : Strings.Common_NotAvailable;
+
+        private static string LocalizeBiosRating(string rating) => rating switch
+        {
+            "Excellent" => Strings.Settings_BiosRatingExcellent,
+            "Good" => Strings.Settings_BiosRatingGood,
+            "Fair" => Strings.Settings_BiosRatingFair,
+            "Poor" => Strings.Settings_BiosRatingPoor,
+            "Critical" => Strings.Settings_BiosRatingCritical,
+            _ => rating
+        };
         
         /// <summary>
         /// Color for BIOS reliability indicator.
@@ -3927,7 +3953,7 @@ namespace OmenCore.ViewModels
                     _fanCleaningCts.Token);
 
                 _logging.Info("Fan cleaning cycle completed successfully");
-                MessageBox.Show("Fan cleaning cycle completed successfully!", "Done", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Strings.Settings_FanCleaningDone, Strings.Settings_DoneTitle, MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (OperationCanceledException)
             {
@@ -4020,7 +4046,7 @@ namespace OmenCore.ViewModels
                 SaveSettings();
                 
                 _logging.Info("Settings reset to defaults");
-                MessageBox.Show("All settings have been reset to their default values.", 
+                MessageBox.Show(Strings.Settings_ResetDefaultsBody, 
                     "Settings Reset", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
@@ -4687,7 +4713,7 @@ namespace OmenCore.ViewModels
         {
             if (BloatwareCount == 0)
             {
-                MessageBox.Show("No bloatware detected. Run a scan first.", "OmenCore", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Strings.Settings_NoBloatware, "OmenCore", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
             

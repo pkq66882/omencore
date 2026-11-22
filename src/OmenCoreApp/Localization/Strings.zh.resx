@@ -5009,13 +5009,13 @@
     <value>EC 错误</value>
   </data>
   <data name="LightingViewModel_ActiveScene" xml:space="preserve">
-    <value>激活: {0}</value>
+    <value>激活：{0}</value>
   </data>
   <data name="LightingViewModel_IcueNotDetected" xml:space="preserve">
     <value>iCUE 未检测到</value>
   </data>
   <data name="LightingViewModel_Level" xml:space="preserve">
-    <value>电平: {0}%</value>
+    <value>电平：{0}%</value>
   </data>
   <data name="LightingViewModel_LogitechNotDetected" xml:space="preserve">
     <value>未检测到 Logitech G HUB</value>
@@ -5033,7 +5033,7 @@
     <value>{0}  ·  {1}</value>
   </data>
   <data name="SystemControlViewModel_TuningStatusLine" xml:space="preserve">
-    <value>CPU 降压: {0}  ·  GPU 超频: {1}  ·  冲突: {2}</value>
+    <value>CPU 降压：{0}  ·  GPU 超频：{1}  ·  冲突：{2}</value>
   </data>
   <data name="BloatwareManagerViewModel_CancelRequested" xml:space="preserve">
     <value>已请求取消</value>
@@ -5177,7 +5177,7 @@
     <value>检查温度来源</value>
   </data>
   <data name="Monitor_FanEfficientFormat" xml:space="preserve">
-    <value>风扇: {0}% 效率</value>
+    <value>风扇：{0}% 效率</value>
   </data>
   <data name="Monitor_QualityExcellent" xml:space="preserve">
     <value>优秀</value>
@@ -5219,7 +5219,7 @@
     <value>下降</value>
   </data>
   <data name="SystemControlViewModel_CurrentFormat" xml:space="preserve">
-    <value>当前: {0}W</value>
+    <value>当前：{0}W</value>
   </data>
   <data name="SystemControlViewModel_IgpuOffset" xml:space="preserve">
     <value>IGPU 偏移</value>
@@ -7332,5 +7332,389 @@
   </data>
   <data name="Lid_Open" xml:space="preserve">
     <value>已打开</value>
+  </data>
+  <data name="DiagnosticExport_Starting" xml:space="preserve">
+    <value>正在导出诊断信息…</value>
+  </data>
+  <data name="DiagnosticExport_Completed" xml:space="preserve">
+    <value>导出完成</value>
+  </data>
+  <data name="DiagnosticExport_Cancelled" xml:space="preserve">
+    <value>导出已取消</value>
+  </data>
+  <data name="DiagnosticExport_CompletedSuccessfully" xml:space="preserve">
+    <value>导出成功完成</value>
+  </data>
+  <data name="DiagnosticExport_FanServiceUnavailable" xml:space="preserve">
+    <value>风扇服务不可用</value>
+  </data>
+  <data name="DiagnosticExport_PerfServiceUnavailable" xml:space="preserve">
+    <value>性能/调优服务不可用</value>
+  </data>
+  <data name="DiagnosticExport_PerfServiceAvailable" xml:space="preserve">
+    <value>性能模式服务可用</value>
+  </data>
+  <data name="DiagnosticExport_PerfReadinessFailed" xml:space="preserve">
+    <value>性能/调优就绪检测失败</value>
+  </data>
+  <data name="DiagnosticExport_FilePathCopied" xml:space="preserve">
+    <value>文件路径已复制到剪贴板</value>
+  </data>
+  <data name="DiagnosticExport_CopiedTitle" xml:space="preserve">
+    <value>已复制</value>
+  </data>
+  <data name="FanCalibration_ServiceUnavailable" xml:space="preserve">
+    <value>当前环境中风扇校准服务不可用。</value>
+  </data>
+  <data name="FanCalibration_MissingVerificationService" xml:space="preserve">
+    <value>无法运行校准向导：缺少风扇验证服务。</value>
+  </data>
+  <data name="FanCalibration_ModelDetectFailed" xml:space="preserve">
+    <value>未能检测机型信息</value>
+  </data>
+  <data name="FanCalibration_NoCalibrationData" xml:space="preserve">
+    <value>未找到校准数据——请先运行校准</value>
+  </data>
+  <data name="FanCalibration_VerificationUnavailable" xml:space="preserve">
+    <value>风扇验证服务不可用。</value>
+  </data>
+  <data name="FanCalibration_VerificationUnavailableBody" xml:space="preserve">
+    <value>风扇验证服务不可用，请确认硬件监控正常工作。</value>
+  </data>
+  <data name="FanCalibration_Starting" xml:space="preserve">
+    <value>正在开始校准…</value>
+  </data>
+  <data name="FanCalibration_Completed" xml:space="preserve">
+    <value>校准完成</value>
+  </data>
+  <data name="FanCalibration_Cancelled" xml:space="preserve">
+    <value>校准已取消</value>
+  </data>
+  <data name="FanCalibration_RestoreAutoUnavailableTitle" xml:space="preserve">
+    <value>无法恢复自动模式</value>
+  </data>
+  <data name="FanCalibration_DataCleared" xml:space="preserve">
+    <value>校准数据已清除。</value>
+  </data>
+  <data name="FanCalibration_DataClearedTitle" xml:space="preserve">
+    <value>数据已清除</value>
+  </data>
+  <data name="DashboardChart_NoData" xml:space="preserve">
+    <value>暂无数据</value>
+  </data>
+  <data name="DashboardChart_WaitingForData" xml:space="preserve">
+    <value>正在等待历史数据（采集 2 个以上样本后显示）</value>
+  </data>
+  <data name="DashboardChart_ExportSuccess" xml:space="preserve">
+    <value>数据导出成功！</value>
+  </data>
+  <data name="DashboardChart_ExportCompleteTitle" xml:space="preserve">
+    <value>导出完成</value>
+  </data>
+  <data name="DashboardChart_PowerTitle" xml:space="preserve">
+    <value>功耗历史</value>
+  </data>
+  <data name="DashboardChart_BatteryTitle" xml:space="preserve">
+    <value>电池电量历史</value>
+  </data>
+  <data name="DashboardChart_TempTitle" xml:space="preserve">
+    <value>温度历史</value>
+  </data>
+  <data name="DashboardChart_FanTitle" xml:space="preserve">
+    <value>风扇转速历史</value>
+  </data>
+  <data name="DashboardChart_HistoryTitle" xml:space="preserve">
+    <value>历史数据</value>
+  </data>
+  <data name="Dashboard_TelemetryStale" xml:space="preserve">
+    <value>遥测数据已过期：传感器数据延迟或停滞。OmenCore 正在尝试自动恢复。</value>
+  </data>
+  <data name="Dashboard_TelemetryDegraded" xml:space="preserve">
+    <value>遥测已降级：数据质量下降，正在恢复监控。</value>
+  </data>
+  <data name="Dashboard_AmdQuarantineWarningFormat" xml:space="preserve">
+    <value>AMD GPU 遥测在驱动/库故障后已暂时隔离。CPU、风扇、内存与系统遥测仍正常工作。{0}</value>
+  </data>
+  <data name="Dashboard_AmdQuarantineReasonFormat" xml:space="preserve">
+    <value> 原因：{0}</value>
+  </data>
+  <data name="FanControl_ModeAutoDesc" xml:space="preserve">
+    <value>自动模式：风扇控制权归固件</value>
+  </data>
+  <data name="FanControl_ModeMaxDesc" xml:space="preserve">
+    <value>最大模式：OmenCore 请求全速散热</value>
+  </data>
+  <data name="FanControl_ModeCustomDesc" xml:space="preserve">
+    <value>已载入自定义曲线，但尚未实际应用</value>
+  </data>
+  <data name="FanControl_CurveCustomActive" xml:space="preserve">
+    <value>自定义曲线正在管理风扇</value>
+  </data>
+  <data name="FanControl_CurveActiveFormat" xml:space="preserve">
+    <value>“{0}”曲线正在管理风扇</value>
+  </data>
+  <data name="FanControl_ModeConstantFormat" xml:space="preserve">
+    <value>恒定模式：OmenCore 请求 {0}%</value>
+  </data>
+  <data name="FanControl_PresetSelectedFormat" xml:space="preserve">
+    <value>已选择“{0}”预设</value>
+  </data>
+  <data name="FanControl_ModeConstant" xml:space="preserve">
+    <value>恒定</value>
+  </data>
+  <data name="FanControl_ShareCodeNeedPoints" xml:space="preserve">
+    <value>生成分享代码至少需要 2 个曲线点。</value>
+  </data>
+  <data name="FanControl_CannotCopyTitle" xml:space="preserve">
+    <value>无法复制分享代码</value>
+  </data>
+  <data name="FanControl_ClipboardNoText" xml:space="preserve">
+    <value>剪贴板中没有文本。</value>
+  </data>
+  <data name="FanControl_ClipboardInvalidCode" xml:space="preserve">
+    <value>剪贴板中没有有效的风扇曲线分享代码。</value>
+  </data>
+  <data name="FanControl_ImportFailedTitle" xml:space="preserve">
+    <value>导入失败</value>
+  </data>
+  <data name="FanControl_NoSavedPreset" xml:space="preserve">
+    <value>配置中没有已保存的风扇预设。</value>
+  </data>
+  <data name="FanControl_ReapplyPresetTitle" xml:space="preserve">
+    <value>重新应用已保存预设</value>
+  </data>
+  <data name="FanControl_NoValidPresets" xml:space="preserve">
+    <value>文件中没有有效的风扇预设。</value>
+  </data>
+  <data name="GpuClamp_AdapterMeets" xml:space="preserve">
+    <value>满足本机要求</value>
+  </data>
+  <data name="GpuClamp_AdapterBelow" xml:space="preserve">
+    <value>低于本机要求</value>
+  </data>
+  <data name="GpuClamp_AdapterBattery" xml:space="preserve">
+    <value>正在使用电池</value>
+  </data>
+  <data name="GpuClamp_AdapterNotFunctioning" xml:space="preserve">
+    <value>工作不正常</value>
+  </data>
+  <data name="GpuClamp_AdapterTypeC" xml:space="preserve">
+    <value>USB-C 供电</value>
+  </data>
+  <data name="GpuClamp_AdapterNotSupported" xml:space="preserve">
+    <value>不支持适配器检测</value>
+  </data>
+  <data name="Main_ReportBundleFailed" xml:space="preserve">
+    <value>创建诊断包失败。</value>
+  </data>
+  <data name="Main_ReportErrorTitle" xml:space="preserve">
+    <value>报告问题</value>
+  </data>
+  <data name="Settings_MonitorActive1s" xml:space="preserve">
+    <value>活动（1 秒）</value>
+  </data>
+  <data name="Settings_MonitorIdle5s" xml:space="preserve">
+    <value>空闲后台（5 秒）</value>
+  </data>
+  <data name="Settings_MonitorTrayOnly10s" xml:space="preserve">
+    <value>仅托盘超低（10 秒）</value>
+  </data>
+  <data name="Settings_MonitorCustomFormat" xml:space="preserve">
+    <value>自定义（{0} ms）</value>
+  </data>
+  <data name="Settings_MonitorInitializing" xml:space="preserve">
+    <value>正在初始化</value>
+  </data>
+  <data name="Settings_FanCleaningDone" xml:space="preserve">
+    <value>风扇清洁循环已成功完成！</value>
+  </data>
+  <data name="Settings_DoneTitle" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Settings_ResetDefaultsBody" xml:space="preserve">
+    <value>所有设置已恢复为默认值。</value>
+  </data>
+  <data name="Settings_NoBloatware" xml:space="preserve">
+    <value>未检测到预装软件，请先扫描。</value>
+  </data>
+  <data name="Settings_BiosReliabilitySummaryFormat" xml:space="preserve">
+    <value>{0}/{1} 条命令（成功率 {2}%，评价：{3}）</value>
+  </data>
+  <data name="Settings_BiosRatingExcellent" xml:space="preserve">
+    <value>优秀</value>
+  </data>
+  <data name="Settings_BiosRatingGood" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="Settings_BiosRatingFair" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="Settings_BiosRatingPoor" xml:space="preserve">
+    <value>较差</value>
+  </data>
+  <data name="Settings_BiosRatingCritical" xml:space="preserve">
+    <value>严重</value>
+  </data>
+  <data name="Settings_BiosWaitingForCommands" xml:space="preserve">
+    <value>等待命令中…</value>
+  </data>
+  <data name="Settings_StandaloneCriticalMissingFormat" xml:space="preserve">
+    <value>严重降级：缺少 {0} 个必需组件：{1}</value>
+  </data>
+  <data name="Settings_StandaloneDirectWmiUnavailable" xml:space="preserve">
+    <value>严重降级：HP WMI BIOS 直连接口不可用，已启用回退后端（核心风扇控制可用，部分依赖 HP 的功能可能受限）</value>
+  </data>
+  <data name="Settings_ResumeStatusSuspended" xml:space="preserve">
+    <value>已挂起</value>
+  </data>
+  <data name="Settings_ResumeStatusRecovering" xml:space="preserve">
+    <value>恢复中</value>
+  </data>
+  <data name="Settings_ResumeStatusHealthy" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="Settings_ResumeStatusAttentionNeeded" xml:space="preserve">
+    <value>需要关注</value>
+  </data>
+  <data name="Settings_ResumeSummarySuspended" xml:space="preserve">
+    <value>检测到系统挂起，正在等待恢复流程开始。</value>
+  </data>
+  <data name="Settings_ResumeSummaryRecovering" xml:space="preserve">
+    <value>检测到系统恢复，正在收集恢复时间线。</value>
+  </data>
+  <data name="SystemControl_ConflictXtu" xml:space="preserve">
+    <value>Intel Extreme Tuning Utility（XTU）正在控制 CPU 电压。XTU 会阻止其他应用访问 MSR（模型特定寄存器），导致 OmenCore 无法应用降压。</value>
+  </data>
+  <data name="SystemControl_ConflictThrottleStop" xml:space="preserve">
+    <value>ThrottleStop 正在运行并管理 CPU 电压，可能与 OmenCore 的降压设置冲突。</value>
+  </data>
+  <data name="SystemControl_ConflictDtt" xml:space="preserve">
+    <value>Intel 动态调优技术（DTT）服务正在运行，可能在控制电压设置。</value>
+  </data>
+  <data name="SystemControl_ConflictOgh" xml:space="preserve">
+    <value>OMEN Gaming Hub 正在管理 CPU 设置。安装 OGH 期间，部分电压控制可能由 HP 软件接管。</value>
+  </data>
+  <data name="SystemControl_ConflictOmenCap" xml:space="preserve">
+    <value>OmenCap.exe 正从 Windows DriverStore 运行。该 HP 组件在卸载 OMEN Gaming Hub 后仍会残留，并阻止降压所需的 MSR 访问。</value>
+  </data>
+  <data name="SystemControl_ConflictGenericFormat" xml:space="preserve">
+    <value>{0} 正在控制 CPU 电压，可能与 OmenCore 冲突。</value>
+  </data>
+  <data name="SystemControl_ConflictGenericFallback" xml:space="preserve">
+    <value>外部程序</value>
+  </data>
+  <data name="SystemControl_ConflictHintDefault" xml:space="preserve">
+    <value>请关闭或禁用该外部程序，然后重启 OmenCore。</value>
+  </data>
+  <data name="SystemControl_FixXtu" xml:space="preserve">
+    <value>1. 打开“服务”（Win+R → services.msc）&#10;2. 找到“Intel(R) Extreme Tuning Utility”服务&#10;3. 右键 → 停止，然后将启动类型设为“禁用”&#10;4. （可选）在控制面板卸载 XTU&#10;5. 重启 OmenCore</value>
+  </data>
+  <data name="SystemControl_FixThrottleStop" xml:space="preserve">
+    <value>1. 从系统托盘关闭 ThrottleStop&#10;2. 禁用 ThrottleStop 自动启动（取消勾选“最小化启动”）&#10;3. 重启 OmenCore 以接管电压控制</value>
+  </data>
+  <data name="SystemControl_FixDtt" xml:space="preserve">
+    <value>1. 打开“服务”（Win+R → services.msc）&#10;2. 找到“Intel(R) Dynamic Tuning Service”&#10;3. 停止并禁用该服务&#10;4. 注意：这可能影响 Intel 温度管理</value>
+  </data>
+  <data name="SystemControl_FixOgh" xml:space="preserve">
+    <value>1. 使用 OmenCore 设置中的“清理 OMEN Gaming Hub”功能&#10;2. 或在控制面板 → 程序中卸载 OGH&#10;3. 卸载后重启电脑</value>
+  </data>
+  <data name="SystemControl_FixOmenCap" xml:space="preserve">
+    <value>OmenCap 在卸载 OGH 后仍残留于 Windows DriverStore：&#10;1. 打开管理员命令提示符&#10;2. 运行：pnputil /enum-drivers | findstr /i omen&#10;3. 记下 hpomencustomcapcomp 对应的 oem##.inf&#10;4. 运行：pnputil /delete-driver oem##.inf /force&#10;5. 重启电脑&#10;6. 即可彻底移除 HP 的硬件访问组件</value>
+  </data>
+  <data name="SystemControl_PerfDescBalanced" xml:space="preserve">
+    <value>常规模式——性能均衡</value>
+  </data>
+  <data name="SystemControl_PerfDescPerformance" xml:space="preserve">
+    <value>高性能模式——GPU 功耗最大化</value>
+  </data>
+  <data name="SystemControl_PerfDescEco" xml:space="preserve">
+    <value>节能模式——降低功耗</value>
+  </data>
+  <data name="SystemControl_PerfDescSelect" xml:space="preserve">
+    <value>选择性能模式</value>
+  </data>
+  <data name="SystemControl_QuietModeDesc" xml:space="preserve">
+    <value>节能模式——风扇噪音更低、功耗限制更低，适合安静环境与轻负载。</value>
+  </data>
+  <data name="SystemControl_PerfModeDesc" xml:space="preserve">
+    <value>高性能模式——为游戏和重负载提供更高的 CPU/GPU 功耗目标。</value>
+  </data>
+  <data name="SystemControl_TurboModeDesc" xml:space="preserve">
+    <value>最大性能配置，适合短时高负载场景。</value>
+  </data>
+  <data name="SystemControl_DefaultModeDesc" xml:space="preserve">
+    <value>默认模式——性能与功耗均衡，适合日常使用。</value>
+  </data>
+  <data name="SystemControl_AmdPowerProviderUnavailable" xml:space="preserve">
+    <value>此系统不支持 AMD 功耗调优提供程序。</value>
+  </data>
+  <data name="SystemControl_Pl1Description" xml:space="preserve">
+    <value>持续功耗限制（PL1）——长期稳定 TDP</value>
+  </data>
+  <data name="SystemControl_Pl2Description" xml:space="preserve">
+    <value>瞬时功耗限制（PL2）——短期睿频功耗</value>
+  </data>
+  <data name="SystemControl_ProfileNameRequired" xml:space="preserve">
+    <value>请输入方案名称。</value>
+  </data>
+  <data name="SystemControl_ProfileNameRequiredTitle" xml:space="preserve">
+    <value>需要方案名称</value>
+  </data>
+  <data name="SystemControl_ProfileCannotOverwriteBuiltin" xml:space="preserve">
+    <value>无法覆盖内置方案，请换一个名称。</value>
+  </data>
+  <data name="SystemControl_ProfileInvalidNameTitle" xml:space="preserve">
+    <value>名称无效</value>
+  </data>
+  <data name="SystemControl_ProfileCannotDeleteBuiltin" xml:space="preserve">
+    <value>无法删除内置方案。</value>
+  </data>
+  <data name="SystemControl_ProfileDeleteTitle" xml:space="preserve">
+    <value>删除方案</value>
+  </data>
+  <data name="SystemControl_GpuBoost15W" xml:space="preserve">
+    <value>+15W GPU 加速</value>
+  </data>
+  <data name="SystemControl_GpuBoost25W" xml:space="preserve">
+    <value>+25W GPU 加速</value>
+  </data>
+  <data name="SystemControl_GpuPowerBalanced" xml:space="preserve">
+    <value>GPU 功耗均衡</value>
+  </data>
+  <data name="SystemControl_GpuPowerBase" xml:space="preserve">
+    <value>基础 TGP</value>
+  </data>
+  <data name="SystemControl_GpuPowerUnknown" xml:space="preserve">
+    <value>GPU 功耗未知</value>
+  </data>
+  <data name="SystemControl_GpuPowerBaseSuffix" xml:space="preserve">
+    <value>{0} • GPU 功耗：基础</value>
+  </data>
+  <data name="Onboarding_MonitoringActive" xml:space="preserve">
+    <value>硬件监控运行中</value>
+  </data>
+  <data name="Onboarding_DriverCheckHint" xml:space="preserve">
+    <value>驱动详情请查看“设置 → 状态”</value>
+  </data>
+  <data name="QuickPopup_ToggleRefreshRate" xml:space="preserve">
+    <value>切换刷新率</value>
+  </data>
+  <data name="FanControl_ApplyingCustomCurve" xml:space="preserve">
+    <value>正在应用自定义曲线</value>
+  </data>
+  <data name="ColorPicker_ZoneSubtitleFormat" xml:space="preserve">
+    <value>分区 {0} - {1}</value>
+  </data>
+  <data name="ZoneName_Wasd" xml:space="preserve">
+    <value>WASD</value>
+  </data>
+  <data name="ZoneName_Left" xml:space="preserve">
+    <value>左侧</value>
+  </data>
+  <data name="ZoneName_Right" xml:space="preserve">
+    <value>右侧</value>
+  </data>
+  <data name="ZoneName_FarRight" xml:space="preserve">
+    <value>最右侧</value>
   </data>
 </root>

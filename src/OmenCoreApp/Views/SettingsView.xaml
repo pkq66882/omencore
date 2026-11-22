@@ -527,7 +527,7 @@
                                 <StackPanel Grid.Column="0" VerticalAlignment="Center">
                                     <TextBlock Text="{x:Static loc:Strings.SettingsView_BiosWmiReliability}" FontSize="14" FontWeight="SemiBold" 
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
-                                    <TextBlock Text="{Binding BiosReliabilityText, FallbackValue=Waiting for commands...}" 
+                                    <TextBlock Text="{Binding BiosReliabilityText, FallbackValue={x:Static loc:Strings.Settings_BiosWaitingForCommands}}" 
                                                FontSize="12" Margin="0,4,0,0">
                                         <TextBlock.Style>
                                             <Style TargetType="TextBlock">

@@ -528,19 +528,19 @@ namespace OmenCore.Controls
                 _showingNoDataPlaceholders = true;
             }
             if (PowerConsumptionValue != null) PowerConsumptionValue.Text = "--";
-            if (PowerConsumptionTrend != null) PowerConsumptionTrend.Text = "No data";
+            if (PowerConsumptionTrend != null) PowerConsumptionTrend.Text = Strings.DashboardChart_NoData;
             if (BatteryHealthValue != null) BatteryHealthValue.Text = "--";
             if (BatteryHealthStatus != null) BatteryHealthStatus.Text = Strings.HardwareMonitoringDashboard_BatteryCapacityUnavailable;
             if (CpuTempValue != null) CpuTempValue.Text = "--";
-            if (CpuTempStatus != null) CpuTempStatus.Text = "No data";
+            if (CpuTempStatus != null) CpuTempStatus.Text = Strings.DashboardChart_NoData;
             if (GpuTempValue != null) GpuTempValue.Text = "--";
-            if (GpuTempStatus != null) GpuTempStatus.Text = "No data";
+            if (GpuTempStatus != null) GpuTempStatus.Text = Strings.DashboardChart_NoData;
             if (PowerEfficiencyValue != null) PowerEfficiencyValue.Text = "--";
             if (PowerEfficiencyRating != null) PowerEfficiencyRating.Text = "Unknown";
             if (BatteryCyclesValue != null) BatteryCyclesValue.Text = "--";
-            if (BatteryLifeEstimate != null) BatteryLifeEstimate.Text = "No data";
+            if (BatteryLifeEstimate != null) BatteryLifeEstimate.Text = Strings.DashboardChart_NoData;
             if (ThermalStatusValue != null) ThermalStatusValue.Text = "Unknown";
-            if (ThermalEfficiency != null) ThermalEfficiency.Text = "No data";
+            if (ThermalEfficiency != null) ThermalEfficiency.Text = Strings.DashboardChart_NoData;
             
             // System Activity fields
             if (CpuLoadValue != null) CpuLoadValue.Text = "--";
@@ -823,7 +823,7 @@ namespace OmenCore.Controls
                 Canvas.SetLeft(noData, Math.Max(12, emptyStateWidth / 2 - 60));
                 Canvas.SetTop(noData, emptyStateHeight / 2 - 10);
                 canvas.Children.Add(noData);
-                statsBlock.Text = "Waiting for historical data (displays after 2+ samples)";
+                statsBlock.Text = Strings.DashboardChart_WaitingForData;
                 statsBlock.Foreground = ChartMutedTextBrush;
                 return;
             }
@@ -977,7 +977,7 @@ namespace OmenCore.Controls
                 if (saveDialog.ShowDialog() == true)
                 {
                     await System.IO.File.WriteAllTextAsync(saveDialog.FileName, exportData);
-                    MessageBox.Show("Data exported successfully!", "Export Complete", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show(Strings.DashboardChart_ExportSuccess, Strings.DashboardChart_ExportCompleteTitle, MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
@@ -990,11 +990,11 @@ namespace OmenCore.Controls
         {
             return chartType switch
             {
-                ChartType.PowerConsumption => "Power Consumption History",
-                ChartType.BatteryHealth => "Battery Charge History",
-                ChartType.Temperature => "Temperature History",
-                ChartType.FanSpeeds => "Fan Speeds History",
-                _ => "Historical Data"
+                ChartType.PowerConsumption => Strings.DashboardChart_PowerTitle,
+                ChartType.BatteryHealth => Strings.DashboardChart_BatteryTitle,
+                ChartType.Temperature => Strings.DashboardChart_TempTitle,
+                ChartType.FanSpeeds => Strings.DashboardChart_FanTitle,
+                _ => Strings.DashboardChart_HistoryTitle
             };
         }
 

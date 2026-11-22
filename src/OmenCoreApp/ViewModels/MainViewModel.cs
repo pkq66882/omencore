@@ -3153,7 +3153,7 @@ namespace OmenCore.ViewModels
                     _logging.Warn("ReportModel: diagnostics export returned no path");
                     PushEvent("✗ Report model failed: export error");
                     if (Application.Current != null)
-                        MessageBox.Show("Failed to create diagnostics bundle.", "Report Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show(Strings.Main_ReportBundleFailed, Strings.Main_ReportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             catch (Exception ex)

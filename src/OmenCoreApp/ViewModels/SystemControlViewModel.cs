@@ -488,43 +488,27 @@ namespace OmenCore.ViewModels
         // External controller detection properties
         public bool HasExternalUndervoltController => UndervoltStatus?.HasExternalController ?? false;
         
-        public string ExternalControllerName => UndervoltStatus?.ExternalController ?? "Unknown";
+        public string ExternalControllerName => UndervoltStatus?.ExternalController ?? Strings.SettingsViewModel_ValueUnknown;
         
         public string ExternalControllerWarning => UndervoltStatus?.ExternalController switch
         {
-            "Intel XTU" => "Intel Extreme Tuning Utility (XTU) is controlling CPU voltage settings. XTU blocks MSR (Model Specific Register) access for other applications, preventing OmenCore from applying undervolts.",
-            "ThrottleStop" => "ThrottleStop is running and managing CPU voltage. It may conflict with OmenCore's undervolt settings.",
-            "Intel DTT" => "Intel Dynamic Tuning Technology service is active and may be controlling voltage settings.",
-            "OMEN Gaming Hub" => "OMEN Gaming Hub is managing CPU settings. While OGH is installed, some voltage controls may be handled by HP's software.",
-            "HP OmenCap (DriverStore)" => "OmenCap.exe is running from Windows DriverStore. This HP component persists after OMEN Gaming Hub uninstall and blocks MSR access for undervolting.",
-            _ => $"{UndervoltStatus?.ExternalController ?? "An external program"} is controlling CPU voltage settings and may conflict with OmenCore."
+            "Intel XTU" => Strings.SystemControl_ConflictXtu,
+            "ThrottleStop" => Strings.SystemControl_ConflictThrottleStop,
+            "Intel DTT" => Strings.SystemControl_ConflictDtt,
+            "OMEN Gaming Hub" => Strings.SystemControl_ConflictOgh,
+            "HP OmenCap (DriverStore)" => Strings.SystemControl_ConflictOmenCap,
+            _ => string.Format(Strings.SystemControl_ConflictGenericFormat,
+                UndervoltStatus?.ExternalController ?? Strings.SystemControl_ConflictGenericFallback)
         };
         
         public string ExternalControllerHowToFix => UndervoltStatus?.ExternalController switch
         {
-            "Intel XTU" => "1. Open Services (Win+R → services.msc)\n" +
-                           "2. Find 'Intel(R) Extreme Tuning Utility' service\n" +
-                           "3. Right-click → Stop, then set Startup type to 'Disabled'\n" +
-                           "4. Optionally uninstall XTU from Control Panel\n" +
-                           "5. Restart OmenCore",
-            "ThrottleStop" => "1. Close ThrottleStop from the system tray\n" +
-                              "2. Disable ThrottleStop's auto-start (uncheck 'Start Minimized')\n" +
-                              "3. Restart OmenCore to take over voltage control",
-            "Intel DTT" => "1. Open Services (Win+R → services.msc)\n" +
-                           "2. Find 'Intel(R) Dynamic Tuning Service'\n" +
-                           "3. Stop and disable the service\n" +
-                           "4. Note: This may affect Intel thermal management",
-            "OMEN Gaming Hub" => "1. Use OmenCore's 'Clean OMEN Gaming Hub' feature in Settings\n" +
-                                 "2. Or uninstall OGH from Control Panel → Programs\n" +
-                                 "3. Restart your computer after removal",
-            "HP OmenCap (DriverStore)" => "OmenCap persists in Windows DriverStore after OGH uninstall:\n" +
-                                          "1. Open Admin Command Prompt\n" +
-                                          "2. Run: pnputil /enum-drivers | findstr /i omen\n" +
-                                          "3. Note the oem##.inf for hpomencustomcapcomp\n" +
-                                          "4. Run: pnputil /delete-driver oem##.inf /force\n" +
-                                          "5. Reboot your computer\n" +
-                                          "6. This fully removes HP's hardware access component",
-            _ => "Close or disable the external application, then restart OmenCore."
+            "Intel XTU" => Strings.SystemControl_FixXtu,
+            "ThrottleStop" => Strings.SystemControl_FixThrottleStop,
+            "Intel DTT" => Strings.SystemControl_FixDtt,
+            "OMEN Gaming Hub" => Strings.SystemControl_FixOgh,
+            "HP OmenCap (DriverStore)" => Strings.SystemControl_FixOmenCap,
+            _ => Strings.SystemControl_ConflictHintDefault
         };
 
         // CPU Vendor Properties (for UI display)
@@ -740,16 +724,16 @@ namespace OmenCore.ViewModels
                     return $"Backend: {amdProvider.ActiveBackend}. STAPM and Tctl writes are available for this Ryzen platform.";
                 }
 
-                return "AMD power tuning provider is unavailable on this system.";
+                return Strings.SystemControl_AmdPowerProviderUnavailable;
             }
         }
 
         public string PerformanceModeDescription => SelectedPerformanceMode?.Description ?? SelectedPerformanceMode?.Name switch
         {
-            "Balanced" => "Normal mode - balanced performance",
-            "Performance" => "High performance - maximum GPU wattage",
-            "Eco" => "Power saving mode - reduced wattage",
-            _ => "Select a performance mode"
+            "Balanced" => Strings.SystemControl_PerfDescBalanced,
+            "Performance" => Strings.SystemControl_PerfDescPerformance,
+            "Eco" => Strings.SystemControl_PerfDescEco,
+            _ => Strings.SystemControl_PerfDescSelect
         };
 
         public bool IsFanPerformanceLinked => _configService.Config.LinkFanToPerformanceMode;
@@ -2641,8 +2625,8 @@ namespace OmenCore.ViewModels
 
         public string CurrentPl2Text => string.Format(Strings.SystemControlViewModel_CurrentFormat, CurrentPl2Watts.ToString("F0"));
 
-        public string CpuPl1Description => "Sustained power limit (PL1) - Long-term sustained TDP";
-        public string CpuPl2Description => "Burst power limit (PL2) - Short-term turbo boost power";
+        public string CpuPl1Description => Strings.SystemControl_Pl1Description;
+        public string CpuPl2Description => Strings.SystemControl_Pl2Description;
 
         // CPU PL limits (vary by CPU model)
         public int CpuPl1Min { get; private set; } = 15;
@@ -4390,10 +4374,10 @@ namespace OmenCore.ViewModels
         {
             return modeName?.Trim().ToLowerInvariant() switch
             {
-                "quiet" or "silent" or "powersaver" => "Power saving mode - reduced fan noise, lower power limits. Best for quiet environments and light tasks.",
-                "performance" => "High performance mode - higher CPU/GPU power targets for gaming and heavy workloads.",
-                "turbo" or "extreme" => "Maximum configured performance profile for short high-load sessions.",
-                _ => "Default mode - balanced performance and power consumption. Good for everyday use."
+                "quiet" or "silent" or "powersaver" => Strings.SystemControl_QuietModeDesc,
+                "performance" => Strings.SystemControl_PerfModeDesc,
+                "turbo" or "extreme" => Strings.SystemControl_TurboModeDesc,
+                _ => Strings.SystemControl_DefaultModeDesc
             };
         }
         
@@ -5098,7 +5082,7 @@ namespace OmenCore.ViewModels
         {
             if (string.IsNullOrWhiteSpace(NewGpuOcProfileName))
             {
-                System.Windows.MessageBox.Show("Please enter a name for the profile.", "Profile Name Required",
+                System.Windows.MessageBox.Show(Strings.SystemControl_ProfileNameRequired, Strings.SystemControl_ProfileNameRequiredTitle,
                     System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Information);
                 return;
             }
@@ -5107,8 +5091,8 @@ namespace OmenCore.ViewModels
             if (GpuOcProfiles.Any(p => p.Name == NewGpuOcProfileName && 
                 IsBuiltInGpuOcProfile(p.Name)))
             {
-                System.Windows.MessageBox.Show("Cannot overwrite built-in profiles. Please choose a different name.",
-                    "Invalid Name", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
+                System.Windows.MessageBox.Show(Strings.SystemControl_ProfileCannotOverwriteBuiltin,
+                    Strings.SystemControl_ProfileInvalidNameTitle, System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
                 return;
             }
             
@@ -5156,7 +5140,7 @@ namespace OmenCore.ViewModels
             // Don't allow deleting built-in profiles
             if (IsBuiltInGpuOcProfile(SelectedGpuOcProfile.Name))
             {
-                System.Windows.MessageBox.Show("Cannot delete built-in profiles.", "Delete Profile",
+                System.Windows.MessageBox.Show(Strings.SystemControl_ProfileCannotDeleteBuiltin, Strings.SystemControl_ProfileDeleteTitle,
                     System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
                 return;
             }
@@ -5324,16 +5308,16 @@ namespace OmenCore.ViewModels
 
                 if (!GpuPowerBoostAvailable)
                 {
-                    return $"{modeName} • GPU Power: base";
+                    return string.Format(Strings.SystemControl_GpuPowerBaseSuffix, modeName);
                 }
 
                 var boostText = GpuPowerBoostLevel switch
                 {
-                    "Maximum" => "+15W GPU Boost",
-                    "Extended" => "+25W GPU Boost",
-                    "Medium" => "Balanced GPU power",
-                    "Minimum" => "Base TGP",
-                    _ => "GPU power unknown"
+                    "Maximum" => Strings.SystemControl_GpuBoost15W,
+                    "Extended" => Strings.SystemControl_GpuBoost25W,
+                    "Medium" => Strings.SystemControl_GpuPowerBalanced,
+                    "Minimum" => Strings.SystemControl_GpuPowerBase,
+                    _ => Strings.SystemControl_GpuPowerUnknown
                 };
 
                 return $"{modeName} • {boostText}";

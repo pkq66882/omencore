@@ -7333,4 +7333,388 @@
   <data name="Lid_Open" xml:space="preserve">
     <value>Açık</value>
   </data>
+  <data name="DiagnosticExport_Starting" xml:space="preserve">
+    <value>Tanılama dışa aktarımı başlatılıyor...</value>
+  </data>
+  <data name="DiagnosticExport_Completed" xml:space="preserve">
+    <value>Dışa aktarım tamamlandı</value>
+  </data>
+  <data name="DiagnosticExport_Cancelled" xml:space="preserve">
+    <value>Dışa aktarım iptal edildi</value>
+  </data>
+  <data name="DiagnosticExport_CompletedSuccessfully" xml:space="preserve">
+    <value>Dışa aktarım başarıyla tamamlandı</value>
+  </data>
+  <data name="DiagnosticExport_FanServiceUnavailable" xml:space="preserve">
+    <value>Fan hizmeti kullanılamıyor</value>
+  </data>
+  <data name="DiagnosticExport_PerfServiceUnavailable" xml:space="preserve">
+    <value>Performans/ayar hizmeti kullanılamıyor</value>
+  </data>
+  <data name="DiagnosticExport_PerfServiceAvailable" xml:space="preserve">
+    <value>Performans modu hizmeti kullanılabilir</value>
+  </data>
+  <data name="DiagnosticExport_PerfReadinessFailed" xml:space="preserve">
+    <value>Performans/ayar hazırlığı başarısız</value>
+  </data>
+  <data name="DiagnosticExport_FilePathCopied" xml:space="preserve">
+    <value>Dosya yolu panoya kopyalandı</value>
+  </data>
+  <data name="DiagnosticExport_CopiedTitle" xml:space="preserve">
+    <value>Kopyalandı</value>
+  </data>
+  <data name="FanCalibration_ServiceUnavailable" xml:space="preserve">
+    <value>Bu bağlamda fan kalibrasyon hizmeti kullanılamıyor.</value>
+  </data>
+  <data name="FanCalibration_MissingVerificationService" xml:space="preserve">
+    <value>Kalibrasyon sihirbazı çalıştırılamıyor: fan doğrulama hizmeti eksik.</value>
+  </data>
+  <data name="FanCalibration_ModelDetectFailed" xml:space="preserve">
+    <value>Model bilgisi algılanamadı</value>
+  </data>
+  <data name="FanCalibration_NoCalibrationData" xml:space="preserve">
+    <value>Kalibrasyon verisi bulunamadı - önce kalibrasyonu çalıştırın</value>
+  </data>
+  <data name="FanCalibration_VerificationUnavailable" xml:space="preserve">
+    <value>Fan doğrulama hizmeti kullanılamıyor.</value>
+  </data>
+  <data name="FanCalibration_VerificationUnavailableBody" xml:space="preserve">
+    <value>Fan doğrulama hizmeti kullanılamıyor. Donanım izlemenin çalıştığını kontrol edin.</value>
+  </data>
+  <data name="FanCalibration_Starting" xml:space="preserve">
+    <value>Kalibrasyon başlatılıyor...</value>
+  </data>
+  <data name="FanCalibration_Completed" xml:space="preserve">
+    <value>Kalibrasyon tamamlandı</value>
+  </data>
+  <data name="FanCalibration_Cancelled" xml:space="preserve">
+    <value>Kalibrasyon iptal edildi</value>
+  </data>
+  <data name="FanCalibration_RestoreAutoUnavailableTitle" xml:space="preserve">
+    <value>Otomatik moda dönülemiyor</value>
+  </data>
+  <data name="FanCalibration_DataCleared" xml:space="preserve">
+    <value>Kalibrasyon verisi temizlendi.</value>
+  </data>
+  <data name="FanCalibration_DataClearedTitle" xml:space="preserve">
+    <value>Veriler temizlendi</value>
+  </data>
+  <data name="DashboardChart_NoData" xml:space="preserve">
+    <value>Veri yok</value>
+  </data>
+  <data name="DashboardChart_WaitingForData" xml:space="preserve">
+    <value>Geçmiş veriler bekleniyor (2+ örnekten sonra görünür)</value>
+  </data>
+  <data name="DashboardChart_ExportSuccess" xml:space="preserve">
+    <value>Veriler başarıyla dışa aktarıldı!</value>
+  </data>
+  <data name="DashboardChart_ExportCompleteTitle" xml:space="preserve">
+    <value>Dışa aktarım tamamlandı</value>
+  </data>
+  <data name="DashboardChart_PowerTitle" xml:space="preserve">
+    <value>Güç Tüketimi Geçmişi</value>
+  </data>
+  <data name="DashboardChart_BatteryTitle" xml:space="preserve">
+    <value>Pil Şarj Geçmişi</value>
+  </data>
+  <data name="DashboardChart_TempTitle" xml:space="preserve">
+    <value>Sıcaklık Geçmişi</value>
+  </data>
+  <data name="DashboardChart_FanTitle" xml:space="preserve">
+    <value>Fan Hızları Geçmişi</value>
+  </data>
+  <data name="DashboardChart_HistoryTitle" xml:space="preserve">
+    <value>Geçmiş Veriler</value>
+  </data>
+  <data name="Dashboard_TelemetryStale" xml:space="preserve">
+    <value>Telemetri eskidi: sensör verileri gecikti veya dondu. OmenCore otomatik kurtarma deniyor.</value>
+  </data>
+  <data name="Dashboard_TelemetryDegraded" xml:space="preserve">
+    <value>Telemetri bozuldu: veri kalitesi düştü. İzleme kurtarılıyor.</value>
+  </data>
+  <data name="Dashboard_AmdQuarantineWarningFormat" xml:space="preserve">
+    <value>AMD GPU telemetrisi sürücü/kütüphane hatasından sonra geçici olarak karantinaya alındı. CPU, fan, bellek ve sistem telemetrisi normal çalışıyor.{0}</value>
+  </data>
+  <data name="Dashboard_AmdQuarantineReasonFormat" xml:space="preserve">
+    <value> Neden: {0}</value>
+  </data>
+  <data name="FanControl_ModeAutoDesc" xml:space="preserve">
+    <value>Otomatik mod: fan denetimi ürün yazılımında</value>
+  </data>
+  <data name="FanControl_ModeMaxDesc" xml:space="preserve">
+    <value>Maks mod: OmenCore tam soğutma ister</value>
+  </data>
+  <data name="FanControl_ModeCustomDesc" xml:space="preserve">
+    <value>Özel eğri yüklendi ancak uygulanmadı</value>
+  </data>
+  <data name="FanControl_CurveCustomActive" xml:space="preserve">
+    <value>Özel eğri fanları etkin olarak yönetiyor</value>
+  </data>
+  <data name="FanControl_CurveActiveFormat" xml:space="preserve">
+    <value>{0} eğrisi fanları etkin olarak yönetiyor</value>
+  </data>
+  <data name="FanControl_ModeConstantFormat" xml:space="preserve">
+    <value>Sabit mod: OmenCore %{0} ister</value>
+  </data>
+  <data name="FanControl_PresetSelectedFormat" xml:space="preserve">
+    <value>{0} ön ayarı seçildi</value>
+  </data>
+  <data name="FanControl_ModeConstant" xml:space="preserve">
+    <value>Sabit</value>
+  </data>
+  <data name="FanControl_ShareCodeNeedPoints" xml:space="preserve">
+    <value>Paylaşım kodu için en az 2 eğri noktası gerekir.</value>
+  </data>
+  <data name="FanControl_CannotCopyTitle" xml:space="preserve">
+    <value>Paylaşım kodu kopyalanamıyor</value>
+  </data>
+  <data name="FanControl_ClipboardNoText" xml:space="preserve">
+    <value>Panoda metin yok.</value>
+  </data>
+  <data name="FanControl_ClipboardInvalidCode" xml:space="preserve">
+    <value>Panoda geçerli bir fan eğrisi paylaşım kodu yok.</value>
+  </data>
+  <data name="FanControl_ImportFailedTitle" xml:space="preserve">
+    <value>İçe aktarma başarısız</value>
+  </data>
+  <data name="FanControl_NoSavedPreset" xml:space="preserve">
+    <value>Yapılandırmada kayıtlı fan ön ayarı bulunamadı.</value>
+  </data>
+  <data name="FanControl_ReapplyPresetTitle" xml:space="preserve">
+    <value>Kayıtlı ön ayarı yeniden uygula</value>
+  </data>
+  <data name="FanControl_NoValidPresets" xml:space="preserve">
+    <value>Dosyada geçerli fan ön ayarı bulunamadı.</value>
+  </data>
+  <data name="GpuClamp_AdapterMeets" xml:space="preserve">
+    <value>bu makinenin gereksinimini karşılıyor</value>
+  </data>
+  <data name="GpuClamp_AdapterBelow" xml:space="preserve">
+    <value>bu makinenin gereksiniminin altında</value>
+  </data>
+  <data name="GpuClamp_AdapterBattery" xml:space="preserve">
+    <value>pille çalışıyor</value>
+  </data>
+  <data name="GpuClamp_AdapterNotFunctioning" xml:space="preserve">
+    <value>düzgün çalışmıyor</value>
+  </data>
+  <data name="GpuClamp_AdapterTypeC" xml:space="preserve">
+    <value>USB-C Güç Dağıtımı</value>
+  </data>
+  <data name="GpuClamp_AdapterNotSupported" xml:space="preserve">
+    <value>adaptör algılama desteklenmiyor</value>
+  </data>
+  <data name="Main_ReportBundleFailed" xml:space="preserve">
+    <value>Tanılama paketi oluşturulamadı.</value>
+  </data>
+  <data name="Main_ReportErrorTitle" xml:space="preserve">
+    <value>Hatayı bildir</value>
+  </data>
+  <data name="Settings_MonitorActive1s" xml:space="preserve">
+    <value>Etkin (1 sn)</value>
+  </data>
+  <data name="Settings_MonitorIdle5s" xml:space="preserve">
+    <value>Boşta arka plan (5 sn)</value>
+  </data>
+  <data name="Settings_MonitorTrayOnly10s" xml:space="preserve">
+    <value>Yalnızca tepsi, ultra düşük (10 sn)</value>
+  </data>
+  <data name="Settings_MonitorCustomFormat" xml:space="preserve">
+    <value>Özel ({0} ms)</value>
+  </data>
+  <data name="Settings_MonitorInitializing" xml:space="preserve">
+    <value>Başlatılıyor</value>
+  </data>
+  <data name="Settings_FanCleaningDone" xml:space="preserve">
+    <value>Fan temizleme döngüsü başarıyla tamamlandı!</value>
+  </data>
+  <data name="Settings_DoneTitle" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="Settings_ResetDefaultsBody" xml:space="preserve">
+    <value>Tüm ayarlar varsayılan değerlerine sıfırlandı.</value>
+  </data>
+  <data name="Settings_NoBloatware" xml:space="preserve">
+    <value>Ön yüklü yazılım bulunamadı. Önce tarama yapın.</value>
+  </data>
+  <data name="Settings_BiosReliabilitySummaryFormat" xml:space="preserve">
+    <value>{0}/{1} komut (%{2} başarı, {3})</value>
+  </data>
+  <data name="Settings_BiosRatingExcellent" xml:space="preserve">
+    <value>Mükemmel</value>
+  </data>
+  <data name="Settings_BiosRatingGood" xml:space="preserve">
+    <value>İyi</value>
+  </data>
+  <data name="Settings_BiosRatingFair" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="Settings_BiosRatingPoor" xml:space="preserve">
+    <value>Zayıf</value>
+  </data>
+  <data name="Settings_BiosRatingCritical" xml:space="preserve">
+    <value>Kritik</value>
+  </data>
+  <data name="Settings_BiosWaitingForCommands" xml:space="preserve">
+    <value>Komutlar bekleniyor...</value>
+  </data>
+  <data name="Settings_StandaloneCriticalMissingFormat" xml:space="preserve">
+    <value>Ciddi bozulma: {0} gerekli bileşen eksik: {1}</value>
+  </data>
+  <data name="Settings_StandaloneDirectWmiUnavailable" xml:space="preserve">
+    <value>Ciddi bozulma: doğrudan HP WMI BIOS arayüzü kullanılamıyor; yedek arka uç etkin (temel fan denetimi çalışır, bazı HP'ye bağlı özellikler sınırlı olabilir)</value>
+  </data>
+  <data name="Settings_ResumeStatusSuspended" xml:space="preserve">
+    <value>Askıya alındı</value>
+  </data>
+  <data name="Settings_ResumeStatusRecovering" xml:space="preserve">
+    <value>Kurtarılıyor</value>
+  </data>
+  <data name="Settings_ResumeStatusHealthy" xml:space="preserve">
+    <value>Sağlıklı</value>
+  </data>
+  <data name="Settings_ResumeStatusAttentionNeeded" xml:space="preserve">
+    <value>Dikkat gerekli</value>
+  </data>
+  <data name="Settings_ResumeSummarySuspended" xml:space="preserve">
+    <value>Sistem askıya alınması algılandı. Kurtarma başlaması bekleniyor.</value>
+  </data>
+  <data name="Settings_ResumeSummaryRecovering" xml:space="preserve">
+    <value>Devam algılandı. Kurtarma zaman çizelgesi toplanıyor.</value>
+  </data>
+  <data name="SystemControl_ConflictXtu" xml:space="preserve">
+    <value>Intel Extreme Tuning Utility (XTU) CPU voltaj ayarlarını kontrol ediyor. XTU, diğer uygulamaların MSR erişimini engelleyerek OmenCore'un voltaj düşürmesini önlüyor.</value>
+  </data>
+  <data name="SystemControl_ConflictThrottleStop" xml:space="preserve">
+    <value>ThrottleStop çalışıyor ve CPU voltajını yönetiyor. OmenCore'un voltaj düşürme ayarlarıyla çakışabilir.</value>
+  </data>
+  <data name="SystemControl_ConflictDtt" xml:space="preserve">
+    <value>Intel Dynamic Tuning Technology hizmeti etkin ve voltaj ayarlarını kontrol ediyor olabilir.</value>
+  </data>
+  <data name="SystemControl_ConflictOgh" xml:space="preserve">
+    <value>OMEN Gaming Hub CPU ayarlarını yönetiyor. OGH yüklüyken bazı voltaj kontrolleri HP yazılımı tarafından yürütülebilir.</value>
+  </data>
+  <data name="SystemControl_ConflictOmenCap" xml:space="preserve">
+    <value>OmenCap.exe Windows DriverStore'dan çalışıyor. Bu HP bileşeni OMEN Gaming Hub kaldırıldıktan sonra da kalır ve voltaj düşürme için MSR erişimini engeller.</value>
+  </data>
+  <data name="SystemControl_ConflictGenericFormat" xml:space="preserve">
+    <value>{0} CPU voltaj ayarlarını kontrol ediyor ve OmenCore ile çakışabilir.</value>
+  </data>
+  <data name="SystemControl_ConflictGenericFallback" xml:space="preserve">
+    <value>Harici bir program</value>
+  </data>
+  <data name="SystemControl_ConflictHintDefault" xml:space="preserve">
+    <value>Harici uygulamayı kapatın veya devre dışı bırakın, ardından OmenCore'u yeniden başlatın.</value>
+  </data>
+  <data name="SystemControl_FixXtu" xml:space="preserve">
+    <value>1. Hizmetleri açın (Win+R → services.msc)&#10;2. 'Intel(R) Extreme Tuning Utility' hizmetini bulun&#10;3. Sağ tık → Durdur, başlangıç türünü 'Devre dışı' yapın&#10;4. İsteğe bağlı olarak XTU'yu Denetim Masası'ndan kaldırın&#10;5. OmenCore'u yeniden başlatın</value>
+  </data>
+  <data name="SystemControl_FixThrottleStop" xml:space="preserve">
+    <value>1. ThrottleStop'u sistem tepsisinden kapatın&#10;2. ThrottleStop otomatik başlatmayı kapatın ('Simge durumunda başlat' işaretini kaldırın)&#10;3. Voltaj denetimini devralmak için OmenCore'u yeniden başlatın</value>
+  </data>
+  <data name="SystemControl_FixDtt" xml:space="preserve">
+    <value>1. Hizmetleri açın (Win+R → services.msc)&#10;2. 'Intel(R) Dynamic Tuning Service' hizmetini bulun&#10;3. Hizmeti durdurun ve devre dışı bırakın&#10;4. Not: Intel termal yönetimini etkileyebilir</value>
+  </data>
+  <data name="SystemControl_FixOgh" xml:space="preserve">
+    <value>1. OmenCore Ayarlar'daki 'OMEN Gaming Hub'ı temizle' özelliğini kullanın&#10;2. Veya OGH'u Denetim Masası → Programlar'dan kaldırın&#10;3. Kaldırdıktan sonra bilgisayarı yeniden başlatın</value>
+  </data>
+  <data name="SystemControl_FixOmenCap" xml:space="preserve">
+    <value>OmenCap, OGH kaldırıldıktan sonra Windows DriverStore'da kalır:&#10;1. Yönetici Komut İstemi'ni açın&#10;2. Şunu çalıştırın: pnputil /enum-drivers | findstr /i omen&#10;3. hpomencustomcapcomp için oem##.inf dosyasını not edin&#10;4. Şunu çalıştırın: pnputil /delete-driver oem##.inf /force&#10;5. Bilgisayarı yeniden başlatın&#10;6. Bu, HP'nin donanım erişim bileşenini tamamen kaldırır</value>
+  </data>
+  <data name="SystemControl_PerfDescBalanced" xml:space="preserve">
+    <value>Normal mod - dengeli performans</value>
+  </data>
+  <data name="SystemControl_PerfDescPerformance" xml:space="preserve">
+    <value>Yüksek performans - maksimum GPU gücü</value>
+  </data>
+  <data name="SystemControl_PerfDescEco" xml:space="preserve">
+    <value>Güç tasarrufu modu - düşük güç</value>
+  </data>
+  <data name="SystemControl_PerfDescSelect" xml:space="preserve">
+    <value>Bir performans modu seçin</value>
+  </data>
+  <data name="SystemControl_QuietModeDesc" xml:space="preserve">
+    <value>Güç tasarrufu modu - daha az fan sesi, daha düşük güç limitleri. Sessiz ortamlar ve hafif işler için.</value>
+  </data>
+  <data name="SystemControl_PerfModeDesc" xml:space="preserve">
+    <value>Yüksek performans modu - oyun ve ağır iş yükleri için daha yüksek CPU/GPU güç hedefleri.</value>
+  </data>
+  <data name="SystemControl_TurboModeDesc" xml:space="preserve">
+    <value>Kısa yüksek yük oturumları için maksimum yapılandırılmış performans profili.</value>
+  </data>
+  <data name="SystemControl_DefaultModeDesc" xml:space="preserve">
+    <value>Varsayılan mod - dengeli performans ve güç tüketimi. Günlük kullanım için uygun.</value>
+  </data>
+  <data name="SystemControl_AmdPowerProviderUnavailable" xml:space="preserve">
+    <value>AMD güç ayar sağlayıcısı bu sistemde kullanılamıyor.</value>
+  </data>
+  <data name="SystemControl_Pl1Description" xml:space="preserve">
+    <value>Sürekli güç limiti (PL1) - Uzun süreli TDP</value>
+  </data>
+  <data name="SystemControl_Pl2Description" xml:space="preserve">
+    <value>Anlık güç limiti (PL2) - Kısa süreli turbo gücü</value>
+  </data>
+  <data name="SystemControl_ProfileNameRequired" xml:space="preserve">
+    <value>Lütfen profil için bir ad girin.</value>
+  </data>
+  <data name="SystemControl_ProfileNameRequiredTitle" xml:space="preserve">
+    <value>Profil adı gerekli</value>
+  </data>
+  <data name="SystemControl_ProfileCannotOverwriteBuiltin" xml:space="preserve">
+    <value>Yerleşik profillerin üzerine yazılamaz. Farklı bir ad seçin.</value>
+  </data>
+  <data name="SystemControl_ProfileInvalidNameTitle" xml:space="preserve">
+    <value>Geçersiz ad</value>
+  </data>
+  <data name="SystemControl_ProfileCannotDeleteBuiltin" xml:space="preserve">
+    <value>Yerleşik profiller silinemez.</value>
+  </data>
+  <data name="SystemControl_ProfileDeleteTitle" xml:space="preserve">
+    <value>Profili sil</value>
+  </data>
+  <data name="SystemControl_GpuBoost15W" xml:space="preserve">
+    <value>+15W GPU artışı</value>
+  </data>
+  <data name="SystemControl_GpuBoost25W" xml:space="preserve">
+    <value>+25W GPU artışı</value>
+  </data>
+  <data name="SystemControl_GpuPowerBalanced" xml:space="preserve">
+    <value>Dengeli GPU gücü</value>
+  </data>
+  <data name="SystemControl_GpuPowerBase" xml:space="preserve">
+    <value>Temel TGP</value>
+  </data>
+  <data name="SystemControl_GpuPowerUnknown" xml:space="preserve">
+    <value>GPU gücü bilinmiyor</value>
+  </data>
+  <data name="SystemControl_GpuPowerBaseSuffix" xml:space="preserve">
+    <value>{0} • GPU gücü: temel</value>
+  </data>
+  <data name="Onboarding_MonitoringActive" xml:space="preserve">
+    <value>Donanım izleme etkin</value>
+  </data>
+  <data name="Onboarding_DriverCheckHint" xml:space="preserve">
+    <value>Sürücü ayrıntıları için Ayarlar → Durum</value>
+  </data>
+  <data name="QuickPopup_ToggleRefreshRate" xml:space="preserve">
+    <value>Yenileme hızını değiştir</value>
+  </data>
+  <data name="FanControl_ApplyingCustomCurve" xml:space="preserve">
+    <value>Özel eğri uygulanıyor</value>
+  </data>
+  <data name="ColorPicker_ZoneSubtitleFormat" xml:space="preserve">
+    <value>Bölge {0} - {1}</value>
+  </data>
+  <data name="ZoneName_Wasd" xml:space="preserve">
+    <value>WASD</value>
+  </data>
+  <data name="ZoneName_Left" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="ZoneName_Right" xml:space="preserve">
+    <value>Sağ</value>
+  </data>
+  <data name="ZoneName_FarRight" xml:space="preserve">
+    <value>En sağ</value>
+  </data>
 </root>

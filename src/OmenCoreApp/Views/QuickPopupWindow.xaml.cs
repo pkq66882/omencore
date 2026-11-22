@@ -356,7 +356,7 @@ namespace OmenCore.Views
             if (target == null)
             {
                 RefreshRateText.Text = currentRate > 0 ? $"{currentRate}Hz" : "N/A";
-                RefreshRateBtn.ToolTip = "Toggle refresh rate";
+                RefreshRateBtn.ToolTip = Strings.QuickPopup_ToggleRefreshRate;
                 return;
             }
 

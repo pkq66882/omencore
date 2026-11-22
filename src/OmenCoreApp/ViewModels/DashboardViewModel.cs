@@ -972,17 +972,16 @@ namespace OmenCore.ViewModels
 
                 var reason = string.IsNullOrWhiteSpace(sample.AmdGpuTelemetryQuarantineReason)
                     ? string.Empty
-                    : $" Reason: {sample.AmdGpuTelemetryQuarantineReason}";
+                    : string.Format(Strings.Dashboard_AmdQuarantineReasonFormat, sample.AmdGpuTelemetryQuarantineReason);
 
-                return "AMD GPU telemetry is temporarily quarantined after a driver/library fault. " +
-                       "CPU, fan, memory, and system telemetry continue normally." + reason;
+                return string.Format(Strings.Dashboard_AmdQuarantineWarningFormat, reason);
             }
         }
 
         public string TelemetryStateBannerText => _monitoringService.HealthStatus switch
         {
-            MonitoringHealthStatus.Stale => "Telemetry stale: sensor data is delayed or frozen. OmenCore is attempting automatic recovery.",
-            MonitoringHealthStatus.Degraded => "Telemetry degraded: data quality reduced. Monitoring recovery is in progress.",
+            MonitoringHealthStatus.Stale => Strings.Dashboard_TelemetryStale,
+            MonitoringHealthStatus.Degraded => Strings.Dashboard_TelemetryDegraded,
             _ => string.Empty
         };
         

@@ -14,14 +14,24 @@ using Xunit;
 namespace OmenCoreApp.Tests.ViewModels
 {
     [Collection("Config Isolation")]
-    public class FanControlViewModelTests
+    public class FanControlViewModelTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _originalUICulture = System.Globalization.CultureInfo.CurrentUICulture;
+
         public FanControlViewModelTests()
         {
+            // FanOwnershipSummary is localized; pin to en for canonical substring assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
             var tmp = Path.Combine(Path.GetTempPath(), "OmenCoreTests", Guid.NewGuid().ToString());
             Directory.CreateDirectory(tmp);
             Environment.SetEnvironmentVariable("OMENCORE_CONFIG_DIR", tmp);
         }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _originalUICulture;
+        }
+
         private class TestFanController : OmenCore.Hardware.IFanController
         {
             public bool IsAvailable => true;

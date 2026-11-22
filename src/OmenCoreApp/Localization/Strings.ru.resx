@@ -7333,4 +7333,388 @@
   <data name="Lid_Open" xml:space="preserve">
     <value>Открыта</value>
   </data>
+  <data name="DiagnosticExport_Starting" xml:space="preserve">
+    <value>Запуск экспорта диагностики...</value>
+  </data>
+  <data name="DiagnosticExport_Completed" xml:space="preserve">
+    <value>Экспорт завершён</value>
+  </data>
+  <data name="DiagnosticExport_Cancelled" xml:space="preserve">
+    <value>Экспорт отменён</value>
+  </data>
+  <data name="DiagnosticExport_CompletedSuccessfully" xml:space="preserve">
+    <value>Экспорт успешно завершён</value>
+  </data>
+  <data name="DiagnosticExport_FanServiceUnavailable" xml:space="preserve">
+    <value>Служба вентиляторов недоступна</value>
+  </data>
+  <data name="DiagnosticExport_PerfServiceUnavailable" xml:space="preserve">
+    <value>Служба производительности/настройки недоступна</value>
+  </data>
+  <data name="DiagnosticExport_PerfServiceAvailable" xml:space="preserve">
+    <value>Служба режимов производительности доступна</value>
+  </data>
+  <data name="DiagnosticExport_PerfReadinessFailed" xml:space="preserve">
+    <value>Проверка готовности производительности/настройки не удалась</value>
+  </data>
+  <data name="DiagnosticExport_FilePathCopied" xml:space="preserve">
+    <value>Путь к файлу скопирован в буфер обмена</value>
+  </data>
+  <data name="DiagnosticExport_CopiedTitle" xml:space="preserve">
+    <value>Скопировано</value>
+  </data>
+  <data name="FanCalibration_ServiceUnavailable" xml:space="preserve">
+    <value>Служба калибровки вентиляторов недоступна в этом контексте.</value>
+  </data>
+  <data name="FanCalibration_MissingVerificationService" xml:space="preserve">
+    <value>Мастер калибровки не может запуститься: отсутствует служба проверки вентиляторов.</value>
+  </data>
+  <data name="FanCalibration_ModelDetectFailed" xml:space="preserve">
+    <value>Не удалось определить сведения о модели</value>
+  </data>
+  <data name="FanCalibration_NoCalibrationData" xml:space="preserve">
+    <value>Данные калибровки не найдены — сначала выполните калибровку</value>
+  </data>
+  <data name="FanCalibration_VerificationUnavailable" xml:space="preserve">
+    <value>Служба проверки вентиляторов недоступна.</value>
+  </data>
+  <data name="FanCalibration_VerificationUnavailableBody" xml:space="preserve">
+    <value>Служба проверки вентиляторов недоступна. Проверьте работу мониторинга оборудования.</value>
+  </data>
+  <data name="FanCalibration_Starting" xml:space="preserve">
+    <value>Запуск калибровки...</value>
+  </data>
+  <data name="FanCalibration_Completed" xml:space="preserve">
+    <value>Калибровка завершена</value>
+  </data>
+  <data name="FanCalibration_Cancelled" xml:space="preserve">
+    <value>Калибровка отменена</value>
+  </data>
+  <data name="FanCalibration_RestoreAutoUnavailableTitle" xml:space="preserve">
+    <value>Невозможно вернуть авторежим</value>
+  </data>
+  <data name="FanCalibration_DataCleared" xml:space="preserve">
+    <value>Данные калибровки удалены.</value>
+  </data>
+  <data name="FanCalibration_DataClearedTitle" xml:space="preserve">
+    <value>Данные удалены</value>
+  </data>
+  <data name="DashboardChart_NoData" xml:space="preserve">
+    <value>Нет данных</value>
+  </data>
+  <data name="DashboardChart_WaitingForData" xml:space="preserve">
+    <value>Ожидание исторических данных (появятся после 2+ выборок)</value>
+  </data>
+  <data name="DashboardChart_ExportSuccess" xml:space="preserve">
+    <value>Данные успешно экспортированы!</value>
+  </data>
+  <data name="DashboardChart_ExportCompleteTitle" xml:space="preserve">
+    <value>Экспорт завершён</value>
+  </data>
+  <data name="DashboardChart_PowerTitle" xml:space="preserve">
+    <value>История энергопотребления</value>
+  </data>
+  <data name="DashboardChart_BatteryTitle" xml:space="preserve">
+    <value>История заряда батареи</value>
+  </data>
+  <data name="DashboardChart_TempTitle" xml:space="preserve">
+    <value>История температуры</value>
+  </data>
+  <data name="DashboardChart_FanTitle" xml:space="preserve">
+    <value>История оборотов вентиляторов</value>
+  </data>
+  <data name="DashboardChart_HistoryTitle" xml:space="preserve">
+    <value>Исторические данные</value>
+  </data>
+  <data name="Dashboard_TelemetryStale" xml:space="preserve">
+    <value>Данные телеметрии устарели: показания датчиков задерживаются. OmenCore пытается восстановиться.</value>
+  </data>
+  <data name="Dashboard_TelemetryDegraded" xml:space="preserve">
+    <value>Телеметрия деградировала: качество данных снижено. Мониторинг восстанавливается.</value>
+  </data>
+  <data name="Dashboard_AmdQuarantineWarningFormat" xml:space="preserve">
+    <value>Телеметрия AMD GPU временно изолирована после сбоя драйвера/библиотеки. Телеметрия CPU, вентиляторов, памяти и системы работает нормально.{0}</value>
+  </data>
+  <data name="Dashboard_AmdQuarantineReasonFormat" xml:space="preserve">
+    <value> Причина: {0}</value>
+  </data>
+  <data name="FanControl_ModeAutoDesc" xml:space="preserve">
+    <value>Авторежим: управление вентиляторами у прошивки</value>
+  </data>
+  <data name="FanControl_ModeMaxDesc" xml:space="preserve">
+    <value>Макс. режим: OmenCore запрашивает полное охлаждение</value>
+  </data>
+  <data name="FanControl_ModeCustomDesc" xml:space="preserve">
+    <value>Пользовательская кривая загружена, но не применена</value>
+  </data>
+  <data name="FanControl_CurveCustomActive" xml:space="preserve">
+    <value>Пользовательская кривая активно управляет вентиляторами</value>
+  </data>
+  <data name="FanControl_CurveActiveFormat" xml:space="preserve">
+    <value>Кривая «{0}» активно управляет вентиляторами</value>
+  </data>
+  <data name="FanControl_ModeConstantFormat" xml:space="preserve">
+    <value>Постоянный режим: OmenCore запрашивает {0}%</value>
+  </data>
+  <data name="FanControl_PresetSelectedFormat" xml:space="preserve">
+    <value>Выбран пресет «{0}»</value>
+  </data>
+  <data name="FanControl_ModeConstant" xml:space="preserve">
+    <value>Постоянный</value>
+  </data>
+  <data name="FanControl_ShareCodeNeedPoints" xml:space="preserve">
+    <value>Для кода обмена нужно минимум 2 точки кривой.</value>
+  </data>
+  <data name="FanControl_CannotCopyTitle" xml:space="preserve">
+    <value>Не удаётся скопировать код обмена</value>
+  </data>
+  <data name="FanControl_ClipboardNoText" xml:space="preserve">
+    <value>В буфере обмена нет текста.</value>
+  </data>
+  <data name="FanControl_ClipboardInvalidCode" xml:space="preserve">
+    <value>В буфере обмена нет действительного кода обмена кривой вентиляторов.</value>
+  </data>
+  <data name="FanControl_ImportFailedTitle" xml:space="preserve">
+    <value>Импорт не удался</value>
+  </data>
+  <data name="FanControl_NoSavedPreset" xml:space="preserve">
+    <value>В конфигурации нет сохранённого пресета вентиляторов.</value>
+  </data>
+  <data name="FanControl_ReapplyPresetTitle" xml:space="preserve">
+    <value>Повторно применить пресет</value>
+  </data>
+  <data name="FanControl_NoValidPresets" xml:space="preserve">
+    <value>В файле нет действительных пресетов вентиляторов.</value>
+  </data>
+  <data name="GpuClamp_AdapterMeets" xml:space="preserve">
+    <value>соответствует требованиям системы</value>
+  </data>
+  <data name="GpuClamp_AdapterBelow" xml:space="preserve">
+    <value>ниже требований системы</value>
+  </data>
+  <data name="GpuClamp_AdapterBattery" xml:space="preserve">
+    <value>работает от батареи</value>
+  </data>
+  <data name="GpuClamp_AdapterNotFunctioning" xml:space="preserve">
+    <value>работает некорректно</value>
+  </data>
+  <data name="GpuClamp_AdapterTypeC" xml:space="preserve">
+    <value>USB-C Power Delivery</value>
+  </data>
+  <data name="GpuClamp_AdapterNotSupported" xml:space="preserve">
+    <value>определение адаптера не поддерживается</value>
+  </data>
+  <data name="Main_ReportBundleFailed" xml:space="preserve">
+    <value>Не удалось создать пакет диагностики.</value>
+  </data>
+  <data name="Main_ReportErrorTitle" xml:space="preserve">
+    <value>Сообщить об ошибке</value>
+  </data>
+  <data name="Settings_MonitorActive1s" xml:space="preserve">
+    <value>Активно (1 с)</value>
+  </data>
+  <data name="Settings_MonitorIdle5s" xml:space="preserve">
+    <value>Фоновый режим (5 с)</value>
+  </data>
+  <data name="Settings_MonitorTrayOnly10s" xml:space="preserve">
+    <value>Только трей, минимум (10 с)</value>
+  </data>
+  <data name="Settings_MonitorCustomFormat" xml:space="preserve">
+    <value>Пользовательский ({0} мс)</value>
+  </data>
+  <data name="Settings_MonitorInitializing" xml:space="preserve">
+    <value>Инициализация</value>
+  </data>
+  <data name="Settings_FanCleaningDone" xml:space="preserve">
+    <value>Цикл очистки вентиляторов успешно завершён!</value>
+  </data>
+  <data name="Settings_DoneTitle" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="Settings_ResetDefaultsBody" xml:space="preserve">
+    <value>Все настройки сброшены к значениям по умолчанию.</value>
+  </data>
+  <data name="Settings_NoBloatware" xml:space="preserve">
+    <value>Предустановленное ПО не обнаружено. Сначала выполните сканирование.</value>
+  </data>
+  <data name="Settings_BiosReliabilitySummaryFormat" xml:space="preserve">
+    <value>{0}/{1} команд (успех {2}%, {3})</value>
+  </data>
+  <data name="Settings_BiosRatingExcellent" xml:space="preserve">
+    <value>Отлично</value>
+  </data>
+  <data name="Settings_BiosRatingGood" xml:space="preserve">
+    <value>Хорошо</value>
+  </data>
+  <data name="Settings_BiosRatingFair" xml:space="preserve">
+    <value>Удовлетворительно</value>
+  </data>
+  <data name="Settings_BiosRatingPoor" xml:space="preserve">
+    <value>Плохо</value>
+  </data>
+  <data name="Settings_BiosRatingCritical" xml:space="preserve">
+    <value>Критично</value>
+  </data>
+  <data name="Settings_BiosWaitingForCommands" xml:space="preserve">
+    <value>Ожидание команд...</value>
+  </data>
+  <data name="Settings_StandaloneCriticalMissingFormat" xml:space="preserve">
+    <value>Критическая деградация: отсутствуют обязательные компоненты ({0}): {1}</value>
+  </data>
+  <data name="Settings_StandaloneDirectWmiUnavailable" xml:space="preserve">
+    <value>Критическая деградация: прямой интерфейс HP WMI BIOS недоступен; активен резервный бэкенд (базовое управление вентиляторами работает, часть функций HP может быть ограничена)</value>
+  </data>
+  <data name="Settings_ResumeStatusSuspended" xml:space="preserve">
+    <value>Приостановлено</value>
+  </data>
+  <data name="Settings_ResumeStatusRecovering" xml:space="preserve">
+    <value>Восстановление</value>
+  </data>
+  <data name="Settings_ResumeStatusHealthy" xml:space="preserve">
+    <value>Норма</value>
+  </data>
+  <data name="Settings_ResumeStatusAttentionNeeded" xml:space="preserve">
+    <value>Требует внимания</value>
+  </data>
+  <data name="Settings_ResumeSummarySuspended" xml:space="preserve">
+    <value>Обнаружено приостановление системы. Ожидание начала восстановления.</value>
+  </data>
+  <data name="Settings_ResumeSummaryRecovering" xml:space="preserve">
+    <value>Обнаружено возобновление. Собирается хронология восстановления.</value>
+  </data>
+  <data name="SystemControl_ConflictXtu" xml:space="preserve">
+    <value>Intel Extreme Tuning Utility (XTU) управляет напряжением CPU. XTU блокирует доступ к MSR для других приложений, не позволяя OmenCore применять снижение напряжения.</value>
+  </data>
+  <data name="SystemControl_ConflictThrottleStop" xml:space="preserve">
+    <value>ThrottleStop работает и управляет напряжением CPU. Возможен конфликт с настройками снижения напряжения OmenCore.</value>
+  </data>
+  <data name="SystemControl_ConflictDtt" xml:space="preserve">
+    <value>Служба Intel Dynamic Tuning Technology активна и может управлять настройками напряжения.</value>
+  </data>
+  <data name="SystemControl_ConflictOgh" xml:space="preserve">
+    <value>OMEN Gaming Hub управляет настройками CPU. Пока OGH установлен, часть управления напряжением может выполнять ПО HP.</value>
+  </data>
+  <data name="SystemControl_ConflictOmenCap" xml:space="preserve">
+    <value>OmenCap.exe запущен из Windows DriverStore. Этот компонент HP остаётся после удаления OMEN Gaming Hub и блокирует доступ к MSR для снижения напряжения.</value>
+  </data>
+  <data name="SystemControl_ConflictGenericFormat" xml:space="preserve">
+    <value>{0} управляет напряжением CPU и может конфликтовать с OmenCore.</value>
+  </data>
+  <data name="SystemControl_ConflictGenericFallback" xml:space="preserve">
+    <value>Внешняя программа</value>
+  </data>
+  <data name="SystemControl_ConflictHintDefault" xml:space="preserve">
+    <value>Закройте или отключите внешнее приложение, затем перезапустите OmenCore.</value>
+  </data>
+  <data name="SystemControl_FixXtu" xml:space="preserve">
+    <value>1. Откройте «Службы» (Win+R → services.msc)&#10;2. Найдите службу 'Intel(R) Extreme Tuning Utility'&#10;3. ПКМ → Остановить, затем тип запуска «Отключена»&#10;4. При желании удалите XTU через Панель управления&#10;5. Перезапустите OmenCore</value>
+  </data>
+  <data name="SystemControl_FixThrottleStop" xml:space="preserve">
+    <value>1. Закройте ThrottleStop из системного трея&#10;2. Отключите автозапуск ThrottleStop (снимите «Запуск свёрнутым»)&#10;3. Перезапустите OmenCore, чтобы вернуть управление напряжением</value>
+  </data>
+  <data name="SystemControl_FixDtt" xml:space="preserve">
+    <value>1. Откройте «Службы» (Win+R → services.msc)&#10;2. Найдите 'Intel(R) Dynamic Tuning Service'&#10;3. Остановите и отключите службу&#10;4. Внимание: это может повлиять на терморегулирование Intel</value>
+  </data>
+  <data name="SystemControl_FixOgh" xml:space="preserve">
+    <value>1. Используйте функцию «Очистить OMEN Gaming Hub» в настройках OmenCore&#10;2. Или удалите OGH через Панель управления → Программы&#10;3. Перезагрузите компьютер после удаления</value>
+  </data>
+  <data name="SystemControl_FixOmenCap" xml:space="preserve">
+    <value>OmenCap остаётся в Windows DriverStore после удаления OGH:&#10;1. Откройте командную строку администратора&#10;2. Выполните: pnputil /enum-drivers | findstr /i omen&#10;3. Запишите oem##.inf для hpomencustomcapcomp&#10;4. Выполните: pnputil /delete-driver oem##.inf /force&#10;5. Перезагрузите компьютер&#10;6. Компонент доступа к оборудованию HP будет удалён полностью</value>
+  </data>
+  <data name="SystemControl_PerfDescBalanced" xml:space="preserve">
+    <value>Обычный режим — сбалансированная производительность</value>
+  </data>
+  <data name="SystemControl_PerfDescPerformance" xml:space="preserve">
+    <value>Высокая производительность — максимальная мощность GPU</value>
+  </data>
+  <data name="SystemControl_PerfDescEco" xml:space="preserve">
+    <value>Энергосбережение — сниженная мощность</value>
+  </data>
+  <data name="SystemControl_PerfDescSelect" xml:space="preserve">
+    <value>Выберите режим производительности</value>
+  </data>
+  <data name="SystemControl_QuietModeDesc" xml:space="preserve">
+    <value>Энергосбережение — тише вентиляторы, ниже лимиты. Для тихих мест и лёгких задач.</value>
+  </data>
+  <data name="SystemControl_PerfModeDesc" xml:space="preserve">
+    <value>Режим высокой производительности — повышенные лимиты CPU/GPU для игр и тяжёлых задач.</value>
+  </data>
+  <data name="SystemControl_TurboModeDesc" xml:space="preserve">
+    <value>Максимальный профиль производительности для кратких тяжёлых сессий.</value>
+  </data>
+  <data name="SystemControl_DefaultModeDesc" xml:space="preserve">
+    <value>Режим по умолчанию — баланс производительности и потребления. Для повседневной работы.</value>
+  </data>
+  <data name="SystemControl_AmdPowerProviderUnavailable" xml:space="preserve">
+    <value>Провайдер настройки питания AMD недоступен на этой системе.</value>
+  </data>
+  <data name="SystemControl_Pl1Description" xml:space="preserve">
+    <value>Длительный лимит мощности (PL1) — долговременный TDP</value>
+  </data>
+  <data name="SystemControl_Pl2Description" xml:space="preserve">
+    <value>Пиковый лимит мощности (PL2) — кратковременная мощность турбо</value>
+  </data>
+  <data name="SystemControl_ProfileNameRequired" xml:space="preserve">
+    <value>Введите имя профиля.</value>
+  </data>
+  <data name="SystemControl_ProfileNameRequiredTitle" xml:space="preserve">
+    <value>Требуется имя профиля</value>
+  </data>
+  <data name="SystemControl_ProfileCannotOverwriteBuiltin" xml:space="preserve">
+    <value>Нельзя перезаписать встроенные профили. Выберите другое имя.</value>
+  </data>
+  <data name="SystemControl_ProfileInvalidNameTitle" xml:space="preserve">
+    <value>Неверное имя</value>
+  </data>
+  <data name="SystemControl_ProfileCannotDeleteBuiltin" xml:space="preserve">
+    <value>Нельзя удалить встроенные профили.</value>
+  </data>
+  <data name="SystemControl_ProfileDeleteTitle" xml:space="preserve">
+    <value>Удалить профиль</value>
+  </data>
+  <data name="SystemControl_GpuBoost15W" xml:space="preserve">
+    <value>+15W к GPU</value>
+  </data>
+  <data name="SystemControl_GpuBoost25W" xml:space="preserve">
+    <value>+25W к GPU</value>
+  </data>
+  <data name="SystemControl_GpuPowerBalanced" xml:space="preserve">
+    <value>Сбалансированное питание GPU</value>
+  </data>
+  <data name="SystemControl_GpuPowerBase" xml:space="preserve">
+    <value>Базовый TGP</value>
+  </data>
+  <data name="SystemControl_GpuPowerUnknown" xml:space="preserve">
+    <value>Питание GPU неизвестно</value>
+  </data>
+  <data name="SystemControl_GpuPowerBaseSuffix" xml:space="preserve">
+    <value>{0} • Питание GPU: базовое</value>
+  </data>
+  <data name="Onboarding_MonitoringActive" xml:space="preserve">
+    <value>Мониторинг оборудования активен</value>
+  </data>
+  <data name="Onboarding_DriverCheckHint" xml:space="preserve">
+    <value>Сведения о драйверах: Настройки → Состояние</value>
+  </data>
+  <data name="QuickPopup_ToggleRefreshRate" xml:space="preserve">
+    <value>Переключить частоту обновления</value>
+  </data>
+  <data name="FanControl_ApplyingCustomCurve" xml:space="preserve">
+    <value>Применение пользовательской кривой</value>
+  </data>
+  <data name="ColorPicker_ZoneSubtitleFormat" xml:space="preserve">
+    <value>Зона {0} - {1}</value>
+  </data>
+  <data name="ZoneName_Wasd" xml:space="preserve">
+    <value>WASD</value>
+  </data>
+  <data name="ZoneName_Left" xml:space="preserve">
+    <value>Левая</value>
+  </data>
+  <data name="ZoneName_Right" xml:space="preserve">
+    <value>Правая</value>
+  </data>
+  <data name="ZoneName_FarRight" xml:space="preserve">
+    <value>Крайняя правая</value>
+  </data>
 </root>

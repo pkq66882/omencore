@@ -425,25 +425,37 @@ namespace OmenCore.ViewModels
             }
         }
 
+        /// <summary>Localized fan mode label for status sentences; unknown modes pass through.</summary>
+        private static string FanModeDisplayName(string? mode) => mode switch
+        {
+            "Auto" => Strings.TrayIcon_ModeAuto,
+            "Max" => Strings.TrayIcon_ModeMax,
+            "Quiet" => Strings.TrayIcon_ModeQuiet,
+            "Custom" => Strings.TrayIcon_ModeCustom,
+            "Curve" => Strings.TrayIcon_ModeCurve,
+            "Constant" => Strings.FanControl_ModeConstant,
+            _ => mode ?? string.Empty
+        };
+
         public string FanOwnershipSummary
         {
             get
             {
                 if (IsApplyingCustomCurve)
-                    return "Applying custom curve";
+                    return Strings.FanControl_ApplyingCustomCurve;
 
                 if (IsCurveActive)
                     return ActiveFanMode == "Custom"
-                        ? "Custom curve is actively managing fans"
-                        : $"{ActiveFanMode} curve is actively managing fans";
+                        ? Strings.FanControl_CurveCustomActive
+                        : string.Format(Strings.FanControl_CurveActiveFormat, FanModeDisplayName(ActiveFanMode));
 
                 return ActiveFanMode switch
                 {
-                    "Auto" => "Auto mode: firmware owns fan control",
-                    "Max" => "Max mode: OmenCore requests full cooling",
-                    "Constant" => $"Constant mode: OmenCore requests {ConstantFanPercent}%",
-                    "Custom" => "Custom curve loaded, not actively applied",
-                    _ => $"{ActiveFanMode} preset selected"
+                    "Auto" => Strings.FanControl_ModeAutoDesc,
+                    "Max" => Strings.FanControl_ModeMaxDesc,
+                    "Constant" => string.Format(Strings.FanControl_ModeConstantFormat, ConstantFanPercent),
+                    "Custom" => Strings.FanControl_ModeCustomDesc,
+                    _ => string.Format(Strings.FanControl_PresetSelectedFormat, FanModeDisplayName(ActiveFanMode))
                 };
             }
         }
@@ -1263,7 +1275,7 @@ namespace OmenCore.ViewModels
                 var code = OmenCore.Utils.FanCurveShareCode.Generate(CustomFanCurve, SelectedPreset?.Name ?? "Custom Curve");
                 if (code == null)
                 {
-                    System.Windows.MessageBox.Show("Need at least 2 curve points to generate a share code.", "Cannot Copy Share Code",
+                    System.Windows.MessageBox.Show(Strings.FanControl_ShareCodeNeedPoints, Strings.FanControl_CannotCopyTitle,
                         System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
                     return;
                 }
@@ -1290,7 +1302,7 @@ namespace OmenCore.ViewModels
             {
                 if (!System.Windows.Clipboard.ContainsText())
                 {
-                    System.Windows.MessageBox.Show("Clipboard doesn't contain text.", "Import Failed",
+                    System.Windows.MessageBox.Show(Strings.FanControl_ClipboardNoText, Strings.FanControl_ImportFailedTitle,
                         System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
                     return;
                 }
@@ -1298,7 +1310,7 @@ namespace OmenCore.ViewModels
                 var clipboardText = System.Windows.Clipboard.GetText();
                 if (!OmenCore.Utils.FanCurveShareCode.TryParse(clipboardText, out var points, out var name))
                 {
-                    System.Windows.MessageBox.Show("Clipboard doesn't contain a valid fan curve share code.", "Import Failed",
+                    System.Windows.MessageBox.Show(Strings.FanControl_ClipboardInvalidCode, Strings.FanControl_ImportFailedTitle,
                         System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
                     return;
                 }
@@ -2229,7 +2241,7 @@ namespace OmenCore.ViewModels
             var saved = _configService.Config.LastFanPresetName;
             if (string.IsNullOrEmpty(saved))
             {
-                System.Windows.MessageBox.Show("No saved fan preset found in configuration.", "Reapply Saved Preset",
+                System.Windows.MessageBox.Show(Strings.FanControl_NoSavedPreset, Strings.FanControl_ReapplyPresetTitle,
                     System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Information);
                 return;
             }
@@ -2452,7 +2464,7 @@ namespace OmenCore.ViewModels
 
                     if (imported?.Presets == null || imported.Presets.Count == 0)
                     {
-                        System.Windows.MessageBox.Show("No valid fan presets found in file.", "Import Failed",
+                        System.Windows.MessageBox.Show(Strings.FanControl_NoValidPresets, Strings.FanControl_ImportFailedTitle,
                             System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
                         return;
                     }

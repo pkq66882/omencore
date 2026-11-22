@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using OmenCore.Hardware;
 using OmenCore.Models;
 using OmenCore.Services;
@@ -98,12 +99,12 @@ namespace OmenCore.ViewModels
 
                 var verdict = info.Status switch
                 {
-                    HpWmiBios.SmartAdapterStatus.MeetsRequirement => "meets this machine's requirement",
-                    HpWmiBios.SmartAdapterStatus.BelowRequirement => "below this machine's requirement",
-                    HpWmiBios.SmartAdapterStatus.BatteryPower => "running on battery",
-                    HpWmiBios.SmartAdapterStatus.NotFunctioning => "not functioning correctly",
-                    HpWmiBios.SmartAdapterStatus.ConnectedTypeC => "USB-C Power Delivery",
-                    HpWmiBios.SmartAdapterStatus.NotSupported => "adapter detection not supported",
+                    HpWmiBios.SmartAdapterStatus.MeetsRequirement => Strings.GpuClamp_AdapterMeets,
+                    HpWmiBios.SmartAdapterStatus.BelowRequirement => Strings.GpuClamp_AdapterBelow,
+                    HpWmiBios.SmartAdapterStatus.BatteryPower => Strings.GpuClamp_AdapterBattery,
+                    HpWmiBios.SmartAdapterStatus.NotFunctioning => Strings.GpuClamp_AdapterNotFunctioning,
+                    HpWmiBios.SmartAdapterStatus.ConnectedTypeC => Strings.GpuClamp_AdapterTypeC,
+                    HpWmiBios.SmartAdapterStatus.NotSupported => Strings.GpuClamp_AdapterNotSupported,
                     _ => info.Status.ToString()
                 };
 

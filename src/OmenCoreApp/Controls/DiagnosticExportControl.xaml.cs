@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -88,14 +89,14 @@ namespace OmenCore.Controls
                 CopyPathButton.Visibility = Visibility.Collapsed;
 
                 ExportProgress.Value = 0;
-                ProgressText.Text = "Starting diagnostic export...";
+                ProgressText.Text = Strings.DiagnosticExport_Starting;
 
                 // Perform export
                 var exportResult = await PerformDiagnosticExportAsync(filePath, _exportCts.Token);
 
                 // Update progress
                 ExportProgress.Value = 100;
-                ProgressText.Text = "Export completed";
+                ProgressText.Text = Strings.DiagnosticExport_Completed;
 
                 // Show results
                 DisplayExportResults(exportResult);
@@ -105,7 +106,7 @@ namespace OmenCore.Controls
             }
             catch (OperationCanceledException)
             {
-                ProgressText.Text = "Export cancelled";
+                ProgressText.Text = Strings.DiagnosticExport_Cancelled;
                 _logging.Info("Diagnostic export cancelled by user");
             }
             catch (Exception ex)
@@ -541,7 +542,7 @@ namespace OmenCore.Controls
 
             if (_fanService == null)
             {
-                data.Status = "Fan service unavailable";
+                data.Status = Strings.DiagnosticExport_FanServiceUnavailable;
                 return data;
             }
 
@@ -624,14 +625,14 @@ namespace OmenCore.Controls
 
             if (_performanceService == null)
             {
-                data.Status = "Performance/tuning service unavailable";
+                data.Status = Strings.DiagnosticExport_PerfServiceUnavailable;
                 return data;
             }
 
             try
             {
                 var trace = _performanceService.GetApplyTraceSnapshot();
-                data.Status = "Performance mode service available";
+                data.Status = Strings.DiagnosticExport_PerfServiceAvailable;
                 data.CurrentMode = _performanceService.CurrentMode?.ToString() ?? "Unknown";
                 data.AvailableModes = _performanceService.GetAvailableModes()
                     .Select(m => m.ToString())
@@ -645,7 +646,7 @@ namespace OmenCore.Controls
             }
             catch (Exception ex)
             {
-                data.Status = "Performance/tuning readiness failed";
+                data.Status = Strings.DiagnosticExport_PerfReadinessFailed;
                 data.ErrorMessage = ex.Message;
             }
 
@@ -844,7 +845,7 @@ namespace OmenCore.Controls
 
             if (result.Success)
             {
-                ResultsText.Text = "Export completed successfully";
+                ResultsText.Text = Strings.DiagnosticExport_CompletedSuccessfully;
                 ResultsText.Foreground = System.Windows.Media.Brushes.Green;
                 FilePathText.Text = $"File saved to: {result.ExportPath}";
                 FileSizeText.Text = $"File size: {FormatFileSize(result.FileSize)}";
@@ -923,7 +924,7 @@ namespace OmenCore.Controls
             if (!string.IsNullOrEmpty(_lastExportPath))
             {
                 Clipboard.SetText(_lastExportPath);
-                MessageBox.Show("File path copied to clipboard", "Copied", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Strings.DiagnosticExport_FilePathCopied, Strings.DiagnosticExport_CopiedTitle, MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 

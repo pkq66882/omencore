@@ -7337,4 +7337,388 @@
   <data name="Lid_Open" xml:space="preserve">
     <value>Open</value>
   </data>
+  <data name="DiagnosticExport_Starting" xml:space="preserve">
+    <value>Starting diagnostic export...</value>
+  </data>
+  <data name="DiagnosticExport_Completed" xml:space="preserve">
+    <value>Export completed</value>
+  </data>
+  <data name="DiagnosticExport_Cancelled" xml:space="preserve">
+    <value>Export cancelled</value>
+  </data>
+  <data name="DiagnosticExport_CompletedSuccessfully" xml:space="preserve">
+    <value>Export completed successfully</value>
+  </data>
+  <data name="DiagnosticExport_FanServiceUnavailable" xml:space="preserve">
+    <value>Fan service unavailable</value>
+  </data>
+  <data name="DiagnosticExport_PerfServiceUnavailable" xml:space="preserve">
+    <value>Performance/tuning service unavailable</value>
+  </data>
+  <data name="DiagnosticExport_PerfServiceAvailable" xml:space="preserve">
+    <value>Performance mode service available</value>
+  </data>
+  <data name="DiagnosticExport_PerfReadinessFailed" xml:space="preserve">
+    <value>Performance/tuning readiness failed</value>
+  </data>
+  <data name="DiagnosticExport_FilePathCopied" xml:space="preserve">
+    <value>File path copied to clipboard</value>
+  </data>
+  <data name="DiagnosticExport_CopiedTitle" xml:space="preserve">
+    <value>Copied</value>
+  </data>
+  <data name="FanCalibration_ServiceUnavailable" xml:space="preserve">
+    <value>Fan calibration service is unavailable in this context.</value>
+  </data>
+  <data name="FanCalibration_MissingVerificationService" xml:space="preserve">
+    <value>Calibration wizard cannot run: missing fan verification service.</value>
+  </data>
+  <data name="FanCalibration_ModelDetectFailed" xml:space="preserve">
+    <value>Failed to detect model information</value>
+  </data>
+  <data name="FanCalibration_NoCalibrationData" xml:space="preserve">
+    <value>No calibration data found - run calibration first</value>
+  </data>
+  <data name="FanCalibration_VerificationUnavailable" xml:space="preserve">
+    <value>Fan verification service is unavailable.</value>
+  </data>
+  <data name="FanCalibration_VerificationUnavailableBody" xml:space="preserve">
+    <value>Fan verification service is not available. Please check that hardware monitoring is working.</value>
+  </data>
+  <data name="FanCalibration_Starting" xml:space="preserve">
+    <value>Starting calibration...</value>
+  </data>
+  <data name="FanCalibration_Completed" xml:space="preserve">
+    <value>Calibration completed</value>
+  </data>
+  <data name="FanCalibration_Cancelled" xml:space="preserve">
+    <value>Calibration cancelled</value>
+  </data>
+  <data name="FanCalibration_RestoreAutoUnavailableTitle" xml:space="preserve">
+    <value>Restore Auto Unavailable</value>
+  </data>
+  <data name="FanCalibration_DataCleared" xml:space="preserve">
+    <value>Calibration data cleared.</value>
+  </data>
+  <data name="FanCalibration_DataClearedTitle" xml:space="preserve">
+    <value>Data Cleared</value>
+  </data>
+  <data name="DashboardChart_NoData" xml:space="preserve">
+    <value>No data</value>
+  </data>
+  <data name="DashboardChart_WaitingForData" xml:space="preserve">
+    <value>Waiting for historical data (displays after 2+ samples)</value>
+  </data>
+  <data name="DashboardChart_ExportSuccess" xml:space="preserve">
+    <value>Data exported successfully!</value>
+  </data>
+  <data name="DashboardChart_ExportCompleteTitle" xml:space="preserve">
+    <value>Export Complete</value>
+  </data>
+  <data name="DashboardChart_PowerTitle" xml:space="preserve">
+    <value>Power Consumption History</value>
+  </data>
+  <data name="DashboardChart_BatteryTitle" xml:space="preserve">
+    <value>Battery Charge History</value>
+  </data>
+  <data name="DashboardChart_TempTitle" xml:space="preserve">
+    <value>Temperature History</value>
+  </data>
+  <data name="DashboardChart_FanTitle" xml:space="preserve">
+    <value>Fan Speeds History</value>
+  </data>
+  <data name="DashboardChart_HistoryTitle" xml:space="preserve">
+    <value>Historical Data</value>
+  </data>
+  <data name="Dashboard_TelemetryStale" xml:space="preserve">
+    <value>Telemetry stale: sensor data is delayed or frozen. OmenCore is attempting automatic recovery.</value>
+  </data>
+  <data name="Dashboard_TelemetryDegraded" xml:space="preserve">
+    <value>Telemetry degraded: data quality reduced. Monitoring recovery is in progress.</value>
+  </data>
+  <data name="Dashboard_AmdQuarantineWarningFormat" xml:space="preserve">
+    <value>AMD GPU telemetry is temporarily quarantined after a driver/library fault. CPU, fan, memory, and system telemetry continue normally.{0}</value>
+  </data>
+  <data name="Dashboard_AmdQuarantineReasonFormat" xml:space="preserve">
+    <value> Reason: {0}</value>
+  </data>
+  <data name="FanControl_ModeAutoDesc" xml:space="preserve">
+    <value>Auto mode: firmware owns fan control</value>
+  </data>
+  <data name="FanControl_ModeMaxDesc" xml:space="preserve">
+    <value>Max mode: OmenCore requests full cooling</value>
+  </data>
+  <data name="FanControl_ModeCustomDesc" xml:space="preserve">
+    <value>Custom curve loaded, not actively applied</value>
+  </data>
+  <data name="FanControl_CurveCustomActive" xml:space="preserve">
+    <value>Custom curve is actively managing fans</value>
+  </data>
+  <data name="FanControl_CurveActiveFormat" xml:space="preserve">
+    <value>{0} curve is actively managing fans</value>
+  </data>
+  <data name="FanControl_ModeConstantFormat" xml:space="preserve">
+    <value>Constant mode: OmenCore requests {0}%</value>
+  </data>
+  <data name="FanControl_PresetSelectedFormat" xml:space="preserve">
+    <value>{0} preset selected</value>
+  </data>
+  <data name="FanControl_ModeConstant" xml:space="preserve">
+    <value>Constant</value>
+  </data>
+  <data name="FanControl_ShareCodeNeedPoints" xml:space="preserve">
+    <value>Need at least 2 curve points to generate a share code.</value>
+  </data>
+  <data name="FanControl_CannotCopyTitle" xml:space="preserve">
+    <value>Cannot Copy Share Code</value>
+  </data>
+  <data name="FanControl_ClipboardNoText" xml:space="preserve">
+    <value>Clipboard doesn't contain text.</value>
+  </data>
+  <data name="FanControl_ClipboardInvalidCode" xml:space="preserve">
+    <value>Clipboard doesn't contain a valid fan curve share code.</value>
+  </data>
+  <data name="FanControl_ImportFailedTitle" xml:space="preserve">
+    <value>Import Failed</value>
+  </data>
+  <data name="FanControl_NoSavedPreset" xml:space="preserve">
+    <value>No saved fan preset found in configuration.</value>
+  </data>
+  <data name="FanControl_ReapplyPresetTitle" xml:space="preserve">
+    <value>Reapply Saved Preset</value>
+  </data>
+  <data name="FanControl_NoValidPresets" xml:space="preserve">
+    <value>No valid fan presets found in file.</value>
+  </data>
+  <data name="GpuClamp_AdapterMeets" xml:space="preserve">
+    <value>meets this machine's requirement</value>
+  </data>
+  <data name="GpuClamp_AdapterBelow" xml:space="preserve">
+    <value>below this machine's requirement</value>
+  </data>
+  <data name="GpuClamp_AdapterBattery" xml:space="preserve">
+    <value>running on battery</value>
+  </data>
+  <data name="GpuClamp_AdapterNotFunctioning" xml:space="preserve">
+    <value>not functioning correctly</value>
+  </data>
+  <data name="GpuClamp_AdapterTypeC" xml:space="preserve">
+    <value>USB-C Power Delivery</value>
+  </data>
+  <data name="GpuClamp_AdapterNotSupported" xml:space="preserve">
+    <value>adapter detection not supported</value>
+  </data>
+  <data name="Main_ReportBundleFailed" xml:space="preserve">
+    <value>Failed to create diagnostics bundle.</value>
+  </data>
+  <data name="Main_ReportErrorTitle" xml:space="preserve">
+    <value>Report Error</value>
+  </data>
+  <data name="Settings_MonitorActive1s" xml:space="preserve">
+    <value>Active (1s)</value>
+  </data>
+  <data name="Settings_MonitorIdle5s" xml:space="preserve">
+    <value>Idle background (5s)</value>
+  </data>
+  <data name="Settings_MonitorTrayOnly10s" xml:space="preserve">
+    <value>Tray-only ultra-low (10s)</value>
+  </data>
+  <data name="Settings_MonitorCustomFormat" xml:space="preserve">
+    <value>Custom ({0} ms)</value>
+  </data>
+  <data name="Settings_MonitorInitializing" xml:space="preserve">
+    <value>Initializing</value>
+  </data>
+  <data name="Settings_FanCleaningDone" xml:space="preserve">
+    <value>Fan cleaning cycle completed successfully!</value>
+  </data>
+  <data name="Settings_DoneTitle" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Settings_ResetDefaultsBody" xml:space="preserve">
+    <value>All settings have been reset to their default values.</value>
+  </data>
+  <data name="Settings_NoBloatware" xml:space="preserve">
+    <value>No bloatware detected. Run a scan first.</value>
+  </data>
+  <data name="Settings_BiosReliabilitySummaryFormat" xml:space="preserve">
+    <value>{0}/{1} commands ({2}% success, {3})</value>
+  </data>
+  <data name="Settings_BiosRatingExcellent" xml:space="preserve">
+    <value>Excellent</value>
+  </data>
+  <data name="Settings_BiosRatingGood" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="Settings_BiosRatingFair" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="Settings_BiosRatingPoor" xml:space="preserve">
+    <value>Poor</value>
+  </data>
+  <data name="Settings_BiosRatingCritical" xml:space="preserve">
+    <value>Critical</value>
+  </data>
+  <data name="Settings_BiosWaitingForCommands" xml:space="preserve">
+    <value>Waiting for commands...</value>
+  </data>
+  <data name="Settings_StandaloneCriticalMissingFormat" xml:space="preserve">
+    <value>Critical degradation: missing {0} required component(s): {1}</value>
+  </data>
+  <data name="Settings_StandaloneDirectWmiUnavailable" xml:space="preserve">
+    <value>Critical degradation: direct HP WMI BIOS interface is unavailable; fallback backend is active (core fan control works, some HP-dependent features may be limited)</value>
+  </data>
+  <data name="Settings_ResumeStatusSuspended" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="Settings_ResumeStatusRecovering" xml:space="preserve">
+    <value>Recovering</value>
+  </data>
+  <data name="Settings_ResumeStatusHealthy" xml:space="preserve">
+    <value>Healthy</value>
+  </data>
+  <data name="Settings_ResumeStatusAttentionNeeded" xml:space="preserve">
+    <value>Attention Needed</value>
+  </data>
+  <data name="Settings_ResumeSummarySuspended" xml:space="preserve">
+    <value>System suspend detected. Waiting for resume recovery to begin.</value>
+  </data>
+  <data name="Settings_ResumeSummaryRecovering" xml:space="preserve">
+    <value>Resume detected. Recovery timeline is being collected.</value>
+  </data>
+  <data name="SystemControl_ConflictXtu" xml:space="preserve">
+    <value>Intel Extreme Tuning Utility (XTU) is controlling CPU voltage settings. XTU blocks MSR (Model Specific Register) access for other applications, preventing OmenCore from applying undervolts.</value>
+  </data>
+  <data name="SystemControl_ConflictThrottleStop" xml:space="preserve">
+    <value>ThrottleStop is running and managing CPU voltage. It may conflict with OmenCore's undervolt settings.</value>
+  </data>
+  <data name="SystemControl_ConflictDtt" xml:space="preserve">
+    <value>Intel Dynamic Tuning Technology service is active and may be controlling voltage settings.</value>
+  </data>
+  <data name="SystemControl_ConflictOgh" xml:space="preserve">
+    <value>OMEN Gaming Hub is managing CPU settings. While OGH is installed, some voltage controls may be handled by HP's software.</value>
+  </data>
+  <data name="SystemControl_ConflictOmenCap" xml:space="preserve">
+    <value>OmenCap.exe is running from Windows DriverStore. This HP component persists after OMEN Gaming Hub uninstall and blocks MSR access for undervolting.</value>
+  </data>
+  <data name="SystemControl_ConflictGenericFormat" xml:space="preserve">
+    <value>{0} is controlling CPU voltage settings and may conflict with OmenCore.</value>
+  </data>
+  <data name="SystemControl_ConflictGenericFallback" xml:space="preserve">
+    <value>An external program</value>
+  </data>
+  <data name="SystemControl_ConflictHintDefault" xml:space="preserve">
+    <value>Close or disable the external application, then restart OmenCore.</value>
+  </data>
+  <data name="SystemControl_FixXtu" xml:space="preserve">
+    <value>1. Open Services (Win+R → services.msc)&#10;2. Find 'Intel(R) Extreme Tuning Utility' service&#10;3. Right-click → Stop, then set Startup type to 'Disabled'&#10;4. Optionally uninstall XTU from Control Panel&#10;5. Restart OmenCore</value>
+  </data>
+  <data name="SystemControl_FixThrottleStop" xml:space="preserve">
+    <value>1. Close ThrottleStop from the system tray&#10;2. Disable ThrottleStop's auto-start (uncheck 'Start Minimized')&#10;3. Restart OmenCore to take over voltage control</value>
+  </data>
+  <data name="SystemControl_FixDtt" xml:space="preserve">
+    <value>1. Open Services (Win+R → services.msc)&#10;2. Find 'Intel(R) Dynamic Tuning Service'&#10;3. Stop and disable the service&#10;4. Note: This may affect Intel thermal management</value>
+  </data>
+  <data name="SystemControl_FixOgh" xml:space="preserve">
+    <value>1. Use OmenCore's 'Clean OMEN Gaming Hub' feature in Settings&#10;2. Or uninstall OGH from Control Panel → Programs&#10;3. Restart your computer after removal</value>
+  </data>
+  <data name="SystemControl_FixOmenCap" xml:space="preserve">
+    <value>OmenCap persists in Windows DriverStore after OGH uninstall:&#10;1. Open Admin Command Prompt&#10;2. Run: pnputil /enum-drivers | findstr /i omen&#10;3. Note the oem##.inf for hpomencustomcapcomp&#10;4. Run: pnputil /delete-driver oem##.inf /force&#10;5. Reboot your computer&#10;6. This fully removes HP's hardware access component</value>
+  </data>
+  <data name="SystemControl_PerfDescBalanced" xml:space="preserve">
+    <value>Normal mode - balanced performance</value>
+  </data>
+  <data name="SystemControl_PerfDescPerformance" xml:space="preserve">
+    <value>High performance - maximum GPU wattage</value>
+  </data>
+  <data name="SystemControl_PerfDescEco" xml:space="preserve">
+    <value>Power saving mode - reduced wattage</value>
+  </data>
+  <data name="SystemControl_PerfDescSelect" xml:space="preserve">
+    <value>Select a performance mode</value>
+  </data>
+  <data name="SystemControl_QuietModeDesc" xml:space="preserve">
+    <value>Power saving mode - reduced fan noise, lower power limits. Best for quiet environments and light tasks.</value>
+  </data>
+  <data name="SystemControl_PerfModeDesc" xml:space="preserve">
+    <value>High performance mode - higher CPU/GPU power targets for gaming and heavy workloads.</value>
+  </data>
+  <data name="SystemControl_TurboModeDesc" xml:space="preserve">
+    <value>Maximum configured performance profile for short high-load sessions.</value>
+  </data>
+  <data name="SystemControl_DefaultModeDesc" xml:space="preserve">
+    <value>Default mode - balanced performance and power consumption. Good for everyday use.</value>
+  </data>
+  <data name="SystemControl_AmdPowerProviderUnavailable" xml:space="preserve">
+    <value>AMD power tuning provider is unavailable on this system.</value>
+  </data>
+  <data name="SystemControl_Pl1Description" xml:space="preserve">
+    <value>Sustained power limit (PL1) - Long-term sustained TDP</value>
+  </data>
+  <data name="SystemControl_Pl2Description" xml:space="preserve">
+    <value>Burst power limit (PL2) - Short-term turbo boost power</value>
+  </data>
+  <data name="SystemControl_ProfileNameRequired" xml:space="preserve">
+    <value>Please enter a name for the profile.</value>
+  </data>
+  <data name="SystemControl_ProfileNameRequiredTitle" xml:space="preserve">
+    <value>Profile Name Required</value>
+  </data>
+  <data name="SystemControl_ProfileCannotOverwriteBuiltin" xml:space="preserve">
+    <value>Cannot overwrite built-in profiles. Please choose a different name.</value>
+  </data>
+  <data name="SystemControl_ProfileInvalidNameTitle" xml:space="preserve">
+    <value>Invalid Name</value>
+  </data>
+  <data name="SystemControl_ProfileCannotDeleteBuiltin" xml:space="preserve">
+    <value>Cannot delete built-in profiles.</value>
+  </data>
+  <data name="SystemControl_ProfileDeleteTitle" xml:space="preserve">
+    <value>Delete Profile</value>
+  </data>
+  <data name="SystemControl_GpuBoost15W" xml:space="preserve">
+    <value>+15W GPU Boost</value>
+  </data>
+  <data name="SystemControl_GpuBoost25W" xml:space="preserve">
+    <value>+25W GPU Boost</value>
+  </data>
+  <data name="SystemControl_GpuPowerBalanced" xml:space="preserve">
+    <value>Balanced GPU power</value>
+  </data>
+  <data name="SystemControl_GpuPowerBase" xml:space="preserve">
+    <value>Base TGP</value>
+  </data>
+  <data name="SystemControl_GpuPowerUnknown" xml:space="preserve">
+    <value>GPU power unknown</value>
+  </data>
+  <data name="SystemControl_GpuPowerBaseSuffix" xml:space="preserve">
+    <value>{0} • GPU Power: base</value>
+  </data>
+  <data name="Onboarding_MonitoringActive" xml:space="preserve">
+    <value>Hardware monitoring active</value>
+  </data>
+  <data name="Onboarding_DriverCheckHint" xml:space="preserve">
+    <value>Check Settings → Status for driver details</value>
+  </data>
+  <data name="QuickPopup_ToggleRefreshRate" xml:space="preserve">
+    <value>Toggle refresh rate</value>
+  </data>
+  <data name="FanControl_ApplyingCustomCurve" xml:space="preserve">
+    <value>Applying custom curve</value>
+  </data>
+  <data name="ColorPicker_ZoneSubtitleFormat" xml:space="preserve">
+    <value>Zone {0} - {1}</value>
+  </data>
+  <data name="ZoneName_Wasd" xml:space="preserve">
+    <value>WASD</value>
+  </data>
+  <data name="ZoneName_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="ZoneName_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="ZoneName_FarRight" xml:space="preserve">
+    <value>Far Right</value>
+  </data>
 </root>

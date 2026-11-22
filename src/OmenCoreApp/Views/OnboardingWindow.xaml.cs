@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -39,9 +40,9 @@ namespace OmenCore.Views
                 FanBackendDot.Fill = (Brush)FindResource("WarningBrush");
             }
 
-            MonitoringText.Text = "Hardware monitoring active";
+            MonitoringText.Text = Strings.Onboarding_MonitoringActive;
             MonitoringDot.Fill = (Brush)FindResource("SuccessBrush");
-            DriverText.Text = "Check Settings → Status for driver details";
+            DriverText.Text = Strings.Onboarding_DriverCheckHint;
             DriverDot.Fill = (Brush)FindResource("TextTertiaryBrush");
         }
 
