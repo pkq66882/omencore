@@ -104,7 +104,7 @@ namespace OmenCore.ViewModels
             try { s = _service.Assess(); }
             catch (Exception ex) when (ex is InvalidOperationException or System.ComponentModel.Win32Exception or DllNotFoundException)
             {
-                Post(() => StatusText = "Could not read the NVIDIA driver: " + ex.Message);
+                Post(() => StatusText = string.Format(Strings.Nvidia_StatusReadFailedFormat, ex.Message));
                 return;
             }
             Post(() =>
@@ -114,10 +114,14 @@ namespace OmenCore.ViewModels
                 foreach (var t in s.Targets) Targets.Add(t);
                 if (!Targets.Contains(SelectedTarget)) SelectedTarget = Targets.FirstOrDefault();
                 var live = s.LiveCurrentW.HasValue && s.LiveMaxW.HasValue
-                    ? $"Live CURRENT {s.LiveCurrentW:0.#} W, live MAX {s.LiveMaxW:0.#} W. " : "";
-                StatusText = $"{(string.IsNullOrEmpty(s.Gpu) ? "NVIDIA GPU" : s.Gpu)}: {live}" +
-                             $"MAX writes {(s.MaxReady ? "ready" : "not ready")}, CURRENT writes {(s.CurrentReady ? "ready" : "not ready")}. {s.Reason}" +
-                             StockMismatchNote(s.LiveMaxW, s.ExpectedStockW);
+                    ? string.Format(Strings.Nvidia_LiveFormat, s.LiveCurrentW.Value.ToString("0.#"), s.LiveMaxW.Value.ToString("0.#")) : "";
+                StatusText = string.Format(Strings.Nvidia_StatusFormat,
+                    string.IsNullOrEmpty(s.Gpu) ? Strings.Nvidia_GpuFallback : s.Gpu,
+                    live,
+                    s.MaxReady ? Strings.Nvidia_WriteReady : Strings.Nvidia_WriteNotReady,
+                    s.CurrentReady ? Strings.Nvidia_WriteReady : Strings.Nvidia_WriteNotReady,
+                    s.Reason,
+                    StockMismatchNote(s.LiveMaxW, s.ExpectedStockW));
                 RaiseCommands();
             });
         });
@@ -126,12 +130,10 @@ namespace OmenCore.ViewModels
         {
             var watts = SelectedTarget;
             var prompt = what.StartsWith("remove", StringComparison.Ordinal)
-                ? "Remove the MAX override? Windows must be restarted afterwards to restore the factory limit."
-                : $"Apply {what} {watts} W?\n\nThis changes the GPU's power limit beyond the laptop maker's setting. " +
-                  "Higher power means more heat, and the cooling was not designed for it. " +
-                  (mayNeedReboot ? "MAX needs a Windows restart to take effect. " : "CURRENT resets on reboot. ") +
-                  "Only continue if you understand the risk.";
-            if (MessageBox.Show(prompt, "NVIDIA power", MessageBoxButton.OKCancel, MessageBoxImage.Warning) != MessageBoxResult.OK) return;
+                ? Strings.Nvidia_RemoveMaxPrompt
+                : string.Format(Strings.Nvidia_ApplyPromptFormat, what, watts,
+                    mayNeedReboot ? Strings.Nvidia_MayNeedReboot : Strings.Nvidia_CurrentResetsOnReboot);
+            if (MessageBox.Show(prompt, Strings.Nvidia_PowerTitle, MessageBoxButton.OKCancel, MessageBoxImage.Warning) != MessageBoxResult.OK) return;
 
             _busy = true; RaiseCommands();
             try
@@ -156,8 +158,7 @@ namespace OmenCore.ViewModels
             if (!liveMaxW.HasValue || !expectedStockW.HasValue || Math.Abs(liveMaxW.Value - expectedStockW.Value) <= 1.0)
                 return string.Empty;
 
-            return $" Stock max read: {liveMaxW.Value:0.#} W, expected: {expectedStockW.Value} W. A difference is normal when a MAX override " +
-                   "is installed or the laptop maker set a lower limit; it is not an error by itself.";
+            return string.Format(Strings.Nvidia_StockMismatchFormat, liveMaxW.Value.ToString("0.#"), expectedStockW.Value);
         }
 
         private void RaiseCommands()

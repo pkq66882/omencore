@@ -49,6 +49,11 @@
             <local:MinutesDisplayConverter x:Key="MinutesDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:BloatwareCategoryDisplayConverter x:Key="BloatwareCategoryDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:BloatwareTypeDisplayConverter x:Key="BloatwareTypeDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:DiagnosticTextDisplayConverter x:Key="DiagnosticTextDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:AutomationTriggerDisplayConverter x:Key="AutomationTriggerDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <DataTemplate x:Key="AutomationTriggerItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource AutomationTriggerDisplay}}"/>
+            </DataTemplate>
             <DataTemplate x:Key="SettingsTokenItemTemplate">
                 <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}}"/>
             </DataTemplate>

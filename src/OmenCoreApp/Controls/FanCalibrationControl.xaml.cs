@@ -98,7 +98,7 @@ namespace OmenCore.Controls
                 // Generate model ID from model info
                 _currentModelId = GenerateModelId(modelInfo);
 
-                ModelInfoText.Text = $"Model: {modelInfo}\nModel ID: {_currentModelId}";
+                ModelInfoText.Text = string.Format(Strings.FanCalibration_ModelLineFormat, modelInfo, _currentModelId);
             }
             catch (Exception ex)
             {
@@ -113,7 +113,7 @@ namespace OmenCore.Controls
             if (_calibrationStorage.HasCalibration(_currentModelId))
             {
                 var calibration = _calibrationStorage.GetCalibration(_currentModelId);
-                CalibrationStatusText.Text = $"Calibration available (created {calibration?.CreatedDate.ToShortDateString()})";
+                CalibrationStatusText.Text = string.Format(Strings.FanCalibration_AvailableFormat, calibration?.CreatedDate.ToShortDateString());
                 CalibrationStatusText.Foreground = System.Windows.Media.Brushes.Green;
                 LoadCalibrationButton.IsEnabled = true;
             }
@@ -150,11 +150,11 @@ namespace OmenCore.Controls
                 var (rpm, level, source) = _fanVerifier.GetCurrentFanStateWithSource(_selectedFanIndex);
                 var expectedPercent = _calibrationStorage.GetCalibratedPercent(_currentModelId, _selectedFanIndex, rpm);
 
-                FanStatusText.Text = $"Current: {rpm} RPM (Level: {level}, Source: {source})\nEstimated: ~{expectedPercent}% speed";
+                FanStatusText.Text = string.Format(Strings.FanCalibration_FanStatusFormat, rpm, level, source, expectedPercent);
             }
             catch (Exception ex)
             {
-                FanStatusText.Text = $"Error reading fan status: {ex.Message}";
+                FanStatusText.Text = string.Format(Strings.FanCalibration_ReadStatusFailedFormat, ex.Message);
                 _logging.Error($"Failed to update fan status: {ex.Message}", ex);
             }
         }
@@ -227,7 +227,7 @@ namespace OmenCore.Controls
             }
             catch (Exception ex)
             {
-                ProgressText.Text = $"Calibration failed: {ex.Message}";
+                ProgressText.Text = string.Format(Strings.FanCalibration_FailedDetailFormat, ex.Message);
                 _logging.Error($"Fan calibration failed: {ex.Message}", ex);
                 MessageBox.Show(string.Format(Strings.FanCalibration_CalibrationFailedFormat, ex.Message), Strings.FanCalibration_CalibrationErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -247,12 +247,12 @@ namespace OmenCore.Controls
 
             if (result.Success)
             {
-                ResultsSummaryText.Text = $"Calibration successful - {result.CalibrationPoints.Count} test points completed in {result.Duration.TotalSeconds:F1} seconds";
+                ResultsSummaryText.Text = string.Format(Strings.FanCalibration_SuccessFormat, result.CalibrationPoints.Count, result.Duration.TotalSeconds.ToString("F1"));
                 ResultsSummaryText.Foreground = System.Windows.Media.Brushes.Green;
             }
             else
             {
-                ResultsSummaryText.Text = $"Calibration completed with issues - {result.CalibrationPoints.Count} test points, {result.CalibrationPoints.Count(p => !p.VerificationPassed)} failed";
+                ResultsSummaryText.Text = string.Format(Strings.FanCalibration_IssuesFormat, result.CalibrationPoints.Count, result.CalibrationPoints.Count(p => !p.VerificationPassed));
                 ResultsSummaryText.Foreground = System.Windows.Media.Brushes.Orange;
             }
 

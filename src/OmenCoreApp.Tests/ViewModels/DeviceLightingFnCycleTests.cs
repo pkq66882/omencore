@@ -18,8 +18,21 @@ namespace OmenCoreApp.Tests.ViewModels
     ///
     /// Constructed with no keyboard service and no config service, the supported way.
     /// </summary>
-    public class DeviceLightingFnCycleTests
+    public class DeviceLightingFnCycleTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _original = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public DeviceLightingFnCycleTests()
+        {
+            // FnCycleStatus is localized; pin to en for canonical substring assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _original;
+        }
+
         private static DeviceLightingViewModel New() =>
             new(null, new LoggingService());
 

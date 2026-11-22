@@ -361,14 +361,14 @@ namespace OmenCore.ViewModels
             {
                 slot.IsActive = existing.Model.IsActive;
                 FnCycleSlots[FnCycleSlots.IndexOf(existing)] = new FnCycleSlotViewModel(slot);
-                FnCycleStatus = $"{slot.DisplayName} updated — the keyboard keeps one profile per effect.";
+                FnCycleStatus = string.Format(Strings.DeviceLighting_FnUpdatedFormat, slot.DisplayName);
             }
             else
             {
                 // First one staged is the one to leave showing, until the user says otherwise.
                 slot.IsActive = FnCycleSlots.Count == 0;
                 FnCycleSlots.Add(new FnCycleSlotViewModel(slot));
-                FnCycleStatus = $"{slot.DisplayName} added. Nothing is on the keyboard until you write the cycle.";
+                FnCycleStatus = string.Format(Strings.DeviceLighting_FnAddedFormat, slot.DisplayName);
             }
 
             FnCycleChanged();
@@ -383,7 +383,7 @@ namespace OmenCore.ViewModels
             if (slot.Model.IsActive && FnCycleSlots.Count > 0)
                 MakeFnSlotActive(FnCycleSlots[0]);
 
-            FnCycleStatus = $"{slot.Model.DisplayName} removed from the list. It is still on the keyboard.";
+            FnCycleStatus = string.Format(Strings.DeviceLighting_FnRemovedFormat, slot.Model.DisplayName);
             FnCycleChanged();
         }
 
@@ -406,7 +406,7 @@ namespace OmenCore.ViewModels
                 return;
             }
 
-            FnCycleStatus = $"Writing {ordered.Count} profile(s)…";
+            FnCycleStatus = string.Format(Strings.DeviceLighting_FnWritingFormat, ordered.Count);
 
             var refused = new List<string>();
             foreach (var slot in ordered)

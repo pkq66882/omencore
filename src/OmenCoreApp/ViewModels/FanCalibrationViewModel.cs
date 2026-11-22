@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -114,7 +115,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                Status = $"Error: {ex.Message}";
+                Status = string.Format(Strings.FanCalibration_ErrorFormat, ex.Message);
                 _logging.Error($"Calibration error: {ex.Message}", ex);
             }
             finally
@@ -146,7 +147,7 @@ namespace OmenCore.ViewModels
                 });
 
                 Progress = _calibrationService.CalibrationProgress;
-                Status = $"Testing level {step.Level}... ({Progress}% complete)";
+                Status = string.Format(Strings.FanCalibration_TestingLevelFormat, step.Level, Progress);
             });
         }
 
@@ -166,7 +167,7 @@ namespace OmenCore.ViewModels
         {
             DispatcherHelper.RunOnUiThread(() =>
             {
-                Status = $"⚠ Error: {error}";
+                Status = string.Format(Strings.FanCalibration_ErrorWarnFormat, error);
                 IsCalibrating = false;
             });
         }

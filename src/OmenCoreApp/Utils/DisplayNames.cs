@@ -24,6 +24,110 @@ namespace OmenCore.Utils
             _ => Strings.GpuSwitch_ModeUnknown
         };
 
+        /// <summary>Localized fan name for diagnostic sentences and history rows.</summary>
+        public static string FanDiagFanName(string? name) => name switch
+        {
+            "CPU" or "CPU Fan" => Strings.FanDiag_FanNameCpu,
+            "GPU" or "GPU Fan" => Strings.FanDiag_FanNameGpu,
+            "CPU Fan (est.)" => Strings.FanDiag_FanNameCpuEstimated,
+            "GPU Fan (est.)" => Strings.FanDiag_FanNameGpuEstimated,
+            _ => name ?? string.Empty
+        };
+
+        /// <summary>Localized RPM source name used in the diagnostic header.</summary>
+        public static string FanDiagSource(string? source) => source switch
+        {
+            "EcDirect" => Strings.FanDiag_SourceEcDirect,
+            "HardwareMonitor" => Strings.FanDiag_SourceHardwareMonitor,
+            "Afterburner" => Strings.FanDiag_SourceAfterburner,
+            "WmiBios" => Strings.FanDiag_SourceWmiBios,
+            "Estimated" => Strings.FanDiag_SourceEstimated,
+            "Unknown" => Strings.FanDiag_SourceUnknown,
+            _ => source ?? string.Empty
+        };
+
+        /// <summary>Localizes Core's RpmDisplay sentence forms; unknown text passes through.</summary>
+        public static string FanDiagRpm(string? text)
+        {
+            if (string.IsNullOrWhiteSpace(text)) return string.Empty;
+            var m = Regex.Match(text, @"^~(\d+) RPM \(fan-level estimate\)$");
+            if (m.Success) return string.Format(Strings.FanDiag_RpmEstimatedFormat, m.Groups[1].Value);
+            m = Regex.Match(text, @"^firmware refused level (\d+)$");
+            if (m.Success) return string.Format(Strings.FanDiag_RpmRefusedFormat, m.Groups[1].Value);
+            if (text == "Physical RPM unavailable") return Strings.FanDiag_RpmUnavailable;
+            m = Regex.Match(text, @"^(\d+) RPM \(source unverified\)$");
+            if (m.Success) return string.Format(Strings.FanDiag_RpmUnverifiedFormat, m.Groups[1].Value);
+            m = Regex.Match(text, @"^(\d+) RPM \(([^)]+)\)$");
+            if (m.Success) return string.Format(Strings.FanDiag_RpmWithSourceFormat, m.Groups[1].Value, m.Groups[2].Value);
+            return text;
+        }
+
+        /// <summary>Localized verification evidence token.</summary>
+        public static string FanDiagEvidence(string? evidence) => evidence switch
+        {
+            null or "" or "None" => Strings.FanDiag_EvidenceNone,
+            "RPM" => Strings.FanDiag_EvidenceRpm,
+            "Level" => Strings.FanDiag_EvidenceLevel,
+            "RPM+Level" => Strings.FanDiag_EvidenceRpmLevel,
+            "FirmwareCeiling" => Strings.FanDiag_EvidenceFirmwareCeiling,
+            _ => evidence
+        };
+
+        /// <summary>Localized verification score rating.</summary>
+        public static string FanDiagRating(string? rating) => rating switch
+        {
+            "Excellent" => Strings.FanDiag_RatingExcellent,
+            "Good" => Strings.FanDiag_RatingGood,
+            "Fair" => Strings.FanDiag_RatingFair,
+            "Poor" => Strings.FanDiag_RatingPoor,
+            "Failed" => Strings.FanDiag_RatingFailed,
+            _ => rating ?? string.Empty
+        };
+
+        /// <summary>Localizes the fixed diagnostic error sentences; dynamic detail stays as-is.</summary>
+        public static string FanDiagError(string? error)
+        {
+            if (string.IsNullOrWhiteSpace(error)) return string.Empty;
+            if (error == "No fan control backend available") return Strings.FanDiag_ErrNoBackend;
+            if (error == "WMI call returned false") return Strings.FanDiag_ErrWmiFalse;
+            if (error == "FanService call returned false") return Strings.FanDiag_ErrServiceFalse;
+            var m = Regex.Match(error, @"^Fan verification remained inconclusive after (\d+) attempts: (.*)$", RegexOptions.Singleline);
+            if (m.Success) return string.Format(Strings.FanDiag_ErrInconclusiveFormat, m.Groups[1].Value, m.Groups[2].Value);
+            return error;
+        }
+
+        /// <summary>Localized automation trigger name.</summary>
+        public static string AutomationTrigger(object? value) => value?.ToString() switch
+        {
+            "Time" => Strings.Trigger_Time,
+            "Battery" => Strings.Trigger_Battery,
+            "ACPower" => Strings.Trigger_AcPower,
+            "Temperature" => Strings.Trigger_Temperature,
+            "Idle" => Strings.Trigger_Idle,
+            "Process" => Strings.Trigger_Process,
+            "WiFiSSID" => Strings.Trigger_WifiSsid,
+            var s => s ?? string.Empty
+        };
+
+        /// <summary>Localizes automation rule validation messages; unknown text passes through.</summary>
+        public static string AutomationError(string? error) => error switch
+        {
+            "Rule payload is missing." => Strings.Automation_ErrPayloadMissing,
+            "Rule name is required." => Strings.Automation_ErrNameRequired,
+            "At least one action is required." => Strings.Automation_ErrNeedsAction,
+            "Time rules require both start and end time." => Strings.Automation_ErrTimeRange,
+            "Battery rules require a threshold between 1 and 100." => Strings.Automation_ErrBatteryThreshold,
+            "Battery rules require condition 'Below' or 'Above'." => Strings.Automation_ErrBatteryCondition,
+            "AC power rules must specify connected or disconnected." => Strings.Automation_ErrAcState,
+            "Temperature rules require a threshold between 1 and 110°C." => Strings.Automation_ErrTempThreshold,
+            "Temperature rules require condition 'Above' or 'Below'." => Strings.Automation_ErrTempCondition,
+            "Idle rules require a threshold between 1 and 999 minutes." => Strings.Automation_ErrIdleThreshold,
+            "Process rules require an executable name." => Strings.Automation_ErrProcessName,
+            "WiFi rules require an SSID." => Strings.Automation_ErrWifiSsid,
+            "Lid state rules must specify open or closed." => Strings.Automation_ErrLidState,
+            _ => error ?? string.Empty
+        };
+
         /// <summary>Localized bloatware category name; unknown values pass through.</summary>
         public static string BloatwareCategory(object? value) => value?.ToString() switch
         {
@@ -360,6 +464,32 @@ namespace OmenCore.Utils
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             => value is int minutes ? string.Format(Strings.SettingsView_MinutesFormat, minutes) : value?.ToString() ?? string.Empty;
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+
+    /// Localizes diagnostic text by domain: ConverterParameter = fan | rpm | evidence | error.
+    public class DiagnosticTextDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => (parameter as string) switch
+        {
+            "fan" => DisplayNames.FanDiagFanName(value as string),
+            "rpm" => DisplayNames.FanDiagRpm(value as string),
+            "evidence" => DisplayNames.FanDiagEvidence(value as string),
+            "error" => DisplayNames.FanDiagError(value as string),
+            _ => value?.ToString() ?? string.Empty
+        };
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+
+    /// Displays automation trigger enums localized in the rule editor.
+    public class AutomationTriggerDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => DisplayNames.AutomationTrigger(value);
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
             => throw new NotSupportedException();

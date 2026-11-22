@@ -111,7 +111,7 @@ namespace OmenCore.Controls
             }
             catch (Exception ex)
             {
-                ProgressText.Text = $"Export failed: {ex.Message}";
+                ProgressText.Text = string.Format(Strings.DiagnosticExport_ExportFailedFormat, ex.Message);
                 _logging.Error($"Diagnostic export failed: {ex.Message}", ex);
                 MessageBox.Show(string.Format(Strings.DiagnosticExport_ExportFailedFormat, ex.Message), Strings.DiagnosticExport_ExportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -847,13 +847,13 @@ namespace OmenCore.Controls
             {
                 ResultsText.Text = Strings.DiagnosticExport_CompletedSuccessfully;
                 ResultsText.Foreground = System.Windows.Media.Brushes.Green;
-                FilePathText.Text = $"File saved to: {result.ExportPath}";
-                FileSizeText.Text = $"File size: {FormatFileSize(result.FileSize)}";
-                ExportSummaryText.Text = $"Contains: {string.Join(", ", result.Sections)}";
+                FilePathText.Text = string.Format(Strings.DiagnosticExport_FileSavedToFormat, result.ExportPath);
+                FileSizeText.Text = string.Format(Strings.DiagnosticExport_FileSizeFormat, FormatFileSize(result.FileSize));
+                ExportSummaryText.Text = string.Format(Strings.DiagnosticExport_ContainsFormat, string.Join(", ", result.Sections));
             }
             else
             {
-                ResultsText.Text = $"Export failed: {result.ErrorMessage}";
+                ResultsText.Text = string.Format(Strings.DiagnosticExport_ExportFailedFormat, result.ErrorMessage);
                 ResultsText.Foreground = System.Windows.Media.Brushes.Red;
             }
         }

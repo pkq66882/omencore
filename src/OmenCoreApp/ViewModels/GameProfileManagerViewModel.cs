@@ -259,7 +259,7 @@ namespace OmenCore.ViewModels
                 if (dialog.ShowDialog() == true)
                 {
                     var count = await _profileService.ImportProfilesAsync(dialog.FileName);
-                    MessageBox.Show($"Imported {count} profile(s)", "Import Complete", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show(string.Format(Strings.GameProfile_ImportedFormat, count), Strings.Main_ImportCompleteTitle, MessageBoxButton.OK, MessageBoxImage.Information);
                     FilterProfiles();
                     _logging.Info($"Imported {count} profiles from {dialog.FileName}");
                 }
@@ -321,7 +321,7 @@ namespace OmenCore.ViewModels
                 ValidateSelectedProfile();
                 if (!IsProfileValid)
                 {
-                    MessageBox.Show(ValidationError, "Invalid Game Profile", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show(ValidationError, Strings.GameProfile_InvalidProfileTitle, MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
 

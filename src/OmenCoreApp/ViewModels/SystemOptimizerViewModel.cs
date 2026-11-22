@@ -664,7 +664,7 @@ namespace OmenCore.ViewModels
             var pendingItems = optimizations.Where(item => !item.IsEnabled).ToList();
             if (!pendingItems.Any())
             {
-                SetStatusDone($"{categoryName} is already fully applied");
+                SetStatusDone(string.Format(Strings.Optimizer_AlreadyAppliedFormat, categoryName));
                 return;
             }
 
@@ -707,11 +707,11 @@ namespace OmenCore.ViewModels
 
                 if (failCount > 0)
                 {
-                    SetStatusDone($"Applied {successCount}/{pendingItems.Count} items in {categoryName} ({failCount} failed)");
+                    SetStatusDone(string.Format(Strings.Optimizer_AppliedCountFormat, successCount, pendingItems.Count, categoryName, failCount));
                 }
                 else
                 {
-                    SetStatusDone($"Applied {successCount} {categoryName} optimization(s)");
+                    SetStatusDone(string.Format(Strings.Optimizer_AppliedCategoryFormat, successCount, categoryName));
                 }
 
                 await RefreshStateAsync(showOverlay: false);
@@ -782,7 +782,7 @@ namespace OmenCore.ViewModels
                 var results = await _optimizerService.RevertAllAsync(cts.Token);
                 
                 var successCount = results.Count(r => r.Success);
-                SetStatusDone($"Reverted {successCount}/{results.Count} optimizations");
+                SetStatusDone(string.Format(Strings.Optimizer_RevertedFormat, successCount, results.Count));
                 
                 await RefreshStateAsync();
             }
@@ -951,7 +951,7 @@ namespace OmenCore.ViewModels
                 _logger.Error($"Failed to refresh preflight: {ex.Message}");
                 if (showStatus)
                 {
-                    SetStatusFailed($"Preflight refresh failed: {ex.Message}");
+                    SetStatusFailed(string.Format(Strings.Optimizer_PreflightRefreshFailedFormat, ex.Message));
                 }
             }
         }
@@ -969,12 +969,12 @@ namespace OmenCore.ViewModels
                 }
 
                 LastExportedReportPath = exportPath;
-                SetStatusDone($"Report exported: {exportPath}");
+                SetStatusDone(string.Format(Strings.Optimizer_ReportExportedFormat, exportPath));
             }
             catch (Exception ex)
             {
                 _logger.Error($"Failed to export optimization report: {ex.Message}");
-                SetStatusFailed($"Report export failed: {ex.Message}");
+                SetStatusFailed(string.Format(Strings.Optimizer_ReportExportFailedFormat, ex.Message));
             }
         }
 
@@ -998,7 +998,7 @@ namespace OmenCore.ViewModels
             catch (Exception ex)
             {
                 _logger.Error($"Failed to open optimization report: {ex.Message}");
-                SetStatusFailed($"Could not open report: {ex.Message}");
+                SetStatusFailed(string.Format(Strings.Optimizer_OpenReportFailedFormat, ex.Message));
             }
         }
 
@@ -1019,7 +1019,7 @@ namespace OmenCore.ViewModels
             catch (Exception ex)
             {
                 _logger.Error($"Failed to copy report path: {ex.Message}");
-                SetStatusFailed($"Could not copy report path: {ex.Message}");
+                SetStatusFailed(string.Format(Strings.Optimizer_CopyReportPathFailedFormat, ex.Message));
             }
         }
 

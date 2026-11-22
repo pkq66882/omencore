@@ -2302,7 +2302,7 @@ namespace OmenCore.ViewModels
             var exists = CorsairDpiProfiles.Any(p => p.Name == name);
             if (exists)
             {
-                var res = MessageBox.Show($"A DPI profile named '{name}' already exists. Overwrite it?", "Overwrite DPI Profile", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
+                var res = MessageBox.Show(string.Format(Strings.Lighting_OverwriteDpiProfileFormat, name), Strings.Lighting_OverwriteDpiProfileTitle, MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
                 if (res != MessageBoxResult.Yes)
                 {
                     _logging.Info("User declined to overwrite existing DPI profile");
@@ -2409,7 +2409,7 @@ namespace OmenCore.ViewModels
                 }
 
                 _logging.Info($"✓ Applied keyboard zone colors: Z1={_zone1ColorHex}, Z2={_zone2ColorHex}, Z3={_zone3ColorHex}, Z4={_zone4ColorHex}");
-                KeyboardRestoreStatusText = $"{_keyboardLightingService.LastApplyStatus} Surface: {_keyboardLightingService.LastApplySurface}.{backendHint}";
+                KeyboardRestoreStatusText = string.Format(Strings.Lighting_RestoreStatusFormat, _keyboardLightingService.LastApplyStatus, _keyboardLightingService.LastApplySurface, backendHint);
                 await Task.CompletedTask;
             }, "Applying keyboard colors...");
         }
@@ -2427,7 +2427,7 @@ namespace OmenCore.ViewModels
             {
                 LoadKeyboardColorsFromConfig();
                 await ApplyCurrentKeyboardZonesToBackendAsync();
-                KeyboardRestoreStatusText = $"Restored saved keyboard colors. {_keyboardLightingService.LastApplyStatus} Surface: {_keyboardLightingService.LastApplySurface}.";
+                KeyboardRestoreStatusText = string.Format(Strings.Lighting_RestoredSavedFormat, _keyboardLightingService.LastApplyStatus, _keyboardLightingService.LastApplySurface);
                 _logging.Info($"Restored keyboard lighting from saved colors via {KeyboardLightingBackend}: Z1={_zone1ColorHex}, Z2={_zone2ColorHex}, Z3={_zone3ColorHex}, Z4={_zone4ColorHex}");
             }, "Restoring keyboard lighting...");
         }
@@ -2469,7 +2469,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                RgbSurfaceObservationStatusText = $"RGB observation save failed: {ex.Message}";
+                RgbSurfaceObservationStatusText = string.Format(Strings.Lighting_ObservationSaveFailedFormat, ex.Message);
                 _logging.Warn($"Failed to save RGB observed surface: {ex.Message}");
             }
         }

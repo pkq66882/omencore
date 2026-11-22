@@ -93,23 +93,23 @@
                     <DataTemplate>
                         <Border Background="{StaticResource SurfaceDarkBrush}" Padding="8" Margin="0,0,0,8" CornerRadius="6">
                             <StackPanel>
-                                <TextBlock Text="{Binding FanName, Mode=OneWay}" FontWeight="SemiBold" />
+                                <TextBlock Text="{Binding FanName, Mode=OneWay, Converter={StaticResource DiagnosticTextDisplay}, ConverterParameter=fan}" FontWeight="SemiBold" />
                                         <TextBlock FontSize="12" Foreground="{StaticResource TextSecondaryBrush}">
                                             <Run Text="{x:Static loc:Strings.FanDiagnosticsView_Requested}" />
                                             <Run Text="{Binding RequestedPercent, Mode=OneWay}" />
                                             <Run Text="{x:Static loc:Strings.FanDiagnosticsView_Readback}" />
-                                            <Run Text="{Binding RpmDisplay, Mode=OneWay}" />
+                                            <Run Text="{Binding RpmDisplay, Mode=OneWay, Converter={StaticResource DiagnosticTextDisplay}, ConverterParameter=rpm}" />
                                             <Run Text=" (±" />
                                             <Run Text="{Binding DeviationPercent, StringFormat={}{0:F1}%, Mode=OneWay}" />
                                             <Run Text=")" />
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource TextMutedBrush}">
                                             <Run Text="{x:Static loc:Strings.FanDiagnosticsView_Evidence}" />
-                                            <Run Text="{Binding VerificationEvidence, Mode=OneWay}" />
+                                            <Run Text="{Binding VerificationEvidence, Mode=OneWay, Converter={StaticResource DiagnosticTextDisplay}, ConverterParameter=evidence}" />
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource TextMutedBrush}"
                                                    TextWrapping="Wrap">
-                                            <Run Text="{Binding ErrorMessage, Mode=OneWay}" />
+                                            <Run Text="{Binding ErrorMessage, Mode=OneWay, Converter={StaticResource DiagnosticTextDisplay}, ConverterParameter=error}" />
                                         </TextBlock>
                             </StackPanel>
                         </Border>

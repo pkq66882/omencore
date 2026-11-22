@@ -314,7 +314,7 @@ namespace OmenCore.ViewModels
             Application.Current?.Dispatcher?.BeginInvoke(() =>
             {
                 UpdateDownloadProgress = progress.ProgressPercent;
-                UpdateDownloadStatus = $"{progress.ProgressPercent:F1}% • {progress.DownloadSpeedMbps:F2} MB/s • {FormatTimeSpan(progress.EstimatedTimeRemaining)} remaining";
+                UpdateDownloadStatus = string.Format(Strings.Update_DownloadProgressFormat, progress.ProgressPercent.ToString("F1"), progress.DownloadSpeedMbps.ToString("F2"), FormatTimeSpan(progress.EstimatedTimeRemaining));
             });
         }
 

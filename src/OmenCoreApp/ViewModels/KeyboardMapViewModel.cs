@@ -394,7 +394,7 @@ namespace OmenCore.ViewModels
             OnPropertyChanged(nameof(HasSelection));
             OnPropertyChanged(nameof(SelectionBrightness));
             OnPropertyChanged(nameof(BrightnessHint));
-            Status = $"Painted {targets.Count} key(s) {BrushColorHex}. " +
+            Status = string.Format(Strings.KbdMap_PaintedFormat, targets.Count, BrushColorHex) +
                      "Keep going, then Apply to send the whole map to the keyboard.";
         }
 
@@ -571,7 +571,7 @@ namespace OmenCore.ViewModels
                     _configService?.Config?.KeyboardLighting?.PerKeyBrightness ?? 100, 0, 100);
 
                 if (restored > 0)
-                    Status = $"Restored the last picture ({restored} cells). " +
+                    Status = string.Format(Strings.KbdMap_RestoredFormat, restored) +
                              "Apply to send it to the keyboard.";
 
                 _logging.Info($"[KeyboardMap] Restored {restored} of {saved.Count} saved cells");
@@ -826,7 +826,7 @@ namespace OmenCore.ViewModels
                 ? string.Empty
                 : " This layout has not been confirmed on hardware.";
 
-            Status = $"{ledCells} LEDs across {layout.Keys.Count} keys ({layout.Id})" +
+            Status = string.Format(Strings.KbdMap_DetectedFormat, ledCells, layout.Keys.Count, layout.Id) +
                      (HasLightBar ? " and 4 light bar zones." : ".") +
                      " Click to select, or drag a box. Hold Ctrl to add." + verified;
 

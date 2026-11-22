@@ -3511,6 +3511,7 @@
                                                                  Style="{StaticResource ModernTextBox}" Padding="8,4" Margin="0,0,10,0"/>
 
                                                         <ComboBox AutomationProperties.Name="{x:Static loc:Strings.SettingsView_TriggerType}" Grid.Column="2" ItemsSource="{Binding SupportedTriggerTypes}" SelectedItem="{Binding Trigger, Mode=TwoWay}"
+                                                                  ItemTemplate="{StaticResource AutomationTriggerItemTemplate}"
                                                                   Style="{StaticResource ModernComboBox}" Margin="0,0,10,0"/>
 
                                                         <TextBox AutomationProperties.Name="{x:Static loc:Strings.SettingsView_PriorityLowerNumbersRunFirst}" Grid.Column="3" Text="{Binding Priority, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"

@@ -710,7 +710,7 @@ namespace OmenCore.ViewModels
             catch (Exception ex)
             {
                 _logging.Warn($"GPU TGP unlock failed: {ex.Message}");
-                GpuTgpUnlockStatus = $"Failed: {ex.Message}";
+                GpuTgpUnlockStatus = string.Format(Strings.GpuClamp_FailedFormat, ex.Message);
             }
             finally
             {

@@ -8368,4 +8368,598 @@
   <data name="GameProfile_DefaultNewProfileName" xml:space="preserve">
     <value>Yeni oyun profili</value>
   </data>
+  <data name="FanDiag_FanNameCpu" xml:space="preserve">
+    <value>CPU Fan</value>
+  </data>
+  <data name="FanDiag_FanNameGpu" xml:space="preserve">
+    <value>GPU Fan</value>
+  </data>
+  <data name="FanDiag_SourceEstimatedValue" xml:space="preserve">
+    <value>Tah</value>
+  </data>
+  <data name="FanDiag_SourceNone" xml:space="preserve">
+    <value>yok</value>
+  </data>
+  <data name="FanDiag_EvidenceNone" xml:space="preserve">
+    <value>Yok</value>
+  </data>
+  <data name="FanDiag_EvidenceRpm" xml:space="preserve">
+    <value>RPM</value>
+  </data>
+  <data name="FanDiag_EvidenceLevel" xml:space="preserve">
+    <value>Seviye</value>
+  </data>
+  <data name="FanDiag_EvidenceRpmLevel" xml:space="preserve">
+    <value>RPM+Seviye</value>
+  </data>
+  <data name="FanDiag_EvidenceFirmwareCeiling" xml:space="preserve">
+    <value>Ürün yazılımı üst sınırı</value>
+  </data>
+  <data name="FanDiag_RatingExcellent" xml:space="preserve">
+    <value>Mükemmel</value>
+  </data>
+  <data name="FanDiag_RatingGood" xml:space="preserve">
+    <value>İyi</value>
+  </data>
+  <data name="FanDiag_RatingFair" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="FanDiag_RatingPoor" xml:space="preserve">
+    <value>Zayıf</value>
+  </data>
+  <data name="FanDiag_RatingFailed" xml:space="preserve">
+    <value>Başarısız</value>
+  </data>
+  <data name="FanDiag_RpmEstimatedFormat" xml:space="preserve">
+    <value>~{0} RPM (seviye tahmini)</value>
+  </data>
+  <data name="FanDiag_RpmRefusedFormat" xml:space="preserve">
+    <value>ürün yazılımı {0} seviyesini reddetti</value>
+  </data>
+  <data name="FanDiag_RpmUnavailable" xml:space="preserve">
+    <value>Fiziksel RPM kullanılamıyor</value>
+  </data>
+  <data name="FanDiag_RpmUnverifiedFormat" xml:space="preserve">
+    <value>{0} RPM (kaynak doğrulanmadı)</value>
+  </data>
+  <data name="FanDiag_RpmWithSourceFormat" xml:space="preserve">
+    <value>{0} RPM ({1})</value>
+  </data>
+  <data name="FanDiag_ErrNoBackend" xml:space="preserve">
+    <value>Kullanılabilir fan denetim arka ucu yok</value>
+  </data>
+  <data name="FanDiag_ErrWmiFalse" xml:space="preserve">
+    <value>WMI çağrısı false döndürdü</value>
+  </data>
+  <data name="FanDiag_ErrServiceFalse" xml:space="preserve">
+    <value>FanService çağrısı false döndürdü</value>
+  </data>
+  <data name="FanDiag_ErrInconclusiveFormat" xml:space="preserve">
+    <value>Fan doğrulaması {0} denemeden sonra sonuçsuz kaldı: {1}</value>
+  </data>
+  <data name="FanDiag_StatusTestingFormat" xml:space="preserve">
+    <value>{0} fanı %{1} değerinde test ediliyor...</value>
+  </data>
+  <data name="FanDiag_StatusTooHotFormat" xml:space="preserve">
+    <value>Başlatılmadı: CPU veya GPU {0} C. {1} C altına soğumasını bekleyip yeniden çalıştırın.</value>
+  </data>
+  <data name="FanDiag_StatusTooHotShort" xml:space="preserve">
+    <value>Başlamak için çok sıcak - soğutup tekrar deneyin</value>
+  </data>
+  <data name="FanDiag_StatusWaitingCoolFormat" xml:space="preserve">
+    <value>Dizüstünün {0} C altına soğuması bekleniyor (şu an {1} C)...</value>
+  </data>
+  <data name="FanDiag_StatusAllPassedFormat" xml:space="preserve">
+    <value>Tüm testler geçti! Puan: {0}/100 ({1})</value>
+  </data>
+  <data name="FanDiag_StatusSomeFailedFormat" xml:space="preserve">
+    <value>Bazı testler başarısız - Puan: {0}/100 ({1})</value>
+  </data>
+  <data name="FanDiag_StatusInterruptedFormat" xml:space="preserve">
+    <value>Termal koruma tarafından kesildi ({0} adım) - soğutup yeniden çalıştırın</value>
+  </data>
+  <data name="FanDiag_SummaryBackendFormat" xml:space="preserve">
+    <value>Arka uç: {0} | RPM kaynağı: {1}</value>
+  </data>
+  <data name="FanDiag_SummaryTestsFormat" xml:space="preserve">
+    <value>Testler: {0}/{1} geçti | Genel puan: {2}/100 ({3})</value>
+  </data>
+  <data name="FanDiag_SummaryRgbFormat" xml:space="preserve">
+    <value>RGB: {0}</value>
+  </data>
+  <data name="FanDiag_SummaryRowFormat" xml:space="preserve">
+    <value>{0} {1} @ %{2}: {3} - Puan: {4} [kanıt: {5}]</value>
+  </data>
+  <data name="FanDiag_SummaryInterruptedNoteFormat" xml:space="preserve">
+    <value>⚠ Termal koruma nedeniyle kesilen ve hata sayılmayan adım: {0}: {1}.</value>
+  </data>
+  <data name="FanDiag_SummaryCoolNoteFormat" xml:space="preserve">
+    <value>Dizüstünü {0} C altına soğutup tanılamayı yeniden çalıştırın.</value>
+  </data>
+  <data name="FanDiag_RgbSkippedNoBackend" xml:space="preserve">
+    <value>Atlandı: tümleşik RGB arka ucu kullanılamıyor</value>
+  </data>
+  <data name="FanDiag_RgbLookAtKeyboard" xml:space="preserve">
+    <value>Şimdi klavyenize bakın</value>
+  </data>
+  <data name="FanDiag_RgbPatternNotAcceptedFormat" xml:space="preserve">
+    <value>{0} desen yazımını kabul etmedi</value>
+  </data>
+  <data name="FanDiag_RgbNotRestoredFormat" xml:space="preserve">
+    <value>Desen uygulandı; {0} kayıtlı renkleri geri yüklemedi</value>
+  </data>
+  <data name="FanDiag_RgbAppliedNeedsConfirm" xml:space="preserve">
+    <value>Desen uygulandı ve renkler geri yüklendi; görsel onay gerekli</value>
+  </data>
+  <data name="FanDiag_RgbFailedFormat" xml:space="preserve">
+    <value>Başarısız: {0}</value>
+  </data>
+  <data name="AutomationRule_DefaultName" xml:space="preserve">
+    <value>Yeni otomasyon kuralı</value>
+  </data>
+  <data name="Automation_ValidationReady" xml:space="preserve">
+    <value>Hazır</value>
+  </data>
+  <data name="Trigger_Time" xml:space="preserve">
+    <value>Zaman</value>
+  </data>
+  <data name="Trigger_Battery" xml:space="preserve">
+    <value>Pil</value>
+  </data>
+  <data name="Trigger_AcPower" xml:space="preserve">
+    <value>AC güç</value>
+  </data>
+  <data name="Trigger_Temperature" xml:space="preserve">
+    <value>Sıcaklık</value>
+  </data>
+  <data name="Trigger_Idle" xml:space="preserve">
+    <value>Boşta</value>
+  </data>
+  <data name="Trigger_Process" xml:space="preserve">
+    <value>İşlem</value>
+  </data>
+  <data name="Trigger_WifiSsid" xml:space="preserve">
+    <value>Wi-Fi ağı</value>
+  </data>
+  <data name="Automation_ErrPayloadMissing" xml:space="preserve">
+    <value>Kural verisi eksik.</value>
+  </data>
+  <data name="Automation_ErrNameRequired" xml:space="preserve">
+    <value>Kural adı gerekli.</value>
+  </data>
+  <data name="Automation_ErrNeedsAction" xml:space="preserve">
+    <value>En az bir eylem gerekli.</value>
+  </data>
+  <data name="Automation_ErrTimeRange" xml:space="preserve">
+    <value>Zaman kuralları başlangıç ve bitiş gerektirir.</value>
+  </data>
+  <data name="Automation_ErrBatteryThreshold" xml:space="preserve">
+    <value>Pil kuralları 1–100 arası eşik gerektirir.</value>
+  </data>
+  <data name="Automation_ErrBatteryCondition" xml:space="preserve">
+    <value>Pil kuralları 'Altında' veya 'Üstünde' koşulu gerektirir.</value>
+  </data>
+  <data name="Automation_ErrAcState" xml:space="preserve">
+    <value>AC güç kuralları bağlı veya bağlı değil belirtmelidir.</value>
+  </data>
+  <data name="Automation_ErrTempThreshold" xml:space="preserve">
+    <value>Sıcaklık kuralları 1–110°C arası eşik gerektirir.</value>
+  </data>
+  <data name="Automation_ErrTempCondition" xml:space="preserve">
+    <value>Sıcaklık kuralları 'Üstünde' veya 'Altında' koşulu gerektirir.</value>
+  </data>
+  <data name="Automation_ErrIdleThreshold" xml:space="preserve">
+    <value>Boşta kuralları 1–999 dakika arası eşik gerektirir.</value>
+  </data>
+  <data name="Automation_ErrProcessName" xml:space="preserve">
+    <value>İşlem kuralları çalıştırılabilir dosya adı gerektirir.</value>
+  </data>
+  <data name="Automation_ErrWifiSsid" xml:space="preserve">
+    <value>WiFi kuralları SSID gerektirir.</value>
+  </data>
+  <data name="Automation_ErrLidState" xml:space="preserve">
+    <value>Kapak kuralları açık veya kapalı belirtmelidir.</value>
+  </data>
+  <data name="FanDiag_FanNameCpuEstimated" xml:space="preserve">
+    <value>CPU fanı (tahmini)</value>
+  </data>
+  <data name="FanDiag_FanNameGpuEstimated" xml:space="preserve">
+    <value>GPU fanı (tahmini)</value>
+  </data>
+  <data name="FanDiag_SourceEcDirect" xml:space="preserve">
+    <value>EC doğrudan</value>
+  </data>
+  <data name="FanDiag_SourceHardwareMonitor" xml:space="preserve">
+    <value>donanım izleme</value>
+  </data>
+  <data name="FanDiag_SourceAfterburner" xml:space="preserve">
+    <value>MSI Afterburner</value>
+  </data>
+  <data name="FanDiag_SourceWmiBios" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="FanDiag_SourceEstimated" xml:space="preserve">
+    <value>tahmini</value>
+  </data>
+  <data name="FanDiag_SourceUnknown" xml:space="preserve">
+    <value>bilinmiyor</value>
+  </data>
+  <data name="FanControl_CopyFailedFormat" xml:space="preserve">
+    <value>Paylaşım kodu kopyalanamadı: {0}</value>
+  </data>
+  <data name="FanControl_CopyFailedTitle" xml:space="preserve">
+    <value>Kopyalama başarısız</value>
+  </data>
+  <data name="FanControl_ImportedCurveFormat" xml:space="preserve">
+    <value>"{0}" eğrisi içe aktarıldı ({1} nokta). Uygulamayı veya kaydetmeyi unutmayın.</value>
+  </data>
+  <data name="FanControl_ImportedPresetsFormat" xml:space="preserve">
+    <value>{0} fan ön ayarı içe aktarıldı</value>
+  </data>
+  <data name="FanControl_ImportCodeFailedFormat" xml:space="preserve">
+    <value>Paylaşım kodu içe aktarılamadı: {0}</value>
+  </data>
+  <data name="FanControl_ImportPresetsFailedFormat" xml:space="preserve">
+    <value>Fan ön ayarları içe aktarılamadı: {0}</value>
+  </data>
+  <data name="FanControl_ExportedPresetsFormat" xml:space="preserve">
+    <value>{0} fan ön ayarı dışa aktarıldı</value>
+  </data>
+  <data name="FanControl_ExportPresetsFailedFormat" xml:space="preserve">
+    <value>Fan ön ayarları dışa aktarılamadı: {0}</value>
+  </data>
+  <data name="FanControl_ImportCompleteTitle" xml:space="preserve">
+    <value>İçe aktarma tamamlandı</value>
+  </data>
+  <data name="FanControl_ExportCompleteTitle" xml:space="preserve">
+    <value>Dışa aktarma tamamlandı</value>
+  </data>
+  <data name="FanControl_ExportErrorTitle" xml:space="preserve">
+    <value>Dışa aktarma hatası</value>
+  </data>
+  <data name="GameProfile_ImportedFormat" xml:space="preserve">
+    <value>{0} profil içe aktarıldı</value>
+  </data>
+  <data name="GameProfile_InvalidProfileTitle" xml:space="preserve">
+    <value>Geçersiz oyun profili</value>
+  </data>
+  <data name="Lighting_OverwriteDpiProfileFormat" xml:space="preserve">
+    <value>'{0}' adlı DPI profili zaten var. Üzerine yazılsın mı?</value>
+  </data>
+  <data name="Lighting_OverwriteDpiProfileTitle" xml:space="preserve">
+    <value>DPI profilinin üzerine yaz</value>
+  </data>
+  <data name="Settings_OpenBrowserFailedFormat" xml:space="preserve">
+    <value>Tarayıcı açılamadı: {0}</value>
+  </data>
+  <data name="Settings_RemoveBloatwareFailedFormat" xml:space="preserve">
+    <value>Ön yüklü yazılım kaldırılamadı: {0}</value>
+  </data>
+  <data name="Settings_BloatwareRemoveFailedStatus" xml:space="preserve">
+    <value>❌ Kaldırma başarısız: {0}</value>
+  </data>
+  <data name="SystemControl_RollbackApplying" xml:space="preserve">
+    <value>Güvenli geri alma uygulanıyor...</value>
+  </data>
+  <data name="SystemControl_RollbackClearing" xml:space="preserve">
+    <value>Güvenli geri alma kayıtlı ayar durumunu temizliyor...</value>
+  </data>
+  <data name="SystemControl_RollbackNotice" xml:space="preserve">
+    <value>Güvenli ayar geri alımı uygulandı. Başlangıç ayar durumu Dengeli/Otomatik varsayılanlarına döndürüldü; kullanılamayan donanım arka uçları atlandı.</value>
+  </data>
+  <data name="SystemControl_RollbackAppliedFormat" xml:space="preserve">
+    <value>Uygulandı: {0}.</value>
+  </data>
+  <data name="SystemControl_RollbackSkippedFormat" xml:space="preserve">
+    <value> Atlandı: {0}.</value>
+  </data>
+  <data name="SystemControl_RollbackFailedFormat" xml:space="preserve">
+    <value>Güvenli geri alma başarısız: {0}</value>
+  </data>
+  <data name="SystemControl_RollbackSavedStateFormat" xml:space="preserve">
+    <value>güvenli başlangıç durumu kaydedildi ({0})</value>
+  </data>
+  <data name="SystemControl_RollbackAlreadySafe" xml:space="preserve">
+    <value>başlangıç durumu zaten güvenli</value>
+  </data>
+  <data name="SystemControl_RollbackFanOemAuto" xml:space="preserve">
+    <value>fanlar OEM otomatiğine döndürüldü</value>
+  </data>
+  <data name="SystemControl_RollbackBalancedMode" xml:space="preserve">
+    <value>Dengeli performans modu</value>
+  </data>
+  <data name="SystemControl_RollbackGpuMinimum" xml:space="preserve">
+    <value>GPU gücü: minimum</value>
+  </data>
+  <data name="SystemControl_RollbackCpuPlReset" xml:space="preserve">
+    <value>CPU PL1/PL2 başlangıç sıfırlaması</value>
+  </data>
+  <data name="SystemControl_RollbackTccReset" xml:space="preserve">
+    <value>TCC ofset sıfırlaması</value>
+  </data>
+  <data name="SystemControl_RollbackNvidiaReset" xml:space="preserve">
+    <value>NVIDIA GPU ayar sıfırlaması</value>
+  </data>
+  <data name="SystemControl_RollbackGpuBoostUnavailable" xml:space="preserve">
+    <value>GPU güç artışı arka ucu kullanılamıyor</value>
+  </data>
+  <data name="SystemControl_RollbackCpuLimitsLocked" xml:space="preserve">
+    <value>CPU güç limitleri kilitli/salt okunur</value>
+  </data>
+  <data name="SystemControl_RollbackCpuLimitsUnavailable" xml:space="preserve">
+    <value>CPU güç limitleri kullanılamıyor</value>
+  </data>
+  <data name="SystemControl_RollbackTccUnavailable" xml:space="preserve">
+    <value>TCC ofseti kullanılamıyor</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltReset" xml:space="preserve">
+    <value>CPU voltaj düşürme sıfırlandı</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltResetFailedFormat" xml:space="preserve">
+    <value>CPU voltaj düşürme sıfırlanamadı: {0}</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltUnavailable" xml:space="preserve">
+    <value>CPU voltaj düşürme arka ucu kullanılamıyor</value>
+  </data>
+  <data name="SystemControl_RollbackGpuOcUnavailable" xml:space="preserve">
+    <value>GPU OC arka ucu kullanılamıyor</value>
+  </data>
+  <data name="SystemControl_RollbackAmdPowerUnavailable" xml:space="preserve">
+    <value>AMD CPU güç arka ucu kullanılamıyor</value>
+  </data>
+  <data name="Nvidia_StatusReadFailedFormat" xml:space="preserve">
+    <value>NVIDIA sürücüsü okunamadı: {0}</value>
+  </data>
+  <data name="Nvidia_LiveFormat" xml:space="preserve">
+    <value>Canlı CURRENT {0} W, canlı MAX {1} W. </value>
+  </data>
+  <data name="Nvidia_StatusFormat" xml:space="preserve">
+    <value>{0}: {1}MAX yazma {2}, CURRENT yazma {3}. {4}{5}</value>
+  </data>
+  <data name="Nvidia_WriteReady" xml:space="preserve">
+    <value>hazır</value>
+  </data>
+  <data name="Nvidia_WriteNotReady" xml:space="preserve">
+    <value>hazır değil</value>
+  </data>
+  <data name="Nvidia_GpuFallback" xml:space="preserve">
+    <value>NVIDIA GPU</value>
+  </data>
+  <data name="Nvidia_StockMismatchFormat" xml:space="preserve">
+    <value> Okunan stok maksimum: {0} W, beklenen: {1} W. MAX geçersiz kılma veya üreticinin daha düşük limiti varsa fark normaldir; bu tek başına hata değildir.</value>
+  </data>
+  <data name="Nvidia_RemoveMaxPrompt" xml:space="preserve">
+    <value>MAX geçersiz kılma kaldırılsın mı? Fabrika limitine dönmek için Windows yeniden başlatılmalıdır.</value>
+  </data>
+  <data name="Nvidia_ApplyPromptFormat" xml:space="preserve">
+    <value>{0} {1} W olarak uygulansın mı?&#10;&#10;Bu, GPU güç limitini üretici ayarının üzerine çıkarır. Daha fazla güç daha fazla ısı demektir ve soğutma buna göre tasarlanmamıştır. {2}Yalnızca riski anlıyorsanız devam edin.</value>
+  </data>
+  <data name="Nvidia_MayNeedReboot" xml:space="preserve">
+    <value>MAX'in etkili olması için Windows yeniden başlatılmalı. </value>
+  </data>
+  <data name="Nvidia_CurrentResetsOnReboot" xml:space="preserve">
+    <value>CURRENT yeniden başlatmada sıfırlanır. </value>
+  </data>
+  <data name="Nvidia_PowerTitle" xml:space="preserve">
+    <value>NVIDIA gücü</value>
+  </data>
+  <data name="Bloatware_RestoreActionItemFormat" xml:space="preserve">
+    <value>{0} geri yükleniyor</value>
+  </data>
+  <data name="Bloatware_RestoreDoneItemFormat" xml:space="preserve">
+    <value>{0} geri yüklendi</value>
+  </data>
+  <data name="Bloatware_RestoreProgressFormat" xml:space="preserve">
+    <value>Geri yükleniyor {0}/{1}: {2}</value>
+  </data>
+  <data name="Bloatware_RestoredCountFormat" xml:space="preserve">
+    <value>{0} ön yüklü yazılım geri yüklendi</value>
+  </data>
+  <data name="Bloatware_OpenReportFailedFormat" xml:space="preserve">
+    <value>Rapor açılamadı: {0}</value>
+  </data>
+  <data name="DeviceLighting_FnUpdatedFormat" xml:space="preserve">
+    <value>{0} güncellendi - klavye her efekt için bir profil tutar.</value>
+  </data>
+  <data name="DeviceLighting_FnAddedFormat" xml:space="preserve">
+    <value>{0} eklendi. Döngüyü yazana kadar klavyede bir şey değişmez.</value>
+  </data>
+  <data name="DeviceLighting_FnRemovedFormat" xml:space="preserve">
+    <value>{0} listeden kaldırıldı. Klavyede hâlâ duruyor.</value>
+  </data>
+  <data name="DeviceLighting_FnWritingFormat" xml:space="preserve">
+    <value>{0} profil yazılıyor…</value>
+  </data>
+  <data name="FanCalibration_ErrorFormat" xml:space="preserve">
+    <value>Hata: {0}</value>
+  </data>
+  <data name="FanCalibration_TestingLevelFormat" xml:space="preserve">
+    <value>{0} seviyesi test ediliyor... (%{1} tamamlandı)</value>
+  </data>
+  <data name="FanCalibration_ErrorWarnFormat" xml:space="preserve">
+    <value>⚠ Hata: {0}</value>
+  </data>
+  <data name="GpuClamp_FailedFormat" xml:space="preserve">
+    <value>Başarısız: {0}</value>
+  </data>
+  <data name="KbdDiag_DetectionFailedFormat" xml:space="preserve">
+    <value>Algılama başarısız: {0}</value>
+  </data>
+  <data name="KbdDiag_ProbeStepFormat" xml:space="preserve">
+    <value>Deneme adımı {0}/{1}: klavye şu an kırmızı mı?</value>
+  </data>
+  <data name="KbdDiag_TestPatternFailedFormat" xml:space="preserve">
+    <value>Test deseni başarısız: {0}</value>
+  </data>
+  <data name="KbdDiag_ClearFailedFormat" xml:space="preserve">
+    <value>Temizleme başarısız: {0}</value>
+  </data>
+  <data name="Mem_FreedFormat" xml:space="preserve">
+    <value>{0} MB serbest bırakıldı</value>
+  </data>
+  <data name="Mem_ExcludedFormat" xml:space="preserve">
+    <value>{0} çalışma kümesi temizliğinden hariç tutuldu</value>
+  </data>
+  <data name="Mem_CompressionEnabled" xml:space="preserve">
+    <value>Bellek sıkıştırma etkin</value>
+  </data>
+  <data name="Mem_CompressionDisabled" xml:space="preserve">
+    <value>Bellek sıkıştırma devre dışı</value>
+  </data>
+  <data name="Mem_CopiedFormat" xml:space="preserve">
+    <value>{0} kopyalandı</value>
+  </data>
+  <data name="Mem_FailedFormat" xml:space="preserve">
+    <value>Başarısız: {0}</value>
+  </data>
+  <data name="KbdMap_PaintedFormat" xml:space="preserve">
+    <value>{0} tuş boyandı {1}. </value>
+  </data>
+  <data name="KbdMap_RestoredFormat" xml:space="preserve">
+    <value>Son resim geri yüklendi ({0} hücre). </value>
+  </data>
+  <data name="KbdMap_DetectedFormat" xml:space="preserve">
+    <value>{1} tuşta {0} LED ({2})</value>
+  </data>
+  <data name="Main_RestorePointCreatedFormat" xml:space="preserve">
+    <value>Geri yükleme noktası #{0} oluşturuldu</value>
+  </data>
+  <data name="Main_RestorePointFailedFormat" xml:space="preserve">
+    <value>Geri yükleme noktası başarısız: {0}</value>
+  </data>
+  <data name="Main_CleanupFailedFormat" xml:space="preserve">
+    <value>✗ Temizlik başarısız: {0}</value>
+  </data>
+  <data name="Update_DownloadProgressFormat" xml:space="preserve">
+    <value>%{0} • {1} MB/sn • {2} kaldı</value>
+  </data>
+  <data name="FanCleaning_DetectedFormat" xml:space="preserve">
+    <value>✓ HP OMEN algılandı: {0}. Fan temizliği kullanılabilir.</value>
+  </data>
+  <data name="FanCleaning_ReasonFormat" xml:space="preserve">
+    <value>⚠️ {0}</value>
+  </data>
+  <data name="Bios_UpdateAvailableFormat" xml:space="preserve">
+    <value>⬆️ Güncelleme mevcut: {0}</value>
+  </data>
+  <data name="Bios_ErrorFormat" xml:space="preserve">
+    <value>Hata: {0}</value>
+  </data>
+  <data name="SC_PartialFormat" xml:space="preserve">
+    <value>⚠ Kısmi ({0} başarısız): {1}</value>
+  </data>
+  <data name="SC_ErrorFormat" xml:space="preserve">
+    <value>Hata: {0}</value>
+  </data>
+  <data name="SC_TestApplyNotStartedFormat" xml:space="preserve">
+    <value>Test uygulaması başlamadı: {0}</value>
+  </data>
+  <data name="SC_PlAvailableFormat" xml:space="preserve">
+    <value>✓ Kullanılabilir (PL1: {0}W, PL2: {1}W)</value>
+  </data>
+  <data name="SC_PlAppliedFormat" xml:space="preserve">
+    <value>✓ Uygulandı (PL1: {0}W, PL2: {1}W)</value>
+  </data>
+  <data name="SC_PlResetFormat" xml:space="preserve">
+    <value>✓ Başlangıç değerlerine döndürüldü (PL1: {0}W, PL2: {1}W)</value>
+  </data>
+  <data name="SC_GpuOcPowerOnlyFormat" xml:space="preserve">
+    <value>{0} - Güç limiti ayarı kullanılabilir, saat ofsetleri engellendi</value>
+  </data>
+  <data name="SC_GpuOcLockedFormat" xml:space="preserve">
+    <value>{0} - NVAPI ayarı sürücü/ürün yazılımı tarafından kilitli</value>
+  </data>
+  <data name="SC_GpuOcInitFailedFormat" xml:space="preserve">
+    <value>Başlatma başarısız: {0}</value>
+  </data>
+  <data name="SC_AmdOcAvailableFormat" xml:space="preserve">
+    <value>✓ {0} - ADL2 üzerinden AMD hız aşırtma kullanılabilir</value>
+  </data>
+  <data name="SC_AmdDriverMissingFormat" xml:space="preserve">
+    <value>⚠ {0} - GPU ayarı için AMD Adrenalin sürücülerini yükleyin</value>
+  </data>
+  <data name="SC_AmdOcAppliedFormat" xml:space="preserve">
+    <value>AMD GPU OC uygulandı: Çekirdek {0} MHz, Bellek {1} MHz, Güç %{2}</value>
+  </data>
+  <data name="SC_AmdOcErrorFormat" xml:space="preserve">
+    <value>AMD GPU OC hatası: {0}</value>
+  </data>
+  <data name="SC_RestoredWithGuardrailsFormat" xml:space="preserve">
+    <value>Koruma limitleriyle geri yüklendi: {0}</value>
+  </data>
+  <data name="SC_ProfileSavedFormat" xml:space="preserve">
+    <value>✓ Profil kaydedildi: {0}</value>
+  </data>
+  <data name="SC_ProfileDeletedFormat" xml:space="preserve">
+    <value>Profil silindi: {0}</value>
+  </data>
+  <data name="SC_ModeNotSavedFormat" xml:space="preserve">
+    <value>"{0}" kayıtlı bir mod değil; saklanacak yer yok.</value>
+  </data>
+  <data name="Lighting_RestoreStatusFormat" xml:space="preserve">
+    <value>{0} Yüzey: {1}.{2}</value>
+  </data>
+  <data name="Lighting_RestoredSavedFormat" xml:space="preserve">
+    <value>Kayıtlı klavye renkleri geri yüklendi. {0} Yüzey: {1}.</value>
+  </data>
+  <data name="Lighting_ObservationSaveFailedFormat" xml:space="preserve">
+    <value>RGB gözlemi kaydedilemedi: {0}</value>
+  </data>
+  <data name="Optimizer_AlreadyAppliedFormat" xml:space="preserve">
+    <value>{0} zaten tamamen uygulandı</value>
+  </data>
+  <data name="Optimizer_AppliedCountFormat" xml:space="preserve">
+    <value>{2} içinde {0}/{1} öğe uygulandı ({3} başarısız)</value>
+  </data>
+  <data name="Optimizer_AppliedCategoryFormat" xml:space="preserve">
+    <value>{1} için {0} iyileştirme uygulandı</value>
+  </data>
+  <data name="Optimizer_RevertedFormat" xml:space="preserve">
+    <value>{1} iyileştirmeden {0} tanesi geri alındı</value>
+  </data>
+  <data name="Optimizer_PreflightRefreshFailedFormat" xml:space="preserve">
+    <value>Ön kontrol yenilenemedi: {0}</value>
+  </data>
+  <data name="Optimizer_ReportExportedFormat" xml:space="preserve">
+    <value>Rapor dışa aktarıldı: {0}</value>
+  </data>
+  <data name="Optimizer_ReportExportFailedFormat" xml:space="preserve">
+    <value>Rapor dışa aktarılamadı: {0}</value>
+  </data>
+  <data name="Optimizer_OpenReportFailedFormat" xml:space="preserve">
+    <value>Rapor açılamadı: {0}</value>
+  </data>
+  <data name="Optimizer_CopyReportPathFailedFormat" xml:space="preserve">
+    <value>Rapor yolu kopyalanamadı: {0}</value>
+  </data>
+  <data name="DiagnosticExport_FileSavedToFormat" xml:space="preserve">
+    <value>Dosya kaydedildi: {0}</value>
+  </data>
+  <data name="DiagnosticExport_FileSizeFormat" xml:space="preserve">
+    <value>Dosya boyutu: {0}</value>
+  </data>
+  <data name="DiagnosticExport_ContainsFormat" xml:space="preserve">
+    <value>İçerir: {0}</value>
+  </data>
+  <data name="FanCalibration_ModelLineFormat" xml:space="preserve">
+    <value>Model: {0}&#10;Model Kimliği: {1}</value>
+  </data>
+  <data name="FanCalibration_AvailableFormat" xml:space="preserve">
+    <value>Kalibrasyon mevcut ({0} oluşturuldu)</value>
+  </data>
+  <data name="FanCalibration_FanStatusFormat" xml:space="preserve">
+    <value>Geçerli: {0} RPM (Seviye: {1}, Kaynak: {2})&#10;Tahmini: ~%{3} hız</value>
+  </data>
+  <data name="FanCalibration_ReadStatusFailedFormat" xml:space="preserve">
+    <value>Fan durumu okunamadı: {0}</value>
+  </data>
+  <data name="FanCalibration_FailedDetailFormat" xml:space="preserve">
+    <value>Kalibrasyon başarısız: {0}</value>
+  </data>
+  <data name="FanCalibration_SuccessFormat" xml:space="preserve">
+    <value>Kalibrasyon başarılı - {0} test noktası {1} saniyede tamamlandı</value>
+  </data>
+  <data name="FanCalibration_IssuesFormat" xml:space="preserve">
+    <value>Kalibrasyon sorunlarla tamamlandı - {0} test noktası, {1} başarısız</value>
+  </data>
 </root>

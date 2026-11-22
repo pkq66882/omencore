@@ -3891,7 +3891,7 @@ namespace OmenCore.ViewModels
                 var canClean = _fanCleaningService.IsSupported;
                 if (canClean)
                 {
-                    FanCleaningStatusText = $"✓ HP OMEN detected: {systemInfo.Model}. Fan cleaning available.";
+                    FanCleaningStatusText = string.Format(Strings.FanCleaning_DetectedFormat, systemInfo.Model);
                     FanCleaningStatusIcon = "M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"; // Checkmark
                     FanCleaningStatusColor = new SolidColorBrush(Color.FromRgb(129, 199, 132)); // Green
                     CanStartFanCleaning = true;
@@ -3899,7 +3899,7 @@ namespace OmenCore.ViewModels
                 else
                 {
                     var reason = _fanCleaningService.UnsupportedReason;
-                    FanCleaningStatusText = $"⚠️ {reason}";
+                    FanCleaningStatusText = string.Format(Strings.FanCleaning_ReasonFormat, reason);
                     FanCleaningStatusIcon = "M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"; // Warning
                     FanCleaningStatusColor = new SolidColorBrush(Color.FromRgb(255, 183, 77)); // Orange
                     CanStartFanCleaning = false;
@@ -4288,7 +4288,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to open browser: {ex.Message}", "Error", 
+                MessageBox.Show(string.Format(Strings.Settings_OpenBrowserFailedFormat, ex.Message), Strings.Main_ErrorTitle, 
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -4457,7 +4457,7 @@ namespace OmenCore.ViewModels
                 
                 if (result.UpdateAvailable)
                 {
-                    BiosCheckStatus = $"⬆️ Update available: {result.LatestBiosVersion}";
+                    BiosCheckStatus = string.Format(Strings.Bios_UpdateAvailableFormat, result.LatestBiosVersion);
                     BiosStatusColor = new SolidColorBrush(Color.FromRgb(102, 187, 106)); // Green
                 }
                 else if (!string.IsNullOrEmpty(result.LatestBiosVersion))
@@ -4478,7 +4478,7 @@ namespace OmenCore.ViewModels
                     operation: "CheckBiosUpdatesAsync",
                     message: "Failed to check for BIOS updates",
                     ex: ex);
-                BiosCheckStatus = $"Error: {ex.Message}";
+                BiosCheckStatus = string.Format(Strings.Bios_ErrorFormat, ex.Message);
                 BiosStatusColor = new SolidColorBrush(Color.FromRgb(239, 83, 80)); // Red
             }
             finally
@@ -4855,8 +4855,8 @@ namespace OmenCore.ViewModels
                     operation: "RemoveBloatwareAsync",
                     message: "Failed to remove bloatware",
                     ex: ex);
-                BloatwareList = $"❌ Removal failed: {ex.Message}";
-                MessageBox.Show($"Failed to remove bloatware: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                BloatwareList = string.Format(Strings.Settings_BloatwareRemoveFailedStatus, ex.Message);
+                MessageBox.Show(string.Format(Strings.Settings_RemoveBloatwareFailedFormat, ex.Message), Strings.Main_ErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
             {
@@ -5038,7 +5038,7 @@ namespace OmenCore.ViewModels
         public class AutomationRuleEditorItem : ViewModelBase
         {
             private string _id = Guid.NewGuid().ToString();
-            private string _name = "New automation rule";
+            private string _name = Strings.AutomationRule_DefaultName;
             private bool _enabled = true;
             private int _priority = 50;
             private TriggerType _trigger = TriggerType.Time;
@@ -5117,8 +5117,8 @@ namespace OmenCore.ViewModels
 
             public string ValidationMessage =>
                 AutomationRuleSchemaValidator.TryValidate(ToAutomationRule(), out var error)
-                    ? "Ready"
-                    : error;
+                    ? Strings.Automation_ValidationReady
+                    : DisplayNames.AutomationError(error);
 
             public AutomationRule ToAutomationRule()
             {

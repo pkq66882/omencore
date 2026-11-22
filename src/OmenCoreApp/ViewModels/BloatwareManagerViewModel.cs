@@ -742,10 +742,10 @@ namespace OmenCore.ViewModels
             try
             {
                 IsProcessing = true;
-                SetStatusAction($"Restoring {SelectedApp.Name}");
+                SetStatusAction(string.Format(Strings.Bloatware_RestoreActionItemFormat, SelectedApp.Name));
                 await _service.RestoreAppAsync(SelectedApp);
                 UpdateCounts();
-                SetStatusDone($"Restored {SelectedApp.Name}");
+                SetStatusDone(string.Format(Strings.Bloatware_RestoreDoneItemFormat, SelectedApp.Name));
             }
             finally
             {
@@ -784,7 +784,7 @@ namespace OmenCore.ViewModels
                     {
                         BulkRestoreProgress = index;
                         OnPropertyChanged(nameof(BulkRestoreProgressText));
-                        SetStatusAction($"Restoring {index}/{total}: {app.Name}");
+                        SetStatusAction(string.Format(Strings.Bloatware_RestoreProgressFormat, index, total, app.Name));
                     })),
                     cancellation.Token);
 
@@ -801,7 +801,7 @@ namespace OmenCore.ViewModels
                 }
                 else
                 {
-                    SetStatusDone($"Restored {restoreResult.Succeeded.Count} bloatware items");
+                    SetStatusDone(string.Format(Strings.Bloatware_RestoredCountFormat, restoreResult.Succeeded.Count));
                 }
 
                 UpdateCounts();
@@ -922,7 +922,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                SetStatusFailed($"Failed to open report: {ex.Message}");
+                SetStatusFailed(string.Format(Strings.Bloatware_OpenReportFailedFormat, ex.Message));
             }
         }
 

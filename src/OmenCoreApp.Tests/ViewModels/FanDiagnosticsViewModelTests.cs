@@ -11,8 +11,21 @@ using Xunit;
 
 namespace OmenCoreApp.Tests.ViewModels
 {
-    public class FanDiagnosticsViewModelTests
+    public class FanDiagnosticsViewModelTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _originalUICulture = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public FanDiagnosticsViewModelTests()
+        {
+            // Guided diagnostic summary/status are localized; pin to en for canonical assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _originalUICulture;
+        }
+
         private class TestVerifier : IFanVerificationService
         {
             public bool IsAvailable => true;

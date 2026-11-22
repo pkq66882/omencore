@@ -8372,4 +8372,598 @@
   <data name="GameProfile_DefaultNewProfileName" xml:space="preserve">
     <value>New Game Profile</value>
   </data>
+  <data name="FanDiag_FanNameCpu" xml:space="preserve">
+    <value>CPU Fan</value>
+  </data>
+  <data name="FanDiag_FanNameGpu" xml:space="preserve">
+    <value>GPU Fan</value>
+  </data>
+  <data name="FanDiag_SourceEstimatedValue" xml:space="preserve">
+    <value>Est</value>
+  </data>
+  <data name="FanDiag_SourceNone" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="FanDiag_EvidenceNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="FanDiag_EvidenceRpm" xml:space="preserve">
+    <value>RPM</value>
+  </data>
+  <data name="FanDiag_EvidenceLevel" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="FanDiag_EvidenceRpmLevel" xml:space="preserve">
+    <value>RPM+Level</value>
+  </data>
+  <data name="FanDiag_EvidenceFirmwareCeiling" xml:space="preserve">
+    <value>FirmwareCeiling</value>
+  </data>
+  <data name="FanDiag_RatingExcellent" xml:space="preserve">
+    <value>Excellent</value>
+  </data>
+  <data name="FanDiag_RatingGood" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="FanDiag_RatingFair" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="FanDiag_RatingPoor" xml:space="preserve">
+    <value>Poor</value>
+  </data>
+  <data name="FanDiag_RatingFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="FanDiag_RpmEstimatedFormat" xml:space="preserve">
+    <value>~{0} RPM (fan-level estimate)</value>
+  </data>
+  <data name="FanDiag_RpmRefusedFormat" xml:space="preserve">
+    <value>firmware refused level {0}</value>
+  </data>
+  <data name="FanDiag_RpmUnavailable" xml:space="preserve">
+    <value>Physical RPM unavailable</value>
+  </data>
+  <data name="FanDiag_RpmUnverifiedFormat" xml:space="preserve">
+    <value>{0} RPM (source unverified)</value>
+  </data>
+  <data name="FanDiag_RpmWithSourceFormat" xml:space="preserve">
+    <value>{0} RPM ({1})</value>
+  </data>
+  <data name="FanDiag_ErrNoBackend" xml:space="preserve">
+    <value>No fan control backend available</value>
+  </data>
+  <data name="FanDiag_ErrWmiFalse" xml:space="preserve">
+    <value>WMI call returned false</value>
+  </data>
+  <data name="FanDiag_ErrServiceFalse" xml:space="preserve">
+    <value>FanService call returned false</value>
+  </data>
+  <data name="FanDiag_ErrInconclusiveFormat" xml:space="preserve">
+    <value>Fan verification remained inconclusive after {0} attempts: {1}</value>
+  </data>
+  <data name="FanDiag_StatusTestingFormat" xml:space="preserve">
+    <value>Testing {0} fan at {1}%...</value>
+  </data>
+  <data name="FanDiag_StatusTooHotFormat" xml:space="preserve">
+    <value>Run not started: the CPU or GPU is at {0} C. Let the laptop cool below {1} C and run the diagnostic again.</value>
+  </data>
+  <data name="FanDiag_StatusTooHotShort" xml:space="preserve">
+    <value>Too hot to start - cool down and run again</value>
+  </data>
+  <data name="FanDiag_StatusWaitingCoolFormat" xml:space="preserve">
+    <value>Waiting for the laptop to cool below {0} C ({1} C now)...</value>
+  </data>
+  <data name="FanDiag_StatusAllPassedFormat" xml:space="preserve">
+    <value>All tests passed! Score: {0}/100 ({1})</value>
+  </data>
+  <data name="FanDiag_StatusSomeFailedFormat" xml:space="preserve">
+    <value>Some tests failed - Score: {0}/100 ({1})</value>
+  </data>
+  <data name="FanDiag_StatusInterruptedFormat" xml:space="preserve">
+    <value>Interrupted by thermal protection ({0} step(s)) - cool down and re-run</value>
+  </data>
+  <data name="FanDiag_SummaryBackendFormat" xml:space="preserve">
+    <value>Backend: {0} | RPM source: {1}</value>
+  </data>
+  <data name="FanDiag_SummaryTestsFormat" xml:space="preserve">
+    <value>Tests: {0}/{1} passed | Overall Score: {2}/100 ({3})</value>
+  </data>
+  <data name="FanDiag_SummaryRgbFormat" xml:space="preserve">
+    <value>RGB: {0}</value>
+  </data>
+  <data name="FanDiag_SummaryRowFormat" xml:space="preserve">
+    <value>{0} {1} @ {2}%: {3} - Score: {4} [evidence: {5}]</value>
+  </data>
+  <data name="FanDiag_SummaryInterruptedNoteFormat" xml:space="preserve">
+    <value>⚠ {0} step(s) interrupted by thermal protection and not counted as failures: {1}.</value>
+  </data>
+  <data name="FanDiag_SummaryCoolNoteFormat" xml:space="preserve">
+    <value>Let the laptop cool below {0} C and run the diagnostic again to complete them.</value>
+  </data>
+  <data name="FanDiag_RgbSkippedNoBackend" xml:space="preserve">
+    <value>Skipped: integrated RGB backend unavailable</value>
+  </data>
+  <data name="FanDiag_RgbLookAtKeyboard" xml:space="preserve">
+    <value>Look at your keyboard now</value>
+  </data>
+  <data name="FanDiag_RgbPatternNotAcceptedFormat" xml:space="preserve">
+    <value>Pattern write not accepted by {0}</value>
+  </data>
+  <data name="FanDiag_RgbNotRestoredFormat" xml:space="preserve">
+    <value>Pattern applied; saved colors were not restored by {0}</value>
+  </data>
+  <data name="FanDiag_RgbAppliedNeedsConfirm" xml:space="preserve">
+    <value>Pattern applied and saved colors restored; physical confirmation required</value>
+  </data>
+  <data name="FanDiag_RgbFailedFormat" xml:space="preserve">
+    <value>Failed: {0}</value>
+  </data>
+  <data name="AutomationRule_DefaultName" xml:space="preserve">
+    <value>New automation rule</value>
+  </data>
+  <data name="Automation_ValidationReady" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Trigger_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Trigger_Battery" xml:space="preserve">
+    <value>Battery</value>
+  </data>
+  <data name="Trigger_AcPower" xml:space="preserve">
+    <value>AC power</value>
+  </data>
+  <data name="Trigger_Temperature" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="Trigger_Idle" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="Trigger_Process" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="Trigger_WifiSsid" xml:space="preserve">
+    <value>Wi-Fi network</value>
+  </data>
+  <data name="Automation_ErrPayloadMissing" xml:space="preserve">
+    <value>Rule payload is missing.</value>
+  </data>
+  <data name="Automation_ErrNameRequired" xml:space="preserve">
+    <value>Rule name is required.</value>
+  </data>
+  <data name="Automation_ErrNeedsAction" xml:space="preserve">
+    <value>At least one action is required.</value>
+  </data>
+  <data name="Automation_ErrTimeRange" xml:space="preserve">
+    <value>Time rules require both start and end time.</value>
+  </data>
+  <data name="Automation_ErrBatteryThreshold" xml:space="preserve">
+    <value>Battery rules require a threshold between 1 and 100.</value>
+  </data>
+  <data name="Automation_ErrBatteryCondition" xml:space="preserve">
+    <value>Battery rules require condition 'Below' or 'Above'.</value>
+  </data>
+  <data name="Automation_ErrAcState" xml:space="preserve">
+    <value>AC power rules must specify connected or disconnected.</value>
+  </data>
+  <data name="Automation_ErrTempThreshold" xml:space="preserve">
+    <value>Temperature rules require a threshold between 1 and 110°C.</value>
+  </data>
+  <data name="Automation_ErrTempCondition" xml:space="preserve">
+    <value>Temperature rules require condition 'Above' or 'Below'.</value>
+  </data>
+  <data name="Automation_ErrIdleThreshold" xml:space="preserve">
+    <value>Idle rules require a threshold between 1 and 999 minutes.</value>
+  </data>
+  <data name="Automation_ErrProcessName" xml:space="preserve">
+    <value>Process rules require an executable name.</value>
+  </data>
+  <data name="Automation_ErrWifiSsid" xml:space="preserve">
+    <value>WiFi rules require an SSID.</value>
+  </data>
+  <data name="Automation_ErrLidState" xml:space="preserve">
+    <value>Lid state rules must specify open or closed.</value>
+  </data>
+  <data name="FanDiag_FanNameCpuEstimated" xml:space="preserve">
+    <value>CPU fan (estimated)</value>
+  </data>
+  <data name="FanDiag_FanNameGpuEstimated" xml:space="preserve">
+    <value>GPU fan (estimated)</value>
+  </data>
+  <data name="FanDiag_SourceEcDirect" xml:space="preserve">
+    <value>EC direct</value>
+  </data>
+  <data name="FanDiag_SourceHardwareMonitor" xml:space="preserve">
+    <value>hardware monitor</value>
+  </data>
+  <data name="FanDiag_SourceAfterburner" xml:space="preserve">
+    <value>MSI Afterburner</value>
+  </data>
+  <data name="FanDiag_SourceWmiBios" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="FanDiag_SourceEstimated" xml:space="preserve">
+    <value>estimated</value>
+  </data>
+  <data name="FanDiag_SourceUnknown" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="FanControl_CopyFailedFormat" xml:space="preserve">
+    <value>Failed to copy share code: {0}</value>
+  </data>
+  <data name="FanControl_CopyFailedTitle" xml:space="preserve">
+    <value>Copy Failed</value>
+  </data>
+  <data name="FanControl_ImportedCurveFormat" xml:space="preserve">
+    <value>Imported curve "{0}" ({1} points). Remember to apply or save it.</value>
+  </data>
+  <data name="FanControl_ImportedPresetsFormat" xml:space="preserve">
+    <value>Imported {0} fan preset(s)</value>
+  </data>
+  <data name="FanControl_ImportCodeFailedFormat" xml:space="preserve">
+    <value>Failed to import share code: {0}</value>
+  </data>
+  <data name="FanControl_ImportPresetsFailedFormat" xml:space="preserve">
+    <value>Failed to import presets: {0}</value>
+  </data>
+  <data name="FanControl_ExportedPresetsFormat" xml:space="preserve">
+    <value>Exported {0} fan preset(s)</value>
+  </data>
+  <data name="FanControl_ExportPresetsFailedFormat" xml:space="preserve">
+    <value>Failed to export presets: {0}</value>
+  </data>
+  <data name="FanControl_ImportCompleteTitle" xml:space="preserve">
+    <value>Import Complete</value>
+  </data>
+  <data name="FanControl_ExportCompleteTitle" xml:space="preserve">
+    <value>Export Complete</value>
+  </data>
+  <data name="FanControl_ExportErrorTitle" xml:space="preserve">
+    <value>Export Error</value>
+  </data>
+  <data name="GameProfile_ImportedFormat" xml:space="preserve">
+    <value>Imported {0} profile(s)</value>
+  </data>
+  <data name="GameProfile_InvalidProfileTitle" xml:space="preserve">
+    <value>Invalid Game Profile</value>
+  </data>
+  <data name="Lighting_OverwriteDpiProfileFormat" xml:space="preserve">
+    <value>A DPI profile named '{0}' already exists. Overwrite it?</value>
+  </data>
+  <data name="Lighting_OverwriteDpiProfileTitle" xml:space="preserve">
+    <value>Overwrite DPI Profile</value>
+  </data>
+  <data name="Settings_OpenBrowserFailedFormat" xml:space="preserve">
+    <value>Failed to open browser: {0}</value>
+  </data>
+  <data name="Settings_RemoveBloatwareFailedFormat" xml:space="preserve">
+    <value>Failed to remove bloatware: {0}</value>
+  </data>
+  <data name="Settings_BloatwareRemoveFailedStatus" xml:space="preserve">
+    <value>❌ Removal failed: {0}</value>
+  </data>
+  <data name="SystemControl_RollbackApplying" xml:space="preserve">
+    <value>Applying safe rollback...</value>
+  </data>
+  <data name="SystemControl_RollbackClearing" xml:space="preserve">
+    <value>Safe rollback is clearing persisted tuning state...</value>
+  </data>
+  <data name="SystemControl_RollbackNotice" xml:space="preserve">
+    <value>Safe tuning rollback applied. Startup tuning state has been normalized to Balanced/Auto defaults; unavailable live hardware backends were skipped.</value>
+  </data>
+  <data name="SystemControl_RollbackAppliedFormat" xml:space="preserve">
+    <value>Applied: {0}.</value>
+  </data>
+  <data name="SystemControl_RollbackSkippedFormat" xml:space="preserve">
+    <value> Skipped: {0}.</value>
+  </data>
+  <data name="SystemControl_RollbackFailedFormat" xml:space="preserve">
+    <value>Safe rollback failed: {0}</value>
+  </data>
+  <data name="SystemControl_RollbackSavedStateFormat" xml:space="preserve">
+    <value>saved safe startup state ({0})</value>
+  </data>
+  <data name="SystemControl_RollbackAlreadySafe" xml:space="preserve">
+    <value>startup state already safe</value>
+  </data>
+  <data name="SystemControl_RollbackFanOemAuto" xml:space="preserve">
+    <value>fan OEM auto</value>
+  </data>
+  <data name="SystemControl_RollbackBalancedMode" xml:space="preserve">
+    <value>Balanced performance mode</value>
+  </data>
+  <data name="SystemControl_RollbackGpuMinimum" xml:space="preserve">
+    <value>GPU power Minimum</value>
+  </data>
+  <data name="SystemControl_RollbackCpuPlReset" xml:space="preserve">
+    <value>CPU PL1/PL2 startup reset</value>
+  </data>
+  <data name="SystemControl_RollbackTccReset" xml:space="preserve">
+    <value>TCC offset reset</value>
+  </data>
+  <data name="SystemControl_RollbackNvidiaReset" xml:space="preserve">
+    <value>NVIDIA GPU tuning reset</value>
+  </data>
+  <data name="SystemControl_RollbackGpuBoostUnavailable" xml:space="preserve">
+    <value>GPU power boost backend unavailable</value>
+  </data>
+  <data name="SystemControl_RollbackCpuLimitsLocked" xml:space="preserve">
+    <value>CPU power limits locked/read-only</value>
+  </data>
+  <data name="SystemControl_RollbackCpuLimitsUnavailable" xml:space="preserve">
+    <value>CPU power limits unavailable</value>
+  </data>
+  <data name="SystemControl_RollbackTccUnavailable" xml:space="preserve">
+    <value>TCC offset unavailable</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltReset" xml:space="preserve">
+    <value>CPU undervolt reset</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltResetFailedFormat" xml:space="preserve">
+    <value>CPU undervolt reset failed: {0}</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltUnavailable" xml:space="preserve">
+    <value>CPU undervolt backend unavailable</value>
+  </data>
+  <data name="SystemControl_RollbackGpuOcUnavailable" xml:space="preserve">
+    <value>GPU OC backend unavailable</value>
+  </data>
+  <data name="SystemControl_RollbackAmdPowerUnavailable" xml:space="preserve">
+    <value>AMD CPU power backend unavailable</value>
+  </data>
+  <data name="Nvidia_StatusReadFailedFormat" xml:space="preserve">
+    <value>Could not read the NVIDIA driver: {0}</value>
+  </data>
+  <data name="Nvidia_LiveFormat" xml:space="preserve">
+    <value>Live CURRENT {0} W, live MAX {1} W. </value>
+  </data>
+  <data name="Nvidia_StatusFormat" xml:space="preserve">
+    <value>{0}: {1}MAX writes {2}, CURRENT writes {3}. {4}{5}</value>
+  </data>
+  <data name="Nvidia_WriteReady" xml:space="preserve">
+    <value>ready</value>
+  </data>
+  <data name="Nvidia_WriteNotReady" xml:space="preserve">
+    <value>not ready</value>
+  </data>
+  <data name="Nvidia_GpuFallback" xml:space="preserve">
+    <value>NVIDIA GPU</value>
+  </data>
+  <data name="Nvidia_StockMismatchFormat" xml:space="preserve">
+    <value> Stock max read: {0} W, expected: {1} W. A difference is normal when a MAX override is installed or the laptop maker set a lower limit; it is not an error by itself.</value>
+  </data>
+  <data name="Nvidia_RemoveMaxPrompt" xml:space="preserve">
+    <value>Remove the MAX override? Windows must be restarted afterwards to restore the factory limit.</value>
+  </data>
+  <data name="Nvidia_ApplyPromptFormat" xml:space="preserve">
+    <value>Apply {0} {1} W?&#10;&#10;This changes the GPU's power limit beyond the laptop maker's setting. Higher power means more heat, and the cooling was not designed for it. {2}Only continue if you understand the risk.</value>
+  </data>
+  <data name="Nvidia_MayNeedReboot" xml:space="preserve">
+    <value>MAX needs a Windows restart to take effect. </value>
+  </data>
+  <data name="Nvidia_CurrentResetsOnReboot" xml:space="preserve">
+    <value>CURRENT resets on reboot. </value>
+  </data>
+  <data name="Nvidia_PowerTitle" xml:space="preserve">
+    <value>NVIDIA power</value>
+  </data>
+  <data name="Bloatware_RestoreActionItemFormat" xml:space="preserve">
+    <value>Restoring {0}</value>
+  </data>
+  <data name="Bloatware_RestoreDoneItemFormat" xml:space="preserve">
+    <value>Restored {0}</value>
+  </data>
+  <data name="Bloatware_RestoreProgressFormat" xml:space="preserve">
+    <value>Restoring {0}/{1}: {2}</value>
+  </data>
+  <data name="Bloatware_RestoredCountFormat" xml:space="preserve">
+    <value>Restored {0} bloatware items</value>
+  </data>
+  <data name="Bloatware_OpenReportFailedFormat" xml:space="preserve">
+    <value>Failed to open report: {0}</value>
+  </data>
+  <data name="DeviceLighting_FnUpdatedFormat" xml:space="preserve">
+    <value>{0} updated — the keyboard keeps one profile per effect.</value>
+  </data>
+  <data name="DeviceLighting_FnAddedFormat" xml:space="preserve">
+    <value>{0} added. Nothing is on the keyboard until you write the cycle.</value>
+  </data>
+  <data name="DeviceLighting_FnRemovedFormat" xml:space="preserve">
+    <value>{0} removed from the list. It is still on the keyboard.</value>
+  </data>
+  <data name="DeviceLighting_FnWritingFormat" xml:space="preserve">
+    <value>Writing {0} profile(s)…</value>
+  </data>
+  <data name="FanCalibration_ErrorFormat" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="FanCalibration_TestingLevelFormat" xml:space="preserve">
+    <value>Testing level {0}... ({1}% complete)</value>
+  </data>
+  <data name="FanCalibration_ErrorWarnFormat" xml:space="preserve">
+    <value>⚠ Error: {0}</value>
+  </data>
+  <data name="GpuClamp_FailedFormat" xml:space="preserve">
+    <value>Failed: {0}</value>
+  </data>
+  <data name="KbdDiag_DetectionFailedFormat" xml:space="preserve">
+    <value>Detection failed: {0}</value>
+  </data>
+  <data name="KbdDiag_ProbeStepFormat" xml:space="preserve">
+    <value>Probe step {0} of {1}: is the keyboard red now?</value>
+  </data>
+  <data name="KbdDiag_TestPatternFailedFormat" xml:space="preserve">
+    <value>Test pattern failed: {0}</value>
+  </data>
+  <data name="KbdDiag_ClearFailedFormat" xml:space="preserve">
+    <value>Clear failed: {0}</value>
+  </data>
+  <data name="Mem_FreedFormat" xml:space="preserve">
+    <value>Freed {0} MB</value>
+  </data>
+  <data name="Mem_ExcludedFormat" xml:space="preserve">
+    <value>Excluded {0} from working-set trims</value>
+  </data>
+  <data name="Mem_CompressionEnabled" xml:space="preserve">
+    <value>Memory compression enabled</value>
+  </data>
+  <data name="Mem_CompressionDisabled" xml:space="preserve">
+    <value>Memory compression disabled</value>
+  </data>
+  <data name="Mem_CopiedFormat" xml:space="preserve">
+    <value>Copied {0}</value>
+  </data>
+  <data name="Mem_FailedFormat" xml:space="preserve">
+    <value>Failed: {0}</value>
+  </data>
+  <data name="KbdMap_PaintedFormat" xml:space="preserve">
+    <value>Painted {0} key(s) {1}. </value>
+  </data>
+  <data name="KbdMap_RestoredFormat" xml:space="preserve">
+    <value>Restored the last picture ({0} cells). </value>
+  </data>
+  <data name="KbdMap_DetectedFormat" xml:space="preserve">
+    <value>{0} LEDs across {1} keys ({2})</value>
+  </data>
+  <data name="Main_RestorePointCreatedFormat" xml:space="preserve">
+    <value>Restore point #{0} created</value>
+  </data>
+  <data name="Main_RestorePointFailedFormat" xml:space="preserve">
+    <value>Restore point failed: {0}</value>
+  </data>
+  <data name="Main_CleanupFailedFormat" xml:space="preserve">
+    <value>✗ Cleanup failed: {0}</value>
+  </data>
+  <data name="Update_DownloadProgressFormat" xml:space="preserve">
+    <value>{0}% • {1} MB/s • {2} remaining</value>
+  </data>
+  <data name="FanCleaning_DetectedFormat" xml:space="preserve">
+    <value>✓ HP OMEN detected: {0}. Fan cleaning available.</value>
+  </data>
+  <data name="FanCleaning_ReasonFormat" xml:space="preserve">
+    <value>⚠️ {0}</value>
+  </data>
+  <data name="Bios_UpdateAvailableFormat" xml:space="preserve">
+    <value>⬆️ Update available: {0}</value>
+  </data>
+  <data name="Bios_ErrorFormat" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="SC_PartialFormat" xml:space="preserve">
+    <value>⚠ Partial ({0} failed): {1}</value>
+  </data>
+  <data name="SC_ErrorFormat" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="SC_TestApplyNotStartedFormat" xml:space="preserve">
+    <value>Test Apply did not start: {0}</value>
+  </data>
+  <data name="SC_PlAvailableFormat" xml:space="preserve">
+    <value>✓ Available (PL1: {0}W, PL2: {1}W)</value>
+  </data>
+  <data name="SC_PlAppliedFormat" xml:space="preserve">
+    <value>✓ Applied (PL1: {0}W, PL2: {1}W)</value>
+  </data>
+  <data name="SC_PlResetFormat" xml:space="preserve">
+    <value>✓ Reset to startup values (PL1: {0}W, PL2: {1}W)</value>
+  </data>
+  <data name="SC_GpuOcPowerOnlyFormat" xml:space="preserve">
+    <value>{0} - Power limit tuning available, clock offsets blocked</value>
+  </data>
+  <data name="SC_GpuOcLockedFormat" xml:space="preserve">
+    <value>{0} - NVAPI tuning locked by driver/firmware</value>
+  </data>
+  <data name="SC_GpuOcInitFailedFormat" xml:space="preserve">
+    <value>Initialization failed: {0}</value>
+  </data>
+  <data name="SC_AmdOcAvailableFormat" xml:space="preserve">
+    <value>✓ {0} - AMD overclocking available via ADL2</value>
+  </data>
+  <data name="SC_AmdDriverMissingFormat" xml:space="preserve">
+    <value>⚠ {0} - Install AMD Adrenalin drivers for GPU tuning</value>
+  </data>
+  <data name="SC_AmdOcAppliedFormat" xml:space="preserve">
+    <value>AMD GPU OC Applied: Core {0} MHz, Mem {1} MHz, Power {2}%</value>
+  </data>
+  <data name="SC_AmdOcErrorFormat" xml:space="preserve">
+    <value>AMD GPU OC Error: {0}</value>
+  </data>
+  <data name="SC_RestoredWithGuardrailsFormat" xml:space="preserve">
+    <value>Restored with guardrails: {0}</value>
+  </data>
+  <data name="SC_ProfileSavedFormat" xml:space="preserve">
+    <value>✓ Saved profile: {0}</value>
+  </data>
+  <data name="SC_ProfileDeletedFormat" xml:space="preserve">
+    <value>Deleted profile: {0}</value>
+  </data>
+  <data name="SC_ModeNotSavedFormat" xml:space="preserve">
+    <value>"{0}" is not a saved mode, so there is nowhere to store this.</value>
+  </data>
+  <data name="Lighting_RestoreStatusFormat" xml:space="preserve">
+    <value>{0} Surface: {1}.{2}</value>
+  </data>
+  <data name="Lighting_RestoredSavedFormat" xml:space="preserve">
+    <value>Restored saved keyboard colors. {0} Surface: {1}.</value>
+  </data>
+  <data name="Lighting_ObservationSaveFailedFormat" xml:space="preserve">
+    <value>RGB observation save failed: {0}</value>
+  </data>
+  <data name="Optimizer_AlreadyAppliedFormat" xml:space="preserve">
+    <value>{0} is already fully applied</value>
+  </data>
+  <data name="Optimizer_AppliedCountFormat" xml:space="preserve">
+    <value>Applied {0}/{1} items in {2} ({3} failed)</value>
+  </data>
+  <data name="Optimizer_AppliedCategoryFormat" xml:space="preserve">
+    <value>Applied {0} {1} optimization(s)</value>
+  </data>
+  <data name="Optimizer_RevertedFormat" xml:space="preserve">
+    <value>Reverted {0}/{1} optimizations</value>
+  </data>
+  <data name="Optimizer_PreflightRefreshFailedFormat" xml:space="preserve">
+    <value>Preflight refresh failed: {0}</value>
+  </data>
+  <data name="Optimizer_ReportExportedFormat" xml:space="preserve">
+    <value>Report exported: {0}</value>
+  </data>
+  <data name="Optimizer_ReportExportFailedFormat" xml:space="preserve">
+    <value>Report export failed: {0}</value>
+  </data>
+  <data name="Optimizer_OpenReportFailedFormat" xml:space="preserve">
+    <value>Could not open report: {0}</value>
+  </data>
+  <data name="Optimizer_CopyReportPathFailedFormat" xml:space="preserve">
+    <value>Could not copy report path: {0}</value>
+  </data>
+  <data name="DiagnosticExport_FileSavedToFormat" xml:space="preserve">
+    <value>File saved to: {0}</value>
+  </data>
+  <data name="DiagnosticExport_FileSizeFormat" xml:space="preserve">
+    <value>File size: {0}</value>
+  </data>
+  <data name="DiagnosticExport_ContainsFormat" xml:space="preserve">
+    <value>Contains: {0}</value>
+  </data>
+  <data name="FanCalibration_ModelLineFormat" xml:space="preserve">
+    <value>Model: {0}&#10;Model ID: {1}</value>
+  </data>
+  <data name="FanCalibration_AvailableFormat" xml:space="preserve">
+    <value>Calibration available (created {0})</value>
+  </data>
+  <data name="FanCalibration_FanStatusFormat" xml:space="preserve">
+    <value>Current: {0} RPM (Level: {1}, Source: {2})&#10;Estimated: ~{3}% speed</value>
+  </data>
+  <data name="FanCalibration_ReadStatusFailedFormat" xml:space="preserve">
+    <value>Error reading fan status: {0}</value>
+  </data>
+  <data name="FanCalibration_FailedDetailFormat" xml:space="preserve">
+    <value>Calibration failed: {0}</value>
+  </data>
+  <data name="FanCalibration_SuccessFormat" xml:space="preserve">
+    <value>Calibration successful - {0} test points completed in {1} seconds</value>
+  </data>
+  <data name="FanCalibration_IssuesFormat" xml:space="preserve">
+    <value>Calibration completed with issues - {0} test points, {1} failed</value>
+  </data>
 </root>

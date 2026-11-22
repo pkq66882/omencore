@@ -2605,18 +2605,18 @@ namespace OmenCore.ViewModels
                 var result = await _systemRestoreService.CreateRestorePointAsync(label);
                 if (result.Success)
                 {
-                    RestorePointStatus = $"Restore point #{result.SequenceNumber} created";
+                    RestorePointStatus = string.Format(Strings.Main_RestorePointCreatedFormat, result.SequenceNumber);
                     PushEvent("System restore point created");
                 }
                 else
                 {
-                    RestorePointStatus = $"Restore point failed: {result.Message}";
+                    RestorePointStatus = string.Format(Strings.Main_RestorePointFailedFormat, result.Message);
                     PushEvent("Restore point creation failed");
                 }
             }
             catch (Exception ex)
             {
-                RestorePointStatus = $"Restore point failed: {ex.Message}";
+                RestorePointStatus = string.Format(Strings.Main_RestorePointFailedFormat, ex.Message);
                 _logging.ErrorWithContext(
                     component: "MainViewModel",
                     operation: "CreateRestorePointAsync",
@@ -2722,7 +2722,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                CleanupStatus = $"✗ Cleanup failed: {ex.Message}";
+                CleanupStatus = string.Format(Strings.Main_CleanupFailedFormat, ex.Message);
                 _logging.ErrorWithContext(
                     component: "MainViewModel",
                     operation: "RunOmenCleanupAsync",

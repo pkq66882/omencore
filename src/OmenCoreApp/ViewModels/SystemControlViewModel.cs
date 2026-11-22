@@ -2109,7 +2109,7 @@ namespace OmenCore.ViewModels
                     MemorySuccess = memSuccess,
                     PowerSuccess = powerSuccess,
                     VoltageSuccess = voltageSuccess,
-                    StatusText = $"⚠ Partial ({string.Join(", ", failures)} failed): {partialStatus}",
+                    StatusText = string.Format(Strings.SC_PartialFormat, string.Join(", ", failures), partialStatus),
                     GuardrailNote = guardrailNote
                 };
             }
@@ -2122,7 +2122,7 @@ namespace OmenCore.ViewModels
                     MemorySuccess = false,
                     PowerSuccess = false,
                     VoltageSuccess = false,
-                    StatusText = $"Error: {ex.Message}",
+                    StatusText = string.Format(Strings.SC_ErrorFormat, ex.Message),
                     GuardrailNote = guardrailNote
                 };
             }
@@ -2356,7 +2356,7 @@ namespace OmenCore.ViewModels
                 _logging.Error("CPU undervolt test apply failed", ex);
                 SetUndervoltTestPendingFlag(false);
                 _cpuUndervoltTestSnapshot = null;
-                CpuUndervoltTestStatusText = $"Test Apply did not start: {ex.Message}";
+                CpuUndervoltTestStatusText = string.Format(Strings.SC_TestApplyNotStartedFormat, ex.Message);
                 UndervoltLastActionText = $"Test failed: {ex.Message}";
                 UndervoltLastActionColor = System.Windows.Media.Brushes.OrangeRed;
                 return;
@@ -3198,8 +3198,8 @@ namespace OmenCore.ViewModels
             var applied = new List<string>();
             var skipped = new List<string>();
 
-            TuningRollbackStatusText = "Applying safe rollback...";
-            UndervoltLastActionText = "Safe rollback is clearing persisted tuning state...";
+            TuningRollbackStatusText = Strings.SystemControl_RollbackApplying;
+            UndervoltLastActionText = Strings.SystemControl_RollbackClearing;
             UndervoltLastActionColor = System.Windows.Media.Brushes.SkyBlue;
 
             try
@@ -3211,11 +3211,11 @@ namespace OmenCore.ViewModels
                 _configService.Save(config);
 
                 applied.Add(outcome.ConfigChanged
-                    ? $"saved safe startup state ({string.Join(", ", outcome.ChangedAreas)})"
-                    : "startup state already safe");
+                    ? string.Format(Strings.SystemControl_RollbackSavedStateFormat, string.Join(", ", outcome.ChangedAreas))
+                    : Strings.SystemControl_RollbackAlreadySafe);
 
                 TryRunTuningRollbackStep(
-                    "fan OEM auto",
+                    Strings.SystemControl_RollbackFanOemAuto,
                     () =>
                     {
                         if (_fanService == null)
@@ -3228,7 +3228,7 @@ namespace OmenCore.ViewModels
                     skipped);
 
                 TryRunTuningRollbackStep(
-                    "Balanced performance mode",
+                    Strings.SystemControl_RollbackBalancedMode,
                     () => SelectPerformanceModeWithoutSave(TuningRollbackCoordinator.SafePerformanceMode),
                     applied,
                     skipped);
@@ -3236,7 +3236,7 @@ namespace OmenCore.ViewModels
                 if (GpuPowerBoostAvailable)
                 {
                     TryRunTuningRollbackStep(
-                        "GPU power Minimum",
+                        Strings.SystemControl_RollbackGpuMinimum,
                         () =>
                         {
                             GpuPowerBoostLevel = TuningRollbackCoordinator.SafeGpuPowerBoostLevel;
@@ -3247,25 +3247,25 @@ namespace OmenCore.ViewModels
                 }
                 else
                 {
-                    skipped.Add("GPU power boost backend unavailable");
+                    skipped.Add(Strings.SystemControl_RollbackGpuBoostUnavailable);
                 }
 
                 if (CpuPowerLimitsAvailable && !CpuPowerLimitsLocked)
                 {
-                    TryRunTuningRollbackStep("CPU PL1/PL2 startup reset", ResetCpuPowerLimits, applied, skipped);
+                    TryRunTuningRollbackStep(Strings.SystemControl_RollbackCpuPlReset, ResetCpuPowerLimits, applied, skipped);
                 }
                 else
                 {
-                    skipped.Add(CpuPowerLimitsAvailable ? "CPU power limits locked/read-only" : "CPU power limits unavailable");
+                    skipped.Add(CpuPowerLimitsAvailable ? Strings.SystemControl_RollbackCpuLimitsLocked : Strings.SystemControl_RollbackCpuLimitsUnavailable);
                 }
 
                 if (TccStatus.IsSupported)
                 {
-                    TryRunTuningRollbackStep("TCC offset reset", ResetTccOffset, applied, skipped);
+                    TryRunTuningRollbackStep(Strings.SystemControl_RollbackTccReset, ResetTccOffset, applied, skipped);
                 }
                 else
                 {
-                    skipped.Add("TCC offset unavailable");
+                    skipped.Add(Strings.SystemControl_RollbackTccUnavailable);
                 }
 
                 RequestedCoreOffset = 0;
@@ -3282,24 +3282,24 @@ namespace OmenCore.ViewModels
                     try
                     {
                         await ResetUndervoltAsync();
-                        applied.Add("CPU undervolt reset");
+                        applied.Add(Strings.SystemControl_RollbackUndervoltReset);
                     }
                     catch (Exception ex)
                     {
-                        skipped.Add($"CPU undervolt reset failed: {ex.Message}");
+                        skipped.Add(string.Format(Strings.SystemControl_RollbackUndervoltResetFailedFormat, ex.Message));
                         _logging.Warn($"Safe tuning rollback CPU undervolt reset failed: {ex.Message}");
                     }
                 }
                 else
                 {
-                    skipped.Add("CPU undervolt backend unavailable");
+                    skipped.Add(Strings.SystemControl_RollbackUndervoltUnavailable);
                     UndervoltLastActionText = "Safe rollback cleared saved undervolt startup state; live CPU undervolt backend unavailable.";
                     UndervoltLastActionColor = System.Windows.Media.Brushes.Gold;
                 }
 
                 if (GpuNvapiAvailable && (GpuOcAvailable || GpuPowerLimitAvailable))
                 {
-                    TryRunTuningRollbackStep("NVIDIA GPU tuning reset", ResetGpuOc, applied, skipped);
+                    TryRunTuningRollbackStep(Strings.SystemControl_RollbackNvidiaReset, ResetGpuOc, applied, skipped);
                 }
                 else if (_amdGpuService?.IsAvailable == true)
                 {
@@ -3307,7 +3307,7 @@ namespace OmenCore.ViewModels
                 }
                 else
                 {
-                    skipped.Add("GPU OC backend unavailable");
+                    skipped.Add(Strings.SystemControl_RollbackGpuOcUnavailable);
                 }
 
                 if (AmdPowerLimitsAvailable)
@@ -3316,14 +3316,14 @@ namespace OmenCore.ViewModels
                 }
                 else if (IsAmdCpu)
                 {
-                    skipped.Add("AMD CPU power backend unavailable");
+                    skipped.Add(Strings.SystemControl_RollbackAmdPowerUnavailable);
                 }
 
                 StartupRecoveryNoticeVisible = true;
-                StartupRecoveryNoticeText = "Safe tuning rollback applied. Startup tuning state has been normalized to Balanced/Auto defaults; unavailable live hardware backends were skipped.";
+                StartupRecoveryNoticeText = Strings.SystemControl_RollbackNotice;
 
-                var skippedText = skipped.Count > 0 ? $" Skipped: {string.Join("; ", skipped)}." : string.Empty;
-                TuningRollbackStatusText = $"Applied: {string.Join("; ", applied)}.{skippedText}";
+                var skippedText = skipped.Count > 0 ? string.Format(Strings.SystemControl_RollbackSkippedFormat, string.Join("; ", skipped)) : string.Empty;
+                TuningRollbackStatusText = string.Format(Strings.SystemControl_RollbackAppliedFormat, string.Join("; ", applied)) + skippedText;
                 _logging.Info($"Safe tuning rollback completed. Applied=[{string.Join("; ", applied)}], Skipped=[{string.Join("; ", skipped)}]");
 
                 OnPropertyChanged(nameof(CurrentPerformanceModeName));
@@ -3336,8 +3336,8 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                TuningRollbackStatusText = $"Safe rollback failed: {ex.Message}";
-                UndervoltLastActionText = $"Safe rollback failed: {ex.Message}";
+                TuningRollbackStatusText = string.Format(Strings.SystemControl_RollbackFailedFormat, ex.Message);
+                UndervoltLastActionText = string.Format(Strings.SystemControl_RollbackFailedFormat, ex.Message);
                 UndervoltLastActionColor = System.Windows.Media.Brushes.OrangeRed;
                 _logging.Error($"Safe tuning rollback failed: {ex.Message}", ex);
             }
@@ -3539,7 +3539,7 @@ namespace OmenCore.ViewModels
                 else
                 {
                     CpuPowerLimitsAvailable = true;
-                    CpuPowerLimitsStatus = $"✓ Available (PL1: {pl1:F0}W, PL2: {pl2:F0}W)";
+                    CpuPowerLimitsStatus = string.Format(Strings.SC_PlAvailableFormat, pl1.ToString("F0"), pl2.ToString("F0"));
                     _logging.Info($"CPU power limits initialized: PL1={pl1:F0}W, PL2={pl2:F0}W, Locked={isLocked}");
                 }
 
@@ -3550,7 +3550,7 @@ namespace OmenCore.ViewModels
             catch (Exception ex)
             {
                 CpuPowerLimitsAvailable = false;
-                CpuPowerLimitsStatus = $"Error: {ex.Message}";
+                CpuPowerLimitsStatus = string.Format(Strings.SC_ErrorFormat, ex.Message);
                 CpuPowerLimitsLocked = true;
                 _logging.Warn($"Failed to initialize CPU power limits: {ex.Message}");
             }
@@ -3610,7 +3610,7 @@ namespace OmenCore.ViewModels
                     CurrentPl2Watts = newPl2;
                     
                     _logging.Info($"✓ CPU power limits applied: PL1={newPl1:F0}W, PL2={newPl2:F0}W");
-                    CpuPowerLimitsStatus = $"✓ Applied (PL1: {newPl1:F0}W, PL2: {newPl2:F0}W)";
+                    CpuPowerLimitsStatus = string.Format(Strings.SC_PlAppliedFormat, newPl1.ToString("F0"), newPl2.ToString("F0"));
 
                     // Save to config
                     SaveCpuPowerLimitsToConfig(pl1, pl2);
@@ -3678,7 +3678,7 @@ namespace OmenCore.ViewModels
                 var (newPl1, newPl2, _, _, _) = _msrAccess.GetPowerLimitStatus();
                 CurrentPl1Watts = newPl1;
                 CurrentPl2Watts = newPl2;
-                CpuPowerLimitsStatus = $"✓ Reset to startup values (PL1: {newPl1:F0}W, PL2: {newPl2:F0}W)";
+                CpuPowerLimitsStatus = string.Format(Strings.SC_PlResetFormat, newPl1.ToString("F0"), newPl2.ToString("F0"));
 
                 _logging.Info($"CPU power limits reset to startup-read values (PL1={defaultPl1}W, PL2={defaultPl2}W)");
             }
@@ -4458,12 +4458,12 @@ namespace OmenCore.ViewModels
                     }
                     else if (GpuPowerLimitAvailable)
                     {
-                        GpuOcStatus = $"{_nvapiService.GpuName} - Power limit tuning available, clock offsets blocked";
+                        GpuOcStatus = string.Format(Strings.SC_GpuOcPowerOnlyFormat, _nvapiService.GpuName);
                         _logging.Info($"GPU detected with power-only NVAPI tuning: {_nvapiService.GpuName}");
                     }
                     else
                     {
-                        GpuOcStatus = $"{_nvapiService.GpuName} - NVAPI tuning locked by driver/firmware";
+                        GpuOcStatus = string.Format(Strings.SC_GpuOcLockedFormat, _nvapiService.GpuName);
                         _logging.Info($"GPU detected but NVAPI tuning writes are locked: {_nvapiService.GpuName}. Power status: {_nvapiService.PowerLimitStatusMessage}");
                     }
 
@@ -4484,7 +4484,7 @@ namespace OmenCore.ViewModels
             {
                 GpuOcAvailable = false;
                 GpuPowerLimitAvailable = false;
-                GpuOcStatus = $"Initialization failed: {ex.Message}";
+                GpuOcStatus = string.Format(Strings.SC_GpuOcInitFailedFormat, ex.Message);
                 _logging.Error($"GPU OC initialization failed: {ex.Message}", ex);
             }
             
@@ -4566,12 +4566,12 @@ namespace OmenCore.ViewModels
             
             if (_amdGpuService?.IsAvailable == true)
             {
-                GpuOcStatus = $"✓ {GpuDisplayName} - AMD overclocking available via ADL2";
+                GpuOcStatus = string.Format(Strings.SC_AmdOcAvailableFormat, GpuDisplayName);
                 _logging.Info($"AMD GPU OC available: {GpuDisplayName} via ADL2");
             }
             else
             {
-                GpuOcStatus = $"⚠ {GpuDisplayName} - Install AMD Adrenalin drivers for GPU tuning";
+                GpuOcStatus = string.Format(Strings.SC_AmdDriverMissingFormat, GpuDisplayName);
                 _logging.Info($"AMD GPU detected: {GpuDisplayName}. ADL2 not available (Adrenalin drivers required).");
             }
         }
@@ -4714,7 +4714,7 @@ namespace OmenCore.ViewModels
 
                 if (coreSuccess && memSuccess && powerSuccess)
                 {
-                    GpuOcStatus = $"AMD GPU OC Applied: Core {AmdCoreClockOffset:+#;-#;0} MHz, Mem {AmdMemoryClockOffset:+#;-#;0} MHz, Power {AmdPowerLimitPercent}%";
+                    GpuOcStatus = string.Format(Strings.SC_AmdOcAppliedFormat, AmdCoreClockOffset.ToString("+#;-#;0"), AmdMemoryClockOffset.ToString("+#;-#;0"), AmdPowerLimitPercent);
                     _logging.Info($"✓ AMD GPU OC applied: Core={AmdCoreClockOffset}, Mem={AmdMemoryClockOffset}, Power={AmdPowerLimitPercent}%");
                 }
                 else
@@ -4725,7 +4725,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                GpuOcStatus = $"AMD GPU OC Error: {ex.Message}";
+                GpuOcStatus = string.Format(Strings.SC_AmdOcErrorFormat, ex.Message);
                 _logging.Error($"AMD GPU OC failed: {ex.Message}", ex);
             }
         }
@@ -4995,7 +4995,7 @@ namespace OmenCore.ViewModels
                     _logging.Info($"GPU OC settings restored from config: Core={GpuCoreClockOffset}, Mem={GpuMemoryClockOffset}, Power={GpuPowerLimitPercent}%, Voltage={GpuVoltageOffsetMv}mV");
                     if (!string.IsNullOrEmpty(guardrailNote))
                     {
-                        GpuOcStatus = $"Restored with guardrails: {guardrailNote}";
+                        GpuOcStatus = string.Format(Strings.SC_RestoredWithGuardrailsFormat, guardrailNote);
                         _logging.Info($"GPU OC restore adjusted to detected limits: {guardrailNote}");
                     }
                     
@@ -5134,7 +5134,7 @@ namespace OmenCore.ViewModels
             // Clear input
             NewGpuOcProfileName = "";
             
-            GpuOcStatus = $"✓ Saved profile: {profile.Name}";
+            GpuOcStatus = string.Format(Strings.SC_ProfileSavedFormat, profile.Name);
             _logging.Info($"Saved GPU OC profile: {profile.Name}");
         }
         
@@ -5161,7 +5161,7 @@ namespace OmenCore.ViewModels
             // Save to config
             SaveGpuOcProfilesToConfig();
             
-            GpuOcStatus = $"Deleted profile: {profileName}";
+            GpuOcStatus = string.Format(Strings.SC_ProfileDeletedFormat, profileName);
             _logging.Info($"Deleted GPU OC profile: {profileName}");
         }
         
@@ -5435,7 +5435,7 @@ namespace OmenCore.ViewModels
 
             if (stored == null)
             {
-                ModeMemoryStatusText = $"'{selected.Name}' is not a saved mode, so there is nowhere to store this.";
+                ModeMemoryStatusText = string.Format(Strings.SC_ModeNotSavedFormat, LocalizePerformanceModeName(selected.Name));
                 return;
             }
 

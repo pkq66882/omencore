@@ -165,7 +165,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                DiagnosticStatus = $"Detection failed: {ex.Message}";
+                DiagnosticStatus = string.Format(Strings.KbdDiag_DetectionFailedFormat, ex.Message);
                 _logging.Error("Device detection failed", ex);
             }
         }
@@ -201,7 +201,7 @@ namespace OmenCore.ViewModels
                     var line = $"PROBE {i + 1}/{variants.Count} {v.Id}: sent={(ok ? "ok" : "refused")}, readback@25=#{rb}, readback@1=#{rb1} - {v.Description}";
                     _logging.Info(line);
                     DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - {line}");
-                    DiagnosticStatus = $"Probe step {i + 1} of {variants.Count}: is the keyboard red now?";
+                    DiagnosticStatus = string.Format(Strings.KbdDiag_ProbeStepFormat, i + 1, variants.Count);
                     await Task.Delay(3500);
                 }
                 DiagnosticStatus = "Probe finished. Report which step number (if any) turned the keyboard red.";
@@ -287,7 +287,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                DiagnosticStatus = $"Test pattern failed: {ex.Message}";
+                DiagnosticStatus = string.Format(Strings.KbdDiag_TestPatternFailedFormat, ex.Message);
                 DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Test pattern failed: {ex.Message}");
                 _logging.Error("Test pattern failed", ex);
             }
@@ -339,7 +339,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                DiagnosticStatus = $"Clear failed: {ex.Message}";
+                DiagnosticStatus = string.Format(Strings.KbdDiag_ClearFailedFormat, ex.Message);
                 DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Clear failed: {ex.Message}");
                 _logging.Error("Clear test pattern failed", ex);
             }

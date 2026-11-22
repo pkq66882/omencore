@@ -142,7 +142,7 @@ namespace OmenCore.ViewModels
                     RpmSource.HardwareMonitor => "HWMon",
                     RpmSource.Afterburner => "MAB",
                     RpmSource.WmiBios => "WMI",
-                    RpmSource.Estimated => "Est",
+                    RpmSource.Estimated => Strings.FanDiag_SourceEstimatedValue,
                     _ => "?"
                 };
             }
@@ -312,9 +312,8 @@ namespace OmenCore.ViewModels
             // A run that starts hot measures thermal protection, not the fans (8BC2, K.6): wait for it to cool first.
             if (!await WaitForCoolDownAsync())
             {
-                GuidedTestResult = $"Run not started: the CPU or GPU is at {HottestTemperatureC():0} C. Let the laptop cool below " +
-                                   $"{GuidedRunRules.StartBelowC:0} C and run the diagnostic again.";
-                GuidedTestStatus = "Too hot to start - cool down and run again";
+                GuidedTestResult = string.Format(Strings.FanDiag_StatusTooHotFormat, HottestTemperatureC().ToString("0"), GuidedRunRules.StartBelowC.ToString("0"));
+                GuidedTestStatus = Strings.FanDiag_StatusTooHotShort;
                 IsGuidedTestRunning = false;
                 IsDiagnosticActive = false;
                 return;
@@ -343,7 +342,7 @@ namespace OmenCore.ViewModels
                     for (int fanIndex = 0; fanIndex < fanNames.Length; fanIndex++)
                     {
                         var fanName = fanNames[fanIndex];
-                        GuidedTestStatus = $"Testing {fanName} fan at {targetPercent}%...";
+                        GuidedTestStatus = string.Format(Strings.FanDiag_StatusTestingFormat, DisplayNames.FanDiagFanName(fanName), targetPercent);
                         _logging.Info($"[GuidedDiagnostic] Testing {fanName} fan at {targetPercent}%");
                         
                         try
@@ -427,32 +426,33 @@ namespace OmenCore.ViewModels
                 // "?" on a run whose every result was EcDirect. A header that disagrees with the
                 // lines beneath it is worse than no header.
                 var sourceLabel = sourcesSeen.Count == 0
-                    ? "none"
-                    : string.Join(" + ", sourcesSeen.Distinct().OrderBy(s => s.ToString()));
-                summary.AppendLine($"Backend: {_fanService.Backend} | RPM source: {sourceLabel}");
-                summary.AppendLine($"Tests: {passCount}/{totalTests} passed | Overall Score: {avgScore}/100 ({overallRating})");
-                summary.AppendLine($"RGB: {rgbSummary}");
+                    ? Strings.FanDiag_SourceNone
+                    : string.Join(" + ", sourcesSeen.Distinct().OrderBy(s => s.ToString()).Select(s => DisplayNames.FanDiagSource(s.ToString())));
+                summary.AppendLine(string.Format(Strings.FanDiag_SummaryBackendFormat, _fanService.Backend, sourceLabel));
+                summary.AppendLine(string.Format(Strings.FanDiag_SummaryTestsFormat, passCount, totalTests, avgScore, DisplayNames.FanDiagRating(overallRating)));
+                summary.AppendLine(string.Format(Strings.FanDiag_SummaryRgbFormat, rgbSummary));
                 summary.AppendLine();
                 
                 foreach (var r in results)
                 {
                     var statusIcon = r.passed ? "✓" : "✗";
-                    summary.AppendLine($"{statusIcon} {r.fan} @ {r.target}%: {r.rpm} - Score: {r.score} [evidence: {r.evidence}]");
+                    summary.AppendLine(string.Format(Strings.FanDiag_SummaryRowFormat, statusIcon, DisplayNames.FanDiagFanName(r.fan), r.target, DisplayNames.FanDiagRpm(r.rpm), r.score, DisplayNames.FanDiagEvidence(r.evidence)));
                 }
                 
                 if (interrupted.Count > 0)
                 {
                     summary.AppendLine();
-                    summary.AppendLine($"⚠ {interrupted.Count} step(s) interrupted by thermal protection and not counted as failures: {string.Join(", ", interrupted)}.");
-                    summary.AppendLine($"Let the laptop cool below {GuidedRunRules.StartBelowC:0} C and run the diagnostic again to complete them.");
+                    summary.AppendLine(string.Format(Strings.FanDiag_SummaryInterruptedNoteFormat, interrupted.Count, string.Join(", ", interrupted.Select(i => i.Replace("CPU", Strings.FanDiag_FanNameCpu).Replace("GPU", Strings.FanDiag_FanNameGpu)))));
+                    summary.AppendLine(string.Format(Strings.FanDiag_SummaryCoolNoteFormat, GuidedRunRules.StartBelowC.ToString("0")));
                 }
 
                 GuidedTestResult = summary.ToString();
+                var localizedRating = DisplayNames.FanDiagRating(overallRating);
                 GuidedTestStatus = interrupted.Count > 0
-                    ? $"Interrupted by thermal protection ({interrupted.Count} step(s)) - cool down and re-run"
+                    ? string.Format(Strings.FanDiag_StatusInterruptedFormat, interrupted.Count)
                     : overallPassed
-                        ? $"All tests passed! Score: {avgScore}/100 ({overallRating})"
-                        : $"Some tests failed - Score: {avgScore}/100 ({overallRating})";
+                        ? string.Format(Strings.FanDiag_StatusAllPassedFormat, avgScore, localizedRating)
+                        : string.Format(Strings.FanDiag_StatusSomeFailedFormat, avgScore, localizedRating);
                 
                 _logging.Info(summary.ToString());
             }
@@ -519,7 +519,7 @@ namespace OmenCore.ViewModels
             while (GuidedRunRules.NeedsCoolDown(HottestTemperatureC()))
             {
                 if (waited >= 180) return false;
-                GuidedTestStatus = $"Waiting for the laptop to cool below {GuidedRunRules.StartBelowC:0} C ({HottestTemperatureC():0} C now)...";
+                GuidedTestStatus = string.Format(Strings.FanDiag_StatusWaitingCoolFormat, GuidedRunRules.StartBelowC.ToString("0"), HottestTemperatureC().ToString("0"));
                 await Task.Delay(5000);
                 waited += 5;
             }
@@ -530,7 +530,7 @@ namespace OmenCore.ViewModels
         {
             if (_keyboardLightingService?.IsAvailable != true)
             {
-                RgbCheckStatus = "Skipped: integrated RGB backend unavailable";
+                RgbCheckStatus = Strings.FanDiag_RgbSkippedNoBackend;
                 return RgbCheckStatus;
             }
 
@@ -541,7 +541,7 @@ namespace OmenCore.ViewModels
             var savedColors = ReadSavedZoneColorsForBackend();
             try
             {
-                RgbCheckStatus = "Look at your keyboard now";
+                RgbCheckStatus = Strings.FanDiag_RgbLookAtKeyboard;
                 await _keyboardLightingService.SetAllZoneColors(new[]
                 {
                     Color.Red,
@@ -562,7 +562,7 @@ namespace OmenCore.ViewModels
 
                 if (!patternAccepted)
                 {
-                    RgbCheckStatus = $"Pattern write not accepted by {backend}";
+                    RgbCheckStatus = string.Format(Strings.FanDiag_RgbPatternNotAcceptedFormat, backend);
                     _logging.Warn($"[GuidedDiagnostic] RGB pattern write not accepted by {backend}: {patternStatus}");
                     if (!restoreAccepted)
                         _logging.Warn($"[GuidedDiagnostic] Saved keyboard colors were not restored: {restoreStatus}");
@@ -571,12 +571,12 @@ namespace OmenCore.ViewModels
 
                 if (!restoreAccepted)
                 {
-                    RgbCheckStatus = $"Pattern applied; saved colors were not restored by {backend}";
+                    RgbCheckStatus = string.Format(Strings.FanDiag_RgbNotRestoredFormat, backend);
                     _logging.Warn($"[GuidedDiagnostic] Saved keyboard colors were not restored: {restoreStatus}");
                     return RgbCheckStatus;
                 }
 
-                RgbCheckStatus = "Pattern applied and saved colors restored; physical confirmation required";
+                RgbCheckStatus = Strings.FanDiag_RgbAppliedNeedsConfirm;
                 _logging.Info("[GuidedDiagnostic] RGB test pattern applied through the safe keyboard backend; physical confirmation is required");
                 return RgbCheckStatus;
             }
@@ -591,7 +591,7 @@ namespace OmenCore.ViewModels
                     _logging.Warn($"[GuidedDiagnostic] Saved keyboard color restore failed: {restoreEx.Message}");
                 }
 
-                RgbCheckStatus = $"Failed: {ex.Message}";
+                RgbCheckStatus = string.Format(Strings.FanDiag_RgbFailedFormat, ex.Message);
                 _logging.Warn($"[GuidedDiagnostic] RGB check failed: {ex.Message}");
                 return RgbCheckStatus;
             }

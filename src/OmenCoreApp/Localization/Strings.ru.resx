@@ -8368,4 +8368,598 @@
   <data name="GameProfile_DefaultNewProfileName" xml:space="preserve">
     <value>Новый игровой профиль</value>
   </data>
+  <data name="FanDiag_FanNameCpu" xml:space="preserve">
+    <value>Вентилятор CPU</value>
+  </data>
+  <data name="FanDiag_FanNameGpu" xml:space="preserve">
+    <value>Вентилятор GPU</value>
+  </data>
+  <data name="FanDiag_SourceEstimatedValue" xml:space="preserve">
+    <value>Оц</value>
+  </data>
+  <data name="FanDiag_SourceNone" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="FanDiag_EvidenceNone" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="FanDiag_EvidenceRpm" xml:space="preserve">
+    <value>RPM</value>
+  </data>
+  <data name="FanDiag_EvidenceLevel" xml:space="preserve">
+    <value>Уровень</value>
+  </data>
+  <data name="FanDiag_EvidenceRpmLevel" xml:space="preserve">
+    <value>RPM+уровень</value>
+  </data>
+  <data name="FanDiag_EvidenceFirmwareCeiling" xml:space="preserve">
+    <value>Ограничение прошивки</value>
+  </data>
+  <data name="FanDiag_RatingExcellent" xml:space="preserve">
+    <value>Отлично</value>
+  </data>
+  <data name="FanDiag_RatingGood" xml:space="preserve">
+    <value>Хорошо</value>
+  </data>
+  <data name="FanDiag_RatingFair" xml:space="preserve">
+    <value>Удовлетворительно</value>
+  </data>
+  <data name="FanDiag_RatingPoor" xml:space="preserve">
+    <value>Плохо</value>
+  </data>
+  <data name="FanDiag_RatingFailed" xml:space="preserve">
+    <value>Неудачно</value>
+  </data>
+  <data name="FanDiag_RpmEstimatedFormat" xml:space="preserve">
+    <value>~{0} RPM (оценка по уровню)</value>
+  </data>
+  <data name="FanDiag_RpmRefusedFormat" xml:space="preserve">
+    <value>прошивка отклонила уровень {0}</value>
+  </data>
+  <data name="FanDiag_RpmUnavailable" xml:space="preserve">
+    <value>Физические RPM недоступны</value>
+  </data>
+  <data name="FanDiag_RpmUnverifiedFormat" xml:space="preserve">
+    <value>{0} RPM (источник не проверен)</value>
+  </data>
+  <data name="FanDiag_RpmWithSourceFormat" xml:space="preserve">
+    <value>{0} RPM ({1})</value>
+  </data>
+  <data name="FanDiag_ErrNoBackend" xml:space="preserve">
+    <value>Нет доступного бэкенда управления вентиляторами</value>
+  </data>
+  <data name="FanDiag_ErrWmiFalse" xml:space="preserve">
+    <value>Вызов WMI вернул false</value>
+  </data>
+  <data name="FanDiag_ErrServiceFalse" xml:space="preserve">
+    <value>Вызов FanService вернул false</value>
+  </data>
+  <data name="FanDiag_ErrInconclusiveFormat" xml:space="preserve">
+    <value>Проверка вентилятора осталась неопределённой после {0} попыток: {1}</value>
+  </data>
+  <data name="FanDiag_StatusTestingFormat" xml:space="preserve">
+    <value>Проверка вентилятора {0} при {1}%...</value>
+  </data>
+  <data name="FanDiag_StatusTooHotFormat" xml:space="preserve">
+    <value>Запуск не выполнен: CPU или GPU нагреты до {0} C. Дайте ноутбуку остыть ниже {1} C и повторите.</value>
+  </data>
+  <data name="FanDiag_StatusTooHotShort" xml:space="preserve">
+    <value>Слишком горячо для запуска — остудите и повторите</value>
+  </data>
+  <data name="FanDiag_StatusWaitingCoolFormat" xml:space="preserve">
+    <value>Ожидание охлаждения ноутбука ниже {0} C (сейчас {1} C)...</value>
+  </data>
+  <data name="FanDiag_StatusAllPassedFormat" xml:space="preserve">
+    <value>Все тесты пройдены! Оценка: {0}/100 ({1})</value>
+  </data>
+  <data name="FanDiag_StatusSomeFailedFormat" xml:space="preserve">
+    <value>Часть тестов не пройдена — оценка: {0}/100 ({1})</value>
+  </data>
+  <data name="FanDiag_StatusInterruptedFormat" xml:space="preserve">
+    <value>Прервано тепловой защитой (шагов: {0}) — остудите и повторите</value>
+  </data>
+  <data name="FanDiag_SummaryBackendFormat" xml:space="preserve">
+    <value>Бэкенд: {0} | Источник RPM: {1}</value>
+  </data>
+  <data name="FanDiag_SummaryTestsFormat" xml:space="preserve">
+    <value>Тесты: {0}/{1} пройдено | Общая оценка: {2}/100 ({3})</value>
+  </data>
+  <data name="FanDiag_SummaryRgbFormat" xml:space="preserve">
+    <value>RGB: {0}</value>
+  </data>
+  <data name="FanDiag_SummaryRowFormat" xml:space="preserve">
+    <value>{0} {1} @ {2}%: {3} — оценка {4} [доказательство: {5}]</value>
+  </data>
+  <data name="FanDiag_SummaryInterruptedNoteFormat" xml:space="preserve">
+    <value>⚠ Шагов, прерванных тепловой защитой (не считаются сбоями): {0}: {1}.</value>
+  </data>
+  <data name="FanDiag_SummaryCoolNoteFormat" xml:space="preserve">
+    <value>Дайте ноутбуку остыть ниже {0} C и повторите диагностику.</value>
+  </data>
+  <data name="FanDiag_RgbSkippedNoBackend" xml:space="preserve">
+    <value>Пропущено: встроенный RGB-бэкенд недоступен</value>
+  </data>
+  <data name="FanDiag_RgbLookAtKeyboard" xml:space="preserve">
+    <value>Посмотрите на клавиатуру</value>
+  </data>
+  <data name="FanDiag_RgbPatternNotAcceptedFormat" xml:space="preserve">
+    <value>{0} не принял запись узора</value>
+  </data>
+  <data name="FanDiag_RgbNotRestoredFormat" xml:space="preserve">
+    <value>Узор применён; {0} не восстановил сохранённые цвета</value>
+  </data>
+  <data name="FanDiag_RgbAppliedNeedsConfirm" xml:space="preserve">
+    <value>Узор применён, цвета восстановлены; требуется визуальное подтверждение</value>
+  </data>
+  <data name="FanDiag_RgbFailedFormat" xml:space="preserve">
+    <value>Не удалось: {0}</value>
+  </data>
+  <data name="AutomationRule_DefaultName" xml:space="preserve">
+    <value>Новое правило автоматизации</value>
+  </data>
+  <data name="Automation_ValidationReady" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="Trigger_Time" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="Trigger_Battery" xml:space="preserve">
+    <value>Батарея</value>
+  </data>
+  <data name="Trigger_AcPower" xml:space="preserve">
+    <value>Питание от сети</value>
+  </data>
+  <data name="Trigger_Temperature" xml:space="preserve">
+    <value>Температура</value>
+  </data>
+  <data name="Trigger_Idle" xml:space="preserve">
+    <value>Простой</value>
+  </data>
+  <data name="Trigger_Process" xml:space="preserve">
+    <value>Процесс</value>
+  </data>
+  <data name="Trigger_WifiSsid" xml:space="preserve">
+    <value>Сеть Wi-Fi</value>
+  </data>
+  <data name="Automation_ErrPayloadMissing" xml:space="preserve">
+    <value>Данные правила отсутствуют.</value>
+  </data>
+  <data name="Automation_ErrNameRequired" xml:space="preserve">
+    <value>Требуется имя правила.</value>
+  </data>
+  <data name="Automation_ErrNeedsAction" xml:space="preserve">
+    <value>Требуется хотя бы одно действие.</value>
+  </data>
+  <data name="Automation_ErrTimeRange" xml:space="preserve">
+    <value>Правила времени требуют начала и конца.</value>
+  </data>
+  <data name="Automation_ErrBatteryThreshold" xml:space="preserve">
+    <value>Правила батареи требуют порог 1–100.</value>
+  </data>
+  <data name="Automation_ErrBatteryCondition" xml:space="preserve">
+    <value>Правила батареи требуют условие «Ниже» или «Выше».</value>
+  </data>
+  <data name="Automation_ErrAcState" xml:space="preserve">
+    <value>Правила сети требуют «подключено» или «отключено».</value>
+  </data>
+  <data name="Automation_ErrTempThreshold" xml:space="preserve">
+    <value>Правила температуры требуют порог 1–110°C.</value>
+  </data>
+  <data name="Automation_ErrTempCondition" xml:space="preserve">
+    <value>Правила температуры требуют «Выше» или «Ниже».</value>
+  </data>
+  <data name="Automation_ErrIdleThreshold" xml:space="preserve">
+    <value>Правила простоя требуют порог 1–999 минут.</value>
+  </data>
+  <data name="Automation_ErrProcessName" xml:space="preserve">
+    <value>Правила процесса требуют имя исполняемого файла.</value>
+  </data>
+  <data name="Automation_ErrWifiSsid" xml:space="preserve">
+    <value>Правила Wi-Fi требуют SSID.</value>
+  </data>
+  <data name="Automation_ErrLidState" xml:space="preserve">
+    <value>Правила крышки требуют «открыта» или «закрыта».</value>
+  </data>
+  <data name="FanDiag_FanNameCpuEstimated" xml:space="preserve">
+    <value>Вентилятор CPU (оценка)</value>
+  </data>
+  <data name="FanDiag_FanNameGpuEstimated" xml:space="preserve">
+    <value>Вентилятор GPU (оценка)</value>
+  </data>
+  <data name="FanDiag_SourceEcDirect" xml:space="preserve">
+    <value>EC напрямую</value>
+  </data>
+  <data name="FanDiag_SourceHardwareMonitor" xml:space="preserve">
+    <value>мониторинг оборудования</value>
+  </data>
+  <data name="FanDiag_SourceAfterburner" xml:space="preserve">
+    <value>MSI Afterburner</value>
+  </data>
+  <data name="FanDiag_SourceWmiBios" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="FanDiag_SourceEstimated" xml:space="preserve">
+    <value>оценка</value>
+  </data>
+  <data name="FanDiag_SourceUnknown" xml:space="preserve">
+    <value>неизвестно</value>
+  </data>
+  <data name="FanControl_CopyFailedFormat" xml:space="preserve">
+    <value>Не удалось скопировать код обмена: {0}</value>
+  </data>
+  <data name="FanControl_CopyFailedTitle" xml:space="preserve">
+    <value>Не удалось скопировать</value>
+  </data>
+  <data name="FanControl_ImportedCurveFormat" xml:space="preserve">
+    <value>Импортирована кривая «{0}» ({1} точек). Не забудьте применить или сохранить.</value>
+  </data>
+  <data name="FanControl_ImportedPresetsFormat" xml:space="preserve">
+    <value>Импортировано пресетов: {0}</value>
+  </data>
+  <data name="FanControl_ImportCodeFailedFormat" xml:space="preserve">
+    <value>Не удалось импортировать код обмена: {0}</value>
+  </data>
+  <data name="FanControl_ImportPresetsFailedFormat" xml:space="preserve">
+    <value>Не удалось импортировать пресеты: {0}</value>
+  </data>
+  <data name="FanControl_ExportedPresetsFormat" xml:space="preserve">
+    <value>Экспортировано пресетов: {0}</value>
+  </data>
+  <data name="FanControl_ExportPresetsFailedFormat" xml:space="preserve">
+    <value>Не удалось экспортировать пресеты: {0}</value>
+  </data>
+  <data name="FanControl_ImportCompleteTitle" xml:space="preserve">
+    <value>Импорт завершён</value>
+  </data>
+  <data name="FanControl_ExportCompleteTitle" xml:space="preserve">
+    <value>Экспорт завершён</value>
+  </data>
+  <data name="FanControl_ExportErrorTitle" xml:space="preserve">
+    <value>Ошибка экспорта</value>
+  </data>
+  <data name="GameProfile_ImportedFormat" xml:space="preserve">
+    <value>Импортировано профилей: {0}</value>
+  </data>
+  <data name="GameProfile_InvalidProfileTitle" xml:space="preserve">
+    <value>Неверный игровой профиль</value>
+  </data>
+  <data name="Lighting_OverwriteDpiProfileFormat" xml:space="preserve">
+    <value>Профиль DPI «{0}» уже существует. Перезаписать?</value>
+  </data>
+  <data name="Lighting_OverwriteDpiProfileTitle" xml:space="preserve">
+    <value>Перезаписать профиль DPI</value>
+  </data>
+  <data name="Settings_OpenBrowserFailedFormat" xml:space="preserve">
+    <value>Не удалось открыть браузер: {0}</value>
+  </data>
+  <data name="Settings_RemoveBloatwareFailedFormat" xml:space="preserve">
+    <value>Не удалось удалить предустановленное ПО: {0}</value>
+  </data>
+  <data name="Settings_BloatwareRemoveFailedStatus" xml:space="preserve">
+    <value>❌ Удаление не удалось: {0}</value>
+  </data>
+  <data name="SystemControl_RollbackApplying" xml:space="preserve">
+    <value>Применение безопасного отката...</value>
+  </data>
+  <data name="SystemControl_RollbackClearing" xml:space="preserve">
+    <value>Безопасный откат очищает сохранённое состояние настройки...</value>
+  </data>
+  <data name="SystemControl_RollbackNotice" xml:space="preserve">
+    <value>Безопасный откат применён. Состояние настройки при запуске возвращено к «Сбалансированный/Авто»; недоступные аппаратные бэкенды пропущены.</value>
+  </data>
+  <data name="SystemControl_RollbackAppliedFormat" xml:space="preserve">
+    <value>Применено: {0}.</value>
+  </data>
+  <data name="SystemControl_RollbackSkippedFormat" xml:space="preserve">
+    <value> Пропущено: {0}.</value>
+  </data>
+  <data name="SystemControl_RollbackFailedFormat" xml:space="preserve">
+    <value>Безопасный откат не удался: {0}</value>
+  </data>
+  <data name="SystemControl_RollbackSavedStateFormat" xml:space="preserve">
+    <value>сохранено безопасное состояние запуска ({0})</value>
+  </data>
+  <data name="SystemControl_RollbackAlreadySafe" xml:space="preserve">
+    <value>состояние запуска уже безопасно</value>
+  </data>
+  <data name="SystemControl_RollbackFanOemAuto" xml:space="preserve">
+    <value>вентиляторы возвращены в авто OEM</value>
+  </data>
+  <data name="SystemControl_RollbackBalancedMode" xml:space="preserve">
+    <value>Сбалансированный режим</value>
+  </data>
+  <data name="SystemControl_RollbackGpuMinimum" xml:space="preserve">
+    <value>Питание GPU: минимум</value>
+  </data>
+  <data name="SystemControl_RollbackCpuPlReset" xml:space="preserve">
+    <value>Сброс PL1/PL2 CPU при запуске</value>
+  </data>
+  <data name="SystemControl_RollbackTccReset" xml:space="preserve">
+    <value>Сброс смещения TCC</value>
+  </data>
+  <data name="SystemControl_RollbackNvidiaReset" xml:space="preserve">
+    <value>Сброс настройки NVIDIA GPU</value>
+  </data>
+  <data name="SystemControl_RollbackGpuBoostUnavailable" xml:space="preserve">
+    <value>Бэкенд ускорения GPU недоступен</value>
+  </data>
+  <data name="SystemControl_RollbackCpuLimitsLocked" xml:space="preserve">
+    <value>Лимиты CPU заблокированы/только чтение</value>
+  </data>
+  <data name="SystemControl_RollbackCpuLimitsUnavailable" xml:space="preserve">
+    <value>Лимиты CPU недоступны</value>
+  </data>
+  <data name="SystemControl_RollbackTccUnavailable" xml:space="preserve">
+    <value>Смещение TCC недоступно</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltReset" xml:space="preserve">
+    <value>Снижение напряжения CPU сброшено</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltResetFailedFormat" xml:space="preserve">
+    <value>Не удалось сбросить снижение напряжения CPU: {0}</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltUnavailable" xml:space="preserve">
+    <value>Бэкенд снижения напряжения CPU недоступен</value>
+  </data>
+  <data name="SystemControl_RollbackGpuOcUnavailable" xml:space="preserve">
+    <value>Бэкенд разгона GPU недоступен</value>
+  </data>
+  <data name="SystemControl_RollbackAmdPowerUnavailable" xml:space="preserve">
+    <value>Бэкенд питания AMD CPU недоступен</value>
+  </data>
+  <data name="Nvidia_StatusReadFailedFormat" xml:space="preserve">
+    <value>Не удалось прочитать драйвер NVIDIA: {0}</value>
+  </data>
+  <data name="Nvidia_LiveFormat" xml:space="preserve">
+    <value>Текущий CURRENT {0} W, текущий MAX {1} W. </value>
+  </data>
+  <data name="Nvidia_StatusFormat" xml:space="preserve">
+    <value>{0}: {1}MAX запись {2}, CURRENT запись {3}. {4}{5}</value>
+  </data>
+  <data name="Nvidia_WriteReady" xml:space="preserve">
+    <value>готово</value>
+  </data>
+  <data name="Nvidia_WriteNotReady" xml:space="preserve">
+    <value>не готово</value>
+  </data>
+  <data name="Nvidia_GpuFallback" xml:space="preserve">
+    <value>NVIDIA GPU</value>
+  </data>
+  <data name="Nvidia_StockMismatchFormat" xml:space="preserve">
+    <value> Считанный заводской максимум: {0} W, ожидается: {1} W. Разница нормальна при установленном MAX или более низком лимите производителя; это не ошибка.</value>
+  </data>
+  <data name="Nvidia_RemoveMaxPrompt" xml:space="preserve">
+    <value>Удалить переопределение MAX? После этого нужна перезагрузка Windows для восстановления заводского лимита.</value>
+  </data>
+  <data name="Nvidia_ApplyPromptFormat" xml:space="preserve">
+    <value>Применить {0} {1} W?&#10;&#10;Это поднимает лимит питания GPU выше заводского. Больше мощности — больше тепла, а охлаждение на это не рассчитано. {2}Продолжайте только если понимаете риск.</value>
+  </data>
+  <data name="Nvidia_MayNeedReboot" xml:space="preserve">
+    <value>MAX требует перезагрузки Windows. </value>
+  </data>
+  <data name="Nvidia_CurrentResetsOnReboot" xml:space="preserve">
+    <value>CURRENT сбрасывается при перезагрузке. </value>
+  </data>
+  <data name="Nvidia_PowerTitle" xml:space="preserve">
+    <value>Питание NVIDIA</value>
+  </data>
+  <data name="Bloatware_RestoreActionItemFormat" xml:space="preserve">
+    <value>Восстановление {0}</value>
+  </data>
+  <data name="Bloatware_RestoreDoneItemFormat" xml:space="preserve">
+    <value>Восстановлено {0}</value>
+  </data>
+  <data name="Bloatware_RestoreProgressFormat" xml:space="preserve">
+    <value>Восстановление {0}/{1}: {2}</value>
+  </data>
+  <data name="Bloatware_RestoredCountFormat" xml:space="preserve">
+    <value>Восстановлено элементов ПО: {0}</value>
+  </data>
+  <data name="Bloatware_OpenReportFailedFormat" xml:space="preserve">
+    <value>Не удалось открыть отчёт: {0}</value>
+  </data>
+  <data name="DeviceLighting_FnUpdatedFormat" xml:space="preserve">
+    <value>{0} обновлено — клавиатура хранит один профиль на эффект.</value>
+  </data>
+  <data name="DeviceLighting_FnAddedFormat" xml:space="preserve">
+    <value>{0} добавлено. На клавиатуре ничего не изменится до записи цикла.</value>
+  </data>
+  <data name="DeviceLighting_FnRemovedFormat" xml:space="preserve">
+    <value>{0} удалено из списка. На клавиатуре оно остаётся.</value>
+  </data>
+  <data name="DeviceLighting_FnWritingFormat" xml:space="preserve">
+    <value>Запись профилей: {0}…</value>
+  </data>
+  <data name="FanCalibration_ErrorFormat" xml:space="preserve">
+    <value>Ошибка: {0}</value>
+  </data>
+  <data name="FanCalibration_TestingLevelFormat" xml:space="preserve">
+    <value>Проверка уровня {0}... (готово {1}%)</value>
+  </data>
+  <data name="FanCalibration_ErrorWarnFormat" xml:space="preserve">
+    <value>⚠ Ошибка: {0}</value>
+  </data>
+  <data name="GpuClamp_FailedFormat" xml:space="preserve">
+    <value>Не удалось: {0}</value>
+  </data>
+  <data name="KbdDiag_DetectionFailedFormat" xml:space="preserve">
+    <value>Не удалось обнаружить: {0}</value>
+  </data>
+  <data name="KbdDiag_ProbeStepFormat" xml:space="preserve">
+    <value>Шаг проверки {0} из {1}: клавиатура сейчас красная?</value>
+  </data>
+  <data name="KbdDiag_TestPatternFailedFormat" xml:space="preserve">
+    <value>Тестовый узор не удался: {0}</value>
+  </data>
+  <data name="KbdDiag_ClearFailedFormat" xml:space="preserve">
+    <value>Не удалось очистить: {0}</value>
+  </data>
+  <data name="Mem_FreedFormat" xml:space="preserve">
+    <value>Освобождено {0} МБ</value>
+  </data>
+  <data name="Mem_ExcludedFormat" xml:space="preserve">
+    <value>{0} исключён из очистки рабочего набора</value>
+  </data>
+  <data name="Mem_CompressionEnabled" xml:space="preserve">
+    <value>Сжатие памяти включено</value>
+  </data>
+  <data name="Mem_CompressionDisabled" xml:space="preserve">
+    <value>Сжатие памяти отключено</value>
+  </data>
+  <data name="Mem_CopiedFormat" xml:space="preserve">
+    <value>Скопировано {0}</value>
+  </data>
+  <data name="Mem_FailedFormat" xml:space="preserve">
+    <value>Не удалось: {0}</value>
+  </data>
+  <data name="KbdMap_PaintedFormat" xml:space="preserve">
+    <value>Закрашено клавиш: {0} {1}. </value>
+  </data>
+  <data name="KbdMap_RestoredFormat" xml:space="preserve">
+    <value>Восстановлена последняя картинка ({0} ячеек). </value>
+  </data>
+  <data name="KbdMap_DetectedFormat" xml:space="preserve">
+    <value>{0} светодиодов на {1} клавишах ({2})</value>
+  </data>
+  <data name="Main_RestorePointCreatedFormat" xml:space="preserve">
+    <value>Точка восстановления #{0} создана</value>
+  </data>
+  <data name="Main_RestorePointFailedFormat" xml:space="preserve">
+    <value>Точка восстановления не создана: {0}</value>
+  </data>
+  <data name="Main_CleanupFailedFormat" xml:space="preserve">
+    <value>✗ Очистка не удалась: {0}</value>
+  </data>
+  <data name="Update_DownloadProgressFormat" xml:space="preserve">
+    <value>{0}% • {1} МБ/с • осталось {2}</value>
+  </data>
+  <data name="FanCleaning_DetectedFormat" xml:space="preserve">
+    <value>✓ Обнаружен HP OMEN: {0}. Очистка вентиляторов доступна.</value>
+  </data>
+  <data name="FanCleaning_ReasonFormat" xml:space="preserve">
+    <value>⚠️ {0}</value>
+  </data>
+  <data name="Bios_UpdateAvailableFormat" xml:space="preserve">
+    <value>⬆️ Доступно обновление: {0}</value>
+  </data>
+  <data name="Bios_ErrorFormat" xml:space="preserve">
+    <value>Ошибка: {0}</value>
+  </data>
+  <data name="SC_PartialFormat" xml:space="preserve">
+    <value>⚠ Частично (сбоев: {0}): {1}</value>
+  </data>
+  <data name="SC_ErrorFormat" xml:space="preserve">
+    <value>Ошибка: {0}</value>
+  </data>
+  <data name="SC_TestApplyNotStartedFormat" xml:space="preserve">
+    <value>Тестовое применение не запустилось: {0}</value>
+  </data>
+  <data name="SC_PlAvailableFormat" xml:space="preserve">
+    <value>✓ Доступно (PL1: {0}W, PL2: {1}W)</value>
+  </data>
+  <data name="SC_PlAppliedFormat" xml:space="preserve">
+    <value>✓ Применено (PL1: {0}W, PL2: {1}W)</value>
+  </data>
+  <data name="SC_PlResetFormat" xml:space="preserve">
+    <value>✓ Сброшено к значениям запуска (PL1: {0}W, PL2: {1}W)</value>
+  </data>
+  <data name="SC_GpuOcPowerOnlyFormat" xml:space="preserve">
+    <value>{0} — доступна настройка лимита питания, смещения частот заблокированы</value>
+  </data>
+  <data name="SC_GpuOcLockedFormat" xml:space="preserve">
+    <value>{0} — настройка NVAPI заблокирована драйвером/прошивкой</value>
+  </data>
+  <data name="SC_GpuOcInitFailedFormat" xml:space="preserve">
+    <value>Не удалось инициализировать: {0}</value>
+  </data>
+  <data name="SC_AmdOcAvailableFormat" xml:space="preserve">
+    <value>✓ {0} — разгон AMD доступен через ADL2</value>
+  </data>
+  <data name="SC_AmdDriverMissingFormat" xml:space="preserve">
+    <value>⚠ {0} — установите драйверы AMD Adrenalin для настройки GPU</value>
+  </data>
+  <data name="SC_AmdOcAppliedFormat" xml:space="preserve">
+    <value>Разгон AMD GPU применён: ядро {0} МГц, память {1} МГц, питание {2}%</value>
+  </data>
+  <data name="SC_AmdOcErrorFormat" xml:space="preserve">
+    <value>Ошибка разгона AMD GPU: {0}</value>
+  </data>
+  <data name="SC_RestoredWithGuardrailsFormat" xml:space="preserve">
+    <value>Восстановлено с защитными ограничениями: {0}</value>
+  </data>
+  <data name="SC_ProfileSavedFormat" xml:space="preserve">
+    <value>✓ Профиль сохранён: {0}</value>
+  </data>
+  <data name="SC_ProfileDeletedFormat" xml:space="preserve">
+    <value>Профиль удалён: {0}</value>
+  </data>
+  <data name="SC_ModeNotSavedFormat" xml:space="preserve">
+    <value>«{0}» не сохранённый режим — сохранять некуда.</value>
+  </data>
+  <data name="Lighting_RestoreStatusFormat" xml:space="preserve">
+    <value>{0} Поверхность: {1}.{2}</value>
+  </data>
+  <data name="Lighting_RestoredSavedFormat" xml:space="preserve">
+    <value>Сохранённые цвета клавиатуры восстановлены. {0} Поверхность: {1}.</value>
+  </data>
+  <data name="Lighting_ObservationSaveFailedFormat" xml:space="preserve">
+    <value>Не удалось сохранить наблюдение RGB: {0}</value>
+  </data>
+  <data name="Optimizer_AlreadyAppliedFormat" xml:space="preserve">
+    <value>{0} уже полностью применено</value>
+  </data>
+  <data name="Optimizer_AppliedCountFormat" xml:space="preserve">
+    <value>Применено {0}/{1} в {2} (сбоев: {3})</value>
+  </data>
+  <data name="Optimizer_AppliedCategoryFormat" xml:space="preserve">
+    <value>Применено оптимизаций {1}: {0}</value>
+  </data>
+  <data name="Optimizer_RevertedFormat" xml:space="preserve">
+    <value>Отменено оптимизаций: {0}/{1}</value>
+  </data>
+  <data name="Optimizer_PreflightRefreshFailedFormat" xml:space="preserve">
+    <value>Не удалось обновить предполётную проверку: {0}</value>
+  </data>
+  <data name="Optimizer_ReportExportedFormat" xml:space="preserve">
+    <value>Отчёт экспортирован: {0}</value>
+  </data>
+  <data name="Optimizer_ReportExportFailedFormat" xml:space="preserve">
+    <value>Не удалось экспортировать отчёт: {0}</value>
+  </data>
+  <data name="Optimizer_OpenReportFailedFormat" xml:space="preserve">
+    <value>Не удалось открыть отчёт: {0}</value>
+  </data>
+  <data name="Optimizer_CopyReportPathFailedFormat" xml:space="preserve">
+    <value>Не удалось скопировать путь отчёта: {0}</value>
+  </data>
+  <data name="DiagnosticExport_FileSavedToFormat" xml:space="preserve">
+    <value>Файл сохранён: {0}</value>
+  </data>
+  <data name="DiagnosticExport_FileSizeFormat" xml:space="preserve">
+    <value>Размер файла: {0}</value>
+  </data>
+  <data name="DiagnosticExport_ContainsFormat" xml:space="preserve">
+    <value>Содержит: {0}</value>
+  </data>
+  <data name="FanCalibration_ModelLineFormat" xml:space="preserve">
+    <value>Модель: {0}&#10;ID модели: {1}</value>
+  </data>
+  <data name="FanCalibration_AvailableFormat" xml:space="preserve">
+    <value>Калибровка доступна (создана {0})</value>
+  </data>
+  <data name="FanCalibration_FanStatusFormat" xml:space="preserve">
+    <value>Текущие: {0} RPM (уровень: {1}, источник: {2})&#10;Оценка: ~{3}% скорости</value>
+  </data>
+  <data name="FanCalibration_ReadStatusFailedFormat" xml:space="preserve">
+    <value>Ошибка чтения состояния вентилятора: {0}</value>
+  </data>
+  <data name="FanCalibration_FailedDetailFormat" xml:space="preserve">
+    <value>Калибровка не удалась: {0}</value>
+  </data>
+  <data name="FanCalibration_SuccessFormat" xml:space="preserve">
+    <value>Калибровка успешна — {0} тестовых точек за {1} с</value>
+  </data>
+  <data name="FanCalibration_IssuesFormat" xml:space="preserve">
+    <value>Калибровка завершена с проблемами — точек: {0}, сбоев: {1}</value>
+  </data>
 </root>

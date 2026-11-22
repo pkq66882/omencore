@@ -101,7 +101,7 @@ namespace OmenCore.ViewModels
                             $"  •  {result.Timestamp:HH:mm:ss}" +
                             Environment.NewLine +
                             result.GetDeltaSummary();
-                        SetStatusDone($"Freed {result.FreedMB} MB");
+                        SetStatusDone(string.Format(Strings.Mem_FreedFormat, result.FreedMB));
 
                         // A clean that only ran because the auto/interval timer fired can freed a
                         // trivial amount on an already-quiet system - only worth interrupting the
@@ -877,7 +877,7 @@ namespace OmenCore.ViewModels
 
             if (TryAddExcludedProcessName(process.ProcessName))
             {
-                SetStatusDone($"Excluded {NormalizeProcessName(process.ProcessName)} from working-set trims");
+                SetStatusDone(string.Format(Strings.Mem_ExcludedFormat, NormalizeProcessName(process.ProcessName)));
             }
         }
 
@@ -984,7 +984,7 @@ namespace OmenCore.ViewModels
 
             MemoryCompressionEnabled = target;
             OnPropertyChanged(nameof(MemoryCompressionStatusText));
-            SetStatusDone($"Memory compression {(target ? "enabled" : "disabled")}");
+            SetStatusDone(target ? Strings.Mem_CompressionEnabled : Strings.Mem_CompressionDisabled);
         }
 
         private void RefreshMemoryInfo()
@@ -1135,7 +1135,7 @@ namespace OmenCore.ViewModels
             try
             {
                 Clipboard.SetText(process.ProcessName);
-                SetStatusDone($"Copied {process.ProcessName}");
+                SetStatusDone(string.Format(Strings.Mem_CopiedFormat, process.ProcessName));
             }
             catch (Exception ex)
             {
@@ -1185,7 +1185,7 @@ namespace OmenCore.ViewModels
 
                 if (result.Success)
                 {
-                    SetStatusDone($"Freed {result.FreedMB} MB");
+                    SetStatusDone(string.Format(Strings.Mem_FreedFormat, result.FreedMB));
                 }
                 else
                 {
@@ -1223,7 +1223,7 @@ namespace OmenCore.ViewModels
 
         private void SetStatusFailed(string? reason)
         {
-            StatusMessage = $"Failed: {reason}";
+            StatusMessage = string.Format(Strings.Mem_FailedFormat, reason);
         }
 
         public void Dispose()

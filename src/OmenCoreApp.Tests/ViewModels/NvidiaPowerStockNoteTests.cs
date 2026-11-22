@@ -4,8 +4,21 @@ using Xunit;
 
 namespace OmenCoreApp.Tests.ViewModels
 {
-    public class NvidiaPowerStockNoteTests
+    public class NvidiaPowerStockNoteTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _original = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public NvidiaPowerStockNoteTests()
+        {
+            // StockMismatchNote is localized; pin to en for canonical substring assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _original;
+        }
+
         [Fact]
         public void Mismatch_SaysBothNumbers_AndThatItIsNotAnErrorByItself()
         {

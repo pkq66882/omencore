@@ -2969,13 +2969,13 @@
     <value>切换性能模式时自动应用匹配的风扇预设。</value>
   </data>
   <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAutoExperi" xml:space="preserve">
-    <value>返回自动模式时不钉住风扇档位（实验性）</value>
+    <value>返回自动模式时不固定风扇档位（实验性）</value>
   </data>
   <data name="SettingsView_ForLaptopsWhoseFansStayNear2000RpmAtHighTe" xml:space="preserve">
     <value>适用于高温时风扇长期徘徊在 2000 RPM 左右、直到切换回 OEM 预设才恢复的机型。启用后将跳过 OmenCore 把控制权交还 BIOS 时发送的风扇档位提示。默认关闭；重启后生效。尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAuto" xml:space="preserve">
-    <value>返回自动时不钉住风扇档位</value>
+    <value>返回自动时不固定风扇档位</value>
   </data>
   <data name="SettingsView_ReturnMaxFanModeToAuto" xml:space="preserve">
     <value>将最大风扇模式恢复为自动</value>
@@ -2999,7 +2999,7 @@
     <value>在 OMEN 16/Victus 上允许启动恢复</value>
   </data>
   <data name="SettingsView_OverridesTheExtraGuardrailForModelsThatHav" xml:space="preserve">
-    <value>为启动期间报告过固件敏感问题的机型覆盖额外防护栏。除非你明确要在这些系统上自动重应用，否则保持关闭。</value>
+    <value>为启动期间报告过固件敏感问题的机型覆盖额外的启动保护。除非你明确要在这些系统上自动重应用，否则保持关闭。</value>
   </data>
   <data name="SettingsView_StartupRestoreCategories" xml:space="preserve">
     <value>启动恢复类别</value>
@@ -4232,7 +4232,7 @@
     <value>（降低睿频频率→所需电压更低）。V/F 曲线编辑请使用 MSI Afterburner。</value>
   </data>
   <data name="TuningView_DetectedGpuGuardrails" xml:space="preserve">
-    <value>检测到的 GPU 防护栏</value>
+    <value>检测到的 GPU 保护限制</value>
   </data>
   <data name="TuningView_AmdGpuOverclockingAdl2" xml:space="preserve">
     <value>✓ AMD GPU 超频（ADL2）</value>
@@ -8318,7 +8318,7 @@
     <value>保存诊断导出</value>
   </data>
   <data name="Settings_HistoryCountFormat" xml:space="preserve">
-    <value>{0} 个数据点</value>
+    <value>{0} 点</value>
   </data>
   <data name="Settings_CadenceReasonUnavailable" xml:space="preserve">
     <value>节奏信息不可用</value>
@@ -8367,5 +8367,599 @@
   </data>
   <data name="GameProfile_DefaultNewProfileName" xml:space="preserve">
     <value>新游戏方案</value>
+  </data>
+  <data name="FanDiag_FanNameCpu" xml:space="preserve">
+    <value>CPU 风扇</value>
+  </data>
+  <data name="FanDiag_FanNameGpu" xml:space="preserve">
+    <value>GPU 风扇</value>
+  </data>
+  <data name="FanDiag_SourceEstimatedValue" xml:space="preserve">
+    <value>估</value>
+  </data>
+  <data name="FanDiag_SourceNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="FanDiag_EvidenceNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="FanDiag_EvidenceRpm" xml:space="preserve">
+    <value>转速</value>
+  </data>
+  <data name="FanDiag_EvidenceLevel" xml:space="preserve">
+    <value>档位</value>
+  </data>
+  <data name="FanDiag_EvidenceRpmLevel" xml:space="preserve">
+    <value>转速+档位</value>
+  </data>
+  <data name="FanDiag_EvidenceFirmwareCeiling" xml:space="preserve">
+    <value>固件上限</value>
+  </data>
+  <data name="FanDiag_RatingExcellent" xml:space="preserve">
+    <value>优秀</value>
+  </data>
+  <data name="FanDiag_RatingGood" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="FanDiag_RatingFair" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="FanDiag_RatingPoor" xml:space="preserve">
+    <value>较差</value>
+  </data>
+  <data name="FanDiag_RatingFailed" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="FanDiag_RpmEstimatedFormat" xml:space="preserve">
+    <value>约 {0} RPM（按档位估算）</value>
+  </data>
+  <data name="FanDiag_RpmRefusedFormat" xml:space="preserve">
+    <value>固件拒绝档位 {0}</value>
+  </data>
+  <data name="FanDiag_RpmUnavailable" xml:space="preserve">
+    <value>无法获取实际转速</value>
+  </data>
+  <data name="FanDiag_RpmUnverifiedFormat" xml:space="preserve">
+    <value>{0} RPM（来源未验证）</value>
+  </data>
+  <data name="FanDiag_RpmWithSourceFormat" xml:space="preserve">
+    <value>{0} RPM（{1}）</value>
+  </data>
+  <data name="FanDiag_ErrNoBackend" xml:space="preserve">
+    <value>没有可用的风扇控制后端</value>
+  </data>
+  <data name="FanDiag_ErrWmiFalse" xml:space="preserve">
+    <value>WMI 调用返回失败</value>
+  </data>
+  <data name="FanDiag_ErrServiceFalse" xml:space="preserve">
+    <value>风扇服务调用返回失败</value>
+  </data>
+  <data name="FanDiag_ErrInconclusiveFormat" xml:space="preserve">
+    <value>风扇验证在 {0} 次尝试后仍无定论：{1}</value>
+  </data>
+  <data name="FanDiag_StatusTestingFormat" xml:space="preserve">
+    <value>正在测试 {0} 风扇（{1}%）…</value>
+  </data>
+  <data name="FanDiag_StatusTooHotFormat" xml:space="preserve">
+    <value>未开始：CPU 或 GPU 温度为 {0}°C。请等待降至 {1}°C 以下后重新运行诊断。</value>
+  </data>
+  <data name="FanDiag_StatusTooHotShort" xml:space="preserve">
+    <value>温度过高，无法开始——请冷却后重试</value>
+  </data>
+  <data name="FanDiag_StatusWaitingCoolFormat" xml:space="preserve">
+    <value>正在等待笔记本降至 {0}°C 以下（当前 {1}°C）…</value>
+  </data>
+  <data name="FanDiag_StatusAllPassedFormat" xml:space="preserve">
+    <value>全部测试通过！得分：{0}/100（{1}）</value>
+  </data>
+  <data name="FanDiag_StatusSomeFailedFormat" xml:space="preserve">
+    <value>部分测试未通过——得分：{0}/100（{1}）</value>
+  </data>
+  <data name="FanDiag_StatusInterruptedFormat" xml:space="preserve">
+    <value>被温度保护中断（{0} 步）——请冷却后重跑</value>
+  </data>
+  <data name="FanDiag_SummaryBackendFormat" xml:space="preserve">
+    <value>后端：{0} | 转速来源：{1}</value>
+  </data>
+  <data name="FanDiag_SummaryTestsFormat" xml:space="preserve">
+    <value>测试：{0}/{1} 通过 | 总分：{2}/100（{3}）</value>
+  </data>
+  <data name="FanDiag_SummaryRgbFormat" xml:space="preserve">
+    <value>RGB：{0}</value>
+  </data>
+  <data name="FanDiag_SummaryRowFormat" xml:space="preserve">
+    <value>{0} {1} @ {2}%：{3} —— 得分 {4}［证据：{5}］</value>
+  </data>
+  <data name="FanDiag_SummaryInterruptedNoteFormat" xml:space="preserve">
+    <value>⚠ {0} 步被温度保护中断，未计为失败：{1}。</value>
+  </data>
+  <data name="FanDiag_SummaryCoolNoteFormat" xml:space="preserve">
+    <value>请等待笔记本降至 {0}°C 以下后重新运行诊断以完成这些步骤。</value>
+  </data>
+  <data name="FanDiag_RgbSkippedNoBackend" xml:space="preserve">
+    <value>已跳过：集成 RGB 后端不可用</value>
+  </data>
+  <data name="FanDiag_RgbLookAtKeyboard" xml:space="preserve">
+    <value>现在请看键盘</value>
+  </data>
+  <data name="FanDiag_RgbPatternNotAcceptedFormat" xml:space="preserve">
+    <value>{0} 未接受图案写入</value>
+  </data>
+  <data name="FanDiag_RgbNotRestoredFormat" xml:space="preserve">
+    <value>图案已应用；但 {0} 未恢复已保存的颜色</value>
+  </data>
+  <data name="FanDiag_RgbAppliedNeedsConfirm" xml:space="preserve">
+    <value>图案已应用且已恢复保存颜色；请目视确认</value>
+  </data>
+  <data name="FanDiag_RgbFailedFormat" xml:space="preserve">
+    <value>失败：{0}</value>
+  </data>
+  <data name="AutomationRule_DefaultName" xml:space="preserve">
+    <value>新建自动化规则</value>
+  </data>
+  <data name="Automation_ValidationReady" xml:space="preserve">
+    <value>就绪</value>
+  </data>
+  <data name="Trigger_Time" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="Trigger_Battery" xml:space="preserve">
+    <value>电量</value>
+  </data>
+  <data name="Trigger_AcPower" xml:space="preserve">
+    <value>交流电源</value>
+  </data>
+  <data name="Trigger_Temperature" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="Trigger_Idle" xml:space="preserve">
+    <value>空闲</value>
+  </data>
+  <data name="Trigger_Process" xml:space="preserve">
+    <value>进程</value>
+  </data>
+  <data name="Trigger_WifiSsid" xml:space="preserve">
+    <value>WiFi 网络</value>
+  </data>
+  <data name="Automation_ErrPayloadMissing" xml:space="preserve">
+    <value>规则内容缺失。</value>
+  </data>
+  <data name="Automation_ErrNameRequired" xml:space="preserve">
+    <value>需要填写规则名称。</value>
+  </data>
+  <data name="Automation_ErrNeedsAction" xml:space="preserve">
+    <value>至少需要设置一个动作。</value>
+  </data>
+  <data name="Automation_ErrTimeRange" xml:space="preserve">
+    <value>时间规则需要同时设置开始与结束时间。</value>
+  </data>
+  <data name="Automation_ErrBatteryThreshold" xml:space="preserve">
+    <value>电量规则需要 1–100 之间的阈值。</value>
+  </data>
+  <data name="Automation_ErrBatteryCondition" xml:space="preserve">
+    <value>电量规则需要选择“低于”或“高于”。</value>
+  </data>
+  <data name="Automation_ErrAcState" xml:space="preserve">
+    <value>交流电源规则需指定“已接通”或“已断开”。</value>
+  </data>
+  <data name="Automation_ErrTempThreshold" xml:space="preserve">
+    <value>温度规则需要 1–110°C 之间的阈值。</value>
+  </data>
+  <data name="Automation_ErrTempCondition" xml:space="preserve">
+    <value>温度规则需要选择“高于”或“低于”。</value>
+  </data>
+  <data name="Automation_ErrIdleThreshold" xml:space="preserve">
+    <value>空闲规则需要 1–999 分钟之间的阈值。</value>
+  </data>
+  <data name="Automation_ErrProcessName" xml:space="preserve">
+    <value>进程规则需要可执行文件名。</value>
+  </data>
+  <data name="Automation_ErrWifiSsid" xml:space="preserve">
+    <value>WiFi 规则需要 SSID。</value>
+  </data>
+  <data name="Automation_ErrLidState" xml:space="preserve">
+    <value>合盖规则需指定“已打开”或“已合上”。</value>
+  </data>
+  <data name="FanDiag_FanNameCpuEstimated" xml:space="preserve">
+    <value>CPU 风扇（估算）</value>
+  </data>
+  <data name="FanDiag_FanNameGpuEstimated" xml:space="preserve">
+    <value>GPU 风扇（估算）</value>
+  </data>
+  <data name="FanDiag_SourceEcDirect" xml:space="preserve">
+    <value>EC 直读</value>
+  </data>
+  <data name="FanDiag_SourceHardwareMonitor" xml:space="preserve">
+    <value>硬件监控</value>
+  </data>
+  <data name="FanDiag_SourceAfterburner" xml:space="preserve">
+    <value>MSI Afterburner</value>
+  </data>
+  <data name="FanDiag_SourceWmiBios" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="FanDiag_SourceEstimated" xml:space="preserve">
+    <value>估算</value>
+  </data>
+  <data name="FanDiag_SourceUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="FanControl_CopyFailedFormat" xml:space="preserve">
+    <value>复制分享代码失败：{0}</value>
+  </data>
+  <data name="FanControl_CopyFailedTitle" xml:space="preserve">
+    <value>复制失败</value>
+  </data>
+  <data name="FanControl_ImportedCurveFormat" xml:space="preserve">
+    <value>已导入曲线“{0}”（{1} 个点）。别忘了应用或保存。</value>
+  </data>
+  <data name="FanControl_ImportedPresetsFormat" xml:space="preserve">
+    <value>已导入 {0} 个风扇预设</value>
+  </data>
+  <data name="FanControl_ImportCodeFailedFormat" xml:space="preserve">
+    <value>导入分享代码失败：{0}</value>
+  </data>
+  <data name="FanControl_ImportPresetsFailedFormat" xml:space="preserve">
+    <value>导入风扇预设失败：{0}</value>
+  </data>
+  <data name="FanControl_ExportedPresetsFormat" xml:space="preserve">
+    <value>已导出 {0} 个风扇预设</value>
+  </data>
+  <data name="FanControl_ExportPresetsFailedFormat" xml:space="preserve">
+    <value>导出风扇预设失败：{0}</value>
+  </data>
+  <data name="FanControl_ImportCompleteTitle" xml:space="preserve">
+    <value>导入完成</value>
+  </data>
+  <data name="FanControl_ExportCompleteTitle" xml:space="preserve">
+    <value>导出完成</value>
+  </data>
+  <data name="FanControl_ExportErrorTitle" xml:space="preserve">
+    <value>导出错误</value>
+  </data>
+  <data name="GameProfile_ImportedFormat" xml:space="preserve">
+    <value>已导入 {0} 个方案</value>
+  </data>
+  <data name="GameProfile_InvalidProfileTitle" xml:space="preserve">
+    <value>游戏方案无效</value>
+  </data>
+  <data name="Lighting_OverwriteDpiProfileFormat" xml:space="preserve">
+    <value>已存在名为“{0}”的 DPI 方案，是否覆盖？</value>
+  </data>
+  <data name="Lighting_OverwriteDpiProfileTitle" xml:space="preserve">
+    <value>覆盖 DPI 方案</value>
+  </data>
+  <data name="Settings_OpenBrowserFailedFormat" xml:space="preserve">
+    <value>无法打开浏览器：{0}</value>
+  </data>
+  <data name="Settings_RemoveBloatwareFailedFormat" xml:space="preserve">
+    <value>移除预装软件失败：{0}</value>
+  </data>
+  <data name="Settings_BloatwareRemoveFailedStatus" xml:space="preserve">
+    <value>❌ 移除失败：{0}</value>
+  </data>
+  <data name="SystemControl_RollbackApplying" xml:space="preserve">
+    <value>正在应用安全回滚…</value>
+  </data>
+  <data name="SystemControl_RollbackClearing" xml:space="preserve">
+    <value>安全回滚正在清除已保存的调优状态…</value>
+  </data>
+  <data name="SystemControl_RollbackNotice" xml:space="preserve">
+    <value>已应用安全调优回滚。启动时的调优状态已恢复为“平衡/自动”默认值；不可用的实时硬件后端已跳过。</value>
+  </data>
+  <data name="SystemControl_RollbackAppliedFormat" xml:space="preserve">
+    <value>已应用：{0}。</value>
+  </data>
+  <data name="SystemControl_RollbackSkippedFormat" xml:space="preserve">
+    <value> 已跳过：{0}。</value>
+  </data>
+  <data name="SystemControl_RollbackFailedFormat" xml:space="preserve">
+    <value>安全回滚失败：{0}</value>
+  </data>
+  <data name="SystemControl_RollbackSavedStateFormat" xml:space="preserve">
+    <value>已保存安全启动状态（{0}）</value>
+  </data>
+  <data name="SystemControl_RollbackAlreadySafe" xml:space="preserve">
+    <value>启动状态已处于安全值</value>
+  </data>
+  <data name="SystemControl_RollbackFanOemAuto" xml:space="preserve">
+    <value>风扇已恢复 OEM 自动</value>
+  </data>
+  <data name="SystemControl_RollbackBalancedMode" xml:space="preserve">
+    <value>平衡性能模式</value>
+  </data>
+  <data name="SystemControl_RollbackGpuMinimum" xml:space="preserve">
+    <value>GPU 功率最低档</value>
+  </data>
+  <data name="SystemControl_RollbackCpuPlReset" xml:space="preserve">
+    <value>CPU PL1/PL2 启动重置</value>
+  </data>
+  <data name="SystemControl_RollbackTccReset" xml:space="preserve">
+    <value>TCC 偏移重置</value>
+  </data>
+  <data name="SystemControl_RollbackNvidiaReset" xml:space="preserve">
+    <value>NVIDIA GPU 调优重置</value>
+  </data>
+  <data name="SystemControl_RollbackGpuBoostUnavailable" xml:space="preserve">
+    <value>GPU 功率加速后端不可用</value>
+  </data>
+  <data name="SystemControl_RollbackCpuLimitsLocked" xml:space="preserve">
+    <value>CPU 功耗限制已锁定/只读</value>
+  </data>
+  <data name="SystemControl_RollbackCpuLimitsUnavailable" xml:space="preserve">
+    <value>CPU 功耗限制不可用</value>
+  </data>
+  <data name="SystemControl_RollbackTccUnavailable" xml:space="preserve">
+    <value>TCC 偏移不可用</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltReset" xml:space="preserve">
+    <value>CPU 降压已重置</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltResetFailedFormat" xml:space="preserve">
+    <value>CPU 降压重置失败：{0}</value>
+  </data>
+  <data name="SystemControl_RollbackUndervoltUnavailable" xml:space="preserve">
+    <value>CPU 降压后端不可用</value>
+  </data>
+  <data name="SystemControl_RollbackGpuOcUnavailable" xml:space="preserve">
+    <value>GPU 超频后端不可用</value>
+  </data>
+  <data name="SystemControl_RollbackAmdPowerUnavailable" xml:space="preserve">
+    <value>AMD CPU 功耗后端不可用</value>
+  </data>
+  <data name="Nvidia_StatusReadFailedFormat" xml:space="preserve">
+    <value>无法读取 NVIDIA 驱动：{0}</value>
+  </data>
+  <data name="Nvidia_LiveFormat" xml:space="preserve">
+    <value>当前 CURRENT {0} W，当前 MAX {1} W。</value>
+  </data>
+  <data name="Nvidia_StatusFormat" xml:space="preserve">
+    <value>{0}：{1}MAX 写入{2}，CURRENT 写入{3}。{4}{5}</value>
+  </data>
+  <data name="Nvidia_WriteReady" xml:space="preserve">
+    <value>可用</value>
+  </data>
+  <data name="Nvidia_WriteNotReady" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="Nvidia_GpuFallback" xml:space="preserve">
+    <value>NVIDIA GPU</value>
+  </data>
+  <data name="Nvidia_StockMismatchFormat" xml:space="preserve">
+    <value> 读取到的出厂上限：{0} W，预期：{1} W。安装了 MAX 覆盖或厂商设定了更低上限时出现差异属正常现象，本身不是错误。</value>
+  </data>
+  <data name="Nvidia_RemoveMaxPrompt" xml:space="preserve">
+    <value>要移除 MAX 覆盖吗？之后需要重启 Windows 才能恢复出厂上限。</value>
+  </data>
+  <data name="Nvidia_ApplyPromptFormat" xml:space="preserve">
+    <value>将 {0} 设为 {1} W？&#10;&#10;这会把 GPU 功耗上限提高到笔记本厂商设定之上。功耗越高发热越大，而散热并非为此设计。{2}请确认了解风险后再继续。</value>
+  </data>
+  <data name="Nvidia_MayNeedReboot" xml:space="preserve">
+    <value>MAX 需要重启 Windows 才会生效。</value>
+  </data>
+  <data name="Nvidia_CurrentResetsOnReboot" xml:space="preserve">
+    <value>CURRENT 会在重启后失效。</value>
+  </data>
+  <data name="Nvidia_PowerTitle" xml:space="preserve">
+    <value>NVIDIA 功耗</value>
+  </data>
+  <data name="Bloatware_RestoreActionItemFormat" xml:space="preserve">
+    <value>正在恢复 {0}</value>
+  </data>
+  <data name="Bloatware_RestoreDoneItemFormat" xml:space="preserve">
+    <value>已恢复 {0}</value>
+  </data>
+  <data name="Bloatware_RestoreProgressFormat" xml:space="preserve">
+    <value>正在恢复 {0}/{1}：{2}</value>
+  </data>
+  <data name="Bloatware_RestoredCountFormat" xml:space="preserve">
+    <value>已恢复 {0} 个预装软件</value>
+  </data>
+  <data name="Bloatware_OpenReportFailedFormat" xml:space="preserve">
+    <value>无法打开报告：{0}</value>
+  </data>
+  <data name="DeviceLighting_FnUpdatedFormat" xml:space="preserve">
+    <value>{0} 已更新——键盘每个灯效只保留一个方案。</value>
+  </data>
+  <data name="DeviceLighting_FnAddedFormat" xml:space="preserve">
+    <value>{0} 已添加。写入循环前键盘不会变化。</value>
+  </data>
+  <data name="DeviceLighting_FnRemovedFormat" xml:space="preserve">
+    <value>{0} 已从列表移除。键盘上的方案仍然保留。</value>
+  </data>
+  <data name="DeviceLighting_FnWritingFormat" xml:space="preserve">
+    <value>正在写入 {0} 个方案…</value>
+  </data>
+  <data name="FanCalibration_ErrorFormat" xml:space="preserve">
+    <value>错误：{0}</value>
+  </data>
+  <data name="FanCalibration_TestingLevelFormat" xml:space="preserve">
+    <value>正在测试档位 {0}…（{1}% 完成）</value>
+  </data>
+  <data name="FanCalibration_ErrorWarnFormat" xml:space="preserve">
+    <value>⚠ 错误：{0}</value>
+  </data>
+  <data name="GpuClamp_FailedFormat" xml:space="preserve">
+    <value>失败：{0}</value>
+  </data>
+  <data name="KbdDiag_DetectionFailedFormat" xml:space="preserve">
+    <value>检测失败：{0}</value>
+  </data>
+  <data name="KbdDiag_ProbeStepFormat" xml:space="preserve">
+    <value>探测步骤 {0}/{1}：键盘现在变红了吗？</value>
+  </data>
+  <data name="KbdDiag_TestPatternFailedFormat" xml:space="preserve">
+    <value>测试图案失败：{0}</value>
+  </data>
+  <data name="KbdDiag_ClearFailedFormat" xml:space="preserve">
+    <value>清除失败：{0}</value>
+  </data>
+  <data name="Mem_FreedFormat" xml:space="preserve">
+    <value>已释放 {0} MB</value>
+  </data>
+  <data name="Mem_ExcludedFormat" xml:space="preserve">
+    <value>已将 {0} 排除在内存整理之外</value>
+  </data>
+  <data name="Mem_CompressionEnabled" xml:space="preserve">
+    <value>已启用内存压缩</value>
+  </data>
+  <data name="Mem_CompressionDisabled" xml:space="preserve">
+    <value>已禁用内存压缩</value>
+  </data>
+  <data name="Mem_CopiedFormat" xml:space="preserve">
+    <value>已复制 {0}</value>
+  </data>
+  <data name="Mem_FailedFormat" xml:space="preserve">
+    <value>失败：{0}</value>
+  </data>
+  <data name="KbdMap_PaintedFormat" xml:space="preserve">
+    <value>已绘制 {0} 个键 {1}。</value>
+  </data>
+  <data name="KbdMap_RestoredFormat" xml:space="preserve">
+    <value>已恢复上一张图片（{0} 个格）。</value>
+  </data>
+  <data name="KbdMap_DetectedFormat" xml:space="preserve">
+    <value>{0} 个 LED，覆盖 {1} 个键（{2}）</value>
+  </data>
+  <data name="Main_RestorePointCreatedFormat" xml:space="preserve">
+    <value>已创建还原点 #{0}</value>
+  </data>
+  <data name="Main_RestorePointFailedFormat" xml:space="preserve">
+    <value>还原点创建失败：{0}</value>
+  </data>
+  <data name="Main_CleanupFailedFormat" xml:space="preserve">
+    <value>✗ 清理失败：{0}</value>
+  </data>
+  <data name="Update_DownloadProgressFormat" xml:space="preserve">
+    <value>{0}% • {1} MB/s • 剩余 {2}</value>
+  </data>
+  <data name="FanCleaning_DetectedFormat" xml:space="preserve">
+    <value>✓ 检测到 HP OMEN：{0}。风扇清洁可用。</value>
+  </data>
+  <data name="FanCleaning_ReasonFormat" xml:space="preserve">
+    <value>⚠️ {0}</value>
+  </data>
+  <data name="Bios_UpdateAvailableFormat" xml:space="preserve">
+    <value>⬆️ 有可用更新：{0}</value>
+  </data>
+  <data name="Bios_ErrorFormat" xml:space="preserve">
+    <value>错误：{0}</value>
+  </data>
+  <data name="SC_PartialFormat" xml:space="preserve">
+    <value>⚠ 部分失败（{0} 项失败）：{1}</value>
+  </data>
+  <data name="SC_ErrorFormat" xml:space="preserve">
+    <value>错误：{0}</value>
+  </data>
+  <data name="SC_TestApplyNotStartedFormat" xml:space="preserve">
+    <value>测试应用未启动：{0}</value>
+  </data>
+  <data name="SC_PlAvailableFormat" xml:space="preserve">
+    <value>✓ 可用（PL1：{0}W，PL2：{1}W）</value>
+  </data>
+  <data name="SC_PlAppliedFormat" xml:space="preserve">
+    <value>✓ 已应用（PL1：{0}W，PL2：{1}W）</value>
+  </data>
+  <data name="SC_PlResetFormat" xml:space="preserve">
+    <value>✓ 已恢复启动值（PL1：{0}W，PL2：{1}W）</value>
+  </data>
+  <data name="SC_GpuOcPowerOnlyFormat" xml:space="preserve">
+    <value>{0} —— 支持功耗上限调节，时钟偏移被阻止</value>
+  </data>
+  <data name="SC_GpuOcLockedFormat" xml:space="preserve">
+    <value>{0} —— NVAPI 调优被驱动/固件锁定</value>
+  </data>
+  <data name="SC_GpuOcInitFailedFormat" xml:space="preserve">
+    <value>初始化失败：{0}</value>
+  </data>
+  <data name="SC_AmdOcAvailableFormat" xml:space="preserve">
+    <value>✓ {0} —— 可通过 ADL2 进行 AMD 超频</value>
+  </data>
+  <data name="SC_AmdDriverMissingFormat" xml:space="preserve">
+    <value>⚠ {0} —— 请安装 AMD Adrenalin 驱动以启用 GPU 调优</value>
+  </data>
+  <data name="SC_AmdOcAppliedFormat" xml:space="preserve">
+    <value>AMD GPU 超频已应用：核心 {0} MHz，显存 {1} MHz，功耗 {2}%</value>
+  </data>
+  <data name="SC_AmdOcErrorFormat" xml:space="preserve">
+    <value>AMD GPU 超频错误：{0}</value>
+  </data>
+  <data name="SC_RestoredWithGuardrailsFormat" xml:space="preserve">
+    <value>已在保护限制下恢复：{0}</value>
+  </data>
+  <data name="SC_ProfileSavedFormat" xml:space="preserve">
+    <value>✓ 已保存方案：{0}</value>
+  </data>
+  <data name="SC_ProfileDeletedFormat" xml:space="preserve">
+    <value>已删除方案：{0}</value>
+  </data>
+  <data name="SC_ModeNotSavedFormat" xml:space="preserve">
+    <value>“{0}”不是已保存的模式，无处存储当前状态。</value>
+  </data>
+  <data name="Lighting_RestoreStatusFormat" xml:space="preserve">
+    <value>{0} 表面：{1}。{2}</value>
+  </data>
+  <data name="Lighting_RestoredSavedFormat" xml:space="preserve">
+    <value>已恢复保存的键盘颜色。{0} 表面：{1}。</value>
+  </data>
+  <data name="Lighting_ObservationSaveFailedFormat" xml:space="preserve">
+    <value>RGB 观察保存失败：{0}</value>
+  </data>
+  <data name="Optimizer_AlreadyAppliedFormat" xml:space="preserve">
+    <value>{0} 已全部应用</value>
+  </data>
+  <data name="Optimizer_AppliedCountFormat" xml:space="preserve">
+    <value>已应用 {0}/{1} 项（{2}），{3} 项失败</value>
+  </data>
+  <data name="Optimizer_AppliedCategoryFormat" xml:space="preserve">
+    <value>已应用 {0} 项 {1} 优化</value>
+  </data>
+  <data name="Optimizer_RevertedFormat" xml:space="preserve">
+    <value>已撤销 {0}/{1} 项优化</value>
+  </data>
+  <data name="Optimizer_PreflightRefreshFailedFormat" xml:space="preserve">
+    <value>预检刷新失败：{0}</value>
+  </data>
+  <data name="Optimizer_ReportExportedFormat" xml:space="preserve">
+    <value>报告已导出：{0}</value>
+  </data>
+  <data name="Optimizer_ReportExportFailedFormat" xml:space="preserve">
+    <value>报告导出失败：{0}</value>
+  </data>
+  <data name="Optimizer_OpenReportFailedFormat" xml:space="preserve">
+    <value>无法打开报告：{0}</value>
+  </data>
+  <data name="Optimizer_CopyReportPathFailedFormat" xml:space="preserve">
+    <value>无法复制报告路径：{0}</value>
+  </data>
+  <data name="DiagnosticExport_FileSavedToFormat" xml:space="preserve">
+    <value>文件已保存到：{0}</value>
+  </data>
+  <data name="DiagnosticExport_FileSizeFormat" xml:space="preserve">
+    <value>文件大小：{0}</value>
+  </data>
+  <data name="DiagnosticExport_ContainsFormat" xml:space="preserve">
+    <value>包含：{0}</value>
+  </data>
+  <data name="FanCalibration_ModelLineFormat" xml:space="preserve">
+    <value>机型：{0}&#10;机型 ID：{1}</value>
+  </data>
+  <data name="FanCalibration_AvailableFormat" xml:space="preserve">
+    <value>已有校准数据（创建于 {0}）</value>
+  </data>
+  <data name="FanCalibration_FanStatusFormat" xml:space="preserve">
+    <value>当前：{0} RPM（档位：{1}，来源：{2}）&#10;估算：约 {3}% 转速</value>
+  </data>
+  <data name="FanCalibration_ReadStatusFailedFormat" xml:space="preserve">
+    <value>读取风扇状态失败：{0}</value>
+  </data>
+  <data name="FanCalibration_FailedDetailFormat" xml:space="preserve">
+    <value>校准失败：{0}</value>
+  </data>
+  <data name="FanCalibration_SuccessFormat" xml:space="preserve">
+    <value>校准成功——完成 {0} 个测试点，用时 {1} 秒</value>
+  </data>
+  <data name="FanCalibration_IssuesFormat" xml:space="preserve">
+    <value>校准完成但存在问题——{0} 个测试点，{1} 个失败</value>
   </data>
 </root>
