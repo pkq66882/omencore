@@ -480,14 +480,14 @@ namespace OmenCore.ViewModels
         {
             get
             {
-                var backend = string.IsNullOrWhiteSpace(RpmSourceDisplay) ? "unknown backend" : RpmSourceDisplay;
-                var status = string.IsNullOrWhiteSpace(CurveApplyStatus) ? "Ready" : CurveApplyStatus;
+                var backend = string.IsNullOrWhiteSpace(RpmSourceDisplay) ? Strings.FanControl_UnknownBackend : RpmSourceDisplay;
+                var status = string.IsNullOrWhiteSpace(CurveApplyStatus) ? Strings.FanControl_Ready : CurveApplyStatus;
                 if (ProfileOnlyFanControl)
                 {
-                    return $"Backend: {backend}. Profile-only firmware control; custom curves and fixed fan levels are unavailable. {status}";
+                    return string.Format(Strings.FanControl_DetailProfileOnlyFormat, backend, status);
                 }
 
-                return $"Backend: {backend}. {status}";
+                return string.Format(Strings.FanControl_DetailBackendFormat, backend, status);
             }
         }
 
@@ -1077,7 +1077,7 @@ namespace OmenCore.ViewModels
         {
             if (!IsFanCalibrationAvailable)
             {
-                CurveApplyStatus = $"Calibration is unavailable: {FanCalibrationUnavailableReason}";
+                CurveApplyStatus = string.Format(Strings.FanControl_CalibrationUnavailableFormat, FanCalibrationUnavailableReason);
                 return;
             }
 
@@ -1085,7 +1085,7 @@ namespace OmenCore.ViewModels
             {
                 var window = new Window
                 {
-                    Title = "Fan Calibration Wizard",
+                    Title = Strings.FanControl_WizardTitle,
                     Width = 920,
                     Height = 760,
                     MinWidth = 820,
@@ -1103,7 +1103,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                CurveApplyStatus = $"Failed to open calibration wizard: {ex.Message}";
+                CurveApplyStatus = string.Format(Strings.FanControl_WizardOpenFailedFormat, ex.Message);
                 _logging.Error("Failed to open fan calibration wizard", ex);
             }
         }
@@ -1548,12 +1548,12 @@ namespace OmenCore.ViewModels
             await _fanApplySemaphore.WaitAsync();
             try
             {
-                CurveApplyStatus = $"Applying '{preset.Name}'… (transitioning)";
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusApplyingPresetFormat, preset.Name);
                 var immediateApply = ImmediateApplyOnApply || (preset.Curve?.Count > 0);
                 var applied = await Task.Run(() => _fanService.ApplyPreset(preset, immediate: immediateApply));
                 if (!applied)
                 {
-                    CurveApplyStatus = $"Preset '{preset.Name}' failed verification";
+                    CurveApplyStatus = string.Format(Strings.FanControl_StatusPresetFailedVerifyFormat, preset.Name);
                     _logging.Warn($"Preset '{preset.Name}' was not saved because fan service reported apply failure");
                     return;
                 }
@@ -1578,7 +1578,7 @@ namespace OmenCore.ViewModels
                     }
                     else
                     {
-                        CurveApplyStatus = $"Preset '{preset.Name}' applied";
+                        CurveApplyStatus = string.Format(Strings.FanControl_StatusPresetAppliedFormat, preset.Name);
                     }
                 });
             }
@@ -1596,7 +1596,7 @@ namespace OmenCore.ViewModels
         {
             if (IsApplyingCustomCurve)
             {
-                CurveApplyStatus = "Verification already in progress...";
+                CurveApplyStatus = Strings.FanControl_StatusVerificationInProgress;
                 return;
             }
 
@@ -1604,13 +1604,13 @@ namespace OmenCore.ViewModels
             try
             {
                 await RunCurveVerificationKickAsync(
-                    sourceLabel: $"Preset '{preset.Name}'",
+                    sourceLabel: string.Format(Strings.FanControl_SourcePresetFormat, preset.Name),
                     curvePoints: preset.Curve,
                     reapplyCurveAction: () => _fanService.ApplyPreset(preset, ImmediateApplyOnApply));
             }
             catch (Exception ex)
             {
-                CurveApplyStatus = $"Preset '{preset.Name}' apply failed: {ex.Message}";
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusPresetApplyFailedFormat, preset.Name, ex.Message);
                 _logging.Error($"Preset '{preset.Name}' verification kick failed", ex);
             }
             finally
@@ -1647,7 +1647,7 @@ namespace OmenCore.ViewModels
 
             if (!FanCurvesAvailable)
             {
-                CurveApplyStatus = "Custom curves unavailable on this model";
+                CurveApplyStatus = Strings.FanControl_StatusCurvesUnavailable;
                 _logging.Warn("Skipped custom curve apply request because this model is limited to OEM fan profiles");
                 return;
             }
@@ -1658,8 +1658,8 @@ namespace OmenCore.ViewModels
             {
                 _logging.Warn($"Invalid fan curve: {validationError}");
                 System.Windows.MessageBox.Show(
-                    $"{validationError}\n\nThe fan curve was not applied. Please fix the issues and try again.",
-                    "Invalid Fan Curve",
+                    string.Format(Strings.FanControl_InvalidCurveMessageFormat, validationError),
+                    Strings.FanControl_InvalidCurveTitle,
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Warning);
                 return;
@@ -1676,11 +1676,11 @@ namespace OmenCore.ViewModels
             IsApplyingCustomCurve = true;
             try
             {
-                CurveApplyStatus = "Applying custom curve...";
+                CurveApplyStatus = Strings.FanControl_StatusApplyingCustomCurve;
                 var applied = await Task.Run(() => _fanService.ApplyPreset(customPreset, immediate: true));
                 if (!applied)
                 {
-                    CurveApplyStatus = "Custom curve failed verification";
+                    CurveApplyStatus = Strings.FanControl_StatusCustomCurveFailedVerify;
                     _logging.Warn("Custom curve was not saved because fan service reported apply failure");
                     return;
                 }
@@ -1690,13 +1690,13 @@ namespace OmenCore.ViewModels
                 OnPropertyChanged(nameof(CurrentFanModeName));
 
                 await RunCurveVerificationKickAsync(
-                    sourceLabel: "Custom curve",
+                    sourceLabel: Strings.FanControl_SourceCustomCurve,
                     curvePoints: CustomFanCurve,
                     reapplyCurveAction: () => _fanService.ApplyPreset(customPreset, immediate: true));
             }
             catch (Exception ex)
             {
-                CurveApplyStatus = $"Custom curve apply failed: {ex.Message}";
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusCustomCurveApplyFailedFormat, ex.Message);
                 _logging.ErrorWithContext(
                     component: "FanControlViewModel",
                     operation: "ApplyCustomCurve",
@@ -1716,13 +1716,13 @@ namespace OmenCore.ViewModels
         {
             if (_fanVerificationService?.IsAvailable != true)
             {
-                CurveApplyStatus = $"{sourceLabel} applied";
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusSourceAppliedFormat, sourceLabel);
                 return;
             }
 
             if (FanTelemetry.Count == 0)
             {
-                CurveApplyStatus = $"{sourceLabel} applied; verification skipped (no RPM telemetry)";
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusSourceAppliedNoTelemetryFormat, sourceLabel);
                 return;
             }
 
@@ -1734,14 +1734,14 @@ namespace OmenCore.ViewModels
             var targetPercent = ApplySafetyFloor(requestedPercent, controlTemp);
             var verificationTargetText = requestedPercent == targetPercent
                 ? $"{targetPercent}%"
-                : $"{targetPercent}% (curve requested {requestedPercent}%; thermal guard raised it)";
+                : string.Format(Strings.FanControl_ThermalGuardRaiseFormat, targetPercent, requestedPercent);
 
             var verificationKey = $"{sourceLabel}|{targetPercent}";
             var nowUtc = DateTime.UtcNow;
             if (string.Equals(_lastCurveVerificationKickKey, verificationKey, StringComparison.Ordinal) &&
                 nowUtc - _lastCurveVerificationKickUtc < CurveVerificationKickCooldown)
             {
-                CurveApplyStatus = $"{sourceLabel} applied; verification recently checked";
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusSourceAppliedRecentFormat, sourceLabel);
                 _logging.Info($"[FanCurve] Skipped post-apply verification kick for {sourceLabel}; recent check still inside cooldown");
                 return;
             }
@@ -1749,7 +1749,7 @@ namespace OmenCore.ViewModels
             _lastCurveVerificationKickKey = verificationKey;
             _lastCurveVerificationKickUtc = nowUtc;
 
-            CurveApplyStatus = $"Verifying {sourceLabel.ToLowerInvariant()} at {controlTemp:F0}C -> {verificationTargetText}...";
+            CurveApplyStatus = string.Format(Strings.FanControl_StatusVerifyingFormat, sourceLabel, controlTemp.ToString("F0"), verificationTargetText);
             _logging.Info($"[FanCurve] Running post-apply verification kick for {sourceLabel} at {controlTemp:F1}C -> {verificationTargetText}");
 
             var fanCount = Math.Min(CurveVerificationKickFanLimit, FanTelemetry.Count);
@@ -1766,7 +1766,7 @@ namespace OmenCore.ViewModels
             }
             catch (OperationCanceledException)
             {
-                CurveApplyStatus = $"{sourceLabel} applied; verification timed out";
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusSourceAppliedTimeoutFormat, sourceLabel);
                 _logging.Warn($"[FanCurve] Post-apply verification kick for {sourceLabel} timed out after {CurveVerificationKickTimeout.TotalSeconds:F0}s; curve was restored");
                 return;
             }
@@ -1780,19 +1780,19 @@ namespace OmenCore.ViewModels
             if (passedCount == results.Count)
             {
                 CurveApplyStatus = results.Count == 1
-                    ? $"{sourceLabel} verified at {verificationTargetText} ({results[0].ActualRpmAfter} RPM)"
-                    : $"{sourceLabel} verified on both fans at {verificationTargetText}";
+                    ? string.Format(Strings.FanControl_StatusVerifiedOneFormat, sourceLabel, verificationTargetText, results[0].ActualRpmAfter)
+                    : string.Format(Strings.FanControl_StatusVerifiedBothFormat, sourceLabel, verificationTargetText);
             }
             else if (passedCount > 0)
             {
-                CurveApplyStatus = $"{sourceLabel} applied; verification partial ({passedCount}/{results.Count} fans passed)";
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusVerifyPartialFormat, sourceLabel, passedCount, results.Count);
             }
             else
             {
                 var firstFailure = results.FirstOrDefault(r => !r.VerificationPassed)?.ErrorMessage;
                 CurveApplyStatus = string.IsNullOrWhiteSpace(firstFailure)
-                    ? $"{sourceLabel} applied; verification did not confirm RPM change"
-                    : $"{sourceLabel} applied; verification warning: {firstFailure}";
+                    ? string.Format(Strings.FanControl_StatusVerifyNoChangeFormat, sourceLabel)
+                    : string.Format(Strings.FanControl_StatusVerifyWarningFormat, sourceLabel, firstFailure);
             }
         }
 
@@ -2334,7 +2334,7 @@ namespace OmenCore.ViewModels
 
             if (!ManualFanControlAvailable)
             {
-                CurveApplyStatus = "Fixed fan speed unavailable on this model";
+                CurveApplyStatus = Strings.FanControl_StatusFixedUnavailable;
                 _logging.Warn("Skipped constant fan speed apply request because manual fan levels are disabled for this model");
                 return;
             }
@@ -2467,7 +2467,7 @@ namespace OmenCore.ViewModels
                 var dialog = new OpenFileDialog
                 {
                     Filter = "JSON Files (*.json)|*.json|All Files (*.*)|*.*",
-                    Title = "Import Fan Presets"
+                    Title = Strings.FanControl_ImportPresetsTitle
                 };
 
                 if (dialog.ShowDialog() == true)
@@ -2529,7 +2529,7 @@ namespace OmenCore.ViewModels
                 var dialog = new SaveFileDialog
                 {
                     Filter = "JSON Files (*.json)|*.json|All Files (*.*)|*.*",
-                    Title = "Export Fan Presets",
+                    Title = Strings.FanControl_ExportPresetsTitle,
                     FileName = $"omencore-fan-presets-{DateTime.Now:yyyy-MM-dd}.json"
                 };
 

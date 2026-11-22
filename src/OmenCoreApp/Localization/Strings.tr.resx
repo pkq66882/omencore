@@ -8164,4 +8164,157 @@
   <data name="BloatwareType_ScheduledTask" xml:space="preserve">
     <value>Zamanlanmış görev</value>
   </data>
+  <data name="Bloatware_ExportNothingToScan" xml:space="preserve">
+    <value>Dışa aktarılacak bir şey yok - önce tarayın veya yüklü aday yok.</value>
+  </data>
+  <data name="Bloatware_ExportNoRemovalLog" xml:space="preserve">
+    <value>Dışa aktarılacak bir şey yok - bu oturumda kaldırma denemesi kaydedilmedi.</value>
+  </data>
+  <data name="Bloatware_NoReport" xml:space="preserve">
+    <value>Henüz rapor yok.</value>
+  </data>
+  <data name="Bloatware_DryRunExportedFormat" xml:space="preserve">
+    <value>Deneme raporu dışa aktarıldı: {0}</value>
+  </data>
+  <data name="Bloatware_LogExportedFormat" xml:space="preserve">
+    <value>Günlük dışa aktarıldı: {0}</value>
+  </data>
+  <data name="Bloatware_NoTelemetryPackages" xml:space="preserve">
+    <value>Telemetri paketi bulunamadı</value>
+  </data>
+  <data name="Bloatware_NoConflictingPackages" xml:space="preserve">
+    <value>Çakışan OMEN paketi bulunamadı</value>
+  </data>
+  <data name="Bloatware_NoConsumerApps" xml:space="preserve">
+    <value>Windows tüketici uygulaması bulunamadı</value>
+  </data>
+  <data name="Bloatware_NoFullStandaloneMatches" xml:space="preserve">
+    <value>Hiçbir paket "Tam Bağımsız" ön ayarı ölçütlerine uymuyor</value>
+  </data>
+  <data name="Bloatware_DryRunTooltip" xml:space="preserve">
+    <value>Kaldırma öncesi rapor oluşturur ve klasörünü açar. Hiçbir şey kaldırılmaz.</value>
+  </data>
+  <data name="Bloatware_LowRiskPreviewTooltip" xml:space="preserve">
+    <value>Kaldırma önizlemesini açar. Kaldırmak istemediklerinizin işaretini kaldırın; yalnızca onayladıktan sonra kaldırılır.</value>
+  </data>
+  <data name="Bloatware_RemovalPreviewTitle" xml:space="preserve">
+    <value>Kaldırma önizlemesi</value>
+  </data>
+  <data name="FanControl_SourcePresetFormat" xml:space="preserve">
+    <value>Ön ayar '{0}'</value>
+  </data>
+  <data name="FanControl_SourceCustomCurve" xml:space="preserve">
+    <value>Özel eğri</value>
+  </data>
+  <data name="FanControl_StatusApplyingPresetFormat" xml:space="preserve">
+    <value>'{0}' uygulanıyor… (geçiş)</value>
+  </data>
+  <data name="FanControl_StatusPresetFailedVerifyFormat" xml:space="preserve">
+    <value>Ön ayar '{0}' doğrulamayı geçemedi</value>
+  </data>
+  <data name="FanControl_StatusPresetAppliedFormat" xml:space="preserve">
+    <value>Ön ayar '{0}' uygulandı</value>
+  </data>
+  <data name="FanControl_StatusVerificationInProgress" xml:space="preserve">
+    <value>Doğrulama zaten sürüyor...</value>
+  </data>
+  <data name="FanControl_StatusPresetApplyFailedFormat" xml:space="preserve">
+    <value>Ön ayar '{0}' uygulanamadı: {1}</value>
+  </data>
+  <data name="FanControl_StatusCurvesUnavailable" xml:space="preserve">
+    <value>Bu modelde özel fan eğrisi kullanılamıyor</value>
+  </data>
+  <data name="FanControl_StatusApplyingCustomCurve" xml:space="preserve">
+    <value>Özel eğri uygulanıyor...</value>
+  </data>
+  <data name="FanControl_StatusCustomCurveFailedVerify" xml:space="preserve">
+    <value>Özel eğri doğrulamayı geçemedi</value>
+  </data>
+  <data name="FanControl_StatusCustomCurveApplyFailedFormat" xml:space="preserve">
+    <value>Özel eğri uygulanamadı: {0}</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedFormat" xml:space="preserve">
+    <value>{0} uygulandı</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedNoTelemetryFormat" xml:space="preserve">
+    <value>{0} uygulandı; doğrulama atlandı (RPM telemetrisi yok)</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedRecentFormat" xml:space="preserve">
+    <value>{0} uygulandı; yakın zamanda doğrulandı</value>
+  </data>
+  <data name="FanControl_StatusVerifyingFormat" xml:space="preserve">
+    <value>{0} doğrulanıyor ({1}°C -> {2})...</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedTimeoutFormat" xml:space="preserve">
+    <value>{0} uygulandı; doğrulama zaman aşımına uğradı</value>
+  </data>
+  <data name="FanControl_StatusVerifiedOneFormat" xml:space="preserve">
+    <value>{0} {1} değerinde doğrulandı ({2} RPM)</value>
+  </data>
+  <data name="FanControl_StatusVerifiedBothFormat" xml:space="preserve">
+    <value>{0} her iki fanda {1} değerinde doğrulandı</value>
+  </data>
+  <data name="FanControl_StatusVerifyPartialFormat" xml:space="preserve">
+    <value>{0} uygulandı; kısmi doğrulama ({1}/{2} fan geçti)</value>
+  </data>
+  <data name="FanControl_StatusVerifyNoChangeFormat" xml:space="preserve">
+    <value>{0} uygulandı; RPM değişimi doğrulanamadı</value>
+  </data>
+  <data name="FanControl_StatusVerifyWarningFormat" xml:space="preserve">
+    <value>{0} uygulandı; doğrulama uyarısı: {1}</value>
+  </data>
+  <data name="FanControl_ThermalGuardRaiseFormat" xml:space="preserve">
+    <value>%{0} (eğri %{1} istedi; termal koruma yükseltti)</value>
+  </data>
+  <data name="FanControl_StatusFixedUnavailable" xml:space="preserve">
+    <value>Bu modelde sabit fan hızı kullanılamıyor</value>
+  </data>
+  <data name="FanControl_DetailBackendFormat" xml:space="preserve">
+    <value>Arka uç: {0}. {1}</value>
+  </data>
+  <data name="FanControl_DetailProfileOnlyFormat" xml:space="preserve">
+    <value>Arka uç: {0}. Ürün yazılımı yalnızca profilleri destekler; özel eğriler ve sabit fan seviyeleri kullanılamaz. {1}</value>
+  </data>
+  <data name="FanControl_UnknownBackend" xml:space="preserve">
+    <value>bilinmeyen arka uç</value>
+  </data>
+  <data name="FanControl_Ready" xml:space="preserve">
+    <value>Hazır</value>
+  </data>
+  <data name="FanControl_InvalidCurveMessageFormat" xml:space="preserve">
+    <value>{0}&#10;&#10;Fan eğrisi uygulanmadı. Sorunları düzeltip tekrar deneyin.</value>
+  </data>
+  <data name="FanControl_InvalidCurveTitle" xml:space="preserve">
+    <value>Geçersiz fan eğrisi</value>
+  </data>
+  <data name="FanControl_WizardTitle" xml:space="preserve">
+    <value>Fan kalibrasyon sihirbazı</value>
+  </data>
+  <data name="FanControl_CalibrationUnavailableFormat" xml:space="preserve">
+    <value>Kalibrasyon kullanılamıyor: {0}</value>
+  </data>
+  <data name="FanControl_WizardOpenFailedFormat" xml:space="preserve">
+    <value>Kalibrasyon sihirbazı açılamadı: {0}</value>
+  </data>
+  <data name="FanControl_ImportPresetsTitle" xml:space="preserve">
+    <value>Fan ön ayarlarını içe aktar</value>
+  </data>
+  <data name="FanControl_ExportPresetsTitle" xml:space="preserve">
+    <value>Fan ön ayarlarını dışa aktar</value>
+  </data>
+  <data name="GameProfile_SelectExecutableTitle" xml:space="preserve">
+    <value>Oyun çalıştırılabilir dosyasını seç</value>
+  </data>
+  <data name="GameProfile_ImportDialogTitle" xml:space="preserve">
+    <value>Oyun profillerini içe aktar</value>
+  </data>
+  <data name="Nvidia_SelectVbiosTitle" xml:space="preserve">
+    <value>Bir VBIOS dökümü seçin</value>
+  </data>
+  <data name="Nvidia_VbiosFilter" xml:space="preserve">
+    <value>VBIOS dökümü (*.rom;*.bin)|*.rom;*.bin|Tüm dosyalar|*.*</value>
+  </data>
+  <data name="DiagnosticExport_SaveDialogTitle" xml:space="preserve">
+    <value>Tanılama dışa aktarımını kaydet</value>
+  </data>
 </root>

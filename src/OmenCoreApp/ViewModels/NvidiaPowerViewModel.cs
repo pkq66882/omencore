@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -41,7 +42,7 @@ namespace OmenCore.ViewModels
             ResolveVbiosCommand = new AsyncRelayCommand(_ => ResolveAsync(null), _ => Enabled && !_busy);
             ResolveVbiosFromFileCommand = new AsyncRelayCommand(_ =>
             {
-                var dlg = new Microsoft.Win32.OpenFileDialog { Title = "Select a VBIOS dump", Filter = "VBIOS dump (*.rom;*.bin)|*.rom;*.bin|All files|*.*" };
+                var dlg = new Microsoft.Win32.OpenFileDialog { Title = Strings.Nvidia_SelectVbiosTitle, Filter = Strings.Nvidia_VbiosFilter };
                 return dlg.ShowDialog() == true ? ResolveAsync(dlg.FileName) : Task.CompletedTask;
             }, _ => Enabled && !_busy);
             if (Enabled) _ = RefreshAsync();

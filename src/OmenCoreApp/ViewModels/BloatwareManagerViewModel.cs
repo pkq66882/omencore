@@ -42,7 +42,7 @@ namespace OmenCore.ViewModels
         private CancellationTokenSource? _bulkOperationCancellation;
         private string? _lastReportPath;
         private bool _isRemovalPreviewVisible;
-        private string _removalPreviewTitle = "Removal Preview";
+        private string _removalPreviewTitle = Strings.Bloatware_RemovalPreviewTitle;
         private string _removalPreviewSummary = "";
         private int _removalPreviewEstimatedSeconds;
 
@@ -874,12 +874,12 @@ namespace OmenCore.ViewModels
             var path = _service.ExportDryRunReport(AllApps);
             if (path == null)
             {
-                SetStatusFailed("Nothing to export - scan first or no installed candidates are available.");
+                SetStatusFailed(Strings.Bloatware_ExportNothingToScan);
                 return;
             }
 
             LastReportPath = path;
-            SetStatusDone($"Dry-run report exported: {path}");
+            SetStatusDone(string.Format(Strings.Bloatware_DryRunExportedFormat, path));
             try { Process.Start("explorer.exe", $"/select,\"{path}\""); }
             catch { /* non-fatal; file is still created */ }
         }
@@ -889,12 +889,12 @@ namespace OmenCore.ViewModels
             var path = _service.ExportRemovalLog(AllApps);
             if (path == null)
             {
-                SetStatusFailed("Nothing to export — no removal attempts recorded in this session.");
+                SetStatusFailed(Strings.Bloatware_ExportNoRemovalLog);
                 return;
             }
 
             LastReportPath = path;
-            SetStatusDone($"Log exported: {path}");
+            SetStatusDone(string.Format(Strings.Bloatware_LogExportedFormat, path));
             try { Process.Start("explorer.exe", $"/select,\"{path}\""); }
             catch { /* non-fatal; file is still created */ }
         }
@@ -912,7 +912,7 @@ namespace OmenCore.ViewModels
         {
             if (!HasLastReport || string.IsNullOrWhiteSpace(LastReportPath))
             {
-                SetStatusFailed("No report is available yet.");
+                SetStatusFailed(Strings.Bloatware_NoReport);
                 return;
             }
 
@@ -996,7 +996,7 @@ namespace OmenCore.ViewModels
                 .ToList();
             if (toRemove.Count == 0)
             {
-                SetStatusDone("No telemetry packages detected");
+                SetStatusDone(Strings.Bloatware_NoTelemetryPackages);
                 return;
             }
             BuildRemovalPreview("Telemetry Only Preset", toRemove);
@@ -1015,7 +1015,7 @@ namespace OmenCore.ViewModels
                 .ToList();
             if (toRemove.Count == 0)
             {
-                SetStatusDone("No conflicting OMEN packages detected");
+                SetStatusDone(Strings.Bloatware_NoConflictingPackages);
                 return;
             }
             BuildRemovalPreview("OMEN Conflict Reducer Preset", toRemove);
@@ -1028,7 +1028,7 @@ namespace OmenCore.ViewModels
                 .ToList();
             if (toRemove.Count == 0)
             {
-                SetStatusDone("No Windows consumer apps detected");
+                SetStatusDone(Strings.Bloatware_NoConsumerApps);
                 return;
             }
             BuildRemovalPreview("Windows Consumer Apps Preset", toRemove);
@@ -1048,7 +1048,7 @@ namespace OmenCore.ViewModels
                 .ToList();
             if (toRemove.Count == 0)
             {
-                SetStatusDone("No packages match the Full Standalone preset criteria");
+                SetStatusDone(Strings.Bloatware_NoFullStandaloneMatches);
                 return;
             }
             BuildRemovalPreview("Full Standalone Prep Preset", toRemove);

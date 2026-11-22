@@ -227,7 +227,7 @@ namespace OmenCore.ViewModels
             {
                 var dialog = new OpenFileDialog
                 {
-                    Title = "Select game executable",
+                    Title = Strings.GameProfile_SelectExecutableTitle,
                     Filter = "Executable Files (*.exe)|*.exe|All Files (*.*)|*.*",
                     Multiselect = true,
                     CheckFileExists = true

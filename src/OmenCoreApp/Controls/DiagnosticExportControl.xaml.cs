@@ -62,7 +62,7 @@ namespace OmenCore.Controls
         {
             var saveDialog = new SaveFileDialog
             {
-                Title = "Save Diagnostic Export",
+                Title = Strings.DiagnosticExport_SaveDialogTitle,
                 Filter = GetFileFilter(),
                 FileName = $"OmenCore_Diagnostics_{DateTime.Now:yyyyMMdd_HHmmss}",
                 DefaultExt = GetDefaultExtension()

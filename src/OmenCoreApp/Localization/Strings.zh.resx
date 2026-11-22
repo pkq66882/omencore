@@ -761,13 +761,13 @@
     <value>移除全部低风险项</value>
   </data>
   <data name="BloatwareManagerView_RemoveLowRisk" xml:space="preserve">
-    <value>移除低风险项</value>
+    <value>预览低风险移除</value>
   </data>
   <data name="BloatwareManagerView_ExportBloatwareDryRunReport" xml:space="preserve">
-    <value>导出预演报告</value>
+    <value>导出预装软件移除预检报告</value>
   </data>
   <data name="BloatwareManagerView_DryRun" xml:space="preserve">
-    <value>预演</value>
+    <value>导出报告</value>
   </data>
   <data name="BloatwareManagerView_CancelBulkOperation" xml:space="preserve">
     <value>取消批量操作</value>
@@ -2288,7 +2288,7 @@
     <value>将全部暂存的配置发送到键盘</value>
   </data>
   <data name="LightingView_Showing" xml:space="preserve">
-    <value>显示</value>
+    <value>显示此方案</value>
   </data>
   <data name="LightingView_LeaveTheKeyboardShowingThisOneAfterWriting" xml:space="preserve">
     <value>写入后让键盘保持显示这一项</value>
@@ -4334,7 +4334,7 @@
     <value>曲线</value>
   </data>
   <data name="FanControlViewModel_BadgeProfileOnly" xml:space="preserve">
-    <value>仅方案</value>
+    <value>仅厂商预设</value>
   </data>
   <data name="FanControlViewModel_CalibrateRecalibrate" xml:space="preserve">
     <value>重新校准</value>
@@ -4421,10 +4421,10 @@
     <value>不可用</value>
   </data>
   <data name="MainViewModel_CleanupDryDone" xml:space="preserve">
-    <value>预演完成</value>
+    <value>检查完成（未做任何更改）</value>
   </data>
   <data name="MainViewModel_CleanupDryRunning" xml:space="preserve">
-    <value>正在运行清理演练…</value>
+    <value>正在检查可清理项…</value>
   </data>
   <data name="MainViewModel_CleanupErrors" xml:space="preserve">
     <value>清理完成，但有错误</value>
@@ -8163,5 +8163,158 @@
   </data>
   <data name="BloatwareType_ScheduledTask" xml:space="preserve">
     <value>计划任务</value>
+  </data>
+  <data name="Bloatware_ExportNothingToScan" xml:space="preserve">
+    <value>没有可导出的内容——请先扫描，或当前没有已安装的候选项。</value>
+  </data>
+  <data name="Bloatware_ExportNoRemovalLog" xml:space="preserve">
+    <value>没有可导出的内容——本次会话没有移除记录。</value>
+  </data>
+  <data name="Bloatware_NoReport" xml:space="preserve">
+    <value>暂无可查看的报告。</value>
+  </data>
+  <data name="Bloatware_DryRunExportedFormat" xml:space="preserve">
+    <value>报告已导出：{0}</value>
+  </data>
+  <data name="Bloatware_LogExportedFormat" xml:space="preserve">
+    <value>日志已导出：{0}</value>
+  </data>
+  <data name="Bloatware_NoTelemetryPackages" xml:space="preserve">
+    <value>未检测到遥测软件包</value>
+  </data>
+  <data name="Bloatware_NoConflictingPackages" xml:space="preserve">
+    <value>未检测到冲突的 OMEN 软件包</value>
+  </data>
+  <data name="Bloatware_NoConsumerApps" xml:space="preserve">
+    <value>未检测到 Windows 消费类应用</value>
+  </data>
+  <data name="Bloatware_NoFullStandaloneMatches" xml:space="preserve">
+    <value>没有软件包符合“完全独立”预设条件</value>
+  </data>
+  <data name="Bloatware_DryRunTooltip" xml:space="preserve">
+    <value>生成移除前检查报告并打开所在文件夹；不会移除任何软件。</value>
+  </data>
+  <data name="Bloatware_LowRiskPreviewTooltip" xml:space="preserve">
+    <value>先打开移除预览，可逐项取消勾选；确认后才会移除。</value>
+  </data>
+  <data name="Bloatware_RemovalPreviewTitle" xml:space="preserve">
+    <value>移除预览</value>
+  </data>
+  <data name="FanControl_SourcePresetFormat" xml:space="preserve">
+    <value>预设“{0}”</value>
+  </data>
+  <data name="FanControl_SourceCustomCurve" xml:space="preserve">
+    <value>自定义曲线</value>
+  </data>
+  <data name="FanControl_StatusApplyingPresetFormat" xml:space="preserve">
+    <value>正在应用“{0}”…（切换中）</value>
+  </data>
+  <data name="FanControl_StatusPresetFailedVerifyFormat" xml:space="preserve">
+    <value>预设“{0}”验证未通过</value>
+  </data>
+  <data name="FanControl_StatusPresetAppliedFormat" xml:space="preserve">
+    <value>预设“{0}”已应用</value>
+  </data>
+  <data name="FanControl_StatusVerificationInProgress" xml:space="preserve">
+    <value>验证已在进行中…</value>
+  </data>
+  <data name="FanControl_StatusPresetApplyFailedFormat" xml:space="preserve">
+    <value>预设“{0}”应用失败：{1}</value>
+  </data>
+  <data name="FanControl_StatusCurvesUnavailable" xml:space="preserve">
+    <value>此机型不支持自定义风扇曲线</value>
+  </data>
+  <data name="FanControl_StatusApplyingCustomCurve" xml:space="preserve">
+    <value>正在应用自定义曲线…</value>
+  </data>
+  <data name="FanControl_StatusCustomCurveFailedVerify" xml:space="preserve">
+    <value>自定义曲线验证未通过</value>
+  </data>
+  <data name="FanControl_StatusCustomCurveApplyFailedFormat" xml:space="preserve">
+    <value>自定义曲线应用失败：{0}</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedFormat" xml:space="preserve">
+    <value>{0} 已应用</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedNoTelemetryFormat" xml:space="preserve">
+    <value>{0} 已应用；已跳过验证（无转速遥测）</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedRecentFormat" xml:space="preserve">
+    <value>{0} 已应用；近期已通过验证</value>
+  </data>
+  <data name="FanControl_StatusVerifyingFormat" xml:space="preserve">
+    <value>正在验证 {0}（{1}°C → {2}）…</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedTimeoutFormat" xml:space="preserve">
+    <value>{0} 已应用；验证超时</value>
+  </data>
+  <data name="FanControl_StatusVerifiedOneFormat" xml:space="preserve">
+    <value>{0} 已在 {1} 验证通过（{2} RPM）</value>
+  </data>
+  <data name="FanControl_StatusVerifiedBothFormat" xml:space="preserve">
+    <value>{0} 已在双风扇上于 {1} 验证通过</value>
+  </data>
+  <data name="FanControl_StatusVerifyPartialFormat" xml:space="preserve">
+    <value>{0} 已应用；验证部分通过（{1}/{2} 风扇）</value>
+  </data>
+  <data name="FanControl_StatusVerifyNoChangeFormat" xml:space="preserve">
+    <value>{0} 已应用；验证未确认转速变化</value>
+  </data>
+  <data name="FanControl_StatusVerifyWarningFormat" xml:space="preserve">
+    <value>{0} 已应用；验证警告：{1}</value>
+  </data>
+  <data name="FanControl_ThermalGuardRaiseFormat" xml:space="preserve">
+    <value>{0}%（曲线请求 {1}%，已由温度保护上调）</value>
+  </data>
+  <data name="FanControl_StatusFixedUnavailable" xml:space="preserve">
+    <value>此机型不支持固定风扇转速</value>
+  </data>
+  <data name="FanControl_DetailBackendFormat" xml:space="preserve">
+    <value>后端：{0}。{1}</value>
+  </data>
+  <data name="FanControl_DetailProfileOnlyFormat" xml:space="preserve">
+    <value>后端：{0}。固件仅支持厂商预设；自定义曲线与固定转速不可用。{1}</value>
+  </data>
+  <data name="FanControl_UnknownBackend" xml:space="preserve">
+    <value>未知后端</value>
+  </data>
+  <data name="FanControl_Ready" xml:space="preserve">
+    <value>就绪</value>
+  </data>
+  <data name="FanControl_InvalidCurveMessageFormat" xml:space="preserve">
+    <value>{0}&#10;&#10;风扇曲线未应用，请修正问题后重试。</value>
+  </data>
+  <data name="FanControl_InvalidCurveTitle" xml:space="preserve">
+    <value>风扇曲线无效</value>
+  </data>
+  <data name="FanControl_WizardTitle" xml:space="preserve">
+    <value>风扇校准向导</value>
+  </data>
+  <data name="FanControl_CalibrationUnavailableFormat" xml:space="preserve">
+    <value>无法进行校准：{0}</value>
+  </data>
+  <data name="FanControl_WizardOpenFailedFormat" xml:space="preserve">
+    <value>打开校准向导失败：{0}</value>
+  </data>
+  <data name="FanControl_ImportPresetsTitle" xml:space="preserve">
+    <value>导入风扇预设</value>
+  </data>
+  <data name="FanControl_ExportPresetsTitle" xml:space="preserve">
+    <value>导出风扇预设</value>
+  </data>
+  <data name="GameProfile_SelectExecutableTitle" xml:space="preserve">
+    <value>选择游戏可执行文件</value>
+  </data>
+  <data name="GameProfile_ImportDialogTitle" xml:space="preserve">
+    <value>导入游戏方案</value>
+  </data>
+  <data name="Nvidia_SelectVbiosTitle" xml:space="preserve">
+    <value>选择 VBIOS 转储文件</value>
+  </data>
+  <data name="Nvidia_VbiosFilter" xml:space="preserve">
+    <value>VBIOS 转储 (*.rom;*.bin)|*.rom;*.bin|所有文件|*.*</value>
+  </data>
+  <data name="DiagnosticExport_SaveDialogTitle" xml:space="preserve">
+    <value>保存诊断导出</value>
   </data>
 </root>

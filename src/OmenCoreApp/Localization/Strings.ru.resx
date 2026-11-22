@@ -8164,4 +8164,157 @@
   <data name="BloatwareType_ScheduledTask" xml:space="preserve">
     <value>Запланированная задача</value>
   </data>
+  <data name="Bloatware_ExportNothingToScan" xml:space="preserve">
+    <value>Нечего экспортировать — сначала выполните сканирование или нет установленных кандидатов.</value>
+  </data>
+  <data name="Bloatware_ExportNoRemovalLog" xml:space="preserve">
+    <value>Нечего экспортировать — в этом сеансе нет попыток удаления.</value>
+  </data>
+  <data name="Bloatware_NoReport" xml:space="preserve">
+    <value>Отчёт пока недоступен.</value>
+  </data>
+  <data name="Bloatware_DryRunExportedFormat" xml:space="preserve">
+    <value>Отчёт пробного запуска экспортирован: {0}</value>
+  </data>
+  <data name="Bloatware_LogExportedFormat" xml:space="preserve">
+    <value>Журнал экспортирован: {0}</value>
+  </data>
+  <data name="Bloatware_NoTelemetryPackages" xml:space="preserve">
+    <value>Пакеты телеметрии не обнаружены</value>
+  </data>
+  <data name="Bloatware_NoConflictingPackages" xml:space="preserve">
+    <value>Конфликтующие пакеты OMEN не обнаружены</value>
+  </data>
+  <data name="Bloatware_NoConsumerApps" xml:space="preserve">
+    <value>Потребительские приложения Windows не обнаружены</value>
+  </data>
+  <data name="Bloatware_NoFullStandaloneMatches" xml:space="preserve">
+    <value>Ни один пакет не соответствует критериям пресета «Полностью автономный»</value>
+  </data>
+  <data name="Bloatware_DryRunTooltip" xml:space="preserve">
+    <value>Экспортирует отчёт перед удалением и открывает папку. Ничего не удаляется.</value>
+  </data>
+  <data name="Bloatware_LowRiskPreviewTooltip" xml:space="preserve">
+    <value>Открывает предпросмотр удаления. Снимите отметки, чтобы сохранить элементы; удаление только после подтверждения.</value>
+  </data>
+  <data name="Bloatware_RemovalPreviewTitle" xml:space="preserve">
+    <value>Предпросмотр удаления</value>
+  </data>
+  <data name="FanControl_SourcePresetFormat" xml:space="preserve">
+    <value>Пресет «{0}»</value>
+  </data>
+  <data name="FanControl_SourceCustomCurve" xml:space="preserve">
+    <value>Пользовательская кривая</value>
+  </data>
+  <data name="FanControl_StatusApplyingPresetFormat" xml:space="preserve">
+    <value>Применение «{0}»… (переход)</value>
+  </data>
+  <data name="FanControl_StatusPresetFailedVerifyFormat" xml:space="preserve">
+    <value>Пресет «{0}» не прошёл проверку</value>
+  </data>
+  <data name="FanControl_StatusPresetAppliedFormat" xml:space="preserve">
+    <value>Пресет «{0}» применён</value>
+  </data>
+  <data name="FanControl_StatusVerificationInProgress" xml:space="preserve">
+    <value>Проверка уже выполняется...</value>
+  </data>
+  <data name="FanControl_StatusPresetApplyFailedFormat" xml:space="preserve">
+    <value>Не удалось применить пресет «{0}»: {1}</value>
+  </data>
+  <data name="FanControl_StatusCurvesUnavailable" xml:space="preserve">
+    <value>Пользовательские кривые недоступны на этой модели</value>
+  </data>
+  <data name="FanControl_StatusApplyingCustomCurve" xml:space="preserve">
+    <value>Применение пользовательской кривой...</value>
+  </data>
+  <data name="FanControl_StatusCustomCurveFailedVerify" xml:space="preserve">
+    <value>Пользовательская кривая не прошла проверку</value>
+  </data>
+  <data name="FanControl_StatusCustomCurveApplyFailedFormat" xml:space="preserve">
+    <value>Не удалось применить пользовательскую кривую: {0}</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedFormat" xml:space="preserve">
+    <value>{0} применено</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedNoTelemetryFormat" xml:space="preserve">
+    <value>{0} применено; проверка пропущена (нет телеметрии RPM)</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedRecentFormat" xml:space="preserve">
+    <value>{0} применено; недавно проверено</value>
+  </data>
+  <data name="FanControl_StatusVerifyingFormat" xml:space="preserve">
+    <value>Проверка {0} при {1}C -> {2}...</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedTimeoutFormat" xml:space="preserve">
+    <value>{0} применено; время проверки истекло</value>
+  </data>
+  <data name="FanControl_StatusVerifiedOneFormat" xml:space="preserve">
+    <value>{0} проверено при {1} ({2} RPM)</value>
+  </data>
+  <data name="FanControl_StatusVerifiedBothFormat" xml:space="preserve">
+    <value>{0} проверено на обоих вентиляторах при {1}</value>
+  </data>
+  <data name="FanControl_StatusVerifyPartialFormat" xml:space="preserve">
+    <value>{0} применено; частичная проверка ({1}/{2} вентиляторов)</value>
+  </data>
+  <data name="FanControl_StatusVerifyNoChangeFormat" xml:space="preserve">
+    <value>{0} применено; изменение RPM не подтверждено</value>
+  </data>
+  <data name="FanControl_StatusVerifyWarningFormat" xml:space="preserve">
+    <value>{0} применено; предупреждение проверки: {1}</value>
+  </data>
+  <data name="FanControl_ThermalGuardRaiseFormat" xml:space="preserve">
+    <value>{0}% (кривая запросила {1}%; повышенo тепловой защитой)</value>
+  </data>
+  <data name="FanControl_StatusFixedUnavailable" xml:space="preserve">
+    <value>Фиксированная скорость недоступна на этой модели</value>
+  </data>
+  <data name="FanControl_DetailBackendFormat" xml:space="preserve">
+    <value>Бэкенд: {0}. {1}</value>
+  </data>
+  <data name="FanControl_DetailProfileOnlyFormat" xml:space="preserve">
+    <value>Бэкенд: {0}. Прошивка поддерживает только профили; пользовательские кривые и фиксированные уровни недоступны. {1}</value>
+  </data>
+  <data name="FanControl_UnknownBackend" xml:space="preserve">
+    <value>неизвестный бэкенд</value>
+  </data>
+  <data name="FanControl_Ready" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="FanControl_InvalidCurveMessageFormat" xml:space="preserve">
+    <value>{0}&#10;&#10;Кривая не применена. Исправьте проблемы и повторите.</value>
+  </data>
+  <data name="FanControl_InvalidCurveTitle" xml:space="preserve">
+    <value>Неверная кривая вентиляторов</value>
+  </data>
+  <data name="FanControl_WizardTitle" xml:space="preserve">
+    <value>Мастер калибровки вентиляторов</value>
+  </data>
+  <data name="FanControl_CalibrationUnavailableFormat" xml:space="preserve">
+    <value>Калибровка недоступна: {0}</value>
+  </data>
+  <data name="FanControl_WizardOpenFailedFormat" xml:space="preserve">
+    <value>Не удалось открыть мастер калибровки: {0}</value>
+  </data>
+  <data name="FanControl_ImportPresetsTitle" xml:space="preserve">
+    <value>Импорт пресетов вентиляторов</value>
+  </data>
+  <data name="FanControl_ExportPresetsTitle" xml:space="preserve">
+    <value>Экспорт пресетов вентиляторов</value>
+  </data>
+  <data name="GameProfile_SelectExecutableTitle" xml:space="preserve">
+    <value>Выберите исполняемый файл игры</value>
+  </data>
+  <data name="GameProfile_ImportDialogTitle" xml:space="preserve">
+    <value>Импорт игровых профилей</value>
+  </data>
+  <data name="Nvidia_SelectVbiosTitle" xml:space="preserve">
+    <value>Выберите дамп VBIOS</value>
+  </data>
+  <data name="Nvidia_VbiosFilter" xml:space="preserve">
+    <value>Дамп VBIOS (*.rom;*.bin)|*.rom;*.bin|Все файлы|*.*</value>
+  </data>
+  <data name="DiagnosticExport_SaveDialogTitle" xml:space="preserve">
+    <value>Сохранить экспорт диагностики</value>
+  </data>
 </root>

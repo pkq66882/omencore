@@ -3061,5 +3061,59 @@ namespace OmenCore.Localization
     public static string QuickPopup_MonitoringTelemetryFormat => Get(nameof(QuickPopup_MonitoringTelemetryFormat));
     public static string QuickPopup_ToggleRefreshRateFormat => Get(nameof(QuickPopup_ToggleRefreshRateFormat));
 
+    public static string Bloatware_DryRunExportedFormat => Get(nameof(Bloatware_DryRunExportedFormat));
+    public static string Bloatware_ExportNoRemovalLog => Get(nameof(Bloatware_ExportNoRemovalLog));
+    public static string Bloatware_ExportNothingToScan => Get(nameof(Bloatware_ExportNothingToScan));
+    public static string Bloatware_LogExportedFormat => Get(nameof(Bloatware_LogExportedFormat));
+    public static string Bloatware_NoConflictingPackages => Get(nameof(Bloatware_NoConflictingPackages));
+    public static string Bloatware_NoConsumerApps => Get(nameof(Bloatware_NoConsumerApps));
+    public static string Bloatware_NoFullStandaloneMatches => Get(nameof(Bloatware_NoFullStandaloneMatches));
+    public static string Bloatware_NoReport => Get(nameof(Bloatware_NoReport));
+    public static string Bloatware_NoTelemetryPackages => Get(nameof(Bloatware_NoTelemetryPackages));
+
+    public static string Bloatware_DryRunTooltip => Get(nameof(Bloatware_DryRunTooltip));
+
+    public static string Bloatware_LowRiskPreviewTooltip => Get(nameof(Bloatware_LowRiskPreviewTooltip));
+    public static string Bloatware_RemovalPreviewTitle => Get(nameof(Bloatware_RemovalPreviewTitle));
+    public static string DiagnosticExport_SaveDialogTitle => Get(nameof(DiagnosticExport_SaveDialogTitle));
+    public static string FanControl_CalibrationUnavailableFormat => Get(nameof(FanControl_CalibrationUnavailableFormat));
+    public static string FanControl_DetailBackendFormat => Get(nameof(FanControl_DetailBackendFormat));
+    public static string FanControl_DetailProfileOnlyFormat => Get(nameof(FanControl_DetailProfileOnlyFormat));
+    public static string FanControl_ExportPresetsTitle => Get(nameof(FanControl_ExportPresetsTitle));
+    public static string FanControl_ImportPresetsTitle => Get(nameof(FanControl_ImportPresetsTitle));
+    public static string FanControl_InvalidCurveMessageFormat => Get(nameof(FanControl_InvalidCurveMessageFormat));
+    public static string FanControl_InvalidCurveTitle => Get(nameof(FanControl_InvalidCurveTitle));
+    public static string FanControl_Ready => Get(nameof(FanControl_Ready));
+    public static string FanControl_SourceCustomCurve => Get(nameof(FanControl_SourceCustomCurve));
+    public static string FanControl_SourcePresetFormat => Get(nameof(FanControl_SourcePresetFormat));
+    public static string FanControl_StatusApplyingCustomCurve => Get(nameof(FanControl_StatusApplyingCustomCurve));
+    public static string FanControl_StatusApplyingPresetFormat => Get(nameof(FanControl_StatusApplyingPresetFormat));
+    public static string FanControl_StatusCurvesUnavailable => Get(nameof(FanControl_StatusCurvesUnavailable));
+    public static string FanControl_StatusCustomCurveApplyFailedFormat => Get(nameof(FanControl_StatusCustomCurveApplyFailedFormat));
+    public static string FanControl_StatusCustomCurveFailedVerify => Get(nameof(FanControl_StatusCustomCurveFailedVerify));
+    public static string FanControl_StatusFixedUnavailable => Get(nameof(FanControl_StatusFixedUnavailable));
+    public static string FanControl_StatusPresetAppliedFormat => Get(nameof(FanControl_StatusPresetAppliedFormat));
+    public static string FanControl_StatusPresetApplyFailedFormat => Get(nameof(FanControl_StatusPresetApplyFailedFormat));
+    public static string FanControl_StatusPresetFailedVerifyFormat => Get(nameof(FanControl_StatusPresetFailedVerifyFormat));
+    public static string FanControl_StatusSourceAppliedFormat => Get(nameof(FanControl_StatusSourceAppliedFormat));
+    public static string FanControl_StatusSourceAppliedNoTelemetryFormat => Get(nameof(FanControl_StatusSourceAppliedNoTelemetryFormat));
+    public static string FanControl_StatusSourceAppliedRecentFormat => Get(nameof(FanControl_StatusSourceAppliedRecentFormat));
+    public static string FanControl_StatusSourceAppliedTimeoutFormat => Get(nameof(FanControl_StatusSourceAppliedTimeoutFormat));
+    public static string FanControl_StatusVerificationInProgress => Get(nameof(FanControl_StatusVerificationInProgress));
+    public static string FanControl_StatusVerifiedBothFormat => Get(nameof(FanControl_StatusVerifiedBothFormat));
+    public static string FanControl_StatusVerifiedOneFormat => Get(nameof(FanControl_StatusVerifiedOneFormat));
+    public static string FanControl_StatusVerifyingFormat => Get(nameof(FanControl_StatusVerifyingFormat));
+    public static string FanControl_StatusVerifyNoChangeFormat => Get(nameof(FanControl_StatusVerifyNoChangeFormat));
+    public static string FanControl_StatusVerifyPartialFormat => Get(nameof(FanControl_StatusVerifyPartialFormat));
+    public static string FanControl_StatusVerifyWarningFormat => Get(nameof(FanControl_StatusVerifyWarningFormat));
+    public static string FanControl_ThermalGuardRaiseFormat => Get(nameof(FanControl_ThermalGuardRaiseFormat));
+    public static string FanControl_UnknownBackend => Get(nameof(FanControl_UnknownBackend));
+    public static string FanControl_WizardOpenFailedFormat => Get(nameof(FanControl_WizardOpenFailedFormat));
+    public static string FanControl_WizardTitle => Get(nameof(FanControl_WizardTitle));
+    public static string GameProfile_ImportDialogTitle => Get(nameof(GameProfile_ImportDialogTitle));
+    public static string GameProfile_SelectExecutableTitle => Get(nameof(GameProfile_SelectExecutableTitle));
+    public static string Nvidia_SelectVbiosTitle => Get(nameof(Nvidia_SelectVbiosTitle));
+    public static string Nvidia_VbiosFilter => Get(nameof(Nvidia_VbiosFilter));
+
     }
 }

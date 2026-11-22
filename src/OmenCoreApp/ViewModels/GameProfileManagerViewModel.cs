@@ -253,7 +253,7 @@ namespace OmenCore.ViewModels
                 var dialog = new OpenFileDialog
                 {
                     Filter = "JSON Files (*.json)|*.json|All Files (*.*)|*.*",
-                    Title = "Import Game Profiles"
+                    Title = Strings.GameProfile_ImportDialogTitle
                 };
 
                 if (dialog.ShowDialog() == true)
@@ -303,7 +303,7 @@ namespace OmenCore.ViewModels
             var dialog = new OpenFileDialog
             {
                 Filter = "Executable Files (*.exe)|*.exe|All Files (*.*)|*.*",
-                Title = "Select Game Executable"
+                Title = Strings.GameProfile_SelectExecutableTitle
             };
 
             if (dialog.ShowDialog() == true)

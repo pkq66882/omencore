@@ -89,6 +89,7 @@
                             Background="#2E7D32"
                             Margin="0,0,8,0"
                             Padding="10,6"
+                            ToolTip="{x:Static loc:Strings.Bloatware_LowRiskPreviewTooltip}"
                             AutomationProperties.Name="{x:Static loc:Strings.BloatwareManagerView_RemoveAllLowRiskItems}">
                         <StackPanel Orientation="Horizontal">
                             <Path Data="{StaticResource IconTrash}" Width="12" Height="12" Fill="White" Stretch="Uniform" Margin="0,0,4,0"/>
@@ -99,6 +100,7 @@
                             Style="{StaticResource SecondaryButton}"
                             Margin="0,0,8,0"
                             Padding="10,6"
+                            ToolTip="{x:Static loc:Strings.Bloatware_DryRunTooltip}"
                             AutomationProperties.Name="{x:Static loc:Strings.BloatwareManagerView_ExportBloatwareDryRunReport}">
                         <StackPanel Orientation="Horizontal">
                             <Path Data="{StaticResource IconExport}" Width="12" Height="12" Fill="{StaticResource TextSecondaryBrush}" Stretch="Uniform" Margin="0,0,4,0"/>

@@ -8168,4 +8168,157 @@
   <data name="BloatwareType_ScheduledTask" xml:space="preserve">
     <value>Scheduled task</value>
   </data>
+  <data name="Bloatware_ExportNothingToScan" xml:space="preserve">
+    <value>Nothing to export - scan first or no installed candidates are available.</value>
+  </data>
+  <data name="Bloatware_ExportNoRemovalLog" xml:space="preserve">
+    <value>Nothing to export — no removal attempts recorded in this session.</value>
+  </data>
+  <data name="Bloatware_NoReport" xml:space="preserve">
+    <value>No report is available yet.</value>
+  </data>
+  <data name="Bloatware_DryRunExportedFormat" xml:space="preserve">
+    <value>Dry-run report exported: {0}</value>
+  </data>
+  <data name="Bloatware_LogExportedFormat" xml:space="preserve">
+    <value>Log exported: {0}</value>
+  </data>
+  <data name="Bloatware_NoTelemetryPackages" xml:space="preserve">
+    <value>No telemetry packages detected</value>
+  </data>
+  <data name="Bloatware_NoConflictingPackages" xml:space="preserve">
+    <value>No conflicting OMEN packages detected</value>
+  </data>
+  <data name="Bloatware_NoConsumerApps" xml:space="preserve">
+    <value>No Windows consumer apps detected</value>
+  </data>
+  <data name="Bloatware_NoFullStandaloneMatches" xml:space="preserve">
+    <value>No packages match the Full Standalone preset criteria</value>
+  </data>
+  <data name="Bloatware_DryRunTooltip" xml:space="preserve">
+    <value>Exports a pre-removal report and opens its folder. Nothing is removed.</value>
+  </data>
+  <data name="Bloatware_LowRiskPreviewTooltip" xml:space="preserve">
+    <value>Opens a removal preview. Deselect any items to keep them; removal only happens after you confirm.</value>
+  </data>
+  <data name="Bloatware_RemovalPreviewTitle" xml:space="preserve">
+    <value>Removal Preview</value>
+  </data>
+  <data name="FanControl_SourcePresetFormat" xml:space="preserve">
+    <value>Preset '{0}'</value>
+  </data>
+  <data name="FanControl_SourceCustomCurve" xml:space="preserve">
+    <value>Custom curve</value>
+  </data>
+  <data name="FanControl_StatusApplyingPresetFormat" xml:space="preserve">
+    <value>Applying '{0}'… (transitioning)</value>
+  </data>
+  <data name="FanControl_StatusPresetFailedVerifyFormat" xml:space="preserve">
+    <value>Preset '{0}' failed verification</value>
+  </data>
+  <data name="FanControl_StatusPresetAppliedFormat" xml:space="preserve">
+    <value>Preset '{0}' applied</value>
+  </data>
+  <data name="FanControl_StatusVerificationInProgress" xml:space="preserve">
+    <value>Verification already in progress...</value>
+  </data>
+  <data name="FanControl_StatusPresetApplyFailedFormat" xml:space="preserve">
+    <value>Preset '{0}' apply failed: {1}</value>
+  </data>
+  <data name="FanControl_StatusCurvesUnavailable" xml:space="preserve">
+    <value>Custom curves unavailable on this model</value>
+  </data>
+  <data name="FanControl_StatusApplyingCustomCurve" xml:space="preserve">
+    <value>Applying custom curve...</value>
+  </data>
+  <data name="FanControl_StatusCustomCurveFailedVerify" xml:space="preserve">
+    <value>Custom curve failed verification</value>
+  </data>
+  <data name="FanControl_StatusCustomCurveApplyFailedFormat" xml:space="preserve">
+    <value>Custom curve apply failed: {0}</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedFormat" xml:space="preserve">
+    <value>{0} applied</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedNoTelemetryFormat" xml:space="preserve">
+    <value>{0} applied; verification skipped (no RPM telemetry)</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedRecentFormat" xml:space="preserve">
+    <value>{0} applied; verification recently checked</value>
+  </data>
+  <data name="FanControl_StatusVerifyingFormat" xml:space="preserve">
+    <value>Verifying {0} at {1}C -> {2}...</value>
+  </data>
+  <data name="FanControl_StatusSourceAppliedTimeoutFormat" xml:space="preserve">
+    <value>{0} applied; verification timed out</value>
+  </data>
+  <data name="FanControl_StatusVerifiedOneFormat" xml:space="preserve">
+    <value>{0} verified at {1} ({2} RPM)</value>
+  </data>
+  <data name="FanControl_StatusVerifiedBothFormat" xml:space="preserve">
+    <value>{0} verified on both fans at {1}</value>
+  </data>
+  <data name="FanControl_StatusVerifyPartialFormat" xml:space="preserve">
+    <value>{0} applied; verification partial ({1}/{2} fans passed)</value>
+  </data>
+  <data name="FanControl_StatusVerifyNoChangeFormat" xml:space="preserve">
+    <value>{0} applied; verification did not confirm RPM change</value>
+  </data>
+  <data name="FanControl_StatusVerifyWarningFormat" xml:space="preserve">
+    <value>{0} applied; verification warning: {1}</value>
+  </data>
+  <data name="FanControl_ThermalGuardRaiseFormat" xml:space="preserve">
+    <value>{0}% (curve requested {1}%; thermal guard raised it)</value>
+  </data>
+  <data name="FanControl_StatusFixedUnavailable" xml:space="preserve">
+    <value>Fixed fan speed unavailable on this model</value>
+  </data>
+  <data name="FanControl_DetailBackendFormat" xml:space="preserve">
+    <value>Backend: {0}. {1}</value>
+  </data>
+  <data name="FanControl_DetailProfileOnlyFormat" xml:space="preserve">
+    <value>Backend: {0}. Profile-only firmware control; custom curves and fixed fan levels are unavailable. {1}</value>
+  </data>
+  <data name="FanControl_UnknownBackend" xml:space="preserve">
+    <value>unknown backend</value>
+  </data>
+  <data name="FanControl_Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="FanControl_InvalidCurveMessageFormat" xml:space="preserve">
+    <value>{0}&#10;&#10;The fan curve was not applied. Please fix the issues and try again.</value>
+  </data>
+  <data name="FanControl_InvalidCurveTitle" xml:space="preserve">
+    <value>Invalid Fan Curve</value>
+  </data>
+  <data name="FanControl_WizardTitle" xml:space="preserve">
+    <value>Fan Calibration Wizard</value>
+  </data>
+  <data name="FanControl_CalibrationUnavailableFormat" xml:space="preserve">
+    <value>Calibration is unavailable: {0}</value>
+  </data>
+  <data name="FanControl_WizardOpenFailedFormat" xml:space="preserve">
+    <value>Failed to open calibration wizard: {0}</value>
+  </data>
+  <data name="FanControl_ImportPresetsTitle" xml:space="preserve">
+    <value>Import Fan Presets</value>
+  </data>
+  <data name="FanControl_ExportPresetsTitle" xml:space="preserve">
+    <value>Export Fan Presets</value>
+  </data>
+  <data name="GameProfile_SelectExecutableTitle" xml:space="preserve">
+    <value>Select Game Executable</value>
+  </data>
+  <data name="GameProfile_ImportDialogTitle" xml:space="preserve">
+    <value>Import Game Profiles</value>
+  </data>
+  <data name="Nvidia_SelectVbiosTitle" xml:space="preserve">
+    <value>Select a VBIOS dump</value>
+  </data>
+  <data name="Nvidia_VbiosFilter" xml:space="preserve">
+    <value>VBIOS dump (*.rom;*.bin)|*.rom;*.bin|All files|*.*</value>
+  </data>
+  <data name="DiagnosticExport_SaveDialogTitle" xml:space="preserve">
+    <value>Save Diagnostic Export</value>
+  </data>
 </root>
