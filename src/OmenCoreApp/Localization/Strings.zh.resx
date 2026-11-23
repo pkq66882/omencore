@@ -746,7 +746,7 @@
     <value>清理不需要的预装软件，释放系统资源、减少后台干扰。低风险项目可安全移除。</value>
   </data>
   <data name="BloatwareManagerView_Detected" xml:space="preserve">
-    <value>已检测</value>
+    <value>检测到</value>
   </data>
   <data name="BloatwareManagerView_Removed" xml:space="preserve">
     <value>已移除</value>
@@ -968,7 +968,7 @@
     <value>实时图表已禁用，以最小化监控开销。</value>
   </data>
   <data name="DashboardView_HardwareSummaryInformationIsStillAvailable" xml:space="preserve">
-    <value>硬件概要信息在上方仍可用。</value>
+    <value>上方的硬件概要信息仍可查看。</value>
   </data>
   <data name="DiagnosticsView_SystemDiagnostics" xml:space="preserve">
     <value>系统诊断</value>
@@ -1268,10 +1268,10 @@
     <value>直接固定风扇档位预设</value>
   </data>
   <data name="FanControlView_HighestNonMaxCoolingCurveReserves100FanDut" xml:space="preserve">
-    <value>在非“最大”档里散热最强的曲线；为更热的场景保留 100% 风扇占空比。需要立即全速，请选“最大”。</value>
+    <value>在非“最大”档里散热最强的曲线；为更热的场景保留 100% 风扇占空比。如需立即全速，请选“最大”。</value>
   </data>
   <data name="FanControlView_ExtremeFanPresetHighestNonMaxCoolingCurve" xml:space="preserve">
-    <value>极限风扇预设：非 Max 下最高散热曲线</value>
+    <value>极限风扇预设：非“最大”档散热最强的曲线</value>
   </data>
   <data name="FanControlView_Extreme" xml:space="preserve">
     <value>极限</value>
@@ -1970,7 +1970,7 @@
     <value>音频律动灯效</value>
   </data>
   <data name="LightingView_PulsesWithSystemAudioOutputViaWasapiLoopba" xml:space="preserve">
-    <value>通过 WASAPI 环回随系统音频输出脉动</value>
+    <value>随系统音频输出律动（WASAPI 环回采集）</value>
   </data>
   <data name="LightingView_AudioReactiveVisualizationMode" xml:space="preserve">
     <value>音频律动可视化模式</value>
@@ -2267,7 +2267,7 @@
     <value>应用灯效</value>
   </data>
   <data name="LightingView_WhatSOnItNow" xml:space="preserve">
-    <value>当前内容是什么？</value>
+    <value>读取当前效果</value>
   </data>
   <data name="LightingView_Fn1Fn2Cycle" xml:space="preserve">
     <value>Fn+1 / Fn+2 循环</value>
@@ -2747,7 +2747,7 @@
     <value>风扇与性能模式已解耦</value>
   </data>
   <data name="QuickPopupWindow_QuickProfile" xml:space="preserve">
-    <value>快速配置</value>
+    <value>快速方案</value>
   </data>
   <data name="QuickPopupWindow_Perform" xml:space="preserve">
     <value>狂暴</value>
@@ -2789,7 +2789,7 @@
     <value>系统状态</value>
   </data>
   <data name="SettingsView_TheMethodUsedToControlFansOnYourSystem" xml:space="preserve">
-    <value>你的系统上用于控制风扇的方法</value>
+    <value>当前系统使用的风扇控制方式</value>
   </data>
   <data name="SettingsView_SecureBoot" xml:space="preserve">
     <value>Secure Boot</value>
@@ -2813,7 +2813,7 @@
     <value>唤醒恢复时间线</value>
   </data>
   <data name="SettingsView_ModelIdentityResolution" xml:space="preserve">
-    <value>机型识别解析</value>
+    <value>机型识别详情</value>
   </data>
   <data name="SettingsView_ResolvedModel" xml:space="preserve">
     <value>解析出的机型</value>
@@ -4136,7 +4136,7 @@
     <value>TCC 偏移</value>
   </data>
   <data name="TuningView_CReduction" xml:space="preserve">
-    <value>°C 降低</value>
+    <value>°C 降幅</value>
   </data>
   <data name="TuningView_Default100CTjmax" xml:space="preserve">
     <value>= 默认（100°C Tjmax）•</value>
@@ -4481,10 +4481,10 @@
     <value>已启用</value>
   </data>
   <data name="TrayIcon_KeepAboveOff" xml:space="preserve">
-    <value>让 OmenCore 保持在其他窗口之上（关）</value>
+    <value>关闭后不再置顶，其他窗口可以覆盖 OmenCore。</value>
   </data>
   <data name="TrayIcon_KeepAboveOn" xml:space="preserve">
-    <value>让 OmenCore 保持在其他窗口之上（开）</value>
+    <value>开启后 OmenCore 始终显示在其他窗口之上。</value>
   </data>
   <data name="TrayIcon_Linked" xml:space="preserve">
     <value>已联动</value>
@@ -4493,7 +4493,7 @@
     <value>使用电池</value>
   </data>
   <data name="TrayIcon_StayOnTopOff" xml:space="preserve">
-    <value>窗口置顶</value>
+    <value>窗口置顶（关）</value>
   </data>
   <data name="TrayIcon_StayOnTopOn" xml:space="preserve">
     <value>窗口置顶（开）</value>
@@ -4766,7 +4766,7 @@
     <value>正在扫描预装软件</value>
   </data>
   <data name="DashboardViewModel_Active" xml:space="preserve">
-    <value>活动</value>
+    <value>活跃</value>
   </data>
   <data name="DashboardViewModel_BatteryTelemetryUnavailable" xml:space="preserve">
     <value>电池遥测不可用</value>
@@ -5051,7 +5051,7 @@
     <value>Logitech G HUB 未配置</value>
   </data>
   <data name="SystemControlViewModel_ConflictDetected" xml:space="preserve">
-    <value>已检测到</value>
+    <value>检测到</value>
   </data>
   <data name="SystemControlViewModel_ConflictNone" xml:space="preserve">
     <value>无</value>
@@ -5237,10 +5237,10 @@
     <value>✗ 按风扇档位估算</value>
   </data>
   <data name="DashboardViewModel_SourceWmiSelfSustaining" xml:space="preserve">
-    <value>WMI BIOS（自维持）</value>
+    <value>WMI BIOS（自主运行）</value>
   </data>
   <data name="DashboardViewModel_SourceWmiNvapiSelfSustaining" xml:space="preserve">
-    <value>WMI BIOS + NVAPI（自维持）</value>
+    <value>WMI BIOS + NVAPI（自主运行）</value>
   </data>
   <data name="MemoryOptimizerView_NativeApiNote" xml:space="preserve">
     <value>内存清理使用 Windows 原生 API（NtSetSystemInformation）。需要管理员权限。统计每 2 秒刷新一次。</value>
