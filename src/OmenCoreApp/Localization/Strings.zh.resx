@@ -1049,7 +1049,7 @@
     <value>温度来源对比</value>
   </data>
   <data name="DiagnosticsView_ReadsEveryCpuTemperatureSourceOmencoreKnow" xml:space="preserve">
-    <value>同时读取 OmenCore 已知的全部 CPU 温度来源并报告它们是否一致。不会改变被信任的来源——只读。</value>
+    <value>同时读取 OmenCore 已知的全部 CPU 温度来源，并报告它们是否一致。不会改变当前信任的来源，仅读取。</value>
   </data>
   <data name="DiagnosticsView_ReadWmiBiosAcpiAndLibrehardwaremonitorCpuT" xml:space="preserve">
     <value>并排读取 WMI BIOS、ACPI 和 LibreHardwareMonitor 的 CPU 温度。只读，不改变任何设置。</value>
@@ -1115,7 +1115,7 @@
     <value>重启 GPU 以解除钳制——但仅在它休眠时执行</value>
   </data>
   <data name="DiagnosticsView_OnlyWhenTheDriverHasParkedTheGpuAndTheDisp" xml:space="preserve">
-    <value>仅在驱动已让 GPU 进入休眠、且画面由核显输出时执行——此时没有会被打断的任务，也不会黑屏。如果执行时 GPU 仍处于唤醒状态，则不会执行，并会提示你改用上方按钮。</value>
+    <value>仅在驱动已让 GPU 进入休眠、且画面由核显输出时执行——不会打断任何任务，也不会黑屏。如果执行时 GPU 仍处于唤醒状态，则不会执行，并会提示你改用上方按钮。</value>
   </data>
   <data name="DiagnosticsView_ReadFromTheBiosEachTimeThisTabIsOpenedThis" xml:space="preserve">
     <value>每次打开此标签页都会从 BIOS 读取。这是机器对当前所接电源的自身报告，不是实测值。</value>
@@ -1133,7 +1133,7 @@
     <value>尝试 GPU 功耗解锁</value>
   </data>
   <data name="DiagnosticsView_ExperimentalPinsTwoEcBitsAndFiresOneWmiCom" xml:space="preserve">
-    <value>实验性。钉住两个 EC 位并发出一条 WMI 命令，然后以实测 GPU 功耗验证。尚未在真实硬件上确认——见上方说明。</value>
+    <value>实验性。临时置位两个 EC 位并发送一条 WMI 命令，再以实测 GPU 功耗验证。尚未在真机上确认——见上方说明。</value>
   </data>
   <data name="DiagnosticsView_TryTheGpuPowerUnlockExperimental" xml:space="preserve">
     <value>尝试 GPU 功耗解锁（实验性）</value>
@@ -1151,7 +1151,7 @@
     <value>⚠ 推断值，尚未验证</value>
   </data>
   <data name="DiagnosticsView_ThisReflectsWhatOmencoreSModelDatabaseKnow" xml:space="preserve">
-    <value>这反映的是 OmenCore 机型数据库对这台机器所检测到的主板的认知——某项功能显示“不支持”可能是真实的硬件/固件限制，而不是 OmenCore 的 bug。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功耗提升）；常规标签页里的基础风扇模式（自动/性能/最大）由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
+    <value>这反映的是 OmenCore 机型数据库对这台机器检测到的主板的识别结果——某项功能显示“不支持”可能是真实的硬件/固件限制，而不是 OmenCore 的 bug。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功耗提升）；常规标签页里的基础风扇模式（自动/性能/最大）由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
   </data>
   <data name="DiagnosticsView_CustomFanCurves" xml:space="preserve">
     <value>自定义风扇曲线</value>
@@ -1622,7 +1622,7 @@
     <value>同样应用于（可选——逗号分隔的 .exe 名称）</value>
   </data>
   <data name="GameProfileManagerView_OtherGamesThatShouldShareThisProfileSSetti" xml:space="preserve">
-    <value>应共享此方案设置的其他游戏，例如 game2.exe、game3.exe。可用于让一个方案作为一组游戏的默认方案。</value>
+    <value>应共享此方案设置的其他游戏，例如 game2.exe、game3.exe。可让一个方案作为一组游戏的默认方案。</value>
   </data>
   <data name="GameProfileManagerView_EnableAutoSwitch" xml:space="preserve">
     <value>启用自动切换</value>
@@ -2846,7 +2846,7 @@
     <value>常规</value>
   </data>
   <data name="SettingsView_ShareAnonymousPidSuccessFailureCountsToHel" xml:space="preserve">
-    <value>匿名分享 PID 成功/失败计数，帮助改进设备支持。仅自愿加入；存储于 %LOCALAPPDATA%\OmenCore\telemetry.json</value>
+    <value>匿名分享设备（按 PID 区分）的成功/失败次数，帮助改进设备支持。仅自愿加入；存储于 %LOCALAPPDATA%\\OmenCore\\telemetry.json</value>
   </data>
   <data name="SettingsView_Advanced" xml:space="preserve">
     <value>高级</value>
@@ -2858,13 +2858,13 @@
     <value>自动监控节奏</value>
   </data>
   <data name="SettingsView_OmencoreNowOwnsCadenceAutomaticallyActiveW" xml:space="preserve">
-    <value>OmenCore 现在自动管理节奏：活动窗口和 OSD 保持响应，空闲会话安全降速，无人阻挡时低开销托盘模式可降到超低节奏。</value>
+    <value>OmenCore 现在自动管理刷新节奏：活动窗口和 OSD 保持响应，空闲会话安全降速；没有其他占用时，托盘低开销模式会降到超低节奏。</value>
   </data>
   <data name="SettingsView_CadenceTiers" xml:space="preserve">
     <value>节奏分级</value>
   </data>
   <data name="SettingsView_N1sWhenTheUiOrOsdNeedsLiveData5sInStandardB" xml:space="preserve">
-    <value>UI 或 OSD 需要实时数据时 1 秒，标准后台空闲 5 秒，符合条件的托盘低负载会话 10 秒。使用下方的“低开销模式”偏好更轻的节奏路径。</value>
+    <value>界面或 OSD 需要实时数据时用 1 秒；后台空闲用 5 秒；符合条件的托盘低负载会话用 10 秒。可在下方开启“低开销模式”，改用更轻量的刷新节奏。</value>
   </data>
   <data name="SettingsView_ChartHistory" xml:space="preserve">
     <value>图表历史</value>
@@ -2885,7 +2885,7 @@
     <value>实时节奏状态</value>
   </data>
   <data name="SettingsView_CurrentTier" xml:space="preserve">
-    <value>当前级别：</value>
+    <value>当前档位：</value>
   </data>
   <data name="SettingsView_Reason" xml:space="preserve">
     <value>原因：</value>
@@ -2981,7 +2981,7 @@
     <value>最大风扇模式自动恢复</value>
   </data>
   <data name="SettingsView_OffKeepsMaxUntilYouChangeItCooldownHandsTh" xml:space="preserve">
-    <value>关闭：保持最大模式，直到你手动切换。冷却：CPU 与 GPU 连续 2 分钟低于 60°C 后自动恢复 BIOS 自动控制。计时：到达设定时间后恢复。尚未在真机上验证。</value>
+    <value>关闭：保持最大模式，直到你手动切换。冷却：CPU 与 GPU 连续 2 分钟低于 60°C 后，交由 BIOS 自动控制。计时：到达设定时间后恢复。尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_Minutes" xml:space="preserve">
     <value>分钟</value>
@@ -3029,7 +3029,7 @@
     <value>启用 RGB 启动恢复时恢复已保存的键盘灯效颜色。</value>
   </data>
   <data name="SettingsView_ReapplyConfirmedUndervoltTccCpuPowerAndGpu" xml:space="preserve">
-    <value>重新应用已确认的降压、TCC、CPU 功耗和 GPU 超频恢复路径。OMEN 16/Victus 机型上除非开启“允许启动恢复”，否则会跳过。</value>
+    <value>在启动时重新应用已验证的降压、TCC、CPU 功耗和 GPU 超频设置。OMEN 16/Victus 机型除非开启“允许启动恢复”，否则会跳过。</value>
   </data>
   <data name="SettingsView_StartupRestore" xml:space="preserve">
     <value>启动恢复：</value>
@@ -3398,7 +3398,7 @@
     <value>OMEN 键拦截已启用</value>
   </data>
   <data name="SettingsView_AnOmenGamingHubServiceOrProcessIsRunningTh" xml:space="preserve">
-    <value>检测到 OMEN Gaming Hub 的服务或进程正在运行。它可能与 OmenCore 的风扇控制、降压或 OMEN 键处理冲突。如果 Gaming Hub 仍安装着，请用预装软件管理器移除它。</value>
+    <value>检测到 OMEN Gaming Hub 的服务或进程正在运行，可能与 OmenCore 的风扇控制、降压或 OMEN 键处理冲突。如果仍安装着 OMEN Gaming Hub，请用预装软件管理器移除它。</value>
   </data>
   <data name="SettingsView_OmenKeyAction" xml:space="preserve">
     <value>OMEN 键动作</value>
@@ -3626,7 +3626,7 @@
     <value>最大风扇档位覆盖</value>
   </data>
   <data name="SettingsView_OverrideAutoDetectedMaxFanLevelSetTo0ForAu" xml:space="preserve">
-    <value>覆盖自动检测的最大风扇档位。设为 0 保持自动检测。如果风扇达不到全速，试试 63 或 100。需要重启。</value>
+    <value>覆盖自动检测的最大风扇档位。设为 0 表示保持自动检测。如果风扇达不到全速，可尝试 63 或 100。需要重启。</value>
   </data>
   <data name="SettingsView_HpOmenGamingHubCleanup" xml:space="preserve">
     <value>HP OMEN Gaming Hub 清理</value>
@@ -4106,7 +4106,7 @@
     <value>当前生效值</value>
   </data>
   <data name="TuningView_ReadTheFourPowerLimitsBackOutOfTheSmuDoesN" xml:space="preserve">
-    <value>从 SMU 读回四项功耗限制。不写入任何内容。</value>
+    <value>从 SMU 回读四项功耗限制。不写入任何内容。</value>
   </data>
   <data name="TuningView_RefreshEnforcedAmdCpuPowerLimits" xml:space="preserve">
     <value>刷新当前生效的 AMD CPU 功耗限制</value>
@@ -4205,7 +4205,7 @@
     <value>移除 MAX 覆盖</value>
   </data>
   <data name="TuningView_NotesDoNotDisablePpabDynamicBoostTheAdapte" xml:space="preserve">
-    <value>注意：不要禁用 PPAB（Dynamic Boost）；适配器限制是 CPU 和 GPU 合计的。显卡驱动更新可能撤销解锁，之后请核对实时数值。RTX 5050 未测试。如果 CURRENT 不生效，把 HP 性能模式切走再切回，然后重新应用。</value>
+    <value>注意：不要禁用 PPAB（Dynamic Boost）；适配器限制是 CPU 与 GPU 合计的。显卡驱动更新可能撤销解锁，之后请核对实时数值。RTX 5050 未测试。如果 CURRENT 不生效，先切换到其他 HP 性能模式再切回，然后重新应用。</value>
   </data>
   <data name="TuningView_Driver" xml:space="preserve">
     <value>驱动</value>
@@ -4241,7 +4241,7 @@
     <value>可通过 AMD Display Library 对 AMD Radeon GPU 超频。在下方调节频率偏移与功耗限制。</value>
   </data>
   <data name="TuningView_ManualApplyOnlyAmdOffsetsAreNotSavedAndDoN" xml:space="preserve">
-    <value>仅手动应用：AMD 偏移不会被保存，OmenCore 启动时也不会重新应用。每次重启后需重新应用。</value>
+    <value>仅手动应用：不会保存 AMD 偏移，OmenCore 启动时也不会重新应用。每次重启后需重新应用。</value>
   </data>
   <data name="TuningView_CoreClockOffsetMhz" xml:space="preserve">
     <value>核心频率偏移（MHz）</value>
@@ -4355,13 +4355,13 @@
     <value>风扇校准向导已关闭。</value>
   </data>
   <data name="FanControlViewModel_CustomCurveTooltipNo" xml:space="preserve">
-    <value>此机型的风扇控制器不暴露自定义曲线接口——这是硬件/固件层面的限制，与机型方案是否经过验证无关。请改用 OEM 风扇预设。</value>
+    <value>此机型的风扇控制器不提供自定义曲线接口——这是硬件/固件层面的限制，与机型方案是否已验证无关。请改用 OEM 风扇预设。</value>
   </data>
   <data name="FanControlViewModel_CustomCurveTooltipOk" xml:space="preserve">
     <value>应用你在下方编辑器中定义的自定义风扇曲线。</value>
   </data>
   <data name="FanControlViewModel_DirectTooltipNo" xml:space="preserve">
-    <value>此机型的风扇控制器不暴露直接固定档位控制——这是硬件/固件层面的限制，与机型方案是否经过验证无关。请改用 OEM 风扇预设。</value>
+    <value>此机型的风扇控制器不提供直接固定档位控制——这是硬件/固件层面的限制，与机型方案是否已验证无关。请改用 OEM 风扇预设。</value>
   </data>
   <data name="FanControlViewModel_DirectTooltipOk" xml:space="preserve">
     <value>通过手动风扇控制将风扇保持在一个请求的固定档位。</value>
@@ -4391,7 +4391,7 @@
     <value>OEM 自动已恢复</value>
   </data>
   <data name="FanControlViewModel_StartupHintCategoryOff" xml:space="preserve">
-    <value>设置中的“启动硬件恢复”的“风扇”类别未开启，因此重启后此预设/曲线不会自动重新应用——你需要重新选择，或在设置中重新开启该类别。</value>
+    <value>设置中“启动硬件恢复”的“风扇”类别未开启，因此重启后此预设/曲线不会自动重新应用——请重新选择，或在设置中开启该类别。</value>
   </data>
   <data name="FanControlViewModel_StartupHintOff" xml:space="preserve">
     <value>设置中的“启动硬件恢复”未开启，因此重启后此预设/曲线不会自动重新应用——你需要重新选择，或开启该功能。</value>
@@ -5042,7 +5042,7 @@
     <value>正在创建移除前还原点…</value>
   </data>
   <data name="BloatwareManagerViewModel_RestoreSkipped" xml:space="preserve">
-    <value>还原点创建已被用户跳过</value>
+    <value>你已选择跳过创建还原点</value>
   </data>
   <data name="LightingViewModel_IcueNotConfigured" xml:space="preserve">
     <value>Corsair iCUE 未配置</value>
@@ -5711,7 +5711,7 @@
     <value>{0} 移除失败：{1}</value>
   </data>
   <data name="BloatwareManagerViewModel_RemovePendingFormat" xml:space="preserve">
-    <value>{0} 的移除仍在进行中</value>
+    <value>正在移除 {0}，尚未完成</value>
   </data>
   <data name="BloatwareManagerViewModel_RemoveUnknownFormat" xml:space="preserve">
     <value>{0} 移除完成，状态未知</value>
@@ -5960,7 +5960,7 @@
     <value>暂无内容。先在上方设置灯效，再选择“加入循环”。</value>
   </data>
   <data name="DeviceLighting_FnCycleLimitation" xml:space="preserve">
-    <value>写入只会新增或更新键盘上已有的内容。没有删除命令——从列表移除的方案仍保留在键盘上，直到被同类灯效覆盖。</value>
+    <value>写入只会新增或更新键盘上已有的内容。键盘不支持删除命令——从列表移除的方案仍会保留在键盘上，直到被同类灯效覆盖。</value>
   </data>
   <data name="KeyboardMap_DimNoSelection" xml:space="preserve">
     <value>下次“应用”时生效。选择按键可独立调暗。</value>
@@ -6026,7 +6026,7 @@
     <value>非 HP 或未知制造商</value>
   </data>
   <data name="SettingsViewModel_IdentitySummaryFormat" xml:space="preserve">
-    <value>{0}，经 {1} 解析（置信度：{2}），运行在 {3}。键盘：{4}，经 {5} 解析（置信度：{6}）。</value>
+    <value>{0}，由 {1} 识别（置信度：{2}），运行于 {3}。键盘：{4}，由 {5} 识别（置信度：{6}）。</value>
   </data>
   <data name="SettingsViewModel_BadgeUnknown" xml:space="preserve">
     <value>未知</value>
@@ -6053,7 +6053,7 @@
     <value>不可用</value>
   </data>
   <data name="SystemControlViewModel_TccNotAvailableWmi" xml:space="preserve">
-    <value>不可用——此 BIOS 不通过 WMI 应用 Extended，且 Maximum 之外没有独立的 EC 回退档位</value>
+    <value>不可用——此 BIOS 不通过 WMI 应用“扩展”档，且“最大”之外没有独立的 EC 回退档位</value>
   </data>
   <data name="SettingsViewModel_IdentityAnalysisFailed" xml:space="preserve">
     <value>机型识别分析失败。</value>
@@ -7784,7 +7784,7 @@
     <value>“{0}”现在会记住：{1}</value>
   </data>
   <data name="App_DriverPromptBody" xml:space="preserve">
-    <value>部分硬件控制功能需要驱动后端。&#10;&#10;视系统情况，你可以使用：&#10;• PawnIO（兼容安全启动）&#10;• 仅 WMI 模式（监控和多数控制仍可用）&#10;&#10;没有受支持的驱动后端时，以下功能可能被禁用：&#10;• 直接 EC 风扇控制（部分机型）&#10;• CPU 降压与 TCC 偏移（Intel MSR）&#10;&#10;推荐：{0}&#10;&#10;请使用 OmenCore 安装程序添加 PawnIO，或在没有驱动相关功能的情况下继续。</value>
+    <value>部分硬件控制功能需要驱动后端。&#10;&#10;视系统情况，可选用：&#10;• PawnIO（兼容安全启动）&#10;• 仅 WMI 模式（监控和多数控制仍可用）&#10;&#10;没有受支持的驱动后端时，以下功能可能被禁用：&#10;• 直接 EC 风扇控制（部分机型）&#10;• CPU 降压与 TCC 偏移（Intel MSR）&#10;&#10;推荐：{0}&#10;&#10;请使用 OmenCore 安装程序添加 PawnIO，或不启用依赖驱动的功能继续。</value>
   </data>
   <data name="App_DriverPromptTitle" xml:space="preserve">
     <value>可选驱动后端 - OmenCore</value>
@@ -7952,7 +7952,7 @@
     <value>用户已取消清理</value>
   </data>
   <data name="Main_RestorePointFailedBody" xml:space="preserve">
-    <value>创建系统还原点失败：&#10;{0}&#10;&#10;这通常是因为系统中的“系统还原”被禁用。&#10;&#10;仍要继续清理吗？&#10;&#10;注意：没有还原点，清理操作将难以轻松撤销。</value>
+    <value>创建系统还原点失败：&#10;{0}&#10;&#10;这通常是因为系统还原功能被禁用。&#10;&#10;仍要继续清理吗？&#10;&#10;注意：没有还原点，清理将难以撤销。</value>
   </data>
   <data name="Main_RestorePointFailedTitle" xml:space="preserve">
     <value>还原点创建失败 - OmenCore</value>
@@ -8009,7 +8009,7 @@
     <value>恢复默认设置失败：{0}</value>
   </data>
   <data name="Settings_EcResetConfirmBody" xml:space="preserve">
-    <value>这会将嵌入式控制器（EC）恢复为出厂默认值。&#10;&#10;此操作将：&#10;• 恢复 BIOS 对风扇的控制&#10;• 清除所有手动风扇转速覆盖&#10;• 重置风扇加速模式&#10;• 重置散热策略计时器&#10;&#10;适用场景：&#10;• 风扇转速似乎被 BIOS 卡住&#10;• BIOS 显示的风扇读数不正确&#10;• 希望完全恢复出厂风扇行为&#10;&#10;重置后应用会自动切换到自动模式。&#10;&#10;是否继续？</value>
+    <value>这会将嵌入式控制器（EC）恢复为出厂默认值。&#10;&#10;会执行以下操作：&#10;• 恢复 BIOS 对风扇的控制&#10;• 清除所有手动风扇转速覆盖&#10;• 重置风扇加速模式&#10;• 重置散热策略计时器&#10;&#10;适用场景：&#10;• 风扇转速似乎被 BIOS 卡住&#10;• BIOS 显示的风扇读数不正确&#10;• 希望完全恢复出厂风扇行为&#10;&#10;重置后应用会自动切换到自动模式。&#10;&#10;是否继续？</value>
   </data>
   <data name="Settings_EcResetConfirmTitle" xml:space="preserve">
     <value>恢复 EC 默认值</value>
@@ -8042,7 +8042,7 @@
     <value>安装 PawnIO 驱动</value>
   </data>
   <data name="Settings_BloatwareRemoveBodyFormat" xml:space="preserve">
-    <value>将移除 {0} 个 HP 预装软件包。&#10;&#10;⚠️ 警告：&#10;• 此操作无法撤销&#10;• 部分 HP 功能可能停止工作&#10;• 不会移除 HP Support Assistant&#10;• 不会触碰 Realtek 音频/网络驱动&#10;• 可能需要重启系统&#10;&#10;是否继续移除？</value>
+    <value>将移除 {0} 个 HP 预装软件包。&#10;&#10;⚠️ 警告：&#10;• 此操作无法撤销&#10;• 部分 HP 功能可能停止工作&#10;• 不会移除 HP Support Assistant&#10;• 不会改动 Realtek 音频/网络驱动&#10;• 可能需要重启系统&#10;&#10;是否继续移除？</value>
   </data>
   <data name="Settings_BloatwareRemoveTitle" xml:space="preserve">
     <value>移除 HP 预装软件 - 需要确认</value>
@@ -8066,7 +8066,7 @@
     <value>导入失败</value>
   </data>
   <data name="Settings_ImportConfirmFormat" xml:space="preserve">
-    <value>从 {0} 导入方案？&#10;&#10;将应用：&#10;• {1} 个风扇预设&#10;• {2} 个性能模式&#10;• {3} 个 GPU 超频方案&#10;• 电池与滞后设置&#10;&#10;现有设置将被覆盖。</value>
+    <value>从 {0} 导入方案？&#10;&#10;将应用：&#10;• {1} 个风扇预设&#10;• {2} 个性能模式&#10;• {3} 个 GPU 超频方案&#10;• 电池与风扇回差设置&#10;&#10;现有设置将被覆盖。</value>
   </data>
   <data name="Settings_ImportConfirmTitle" xml:space="preserve">
     <value>导入方案</value>
@@ -8105,7 +8105,7 @@
     <value>导出诊断包</value>
   </data>
   <data name="Settings_DiagExportedBodyFormat" xml:space="preserve">
-    <value>诊断包导出成功！&#10;&#10;文件：{0}&#10;位置：{1}&#10;&#10;可将此 ZIP 附件上传到 GitHub issue 以便排障。</value>
+    <value>诊断包导出成功！&#10;&#10;文件：{0}&#10;位置：{1}&#10;&#10;可以把 ZIP 附加到 GitHub issue，方便排障。</value>
   </data>
   <data name="Settings_ExportDiagErrorFormat" xml:space="preserve">
     <value>导出诊断失败：{0}</value>
