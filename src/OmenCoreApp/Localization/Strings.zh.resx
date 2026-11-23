@@ -401,7 +401,7 @@
     <value>💨 风扇转速（%）</value>
   </data>
   <data name="FanCurveEditor_DragPointsToAdjust" xml:space="preserve">
-    <value> • 拖动点位进行调整</value>
+    <value> • 拖动曲线点进行调整</value>
   </data>
   <data name="GpuVcChart_GpuVoltage" xml:space="preserve">
     <value>GPU 电压</value>
@@ -608,7 +608,7 @@
     <value>静音风扇</value>
   </data>
   <data name="AdvancedView_BalancedPerformanceModeRecommendedAutomati" xml:space="preserve">
-    <value>均衡性能模式：推荐，自动管理功耗与风扇</value>
+    <value>平衡性能模式：推荐，自动管理功耗与风扇</value>
   </data>
   <data name="AdvancedView_Balanced" xml:space="preserve">
     <value>平衡</value>
@@ -1262,13 +1262,13 @@
     <value>强制所有风扇以最大 RPM 运转。适合重度游戏或压力测试。</value>
   </data>
   <data name="FanControlView_MaxFanPresetForcesAllFansTo100" xml:space="preserve">
-    <value>最大风扇预设：强制所有风扇 100%</value>
+    <value>最大风扇预设：所有风扇 100% 全速</value>
   </data>
   <data name="FanControlView_DirectFixedFanLevelPreset" xml:space="preserve">
     <value>直接固定风扇档位预设</value>
   </data>
   <data name="FanControlView_HighestNonMaxCoolingCurveReserves100FanDut" xml:space="preserve">
-    <value>非 Max 之下的最高散热曲线。为更热工况保留 100% 风扇占空比；需要立即全速请用 Max。</value>
+    <value>在非“最大”档里散热最强的曲线；为更热的场景保留 100% 风扇占空比。需要立即全速，请选“最大”。</value>
   </data>
   <data name="FanControlView_ExtremeFanPresetHighestNonMaxCoolingCurve" xml:space="preserve">
     <value>极限风扇预设：非 Max 下最高散热曲线</value>
@@ -1283,10 +1283,10 @@
     <value>游戏风扇预设：激进爬升曲线</value>
   </data>
   <data name="FanControlView_BiosControlledBalancedCurveRecommendedForE" xml:space="preserve">
-    <value>BIOS 控制的均衡曲线。日常使用推荐。</value>
+    <value>由 BIOS 控制的平衡曲线，适合日常使用。</value>
   </data>
   <data name="FanControlView_AutoFanPresetBiosControlledBalancedCurve" xml:space="preserve">
-    <value>自动风扇预设：BIOS 控制的均衡曲线</value>
+    <value>自动风扇预设：由 BIOS 控制的平衡曲线</value>
   </data>
   <data name="FanControlView_PrioritizesQuietOperationFansStayLowUntilT" xml:space="preserve">
     <value>优先安静运行。温度显著升高前风扇保持低速。</value>
@@ -1298,16 +1298,16 @@
     <value>自定义风扇预设：用户自定义曲线</value>
   </data>
   <data name="FanControlView_DirectFanLevel" xml:space="preserve">
-    <value>直接风扇档位</value>
+    <value>固定档位</value>
   </data>
   <data name="FanControlView_DragToRequestAFixedFanLevel" xml:space="preserve">
     <value>拖动以设置固定风扇档位</value>
   </data>
   <data name="FanControlView_DirectFanLevelPercentage" xml:space="preserve">
-    <value>直接风扇档位百分比</value>
+    <value>固定档位百分比</value>
   </data>
   <data name="FanControlView_ApplyTheSelectedDirectFanLevelNow" xml:space="preserve">
-    <value>立即应用所选的直接风扇档位</value>
+    <value>立即应用所选固定档位</value>
   </data>
   <data name="FanControlView_ApplyDirectFanLevel" xml:space="preserve">
     <value>应用直接风扇档位</value>
@@ -1430,13 +1430,13 @@
     <value>💡 用法：</value>
   </data>
   <data name="FanControlView_DragPointsToAdjustTemperatureFanSpeedMappi" xml:space="preserve">
-    <value>• 拖动点位调整温度/风扇转速映射</value>
+    <value>• 拖动曲线点调整温度/风扇转速映射</value>
   </data>
   <data name="FanControlView_ClickEmptyAreaToAddNewPoints" xml:space="preserve">
-    <value>• 点击空白区域添加新点位</value>
+    <value>• 点击空白区域添加曲线点</value>
   </data>
   <data name="FanControlView_RightClickAPointToRemoveIt" xml:space="preserve">
-    <value>• 右键点击点位将其移除</value>
+    <value>• 右键点击曲线点即可移除</value>
   </data>
   <data name="FanControlView_BlueLineShowsCurrentTemperatureMaxOfCpuGpu" xml:space="preserve">
     <value>• 蓝线显示当前温度（取 CPU/GPU 较大值）</value>
@@ -1445,7 +1445,7 @@
     <value>实时预览：</value>
   </data>
   <data name="FanControlView_CurrentPoints" xml:space="preserve">
-    <value>当前点位：</value>
+    <value>当前曲线点：</value>
   </data>
   <data name="FanControlView_FanCurveByCpuTemp" xml:space="preserve">
     <value>风扇曲线（按 CPU 温度）</value>
@@ -1463,7 +1463,7 @@
     <value>风扇曲线（按 GPU 温度）</value>
   </data>
   <data name="FanControlView_CopyCpuCurveToGpu" xml:space="preserve">
-    <value>将 CPU 曲线复制到 GPU</value>
+    <value>把 CPU 曲线复制为 GPU 曲线</value>
   </data>
   <data name="FanControlView_AddGpuCurvePoint" xml:space="preserve">
     <value>添加 GPU 曲线点</value>
@@ -1538,7 +1538,7 @@
     <value>历史</value>
   </data>
   <data name="FanDiagnosticsView_Requested" xml:space="preserve">
-    <value>请求：</value>
+    <value>目标：</value>
   </data>
   <data name="FanDiagnosticsView_Readback" xml:space="preserve">
     <value>%，回读：</value>
@@ -1652,7 +1652,7 @@
     <value>高级设置</value>
   </data>
   <data name="GameProfileManagerView_PriorityExactExecutablePathsWinFirstHigher" xml:space="preserve">
-    <value>优先级（精确可执行路径优先；更高优先级打破并列）</value>
+    <value>优先级（精确可执行路径优先；并列时优先级更高者先执行）</value>
   </data>
   <data name="GameProfileManagerView_RestoreDefaultFanPerformanceSettingsWhenGa" xml:space="preserve">
     <value>游戏退出时恢复默认风扇/性能设置</value>
@@ -1709,10 +1709,10 @@
     <value>✓ 使用中</value>
   </data>
   <data name="GeneralView_BalancedProfileDefaultHpPowerAndThermals" xml:space="preserve">
-    <value>均衡方案：HP 默认功耗与散热</value>
+    <value>平衡方案：HP 默认功耗与散热</value>
   </data>
   <data name="GeneralView_DefaultHpProfileBalancedPowerAndThermalsFo" xml:space="preserve">
-    <value>HP 默认方案——日常使用的均衡功耗与散热</value>
+    <value>HP 默认方案——功耗与散热均衡，适合日常使用</value>
   </data>
   <data name="GeneralView_Default" xml:space="preserve">
     <value>默认</value>
@@ -3989,7 +3989,7 @@
     <value>调优状态</value>
   </data>
   <data name="TuningView_ResetLiveTuningWhereAvailableAndNormalizeS" xml:space="preserve">
-    <value>重置可用的实时调优，并把启动调优状态归一化为安全的均衡/自动默认值。</value>
+    <value>重置可用的实时调优，并把启动调优状态恢复为安全的“平衡/自动”默认值。</value>
   </data>
   <data name="TuningView_RollBackAllTuningToSafeDefaults" xml:space="preserve">
     <value>把所有调优回滚到安全默认值</value>
@@ -6545,7 +6545,7 @@
     <value>禁用旧式 8.3 短文件名生成，减轻现代系统上的文件系统簿记负担。</value>
   </data>
   <data name="OptimizeUndo_PowerUltimatePerf" xml:space="preserve">
-    <value>恢复均衡方案：powercfg /setactive 381b4222-f694-41f0-9685-ff5bb260df2e</value>
+    <value>恢复“平衡”电源计划：powercfg /setactive 381b4222-f694-41f0-9685-ff5bb260df2e</value>
   </data>
   <data name="OptimizeUndo_PowerGpuScheduling" xml:space="preserve">
     <value>将 HwSchMode 改回 0 或删除该值，然后重启 Windows。</value>
