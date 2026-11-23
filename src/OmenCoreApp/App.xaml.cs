@@ -323,16 +323,8 @@ namespace OmenCore
             {
                 Logging.Warn("OMEN Desktop PC detected - desktop support is experimental");
                 var result = MessageBox.Show(
-                    "⚠️ OMEN Desktop PC Detected ⚠️\n\n" +
-                    "OmenCore has experimental support for OMEN Desktop systems (25L, 30L, 35L, 40L, 45L).\n\n" +
-                    "Desktop fan control uses different hardware interfaces than laptops. " +
-                    "Some features may not work correctly:\n\n" +
-                    "• Fan speed control may be limited or unavailable\n" +
-                    "• Temperature monitoring should work normally\n" +
-                    "• RGB control is supported\n\n" +
-                    "If you experience any issues, please report them on GitHub or Discord.\n\n" +
-                    "Do you want to continue?",
-                    "OMEN Desktop - Experimental Support",
+                    Strings.App_DesktopWarningBody,
+                    Strings.App_DesktopWarningTitle,
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Warning);
                 
@@ -1650,18 +1642,14 @@ namespace OmenCore
             string message;
             if (isNvmlCrash)
             {
-                message = $"OmenCore crashed due to an NVIDIA driver issue.\n\n" +
-                          $"This is a known issue with NVML (NVIDIA Management Library) during high GPU load " +
-                          $"such as gaming or benchmarks.\n\n" +
-                          $"Recommendation: Update your NVIDIA drivers to the latest version.\n\n" +
-                          $"Error: {ex.Message}";
+                message = string.Format(Strings.App_NvmlCrashBodyFormat, ex.Message);
             }
             else
             {
-                message = $"OmenCore hit an unexpected error:\n{ex.Message}\n\nSee %LOCALAPPDATA%\\OmenCore for full logs.";
+                message = string.Format(Strings.App_GenericCrashBodyFormat, ex.Message);
             }
             
-            MessageBox.Show(message, "OmenCore Crash", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show(message, Strings.App_CrashTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             Current?.Shutdown();
         }
     }

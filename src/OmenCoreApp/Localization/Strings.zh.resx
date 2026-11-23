@@ -4178,7 +4178,7 @@
     <value>NVIDIA 功耗解锁（高级，默认关闭）</value>
   </data>
   <data name="TuningView_Order1ResolveVbios2ApplyMax3RestartWindows" xml:space="preserve">
-    <value>顺序：1) 解析 VBIOS，2) 应用 MAX，3) 重启 Windows，4) 应用 CURRENT。把 GPU 功耗上限提到笔记本厂商设定之上。MAX 写入 NVIDIA 驱动注册表，需要重启；CURRENT 实时应用，重启后失效。功耗越大发热越大。基于 timmyy123 的 nvidia-power-control 与 bobshmo 的 OmenCore-Prophecy，经许可使用。</value>
+    <value>顺序：1) 解析 VBIOS，2) 应用 MAX，3) 重启 Windows，4) 应用 CURRENT。更换 NVIDIA 驱动后，请先点一次“验证驱动”再应用 CURRENT。把 GPU 功耗上限提到笔记本厂商设定之上。MAX 写入 NVIDIA 驱动注册表，需要重启；CURRENT 实时应用，重启后失效。功耗越大发热越大。基于 timmyy123 的 nvidia-power-control 与 bobshmo 的 Prophecy Power Unlocker（1.2.9），经许可使用。</value>
   </data>
   <data name="TuningView_EnableNvidiaPowerUnlock" xml:space="preserve">
     <value>启用 NVIDIA 功耗解锁</value>
@@ -8961,5 +8961,50 @@
   </data>
   <data name="FanCalibration_IssuesFormat" xml:space="preserve">
     <value>校准完成但存在问题——{0} 个测试点，{1} 个失败</value>
+  </data>
+  <data name="Trigger_LidState" xml:space="preserve">
+    <value>合盖状态</value>
+  </data>
+  <data name="Settings_SecondsFormat" xml:space="preserve">
+    <value>{0} 秒</value>
+  </data>
+  <data name="Settings_ScheduleNewRuleName" xml:space="preserve">
+    <value>新建规则</value>
+  </data>
+  <data name="Update_NowAvailableFormat" xml:space="preserve">
+    <value>v{0} 现已可用</value>
+  </data>
+  <data name="Update_SecurityFailed" xml:space="preserve">
+    <value>安全验证失败</value>
+  </data>
+  <data name="Update_HashFailed" xml:space="preserve">
+    <value>哈希校验失败——出于安全考虑已拒绝该更新</value>
+  </data>
+  <data name="Update_FailedFormat" xml:space="preserve">
+    <value>更新失败：{0}</value>
+  </data>
+  <data name="Update_ErrorOccurred" xml:space="preserve">
+    <value>发生错误</value>
+  </data>
+  <data name="App_CrashTitle" xml:space="preserve">
+    <value>OmenCore 崩溃</value>
+  </data>
+  <data name="App_NvmlCrashBodyFormat" xml:space="preserve">
+    <value>OmenCore 因 NVIDIA 驱动问题崩溃。&#10;&#10;这是 NVML（NVIDIA 管理库）在游戏或跑分等高 GPU 负载下的已知问题。&#10;&#10;建议：将 NVIDIA 驱动更新到最新版本。&#10;&#10;错误：{0}</value>
+  </data>
+  <data name="App_GenericCrashBodyFormat" xml:space="preserve">
+    <value>OmenCore 遇到意外错误：&#10;{0}&#10;&#10;完整日志见 %LOCALAPPDATA%\\OmenCore。</value>
+  </data>
+  <data name="App_DesktopWarningBody" xml:space="preserve">
+    <value>⚠️ 检测到 OMEN 台式机 ⚠️&#10;&#10;OmenCore 对 OMEN 台式机（25L、30L、35L、40L、45L）提供实验性支持。&#10;&#10;台式机的风扇控制使用与笔记本不同的硬件接口，部分功能可能无法正常工作：&#10;&#10;• 风扇转速控制可能受限或不可用&#10;• 温度监控应可正常工作&#10;• 支持 RGB 灯效控制&#10;&#10;如遇问题，请在 GitHub 或 Discord 上反馈。&#10;&#10;是否继续？</value>
+  </data>
+  <data name="App_DesktopWarningTitle" xml:space="preserve">
+    <value>OMEN 台式机 - 实验性支持</value>
+  </data>
+  <data name="TuningView_ValidateDriver" xml:space="preserve">
+    <value>验证驱动</value>
+  </data>
+  <data name="TuningView_ValidateDriverTooltip" xml:space="preserve">
+    <value>在 617.14 以外的 NVIDIA 驱动上，应用 CURRENT 前需按驱动版本验证一次。会发送一个重复驱动自身功耗请求的指令，并确认结果未发生变化。</value>
   </data>
 </root>

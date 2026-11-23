@@ -226,7 +226,7 @@ namespace OmenCore.ViewModels
             // Scheduler commands
             AddScheduleRuleCommand = new RelayCommand(_ =>
             {
-                ScheduleRules.Add(new ScheduleRule());
+                ScheduleRules.Add(new ScheduleRule { RuleName = Strings.Settings_ScheduleNewRuleName });
                 _config.ScheduleRules = ScheduleRules.ToList();
                 _configService.Save(_config);
                 UpdateScheduleTimerState();
@@ -260,7 +260,10 @@ namespace OmenCore.ViewModels
 
             // Load schedule rules from config
             foreach (var rule in _config.ScheduleRules)
+            {
+                if (rule.RuleName == "New Rule") rule.RuleName = Strings.Settings_ScheduleNewRuleName;
                 ScheduleRules.Add(rule);
+            }
 
             foreach (var rule in _config.AutomationRules)
             {
@@ -1151,6 +1154,8 @@ namespace OmenCore.ViewModels
         /// <summary>
         /// Startup window (seconds) during which safe mode may auto-activate.
         /// </summary>
+        public string StartupSafeModeWindowSecondsText => string.Format(Strings.Settings_SecondsFormat, StartupSafeModeWindowSeconds);
+
         public int StartupSafeModeWindowSeconds
         {
             get => _config.Features?.StartupSafeModeWindowSeconds ?? 180;
@@ -1162,6 +1167,7 @@ namespace OmenCore.ViewModels
                 {
                     _config.Features.StartupSafeModeWindowSeconds = clamped;
                     OnPropertyChanged();
+                    OnPropertyChanged(nameof(StartupSafeModeWindowSecondsText));
                     SaveSettings();
                 }
             }

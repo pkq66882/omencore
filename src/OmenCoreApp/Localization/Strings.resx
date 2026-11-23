@@ -4185,7 +4185,7 @@
     <value>NVIDIA POWER UNLOCK (advanced, off by default)</value>
   </data>
   <data name="TuningView_Order1ResolveVbios2ApplyMax3RestartWindows" xml:space="preserve">
-    <value>Order: 1) Resolve VBIOS, 2) Apply MAX, 3) restart Windows, 4) Apply CURRENT. Raises the GPU's power limit above the laptop maker's setting. MAX is stored in the NVIDIA driver's registry and needs a restart; CURRENT is applied live and resets on reboot. More power means more heat. Based on timmyy123's nvidia-power-control and bobshmo's OmenCore-Prophecy, used with their permission.</value>
+    <value>Order: 1) Resolve VBIOS, 2) Apply MAX, 3) restart Windows, 4) Apply CURRENT. On a new NVIDIA driver, press Validate driver once before Apply CURRENT. Raises the GPU's power limit above the laptop maker's setting. MAX is stored in the NVIDIA driver's registry and needs a restart; CURRENT is applied live and resets on reboot. More power means more heat. Based on timmyy123's nvidia-power-control and bobshmo's Prophecy Power Unlocker (1.2.9), used with their permission.</value>
   </data>
   <data name="TuningView_EnableNvidiaPowerUnlock" xml:space="preserve">
     <value>Enable NVIDIA power unlock</value>
@@ -8965,5 +8965,50 @@
   </data>
   <data name="FanCalibration_IssuesFormat" xml:space="preserve">
     <value>Calibration completed with issues - {0} test points, {1} failed</value>
+  </data>
+  <data name="Trigger_LidState" xml:space="preserve">
+    <value>Lid state</value>
+  </data>
+  <data name="Settings_SecondsFormat" xml:space="preserve">
+    <value>{0} s</value>
+  </data>
+  <data name="Settings_ScheduleNewRuleName" xml:space="preserve">
+    <value>New Rule</value>
+  </data>
+  <data name="Update_NowAvailableFormat" xml:space="preserve">
+    <value>v{0} is now available</value>
+  </data>
+  <data name="Update_SecurityFailed" xml:space="preserve">
+    <value>Security verification failed</value>
+  </data>
+  <data name="Update_HashFailed" xml:space="preserve">
+    <value>Hash verification failed - update rejected for security</value>
+  </data>
+  <data name="Update_FailedFormat" xml:space="preserve">
+    <value>Update failed: {0}</value>
+  </data>
+  <data name="Update_ErrorOccurred" xml:space="preserve">
+    <value>Error occurred</value>
+  </data>
+  <data name="App_CrashTitle" xml:space="preserve">
+    <value>OmenCore Crash</value>
+  </data>
+  <data name="App_NvmlCrashBodyFormat" xml:space="preserve">
+    <value>OmenCore crashed due to an NVIDIA driver issue.&#10;&#10;This is a known issue with NVML (NVIDIA Management Library) during high GPU load such as gaming or benchmarks.&#10;&#10;Recommendation: Update your NVIDIA drivers to the latest version.&#10;&#10;Error: {0}</value>
+  </data>
+  <data name="App_GenericCrashBodyFormat" xml:space="preserve">
+    <value>OmenCore hit an unexpected error:&#10;{0}&#10;&#10;See %LOCALAPPDATA%\\OmenCore for full logs.</value>
+  </data>
+  <data name="App_DesktopWarningBody" xml:space="preserve">
+    <value>⚠️ OMEN Desktop PC Detected ⚠️&#10;&#10;OmenCore has experimental support for OMEN Desktop systems (25L, 30L, 35L, 40L, 45L).&#10;&#10;Desktop fan control uses different hardware interfaces than laptops. Some features may not work correctly:&#10;&#10;• Fan speed control may be limited or unavailable&#10;• Temperature monitoring should work normally&#10;• RGB control is supported&#10;&#10;If you experience any issues, please report them on GitHub or Discord.&#10;&#10;Do you want to continue?</value>
+  </data>
+  <data name="App_DesktopWarningTitle" xml:space="preserve">
+    <value>OMEN Desktop - Experimental Support</value>
+  </data>
+  <data name="TuningView_ValidateDriver" xml:space="preserve">
+    <value>Validate driver</value>
+  </data>
+  <data name="TuningView_ValidateDriverTooltip" xml:space="preserve">
+    <value>Needed once per NVIDIA driver version before Apply CURRENT works on a driver other than 617.14. Sends a request that repeats the driver's own power request and checks nothing changed.</value>
   </data>
 </root>

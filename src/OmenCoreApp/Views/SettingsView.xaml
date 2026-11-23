@@ -1036,7 +1036,7 @@
                                         Value="{Binding StartupSafeModeWindowSeconds}"
                                         Width="130" VerticalAlignment="Center"
                                         IsEnabled="{Binding StartupSafeModeGuardEnabled}"/>
-                                <TextBlock Text="{Binding StartupSafeModeWindowSeconds, StringFormat={}{0}s}"
+                                <TextBlock Text="{Binding StartupSafeModeWindowSecondsText}"
                                            FontSize="12" Width="70" TextAlignment="Right"
                                            Foreground="{StaticResource TextPrimaryBrush}"
                                            VerticalAlignment="Center" Margin="8,0,0,0"/>

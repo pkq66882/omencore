@@ -8962,4 +8962,49 @@
   <data name="FanCalibration_IssuesFormat" xml:space="preserve">
     <value>Калибровка завершена с проблемами — точек: {0}, сбоев: {1}</value>
   </data>
+  <data name="Trigger_LidState" xml:space="preserve">
+    <value>Состояние крышки</value>
+  </data>
+  <data name="Settings_SecondsFormat" xml:space="preserve">
+    <value>{0} с</value>
+  </data>
+  <data name="Settings_ScheduleNewRuleName" xml:space="preserve">
+    <value>Новое правило</value>
+  </data>
+  <data name="Update_NowAvailableFormat" xml:space="preserve">
+    <value>v{0} теперь доступна</value>
+  </data>
+  <data name="Update_SecurityFailed" xml:space="preserve">
+    <value>Проверка безопасности не пройдена</value>
+  </data>
+  <data name="Update_HashFailed" xml:space="preserve">
+    <value>Проверка хэша не пройдена — обновление отклонено в целях безопасности</value>
+  </data>
+  <data name="Update_FailedFormat" xml:space="preserve">
+    <value>Обновление не удалось: {0}</value>
+  </data>
+  <data name="Update_ErrorOccurred" xml:space="preserve">
+    <value>Произошла ошибка</value>
+  </data>
+  <data name="App_CrashTitle" xml:space="preserve">
+    <value>Сбой OmenCore</value>
+  </data>
+  <data name="App_NvmlCrashBodyFormat" xml:space="preserve">
+    <value>OmenCore аварийно завершился из-за проблемы драйвера NVIDIA.&#10;&#10;Это известная проблема NVML (NVIDIA Management Library) при высокой нагрузке GPU (игры, бенчмарки).&#10;&#10;Рекомендация: обновите драйверы NVIDIA.&#10;&#10;Ошибка: {0}</value>
+  </data>
+  <data name="App_GenericCrashBodyFormat" xml:space="preserve">
+    <value>OmenCore столкнулся с непредвиденной ошибкой:&#10;{0}&#10;&#10;Полные журналы: %LOCALAPPDATA%\\OmenCore.</value>
+  </data>
+  <data name="App_DesktopWarningBody" xml:space="preserve">
+    <value>⚠️ Обнаружен настольный ПК OMEN ⚠️&#10;&#10;OmenCore имеет экспериментальную поддержку настольных систем OMEN (25L, 30L, 35L, 40L, 45L).&#10;&#10;Управление вентиляторами на настольных ПК использует другие аппаратные интерфейсы. Часть функций может работать некорректно:&#10;&#10;• Управление скоростью вентиляторов может быть ограничено или недоступно&#10;• Мониторинг температуры должен работать нормально&#10;• Управление RGB поддерживается&#10;&#10;При проблемах сообщите на GitHub или в Discord.&#10;&#10;Продолжить?</value>
+  </data>
+  <data name="App_DesktopWarningTitle" xml:space="preserve">
+    <value>OMEN Desktop - экспериментальная поддержка</value>
+  </data>
+  <data name="TuningView_ValidateDriver" xml:space="preserve">
+    <value>Проверить драйвер</value>
+  </data>
+  <data name="TuningView_ValidateDriverTooltip" xml:space="preserve">
+    <value>Требуется один раз на версию драйвера NVIDIA (кроме 617.14) перед Apply CURRENT. Отправляет запрос, повторяющий собственный запрос драйвера, и проверяет, что ничего не изменилось.</value>
+  </data>
 </root>

@@ -3336,5 +3336,21 @@ namespace OmenCore.Localization
     public static string FanCalibration_ReadStatusFailedFormat => Get(nameof(FanCalibration_ReadStatusFailedFormat));
     public static string FanCalibration_SuccessFormat => Get(nameof(FanCalibration_SuccessFormat));
 
+    public static string App_CrashTitle => Get(nameof(App_CrashTitle));
+    public static string App_DesktopWarningBody => Get(nameof(App_DesktopWarningBody));
+    public static string App_DesktopWarningTitle => Get(nameof(App_DesktopWarningTitle));
+    public static string App_GenericCrashBodyFormat => Get(nameof(App_GenericCrashBodyFormat));
+    public static string App_NvmlCrashBodyFormat => Get(nameof(App_NvmlCrashBodyFormat));
+    public static string Settings_ScheduleNewRuleName => Get(nameof(Settings_ScheduleNewRuleName));
+    public static string Settings_SecondsFormat => Get(nameof(Settings_SecondsFormat));
+    public static string Trigger_LidState => Get(nameof(Trigger_LidState));
+    public static string TuningView_ValidateDriver => Get(nameof(TuningView_ValidateDriver));
+    public static string TuningView_ValidateDriverTooltip => Get(nameof(TuningView_ValidateDriverTooltip));
+    public static string Update_ErrorOccurred => Get(nameof(Update_ErrorOccurred));
+    public static string Update_FailedFormat => Get(nameof(Update_FailedFormat));
+    public static string Update_HashFailed => Get(nameof(Update_HashFailed));
+    public static string Update_NowAvailableFormat => Get(nameof(Update_NowAvailableFormat));
+    public static string Update_SecurityFailed => Get(nameof(Update_SecurityFailed));
+
     }
 }

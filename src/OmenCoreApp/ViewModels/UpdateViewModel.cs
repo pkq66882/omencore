@@ -288,8 +288,8 @@ namespace OmenCore.ViewModels
                     operation: "InstallUpdateAsync.Security",
                     message: "Update security verification failed",
                     ex: ex);
-                UpdateBannerMessage = "Security verification failed";
-                UpdateDownloadStatus = "Hash verification failed - update rejected for security";
+                UpdateBannerMessage = Strings.Update_SecurityFailed;
+                UpdateDownloadStatus = Strings.Update_HashFailed;
             }
             catch (Exception ex)
             {
@@ -298,8 +298,8 @@ namespace OmenCore.ViewModels
                     operation: "InstallUpdateAsync",
                     message: "Update installation failed",
                     ex: ex);
-                UpdateBannerMessage = $"Update failed: {ex.Message}";
-                UpdateDownloadStatus = "Error occurred";
+                UpdateBannerMessage = string.Format(Strings.Update_FailedFormat, ex.Message);
+                UpdateDownloadStatus = Strings.Update_ErrorOccurred;
             }
             finally
             {
@@ -327,7 +327,7 @@ namespace OmenCore.ViewModels
                     _availableUpdate = result.LatestVersion;
                     _updateInstallBlocked = false;
                     UpdateBannerVisible = true;
-                    UpdateBannerMessage = $"v{result.LatestVersion.VersionString} is now available";
+                    UpdateBannerMessage = string.Format(Strings.Update_NowAvailableFormat, result.LatestVersion.VersionString);
                     _logging.Info($"Background check found update: v{result.LatestVersion.VersionString}");
                     RefreshUpdateCommands();
                 }

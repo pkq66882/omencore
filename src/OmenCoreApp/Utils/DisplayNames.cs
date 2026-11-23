@@ -106,6 +106,7 @@ namespace OmenCore.Utils
             "Idle" => Strings.Trigger_Idle,
             "Process" => Strings.Trigger_Process,
             "WiFiSSID" => Strings.Trigger_WifiSsid,
+            "LidState" => Strings.Trigger_LidState,
             var s => s ?? string.Empty
         };
 

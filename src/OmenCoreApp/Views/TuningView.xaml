@@ -935,6 +935,9 @@
                                     ToolTip="{x:Static loc:Strings.TuningView_ReadsTheVbiosPowerTableNeedsNvflash64ExeNv}"/>
                             <Button Content="{x:Static loc:Strings.TuningView_FromFile}" Command="{Binding SystemControl.NvidiaPower.ResolveVbiosFromFileCommand}" Style="{StaticResource ModernButton}" Padding="16,8" Margin="0,0,8,4"/>
                             <Button Content="{x:Static loc:Strings.TuningView_ApplyMaxRestart}" Command="{Binding SystemControl.NvidiaPower.ApplyMaxCommand}" Style="{StaticResource ModernButton}" Padding="16,8" Margin="0,0,8,4"/>
+                            <Button Content="{x:Static loc:Strings.TuningView_ValidateDriver}" Command="{Binding SystemControl.NvidiaPower.ValidateDriverCommand}" Style="{StaticResource ModernButton}" Padding="16,8" Margin="0,0,8,4"
+                                    Visibility="{Binding SystemControl.NvidiaPower.NeedsDriverValidation, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                    ToolTip="{x:Static loc:Strings.TuningView_ValidateDriverTooltip}"/>
                             <Button Content="{x:Static loc:Strings.TuningView_ApplyCurrent}" Command="{Binding SystemControl.NvidiaPower.ApplyCurrentCommand}" Style="{StaticResource ModernButton}" Padding="16,8" Margin="0,0,8,4"/>
                             <Button Content="{x:Static loc:Strings.TuningView_RemoveMaxOverride}" Command="{Binding SystemControl.NvidiaPower.RemoveMaxCommand}" Style="{StaticResource ModernButton}" Padding="16,8" Margin="0,0,8,4"/>
                             <Button Content="{x:Static loc:Strings.DashboardView_Refresh}" Command="{Binding SystemControl.NvidiaPower.RefreshCommand}" Style="{StaticResource ModernButton}" Padding="16,8" Margin="0,0,8,4"/>

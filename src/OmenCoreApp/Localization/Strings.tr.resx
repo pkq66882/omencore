@@ -8962,4 +8962,49 @@
   <data name="FanCalibration_IssuesFormat" xml:space="preserve">
     <value>Kalibrasyon sorunlarla tamamlandı - {0} test noktası, {1} başarısız</value>
   </data>
+  <data name="Trigger_LidState" xml:space="preserve">
+    <value>Kapak durumu</value>
+  </data>
+  <data name="Settings_SecondsFormat" xml:space="preserve">
+    <value>{0} sn</value>
+  </data>
+  <data name="Settings_ScheduleNewRuleName" xml:space="preserve">
+    <value>Yeni kural</value>
+  </data>
+  <data name="Update_NowAvailableFormat" xml:space="preserve">
+    <value>v{0} artık kullanılabilir</value>
+  </data>
+  <data name="Update_SecurityFailed" xml:space="preserve">
+    <value>Güvenlik doğrulaması başarısız</value>
+  </data>
+  <data name="Update_HashFailed" xml:space="preserve">
+    <value>Karma doğrulaması başarısız - güncelleme güvenlik nedeniyle reddedildi</value>
+  </data>
+  <data name="Update_FailedFormat" xml:space="preserve">
+    <value>Güncelleme başarısız: {0}</value>
+  </data>
+  <data name="Update_ErrorOccurred" xml:space="preserve">
+    <value>Bir hata oluştu</value>
+  </data>
+  <data name="App_CrashTitle" xml:space="preserve">
+    <value>OmenCore çöktü</value>
+  </data>
+  <data name="App_NvmlCrashBodyFormat" xml:space="preserve">
+    <value>OmenCore bir NVIDIA sürücü sorunu nedeniyle çöktü.&#10;&#10;Bu, oyun veya kıyaslama gibi yüksek GPU yüklerinde NVML (NVIDIA Management Library) ile bilinen bir sorundur.&#10;&#10;Öneri: NVIDIA sürücülerinizi en son sürüme güncelleyin.&#10;&#10;Hata: {0}</value>
+  </data>
+  <data name="App_GenericCrashBodyFormat" xml:space="preserve">
+    <value>OmenCore beklenmeyen bir hatayla karşılaştı:&#10;{0}&#10;&#10;Tam günlükler: %LOCALAPPDATA%\\OmenCore.</value>
+  </data>
+  <data name="App_DesktopWarningBody" xml:space="preserve">
+    <value>⚠️ OMEN Masaüstü PC Algılandı ⚠️&#10;&#10;OmenCore, OMEN masaüstü sistemleri (25L, 30L, 35L, 40L, 45L) için deneysel destek sunar.&#10;&#10;Masaüstü fan denetimi dizüstülerden farklı donanım arayüzleri kullanır. Bazı özellikler düzgün çalışmayabilir:&#10;&#10;• Fan hızı denetimi sınırlı olabilir veya kullanılamayabilir&#10;• Sıcaklık izleme normal çalışmalıdır&#10;• RGB denetimi desteklenir&#10;&#10;Sorun yaşarsanız lütfen GitHub veya Discord üzerinden bildirin.&#10;&#10;Devam edilsin mi?</value>
+  </data>
+  <data name="App_DesktopWarningTitle" xml:space="preserve">
+    <value>OMEN Masaüstü - Deneysel Destek</value>
+  </data>
+  <data name="TuningView_ValidateDriver" xml:space="preserve">
+    <value>Sürücüyü doğrula</value>
+  </data>
+  <data name="TuningView_ValidateDriverTooltip" xml:space="preserve">
+    <value>617.14 dışındaki NVIDIA sürücülerinde Apply CURRENT öncesi sürücü sürümü başına bir kez gerekir. Sürücünün kendi güç isteğini yineleyen bir komut gönderir ve değişiklik olmadığını doğrular.</value>
+  </data>
 </root>

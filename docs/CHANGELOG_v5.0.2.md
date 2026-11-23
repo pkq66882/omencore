@@ -1,7 +1,7 @@
 # OmenCore v5.0.2
 
-**Release Date:** not yet released
-**Type:** Fix release: fan hand-back after verification, Linux Max on newer `hp-wmi` drivers, small UI fixes.
+**Release Date:** 2026-11-23
+**Type:** Fix release: fan hand-back after verification, GPU temperature spikes on battery, NVIDIA power unlock on newer drivers (Prophecy 1.2.9), Linux Max on newer `hp-wmi` drivers, Simplified Chinese, small UI fixes.
 
 ## Added
 
@@ -10,12 +10,24 @@
 - **Recorded field results:** `8DCD` Guided Fan Verification 6/6 on 5.0.1 (#143; CPU 100 % at the firmware ceiling,
   level 50 of 55). `8C2F` GPU fan tachometer tracked a GPU load up and back down on 5.0.1 (2,400 → 3,317 → 2,712 RPM)
   with the BIOS in Auto at all 49 checks (#246), so both tachometer channels from 5.0.1 are now hardware-checked.
+  `8C2F` 15-inch chassis (15-fb2772nd, BIOS F.09) Guided Fan Verification 6/6 on 5.0.1 (#268).
 
 - **Simplified Chinese interface** (#266, by pkq66882, #69): a `zh` catalog for every translated string, 简体中文 in
   the Settings language list, and Microsoft YaHei UI as the font fallback for Chinese text anywhere in the app (game
   and profile names, paths), so it no longer depends on whichever face Windows picks per glyph.
 
 ## Fixed
+
+- **NVIDIA Power Unlock: Apply CURRENT stayed greyed out on every NVIDIA driver except 617.14** (Discord). CURRENT
+  unlocks only on the reviewed driver or after the driver has been validated, and the validation step existed in the
+  backend but no button reached it. Tuning now shows **Validate driver** when the installed driver needs it. The
+  backend is updated to bobshmo's Prophecy Power Unlocker 1.2.9 (used with permission), which changes what that step
+  sends: it now repeats the driver's own current power request instead of the public power ceiling, which can be
+  higher (140 W over a 115 W request) and would have changed power in a step meant to change nothing. Also from
+  1.2.9: Apply CURRENT no longer "rolls back" to a value guessed from the public ceiling, and reports whether the
+  driver's own request reads back at the target; NVIDIA errors are reported without calling back into a failing
+  driver. OmenCore's Victus preparation around CURRENT, its per-GPU target range and its settings folder are
+  unchanged. *Implemented, pending confirmation on hardware.*
 
 - **Fans stayed pinned at the last test level after Guided Fan Verification** (#143, Victus 15-fa2xxx `8DCD`, thermal
   policy V1). A verification run ends with the fans at a level written directly (55 here), and when the run started in
@@ -38,6 +50,10 @@
   10 s to let the GPU sleep. When the two disagreed, the reading flipped between them. The die reading is now kept
   until its next refresh is due (plus 5 s), and the BIOS sensor is used only when NVIDIA has not answered. It should
   also cover the short 80 °C+ blips reported on AC, if those were a missed NVIDIA read. *Implemented, pending confirmation.*
+- **"Temperature warnings" off still showed the critical temperature alert** (#177). The switch now covers that
+  alert too. Thermal protection still raises the fans on a hot CPU or GPU whatever the switch says.
+- **Games added by hand disappeared from the Games tab after a restart** (#177). Scanned games were already found
+  again on every open; hand-added ones are now saved in the config and restored, skipping any that were deleted.
 - **AMD Curve Optimizer showed "Degraded" for a rounded value** (#222, Ryzen 9 8940HX on `8E35`). Offsets go to the
   SMU in whole counts of 4 mV-equivalent, truncated toward zero, so −15 is applied as −12. The status now says it was
   applied at the nearest Curve Optimizer step instead of reporting a mismatch; a difference of a full step or more,
@@ -67,7 +83,10 @@
 
 - **#263** (Kenyi001): an exact entry for the OMEN 16-k0xxx `8A4D`. Under review: the entry marks the board as
   user-verified, which changes how firmware fan counts are trusted, so it needs the export and Guided Fan Verification
-  result behind it. The same board's Battery Care report (#243) is not covered by it.
+  result behind it. The same board's Battery Care report (#243) is not covered by it. Kenyi001 has since run the
+  verification (6/6); waiting on the export and two small changes.
+- **#259, #250** (Dependabot): minor NuGet updates (FluentAssertions, Moq, test SDK, System.Management and others) and
+  the Pages / build-provenance workflow actions. #258 and #262 were duplicates of #259 and are closed.
 
 ## Community feedback (r/HPOmen, November 2026)
 
