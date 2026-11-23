@@ -9274,4 +9274,28 @@
   <data name="SC_CustomProfileDescFormat" xml:space="preserve">
     <value>Пользовательский профиль: ядро {0}, память {1}, питание {2}, напряжение {3}</value>
   </data>
+  <data name="Settings_BiosNotChecked" xml:space="preserve">
+    <value>Не проверено</value>
+  </data>
+  <data name="Settings_BiosUnableDetect" xml:space="preserve">
+    <value>Не удалось определить</value>
+  </data>
+  <data name="Settings_BiosReadFailed" xml:space="preserve">
+    <value>Не удалось прочитать сведения о системе</value>
+  </data>
+  <data name="Settings_BiosChecking" xml:space="preserve">
+    <value>Проверка обновлений BIOS HP...</value>
+  </data>
+  <data name="Settings_BiosUpToDate" xml:space="preserve">
+    <value>✓ BIOS обновлён</value>
+  </data>
+  <data name="Settings_CheckingHardware" xml:space="preserve">
+    <value>Проверка оборудования...</value>
+  </data>
+  <data name="Settings_Checking" xml:space="preserve">
+    <value>Проверка...</value>
+  </data>
+  <data name="Settings_Detecting" xml:space="preserve">
+    <value>Обнаружение...</value>
+  </data>
 </root>

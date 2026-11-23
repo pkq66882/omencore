@@ -3444,5 +3444,14 @@ namespace OmenCore.Localization
     public static string SC_CustomProfileDescFormat => Get(nameof(SC_CustomProfileDescFormat));
     public static string TempDiag_ComparisonFailedFormat => Get(nameof(TempDiag_ComparisonFailedFormat));
 
+    public static string Settings_BiosChecking => Get(nameof(Settings_BiosChecking));
+    public static string Settings_BiosNotChecked => Get(nameof(Settings_BiosNotChecked));
+    public static string Settings_BiosReadFailed => Get(nameof(Settings_BiosReadFailed));
+    public static string Settings_BiosUnableDetect => Get(nameof(Settings_BiosUnableDetect));
+    public static string Settings_BiosUpToDate => Get(nameof(Settings_BiosUpToDate));
+    public static string Settings_Checking => Get(nameof(Settings_Checking));
+    public static string Settings_CheckingHardware => Get(nameof(Settings_CheckingHardware));
+    public static string Settings_Detecting => Get(nameof(Settings_Detecting));
+
     }
 }

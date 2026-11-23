@@ -335,7 +335,7 @@
     <value>校准成功完成</value>
   </data>
   <data name="FanCalibrationControl_Target" xml:space="preserve">
-    <value>目标 %</value>
+    <value>目标（%）</value>
   </data>
   <data name="FanCalibrationControl_AppliedLevel" xml:space="preserve">
     <value>应用档位</value>
@@ -353,7 +353,7 @@
     <value>⚠️ 重要提示：</value>
   </data>
   <data name="FanCalibrationControl_CalibrationMayTake510MinutesPerFan" xml:space="preserve">
-    <value>• 每个风扇的校准可能需要 5-10 分钟</value>
+    <value>• 每个风扇的校准可能需要 5–10 分钟</value>
   </data>
   <data name="FanCalibrationControl_FansWillRunAtVariousSpeedsEnsureProperVent" xml:space="preserve">
     <value>• 风扇会以不同转速运转——请确保通风良好</value>
@@ -362,7 +362,7 @@
     <value>• 请勿中断校准过程</value>
   </data>
   <data name="FanCalibrationControl_OmencoreRestoresBiosAutoFanControlWhenCali" xml:space="preserve">
-    <value>• 校准结束时 OmenCore 会恢复 BIOS 自动风扇控制；若风扇仍持续高速，可使用“恢复自动”</value>
+    <value>• 校准结束时 OmenCore 会恢复 BIOS 自动风扇控制；若风扇仍持续高速，可使用“恢复自动”。</value>
   </data>
   <data name="FanCalibrationControl_CalibrationDataIsStoredLocallyAndCanBeShar" xml:space="preserve">
     <value>• 校准数据保存在本地，可分享给社区</value>
@@ -386,7 +386,7 @@
     <value>清除数据</value>
   </data>
   <data name="FanCurveChart_FanSpeedVsTemperature" xml:space="preserve">
-    <value>风扇转速 vs 温度</value>
+    <value>风扇转速与温度</value>
   </data>
   <data name="FanCurveChart_LoadingFanCurveData" xml:space="preserve">
     <value>正在加载风扇曲线数据…</value>
@@ -488,10 +488,10 @@
     <value>系统告警</value>
   </data>
   <data name="HardwareMonitoringDashboard_ActiveAlerts" xml:space="preserve">
-    <value>活动告警</value>
+    <value>生效中的告警</value>
   </data>
   <data name="HardwareMonitoringDashboard_NoActiveAlerts" xml:space="preserve">
-    <value>无活动告警</value>
+    <value>没有生效中的告警</value>
   </data>
   <data name="HardwareMonitoringDashboard_EfficiencyMetrics" xml:space="preserve">
     <value>效率指标</value>
@@ -509,7 +509,7 @@
     <value>状态</value>
   </data>
   <data name="HardwareMonitoringDashboard_Fan68Efficient" xml:space="preserve">
-    <value>风扇：68% 效率</value>
+    <value>散热效率：68%</value>
   </data>
   <data name="HardwareMonitoringDashboard_BatteryStatus" xml:space="preserve">
     <value>电池状态</value>
@@ -596,7 +596,7 @@
     <value>系统功耗与散热配置</value>
   </data>
   <data name="AdvancedView_QuietPerformanceModeSilentOperationLowPowe" xml:space="preserve">
-    <value>安静性能模式：静音运行、低功耗</value>
+    <value>冷静模式：静音运行、低功耗</value>
   </data>
   <data name="AdvancedView_SilentOperation" xml:space="preserve">
     <value>静音运行</value>
@@ -623,7 +623,7 @@
     <value>智能风扇</value>
   </data>
   <data name="AdvancedView_PerformanceModeMaximumPowerHighFanSpeed" xml:space="preserve">
-    <value>性能模式：最大功耗、高风扇转速</value>
+    <value>狂暴模式：最大功耗、高风扇转速</value>
   </data>
   <data name="AdvancedView_Performance" xml:space="preserve">
     <value>狂暴</value>
@@ -659,7 +659,7 @@
     <value>控制 GPU 总图形功耗（TGP）和 Dynamic Boost（PPAB）。数值越高 GPU 可用功耗越大。“扩展”档供可能支持 +25W 加速的 RTX 5080 及更新显卡使用。</value>
   </data>
   <data name="AdvancedView_FirmwareDeterminedCeiling" xml:space="preserve">
-    <value>⚠ 固件决定的功耗上限：</value>
+    <value>⚠️ 固件决定的功耗上限：</value>
   </data>
   <data name="AdvancedView_TheseLevelsAreRelativeBoostRequestsSentToT" xml:space="preserve">
     <value>这些档位是发给 OMEN Gaming Hub 同款 GPU 固件处理器的相对加速请求，并不保证绝对功耗。实际功耗上限可能受其他功耗控制软件遗留的 GPU 固件/EC 状态影响——如果你看到的功耗与档位说明不符，请先把 OMEN Gaming Hub 完全关闭再试。</value>
@@ -686,7 +686,7 @@
     <value>在核显与独显之间切换，兼顾性能或续航。</value>
   </data>
   <data name="AdvancedView_HardwareLimitation" xml:space="preserve">
-    <value>⚠ 硬件限制：</value>
+    <value>⚠️ 硬件限制：</value>
   </data>
   <data name="AdvancedView_GpuModeSwitchingRequiresASystemRebootSomeO" xml:space="preserve">
     <value>GPU 模式切换需要重启系统。部分 OMEN 机型仅能通过 BIOS 设置切换。</value>
@@ -704,7 +704,7 @@
     <value>应用（需重启）</value>
   </data>
   <data name="AdvancedView_ApplyGpuModeSwitchRequiresRestart" xml:space="preserve">
-    <value>应用 GPU 模式切换，需要重启</value>
+    <value>应用 GPU 模式切换（需重启）</value>
   </data>
   <data name="AdvancedView_WhyGpuModeSwitchingIsUnavailable" xml:space="preserve">
     <value>为什么 GPU 模式切换不可用</value>
@@ -713,7 +713,7 @@
     <value>HP 遥测与后台服务</value>
   </data>
   <data name="AdvancedView_StopsAndDisablesHpSAnalyticsAndDiagnostics" xml:space="preserve">
-    <value>停止并禁用 HP 的分析诊断服务。可逆：每个服务的原始启动类型都会保存，“恢复”可还原。需要管理员权限。不影响 OmenCore 依赖的任何组件。</value>
+    <value>停止并禁用 HP 的分析与诊断服务</value>
   </data>
   <data name="AdvancedView_DisableHpTelemetry" xml:space="preserve">
     <value>禁用 HP 遥测</value>
@@ -728,13 +728,13 @@
     <value>恢复 HP 遥测服务</value>
   </data>
   <data name="AdvancedView_DisplayOverdrive" xml:space="preserve">
-    <value>显示加速</value>
+    <value>显示加速（Overdrive）</value>
   </data>
   <data name="AdvancedView_ReducesPanelResponseTimeForLessMotionBlurD" xml:space="preserve">
     <value>缩短面板响应时间，减少快节奏游戏中的拖影。部分面板可能出现轻微过冲伪影。</value>
   </data>
   <data name="AdvancedView_PanelOverdrive" xml:space="preserve">
-    <value>面板加速</value>
+    <value>面板加速（Overdrive）</value>
   </data>
   <data name="AdvancedView_ImprovesPixelResponseTimeOn165hzDisplays" xml:space="preserve">
     <value>改善 165Hz+ 屏幕的像素响应时间</value>
@@ -761,7 +761,7 @@
     <value>移除全部低风险项</value>
   </data>
   <data name="BloatwareManagerView_RemoveLowRisk" xml:space="preserve">
-    <value>预览低风险移除</value>
+    <value>预览低风险项的移除</value>
   </data>
   <data name="BloatwareManagerView_ExportBloatwareDryRunReport" xml:space="preserve">
     <value>导出预装软件移除预检报告</value>
@@ -992,7 +992,7 @@
     <value>来源：</value>
   </data>
   <data name="DiagnosticsView_LastSampleAge" xml:space="preserve">
-    <value>样本距今：</value>
+    <value>上次采样：</value>
   </data>
   <data name="DiagnosticsView_ConsecutiveTimeouts" xml:space="preserve">
     <value>连续超时：</value>
@@ -1148,7 +1148,7 @@
     <value>✓ 用户验证过的方案</value>
   </data>
   <data name="DiagnosticsView_InferredNotYetVerified" xml:space="preserve">
-    <value>⚠ 推断值，尚未验证</value>
+    <value>⚠️ 推断值，尚未验证</value>
   </data>
   <data name="DiagnosticsView_ThisReflectsWhatOmencoreSModelDatabaseKnow" xml:space="preserve">
     <value>这反映的是 OmenCore 机型数据库对这台机器检测到的主板的识别结果——某项功能显示“不支持”可能是真实的硬件/固件限制，而不是 OmenCore 的 bug。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功耗提升）；常规标签页里的基础风扇模式（自动/性能/最大）由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
@@ -1274,7 +1274,7 @@
     <value>极限风扇预设：非“最大”档散热最强的曲线</value>
   </data>
   <data name="FanControlView_Extreme" xml:space="preserve">
-    <value>极限</value>
+    <value>极致</value>
   </data>
   <data name="FanControlView_AggressiveFanCurveThatRampsUpQuicklyGoodFo" xml:space="preserve">
     <value>激进型风扇曲线，转速爬升快。适合游戏时段。</value>
@@ -1310,7 +1310,7 @@
     <value>立即应用所选固定档位</value>
   </data>
   <data name="FanControlView_ApplyDirectFanLevel" xml:space="preserve">
-    <value>应用直接风扇档位</value>
+    <value>应用所选固定档位</value>
   </data>
   <data name="FanControlView_NameForYourCustomPreset" xml:space="preserve">
     <value>自定义预设的名称</value>
@@ -1379,7 +1379,7 @@
     <value>CPU/GPU 独立</value>
   </data>
   <data name="FanControlView_GpuFanWritesAreModelDependentUnifiedCurveM" xml:space="preserve">
-    <value>GPU 风扇写入依赖机型；统一曲线模式仍是安全默认。</value>
+    <value>GPU 风扇写入依赖机型；统一曲线模式仍是安全的默认选项。</value>
   </data>
   <data name="FanControlView_GpuFanCurveSupportStatus" xml:space="preserve">
     <value>GPU 风扇曲线支持状态</value>
@@ -1613,7 +1613,7 @@
     <value>可执行文件名（如 RocketLeague.exe）</value>
   </data>
   <data name="GameProfileManagerView_ExecutablePathOptionalForSpecificInstalls" xml:space="preserve">
-    <value>可执行文件路径（可选——用于指定安装）</value>
+    <value>可执行文件路径（可选——用于指定安装位置）</value>
   </data>
   <data name="GameProfileManagerView_Browse" xml:space="preserve">
     <value>浏览…</value>
@@ -1652,7 +1652,7 @@
     <value>高级设置</value>
   </data>
   <data name="GameProfileManagerView_PriorityExactExecutablePathsWinFirstHigher" xml:space="preserve">
-    <value>优先级（精确可执行路径优先；并列时优先级更高者先执行）</value>
+    <value>优先级（精确可执行路径优先；并列时优先级更高者胜出）</value>
   </data>
   <data name="GameProfileManagerView_RestoreDefaultFanPerformanceSettingsWhenGa" xml:space="preserve">
     <value>游戏退出时恢复默认风扇/性能设置</value>
@@ -1682,7 +1682,7 @@
     <value>性能与散热</value>
   </data>
   <data name="GeneralView_QuickProfileSelectionForOptimalSystemTunin" xml:space="preserve">
-    <value>快速选择配置方案，实现最佳系统调校</value>
+    <value>快速选择方案，获得最佳调校效果</value>
   </data>
   <data name="GeneralView_ThermalSafetyActive" xml:space="preserve">
     <value>散热安全已激活</value>
@@ -1700,7 +1700,7 @@
     <value>性能方案：CPU/GPU 最大功耗与激进风扇</value>
   </data>
   <data name="GeneralView_MaximumCpuGpuPowerLimitsAndAggressiveFanCu" xml:space="preserve">
-    <value>CPU/GPU 最大功耗限制与激进风扇曲线，适合游戏和重负载工作。</value>
+    <value>将 CPU/GPU 功耗上限拉满，并搭配激进风扇曲线，适合游戏与重负载任务。</value>
   </data>
   <data name="GeneralView_MaximumOutput" xml:space="preserve">
     <value>最大输出</value>
@@ -2477,13 +2477,13 @@
     <value>将最近一次内存清理摘要复制到剪贴板</value>
   </data>
   <data name="MemoryOptimizerView_SafeCleanTrimsWorkingSetsPurgesLowPriority" xml:space="preserve">
-    <value>安全清理：修剪工作集、清除低优先级待备页、合并页面</value>
+    <value>安全清理：修剪工作集、清除低优先级备用页、合并页面</value>
   </data>
   <data name="MemoryOptimizerView_SmartClean" xml:space="preserve">
     <value>智能清理</value>
   </data>
   <data name="MemoryOptimizerView_AggressiveCleanAllOperationsIncludingStand" xml:space="preserve">
-    <value>强力清理：包括待备列表清除与缓存刷新在内的全部操作。可能造成短暂卡顿。</value>
+    <value>强力清理：包括备用列表清除与缓存刷新在内的全部操作。可能造成短暂卡顿。</value>
   </data>
   <data name="MemoryOptimizerView_DeepClean" xml:space="preserve">
     <value>深度清理</value>
@@ -2525,16 +2525,16 @@
     <value>释放所有进程的未用内存</value>
   </data>
   <data name="MemoryOptimizerView_PurgeStandbyList" xml:space="preserve">
-    <value>清除待备列表</value>
+    <value>清除备用列表</value>
   </data>
   <data name="MemoryOptimizerView_RemovesCachedPagesFromStandbyMemory" xml:space="preserve">
-    <value>从待备内存中移除缓存页面</value>
+    <value>从备用内存中移除缓存页面</value>
   </data>
   <data name="MemoryOptimizerView_MediumMayCauseBriefStutter" xml:space="preserve">
     <value>中等——可能造成短暂卡顿</value>
   </data>
   <data name="MemoryOptimizerView_FlushFileCache" xml:space="preserve">
-    <value>刷新文件缓存</value>
+    <value>清空文件缓存</value>
   </data>
   <data name="MemoryOptimizerView_FlushesTheSystemFileCache" xml:space="preserve">
     <value>清空系统文件缓存</value>
@@ -2543,7 +2543,7 @@
     <value>中等——可能暂时降低文件访问速度</value>
   </data>
   <data name="MemoryOptimizerView_FlushModifiedPages" xml:space="preserve">
-    <value>刷新已修改页面</value>
+    <value>清空已修改页面</value>
   </data>
   <data name="MemoryOptimizerView_WritesModifiedPagesToDiskAndFreesMemory" xml:space="preserve">
     <value>将已修改页面写入磁盘并释放内存</value>
@@ -2573,7 +2573,7 @@
     <value>内核非分页</value>
   </data>
   <data name="MemoryOptimizerView_StandbyList" xml:space="preserve">
-    <value>待备列表</value>
+    <value>备用列表</value>
   </data>
   <data name="MemoryOptimizerView_ModifiedPages" xml:space="preserve">
     <value>已修改页面</value>
@@ -2630,10 +2630,10 @@
     <value>工作原理</value>
   </data>
   <data name="MemoryOptimizerView_TrimsProcessWorkingSetsPurgesLowPrioritySt" xml:space="preserve">
-    <value> 修剪进程工作集、清除低优先级待备页并合并相同内存页。这些操作是安全的，不会造成应用问题。</value>
+    <value> 修剪进程工作集、清除低优先级备用页并合并相同内存页。这些操作是安全的，不会造成应用问题。</value>
   </data>
   <data name="MemoryOptimizerView_AdditionallyPurgesAllStandbyPagesFlushesTh" xml:space="preserve">
-    <value> 还会清除全部待备页、刷新系统文件缓存并把已修改页面写入磁盘。数据重新缓存时可能造成短暂卡顿。</value>
+    <value> 还会清除全部备用页、清空系统文件缓存并把已修改页面写入磁盘。数据重新缓存时可能造成短暂卡顿。</value>
   </data>
   <data name="OnboardingWindow_WelcomeToOmencore" xml:space="preserve">
     <value>欢迎使用 OmenCore</value>
@@ -2654,7 +2654,7 @@
     <value>OmenCore 能做什么：</value>
   </data>
   <data name="OnboardingWindow_CustomFanCurvesWithTemperatureBasedControl" xml:space="preserve">
-    <value>自定义风扇曲线，基于温度的控制</value>
+    <value>基于温度控制的自定义风扇曲线</value>
   </data>
   <data name="OnboardingWindow_N4ZoneRgbKeyboardLightingControl" xml:space="preserve">
     <value>四分区 RGB 键盘灯效控制</value>
@@ -2693,7 +2693,7 @@
     <value>应用风扇预设</value>
   </data>
   <data name="OnboardingWindow_HeadToFanControlAndTryTheAutoOrGamingPrese" xml:space="preserve">
-    <value>前往“风扇控制”，试试 Auto 或 Gaming 预设。</value>
+    <value>前往“风扇控制”，试试“自动”或“游戏”预设。</value>
   </data>
   <data name="OnboardingWindow_CustomiseYourLighting" xml:space="preserve">
     <value>自定义你的灯效</value>
@@ -2762,7 +2762,7 @@
     <value>关闭屏幕</value>
   </data>
   <data name="QuickPopupWindow_DisplayOff" xml:space="preserve">
-    <value>屏幕关闭</value>
+    <value>熄屏</value>
   </data>
   <data name="QuickPopupWindow_ToggleRefreshRate" xml:space="preserve">
     <value>切换刷新率</value>
@@ -2903,7 +2903,7 @@
     <value>安全模式启动窗口</value>
   </data>
   <data name="SettingsView_HowLongAfterStartupTheGuardCanAutoActivate" xml:space="preserve">
-    <value>启动后多久内仍允许自动进入安全模式</value>
+    <value>启动后多少秒内允许自动激活安全模式</value>
   </data>
   <data name="SettingsView_StartupSafeModeWindowSeconds" xml:space="preserve">
     <value>启动安全模式时间窗（秒）</value>
@@ -2912,7 +2912,7 @@
     <value>超时阈值</value>
   </data>
   <data name="SettingsView_ConsecutiveMonitorTimeoutsRequiredBeforeSt" xml:space="preserve">
-    <value>进入安全模式前允许的连续监控超时次数</value>
+    <value>触发启动安全模式所需的连续监控超时次数</value>
   </data>
   <data name="SettingsView_StartupSafeModeTimeoutThreshold" xml:space="preserve">
     <value>启动安全模式超时阈值</value>
@@ -2972,7 +2972,7 @@
     <value>返回自动模式时不锁定风扇档位（实验性）</value>
   </data>
   <data name="SettingsView_ForLaptopsWhoseFansStayNear2000RpmAtHighTe" xml:space="preserve">
-    <value>适用于高温下风扇会停在约 2000 RPM、只有切回 OEM 预设才恢复的机型。开启后，OmenCore 把控制权交还 BIOS 时会省略风扇档位提示。默认关闭，重启后生效；尚未在真机上验证。</value>
+    <value>适用于高温下风扇维持在约 2000 RPM 附近、只有切回 OEM 预设才恢复的机型。开启后，OmenCore 把控制权交还 BIOS 时会省略风扇档位提示。默认关闭，重启后生效；尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAuto" xml:space="preserve">
     <value>返回自动时不锁定风扇档位</value>
@@ -2981,7 +2981,7 @@
     <value>最大风扇模式自动恢复</value>
   </data>
   <data name="SettingsView_OffKeepsMaxUntilYouChangeItCooldownHandsTh" xml:space="preserve">
-    <value>关闭：保持最大模式，直到你手动切换。冷却：CPU 与 GPU 连续 2 分钟低于 60°C 后，交由 BIOS 自动控制。计时：到达设定时间后恢复。尚未在真机上验证。</value>
+    <value>关闭：保持最大模式，直到你手动切换。冷却：CPU 与 GPU 连续 2 分钟低于 60°C 后，交由 BIOS 自动控制。定时：到达设定时间后恢复。尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_Minutes" xml:space="preserve">
     <value>分钟</value>
@@ -3461,7 +3461,7 @@
     <value>紧凑弹窗</value>
   </data>
   <data name="SettingsView_SmallerCardLessSecondaryText" xml:space="preserve">
-    <value>（更小的卡片，更少次要文字）</value>
+    <value>（卡片更小，次要文字更少）</value>
   </data>
   <data name="SettingsView_MetricsToDisplay" xml:space="preserve">
     <value>要显示的指标</value>
@@ -3554,7 +3554,7 @@
     <value>充电阈值</value>
   </data>
   <data name="SettingsView_SetMaximumBatteryChargeLevel" xml:space="preserve">
-    <value>设置最大电池充电电量</value>
+    <value>设置电池充电上限</value>
   </data>
   <data name="SettingsView_BatteryChargeThresholdPercent" xml:space="preserve">
     <value>电池充电阈值（%）</value>
@@ -3923,7 +3923,7 @@
     <value>为游戏性能微调 Windows</value>
   </data>
   <data name="SystemOptimizerView_ApplyAllOptimizationsForMaximumGamingPerfo" xml:space="preserve">
-    <value>应用全部优化，榨取最大游戏性能</value>
+    <value>应用全部优化，充分释放游戏性能</value>
   </data>
   <data name="SystemOptimizerView_GamingMax" xml:space="preserve">
     <value>游戏极限</value>
@@ -4205,7 +4205,7 @@
     <value>移除 MAX 覆盖</value>
   </data>
   <data name="TuningView_NotesDoNotDisablePpabDynamicBoostTheAdapte" xml:space="preserve">
-    <value>注意：不要禁用 PPAB（Dynamic Boost）；适配器限制是 CPU 与 GPU 合计的。显卡驱动更新可能撤销解锁，之后请核对实时数值。RTX 5050 未测试。如果 CURRENT 不生效，先切换到其他 HP 性能模式再切回，然后重新应用。</value>
+    <value>注意：不要禁用 PPAB（Dynamic Boost）；适配器的上限由 CPU 与 GPU 共享。显卡驱动更新可能撤销解锁，之后请核对实时数值。RTX 5050 未测试。如果 CURRENT 不生效，先切换到其他 HP 性能模式再切回，然后重新应用。</value>
   </data>
   <data name="TuningView_Driver" xml:space="preserve">
     <value>驱动</value>
@@ -4241,7 +4241,7 @@
     <value>可通过 AMD Display Library 对 AMD Radeon GPU 超频。在下方调节频率偏移与功耗限制。</value>
   </data>
   <data name="TuningView_ManualApplyOnlyAmdOffsetsAreNotSavedAndDoN" xml:space="preserve">
-    <value>仅手动应用：不会保存 AMD 偏移，OmenCore 启动时也不会重新应用。每次重启后需重新应用。</value>
+    <value>仅手动应用：AMD 偏移不会保存，OmenCore 启动时不会自动重新应用，重启后需手动再设一次。</value>
   </data>
   <data name="TuningView_CoreClockOffsetMhz" xml:space="preserve">
     <value>核心频率偏移（MHz）</value>
@@ -4349,7 +4349,7 @@
     <value>来自最近一次校准运行的实测占空比-RPM 映射。</value>
   </data>
   <data name="FanControlViewModel_CalibrationMapRefreshed" xml:space="preserve">
-    <value>风扇校准映射已从最新向导运行中刷新。</value>
+    <value>风扇校准映射已按最新校准向导结果刷新。</value>
   </data>
   <data name="FanControlViewModel_CalibrationWizardClosed" xml:space="preserve">
     <value>风扇校准向导已关闭。</value>
@@ -4385,10 +4385,10 @@
     <value>联动模式下，切换性能方案会同时切换风扇模式。只有当你希望风扇跟随性能方案时才开启。</value>
   </data>
   <data name="FanControlViewModel_OemAutoFailed" xml:space="preserve">
-    <value>OEM 自动恢复未报告成功</value>
+    <value>OEM 自动模式恢复未成功</value>
   </data>
   <data name="FanControlViewModel_OemAutoRestored" xml:space="preserve">
-    <value>OEM 自动已恢复</value>
+    <value>已恢复 OEM 自动模式</value>
   </data>
   <data name="FanControlViewModel_StartupHintCategoryOff" xml:space="preserve">
     <value>设置中“启动硬件恢复”的“风扇”类别未开启，因此重启后此预设/曲线不会自动重新应用——请重新选择，或在设置中开启该类别。</value>
@@ -4805,7 +4805,7 @@
     <value>已找到 {0} 款游戏</value>
   </data>
   <data name="HardwareMonitoringDashboard_StateInactive" xml:space="preserve">
-    <value>未活动</value>
+    <value>未激活</value>
   </data>
   <data name="HardwareMonitoringDashboard_TrendStable" xml:space="preserve">
     <value>稳定</value>
@@ -4814,7 +4814,7 @@
     <value>检测完成。发现 {0} 台设备。</value>
   </data>
   <data name="LightingViewModel_ActiveTargets" xml:space="preserve">
-    <value>{0} 个活动灯效目标</value>
+    <value>{0} 个已启用的灯效目标</value>
   </data>
   <data name="LightingViewModel_KeyboardRgbNotDetected" xml:space="preserve">
     <value>此系统上未检测到键盘 RGB。</value>
@@ -4868,7 +4868,7 @@
     <value>CPU 曲线优化（AMD Curve Optimizer）</value>
   </data>
   <data name="SystemControlViewModel_DetectedLimits" xml:space="preserve">
-    <value>检测到的 {0} 限制：核心 {1}，显存 {2}，功耗 {3}。</value>
+    <value>检测到 {0} 的调节范围：核心 {1}，显存 {2}，功耗 {3}。</value>
   </data>
   <data name="SystemControlViewModel_MsrLimitsUnavailable" xml:space="preserve">
     <value>MSR 封装限制不可用——HP 固件可能需要 OMEN 性能模式或 Unleashed 模式</value>
@@ -4901,10 +4901,10 @@
     <value>测试应用将运行所选调优 30 秒，随后恢复之前的 GPU 状态，除非你点击“保留”。</value>
   </data>
   <data name="SystemControlViewModel_UndervoltBackend" xml:space="preserve">
-    <value>后端：通过 {0} 的 Intel 电压偏移</value>
+    <value>后端：Intel 电压偏移（经 {0}）</value>
   </data>
   <data name="SystemControlViewModel_UndervoltHelp" xml:space="preserve">
-    <value>降低 CPU 电压偏移以降低温度和功耗。负值越大降压越强。</value>
+    <value>数值越负，降压幅度越大</value>
   </data>
   <data name="SystemOptimizerViewModel_NoPreflightWarnings" xml:space="preserve">
     <value>无额外预检警告。</value>
@@ -5015,7 +5015,7 @@
     <value>iCUE 未检测到</value>
   </data>
   <data name="LightingViewModel_Level" xml:space="preserve">
-    <value>电平：{0}%</value>
+    <value>音频电平：{0}%</value>
   </data>
   <data name="LightingViewModel_LogitechNotDetected" xml:space="preserve">
     <value>未检测到 Logitech G HUB</value>
@@ -5147,7 +5147,7 @@
     <value>{0} 秒前</value>
   </data>
   <data name="HardwareMonitoringDashboard_StatsFormat" xml:space="preserve">
-    <value>{0}-{1} {4} | 平均 {2} {4} | {3} 个采样 | 趋势 {5} {6} {4}</value>
+    <value>{0}-{1} {4} | 平均 {2} {4} | {3} 个采样点 | 趋势 {5} {6} {4}</value>
   </data>
   <data name="LightingViewModel_KeyboardLightingUnavailable" xml:space="preserve">
     <value>此系统上键盘灯效控制不可用。</value>
@@ -5177,7 +5177,7 @@
     <value>检查温度来源</value>
   </data>
   <data name="Monitor_FanEfficientFormat" xml:space="preserve">
-    <value>风扇：{0}% 效率</value>
+    <value>散热效率：{0}%</value>
   </data>
   <data name="Monitor_QualityExcellent" xml:space="preserve">
     <value>优秀</value>
@@ -5261,7 +5261,7 @@
     <value>已阻止</value>
   </data>
   <data name="SystemControl_StateOverwritten" xml:space="preserve">
-    <value>外部已接管</value>
+    <value>已被外部覆盖</value>
   </data>
   <data name="FanControlViewModel_StateConfirmed" xml:space="preserve">
     <value>已确认</value>
@@ -5336,7 +5336,7 @@
     <value>已对照当前系统状态验证</value>
   </data>
   <data name="SystemOptimizerViewModel_VerifiedNoDrift" xml:space="preserve">
-    <value>已验证：未检测到偏移</value>
+    <value>已验证：未检测到漂移</value>
   </data>
   <data name="SystemOptimizerViewModel_VerifiedAutoCorrected" xml:space="preserve">
     <value>已验证：自动纠正 {0} 项服务设置</value>
@@ -5345,10 +5345,10 @@
     <value>验证失败</value>
   </data>
   <data name="SystemOptimizerViewModel_NoDriftExplanations" xml:space="preserve">
-    <value>暂无偏移说明。</value>
+    <value>暂无漂移说明。</value>
   </data>
   <data name="SystemOptimizerViewModel_DriftDetected" xml:space="preserve">
-    <value>检测到偏移：{0}</value>
+    <value>检测到漂移：{0}</value>
   </data>
   <data name="SystemOptimizer_StatusDoneDetails" xml:space="preserve">
     <value>完成：{0}</value>
@@ -5429,7 +5429,7 @@
     <value>（另有 {0} 条）</value>
   </data>
   <data name="Optimizer_WarningIdlePower" xml:space="preserve">
-    <value>待机功耗更高；不建议在使用电池时启用。</value>
+    <value>空闲功耗更高；不建议在使用电池时启用。</value>
   </data>
   <data name="Optimizer_WarningHddAppLaunch" xml:space="preserve">
     <value>在机械硬盘上可能拖慢程序启动；对固态硬盘有益。</value>
@@ -5492,7 +5492,7 @@
     <value>将 Windows 电源计划设为“卓越性能”，释放最大 CPU/GPU 性能</value>
   </data>
   <data name="SystemOptimizer_Item_PowerGpuScheduling_Name" xml:space="preserve">
-    <value>硬件 GPU 计划</value>
+    <value>硬件加速 GPU 计划</value>
   </data>
   <data name="SystemOptimizer_Item_PowerGpuScheduling_Desc" xml:space="preserve">
     <value>启用硬件加速 GPU 计划（Windows 10 2004+）</value>
@@ -5519,7 +5519,7 @@
     <value>禁用 SysMain（Superfetch）</value>
   </data>
   <data name="SystemOptimizer_Item_ServiceSysmain_Desc" xml:space="preserve">
-    <value>禁用 Superfetch 服务——固态硬盘用户推荐</value>
+    <value>禁用 SysMain（Superfetch）服务——建议固态硬盘用户启用本项</value>
   </data>
   <data name="SystemOptimizer_Item_ServiceSearch_Name" xml:space="preserve">
     <value>禁用搜索索引</value>
@@ -5726,7 +5726,7 @@
     <value>批量移除完成：共 {2} 项，已移除 {0} 项，跳过 {1} 项。</value>
   </data>
   <data name="BloatwareManagerViewModel_BulkSkipExampleFormat" xml:space="preserve">
-    <value> 示例跳过：{0}（{1}）</value>
+    <value>跳过示例：{0}（{1}）</value>
   </data>
   <data name="BloatwareManagerViewModel_BulkStoppedFormat" xml:space="preserve">
     <value>批量移除在“{0}”处停止：{1}。回滚已恢复 {2} 项，失败 {3} 项，跳过 {4} 项。详情请导出日志。</value>
@@ -5936,13 +5936,13 @@
     <value>灯条已更新。</value>
   </data>
   <data name="DeviceLighting_BarRefused" xml:space="preserve">
-    <value>灯条拒绝了更新。</value>
+    <value>灯条未接受更新。</value>
   </data>
   <data name="DeviceLighting_BarOff" xml:space="preserve">
     <value>灯条已熄灭。</value>
   </data>
   <data name="DeviceLighting_BarRefusedCmd" xml:space="preserve">
-    <value>灯条拒绝了该命令。</value>
+    <value>灯条未接受该命令。</value>
   </data>
   <data name="DeviceLighting_LightBarLimitation" xml:space="preserve">
     <value>需以管理员身份运行 OmenCore 才能调节灯条亮度与动画——这两者经由 HP 的 BIOS 接口，受 Windows 限制。颜色设置不受影响。</value>
@@ -5960,13 +5960,13 @@
     <value>暂无内容。先在上方设置灯效，再选择“加入循环”。</value>
   </data>
   <data name="DeviceLighting_FnCycleLimitation" xml:space="preserve">
-    <value>写入只会新增或更新键盘上已有的内容。键盘不支持删除命令——从列表移除的方案仍会保留在键盘上，直到被同类灯效覆盖。</value>
+    <value>写入只能新增或更新键盘上的方案，无法删除。</value>
   </data>
   <data name="KeyboardMap_DimNoSelection" xml:space="preserve">
     <value>下次“应用”时生效。选择按键可独立调暗。</value>
   </data>
   <data name="KeyboardMap_DimFullFormat" xml:space="preserve">
-    <value>已选 {0} 个，亮度为满。下次“应用”时生效。</value>
+    <value>已选 {0} 个，亮度为 100%。下次“应用”时生效。</value>
   </data>
   <data name="KeyboardMap_DimPartialFormat" xml:space="preserve">
     <value>已选 {0} 个，亮度 {1}%——应用总亮度 {3}% 后实际为 {2}%。</value>
@@ -5981,7 +5981,7 @@
     <value>加载中…</value>
   </data>
   <data name="SystemOptimizerViewModel_NoDriftSinceLast" xml:space="preserve">
-    <value>自上次验证以来未检测到偏移。</value>
+    <value>自上次验证以来未检测到漂移。</value>
   </data>
   <data name="SettingsViewModel_DriverPawnIoInstalled" xml:space="preserve">
     <value>PawnIO 已安装</value>
@@ -6098,7 +6098,7 @@
     <value>💡 配置方案信息：</value>
   </data>
   <data name="SettingsView_ProfileInfoContent1" xml:space="preserve">
-    <value>• 方案包含风扇曲线、性能模式、GPU 超频设置、电池/迟滞配置</value>
+    <value>• 方案包含风扇曲线、性能模式、GPU 超频设置、电池/滞回配置</value>
   </data>
   <data name="SettingsView_ProfileInfoContent2" xml:space="preserve">
     <value>• 可放心分享——不含个人数据，只有硬件设置</value>
@@ -6137,7 +6137,7 @@
     <value>刚刚</value>
   </data>
   <data name="DeviceLightingViewModel_FnCycleAllRefused" xml:space="preserve">
-    <value>键盘拒绝了全部方案。未做任何更改。</value>
+    <value>键盘没有接受任何方案，未做任何更改。</value>
   </data>
   <data name="DeviceLightingViewModel_FnCyclePartialFormat" xml:space="preserve">
     <value>已写入 {0}/{1} 项；键盘拒绝了 {2}。按 Fn+1 切换循环。</value>
@@ -6158,7 +6158,7 @@
     <value>=== 诊断完成：{0} ===</value>
   </data>
   <data name="SettingsViewModel_BiosCheckHint" xml:space="preserve">
-    <value>点击“检查更新”以在 HP 检查 BIOS 更新</value>
+    <value>点击“检查更新”，到 HP 官网检查 BIOS 更新</value>
   </data>
   <data name="SettingsView_BiosInfoParagraph" xml:space="preserve">
     <value>请到 HP 官网检查 BIOS 更新。更新 BIOS 前务必阅读发行说明。BIOS 更新可提升稳定性、安全性与兼容性。</value>
@@ -6314,7 +6314,7 @@
     <value>冷静——风扇静音，延长续航</value>
   </data>
   <data name="TrayIcon_ProfileCustom" xml:space="preserve">
-    <value>自定义——用户自定义的风扇与电源设置</value>
+    <value>自定义——由你设定的风扇与电源策略</value>
   </data>
   <data name="TrayIcon_MaxFan" xml:space="preserve">
     <value>风扇全速</value>
@@ -6503,7 +6503,7 @@
     <value>停止并禁用 Windows 搜索索引，降低后台磁盘/CPU 占用。</value>
   </data>
   <data name="OptimizeDetail_ServiceDiagtrack" xml:space="preserve">
-    <value>禁用"互联用户体验与遥测"服务，减少后台遥测处理。</value>
+    <value>禁用“互联用户体验与遥测”服务，减少后台遥测处理。</value>
   </data>
   <data name="OptimizeDetail_NetworkTcpNodelay" xml:space="preserve">
     <value>强制 TCP 立即确认数据包、不做延迟合并，降低延迟（网络包量略增）。</value>
@@ -6518,7 +6518,7 @@
     <value>调整 TCP 缓冲行为，为延迟敏感场景（网游）减少确认延迟。</value>
   </data>
   <data name="OptimizeDetail_InputMouseAccel" xml:space="preserve">
-    <value>禁用"提高指针精确度"，鼠标移动保持原始 1:1——游戏玩家通常更偏好这种手感。</value>
+    <value>禁用“提高指针精确度”，鼠标移动保持原始 1:1——游戏玩家通常更偏好这种手感。</value>
   </data>
   <data name="OptimizeDetail_InputGameDvr" xml:space="preserve">
     <value>禁用后台游戏录制，游戏中的“游戏 DVR”不再占用资源。</value>
@@ -6539,7 +6539,7 @@
     <value>启用 NTFS TRIM，让 SSD 高效回收已删除数据块、长期保持性能。</value>
   </data>
   <data name="OptimizeDetail_StorageLastAccess" xml:space="preserve">
-    <value>禁用 NTFS"最后访问时间"更新，减少磁盘元数据写入。</value>
+    <value>禁用 NTFS“最后访问时间”更新，减少磁盘元数据写入。</value>
   </data>
   <data name="OptimizeDetail_Storage8dot3" xml:space="preserve">
     <value>禁用旧式 8.3 短文件名生成，减轻现代系统上的文件系统簿记负担。</value>
@@ -6560,13 +6560,13 @@
     <value>删除 AllowTelemetry 覆盖项，恢复 Windows 默认策略。</value>
   </data>
   <data name="OptimizeUndo_ServiceSysmain" xml:space="preserve">
-    <value>在服务管理器中将 SysMain 启动类型改回"自动"并启动。</value>
+    <value>在服务管理器中将 SysMain 启动类型改回“自动”并启动。</value>
   </data>
   <data name="OptimizeUndo_ServiceSearch" xml:space="preserve">
-    <value>在服务管理器中将 Windows Search 启动类型改回"自动"并启动。</value>
+    <value>在服务管理器中将 Windows Search 启动类型改回“自动”并启动。</value>
   </data>
   <data name="OptimizeUndo_ServiceDiagtrack" xml:space="preserve">
-    <value>在服务管理器中将 DiagTrack 启动类型改回"自动"并启动。</value>
+    <value>在服务管理器中将 DiagTrack 启动类型改回“自动”并启动。</value>
   </data>
   <data name="OptimizeUndo_NetworkTcpNodelay" xml:space="preserve">
     <value>删除 TcpNoDelay 或改回 0。</value>
@@ -6968,7 +6968,7 @@
     <value>✓ 清理完成——建议重启</value>
   </data>
   <data name="Cleanup_Failed" xml:space="preserve">
-    <value>⚠ 清理失败</value>
+    <value>⚠️ 清理失败</value>
   </data>
   <data name="Cleanup_Running" xml:space="preserve">
     <value>正在清理 HP Omen…</value>
@@ -7442,7 +7442,7 @@
     <value>自动模式：风扇控制权归固件</value>
   </data>
   <data name="FanControl_ModeMaxDesc" xml:space="preserve">
-    <value>最大模式：OmenCore 请求全速散热</value>
+    <value>最大模式：OmenCore 已请求风扇全速</value>
   </data>
   <data name="FanControl_ModeCustomDesc" xml:space="preserve">
     <value>已载入自定义曲线，但尚未实际应用</value>
@@ -7454,13 +7454,13 @@
     <value>“{0}”曲线正在管理风扇</value>
   </data>
   <data name="FanControl_ModeConstantFormat" xml:space="preserve">
-    <value>恒定模式：OmenCore 请求 {0}%</value>
+    <value>固定模式：OmenCore 请求 {0}%</value>
   </data>
   <data name="FanControl_PresetSelectedFormat" xml:space="preserve">
     <value>已选择“{0}”预设</value>
   </data>
   <data name="FanControl_ModeConstant" xml:space="preserve">
-    <value>恒定</value>
+    <value>固定</value>
   </data>
   <data name="FanControl_ShareCodeNeedPoints" xml:space="preserve">
     <value>生成分享代码至少需要 2 个曲线点。</value>
@@ -7718,7 +7718,7 @@
     <value>最右侧</value>
   </data>
   <data name="SystemControl_ModeMemoryNothingFormat" xml:space="preserve">
-    <value>“{0}”暂无可记忆内容——无法读取当前风扇状态。</value>
+    <value>“{0}”没有可记住的状态——无法读取当前风扇状态</value>
   </data>
   <data name="MaxAutoReturn_Off" xml:space="preserve">
     <value>关闭</value>
@@ -7727,7 +7727,7 @@
     <value>冷却</value>
   </data>
   <data name="MaxAutoReturn_Timer" xml:space="preserve">
-    <value>计时</value>
+    <value>定时</value>
   </data>
   <data name="RgbSurface_KeyboardZones" xml:space="preserve">
     <value>键盘分区变化</value>
@@ -7778,7 +7778,7 @@
     <value>已启用充电上限</value>
   </data>
   <data name="SystemControl_RememberedFullCharge" xml:space="preserve">
-    <value>满电充电</value>
+    <value>充电至满电</value>
   </data>
   <data name="SystemControl_ModeMemoryRememberedFormat" xml:space="preserve">
     <value>“{0}”现在会记住：{1}</value>
@@ -8066,7 +8066,7 @@
     <value>导入失败</value>
   </data>
   <data name="Settings_ImportConfirmFormat" xml:space="preserve">
-    <value>从 {0} 导入方案？&#10;&#10;将应用：&#10;• {1} 个风扇预设&#10;• {2} 个性能模式&#10;• {3} 个 GPU 超频方案&#10;• 电池与风扇回差设置&#10;&#10;现有设置将被覆盖。</value>
+    <value>从 {0} 导入方案？&#10;&#10;将应用：&#10;• {1} 个风扇预设&#10;• {2} 个性能模式&#10;• {3} 个 GPU 超频方案&#10;• 电池与风扇滞回设置&#10;&#10;现有设置将被覆盖。</value>
   </data>
   <data name="Settings_ImportConfirmTitle" xml:space="preserve">
     <value>导入方案</value>
@@ -8327,7 +8327,7 @@
     <value>OSD 可见时强制活动节奏（1 秒）</value>
   </data>
   <data name="Settings_CadenceReasonGpuIdle" xml:space="preserve">
-    <value>GPU 已确认后台空闲，已降低频率以减少空闲功耗</value>
+    <value>GPU 已确认后台空闲，已放缓轮询以降低空转唤醒成本</value>
   </data>
   <data name="Settings_CadenceReasonLowOverheadTray" xml:space="preserve">
     <value>低开销/仅托盘：应用已最小化，且无活动风扇曲线或保持</value>
@@ -8711,16 +8711,16 @@
     <value>无法读取 NVIDIA 驱动：{0}</value>
   </data>
   <data name="Nvidia_LiveFormat" xml:space="preserve">
-    <value>当前 CURRENT {0} W，当前 MAX {1} W。</value>
+    <value>实时值：CURRENT {0} W，MAX {1} W。</value>
   </data>
   <data name="Nvidia_StatusFormat" xml:space="preserve">
-    <value>{0}：{1}MAX 写入{2}，CURRENT 写入{3}。{4}{5}</value>
+    <value>{0}：{1}MAX 写入 {2}，CURRENT 写入 {3}。{4}{5}</value>
   </data>
   <data name="Nvidia_WriteReady" xml:space="preserve">
-    <value>可用</value>
+    <value>就绪</value>
   </data>
   <data name="Nvidia_WriteNotReady" xml:space="preserve">
-    <value>不可用</value>
+    <value>未就绪</value>
   </data>
   <data name="Nvidia_GpuFallback" xml:space="preserve">
     <value>NVIDIA GPU</value>
@@ -8777,7 +8777,7 @@
     <value>正在测试档位 {0}…（{1}% 完成）</value>
   </data>
   <data name="FanCalibration_ErrorWarnFormat" xml:space="preserve">
-    <value>⚠ 错误：{0}</value>
+    <value>⚠️ 错误：{0}</value>
   </data>
   <data name="GpuClamp_FailedFormat" xml:space="preserve">
     <value>失败：{0}</value>
@@ -8798,7 +8798,7 @@
     <value>已释放 {0} MB</value>
   </data>
   <data name="Mem_ExcludedFormat" xml:space="preserve">
-    <value>已将 {0} 排除在内存整理之外</value>
+    <value>已将 {0} 排除出工作集修剪</value>
   </data>
   <data name="Mem_CompressionEnabled" xml:space="preserve">
     <value>已启用内存压缩</value>
@@ -8816,7 +8816,7 @@
     <value>已绘制 {0} 个键 {1}。</value>
   </data>
   <data name="KbdMap_RestoredFormat" xml:space="preserve">
-    <value>已恢复上一张图片（{0} 个格）。</value>
+    <value>已恢复上一张图片（{0} 格）。</value>
   </data>
   <data name="KbdMap_DetectedFormat" xml:space="preserve">
     <value>{0} 个 LED，覆盖 {1} 个键（{2}）</value>
@@ -8864,7 +8864,7 @@
     <value>✓ 已恢复启动值（PL1：{0}W，PL2：{1}W）</value>
   </data>
   <data name="SC_GpuOcPowerOnlyFormat" xml:space="preserve">
-    <value>{0} —— 支持功耗上限调节，时钟偏移被阻止</value>
+    <value>{0} —— 支持功耗上限调节，频率偏移被阻止</value>
   </data>
   <data name="SC_GpuOcLockedFormat" xml:space="preserve">
     <value>{0} —— NVAPI 调优被驱动/固件锁定</value>
@@ -8948,7 +8948,7 @@
     <value>已有校准数据（创建于 {0}）</value>
   </data>
   <data name="FanCalibration_FanStatusFormat" xml:space="preserve">
-    <value>当前：{0} RPM（档位：{1}，来源：{2}）&#10;估算：约 {3}% 转速</value>
+    <value>当前：{0} RPM（档位：{1}，来源：{2}）&#10;估算转速：约 {3}%</value>
   </data>
   <data name="FanCalibration_ReadStatusFailedFormat" xml:space="preserve">
     <value>读取风扇状态失败：{0}</value>
@@ -9005,7 +9005,7 @@
     <value>验证驱动</value>
   </data>
   <data name="TuningView_ValidateDriverTooltip" xml:space="preserve">
-    <value>在 617.14 以外的 NVIDIA 驱动上，应用 CURRENT 前需按驱动版本验证一次。会发送一个重复驱动自身功耗请求的指令，并确认结果未发生变化。</value>
+    <value>会发送一条与驱动自身功耗请求相同的指令，并确认读数没有变化</value>
   </data>
   <data name="KbdDiag_Ready" xml:space="preserve">
     <value>就绪</value>
@@ -9047,7 +9047,7 @@
     <value>开始测试图案</value>
   </data>
   <data name="KbdDiag_LogTestingBrandFormat" xml:space="preserve">
-    <value>正在测试 {0} 设备</value>
+    <value>正在测试 {0} 台设备</value>
   </data>
   <data name="KbdDiag_LogTestingHpKeyboard" xml:space="preserve">
     <value>正在测试 HP Omen 键盘（ColorTable 图案）</value>
@@ -9071,7 +9071,7 @@
     <value>正在清除测试图案</value>
   </data>
   <data name="KbdDiag_LogClearedBrandFormat" xml:space="preserve">
-    <value>已清除 {0} 设备</value>
+    <value>已为 {0} 台设备清除</value>
   </data>
   <data name="KbdDiag_LogRestoredHpDefaults" xml:space="preserve">
     <value>已恢复 HP Omen 键盘默认灯效</value>
@@ -9221,7 +9221,7 @@
     <value>{0} 功耗遥测返回了无效值。</value>
   </data>
   <data name="General_PowerUnavailableFormat" xml:space="preserve">
-    <value>此后端上 {0} 功耗传感器不可用。</value>
+    <value>此硬件后端不支持 {0} 功耗传感器。</value>
   </data>
   <data name="General_PowerInactiveFormat" xml:space="preserve">
     <value>{0} 功耗遥测未激活。</value>
@@ -9273,5 +9273,29 @@
   </data>
   <data name="SC_CustomProfileDescFormat" xml:space="preserve">
     <value>自定义方案：核心 {0}，显存 {1}，功耗 {2}，电压 {3}</value>
+  </data>
+  <data name="Settings_BiosNotChecked" xml:space="preserve">
+    <value>未检查</value>
+  </data>
+  <data name="Settings_BiosUnableDetect" xml:space="preserve">
+    <value>无法检测</value>
+  </data>
+  <data name="Settings_BiosReadFailed" xml:space="preserve">
+    <value>无法读取系统信息</value>
+  </data>
+  <data name="Settings_BiosChecking" xml:space="preserve">
+    <value>正在向 HP 检查 BIOS 更新…</value>
+  </data>
+  <data name="Settings_BiosUpToDate" xml:space="preserve">
+    <value>✓ BIOS 已是最新版本</value>
+  </data>
+  <data name="Settings_CheckingHardware" xml:space="preserve">
+    <value>正在检查硬件…</value>
+  </data>
+  <data name="Settings_Checking" xml:space="preserve">
+    <value>正在检查…</value>
+  </data>
+  <data name="Settings_Detecting" xml:space="preserve">
+    <value>正在检测…</value>
   </data>
 </root>

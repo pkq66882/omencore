@@ -80,7 +80,7 @@ namespace OmenCore.ViewModels
         private string _batteryFanPreset = "Quiet";
         private string _batteryPerformanceMode = "Silent";
         
-        private string _fanCleaningStatusText = "Checking hardware...";
+        private string _fanCleaningStatusText = Strings.Settings_CheckingHardware;
         private string _fanCleaningStatusIcon = "M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z";
         private Brush _fanCleaningStatusColor = Brushes.Gray;
         private bool _canStartFanCleaning;
@@ -90,19 +90,19 @@ namespace OmenCore.ViewModels
         private CancellationTokenSource? _fanCleaningCts;
         
         // Driver status fields
-        private string _driverStatusText = "Checking...";
+        private string _driverStatusText = Strings.Settings_Checking;
         private string _driverStatusDetail = "";
         private Brush _driverStatusColor = Brushes.Gray;
         
         // System status fields for Settings view
-        private string _fanBackend = "Detecting...";
+        private string _fanBackend = Strings.Settings_Detecting;
         private bool _secureBootEnabled;
         private bool _pawnIOAvailable;
         private bool _oghInstalled;
-        private string _resumeRecoveryStatus = "No recent resume activity";
+        private string _resumeRecoveryStatus = Strings.SettingsViewModel_NoRecentResumeActivity;
         private string _resumeRecoverySummary = Strings.SettingsViewModel_NoTimelineSummary;
-        private string _resumeRecoveryTimeline = "No timeline recorded yet.";
-        private string _resumeRecoveryLastUpdated = "No recent resume event";
+        private string _resumeRecoveryTimeline = Strings.SettingsViewModel_NoTimelineRecorded;
+        private string _resumeRecoveryLastUpdated = Strings.SettingsViewModel_NoRecentResumeEvent;
         private string _modelIdentitySummary = Strings.Settings_ModelNotAnalyzed;
         private string _modelIdentityResolvedModel = "Unknown";
         private string _modelIdentityResolutionSource = "Unknown";
@@ -123,7 +123,7 @@ namespace OmenCore.ViewModels
         private string _latestBiosVersion = "";
         private bool _biosUpdateAvailable;
         private string _biosDownloadUrl = "";
-        private string _biosCheckStatus = "Not checked";
+        private string _biosCheckStatus = Strings.Settings_BiosNotChecked;
         private bool _isBiosCheckInProgress;
         private Brush _biosStatusColor = Brushes.Gray;
         
@@ -4436,9 +4436,9 @@ namespace OmenCore.ViewModels
                     operation: "LoadSystemInfo",
                     message: "Failed to load system info for BIOS display",
                     ex: ex);
-                SystemModel = "Unable to detect";
-                CurrentBiosVersion = "Unable to detect";
-                BiosCheckStatus = "Could not read system information";
+                SystemModel = Strings.Settings_BiosUnableDetect;
+                CurrentBiosVersion = Strings.Settings_BiosUnableDetect;
+                BiosCheckStatus = Strings.Settings_BiosReadFailed;
                 BiosStatusColor = new SolidColorBrush(Color.FromRgb(255, 183, 77)); // Orange
             }
         }
@@ -4449,7 +4449,7 @@ namespace OmenCore.ViewModels
                 return;
                 
             IsBiosCheckInProgress = true;
-            BiosCheckStatus = "Checking HP for BIOS updates...";
+            BiosCheckStatus = Strings.Settings_BiosChecking;
             BiosStatusColor = Brushes.Gray;
             
             try
@@ -4468,7 +4468,7 @@ namespace OmenCore.ViewModels
                 }
                 else if (!string.IsNullOrEmpty(result.LatestBiosVersion))
                 {
-                    BiosCheckStatus = "✓ Your BIOS is up to date";
+                    BiosCheckStatus = Strings.Settings_BiosUpToDate;
                     BiosStatusColor = new SolidColorBrush(Color.FromRgb(102, 187, 106)); // Green
                 }
                 else

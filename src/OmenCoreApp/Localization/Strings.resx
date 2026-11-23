@@ -9278,4 +9278,28 @@
   <data name="SC_CustomProfileDescFormat" xml:space="preserve">
     <value>Custom profile: Core {0}, Mem {1}, Power {2}, Voltage {3}</value>
   </data>
+  <data name="Settings_BiosNotChecked" xml:space="preserve">
+    <value>Not checked</value>
+  </data>
+  <data name="Settings_BiosUnableDetect" xml:space="preserve">
+    <value>Unable to detect</value>
+  </data>
+  <data name="Settings_BiosReadFailed" xml:space="preserve">
+    <value>Could not read system information</value>
+  </data>
+  <data name="Settings_BiosChecking" xml:space="preserve">
+    <value>Checking HP for BIOS updates...</value>
+  </data>
+  <data name="Settings_BiosUpToDate" xml:space="preserve">
+    <value>✓ Your BIOS is up to date</value>
+  </data>
+  <data name="Settings_CheckingHardware" xml:space="preserve">
+    <value>Checking hardware...</value>
+  </data>
+  <data name="Settings_Checking" xml:space="preserve">
+    <value>Checking...</value>
+  </data>
+  <data name="Settings_Detecting" xml:space="preserve">
+    <value>Detecting...</value>
+  </data>
 </root>

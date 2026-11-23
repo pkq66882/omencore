@@ -9274,4 +9274,28 @@
   <data name="SC_CustomProfileDescFormat" xml:space="preserve">
     <value>Özel profil: Çekirdek {0}, Bellek {1}, Güç {2}, Voltaj {3}</value>
   </data>
+  <data name="Settings_BiosNotChecked" xml:space="preserve">
+    <value>Denetlenmedi</value>
+  </data>
+  <data name="Settings_BiosUnableDetect" xml:space="preserve">
+    <value>Algılanamıyor</value>
+  </data>
+  <data name="Settings_BiosReadFailed" xml:space="preserve">
+    <value>Sistem bilgisi okunamadı</value>
+  </data>
+  <data name="Settings_BiosChecking" xml:space="preserve">
+    <value>HP BIOS güncellemeleri denetleniyor...</value>
+  </data>
+  <data name="Settings_BiosUpToDate" xml:space="preserve">
+    <value>✓ BIOS güncel</value>
+  </data>
+  <data name="Settings_CheckingHardware" xml:space="preserve">
+    <value>Donanım denetleniyor...</value>
+  </data>
+  <data name="Settings_Checking" xml:space="preserve">
+    <value>Denetleniyor...</value>
+  </data>
+  <data name="Settings_Detecting" xml:space="preserve">
+    <value>Algılanıyor...</value>
+  </data>
 </root>
