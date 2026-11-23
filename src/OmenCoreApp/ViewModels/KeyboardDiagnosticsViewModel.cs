@@ -22,7 +22,7 @@ namespace OmenCore.ViewModels
         public ObservableCollection<LightingDeviceInfo> DetectedDevices { get; } = new();
         public ObservableCollection<string> DiagnosticLogs { get; } = new();
 
-        private string _diagnosticStatus = "Ready";
+        private string _diagnosticStatus = Strings.KbdDiag_Ready;
         public string DiagnosticStatus
         {
             get => _diagnosticStatus;
@@ -93,7 +93,7 @@ namespace OmenCore.ViewModels
         {
             try
             {
-                DiagnosticStatus = "Detecting devices...";
+                DiagnosticStatus = Strings.KbdDiag_Detecting;
                 DetectedDevices.Clear();
 
                 // Detect Corsair devices
@@ -107,7 +107,7 @@ namespace OmenCore.ViewModels
                             Brand = "Corsair",
                             Model = device.Name,
                             Type = device.DeviceType.ToString(),
-                            Status = "Connected",
+                            Status = Strings.KbdDiag_DeviceConnected,
                             Backend = "iCUE SDK"
                         });
                     }
@@ -124,7 +124,7 @@ namespace OmenCore.ViewModels
                             Brand = "Logitech",
                             Model = device.Name,
                             Type = device.DeviceType.ToString(),
-                            Status = "Connected",
+                            Status = Strings.KbdDiag_DeviceConnected,
                             Backend = "G HUB SDK"
                         });
                     }
@@ -141,7 +141,7 @@ namespace OmenCore.ViewModels
                             Brand = "Razer",
                             Model = device.Name,
                             Type = device.DeviceType.ToString(),
-                            Status = "Connected",
+                            Status = Strings.KbdDiag_DeviceConnected,
                             Backend = "Chroma SDK"
                         });
                     }
@@ -153,8 +153,8 @@ namespace OmenCore.ViewModels
                     DetectedDevices.Add(new LightingDeviceInfo
                     {
                         Brand = "HP Omen",
-                        Model = "Integrated Keyboard",
-                        Type = "Keyboard",
+                        Model = Strings.KbdDiag_IntegratedKeyboard,
+                        Type = Strings.KbdDiag_KeyboardType,
                         Status = "Connected",
                         Backend = _keyboardLightingService.BackendType
                     });
@@ -178,10 +178,8 @@ namespace OmenCore.ViewModels
         {
             if (_wmiBios == null) return;
             var confirm = System.Windows.MessageBox.Show(
-                $"This sends {OmenCore.Hardware.ColorTableProbe.Variants.Count} experimental keyboard colour commands, one every 4 seconds, each in red.\n\n" +
-                "Watch the keyboard and note the NUMBER of the step during which it turns red, then report it on the GitHub issue. " +
-                "Your current keyboard colours are saved first and put back when the probe finishes.",
-                "RGB payload probe", System.Windows.MessageBoxButton.OKCancel, System.Windows.MessageBoxImage.Information);
+                string.Format(Strings.KbdDiag_ProbeConfirmBody, OmenCore.Hardware.ColorTableProbe.Variants.Count),
+                Strings.KbdDiag_ProbeConfirmTitle, System.Windows.MessageBoxButton.OKCancel, System.Windows.MessageBoxImage.Information);
             if (confirm != System.Windows.MessageBoxResult.OK) return;
 
             IsRunningTest = true;
@@ -204,7 +202,7 @@ namespace OmenCore.ViewModels
                     DiagnosticStatus = string.Format(Strings.KbdDiag_ProbeStepFormat, i + 1, variants.Count);
                     await Task.Delay(3500);
                 }
-                DiagnosticStatus = "Probe finished. Report which step number (if any) turned the keyboard red.";
+                DiagnosticStatus = Strings.KbdDiag_ProbeFinished;
             }
             finally
             {
@@ -222,47 +220,47 @@ namespace OmenCore.ViewModels
             try
             {
                 IsRunningTest = true;
-                DiagnosticStatus = "Running test pattern...";
-                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Starting test pattern");
+                DiagnosticStatus = Strings.KbdDiag_RunningTestPattern;
+                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + Strings.KbdDiag_LogStartingTest);
 
                 // Test Corsair devices
                 if (_corsairService != null && _corsairService.Devices.Any())
                 {
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Testing Corsair devices");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestingBrandFormat, "Corsair"));
                     foreach (var device in _corsairService.Devices)
                     {
                         // Apply a rainbow pattern or simple test
                         await Task.Delay(100); // Simulate
-                        DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Applied test to {device.Name}");
+                        DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogAppliedTestFormat, device.Name));
                     }
                 }
 
                 // Test Logitech devices
                 if (_logitechService != null && _logitechService.Devices.Any())
                 {
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Testing Logitech devices");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestingBrandFormat, "Logitech"));
                     foreach (var device in _logitechService.Devices)
                     {
                         await Task.Delay(100);
-                        DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Applied test to {device.Name}");
+                        DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogAppliedTestFormat, device.Name));
                     }
                 }
 
                 // Test Razer devices
                 if (_razerService != null && _razerService.Devices.Any())
                 {
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Testing Razer devices");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestingBrandFormat, "Razer"));
                     foreach (var device in _razerService.Devices)
                     {
                         await Task.Delay(100);
-                        DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Applied test to {device.Name}");
+                        DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogAppliedTestFormat, device.Name));
                     }
                 }
 
                 // Test HP Omen keyboard
                 if (_keyboardLightingService?.IsAvailable ?? false)
                 {
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Testing HP Omen keyboard (ColorTable pattern)");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + Strings.KbdDiag_LogTestingHpKeyboard);
 
                     var fourZonePattern = new[]
                     {
@@ -273,22 +271,22 @@ namespace OmenCore.ViewModels
                     };
 
                     await _keyboardLightingService.SetAllZoneColors(fourZonePattern);
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Applied 4-zone RGB pattern");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + Strings.KbdDiag_LogApplied4Zone);
 
                     await Task.Delay(600);
 
                     var white = ColorTranslator.FromHtml("#FFFFFF");
                     await _keyboardLightingService.SetAllZoneColors(new[] { white, white, white, white });
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Applied all-white verification pattern");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + Strings.KbdDiag_LogAppliedWhite);
                 }
 
-                DiagnosticStatus = "Test pattern applied successfully.";
-                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Test pattern completed");
+                DiagnosticStatus = Strings.KbdDiag_TestPatternApplied;
+                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + Strings.KbdDiag_LogTestCompleted);
             }
             catch (Exception ex)
             {
                 DiagnosticStatus = string.Format(Strings.KbdDiag_TestPatternFailedFormat, ex.Message);
-                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Test pattern failed: {ex.Message}");
+                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestFailedFormat, ex.Message));
                 _logging.Error("Test pattern failed", ex);
             }
             finally
@@ -303,44 +301,44 @@ namespace OmenCore.ViewModels
             try
             {
                 IsRunningTest = true;
-                DiagnosticStatus = "Clearing test pattern...";
-                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Clearing test patterns");
+                DiagnosticStatus = Strings.KbdDiag_ClearingTestPattern;
+                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + Strings.KbdDiag_LogClearing);
 
                 // Clear Corsair devices
                 if (_corsairService != null)
                 {
                     // Reset to default
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Cleared Corsair devices");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearedBrandFormat, "Corsair"));
                 }
 
                 // Clear Logitech devices
                 if (_logitechService != null)
                 {
                     // Reset to default
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Cleared Logitech devices");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearedBrandFormat, "Logitech"));
                 }
 
                 // Clear Razer devices
                 if (_razerService != null)
                 {
                     // Reset to default
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Cleared Razer devices");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearedBrandFormat, "Razer"));
                 }
 
                 // Clear HP Omen keyboard
                 if (_keyboardLightingService?.IsAvailable ?? false)
                 {
                     _keyboardLightingService.RestoreDefaults();
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Restored HP Omen keyboard defaults");
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + Strings.KbdDiag_LogRestoredHpDefaults);
                 }
 
-                DiagnosticStatus = "Test pattern cleared.";
-                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Clear completed");
+                DiagnosticStatus = Strings.KbdDiag_TestPatternCleared;
+                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + Strings.KbdDiag_LogClearCompleted);
             }
             catch (Exception ex)
             {
                 DiagnosticStatus = string.Format(Strings.KbdDiag_ClearFailedFormat, ex.Message);
-                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Clear failed: {ex.Message}");
+                DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearFailedFormat, ex.Message));
                 _logging.Error("Clear test pattern failed", ex);
             }
             finally
@@ -355,14 +353,14 @@ namespace OmenCore.ViewModels
 
         private void CollectLogs()
         {
-            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Collecting diagnostic logs");
+            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + Strings.KbdDiag_LogCollecting);
             // In a real implementation, this would gather logs from various services
             // For now, just add some sample logs
-            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - KeyboardLightingService: Available={HasKeyboardLighting}, Backend={_keyboardLightingService?.BackendType ?? "N/A"}");
-            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - CorsairService: Available={HasCorsair}");
-            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - LogitechService: Available={HasLogitech}");
-            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - RazerService: Available={HasRazer}");
-            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - Detected devices: {DetectedDevices.Count}");
+            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogServiceStatusFormat, "KeyboardLightingService", HasKeyboardLighting, _keyboardLightingService?.BackendType ?? "N/A"));
+            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogServiceStatusFormat, "CorsairService", HasCorsair, ""));
+            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogServiceStatusFormat, "LogitechService", HasLogitech, ""));
+            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogServiceStatusFormat, "RazerService", HasRazer, ""));
+            DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogDetectedDevicesFormat, DetectedDevices.Count));
         }
     }
 

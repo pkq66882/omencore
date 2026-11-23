@@ -31,14 +31,21 @@ namespace OmenCoreApp.Tests.ViewModels
         }
 
         private readonly LoggingService _logging;
+        private readonly System.Globalization.CultureInfo _original = System.Globalization.CultureInfo.CurrentUICulture;
 
         public TemperatureSourceDiagnosticsViewModelTests()
         {
+            // Comparison failure text is localized; pin to en for canonical assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
             _logging = new LoggingService();
             _logging.Initialize();
         }
 
-        public void Dispose() => _logging.Dispose();
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _original;
+            _logging.Dispose();
+        }
 
         [Fact]
         public void IsAvailable_NullComparer_IsFalse()

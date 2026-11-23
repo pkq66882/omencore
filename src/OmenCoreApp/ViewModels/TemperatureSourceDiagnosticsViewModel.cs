@@ -89,7 +89,7 @@ namespace OmenCore.ViewModels
             }
             catch (Exception ex)
             {
-                Result = $"Comparison failed: {ex.Message}";
+                Result = string.Format(Strings.TempDiag_ComparisonFailedFormat, ex.Message);
                 _logging.Warn($"[TemperatureSourceDiagnostic] Comparison failed: {ex.Message}");
             }
             finally

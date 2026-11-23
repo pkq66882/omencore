@@ -569,7 +569,7 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string AutoCleanCheckIntervalText => $"Every {_autoCleanCheckIntervalSeconds} sec";
+        public string AutoCleanCheckIntervalText => string.Format(Strings.Mem_CheckIntervalFormat, _autoCleanCheckIntervalSeconds);
 
         public bool GameAwareQuietWindowEnabled
         {
@@ -668,7 +668,7 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string CleanEveryMinutesText => $"Every {CleanEveryMinutes} min";
+        public string CleanEveryMinutesText => string.Format(Strings.Mem_CleanEveryFormat, CleanEveryMinutes);
 
         /// <summary>
         /// Gets or sets the selected memory cleaning profile (Conservative, Balanced, or Aggressive).

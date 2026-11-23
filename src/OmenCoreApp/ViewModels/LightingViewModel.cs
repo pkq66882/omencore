@@ -1405,8 +1405,8 @@ namespace OmenCore.ViewModels
             await _rgbManager.ApplyEffectToAllAsync($"color:{SystemColorHex}");
         }
 
-        public string CorsairDeviceStatusText => $"{CorsairDevices.Count} device(s) detected";
-        public string LogitechDeviceStatusText => $"{LogitechDevices.Count} device(s) detected";
+        public string CorsairDeviceStatusText => string.Format(Strings.Lighting_DeviceCountFormat, CorsairDevices.Count);
+        public string LogitechDeviceStatusText => string.Format(Strings.Lighting_DeviceCountFormat, LogitechDevices.Count);
         public bool HasCorsairMouse => CorsairDevices.Any(d => d.DeviceType == CorsairDeviceType.Mouse);
         public ObservableCollection<CorsairDpiStage> CorsairDpiStages { get; } = new();
         public ObservableCollection<OmenCore.Corsair.CorsairDpiProfile> CorsairDpiProfiles { get; } = new();

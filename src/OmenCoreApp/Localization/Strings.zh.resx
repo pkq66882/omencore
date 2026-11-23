@@ -5375,7 +5375,7 @@
     <value>正在导出优化报告</value>
   </data>
   <data name="KeyboardDiagnostics_AttemptsFormat" xml:space="preserve">
-    <value>尝试次数：{0} | WMI：{1}✓/{2}✗（{3:F0}%）| OGH：{4}✓/{5}✗（{6:F0}%）| EC：{7}✓/{8}✗（{9:F0}%）</value>
+    <value>尝试次数：{0} | WMI：成功 {1} / 失败 {2}（{3:F0}%）| OGH：成功 {4} / 失败 {5}（{6:F0}%）| EC：成功 {7} / 失败 {8}（{9:F0}%）</value>
   </data>
   <data name="KeyboardDiagnostics_NoService" xml:space="preserve">
     <value>无键盘灯光服务</value>
@@ -9006,5 +9006,272 @@
   </data>
   <data name="TuningView_ValidateDriverTooltip" xml:space="preserve">
     <value>在 617.14 以外的 NVIDIA 驱动上，应用 CURRENT 前需按驱动版本验证一次。会发送一个重复驱动自身功耗请求的指令，并确认结果未发生变化。</value>
+  </data>
+  <data name="KbdDiag_Ready" xml:space="preserve">
+    <value>就绪</value>
+  </data>
+  <data name="KbdDiag_Detecting" xml:space="preserve">
+    <value>正在检测设备…</value>
+  </data>
+  <data name="KbdDiag_DeviceConnected" xml:space="preserve">
+    <value>已连接</value>
+  </data>
+  <data name="KbdDiag_IntegratedKeyboard" xml:space="preserve">
+    <value>内置键盘</value>
+  </data>
+  <data name="KbdDiag_KeyboardType" xml:space="preserve">
+    <value>键盘</value>
+  </data>
+  <data name="KbdDiag_ProbeConfirmTitle" xml:space="preserve">
+    <value>RGB 载荷探测</value>
+  </data>
+  <data name="KbdDiag_ProbeConfirmBody" xml:space="preserve">
+    <value>将发送 {0} 条实验性键盘颜色命令，每 4 秒一条，均为红色。&#10;&#10;请观察键盘，记下它变红时对应的步骤编号，然后在 GitHub issue 中反馈。当前键盘颜色会先保存，探测结束后自动恢复。</value>
+  </data>
+  <data name="KbdDiag_ProbeFinished" xml:space="preserve">
+    <value>探测结束。请反馈第几步让键盘变红（如有）。</value>
+  </data>
+  <data name="KbdDiag_RunningTestPattern" xml:space="preserve">
+    <value>正在运行测试图案…</value>
+  </data>
+  <data name="KbdDiag_TestPatternApplied" xml:space="preserve">
+    <value>测试图案应用成功。</value>
+  </data>
+  <data name="KbdDiag_ClearingTestPattern" xml:space="preserve">
+    <value>正在清除测试图案…</value>
+  </data>
+  <data name="KbdDiag_TestPatternCleared" xml:space="preserve">
+    <value>测试图案已清除。</value>
+  </data>
+  <data name="KbdDiag_LogStartingTest" xml:space="preserve">
+    <value>开始测试图案</value>
+  </data>
+  <data name="KbdDiag_LogTestingBrandFormat" xml:space="preserve">
+    <value>正在测试 {0} 设备</value>
+  </data>
+  <data name="KbdDiag_LogTestingHpKeyboard" xml:space="preserve">
+    <value>正在测试 HP Omen 键盘（ColorTable 图案）</value>
+  </data>
+  <data name="KbdDiag_LogAppliedTestFormat" xml:space="preserve">
+    <value>已对 {0} 应用测试</value>
+  </data>
+  <data name="KbdDiag_LogApplied4Zone" xml:space="preserve">
+    <value>已应用四分区 RGB 图案</value>
+  </data>
+  <data name="KbdDiag_LogAppliedWhite" xml:space="preserve">
+    <value>已应用全白验证图案</value>
+  </data>
+  <data name="KbdDiag_LogTestCompleted" xml:space="preserve">
+    <value>测试图案完成</value>
+  </data>
+  <data name="KbdDiag_LogTestFailedFormat" xml:space="preserve">
+    <value>测试图案失败：{0}</value>
+  </data>
+  <data name="KbdDiag_LogClearing" xml:space="preserve">
+    <value>正在清除测试图案</value>
+  </data>
+  <data name="KbdDiag_LogClearedBrandFormat" xml:space="preserve">
+    <value>已清除 {0} 设备</value>
+  </data>
+  <data name="KbdDiag_LogRestoredHpDefaults" xml:space="preserve">
+    <value>已恢复 HP Omen 键盘默认灯效</value>
+  </data>
+  <data name="KbdDiag_LogClearCompleted" xml:space="preserve">
+    <value>清除完成</value>
+  </data>
+  <data name="KbdDiag_LogClearFailedFormat" xml:space="preserve">
+    <value>清除失败：{0}</value>
+  </data>
+  <data name="KbdDiag_LogCollecting" xml:space="preserve">
+    <value>正在收集诊断日志</value>
+  </data>
+  <data name="KbdDiag_LogServiceStatusFormat" xml:space="preserve">
+    <value>{0}：可用={1}，后端={2}</value>
+  </data>
+  <data name="KbdDiag_LogDetectedDevicesFormat" xml:space="preserve">
+    <value>检测到设备：{0} 个</value>
+  </data>
+  <data name="Nvidia_ValidateDriverPrompt" xml:space="preserve">
+    <value>要为此 NVIDIA 驱动验证 CURRENT 写入吗？&#10;&#10;OmenCore 会发送一条重复驱动当前功耗请求的指令，然后确认结果未发生变化。请先关闭游戏和高 GPU 负载应用。若有任何不匹配，写入将保持锁定。</value>
+  </data>
+  <data name="Nvidia_ResultDonePrefix" xml:space="preserve">
+    <value>已完成：</value>
+  </data>
+  <data name="Nvidia_ResultNotValidatedFormat" xml:space="preserve">
+    <value>未验证：{0}</value>
+  </data>
+  <data name="Nvidia_ResultNotResolvedFormat" xml:space="preserve">
+    <value>未解析：{0}</value>
+  </data>
+  <data name="Nvidia_ResultNotAppliedFormat" xml:space="preserve">
+    <value>未应用：{0}</value>
+  </data>
+  <data name="Nvidia_RestartHint" xml:space="preserve">
+    <value> 请重启 Windows 以完成。</value>
+  </data>
+  <data name="SC_ProfileStockDesc" xml:space="preserve">
+    <value>出厂默认——不做超频</value>
+  </data>
+  <data name="SC_ProfileSafeDesc" xml:space="preserve">
+    <value>仅调功耗的方案，GPU 更凉、更安静</value>
+  </data>
+  <data name="SC_ProfileStockEnvelopeDesc" xml:space="preserve">
+    <value>仅调功耗，匹配检测到的出厂功耗区间</value>
+  </data>
+  <data name="SC_ProfileMaxDesc" xml:space="preserve">
+    <value>使用检测到的最高功耗上限；长期使用前请验证稳定性与温度。</value>
+  </data>
+  <data name="SC_ProfileConservativeDesc" xml:space="preserve">
+    <value>按检测到的 GPU 区间制定的保守起点</value>
+  </data>
+  <data name="SC_ProfileDailyFormat" xml:space="preserve">
+    <value>面向 {0} 的日常方案</value>
+  </data>
+  <data name="SC_ProfileNearTopDesc" xml:space="preserve">
+    <value>接近检测到的上限区间；请先“测试应用”，确认稳定后再保留。</value>
+  </data>
+  <data name="SC_ConflictBodyGpuFormat" xml:space="preserve">
+    <value>检测到冲突工具正在运行：&#10;&#10;{0}&#10;&#10;在该工具运行时应用 GPU 超频可能导致不稳定或驱动崩溃。&#10;&#10;仍要继续吗？</value>
+  </data>
+  <data name="SC_ConflictBodyCpuFormat" xml:space="preserve">
+    <value>检测到冲突工具正在运行：&#10;&#10;{0}&#10;&#10;在该工具运行时应用 CPU 降压可能导致不稳定或崩溃。&#10;&#10;仍要继续吗？</value>
+  </data>
+  <data name="SC_ConflictTitle" xml:space="preserve">
+    <value>检测到调优冲突</value>
+  </data>
+  <data name="SC_TestApplyGpuPrompt" xml:space="preserve">
+    <value>“测试应用”会应用当前 GPU 调优 30 秒，除非你点击“保留”，否则之后会自动恢复之前的 GPU 状态。继续？</value>
+  </data>
+  <data name="SC_TestApplyGpuTitle" xml:space="preserve">
+    <value>测试 GPU 调优</value>
+  </data>
+  <data name="SC_TestApplyCpuPrompt" xml:space="preserve">
+    <value>“测试应用”会应用当前 CPU 降压 30 秒，除非你点击“保留”，否则之后会自动恢复之前的 CPU 电压。继续？</value>
+  </data>
+  <data name="SC_TestApplyCpuTitle" xml:space="preserve">
+    <value>测试 CPU 降压</value>
+  </data>
+  <data name="SC_TccUnavailableBody" xml:space="preserve">
+    <value>无法应用 TCC 偏移——MSR 访问不可用。&#10;&#10;这需要 PawnIO 驱动（pawnio.eu）。&#10;&#10;没有 MSR 访问就无法修改 CPU 温度限制。</value>
+  </data>
+  <data name="SC_TccUnavailableTitle" xml:space="preserve">
+    <value>TCC 偏移不可用</value>
+  </data>
+  <data name="SC_TccWriteFailedBodyFormat" xml:space="preserve">
+    <value>TCC 偏移未能更改——数值仍为 {0}°C。&#10;&#10;常见原因：&#10;• Hyper-V/HVCI（内核隔离）阻止了 MSR 写入&#10;• 安全启动阻止了内核模式访问&#10;&#10;解决方法：&#10;1. 打开 Windows 安全中心 → 设备安全性 → 内核隔离&#10;2. 关闭“内存完整性”&#10;3. 重启电脑&#10;&#10;或使用带签名驱动的 Intel XTU。</value>
+  </data>
+  <data name="SC_TccWriteFailedTitle" xml:space="preserve">
+    <value>TCC 偏移写入失败</value>
+  </data>
+  <data name="SC_TccErrorFormat" xml:space="preserve">
+    <value>应用 TCC 偏移失败：{0}&#10;&#10;请确认已通过 PawnIO 获得 MSR 访问。</value>
+  </data>
+  <data name="SC_TccErrorTitle" xml:space="preserve">
+    <value>TCC 偏移错误</value>
+  </data>
+  <data name="SC_PlUnavailableBody" xml:space="preserve">
+    <value>无法应用 CPU 功耗限制——MSR 访问不可用。&#10;&#10;请从 pawnio.eu 安装 PawnIO 驱动以启用功耗限制控制。</value>
+  </data>
+  <data name="SC_PlUnavailableTitle" xml:space="preserve">
+    <value>功耗限制不可用</value>
+  </data>
+  <data name="SC_PlLockedBody" xml:space="preserve">
+    <value>CPU 功耗限制已被 BIOS 锁定，无法修改。&#10;&#10;该锁定在启动时建立，直到下次重启才会解除。&#10;部分笔记本需要特定的 BIOS 设置或 Unleashed 模式才能解锁。&#10;&#10;如果你使用的是 OMEN 16-am0xxx（8D2F）Intel Core Ultra，PL1/PL2 滑块可能保持锁定，但 OMEN/OGH 性能模式策略仍然生效。</value>
+  </data>
+  <data name="SC_PlLockedTitle" xml:space="preserve">
+    <value>功耗限制已锁定</value>
+  </data>
+  <data name="SC_PlFailedBody" xml:space="preserve">
+    <value>应用 CPU 功耗限制失败。&#10;&#10;BIOS 可能在启动时锁定了 MSR 寄存器。</value>
+  </data>
+  <data name="SC_PlFailedTitle" xml:space="preserve">
+    <value>功耗限制设置失败</value>
+  </data>
+  <data name="SC_PlErrorFormat" xml:space="preserve">
+    <value>应用 CPU 功耗限制出错：{0}</value>
+  </data>
+  <data name="SC_PlErrorTitle" xml:space="preserve">
+    <value>功耗限制错误</value>
+  </data>
+  <data name="SC_RangeFormat" xml:space="preserve">
+    <value>{0} 至 {1}</value>
+  </data>
+  <data name="SC_PercentRangeFormat" xml:space="preserve">
+    <value>{0}% 至 {1}%</value>
+  </data>
+  <data name="FanCalibration_Preparing" xml:space="preserve">
+    <value>正在准备校准…</value>
+  </data>
+  <data name="FanCalibration_RunningWizard" xml:space="preserve">
+    <value>正在运行校准向导…</value>
+  </data>
+  <data name="FanCalibration_Cancelling" xml:space="preserve">
+    <value>正在取消…</value>
+  </data>
+  <data name="FanCalibration_CompleteCheck" xml:space="preserve">
+    <value>✓ 完成</value>
+  </data>
+  <data name="FanCalibration_CompleteExclaim" xml:space="preserve">
+    <value>✓ 校准完成！</value>
+  </data>
+  <data name="General_PowerStaleFormat" xml:space="preserve">
+    <value>{0} 功耗遥测已过期。</value>
+  </data>
+  <data name="General_PowerInvalidFormat" xml:space="preserve">
+    <value>{0} 功耗遥测返回了无效值。</value>
+  </data>
+  <data name="General_PowerUnavailableFormat" xml:space="preserve">
+    <value>此后端上 {0} 功耗传感器不可用。</value>
+  </data>
+  <data name="General_PowerInactiveFormat" xml:space="preserve">
+    <value>{0} 功耗遥测未激活。</value>
+  </data>
+  <data name="General_PowerZeroFormat" xml:space="preserve">
+    <value>{0} 功耗传感器返回 0W，已按不可用隐藏。</value>
+  </data>
+  <data name="General_PowerNotReadyFormat" xml:space="preserve">
+    <value>{0} 功耗遥测暂时不可用。</value>
+  </data>
+  <data name="KbdMap_NothingSelected" xml:space="preserve">
+    <value>未选中任何键。请点击按键，或拖框框选。</value>
+  </data>
+  <data name="KbdMap_AllBlack" xml:space="preserve">
+    <value>已将全部按键设为黑色。点击“应用”发送。</value>
+  </data>
+  <data name="KbdMap_SettingsFailed" xml:space="preserve">
+    <value>无法打开设置。请前往“设置 > 个性化 > 动态照明”。</value>
+  </data>
+  <data name="KbdMap_ZoneBarFormat" xml:space="preserve">
+    <value>灯条 {0}</value>
+  </data>
+  <data name="Lighting_DeviceCountFormat" xml:space="preserve">
+    <value>检测到 {0} 个设备</value>
+  </data>
+  <data name="Mem_CheckIntervalFormat" xml:space="preserve">
+    <value>每 {0} 秒</value>
+  </data>
+  <data name="Mem_CleanEveryFormat" xml:space="preserve">
+    <value>每 {0} 分钟</value>
+  </data>
+  <data name="DiagnosticExport_KeyboardLightingUnavailable" xml:space="preserve">
+    <value>键盘灯效服务不可用</value>
+  </data>
+  <data name="DiagnosticExport_HardwareMonitoringUnavailable" xml:space="preserve">
+    <value>硬件监控服务不可用</value>
+  </data>
+  <data name="DashboardChart_Collecting" xml:space="preserve">
+    <value>正在收集数据…</value>
+  </data>
+  <data name="Hotkey_FailedHeldFormat" xml:space="preserve">
+    <value>被其他应用占用，无法生效：{0}</value>
+  </data>
+  <data name="TempDiag_ComparisonFailedFormat" xml:space="preserve">
+    <value>对比失败：{0}</value>
+  </data>
+  <data name="Main_TabLoadFailedFormat" xml:space="preserve">
+    <value>无法加载“{0}”标签页。</value>
+  </data>
+  <data name="SC_CustomProfileDescFormat" xml:space="preserve">
+    <value>自定义方案：核心 {0}，显存 {1}，功耗 {2}，电压 {3}</value>
   </data>
 </root>

@@ -9007,4 +9007,271 @@
   <data name="TuningView_ValidateDriverTooltip" xml:space="preserve">
     <value>Требуется один раз на версию драйвера NVIDIA (кроме 617.14) перед Apply CURRENT. Отправляет запрос, повторяющий собственный запрос драйвера, и проверяет, что ничего не изменилось.</value>
   </data>
+  <data name="KbdDiag_Ready" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="KbdDiag_Detecting" xml:space="preserve">
+    <value>Обнаружение устройств...</value>
+  </data>
+  <data name="KbdDiag_DeviceConnected" xml:space="preserve">
+    <value>Подключено</value>
+  </data>
+  <data name="KbdDiag_IntegratedKeyboard" xml:space="preserve">
+    <value>Встроенная клавиатура</value>
+  </data>
+  <data name="KbdDiag_KeyboardType" xml:space="preserve">
+    <value>Клавиатура</value>
+  </data>
+  <data name="KbdDiag_ProbeConfirmTitle" xml:space="preserve">
+    <value>Проверка RGB-нагрузки</value>
+  </data>
+  <data name="KbdDiag_ProbeConfirmBody" xml:space="preserve">
+    <value>Будет отправлено экспериментальных цветовых команд: {0}, по одной каждые 4 секунды, каждая красная.&#10;&#10;Следите за клавиатурой и запомните НОМЕР шага, на котором она покраснеет, затем сообщите в GitHub issue. Текущие цвета сохраняются и восстанавливаются после проверки.</value>
+  </data>
+  <data name="KbdDiag_ProbeFinished" xml:space="preserve">
+    <value>Проверка завершена. Укажите номер шага, если клавиатура покраснела.</value>
+  </data>
+  <data name="KbdDiag_RunningTestPattern" xml:space="preserve">
+    <value>Запуск тестового узора...</value>
+  </data>
+  <data name="KbdDiag_TestPatternApplied" xml:space="preserve">
+    <value>Тестовый узор успешно применён.</value>
+  </data>
+  <data name="KbdDiag_ClearingTestPattern" xml:space="preserve">
+    <value>Очистка тестового узора...</value>
+  </data>
+  <data name="KbdDiag_TestPatternCleared" xml:space="preserve">
+    <value>Тестовый узор очищен.</value>
+  </data>
+  <data name="KbdDiag_LogStartingTest" xml:space="preserve">
+    <value>Запуск тестового узора</value>
+  </data>
+  <data name="KbdDiag_LogTestingBrandFormat" xml:space="preserve">
+    <value>Проверка устройств {0}</value>
+  </data>
+  <data name="KbdDiag_LogTestingHpKeyboard" xml:space="preserve">
+    <value>Проверка клавиатуры HP Omen (узор ColorTable)</value>
+  </data>
+  <data name="KbdDiag_LogAppliedTestFormat" xml:space="preserve">
+    <value>Тест применён к {0}</value>
+  </data>
+  <data name="KbdDiag_LogApplied4Zone" xml:space="preserve">
+    <value>Применён 4-зонный RGB-узор</value>
+  </data>
+  <data name="KbdDiag_LogAppliedWhite" xml:space="preserve">
+    <value>Применён белый проверочный узор</value>
+  </data>
+  <data name="KbdDiag_LogTestCompleted" xml:space="preserve">
+    <value>Тестовый узор завершён</value>
+  </data>
+  <data name="KbdDiag_LogTestFailedFormat" xml:space="preserve">
+    <value>Тестовый узор не удался: {0}</value>
+  </data>
+  <data name="KbdDiag_LogClearing" xml:space="preserve">
+    <value>Очистка тестовых узоров</value>
+  </data>
+  <data name="KbdDiag_LogClearedBrandFormat" xml:space="preserve">
+    <value>Устройства {0} очищены</value>
+  </data>
+  <data name="KbdDiag_LogRestoredHpDefaults" xml:space="preserve">
+    <value>Восстановлены значения клавиатуры HP Omen по умолчанию</value>
+  </data>
+  <data name="KbdDiag_LogClearCompleted" xml:space="preserve">
+    <value>Очистка завершена</value>
+  </data>
+  <data name="KbdDiag_LogClearFailedFormat" xml:space="preserve">
+    <value>Очистка не удалась: {0}</value>
+  </data>
+  <data name="KbdDiag_LogCollecting" xml:space="preserve">
+    <value>Сбор журналов диагностики</value>
+  </data>
+  <data name="KbdDiag_LogServiceStatusFormat" xml:space="preserve">
+    <value>{0}: доступно={1}, бэкенд={2}</value>
+  </data>
+  <data name="KbdDiag_LogDetectedDevicesFormat" xml:space="preserve">
+    <value>Обнаружено устройств: {0}</value>
+  </data>
+  <data name="Nvidia_ValidateDriverPrompt" xml:space="preserve">
+    <value>Проверить этот драйвер NVIDIA для записи CURRENT?&#10;&#10;OmenCore отправит один запрос, повторяющий текущий запрос питания драйвера, и проверит, что ничего не изменилось. Сначала закройте игры и тяжёлые GPU-приложения. При любом несовпадении запись останется заблокированной.</value>
+  </data>
+  <data name="Nvidia_ResultDonePrefix" xml:space="preserve">
+    <value>Готово: </value>
+  </data>
+  <data name="Nvidia_ResultNotValidatedFormat" xml:space="preserve">
+    <value>Не проверено: {0}</value>
+  </data>
+  <data name="Nvidia_ResultNotResolvedFormat" xml:space="preserve">
+    <value>Не разрешено: {0}</value>
+  </data>
+  <data name="Nvidia_ResultNotAppliedFormat" xml:space="preserve">
+    <value>Не применено: {0}</value>
+  </data>
+  <data name="Nvidia_RestartHint" xml:space="preserve">
+    <value> Перезагрузите Windows для завершения.</value>
+  </data>
+  <data name="SC_ProfileStockDesc" xml:space="preserve">
+    <value>Заводские значения — без разгона</value>
+  </data>
+  <data name="SC_ProfileSafeDesc" xml:space="preserve">
+    <value>Профиль только по питанию: холоднее и тише GPU</value>
+  </data>
+  <data name="SC_ProfileStockEnvelopeDesc" xml:space="preserve">
+    <value>Профиль только по питанию в пределах заводского конверта</value>
+  </data>
+  <data name="SC_ProfileMaxDesc" xml:space="preserve">
+    <value>Использует максимальный обнаруженный лимит. Перед постоянным использованием проверьте стабильность и температуры.</value>
+  </data>
+  <data name="SC_ProfileConservativeDesc" xml:space="preserve">
+    <value>Консервативная отправная точка под обнаруженный диапазон GPU</value>
+  </data>
+  <data name="SC_ProfileDailyFormat" xml:space="preserve">
+    <value>Ежедневный профиль с учётом устройства: {0}</value>
+  </data>
+  <data name="SC_ProfileNearTopDesc" xml:space="preserve">
+    <value>Близко к верхнему диапазону. Сначала Test Apply, оставляйте только после проверки стабильности.</value>
+  </data>
+  <data name="SC_ConflictBodyGpuFormat" xml:space="preserve">
+    <value>Обнаружен конфликтующий инструмент:&#10;&#10;{0}&#10;&#10;Разгон GPU при его работе может вызвать нестабильность или сбой драйвера.&#10;&#10;Всё равно продолжить?</value>
+  </data>
+  <data name="SC_ConflictBodyCpuFormat" xml:space="preserve">
+    <value>Обнаружен конфликтующий инструмент:&#10;&#10;{0}&#10;&#10;Снижение напряжения CPU при его работе может вызвать нестабильность или сбой.&#10;&#10;Всё равно продолжить?</value>
+  </data>
+  <data name="SC_ConflictTitle" xml:space="preserve">
+    <value>Обнаружен конфликт настройки</value>
+  </data>
+  <data name="SC_TestApplyGpuPrompt" xml:space="preserve">
+    <value>Test Apply применит текущую настройку GPU на 30 секунд и затем автоматически восстановит прежнее состояние, если не нажать Keep. Продолжить?</value>
+  </data>
+  <data name="SC_TestApplyGpuTitle" xml:space="preserve">
+    <value>Проверка настройки GPU</value>
+  </data>
+  <data name="SC_TestApplyCpuPrompt" xml:space="preserve">
+    <value>Test Apply применит текущее снижение напряжения CPU на 30 секунд и затем восстановит прежнее напряжение, если не нажать Keep. Продолжить?</value>
+  </data>
+  <data name="SC_TestApplyCpuTitle" xml:space="preserve">
+    <value>Проверка снижения напряжения CPU</value>
+  </data>
+  <data name="SC_TccUnavailableBody" xml:space="preserve">
+    <value>Смещение TCC недоступно — нет доступа к MSR.&#10;&#10;Требуется драйвер PawnIO (pawnio.eu).&#10;&#10;Без MSR нельзя менять температурные лимиты CPU.</value>
+  </data>
+  <data name="SC_TccUnavailableTitle" xml:space="preserve">
+    <value>Смещение TCC недоступно</value>
+  </data>
+  <data name="SC_TccWriteFailedBodyFormat" xml:space="preserve">
+    <value>Смещение TCC не изменилось — значение осталось {0}°C.&#10;&#10;Обычно это значит:&#10;• Hyper-V/HVCI (изоляция ядра) блокирует запись MSR&#10;• Безопасная загрузка блокирует доступ ядра&#10;&#10;Исправление:&#10;1. Безопасность Windows → Безопасность устройства → Изоляция ядра&#10;2. Отключите «Целостность памяти»&#10;3. Перезагрузите компьютер&#10;&#10;Или используйте Intel XTU с подписанным драйвером.</value>
+  </data>
+  <data name="SC_TccWriteFailedTitle" xml:space="preserve">
+    <value>Не удалось записать смещение TCC</value>
+  </data>
+  <data name="SC_TccErrorFormat" xml:space="preserve">
+    <value>Не удалось применить смещение TCC: {0}&#10;&#10;Убедитесь в доступе к MSR через PawnIO.</value>
+  </data>
+  <data name="SC_TccErrorTitle" xml:space="preserve">
+    <value>Ошибка смещения TCC</value>
+  </data>
+  <data name="SC_PlUnavailableBody" xml:space="preserve">
+    <value>Лимиты питания CPU недоступны — нет доступа к MSR.&#10;&#10;Установите драйвер PawnIO с pawnio.eu.</value>
+  </data>
+  <data name="SC_PlUnavailableTitle" xml:space="preserve">
+    <value>Лимиты питания недоступны</value>
+  </data>
+  <data name="SC_PlLockedBody" xml:space="preserve">
+    <value>Лимиты питания CPU заблокированы BIOS.&#10;&#10;Блокировка ставится при загрузке и держится до перезагрузки.&#10;Некоторым ноутбукам нужны особые настройки BIOS или Unleashed Mode.&#10;&#10;На OMEN 16-am0xxx (8D2F) Intel Core Ultra ползунки PL1/PL2 могут оставаться заблокированными, но политика режимов OMEN/OGH продолжает работать.</value>
+  </data>
+  <data name="SC_PlLockedTitle" xml:space="preserve">
+    <value>Лимиты питания заблокированы</value>
+  </data>
+  <data name="SC_PlFailedBody" xml:space="preserve">
+    <value>Не удалось применить лимиты питания CPU.&#10;&#10;Возможно, BIOS заблокировал регистры MSR при загрузке.</value>
+  </data>
+  <data name="SC_PlFailedTitle" xml:space="preserve">
+    <value>Не удалось задать лимиты</value>
+  </data>
+  <data name="SC_PlErrorFormat" xml:space="preserve">
+    <value>Ошибка применения лимитов CPU: {0}</value>
+  </data>
+  <data name="SC_PlErrorTitle" xml:space="preserve">
+    <value>Ошибка лимитов питания</value>
+  </data>
+  <data name="SC_RangeFormat" xml:space="preserve">
+    <value>{0} — {1}</value>
+  </data>
+  <data name="SC_PercentRangeFormat" xml:space="preserve">
+    <value>{0}% — {1}%</value>
+  </data>
+  <data name="FanCalibration_Preparing" xml:space="preserve">
+    <value>Подготовка калибровки...</value>
+  </data>
+  <data name="FanCalibration_RunningWizard" xml:space="preserve">
+    <value>Запуск мастера калибровки...</value>
+  </data>
+  <data name="FanCalibration_Cancelling" xml:space="preserve">
+    <value>Отмена...</value>
+  </data>
+  <data name="FanCalibration_CompleteCheck" xml:space="preserve">
+    <value>✓ Готово</value>
+  </data>
+  <data name="FanCalibration_CompleteExclaim" xml:space="preserve">
+    <value>✓ Калибровка завершена!</value>
+  </data>
+  <data name="General_PowerStaleFormat" xml:space="preserve">
+    <value>Телеметрия питания {0} устарела.</value>
+  </data>
+  <data name="General_PowerInvalidFormat" xml:space="preserve">
+    <value>Телеметрия питания {0} вернула неверное значение.</value>
+  </data>
+  <data name="General_PowerUnavailableFormat" xml:space="preserve">
+    <value>Датчик питания {0} недоступен на этом бэкенде.</value>
+  </data>
+  <data name="General_PowerInactiveFormat" xml:space="preserve">
+    <value>Телеметрия питания {0} неактивна.</value>
+  </data>
+  <data name="General_PowerZeroFormat" xml:space="preserve">
+    <value>Датчик питания {0} вернул 0 Вт; скрыто как недоступное.</value>
+  </data>
+  <data name="General_PowerNotReadyFormat" xml:space="preserve">
+    <value>Телеметрия питания {0} пока недоступна.</value>
+  </data>
+  <data name="KbdMap_NothingSelected" xml:space="preserve">
+    <value>Ничего не выбрано. Нажмите клавиши или выделите рамкой.</value>
+  </data>
+  <data name="KbdMap_AllBlack" xml:space="preserve">
+    <value>Все клавиши чёрные. Нажмите «Применить».</value>
+  </data>
+  <data name="KbdMap_SettingsFailed" xml:space="preserve">
+    <value>Не удалось открыть Параметры. Путь: Параметры > Персонализация > Динамическое освещение.</value>
+  </data>
+  <data name="KbdMap_ZoneBarFormat" xml:space="preserve">
+    <value>Полоса {0}</value>
+  </data>
+  <data name="Lighting_DeviceCountFormat" xml:space="preserve">
+    <value>Обнаружено устройств: {0}</value>
+  </data>
+  <data name="Mem_CheckIntervalFormat" xml:space="preserve">
+    <value>Каждые {0} с</value>
+  </data>
+  <data name="Mem_CleanEveryFormat" xml:space="preserve">
+    <value>Каждые {0} мин</value>
+  </data>
+  <data name="DiagnosticExport_KeyboardLightingUnavailable" xml:space="preserve">
+    <value>Служба подсветки клавиатуры недоступна</value>
+  </data>
+  <data name="DiagnosticExport_HardwareMonitoringUnavailable" xml:space="preserve">
+    <value>Служба мониторинга оборудования недоступна</value>
+  </data>
+  <data name="DashboardChart_Collecting" xml:space="preserve">
+    <value>Сбор данных...</value>
+  </data>
+  <data name="Hotkey_FailedHeldFormat" xml:space="preserve">
+    <value>Захвачено другим приложением: {0}</value>
+  </data>
+  <data name="TempDiag_ComparisonFailedFormat" xml:space="preserve">
+    <value>Сравнение не удалось: {0}</value>
+  </data>
+  <data name="Main_TabLoadFailedFormat" xml:space="preserve">
+    <value>Не удалось загрузить вкладку {0}.</value>
+  </data>
+  <data name="SC_CustomProfileDescFormat" xml:space="preserve">
+    <value>Пользовательский профиль: ядро {0}, память {1}, питание {2}, напряжение {3}</value>
+  </data>
 </root>

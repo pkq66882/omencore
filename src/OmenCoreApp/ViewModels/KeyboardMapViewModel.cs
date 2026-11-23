@@ -380,7 +380,7 @@ namespace OmenCore.ViewModels
 
             if (targets.Count == 0)
             {
-                Status = "Nothing selected. Click keys, or drag a box across them.";
+                Status = Strings.KbdMap_NothingSelected;
                 return;
             }
 
@@ -401,7 +401,7 @@ namespace OmenCore.ViewModels
         private void ClearAllColors()
         {
             foreach (var key in Keys) key.ColorHex = "#000000";
-            Status = "All keys set to black. Apply to send it.";
+            Status = Strings.KbdMap_AllBlack;
         }
 
         private async Task ApplyAsync()
@@ -614,8 +614,7 @@ namespace OmenCore.ViewModels
             {
                 // Not fatal: the banner already says what to do, this only saves them the clicks.
                 _logging.Warn($"[KeyboardMap] Could not open the Dynamic Lighting settings page: {ex.Message}");
-                Status = "Could not open Settings. It is under " +
-                         "Settings > Personalisation > Dynamic Lighting.";
+                Status = Strings.KbdMap_SettingsFailed;
             }
         }
 
@@ -1006,7 +1005,7 @@ namespace OmenCore.ViewModels
                 {
                     IsLightBar = true,
                     ZoneIndex = zone,
-                    Label = $"Bar {zone + 1}",
+                    Label = string.Format(Strings.KbdMap_ZoneBarFormat, zone + 1),
                     X = zone * (zoneWidth + gap),
                     Y = top,
                     Width = zoneWidth,

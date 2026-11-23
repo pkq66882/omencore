@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -231,7 +232,7 @@ namespace OmenCore.Services
         public string DescribeFailedHotkeys() =>
             _failedHotkeys.Count == 0
                 ? string.Empty
-                : "Held by another app, not working: " + string.Join(", ", _failedHotkeys.Select(b => $"{b.DisplayString} ({b.Action})"));
+                : string.Format(Strings.Hotkey_FailedHeldFormat, string.Join(", ", _failedHotkeys.Select(b => $"{b.DisplayString} ({b.Action})")));
 
         private void StartHotkeyRetryTimer()
         {

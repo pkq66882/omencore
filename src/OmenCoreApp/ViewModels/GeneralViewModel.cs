@@ -946,12 +946,12 @@ namespace OmenCore.ViewModels
 
             return state switch
             {
-                TelemetryDataState.Stale => $"{label} power telemetry is stale.",
-                TelemetryDataState.Invalid => $"{label} power telemetry returned an invalid value.",
-                TelemetryDataState.Unavailable => $"{label} power sensor is unavailable on this backend.",
-                TelemetryDataState.Inactive => $"{label} power telemetry is inactive.",
-                TelemetryDataState.Zero => $"{label} power sensor returned 0W; hiding it as unavailable.",
-                _ => $"{label} power telemetry is not available yet."
+                TelemetryDataState.Stale => string.Format(Strings.General_PowerStaleFormat, label),
+                TelemetryDataState.Invalid => string.Format(Strings.General_PowerInvalidFormat, label),
+                TelemetryDataState.Unavailable => string.Format(Strings.General_PowerUnavailableFormat, label),
+                TelemetryDataState.Inactive => string.Format(Strings.General_PowerInactiveFormat, label),
+                TelemetryDataState.Zero => string.Format(Strings.General_PowerZeroFormat, label),
+                _ => string.Format(Strings.General_PowerNotReadyFormat, label)
             };
         }
 

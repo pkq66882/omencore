@@ -7,8 +7,21 @@ using Xunit;
 
 namespace OmenCoreApp.Tests.Services
 {
-    public class HotkeyServiceTests
+    public class HotkeyServiceTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _original = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public HotkeyServiceTests()
+        {
+            // DescribeFailedHotkeys is localized; pin to en for canonical assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _original;
+        }
+
         [Fact]
         public void BlockedHotkey_IsTriedAgainOnActivation_ButNotMoreOftenThanOncePerMinute()
         {

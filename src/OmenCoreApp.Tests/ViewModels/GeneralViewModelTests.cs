@@ -12,8 +12,21 @@ using Xunit;
 namespace OmenCoreApp.Tests.ViewModels
 {
     [Collection("Config Isolation")]
-    public class GeneralViewModelTests
+    public class GeneralViewModelTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _original = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public GeneralViewModelTests()
+        {
+            // Power telemetry labels are localized; pin to en for canonical assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _original;
+        }
+
         private sealed class StubFanController : IFanController
         {
             public bool IsAvailable { get; set; } = true;

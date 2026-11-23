@@ -592,7 +592,7 @@ namespace OmenCore.Controls
             {
                 return new RgbReadinessData
                 {
-                    Status = "Keyboard lighting service unavailable",
+                    Status = Strings.DiagnosticExport_KeyboardLightingUnavailable,
                     ObservedSurface = FormatDiagnosticValue(observed.ObservedSurface),
                     ObservedAtUtc = FormatDiagnosticDate(observed.ObservedAtUtc),
                     ObservedProbeColor = FormatDiagnosticValue(observed.ObservedProbeColorHex),
@@ -659,7 +659,7 @@ namespace OmenCore.Controls
             {
                 return new MonitoringReadinessData
                 {
-                    Status = "Hardware monitoring service unavailable"
+                    Status = Strings.DiagnosticExport_HardwareMonitoringUnavailable
                 };
             }
 

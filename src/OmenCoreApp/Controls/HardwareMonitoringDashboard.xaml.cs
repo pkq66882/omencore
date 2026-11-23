@@ -813,7 +813,7 @@ namespace OmenCore.Controls
             {
                 var noData = new TextBlock
                 {
-                    Text = "Collecting data...",
+                    Text = Strings.DashboardChart_Collecting,
                     Foreground = ChartMutedTextBrush,
                     FontSize = 14,
                     FontWeight = FontWeights.SemiBold

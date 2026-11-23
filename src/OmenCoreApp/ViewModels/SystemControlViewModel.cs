@@ -1077,7 +1077,7 @@ namespace OmenCore.ViewModels
         }
 
         public string GpuCoreClockOffsetText => GpuCoreClockOffset >= 0 ? $"+{GpuCoreClockOffset} MHz" : $"{GpuCoreClockOffset} MHz";
-        public string GpuCoreOffsetRangeText => $"{FormatSignedValue(GpuCoreOffsetMin, "MHz")} to {FormatSignedValue(GpuCoreOffsetMax, "MHz")}";
+        public string GpuCoreOffsetRangeText => string.Format(Strings.SC_RangeFormat, FormatSignedValue(GpuCoreOffsetMin, "MHz"), FormatSignedValue(GpuCoreOffsetMax, "MHz"));
 
         private int _gpuMemoryClockOffset;
         public int GpuMemoryClockOffset
@@ -1099,7 +1099,7 @@ namespace OmenCore.ViewModels
         }
 
         public string GpuMemoryClockOffsetText => GpuMemoryClockOffset >= 0 ? $"+{GpuMemoryClockOffset} MHz" : $"{GpuMemoryClockOffset} MHz";
-        public string GpuMemoryOffsetRangeText => $"{FormatSignedValue(GpuMemoryOffsetMin, "MHz")} to {FormatSignedValue(GpuMemoryOffsetMax, "MHz")}";
+        public string GpuMemoryOffsetRangeText => string.Format(Strings.SC_RangeFormat, FormatSignedValue(GpuMemoryOffsetMin, "MHz"), FormatSignedValue(GpuMemoryOffsetMax, "MHz"));
 
         private int _gpuPowerLimitPercent = 100;
         public int GpuPowerLimitPercent
@@ -1121,7 +1121,7 @@ namespace OmenCore.ViewModels
         }
 
         public string GpuPowerLimitText => $"{GpuPowerLimitPercent}%";
-        public string GpuPowerLimitRangeText => $"{GpuPowerLimitMin}% to {GpuPowerLimitMax}%";
+        public string GpuPowerLimitRangeText => string.Format(Strings.SC_PercentRangeFormat, GpuPowerLimitMin, GpuPowerLimitMax);
 
         public bool IsGpuOcTestPending
         {
@@ -1891,7 +1891,7 @@ namespace OmenCore.ViewModels
                     MemoryClockOffsetMHz = 0,
                     PowerLimitPercent = 100,
                     VoltageOffsetMv = 0,
-                    Description = "Factory defaults - no overclocking"
+                    Description = Strings.SC_ProfileStockDesc
                 }
             };
 
@@ -1909,7 +1909,7 @@ namespace OmenCore.ViewModels
                     MemoryClockOffsetMHz = 0,
                     PowerLimitPercent = Math.Clamp(95, GpuPowerLimitMin, GpuPowerLimitMax),
                     VoltageOffsetMv = 0,
-                    Description = "Power-only profile for cooler, quieter GPU behavior"
+                    Description = Strings.SC_ProfileSafeDesc
                 });
                 profiles.Add(new Models.GpuOcProfile
                 {
@@ -1918,7 +1918,7 @@ namespace OmenCore.ViewModels
                     MemoryClockOffsetMHz = 0,
                     PowerLimitPercent = Math.Clamp(100, GpuPowerLimitMin, GpuPowerLimitMax),
                     VoltageOffsetMv = 0,
-                    Description = "Power-only profile matching the detected stock envelope"
+                    Description = Strings.SC_ProfileStockEnvelopeDesc
                 });
                 profiles.Add(new Models.GpuOcProfile
                 {
@@ -1927,7 +1927,7 @@ namespace OmenCore.ViewModels
                     MemoryClockOffsetMHz = 0,
                     PowerLimitPercent = GpuPowerLimitMax,
                     VoltageOffsetMv = 0,
-                    Description = "Uses the highest detected power limit. Validate stability and temperatures before keeping it."
+                    Description = Strings.SC_ProfileMaxDesc
                 });
                 return profiles;
             }
@@ -1951,7 +1951,7 @@ namespace OmenCore.ViewModels
                 MemoryClockOffsetMHz = safeMemory,
                 PowerLimitPercent = safePower,
                 VoltageOffsetMv = 0,
-                Description = "Conservative starting point tuned to the detected GPU range"
+                Description = Strings.SC_ProfileConservativeDesc
             });
             profiles.Add(new Models.GpuOcProfile
             {
@@ -1960,7 +1960,7 @@ namespace OmenCore.ViewModels
                 MemoryClockOffsetMHz = balancedMemory,
                 PowerLimitPercent = balancedPower,
                 VoltageOffsetMv = 0,
-                Description = $"Device-aware daily profile for {GetGpuOcPlatformLabel()}"
+                Description = string.Format(Strings.SC_ProfileDailyFormat, GetGpuOcPlatformLabel())
             });
             profiles.Add(new Models.GpuOcProfile
             {
@@ -1969,7 +1969,7 @@ namespace OmenCore.ViewModels
                 MemoryClockOffsetMHz = maxMemory,
                 PowerLimitPercent = maxPower,
                 VoltageOffsetMv = 0,
-                Description = "Near-top detected range. Use Test Apply first and keep only after stability validation."
+                Description = Strings.SC_ProfileNearTopDesc
             });
 
             return profiles;
@@ -2146,8 +2146,8 @@ namespace OmenCore.ViewModels
             if (conflictReport.HasHighRiskConflict)
             {
                 var proceed = System.Windows.MessageBox.Show(
-                    $"A conflicting tool is running:\n\n{string.Join("\n", conflictReport.Conflicts.Select(c => $"• {c.Title}: {c.Suggestion}"))}\n\nApplying GPU overclocking while this tool is active may cause instability or a driver crash.\n\nDo you want to continue anyway?",
-                    "Tuning Conflict Detected",
+                    string.Format(Strings.SC_ConflictBodyGpuFormat, string.Join("\n", conflictReport.Conflicts.Select(c => $"• {c.Title}: {c.Suggestion}"))),
+                    Strings.SC_ConflictTitle,
                     System.Windows.MessageBoxButton.YesNo,
                     System.Windows.MessageBoxImage.Warning);
                 if (proceed != System.Windows.MessageBoxResult.Yes)
@@ -2155,8 +2155,8 @@ namespace OmenCore.ViewModels
             }
 
             var confirmation = System.Windows.MessageBox.Show(
-                "Test Apply will apply the current GPU tuning for 30 seconds and then automatically restore the previous GPU state unless you press Keep. Continue?",
-                "Test GPU Tuning",
+                Strings.SC_TestApplyGpuPrompt,
+                Strings.SC_TestApplyGpuTitle,
                 System.Windows.MessageBoxButton.YesNo,
                 System.Windows.MessageBoxImage.Warning);
 
@@ -2311,8 +2311,8 @@ namespace OmenCore.ViewModels
             if (conflictReport.HasHighRiskConflict)
             {
                 var proceed = System.Windows.MessageBox.Show(
-                    $"A conflicting tool is running:\n\n{string.Join("\n", conflictReport.Conflicts.Select(c => $"• {c.Title}: {c.Suggestion}"))}\n\nApplying a CPU undervolt while this tool is active may cause instability or a crash.\n\nDo you want to continue anyway?",
-                    "Tuning Conflict Detected",
+                    string.Format(Strings.SC_ConflictBodyCpuFormat, string.Join("\n", conflictReport.Conflicts.Select(c => $"• {c.Title}: {c.Suggestion}"))),
+                    Strings.SC_ConflictTitle,
                     System.Windows.MessageBoxButton.YesNo,
                     System.Windows.MessageBoxImage.Warning);
                 if (proceed != System.Windows.MessageBoxResult.Yes)
@@ -2320,8 +2320,8 @@ namespace OmenCore.ViewModels
             }
 
             var confirmation = System.Windows.MessageBox.Show(
-                "Test Apply will apply the current CPU undervolt for 30 seconds and then automatically restore the previous CPU voltage unless you press Keep. Continue?",
-                "Test CPU Undervolt",
+                Strings.SC_TestApplyCpuPrompt,
+                Strings.SC_TestApplyCpuTitle,
                 System.Windows.MessageBoxButton.YesNo,
                 System.Windows.MessageBoxImage.Warning);
 
@@ -3367,10 +3367,8 @@ namespace OmenCore.ViewModels
             {
                 _logging.Warn("Cannot apply TCC offset: MSR access not available (install PawnIO)");
                 System.Windows.MessageBox.Show(
-                    "TCC offset cannot be applied - MSR access not available.\n\n" +
-                    "This requires PawnIO driver access (pawnio.eu).\n\n" +
-                    "Without MSR access, CPU temperature limits cannot be modified.",
-                    "TCC Offset Unavailable",
+                    Strings.SC_TccUnavailableBody,
+                    Strings.SC_TccUnavailableTitle,
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Warning);
                 return;
@@ -3409,16 +3407,8 @@ namespace OmenCore.ViewModels
                     _logging.Warn($"× TCC offset write failed - value unchanged at {offsetBefore}°C. " +
                                   "This may indicate HVCI/Secure Boot is blocking MSR writes.");
                     System.Windows.MessageBox.Show(
-                        $"TCC offset could not be changed - the value remained at {offsetBefore}°C.\n\n" +
-                        "This usually means:\n" +
-                        "• Hyper-V/HVCI (Core Isolation) is blocking MSR writes\n" +
-                        "• Secure Boot is preventing kernel-mode access\n\n" +
-                        "To fix:\n" +
-                        "1. Open Windows Security → Device Security → Core Isolation\n" +
-                        "2. Disable 'Memory Integrity'\n" +
-                        "3. Restart your computer\n\n" +
-                        "Or use Intel XTU which has a signed driver.",
-                        "TCC Offset Write Failed",
+                        string.Format(Strings.SC_TccWriteFailedBodyFormat, offsetBefore),
+                        Strings.SC_TccWriteFailedTitle,
                         System.Windows.MessageBoxButton.OK,
                         System.Windows.MessageBoxImage.Warning);
                 }
@@ -3434,9 +3424,8 @@ namespace OmenCore.ViewModels
             {
                 _logging.Error($"Failed to apply TCC offset: {ex.Message}", ex);
                 System.Windows.MessageBox.Show(
-                    $"Failed to apply TCC offset: {ex.Message}\n\n" +
-                    "Ensure you have MSR access via PawnIO.",
-                    "TCC Offset Error",
+                    string.Format(Strings.SC_TccErrorFormat, ex.Message),
+                    Strings.SC_TccErrorTitle,
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Error);
             }
@@ -3570,9 +3559,8 @@ namespace OmenCore.ViewModels
             {
                 _logging.Warn("Cannot apply CPU power limits: MSR access not available");
                 System.Windows.MessageBox.Show(
-                    "CPU power limits cannot be applied - MSR access not available.\n\n" +
-                    "Install PawnIO driver from pawnio.eu to enable power limit control.",
-                    "Power Limits Unavailable",
+                    Strings.SC_PlUnavailableBody,
+                    Strings.SC_PlUnavailableTitle,
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Warning);
                 return;
@@ -3582,11 +3570,8 @@ namespace OmenCore.ViewModels
             {
                 _logging.Warn("Cannot apply CPU power limits: locked by BIOS");
                 System.Windows.MessageBox.Show(
-                    "CPU power limits are locked by BIOS and cannot be modified.\n\n" +
-                    "This lock is set during boot and persists until the next restart.\n" +
-                    "Some laptops may require specific BIOS settings or Unleashed Mode to unlock.\n\n" +
-                    "If you are on OMEN 16-am0xxx (8D2F) Intel Core Ultra, direct PL1/PL2 sliders may stay locked while OMEN/OGH performance mode policy still works.",
-                    "Power Limits Locked",
+                    Strings.SC_PlLockedBody,
+                    Strings.SC_PlLockedTitle,
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Warning);
                 return;
@@ -3619,9 +3604,8 @@ namespace OmenCore.ViewModels
                 {
                     _logging.Warn("CPU power limits write returned false - may be locked");
                     System.Windows.MessageBox.Show(
-                        "Failed to apply CPU power limits.\n\n" +
-                        "The BIOS may have locked the MSR registers during boot.",
-                        "Power Limits Failed",
+                        Strings.SC_PlFailedBody,
+                        Strings.SC_PlFailedTitle,
                         System.Windows.MessageBoxButton.OK,
                         System.Windows.MessageBoxImage.Warning);
                 }
@@ -3630,8 +3614,8 @@ namespace OmenCore.ViewModels
             {
                 _logging.Error($"Failed to apply CPU power limits: {ex.Message}", ex);
                 System.Windows.MessageBox.Show(
-                    $"Error applying CPU power limits: {ex.Message}",
-                    "Power Limits Error",
+                    string.Format(Strings.SC_PlErrorFormat, ex.Message),
+                    Strings.SC_PlErrorTitle,
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Error);
             }
@@ -5120,7 +5104,7 @@ namespace OmenCore.ViewModels
                 MemoryClockOffsetMHz = GpuMemoryClockOffset,
                 PowerLimitPercent = GpuPowerLimitPercent,
                 VoltageOffsetMv = GpuVoltageOffsetMv,
-                Description = $"Custom profile: Core {GpuCoreClockOffsetText}, Mem {GpuMemoryClockOffsetText}, Power {GpuPowerLimitText}, Voltage {GpuVoltageOffsetText}",
+                Description = string.Format(Strings.SC_CustomProfileDescFormat, GpuCoreClockOffsetText, GpuMemoryClockOffsetText, GpuPowerLimitText, GpuVoltageOffsetText),
                 CreatedAt = DateTime.Now,
                 ModifiedAt = DateTime.Now
             };

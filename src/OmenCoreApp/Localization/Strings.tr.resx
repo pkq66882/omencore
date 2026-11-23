@@ -9007,4 +9007,271 @@
   <data name="TuningView_ValidateDriverTooltip" xml:space="preserve">
     <value>617.14 dışındaki NVIDIA sürücülerinde Apply CURRENT öncesi sürücü sürümü başına bir kez gerekir. Sürücünün kendi güç isteğini yineleyen bir komut gönderir ve değişiklik olmadığını doğrular.</value>
   </data>
+  <data name="KbdDiag_Ready" xml:space="preserve">
+    <value>Hazır</value>
+  </data>
+  <data name="KbdDiag_Detecting" xml:space="preserve">
+    <value>Cihazlar algılanıyor...</value>
+  </data>
+  <data name="KbdDiag_DeviceConnected" xml:space="preserve">
+    <value>Bağlı</value>
+  </data>
+  <data name="KbdDiag_IntegratedKeyboard" xml:space="preserve">
+    <value>Tümleşik klavye</value>
+  </data>
+  <data name="KbdDiag_KeyboardType" xml:space="preserve">
+    <value>Klavye</value>
+  </data>
+  <data name="KbdDiag_ProbeConfirmTitle" xml:space="preserve">
+    <value>RGB yükü sondası</value>
+  </data>
+  <data name="KbdDiag_ProbeConfirmBody" xml:space="preserve">
+    <value>{0} deneysel klavye renk komutu gönderilecek; her 4 saniyede bir, hepsi kırmızı.&#10;&#10;Klavyeyi izleyin ve kırmızıya döndüğü ADIM numarasını not edip GitHub issue'da bildirin. Mevcut klavye renkleri önce kaydedilir ve sonda bitince geri yüklenir.</value>
+  </data>
+  <data name="KbdDiag_ProbeFinished" xml:space="preserve">
+    <value>Sonda tamamlandı. Klavyeyi kırmızıya çeviren adım numarasını bildirin (varsa).</value>
+  </data>
+  <data name="KbdDiag_RunningTestPattern" xml:space="preserve">
+    <value>Test deseni çalıştırılıyor...</value>
+  </data>
+  <data name="KbdDiag_TestPatternApplied" xml:space="preserve">
+    <value>Test deseni başarıyla uygulandı.</value>
+  </data>
+  <data name="KbdDiag_ClearingTestPattern" xml:space="preserve">
+    <value>Test deseni temizleniyor...</value>
+  </data>
+  <data name="KbdDiag_TestPatternCleared" xml:space="preserve">
+    <value>Test deseni temizlendi.</value>
+  </data>
+  <data name="KbdDiag_LogStartingTest" xml:space="preserve">
+    <value>Test deseni başlatılıyor</value>
+  </data>
+  <data name="KbdDiag_LogTestingBrandFormat" xml:space="preserve">
+    <value>{0} cihazları test ediliyor</value>
+  </data>
+  <data name="KbdDiag_LogTestingHpKeyboard" xml:space="preserve">
+    <value>HP Omen klavyesi test ediliyor (ColorTable deseni)</value>
+  </data>
+  <data name="KbdDiag_LogAppliedTestFormat" xml:space="preserve">
+    <value>{0} cihazına test uygulandı</value>
+  </data>
+  <data name="KbdDiag_LogApplied4Zone" xml:space="preserve">
+    <value>4 bölgeli RGB deseni uygulandı</value>
+  </data>
+  <data name="KbdDiag_LogAppliedWhite" xml:space="preserve">
+    <value>Tam beyaz doğrulama deseni uygulandı</value>
+  </data>
+  <data name="KbdDiag_LogTestCompleted" xml:space="preserve">
+    <value>Test deseni tamamlandı</value>
+  </data>
+  <data name="KbdDiag_LogTestFailedFormat" xml:space="preserve">
+    <value>Test deseni başarısız: {0}</value>
+  </data>
+  <data name="KbdDiag_LogClearing" xml:space="preserve">
+    <value>Test desenleri temizleniyor</value>
+  </data>
+  <data name="KbdDiag_LogClearedBrandFormat" xml:space="preserve">
+    <value>{0} cihazları temizlendi</value>
+  </data>
+  <data name="KbdDiag_LogRestoredHpDefaults" xml:space="preserve">
+    <value>HP Omen klavye varsayılanları geri yüklendi</value>
+  </data>
+  <data name="KbdDiag_LogClearCompleted" xml:space="preserve">
+    <value>Temizleme tamamlandı</value>
+  </data>
+  <data name="KbdDiag_LogClearFailedFormat" xml:space="preserve">
+    <value>Temizleme başarısız: {0}</value>
+  </data>
+  <data name="KbdDiag_LogCollecting" xml:space="preserve">
+    <value>Tanılama günlükleri toplanıyor</value>
+  </data>
+  <data name="KbdDiag_LogServiceStatusFormat" xml:space="preserve">
+    <value>{0}: Kullanılabilir={1}, Arka uç={2}</value>
+  </data>
+  <data name="KbdDiag_LogDetectedDevicesFormat" xml:space="preserve">
+    <value>Algılanan cihazlar: {0}</value>
+  </data>
+  <data name="Nvidia_ValidateDriverPrompt" xml:space="preserve">
+    <value>CURRENT yazmaları için bu NVIDIA sürücüsü doğrulansın mı?&#10;&#10;OmenCore, sürücünün mevcut güç isteğini yineleyen bir komut gönderir ve hiçbir şeyin değişmediğini doğrular. Önce oyunları ve GPU'yi yoğun kullanan uygulamaları kapatın. Herhangi bir uyuşmazlık olursa yazmalar kilitli kalır.</value>
+  </data>
+  <data name="Nvidia_ResultDonePrefix" xml:space="preserve">
+    <value>Tamamlandı: </value>
+  </data>
+  <data name="Nvidia_ResultNotValidatedFormat" xml:space="preserve">
+    <value>Doğrulanamadı: {0}</value>
+  </data>
+  <data name="Nvidia_ResultNotResolvedFormat" xml:space="preserve">
+    <value>Çözümlenemedi: {0}</value>
+  </data>
+  <data name="Nvidia_ResultNotAppliedFormat" xml:space="preserve">
+    <value>Uygulanamadı: {0}</value>
+  </data>
+  <data name="Nvidia_RestartHint" xml:space="preserve">
+    <value> Tamamlamak için Windows'u yeniden başlatın.</value>
+  </data>
+  <data name="SC_ProfileStockDesc" xml:space="preserve">
+    <value>Fabrika varsayılanı - hız aşırtma yok</value>
+  </data>
+  <data name="SC_ProfileSafeDesc" xml:space="preserve">
+    <value>Yalnızca güç profili: daha serin, daha sessiz GPU</value>
+  </data>
+  <data name="SC_ProfileStockEnvelopeDesc" xml:space="preserve">
+    <value>Yalnızca güç; algılanan stok aralığa uygun</value>
+  </data>
+  <data name="SC_ProfileMaxDesc" xml:space="preserve">
+    <value>Algılanan en yüksek güç limitini kullanır. Kalıcı kullanmadan önce kararlılığı ve sıcaklıkları doğrulayın.</value>
+  </data>
+  <data name="SC_ProfileConservativeDesc" xml:space="preserve">
+    <value>Algılanan GPU aralığına göre tutucu başlangıç</value>
+  </data>
+  <data name="SC_ProfileDailyFormat" xml:space="preserve">
+    <value>{0} için cihaza duyarlı günlük profil</value>
+  </data>
+  <data name="SC_ProfileNearTopDesc" xml:space="preserve">
+    <value>Üst aralığa yakın. Önce Test Uygula; yalnızca kararlılık doğrulandıktan sonra saklayın.</value>
+  </data>
+  <data name="SC_ConflictBodyGpuFormat" xml:space="preserve">
+    <value>Çakışan bir araç çalışıyor:&#10;&#10;{0}&#10;&#10;Bu araç etkinken GPU hız aşırtma uygulamak kararsızlığa veya sürücü çökmesine neden olabilir.&#10;&#10;Yine de devam edilsin mi?</value>
+  </data>
+  <data name="SC_ConflictBodyCpuFormat" xml:space="preserve">
+    <value>Çakışan bir araç çalışıyor:&#10;&#10;{0}&#10;&#10;Bu araç etkinken CPU voltaj düşürme uygulamak kararsızlığa veya çökmeye neden olabilir.&#10;&#10;Yine de devam edilsin mi?</value>
+  </data>
+  <data name="SC_ConflictTitle" xml:space="preserve">
+    <value>Ayar çakışması algılandı</value>
+  </data>
+  <data name="SC_TestApplyGpuPrompt" xml:space="preserve">
+    <value>Test Uygula mevcut GPU ayarını 30 saniye uygular; Sakla'ya basmazsanız önceki duruma otomatik döner. Devam edilsin mi?</value>
+  </data>
+  <data name="SC_TestApplyGpuTitle" xml:space="preserve">
+    <value>GPU ayarını test et</value>
+  </data>
+  <data name="SC_TestApplyCpuPrompt" xml:space="preserve">
+    <value>Test Uygula mevcut CPU voltaj düşürmeyi 30 saniye uygular; Sakla'ya basmazsanız önceki voltaja döner. Devam edilsin mi?</value>
+  </data>
+  <data name="SC_TestApplyCpuTitle" xml:space="preserve">
+    <value>CPU voltaj düşürmeyi test et</value>
+  </data>
+  <data name="SC_TccUnavailableBody" xml:space="preserve">
+    <value>TCC ofseti uygulanamıyor - MSR erişimi yok.&#10;&#10;PawnIO sürücüsü gerekir (pawnio.eu).&#10;&#10;MSR olmadan CPU sıcaklık limitleri değiştirilemez.</value>
+  </data>
+  <data name="SC_TccUnavailableTitle" xml:space="preserve">
+    <value>TCC ofseti kullanılamıyor</value>
+  </data>
+  <data name="SC_TccWriteFailedBodyFormat" xml:space="preserve">
+    <value>TCC ofseti değiştirilemedi - değer {0}°C olarak kaldı.&#10;&#10;Genellikle şu anlama gelir:&#10;• Hyper-V/HVCI (Çekirdek Yalıtımı) MSR yazmalarını engelliyor&#10;• Güvenli Önyükleme çekirdek modu erişimini engelliyor&#10;&#10;Düzeltme:&#10;1. Windows Güvenliği → Cihaz Güvenliği → Çekirdek Yalıtımı&#10;2. 'Bellek Bütünlüğü'nü kapatın&#10;3. Bilgisayarı yeniden başlatın&#10;&#10;Veya imzalı sürücüsü olan Intel XTU'yu kullanın.</value>
+  </data>
+  <data name="SC_TccWriteFailedTitle" xml:space="preserve">
+    <value>TCC ofset yazma başarısız</value>
+  </data>
+  <data name="SC_TccErrorFormat" xml:space="preserve">
+    <value>TCC ofseti uygulanamadı: {0}&#10;&#10;PawnIO üzerinden MSR erişiminiz olduğundan emin olun.</value>
+  </data>
+  <data name="SC_TccErrorTitle" xml:space="preserve">
+    <value>TCC ofset hatası</value>
+  </data>
+  <data name="SC_PlUnavailableBody" xml:space="preserve">
+    <value>CPU güç limitleri uygulanamıyor - MSR erişimi yok.&#10;&#10;Güç limiti denetimi için pawnio.eu adresinden PawnIO sürücüsünü yükleyin.</value>
+  </data>
+  <data name="SC_PlUnavailableTitle" xml:space="preserve">
+    <value>Güç limitleri kullanılamıyor</value>
+  </data>
+  <data name="SC_PlLockedBody" xml:space="preserve">
+    <value>CPU güç limitleri BIOS tarafından kilitli.&#10;&#10;Bu kilit önyüklemede konur ve yeniden başlatmaya kadar sürer.&#10;Bazı dizüstülerde BIOS ayarı veya Unleashed modu gerekebilir.&#10;&#10;OMEN 16-am0xxx (8D2F) Intel Core Ultra'da PL1/PL2 kaydırıcıları kilitli kalabilir; OMEN/OGH performans modu ilkesi çalışmaya devam eder.</value>
+  </data>
+  <data name="SC_PlLockedTitle" xml:space="preserve">
+    <value>Güç limitleri kilitli</value>
+  </data>
+  <data name="SC_PlFailedBody" xml:space="preserve">
+    <value>CPU güç limitleri uygulanamadı.&#10;&#10;BIOS MSR kayıtlarını önyüklemede kilitlemiş olabilir.</value>
+  </data>
+  <data name="SC_PlFailedTitle" xml:space="preserve">
+    <value>Güç limitleri başarısız</value>
+  </data>
+  <data name="SC_PlErrorFormat" xml:space="preserve">
+    <value>CPU güç limitleri uygulanırken hata: {0}</value>
+  </data>
+  <data name="SC_PlErrorTitle" xml:space="preserve">
+    <value>Güç limitleri hatası</value>
+  </data>
+  <data name="SC_RangeFormat" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="SC_PercentRangeFormat" xml:space="preserve">
+    <value>%{0} - %{1}</value>
+  </data>
+  <data name="FanCalibration_Preparing" xml:space="preserve">
+    <value>Kalibrasyon hazırlanıyor...</value>
+  </data>
+  <data name="FanCalibration_RunningWizard" xml:space="preserve">
+    <value>Kalibrasyon sihirbazı çalışıyor...</value>
+  </data>
+  <data name="FanCalibration_Cancelling" xml:space="preserve">
+    <value>İptal ediliyor...</value>
+  </data>
+  <data name="FanCalibration_CompleteCheck" xml:space="preserve">
+    <value>✓ Tamamlandı</value>
+  </data>
+  <data name="FanCalibration_CompleteExclaim" xml:space="preserve">
+    <value>✓ Kalibrasyon tamamlandı!</value>
+  </data>
+  <data name="General_PowerStaleFormat" xml:space="preserve">
+    <value>{0} güç telemetrisi eskidi.</value>
+  </data>
+  <data name="General_PowerInvalidFormat" xml:space="preserve">
+    <value>{0} güç telemetrisi geçersiz değer döndürdü.</value>
+  </data>
+  <data name="General_PowerUnavailableFormat" xml:space="preserve">
+    <value>{0} güç sensörü bu arka uçta kullanılamıyor.</value>
+  </data>
+  <data name="General_PowerInactiveFormat" xml:space="preserve">
+    <value>{0} güç telemetrisi etkin değil.</value>
+  </data>
+  <data name="General_PowerZeroFormat" xml:space="preserve">
+    <value>{0} güç sensörü 0W döndürdü; kullanılamaz olarak gizlendi.</value>
+  </data>
+  <data name="General_PowerNotReadyFormat" xml:space="preserve">
+    <value>{0} güç telemetrisi henüz kullanılamıyor.</value>
+  </data>
+  <data name="KbdMap_NothingSelected" xml:space="preserve">
+    <value>Hiçbir şey seçilmedi. Tuşlara tıklayın veya çerçeve çizin.</value>
+  </data>
+  <data name="KbdMap_AllBlack" xml:space="preserve">
+    <value>Tüm tuşlar siyah. Göndermek için Uygula'ya basın.</value>
+  </data>
+  <data name="KbdMap_SettingsFailed" xml:space="preserve">
+    <value>Ayarlar açılamadı. Yol: Ayarlar > Kişiselleştirme > Dinamik Aydınlatma.</value>
+  </data>
+  <data name="KbdMap_ZoneBarFormat" xml:space="preserve">
+    <value>Çubuk {0}</value>
+  </data>
+  <data name="Lighting_DeviceCountFormat" xml:space="preserve">
+    <value>{0} cihaz algılandı</value>
+  </data>
+  <data name="Mem_CheckIntervalFormat" xml:space="preserve">
+    <value>Her {0} sn</value>
+  </data>
+  <data name="Mem_CleanEveryFormat" xml:space="preserve">
+    <value>Her {0} dk</value>
+  </data>
+  <data name="DiagnosticExport_KeyboardLightingUnavailable" xml:space="preserve">
+    <value>Klavye aydınlatma hizmeti kullanılamıyor</value>
+  </data>
+  <data name="DiagnosticExport_HardwareMonitoringUnavailable" xml:space="preserve">
+    <value>Donanım izleme hizmeti kullanılamıyor</value>
+  </data>
+  <data name="DashboardChart_Collecting" xml:space="preserve">
+    <value>Veri toplanıyor...</value>
+  </data>
+  <data name="Hotkey_FailedHeldFormat" xml:space="preserve">
+    <value>Başka bir uygulama tarafından tutuluyor, çalışmıyor: {0}</value>
+  </data>
+  <data name="TempDiag_ComparisonFailedFormat" xml:space="preserve">
+    <value>Karşılaştırma başarısız: {0}</value>
+  </data>
+  <data name="Main_TabLoadFailedFormat" xml:space="preserve">
+    <value>{0} sekmesi yüklenemedi.</value>
+  </data>
+  <data name="SC_CustomProfileDescFormat" xml:space="preserve">
+    <value>Özel profil: Çekirdek {0}, Bellek {1}, Güç {2}, Voltaj {3}</value>
+  </data>
 </root>

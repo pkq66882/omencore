@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -635,7 +636,7 @@ namespace OmenCore.Views
                     {
                         new TextBlock
                         {
-                            Text = $"Failed to load the {tabName} tab.",
+                            Text = string.Format(Strings.Main_TabLoadFailedFormat, tabName),
                             FontSize = 15,
                             FontWeight = FontWeights.SemiBold,
                             Foreground = Brushes.White,

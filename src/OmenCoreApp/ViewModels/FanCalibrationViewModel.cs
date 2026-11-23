@@ -98,7 +98,7 @@ namespace OmenCore.ViewModels
         private async Task StartCalibrationAsync()
         {
             IsCalibrating = true;
-            Status = "Preparing calibration...";
+            Status = Strings.FanCalibration_Preparing;
             Progress = 0;
             CalibrationSteps.Clear();
 
@@ -106,12 +106,12 @@ namespace OmenCore.ViewModels
 
             try
             {
-                Status = "Running calibration wizard...";
+                Status = Strings.FanCalibration_RunningWizard;
                 await _calibrationService.StartCalibrationAsync(_cts.Token);
             }
             catch (OperationCanceledException)
             {
-                Status = "Calibration cancelled";
+                Status = Strings.FanCalibration_Cancelled;
             }
             catch (Exception ex)
             {
@@ -130,7 +130,7 @@ namespace OmenCore.ViewModels
         {
             _cts?.Cancel();
             _calibrationService.CancelCalibration();
-            Status = "Cancelling...";
+            Status = Strings.FanCalibration_Cancelling;
         }
 
         private void OnCalibrationStepCompleted(object? sender, CalibrationStep step)
@@ -143,7 +143,7 @@ namespace OmenCore.ViewModels
                     Level = step.Level,
                     Fan0Rpm = step.Fan0Rpm,
                     Fan1Rpm = step.Fan1Rpm,
-                    Status = "✓ Complete"
+                    Status = Strings.FanCalibration_CompleteCheck
                 });
 
                 Progress = _calibrationService.CalibrationProgress;
@@ -155,7 +155,7 @@ namespace OmenCore.ViewModels
         {
             DispatcherHelper.RunOnUiThread(() =>
             {
-                Status = "✓ Calibration complete!";
+                Status = Strings.FanCalibration_CompleteExclaim;
                 Progress = 100;
                 IsCalibrating = false;
                 UpdateCalibrationInfo();

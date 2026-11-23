@@ -8,8 +8,20 @@ using Xunit;
 
 namespace OmenCoreApp.Tests.ViewModels
 {
-    public class KeyboardDiagnosticsViewModelTests
+    public class KeyboardDiagnosticsViewModelTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _original = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public KeyboardDiagnosticsViewModelTests()
+        {
+            // DiagnosticStatus / DiagnosticLogs are localized; pin to en for canonical assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _original;
+        }
         private class TestCorsairSdkProvider : OmenCore.Services.Corsair.ICorsairSdkProvider
         {
             public Task<bool> InitializeAsync() => Task.FromResult(true);

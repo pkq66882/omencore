@@ -57,16 +57,13 @@ namespace OmenCore.ViewModels
 
         private async Task ValidateDriverAsync()
         {
-            const string prompt = "Validate this NVIDIA driver for CURRENT writes?\n\nOmenCore sends one request that repeats the " +
-                "driver's own current power request, then checks that nothing changed. Close games and GPU-heavy apps first. " +
-                "If anything does not match, writes stay locked.";
-            if (MessageBox.Show(prompt, "NVIDIA power", MessageBoxButton.OKCancel, MessageBoxImage.Warning) != MessageBoxResult.OK) return;
+            if (MessageBox.Show(Strings.Nvidia_ValidateDriverPrompt, Strings.Nvidia_PowerTitle, MessageBoxButton.OKCancel, MessageBoxImage.Warning) != MessageBoxResult.OK) return;
 
             _busy = true; RaiseCommands();
             try
             {
                 var r = await Task.Run(() => _service.ValidateDriver());
-                ResultText = (r.Success ? "Done: " : "Not validated: ") + r.Message;
+                ResultText = r.Success ? Strings.Nvidia_ResultDonePrefix + r.Message : string.Format(Strings.Nvidia_ResultNotValidatedFormat, r.Message);
                 _logging.Info("NVIDIA power panel: " + ResultText);
             }
             finally
@@ -83,7 +80,7 @@ namespace OmenCore.ViewModels
             try
             {
                 var r = await Task.Run(() => romPath == null ? _service.ResolveVbiosAuto() : _service.ResolveVbiosFromRom(romPath));
-                ResultText = (r.Success ? "Done: " : "Not resolved: ") + r.Message;
+                ResultText = r.Success ? Strings.Nvidia_ResultDonePrefix + r.Message : string.Format(Strings.Nvidia_ResultNotResolvedFormat, r.Message);
             }
             finally
             {
@@ -166,7 +163,7 @@ namespace OmenCore.ViewModels
             try
             {
                 var r = await Task.Run(() => op(watts));
-                ResultText = (r.Success ? "Done: " : "Not applied: ") + r.Message + (r.RebootRequired ? " Restart Windows to finish." : "");
+                ResultText = r.Success ? Strings.Nvidia_ResultDonePrefix + r.Message : string.Format(Strings.Nvidia_ResultNotAppliedFormat, r.Message); if (r.RebootRequired) ResultText += Strings.Nvidia_RestartHint;
                 _logging.Info("NVIDIA power panel: " + ResultText);
             }
             finally

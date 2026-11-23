@@ -5379,7 +5379,7 @@
     <value>Exporting optimization report</value>
   </data>
   <data name="KeyboardDiagnostics_AttemptsFormat" xml:space="preserve">
-    <value>Attempts: {0} | WMI: {1}✓/{2}✗ ({3:F0}%) | OGH: {4}✓/{5}✗ ({6:F0}%) | EC: {7}✓/{8}✗ ({9:F0}%)</value>
+    <value>Attempts: {0} | WMI: {1} ok / {2} fail ({3:F0}%) | OGH: {4} ok / {5} fail ({6:F0}%) | EC: {7} ok / {8} fail ({9:F0}%)</value>
   </data>
   <data name="KeyboardDiagnostics_NoService" xml:space="preserve">
     <value>No keyboard lighting service</value>
@@ -9010,5 +9010,272 @@
   </data>
   <data name="TuningView_ValidateDriverTooltip" xml:space="preserve">
     <value>Needed once per NVIDIA driver version before Apply CURRENT works on a driver other than 617.14. Sends a request that repeats the driver's own power request and checks nothing changed.</value>
+  </data>
+  <data name="KbdDiag_Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="KbdDiag_Detecting" xml:space="preserve">
+    <value>Detecting devices...</value>
+  </data>
+  <data name="KbdDiag_DeviceConnected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="KbdDiag_IntegratedKeyboard" xml:space="preserve">
+    <value>Integrated Keyboard</value>
+  </data>
+  <data name="KbdDiag_KeyboardType" xml:space="preserve">
+    <value>Keyboard</value>
+  </data>
+  <data name="KbdDiag_ProbeConfirmTitle" xml:space="preserve">
+    <value>RGB payload probe</value>
+  </data>
+  <data name="KbdDiag_ProbeConfirmBody" xml:space="preserve">
+    <value>This sends {0} experimental keyboard colour commands, one every 4 seconds, each in red.&#10;&#10;Watch the keyboard and note the NUMBER of the step during which it turns red, then report it on the GitHub issue. Your current keyboard colours are saved first and put back when the probe finishes.</value>
+  </data>
+  <data name="KbdDiag_ProbeFinished" xml:space="preserve">
+    <value>Probe finished. Report which step number (if any) turned the keyboard red.</value>
+  </data>
+  <data name="KbdDiag_RunningTestPattern" xml:space="preserve">
+    <value>Running test pattern...</value>
+  </data>
+  <data name="KbdDiag_TestPatternApplied" xml:space="preserve">
+    <value>Test pattern applied successfully.</value>
+  </data>
+  <data name="KbdDiag_ClearingTestPattern" xml:space="preserve">
+    <value>Clearing test pattern...</value>
+  </data>
+  <data name="KbdDiag_TestPatternCleared" xml:space="preserve">
+    <value>Test pattern cleared.</value>
+  </data>
+  <data name="KbdDiag_LogStartingTest" xml:space="preserve">
+    <value>Starting test pattern</value>
+  </data>
+  <data name="KbdDiag_LogTestingBrandFormat" xml:space="preserve">
+    <value>Testing {0} devices</value>
+  </data>
+  <data name="KbdDiag_LogTestingHpKeyboard" xml:space="preserve">
+    <value>Testing HP Omen keyboard (ColorTable pattern)</value>
+  </data>
+  <data name="KbdDiag_LogAppliedTestFormat" xml:space="preserve">
+    <value>Applied test to {0}</value>
+  </data>
+  <data name="KbdDiag_LogApplied4Zone" xml:space="preserve">
+    <value>Applied 4-zone RGB pattern</value>
+  </data>
+  <data name="KbdDiag_LogAppliedWhite" xml:space="preserve">
+    <value>Applied all-white verification pattern</value>
+  </data>
+  <data name="KbdDiag_LogTestCompleted" xml:space="preserve">
+    <value>Test pattern completed</value>
+  </data>
+  <data name="KbdDiag_LogTestFailedFormat" xml:space="preserve">
+    <value>Test pattern failed: {0}</value>
+  </data>
+  <data name="KbdDiag_LogClearing" xml:space="preserve">
+    <value>Clearing test patterns</value>
+  </data>
+  <data name="KbdDiag_LogClearedBrandFormat" xml:space="preserve">
+    <value>Cleared {0} devices</value>
+  </data>
+  <data name="KbdDiag_LogRestoredHpDefaults" xml:space="preserve">
+    <value>Restored HP Omen keyboard defaults</value>
+  </data>
+  <data name="KbdDiag_LogClearCompleted" xml:space="preserve">
+    <value>Clear completed</value>
+  </data>
+  <data name="KbdDiag_LogClearFailedFormat" xml:space="preserve">
+    <value>Clear failed: {0}</value>
+  </data>
+  <data name="KbdDiag_LogCollecting" xml:space="preserve">
+    <value>Collecting diagnostic logs</value>
+  </data>
+  <data name="KbdDiag_LogServiceStatusFormat" xml:space="preserve">
+    <value>{0}: Available={1}, Backend={2}</value>
+  </data>
+  <data name="KbdDiag_LogDetectedDevicesFormat" xml:space="preserve">
+    <value>Detected devices: {0}</value>
+  </data>
+  <data name="Nvidia_ValidateDriverPrompt" xml:space="preserve">
+    <value>Validate this NVIDIA driver for CURRENT writes?&#10;&#10;OmenCore sends one request that repeats the driver's own current power request, then checks that nothing changed. Close games and GPU-heavy apps first. If anything does not match, writes stay locked.</value>
+  </data>
+  <data name="Nvidia_ResultDonePrefix" xml:space="preserve">
+    <value>Done: </value>
+  </data>
+  <data name="Nvidia_ResultNotValidatedFormat" xml:space="preserve">
+    <value>Not validated: {0}</value>
+  </data>
+  <data name="Nvidia_ResultNotResolvedFormat" xml:space="preserve">
+    <value>Not resolved: {0}</value>
+  </data>
+  <data name="Nvidia_ResultNotAppliedFormat" xml:space="preserve">
+    <value>Not applied: {0}</value>
+  </data>
+  <data name="Nvidia_RestartHint" xml:space="preserve">
+    <value> Restart Windows to finish.</value>
+  </data>
+  <data name="SC_ProfileStockDesc" xml:space="preserve">
+    <value>Factory defaults - no overclocking</value>
+  </data>
+  <data name="SC_ProfileSafeDesc" xml:space="preserve">
+    <value>Power-only profile for cooler, quieter GPU behavior</value>
+  </data>
+  <data name="SC_ProfileStockEnvelopeDesc" xml:space="preserve">
+    <value>Power-only profile matching the detected stock envelope</value>
+  </data>
+  <data name="SC_ProfileMaxDesc" xml:space="preserve">
+    <value>Uses the highest detected power limit. Validate stability and temperatures before keeping it.</value>
+  </data>
+  <data name="SC_ProfileConservativeDesc" xml:space="preserve">
+    <value>Conservative starting point tuned to the detected GPU range</value>
+  </data>
+  <data name="SC_ProfileDailyFormat" xml:space="preserve">
+    <value>Device-aware daily profile for {0}</value>
+  </data>
+  <data name="SC_ProfileNearTopDesc" xml:space="preserve">
+    <value>Near-top detected range. Use Test Apply first and keep only after stability validation.</value>
+  </data>
+  <data name="SC_ConflictBodyGpuFormat" xml:space="preserve">
+    <value>A conflicting tool is running:&#10;&#10;{0}&#10;&#10;Applying GPU overclocking while this tool is active may cause instability or a driver crash.&#10;&#10;Do you want to continue anyway?</value>
+  </data>
+  <data name="SC_ConflictBodyCpuFormat" xml:space="preserve">
+    <value>A conflicting tool is running:&#10;&#10;{0}&#10;&#10;Applying a CPU undervolt while this tool is active may cause instability or a crash.&#10;&#10;Do you want to continue anyway?</value>
+  </data>
+  <data name="SC_ConflictTitle" xml:space="preserve">
+    <value>Tuning Conflict Detected</value>
+  </data>
+  <data name="SC_TestApplyGpuPrompt" xml:space="preserve">
+    <value>Test Apply will apply the current GPU tuning for 30 seconds and then automatically restore the previous GPU state unless you press Keep. Continue?</value>
+  </data>
+  <data name="SC_TestApplyGpuTitle" xml:space="preserve">
+    <value>Test GPU Tuning</value>
+  </data>
+  <data name="SC_TestApplyCpuPrompt" xml:space="preserve">
+    <value>Test Apply will apply the current CPU undervolt for 30 seconds and then automatically restore the previous CPU voltage unless you press Keep. Continue?</value>
+  </data>
+  <data name="SC_TestApplyCpuTitle" xml:space="preserve">
+    <value>Test CPU Undervolt</value>
+  </data>
+  <data name="SC_TccUnavailableBody" xml:space="preserve">
+    <value>TCC offset cannot be applied - MSR access not available.&#10;&#10;This requires PawnIO driver access (pawnio.eu).&#10;&#10;Without MSR access, CPU temperature limits cannot be modified.</value>
+  </data>
+  <data name="SC_TccUnavailableTitle" xml:space="preserve">
+    <value>TCC Offset Unavailable</value>
+  </data>
+  <data name="SC_TccWriteFailedBodyFormat" xml:space="preserve">
+    <value>TCC offset could not be changed - the value remained at {0}°C.&#10;&#10;This usually means:&#10;• Hyper-V/HVCI (Core Isolation) is blocking MSR writes&#10;• Secure Boot is preventing kernel-mode access&#10;&#10;To fix:&#10;1. Open Windows Security → Device Security → Core Isolation&#10;2. Disable 'Memory Integrity'&#10;3. Restart your computer&#10;&#10;Or use Intel XTU which has a signed driver.</value>
+  </data>
+  <data name="SC_TccWriteFailedTitle" xml:space="preserve">
+    <value>TCC Offset Write Failed</value>
+  </data>
+  <data name="SC_TccErrorFormat" xml:space="preserve">
+    <value>Failed to apply TCC offset: {0}&#10;&#10;Ensure you have MSR access via PawnIO.</value>
+  </data>
+  <data name="SC_TccErrorTitle" xml:space="preserve">
+    <value>TCC Offset Error</value>
+  </data>
+  <data name="SC_PlUnavailableBody" xml:space="preserve">
+    <value>CPU power limits cannot be applied - MSR access not available.&#10;&#10;Install PawnIO driver from pawnio.eu to enable power limit control.</value>
+  </data>
+  <data name="SC_PlUnavailableTitle" xml:space="preserve">
+    <value>Power Limits Unavailable</value>
+  </data>
+  <data name="SC_PlLockedBody" xml:space="preserve">
+    <value>CPU power limits are locked by BIOS and cannot be modified.&#10;&#10;This lock is set during boot and persists until the next restart.&#10;Some laptops may require specific BIOS settings or Unleashed Mode to unlock.&#10;&#10;If you are on OMEN 16-am0xxx (8D2F) Intel Core Ultra, direct PL1/PL2 sliders may stay locked while OMEN/OGH performance mode policy still works.</value>
+  </data>
+  <data name="SC_PlLockedTitle" xml:space="preserve">
+    <value>Power Limits Locked</value>
+  </data>
+  <data name="SC_PlFailedBody" xml:space="preserve">
+    <value>Failed to apply CPU power limits.&#10;&#10;The BIOS may have locked the MSR registers during boot.</value>
+  </data>
+  <data name="SC_PlFailedTitle" xml:space="preserve">
+    <value>Power Limits Failed</value>
+  </data>
+  <data name="SC_PlErrorFormat" xml:space="preserve">
+    <value>Error applying CPU power limits: {0}</value>
+  </data>
+  <data name="SC_PlErrorTitle" xml:space="preserve">
+    <value>Power Limits Error</value>
+  </data>
+  <data name="SC_RangeFormat" xml:space="preserve">
+    <value>{0} to {1}</value>
+  </data>
+  <data name="SC_PercentRangeFormat" xml:space="preserve">
+    <value>{0}% to {1}%</value>
+  </data>
+  <data name="FanCalibration_Preparing" xml:space="preserve">
+    <value>Preparing calibration...</value>
+  </data>
+  <data name="FanCalibration_RunningWizard" xml:space="preserve">
+    <value>Running calibration wizard...</value>
+  </data>
+  <data name="FanCalibration_Cancelling" xml:space="preserve">
+    <value>Cancelling...</value>
+  </data>
+  <data name="FanCalibration_CompleteCheck" xml:space="preserve">
+    <value>✓ Complete</value>
+  </data>
+  <data name="FanCalibration_CompleteExclaim" xml:space="preserve">
+    <value>✓ Calibration complete!</value>
+  </data>
+  <data name="General_PowerStaleFormat" xml:space="preserve">
+    <value>{0} power telemetry is stale.</value>
+  </data>
+  <data name="General_PowerInvalidFormat" xml:space="preserve">
+    <value>{0} power telemetry returned an invalid value.</value>
+  </data>
+  <data name="General_PowerUnavailableFormat" xml:space="preserve">
+    <value>{0} power sensor is unavailable on this backend.</value>
+  </data>
+  <data name="General_PowerInactiveFormat" xml:space="preserve">
+    <value>{0} power telemetry is inactive.</value>
+  </data>
+  <data name="General_PowerZeroFormat" xml:space="preserve">
+    <value>{0} power sensor returned 0W; hiding it as unavailable.</value>
+  </data>
+  <data name="General_PowerNotReadyFormat" xml:space="preserve">
+    <value>{0} power telemetry is not available yet.</value>
+  </data>
+  <data name="KbdMap_NothingSelected" xml:space="preserve">
+    <value>Nothing selected. Click keys, or drag a box across them.</value>
+  </data>
+  <data name="KbdMap_AllBlack" xml:space="preserve">
+    <value>All keys set to black. Apply to send it.</value>
+  </data>
+  <data name="KbdMap_SettingsFailed" xml:space="preserve">
+    <value>Could not open Settings. It is under Settings > Personalisation > Dynamic Lighting.</value>
+  </data>
+  <data name="KbdMap_ZoneBarFormat" xml:space="preserve">
+    <value>Bar {0}</value>
+  </data>
+  <data name="Lighting_DeviceCountFormat" xml:space="preserve">
+    <value>{0} device(s) detected</value>
+  </data>
+  <data name="Mem_CheckIntervalFormat" xml:space="preserve">
+    <value>Every {0} sec</value>
+  </data>
+  <data name="Mem_CleanEveryFormat" xml:space="preserve">
+    <value>Every {0} min</value>
+  </data>
+  <data name="DiagnosticExport_KeyboardLightingUnavailable" xml:space="preserve">
+    <value>Keyboard lighting service unavailable</value>
+  </data>
+  <data name="DiagnosticExport_HardwareMonitoringUnavailable" xml:space="preserve">
+    <value>Hardware monitoring service unavailable</value>
+  </data>
+  <data name="DashboardChart_Collecting" xml:space="preserve">
+    <value>Collecting data...</value>
+  </data>
+  <data name="Hotkey_FailedHeldFormat" xml:space="preserve">
+    <value>Held by another app, not working: {0}</value>
+  </data>
+  <data name="TempDiag_ComparisonFailedFormat" xml:space="preserve">
+    <value>Comparison failed: {0}</value>
+  </data>
+  <data name="Main_TabLoadFailedFormat" xml:space="preserve">
+    <value>Failed to load the {0} tab.</value>
+  </data>
+  <data name="SC_CustomProfileDescFormat" xml:space="preserve">
+    <value>Custom profile: Core {0}, Mem {1}, Power {2}, Voltage {3}</value>
   </data>
 </root>
