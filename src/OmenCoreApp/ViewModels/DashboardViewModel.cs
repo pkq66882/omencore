@@ -494,7 +494,7 @@ namespace OmenCore.ViewModels
                 : $"{FormatTemperature(LatestMonitoringSample.GpuTemperatureC)} | {LatestMonitoringSample.GpuLoadPercent:F0}% {Strings.DashboardViewModel_Load}{(LatestMonitoringSample.GpuVramUsageMb > 0 ? $" | {LatestMonitoringSample.GpuVramUsageMb:F0} MB VRAM" : string.Empty)}";
 
         public string StorageSummaryDisplay => LatestMonitoringSample == null
-            ? "Storage telemetry unavailable"
+            ? Strings.DashboardViewModel_StorageTelemetryUnavailable
             : $"{Strings.DashboardViewModel_Ssd} {FormatTemperature(LatestMonitoringSample.SsdTemperatureC)} | {LatestMonitoringSample.DiskUsagePercent:F0}% {Strings.DashboardViewModel_Active}";
 
         private static string FormatTemperature(double temperature) =>

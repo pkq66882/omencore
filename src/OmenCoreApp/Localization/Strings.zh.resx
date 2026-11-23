@@ -296,7 +296,7 @@
     <value>校准风扇 RPM 曲线，在你的具体机型上实现精准转速控制。</value>
   </data>
   <data name="FanCalibrationControl_ThisProcessWillTestFanSpeedsFrom0To100AndM" xml:space="preserve">
-    <value>此过程将测试 0% 到 100% 的风扇转速，可能需要几分钟。</value>
+    <value>校准过程会测试 0%–100% 的风扇转速，可能需要几分钟。</value>
   </data>
   <data name="FanCalibrationControl_ModelInformation" xml:space="preserve">
     <value>机型信息</value>
@@ -623,13 +623,13 @@
     <value>智能风扇</value>
   </data>
   <data name="AdvancedView_PerformanceModeMaximumPowerHighFanSpeed" xml:space="preserve">
-    <value>性能模式：最大功率、高风扇转速</value>
+    <value>性能模式：最大功耗、高风扇转速</value>
   </data>
   <data name="AdvancedView_Performance" xml:space="preserve">
     <value>狂暴</value>
   </data>
   <data name="AdvancedView_MaximumPower" xml:space="preserve">
-    <value>最大功率</value>
+    <value>最大功耗</value>
   </data>
   <data name="AdvancedView_MaxPower" xml:space="preserve">
     <value>最大功耗</value>
@@ -638,7 +638,7 @@
     <value>高转速风扇</value>
   </data>
   <data name="AdvancedView_ThisModeRemembers" xml:space="preserve">
-    <value>此模式会记住</value>
+    <value>该模式会记住的设置</value>
   </data>
   <data name="AdvancedView_RememberCurrentState" xml:space="preserve">
     <value>记住当前状态</value>
@@ -653,7 +653,7 @@
     <value>加速已激活</value>
   </data>
   <data name="AdvancedView_GpuPowerBoostTgpDynamicBoost" xml:space="preserve">
-    <value>GPU 功率加速（TGP/Dynamic Boost）</value>
+    <value>GPU 功耗提升（TGP/Dynamic Boost）</value>
   </data>
   <data name="AdvancedView_ControlGpuTotalGraphicsPowerTgpAndDynamicB" xml:space="preserve">
     <value>控制 GPU 总图形功耗（TGP）和 Dynamic Boost（PPAB）。数值越高 GPU 可用功耗越大。“扩展”档供可能支持 +25W 加速的 RTX 5080 及更新显卡使用。</value>
@@ -662,7 +662,7 @@
     <value>⚠ 固件决定的功耗上限：</value>
   </data>
   <data name="AdvancedView_TheseLevelsAreRelativeBoostRequestsSentToT" xml:space="preserve">
-    <value>这些档位是发送到与 OMEN Gaming Hub 相同的 GPU 固件处理器的相对加速请求，并非绝对功耗保证。实际上限可能受其他功耗控制软件残留的 GPU 固件/EC 状态影响——如果看到功耗与档位描述不符，请先彻底关闭 OMEN Gaming Hub。</value>
+    <value>这些档位是发给 OMEN Gaming Hub 同款 GPU 固件处理器的相对加速请求，并不保证绝对功耗。实际功耗上限可能受其他功耗控制软件遗留的 GPU 固件/EC 状态影响——如果你看到的功耗与档位说明不符，请先把 OMEN Gaming Hub 完全关闭再试。</value>
   </data>
   <data name="AdvancedView_CurrentPowerMode" xml:space="preserve">
     <value>当前性能模式</value>
@@ -674,10 +674,10 @@
     <value>功耗档位：</value>
   </data>
   <data name="AdvancedView_GpuPowerBoostLevel" xml:space="preserve">
-    <value>GPU 功率加速档位</value>
+    <value>GPU 功耗提升档位</value>
   </data>
   <data name="AdvancedView_ApplyGpuPowerBoostLevel" xml:space="preserve">
-    <value>应用 GPU 功率加速档位</value>
+    <value>应用 GPU 功耗提升档位</value>
   </data>
   <data name="AdvancedView_GpuSwitchingAdvancedOptimus" xml:space="preserve">
     <value>GPU 切换（Advanced Optimus）</value>
@@ -1079,10 +1079,10 @@
     <value>解除适配器功耗钳制</value>
   </data>
   <data name="DiagnosticsView_TheFirmwareTellsTheGpuDriverAboutTheAdapte" xml:space="preserve">
-    <value>固件只在评估适配器时向 GPU 驱动通告一次，之后驱动无从询问。刚启动的驱动尚未收到通告，因此重启设备会清除钳制——只有再次通告才会恢复。更换电源或重启都会触发。</value>
+    <value>固件只在评估适配器时向 GPU 驱动通告一次，之后驱动无法主动查询。刚启动的驱动还没收到通告，所以重启设备会清除该限制——只有再收到一次通告才会恢复；更换电源适配器或重启都会触发通告。</value>
   </data>
   <data name="DiagnosticsView_TheSameSupplyClampsTheCpuByADifferentRoute" xml:space="preserve">
-    <value>同一电源还通过另一条路径钳制 CPU：AMD SMU 的四个功耗限制中有三个被钉在低位，设备重启对它无效。这些值是直接写入的，会在唤醒或更换电源后重新生效——正是拿走它们的那些事件。</value>
+    <value>同一电源还会通过另一条路径限制 CPU：AMD SMU 的四个功耗限制里有三个被固定在低值，重启设备也不会解除。这些值是直接写入的，在唤醒或更换电源适配器后会重新生效——因为这些事件会移除限制。</value>
   </data>
   <data name="DiagnosticsView_YourScreensWillGoBlackForAFewSecondsAndAny" xml:space="preserve">
     <value>你的屏幕会黑几秒钟，所有正在使用 GPU 的程序都会失去它。游戏或渲染进行中请勿执行。</value>
@@ -1109,25 +1109,25 @@
     <value>保持 CPU 功耗限制处于放开状态</value>
   </data>
   <data name="DiagnosticsView_AppliedAtStartupAfterAResumeAndWhenTheSupp" xml:space="preserve">
-    <value>在启动时、唤醒后和电源变更时应用——正是拿走这些限制的事件。其余时间不写入任何内容，也不影响任何正在运行的任务。</value>
+    <value>会在启动时、唤醒后以及电源状态变化时应用——这些正是限制被解除的时机。其他时间不写入任何内容，也不会干扰正在运行的任务。</value>
   </data>
   <data name="DiagnosticsView_RestartTheGpuToDropItsClampButOnlyWhileItI" xml:space="preserve">
     <value>重启 GPU 以解除钳制——但仅在它休眠时执行</value>
   </data>
   <data name="DiagnosticsView_OnlyWhenTheDriverHasParkedTheGpuAndTheDisp" xml:space="preserve">
-    <value>仅当驱动已停放 GPU 且显示由核显输出时执行，因此没有可被打断的任务、也不会黑屏。如果执行时机到来时 GPU 仍处于唤醒状态，将不做操作并提示你——请改用上面的按钮。</value>
+    <value>仅在驱动已让 GPU 进入休眠、且画面由核显输出时执行——此时没有会被打断的任务，也不会黑屏。如果执行时 GPU 仍处于唤醒状态，则不会执行，并会提示你改用上方按钮。</value>
   </data>
   <data name="DiagnosticsView_ReadFromTheBiosEachTimeThisTabIsOpenedThis" xml:space="preserve">
-    <value>每次打开此标签页时从 BIOS 读取。这是机器自己对所接电源的认知，不是测量值。</value>
+    <value>每次打开此标签页都会从 BIOS 读取。这是机器对当前所接电源的自身报告，不是实测值。</value>
   </data>
   <data name="DiagnosticsView_GpuPowerUnlockExperimentalBoard8d87Only" xml:space="preserve">
     <value>GPU 功耗解锁（实验性，仅限 8D87 主板）</value>
   </data>
   <data name="DiagnosticsView_ThisBoardSGpuIsHeldUnderItsFull175WRatingB" xml:space="preserve">
-    <value>这块主板的 GPU 被两道固件闸门压在 175W 完整额定值之下，OMEN Gaming Hub 平时会打开它们。此操作将闸门短暂钉开并让驱动重新读取——不是超频，也不持久：固件会在下次唤醒、更换适配器或重启时收回两道闸门。</value>
+    <value>这块主板的 GPU 被两道固件限制压在 175W 完整额定值之下，OMEN Gaming Hub 平时会放开它们。此操作会短暂解除这两道限制并让驱动重新读取——不是超频，也不持久：下次唤醒、更换适配器或重启时，固件会重新加上限制。</value>
   </data>
   <data name="DiagnosticsView_NotConfirmedOnRealHardwareForcingThisOnAnU" xml:space="preserve">
-    <value>尚未在真实硬件上确认。在本次调查所依据的案例中，曾观察到在功率不足的适配器上强制执行会令 GPU 进入降级状态，且在有过 GPU 驱动崩溃历史的机器上只能靠重启恢复——因此只有当适配器余量远高于本机额定需求时才会提供此操作。</value>
+    <value>尚未在真机上确认。根据这组功能所依据的排查记录，在小功率电源适配器上强行启用，曾让 GPU 进入降级状态，只有重启才能恢复——而且那台机器此前有过 GPU 驱动崩溃史。因此只有在适配器余量明显高于本机额定需求时，才会显示此操作。</value>
   </data>
   <data name="DiagnosticsView_TryTheGpuPowerUnlock" xml:space="preserve">
     <value>尝试 GPU 功耗解锁</value>
@@ -1151,7 +1151,7 @@
     <value>⚠ 推断值，尚未验证</value>
   </data>
   <data name="DiagnosticsView_ThisReflectsWhatOmencoreSModelDatabaseKnow" xml:space="preserve">
-    <value>这反映的是 OmenCore 机型数据库对这台机器所检测到的具体主板的认识——某功能显示“不支持”可能是真实的硬件/固件限制，而非 OmenCore 的 bug。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功率加速）；常规标签页中的基础风扇模式（自动/性能/最大）由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
+    <value>这反映的是 OmenCore 机型数据库对这台机器所检测到的主板的认知——某项功能显示“不支持”可能是真实的硬件/固件限制，而不是 OmenCore 的 bug。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功耗提升）；常规标签页里的基础风扇模式（自动/性能/最大）由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
   </data>
   <data name="DiagnosticsView_CustomFanCurves" xml:space="preserve">
     <value>自定义风扇曲线</value>
@@ -1178,7 +1178,7 @@
     <value>✗ 不具备</value>
   </data>
   <data name="DiagnosticsView_GpuPowerBoostTgp" xml:space="preserve">
-    <value>GPU 功率加速（TGP）</value>
+    <value>GPU 功耗提升（TGP）</value>
   </data>
   <data name="DiagnosticsView_AdvancedOptimusGpuSwitching" xml:space="preserve">
     <value>Advanced Optimus GPU 切换</value>
@@ -1352,7 +1352,7 @@
     <value>导出预设到文件</value>
   </data>
   <data name="FanControlView_ThisWonTSurviveARestartYet" xml:space="preserve">
-    <value>此设置重启后暂不会保留</value>
+    <value>重启后暂时不会保留</value>
   </data>
   <data name="FanControlView_DismissStartupRestoreHint" xml:space="preserve">
     <value>关闭启动恢复提示</value>
@@ -1622,7 +1622,7 @@
     <value>同样应用于（可选——逗号分隔的 .exe 名称）</value>
   </data>
   <data name="GameProfileManagerView_OtherGamesThatShouldShareThisProfileSSetti" xml:space="preserve">
-    <value>应共享此方案设置的其他游戏，例如 game2.exe、game3.exe。让一个方案充当一批游戏的默认配置。</value>
+    <value>应共享此方案设置的其他游戏，例如 game2.exe、game3.exe。可用于让一个方案作为一组游戏的默认方案。</value>
   </data>
   <data name="GameProfileManagerView_EnableAutoSwitch" xml:space="preserve">
     <value>启用自动切换</value>
@@ -1883,10 +1883,10 @@
     <value>保存到键盘</value>
   </data>
   <data name="KeyboardMapEditor_SaveThePictureIntoTheKeyboardSoItSurvivesA" xml:space="preserve">
-    <value>将画面存入键盘，使其在断电后仍保留</value>
+    <value>把画面写入键盘，断电后仍能保留</value>
   </data>
   <data name="KeyboardMapEditor_AppliesThePictureThenStoresItInTheKeyboard" xml:space="preserve">
-    <value>先应用画面，然后存入键盘自身存储，断电后仍保留，关闭 OmenCore 也照常显示。此操作会写入键盘闪存，请在完成后使用而不是每次改动后都写。</value>
+    <value>先应用画面，再写入键盘自身存储，断电后仍能保留，关闭 OmenCore 也会照常显示。此操作会写入键盘闪存，建议全部改完后再执行，而不是每改一次就写一次。</value>
   </data>
   <data name="KeyboardMapEditor_WholeKeyboard" xml:space="preserve">
     <value>整个键盘：</value>
@@ -2288,13 +2288,13 @@
     <value>将全部暂存的配置发送到键盘</value>
   </data>
   <data name="LightingView_Showing" xml:space="preserve">
-    <value>显示此方案</value>
+    <value>当前展示</value>
   </data>
   <data name="LightingView_LeaveTheKeyboardShowingThisOneAfterWriting" xml:space="preserve">
     <value>写入后让键盘保持显示这一项</value>
   </data>
   <data name="LightingView_TakeThisOffTheListItStaysOnTheKeyboard" xml:space="preserve">
-    <value>从列表中移除此项。它仍保留在键盘上。</value>
+    <value>从列表中移除该项，键盘上仍会保留。</value>
   </data>
   <data name="LightingView_TheStripOnTheFrontOfTheChassisFourZonesLef" xml:space="preserve">
     <value>机身前部的灯带——四个分区，从左到右。独立于键盘。</value>
@@ -2993,7 +2993,7 @@
     <value>启动时恢复上次硬件设置</value>
   </data>
   <data name="SettingsView_ReapplyTheSavedFanPresetPerformanceModeGpu" xml:space="preserve">
-    <value>OmenCore 启动后重新应用已保存的风扇预设、性能模式、GPU 功率加速和调优设置。</value>
+    <value>OmenCore 启动后重新应用已保存的风扇预设、性能模式、GPU 功耗提升和调优设置。</value>
   </data>
   <data name="SettingsView_AllowStartupRestoreOnOmen16Victus" xml:space="preserve">
     <value>允许在 OMEN 16/Victus 上启动时恢复</value>
@@ -3017,13 +3017,13 @@
     <value>性能模式下的出厂风扇曲线（实验性）</value>
   </data>
   <data name="SettingsView_OnThisBoardTheFirmwareSOwnAutoParksTheFans" xml:space="preserve">
-    <value>该主板的固件自动模式在重负载下会把风扇转速压得过低。此选项改用 HP 自有的性能模式曲线，仅在性能模式激活且风扇处于自动时生效。尚未在真机上验证；关闭后风扇恢复 BIOS 自动控制。默认关闭。</value>
+    <value>该主板的固件自动模式在重负载下会把风扇转速压得过低。此选项改为使用 HP 的性能模式曲线，仅在性能模式激活且风扇处于自动时生效。尚未在真机上验证；关闭后风扇恢复由 BIOS 自动控制。默认关闭。</value>
   </data>
   <data name="SettingsView_FactoryFanCurveInPerformanceMode" xml:space="preserve">
     <value>性能模式下的出厂风扇曲线</value>
   </data>
   <data name="SettingsView_ReapplyPerformanceModeAndGpuPowerBoost" xml:space="preserve">
-    <value>重新应用性能模式和 GPU 功率加速。</value>
+    <value>重新应用性能模式和 GPU 功耗提升。</value>
   </data>
   <data name="SettingsView_RestoreSavedKeyboardLightingColorsWhenRgbS" xml:space="preserve">
     <value>启用 RGB 启动恢复时恢复已保存的键盘灯效颜色。</value>
@@ -4211,7 +4211,7 @@
     <value>驱动</value>
   </data>
   <data name="TuningView_WhetherTheConfirmedGpuOcProfileIsCurrently" xml:space="preserve">
-    <value>确认过的 GPU 超频方案当前是否被授权在 OmenCore 启动时重新应用。仅保存或选择方案永远不会授权启动写入。</value>
+    <value>显示已验证的 GPU 超频方案是否被允许在 OmenCore 启动时自动重新应用。仅保存或选择方案不会授予此权限。</value>
   </data>
   <data name="TuningView_GpuUndervolting" xml:space="preserve">
     <value>GPU 降压：</value>
@@ -4382,7 +4382,7 @@
     <value>独立模式下，切换性能方案不会重写风扇策略。你选择的风扇预设/曲线将保持生效，直到你直接更改风扇控制。</value>
   </data>
   <data name="FanControlViewModel_LinkDescLinked" xml:space="preserve">
-    <value>联动模式下，选择性能方案也可能切换当前风扇模式。仅当你希望由方案驱动风扇行为时使用。</value>
+    <value>联动模式下，切换性能方案会同时切换风扇模式。只有当你希望风扇跟随性能方案时才开启。</value>
   </data>
   <data name="FanControlViewModel_OemAutoFailed" xml:space="preserve">
     <value>OEM 自动恢复未报告成功</value>
@@ -6230,7 +6230,7 @@
     <value>CPU 降压设置</value>
   </data>
   <data name="SettingsSearch_GpuOc" xml:space="preserve">
-    <value>GPU 超频与功率加速</value>
+    <value>GPU 超频与功耗提升</value>
   </data>
   <data name="SettingsSearch_KeyboardRgb" xml:space="preserve">
     <value>键盘四分区 RGB 灯效</value>
@@ -6356,7 +6356,7 @@
     <value> 平衡——默认</value>
   </data>
   <data name="TrayIcon_PerfPerformance" xml:space="preserve">
-    <value> 狂暴——最大功率</value>
+    <value> 狂暴——最大功耗</value>
   </data>
   <data name="TrayIcon_PerfQuiet" xml:space="preserve">
     <value> 省电——延长电池续航</value>
@@ -6365,10 +6365,10 @@
     <value>固件默认</value>
   </data>
   <data name="TrayIcon_GpuPower" xml:space="preserve">
-    <value>GPU 功率</value>
+    <value>GPU 功耗</value>
   </data>
   <data name="TrayIcon_GpuPowerFormat" xml:space="preserve">
-    <value>GPU 功率：{0}</value>
+    <value>GPU 功耗：{0}</value>
   </data>
   <data name="TrayIcon_GpuPowerMin" xml:space="preserve">
     <value> 最小——基础 TGP，电池续航最佳</value>
@@ -6824,13 +6824,13 @@
     <value>未检测到此主板的 CPU/GPU 独立曲线。</value>
   </data>
   <data name="CapabilityReason_GpuBoost_ModelDb" xml:space="preserve">
-    <value>Victus 机型只有在机型数据库确认 HP 固件支持时，才接受 GPU 功率加速档位。</value>
+    <value>Victus 机型只有在机型数据库确认 HP 固件支持时，才接受 GPU 功耗提升档位。</value>
   </data>
   <data name="CapabilityReason_GpuBoost_DriverMissing" xml:space="preserve">
-    <value>未找到 HP WMI BIOS 的 GPU 功率接口，加速档位无处可施。</value>
+    <value>未找到 HP WMI BIOS 的 GPU 功耗接口，提速档位无处应用。</value>
   </data>
   <data name="CapabilityReason_GpuBoost_NotPresent" xml:space="preserve">
-    <value>未检测到此主板的 GPU 功率加速。</value>
+    <value>未检测到此主板的 GPU 功耗提升。</value>
   </data>
   <data name="CapabilityReason_Mux_ModelDb" xml:space="preserve">
     <value>机型数据库未列出该主板的 MUX 开关；显卡为直连。</value>
@@ -7031,7 +7031,7 @@
     <value>EC 模式 0x{0}（实验性）——将应用用户设置</value>
   </data>
   <data name="GpuBoost_DegradedWarning" xml:space="preserve">
-    <value>⚠️ 命令已发送，但 GPU 功率可能未变（BIOS WMI 降级）</value>
+    <value>⚠️ 命令已发送，但 GPU 功耗可能未变（BIOS WMI 降级）</value>
   </data>
   <data name="GpuBoost_NvapiPercentFormat" xml:space="preserve">
     <value>{0} + NVAPI {1}% 功耗上限</value>
@@ -7094,7 +7094,7 @@
     <value>失败——此机型不支持 WMI/EC 命令</value>
   </data>
   <data name="GpuBoost_RestoreNoChange" xml:space="preserve">
-    <value>⚠️ 已尝试恢复 GPU 功率，但 BIOS 回读显示无变化</value>
+    <value>⚠️ 已尝试恢复 GPU 功耗，但 BIOS 回读显示无变化</value>
   </data>
   <data name="GpuBoost_RestoredOghFormat" xml:space="preserve">
     <value>✓ {0}（通过 OGH）——已恢复</value>
@@ -7118,10 +7118,10 @@
     <value>扩展加速（PPAB+）——若“最大”达不到显卡标称 TGP 可尝试（RTX 50 系列起）</value>
   </data>
   <data name="GpuBoost_DescriptionSelect" xml:space="preserve">
-    <value>选择 GPU 功率档位</value>
+    <value>选择 GPU 功耗档位</value>
   </data>
   <data name="GpuBoost_StatusUnavailable" xml:space="preserve">
-    <value>此系统不支持 GPU 功率加速</value>
+    <value>此系统不支持 GPU 功耗提升</value>
   </data>
   <data name="GpuBoost_NvapiNote" xml:space="preserve">
     <value>（NVAPI 功耗上限可用于精细调节）</value>
@@ -8669,7 +8669,7 @@
     <value>平衡性能模式</value>
   </data>
   <data name="SystemControl_RollbackGpuMinimum" xml:space="preserve">
-    <value>GPU 功率最低档</value>
+    <value>GPU 功耗最低档</value>
   </data>
   <data name="SystemControl_RollbackCpuPlReset" xml:space="preserve">
     <value>CPU PL1/PL2 启动重置</value>
@@ -8681,7 +8681,7 @@
     <value>NVIDIA GPU 调优重置</value>
   </data>
   <data name="SystemControl_RollbackGpuBoostUnavailable" xml:space="preserve">
-    <value>GPU 功率加速后端不可用</value>
+    <value>GPU 功耗提升后端不可用</value>
   </data>
   <data name="SystemControl_RollbackCpuLimitsLocked" xml:space="preserve">
     <value>CPU 功耗限制已锁定/只读</value>
@@ -8765,7 +8765,7 @@
     <value>{0} 已添加。写入循环前键盘不会变化。</value>
   </data>
   <data name="DeviceLighting_FnRemovedFormat" xml:space="preserve">
-    <value>{0} 已从列表移除。键盘上的方案仍然保留。</value>
+    <value>{0} 已从列表移除，键盘上仍保留该灯效。</value>
   </data>
   <data name="DeviceLighting_FnWritingFormat" xml:space="preserve">
     <value>正在写入 {0} 个方案…</value>
