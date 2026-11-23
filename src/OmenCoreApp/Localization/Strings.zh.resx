@@ -2894,7 +2894,7 @@
     <value>超低节奏受阻原因：</value>
   </data>
   <data name="SettingsView_StartupSafeModeGuard" xml:space="preserve">
-    <value>启动安全模式守卫</value>
+    <value>启动安全模式保护</value>
   </data>
   <data name="SettingsView_TemporarilyBlocksTrayWriteActionsIfMonitor" xml:space="preserve">
     <value>若启动后监控短暂不稳定，则临时阻止托盘写操作</value>
@@ -2903,16 +2903,16 @@
     <value>安全模式启动窗口</value>
   </data>
   <data name="SettingsView_HowLongAfterStartupTheGuardCanAutoActivate" xml:space="preserve">
-    <value>守卫可在启动后多久内自动激活</value>
+    <value>启动后多久内仍允许自动进入安全模式</value>
   </data>
   <data name="SettingsView_StartupSafeModeWindowSeconds" xml:space="preserve">
-    <value>启动安全模式窗口（秒）</value>
+    <value>启动安全模式时间窗（秒）</value>
   </data>
   <data name="SettingsView_TimeoutThreshold" xml:space="preserve">
     <value>超时阈值</value>
   </data>
   <data name="SettingsView_ConsecutiveMonitorTimeoutsRequiredBeforeSt" xml:space="preserve">
-    <value>启动安全模式激活前所需的连续监控超时次数</value>
+    <value>进入安全模式前允许的连续监控超时次数</value>
   </data>
   <data name="SettingsView_StartupSafeModeTimeoutThreshold" xml:space="preserve">
     <value>启动安全模式超时阈值</value>
@@ -2954,7 +2954,7 @@
     <value>交流电源性能模式</value>
   </data>
   <data name="SettingsView_WhenOnBattery" xml:space="preserve">
-    <value>使用电池时：</value>
+    <value>电池供电时：</value>
   </data>
   <data name="SettingsView_BatteryPowerFanPreset" xml:space="preserve">
     <value>电池供电风扇预设</value>
@@ -2969,19 +2969,19 @@
     <value>切换性能模式时自动应用匹配的风扇预设。</value>
   </data>
   <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAutoExperi" xml:space="preserve">
-    <value>返回自动模式时不固定风扇档位（实验性）</value>
+    <value>返回自动模式时不锁定风扇档位（实验性）</value>
   </data>
   <data name="SettingsView_ForLaptopsWhoseFansStayNear2000RpmAtHighTe" xml:space="preserve">
-    <value>适用于高温时风扇长期徘徊在 2000 RPM 左右、直到切换回 OEM 预设才恢复的机型。启用后将跳过 OmenCore 把控制权交还 BIOS 时发送的风扇档位提示。默认关闭；重启后生效。尚未在真机上验证。</value>
+    <value>适用于高温下风扇会停在约 2000 RPM、只有切回 OEM 预设才恢复的机型。开启后，OmenCore 把控制权交还 BIOS 时会省略风扇档位提示。默认关闭，重启后生效；尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_DoNotPinAFanLevelWhenReturningToAuto" xml:space="preserve">
-    <value>返回自动时不固定风扇档位</value>
+    <value>返回自动时不锁定风扇档位</value>
   </data>
   <data name="SettingsView_ReturnMaxFanModeToAuto" xml:space="preserve">
-    <value>将最大风扇模式恢复为自动</value>
+    <value>最大风扇模式自动恢复</value>
   </data>
   <data name="SettingsView_OffKeepsMaxUntilYouChangeItCooldownHandsTh" xml:space="preserve">
-    <value>关闭：保持最大散热，直到你手动更改。冷却：CPU 与 GPU 连续 2 分钟低于 60°C 后交还 BIOS 自动控制。计时：到达设定时间后交还。尚未在真机上验证。</value>
+    <value>关闭：保持最大模式，直到你手动切换。冷却：CPU 与 GPU 连续 2 分钟低于 60°C 后自动恢复 BIOS 自动控制。计时：到达设定时间后恢复。尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_Minutes" xml:space="preserve">
     <value>分钟</value>
@@ -2993,13 +2993,13 @@
     <value>启动时恢复上次硬件设置</value>
   </data>
   <data name="SettingsView_ReapplyTheSavedFanPresetPerformanceModeGpu" xml:space="preserve">
-    <value>OmenCore 启动后重新应用已保存的风扇预设、性能模式、GPU 加速和调优设置。</value>
+    <value>OmenCore 启动后重新应用已保存的风扇预设、性能模式、GPU 功率加速和调优设置。</value>
   </data>
   <data name="SettingsView_AllowStartupRestoreOnOmen16Victus" xml:space="preserve">
-    <value>在 OMEN 16/Victus 上允许启动恢复</value>
+    <value>允许在 OMEN 16/Victus 上启动时恢复</value>
   </data>
   <data name="SettingsView_OverridesTheExtraGuardrailForModelsThatHav" xml:space="preserve">
-    <value>为启动期间报告过固件敏感问题的机型覆盖额外的启动保护。除非你明确要在这些系统上自动重应用，否则保持关闭。</value>
+    <value>对启动时报告过固件敏感问题的机型，跳过额外的启动保护。除非你确实希望在这些系统上自动重新应用，否则保持关闭。</value>
   </data>
   <data name="SettingsView_StartupRestoreCategories" xml:space="preserve">
     <value>启动恢复类别</value>
@@ -3782,13 +3782,13 @@
     <value>计划任务</value>
   </data>
   <data name="SettingsView_ProfileScheduler" xml:space="preserve">
-    <value>方案计划任务</value>
+    <value>定时方案</value>
   </data>
   <data name="SettingsView_AutomaticallyApplyFanPresetsAndPerformance" xml:space="preserve">
-    <value>每天在计划时间自动应用风扇预设和性能模式。</value>
+    <value>每天在指定时间自动应用风扇预设与性能模式。</value>
   </data>
   <data name="SettingsView_EnableThisScheduleRule" xml:space="preserve">
-    <value>启用此计划规则</value>
+    <value>启用此定时规则</value>
   </data>
   <data name="SettingsView_RuleName" xml:space="preserve">
     <value>规则名称</value>
@@ -3815,7 +3815,7 @@
     <value>自动化规则</value>
   </data>
   <data name="SettingsView_PromotedTriggersForShippedAutomationTimeWi" xml:space="preserve">
-    <value>内置自动化的触发器：时间窗口、电量阈值、交流电源状态、CPU/GPU 温度和系统空闲时间。</value>
+    <value>内置触发条件：时间段、电量阈值、电源状态、CPU/GPU 温度、系统空闲时长。</value>
   </data>
   <data name="SettingsView_AddAutomationRule" xml:space="preserve">
     <value>添加自动化规则</value>
@@ -3887,10 +3887,10 @@
     <value>屏幕盖状态</value>
   </data>
   <data name="SettingsView_FanPresetAction" xml:space="preserve">
-    <value>风扇预设动作</value>
+    <value>应用风扇预设</value>
   </data>
   <data name="SettingsView_PerformanceModeAction" xml:space="preserve">
-    <value>性能模式动作</value>
+    <value>应用性能模式</value>
   </data>
   <data name="SplashWindow_V200Alpha1" xml:space="preserve">
     <value>v2.0.0-alpha1</value>
