@@ -10886,4 +10886,16 @@
   <data name="QuickPopup_ModeAlreadyActiveFormat" xml:space="preserve">
     <value>{0} mode is already active.</value>
   </data>
+  <data name="QuickPopup_FanModeCurve" xml:space="preserve">
+    <value>Curve</value>
+  </data>
+  <data name="Main_CurvePresetMissingFormat" xml:space="preserve">
+    <value>The quick panel's Curve button needs a usable custom curve. Edit and apply a curve in Fan Control first.</value>
+  </data>
+  <data name="SystemControl_PerfVisualConfirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="SystemControl_PerfVisualDegraded" xml:space="preserve">
+    <value>Partly active</value>
+  </data>
 </root>

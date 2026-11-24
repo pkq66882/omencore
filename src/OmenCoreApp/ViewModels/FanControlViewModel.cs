@@ -1618,7 +1618,7 @@ namespace OmenCore.ViewModels
                 IsApplyingCustomCurve = false;
             }
         }
-        
+
         /// <summary>
         /// Save the last applied preset name to config for restoration on next startup.
         /// </summary>
@@ -1637,19 +1637,21 @@ namespace OmenCore.ViewModels
             }
         }
 
-        private async Task ApplyCustomCurveAsync()
+        private async Task<bool> ApplyCustomCurveAsync()
         {
+            var succeeded = false;
+
             if (_fanService.IsDiagnosticModeActive)
             {
                 _logging.Warn("Skipped custom curve apply request because fan diagnostics mode is active");
-                return;
+                return false;
             }
 
             if (!FanCurvesAvailable)
             {
                 CurveApplyStatus = Strings.FanControl_StatusCurvesUnavailable;
                 _logging.Warn("Skipped custom curve apply request because this model is limited to OEM fan profiles");
-                return;
+                return false;
             }
 
             // Validate the curve before applying
@@ -1662,7 +1664,7 @@ namespace OmenCore.ViewModels
                     Strings.FanControl_InvalidCurveTitle,
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Warning);
-                return;
+                return false;
             }
 
             var customPreset = new FanPreset
@@ -1682,7 +1684,7 @@ namespace OmenCore.ViewModels
                 {
                     CurveApplyStatus = Strings.FanControl_StatusCustomCurveFailedVerify;
                     _logging.Warn("Custom curve was not saved because fan service reported apply failure");
-                    return;
+                    return false;
                 }
 
                 PersistSelectedCustomCurveIfNeeded();
@@ -1693,6 +1695,8 @@ namespace OmenCore.ViewModels
                     sourceLabel: Strings.FanControl_SourceCustomCurve,
                     curvePoints: CustomFanCurve,
                     reapplyCurveAction: () => _fanService.ApplyPreset(customPreset, immediate: true));
+
+                succeeded = true;
             }
             catch (Exception ex)
             {
@@ -1707,7 +1711,12 @@ namespace OmenCore.ViewModels
             {
                 IsApplyingCustomCurve = false;
             }
+
+            return succeeded;
         }
+
+        /// <summary>Applies the curve currently in the editor (used by the tray quick panel's Curve button).</summary>
+        public Task<bool> ApplyWorkingCurveAsync() => ApplyCustomCurveAsync();
 
         private async Task RunCurveVerificationKickAsync(
             string sourceLabel,

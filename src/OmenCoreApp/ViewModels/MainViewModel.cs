@@ -1313,6 +1313,12 @@ namespace OmenCore.ViewModels
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        /// <summary>Raised with the fan mode that is actually active, so tray surfaces can correct an optimistic highlight.</summary>
+        public event Action<string>? FanModeApplied;
+
+        /// <summary>Raised with the performance mode that is actually active, so tray surfaces can correct an optimistic highlight.</summary>
+        public event Action<string>? PerformanceModeApplied;
+
         /// <param name="systemRestoreService">
         /// Optional DI-injected instance (see App.xaml.cs ConfigureServices). Falls back to a
         /// manually-constructed instance when omitted so every existing parameterless
@@ -3318,6 +3324,7 @@ namespace OmenCore.ViewModels
                                 }
 
                                 _notificationService.ShowWarning(Strings.Main_FanModeTitle, warningMessage);
+                                FanModeApplied?.Invoke(_fanService.GetCurrentFanMode() ?? CurrentFanMode);
                             });
                         }
                         return;
@@ -3340,17 +3347,59 @@ namespace OmenCore.ViewModels
                             CurrentFanMode = confirmedModeName;
                             PushEvent(string.Format(Strings.Main_EventFanModeFormat, DisplayNames.FanPresetName(confirmedModeName)));
                             _notificationService.ShowFanModeChanged(confirmedModeName, Strings.Main_SourceQuickAccess);
+                            FanModeApplied?.Invoke(confirmedModeName);
                         });
                     }
                 }
                 else
                 {
+                    // The Curve button has no saved preset to resolve. Apply the curve that is
+                    // currently in the editor instead of failing with "preset not found".
+                    var curveApplied = false;
+                    if (FanModeNameResolver.IsCustomAlias(mode) &&
+                        _fanControl is { FanCurvesAvailable: true } curveControl &&
+                        curveControl.CustomFanCurve.Count >= 2)
+                    {
+                        // The apply touches UI-bound state and may show a validation dialog, so it
+                        // has to run on the UI thread; await the inner task.
+                        if (dispatcher != null)
+                        {
+                            var curveTask = await dispatcher.InvokeAsync(() => curveControl.ApplyWorkingCurveAsync());
+                            curveApplied = await curveTask;
+                        }
+                        else
+                        {
+                            curveApplied = await curveControl.ApplyWorkingCurveAsync();
+                        }
+                    }
+
+                    if (curveApplied)
+                    {
+                        if (dispatcher != null)
+                        {
+                            await dispatcher.InvokeAsync(() =>
+                            {
+                                CurrentFanMode = "Custom";
+                                PushEvent(string.Format(Strings.Main_EventFanModeFormat, Strings.QuickPopup_FanModeCurve));
+                                _notificationService.ShowFanModeChanged("Custom", Strings.Main_SourceQuickAccess);
+                                FanModeApplied?.Invoke("Custom");
+                            });
+                        }
+                        return;
+                    }
+
                     if (dispatcher != null)
                     {
                         await dispatcher.InvokeAsync(() =>
                         {
-                            PushEvent(string.Format(Strings.Main_EventFanModeIgnoredFormat, mode));
-                            _notificationService.ShowWarning(Strings.Main_FanModeTitle, string.Format(Strings.Main_FanModePresetNotFoundFormat, mode));
+                            var actualMode = _fanService.GetCurrentFanMode() ?? CurrentFanMode;
+                            PushEvent(string.Format(Strings.Main_EventFanModeIgnoredFormat, DisplayNames.FanPresetName(mode)));
+                            _notificationService.ShowWarning(
+                                Strings.Main_FanModeTitle,
+                                FanModeNameResolver.IsCustomAlias(mode)
+                                    ? Strings.Main_CurvePresetMissingFormat
+                                    : string.Format(Strings.Main_FanModePresetNotFoundFormat, DisplayNames.FanPresetName(mode)));
+                            FanModeApplied?.Invoke(actualMode);
                         });
                     }
                 }
@@ -3517,6 +3566,7 @@ namespace OmenCore.ViewModels
                         CurrentPerformanceMode = confirmedMode;
                         General?.SyncRuntimeState(confirmedMode, CurrentFanMode);
                         PushEvent(string.Format(Strings.Main_EventPerfModeFormat, DisplayNames.PerformanceModeName(confirmedMode)));
+                        PerformanceModeApplied?.Invoke(confirmedMode);
                     });
                 }
             });
@@ -3602,6 +3652,8 @@ namespace OmenCore.ViewModels
 
                         CurrentPerformanceMode = confirmedPerformanceMode;
                         CurrentFanMode = confirmedFanMode;
+                        PerformanceModeApplied?.Invoke(confirmedPerformanceMode);
+                        FanModeApplied?.Invoke(confirmedFanMode);
                         General?.SetSystemControlViewModel(_systemControl);
                         General?.SyncRuntimeState(confirmedPerformanceMode, confirmedFanMode);
                         // Persist both sides of this combined quick profile (GitHub #145 and its

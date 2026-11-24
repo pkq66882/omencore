@@ -316,11 +316,30 @@ namespace OmenCore.Views
                 return string.Format(Strings.QuickPopup_ApplyLinkedModeFormat, modeName);
             }
 
-            var preservedFanText = string.IsNullOrWhiteSpace(_curvePresetName)
-                ? Strings.QuickPopup_PresetCurrent
-                : string.Format(Strings.QuickPopup_PresetActiveFormat, DisplayNames.FanPresetName(_curvePresetName));
+            return string.Format(Strings.QuickPopup_ApplyModeFormat, DescribeCurrentFanSetting(), modeName);
+        }
 
-            return string.Format(Strings.QuickPopup_ApplyModeFormat, preservedFanText, modeName);
+        /// <summary>
+        /// What the fan side will keep doing. Derived from the mode that is actually active, so a
+        /// running custom curve never reads as "Auto" just because the stored preset name is Auto.
+        /// </summary>
+        private string DescribeCurrentFanSetting()
+        {
+            if (!string.IsNullOrWhiteSpace(_curvePresetName) &&
+                !FanModeNameResolver.IsAutoAlias(_curvePresetName) &&
+                !FanModeNameResolver.IsMaxAlias(_curvePresetName) &&
+                !FanModeNameResolver.IsQuietAlias(_curvePresetName) &&
+                !FanModeNameResolver.IsCustomAlias(_curvePresetName))
+            {
+                return string.Format(Strings.QuickPopup_PresetActiveFormat, DisplayNames.FanPresetName(_curvePresetName));
+            }
+
+            if (FanModeNameResolver.IsCustomAlias(_currentFanMode))
+            {
+                return Strings.QuickPopup_FanModeCurve;
+            }
+
+            return DisplayNames.FanPresetName(_currentFanMode);
         }
 
         private void UpdateFanModeButtons()

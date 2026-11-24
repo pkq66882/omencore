@@ -10882,4 +10882,16 @@
   <data name="QuickPopup_ModeAlreadyActiveFormat" xml:space="preserve">
     <value>{0} modu zaten etkin.</value>
   </data>
+  <data name="QuickPopup_FanModeCurve" xml:space="preserve">
+    <value>Eğri</value>
+  </data>
+  <data name="Main_CurvePresetMissingFormat" xml:space="preserve">
+    <value>Hızlı paneldeki Eğri düğmesi kullanılabilir bir özel eğri gerektirir. Önce Fan Denetimi bölümünde bir eğri düzenleyip uygulayın.</value>
+  </data>
+  <data name="SystemControl_PerfVisualConfirmed" xml:space="preserve">
+    <value>Onaylandı</value>
+  </data>
+  <data name="SystemControl_PerfVisualDegraded" xml:space="preserve">
+    <value>Kısmen etkin</value>
+  </data>
 </root>

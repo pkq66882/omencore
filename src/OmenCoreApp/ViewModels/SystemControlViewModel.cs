@@ -767,8 +767,8 @@ namespace OmenCore.ViewModels
         public string PerformanceModeVisualState => PerformanceModeEcControlAvailable ? "confirmed" : "degraded";
 
         public string PerformanceModeVisualLabel => PerformanceModeVisualState == "confirmed"
-            ? "Confirmed"
-            : "Degraded";
+            ? Strings.SystemControl_PerfVisualConfirmed
+            : Strings.SystemControl_PerfVisualDegraded;
 
         private double _latestGpuPowerWatts;
         private string _gpuFullPowerText = Strings.SC2_GpuFullPowerWaiting;

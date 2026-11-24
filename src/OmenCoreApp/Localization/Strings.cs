@@ -3993,5 +3993,11 @@ namespace OmenCore.Localization
 
     public static string QuickPopup_ModeAlreadyActiveFormat => Get(nameof(QuickPopup_ModeAlreadyActiveFormat));
 
+    public static string Main_CurvePresetMissingFormat => Get(nameof(Main_CurvePresetMissingFormat));
+    public static string QuickPopup_FanModeCurve => Get(nameof(QuickPopup_FanModeCurve));
+
+    public static string SystemControl_PerfVisualConfirmed => Get(nameof(SystemControl_PerfVisualConfirmed));
+    public static string SystemControl_PerfVisualDegraded => Get(nameof(SystemControl_PerfVisualDegraded));
+
     }
 }

@@ -5093,7 +5093,7 @@
     <value>可选降级：完全独立运行，但有 {0} 个可选组件不可用（OGH 与 HP-SEU 并非核心运行所必需）</value>
   </data>
   <data name="SettingsViewModel_StatusDegraded" xml:space="preserve">
-    <value>已降级</value>
+    <value>依赖不完整</value>
   </data>
   <data name="SettingsViewModel_StatusError" xml:space="preserve">
     <value>错误</value>
@@ -5123,7 +5123,7 @@
     <value>启动恢复已应用</value>
   </data>
   <data name="DashboardViewModel_HealthDegraded" xml:space="preserve">
-    <value>⚠️ 已降级</value>
+    <value>⚠️ 数据不全</value>
   </data>
   <data name="DashboardViewModel_HealthHealthy" xml:space="preserve">
     <value>✓ 健康</value>
@@ -5255,7 +5255,7 @@
     <value>已确认</value>
   </data>
   <data name="SystemControl_StateDegraded" xml:space="preserve">
-    <value>已降级</value>
+    <value>有偏差</value>
   </data>
   <data name="SystemControl_StateBlocked" xml:space="preserve">
     <value>已阻止</value>
@@ -5267,7 +5267,7 @@
     <value>已确认</value>
   </data>
   <data name="FanControlViewModel_StateDegraded" xml:space="preserve">
-    <value>已降级</value>
+    <value>未确认</value>
   </data>
   <data name="FanControlViewModel_StateBlocked" xml:space="preserve">
     <value>已阻止</value>
@@ -5276,7 +5276,7 @@
     <value>已确认</value>
   </data>
   <data name="LightingViewModel_StateDegraded" xml:space="preserve">
-    <value>已降级</value>
+    <value>无生效目标</value>
   </data>
   <data name="LightingViewModel_StateBlocked" xml:space="preserve">
     <value>已阻止</value>
@@ -6296,7 +6296,7 @@
     <value>正常</value>
   </data>
   <data name="TrayIcon_HealthDegraded" xml:space="preserve">
-    <value>已降级</value>
+    <value>数据不全</value>
   </data>
   <data name="TrayIcon_HealthUnknown" xml:space="preserve">
     <value>未知</value>
@@ -7130,7 +7130,7 @@
     <value>已阻止</value>
   </data>
   <data name="GpuBoost_VisualDegraded" xml:space="preserve">
-    <value>已降级</value>
+    <value>未应用</value>
   </data>
   <data name="GpuBoost_VisualConfirmed" xml:space="preserve">
     <value>已确认</value>
@@ -10881,5 +10881,17 @@
   </data>
   <data name="QuickPopup_ModeAlreadyActiveFormat" xml:space="preserve">
     <value>已在使用{0}模式。</value>
+  </data>
+  <data name="QuickPopup_FanModeCurve" xml:space="preserve">
+    <value>曲线</value>
+  </data>
+  <data name="Main_CurvePresetMissingFormat" xml:space="preserve">
+    <value>快捷面板的“曲线”需要一条可用的自定义曲线。请先到风扇控制页编辑并应用曲线。</value>
+  </data>
+  <data name="SystemControl_PerfVisualConfirmed" xml:space="preserve">
+    <value>已确认</value>
+  </data>
+  <data name="SystemControl_PerfVisualDegraded" xml:space="preserve">
+    <value>部分生效</value>
   </data>
 </root>

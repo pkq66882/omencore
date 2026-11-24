@@ -762,6 +762,11 @@ namespace OmenCore
                     mainViewModel.SetFanModeFromTray(mode);
                 };
 
+                // A quick-panel click highlights the button immediately; if the apply is refused
+                // (e.g. no curve preset), this pushes the mode that is really active back.
+                mainViewModel.FanModeApplied += mode => _trayIconService?.UpdateFanMode(mode);
+                mainViewModel.PerformanceModeApplied += mode => _trayIconService?.UpdatePerformanceMode(mode);
+
                 _trayIconService.PerformanceModeChangeRequested += mode =>
                 {
                     mainViewModel.SetPerformanceModeFromTray(mode);
