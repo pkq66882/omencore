@@ -28,7 +28,21 @@ namespace OmenCore.Utils
             if (FanModeNameResolver.IsMaxAlias(name)) return Strings.TrayIcon_ModeMax;
             if (FanModeNameResolver.IsQuietAlias(name)) return Strings.TrayIcon_ModeQuiet;
             if (FanModeNameResolver.IsCustomAlias(name)) return Strings.TrayIcon_ModeCustom;
-            return name;
+
+            // Built-in performance-flavoured presets (OEM presets, quick-popup curve names) still
+            // need a Chinese label; Extreme keeps its own word so it does not read as "鎬ц兘".
+            return name switch
+            {
+                "Extreme" => Strings.FanPreset_Extreme,
+                "Performance" => Strings.FanPreset_Performance,
+                "Turbo" => Strings.FanPreset_Performance,
+                "Boost" => Strings.FanPreset_Performance,
+                "Gaming" => Strings.FanPreset_Gaming,
+                "Balanced" => Strings.FanPreset_Balanced,
+                "Silent" => Strings.FanPreset_Silent,
+                "Default" => Strings.FanPreset_Default,
+                _ => name
+            };
         }
 
         /// <summary>Localized label for a built-in performance mode name.</summary>
@@ -202,6 +216,7 @@ namespace OmenCore.Utils
         {
             "FanPreset" => token switch
             {
+                "" or null => Strings.Settings_NotSet,
                 "Auto" => Strings.FanPreset_Auto,
                 "Quiet" => Strings.FanPreset_Quiet,
                 "Extreme" => Strings.FanPreset_Extreme,
@@ -215,6 +230,7 @@ namespace OmenCore.Utils
             },
             "PerfMode" => token switch
             {
+                "" or null => Strings.Settings_NotSet,
                 "Silent" => Strings.PerfMode_Silent,
                 "Balanced" => Strings.PerfMode_Balanced,
                 "Performance" => Strings.PerfMode_Performance,
@@ -302,6 +318,8 @@ namespace OmenCore.Utils
                 "TopCenter" => Strings.Osd_PositionTopCenter,
                 "TopRight" => Strings.Osd_PositionTopRight,
                 "BottomLeft" => Strings.Osd_PositionBottomLeft,
+                "Above" => Strings.Battery_Above,
+                "Below" => Strings.Battery_Below,
                 "BottomCenter" => Strings.Osd_PositionBottomCenter,
                 "BottomRight" => Strings.Osd_PositionBottomRight,
                 "Primary" => Strings.Osd_TargetPrimary,
@@ -318,6 +336,17 @@ namespace OmenCore.Utils
             }
         };
 
+        /// <summary>Localized game-library platform filter (enum name to label; brands pass through).</summary>
+        public static string PlatformFilter(object? value)
+        {
+            return value?.ToString() switch
+            {
+                "All" => Strings.PlatformFilter_All,
+                "Manual" => Strings.PlatformFilter_Manual,
+                null => string.Empty,
+                var s => s
+            };
+        }
         public static string Scene(string? name)
         {
             if (string.IsNullOrWhiteSpace(name)) return name ?? string.Empty;
@@ -418,6 +447,15 @@ namespace OmenCore.Utils
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             => DisplayNames.Fx(value);
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+    /// <summary>Game-library platform filter labels (All / Manually added localized).</summary>
+    public class PlatformFilterDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => DisplayNames.PlatformFilter(value);
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
             => throw new NotSupportedException();

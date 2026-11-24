@@ -160,6 +160,7 @@
             <ComboBox Grid.Column="1" 
                       ItemsSource="{Binding PlatformFilters}"
                       SelectedItem="{Binding PlatformFilter}"
+                      ItemTemplate="{StaticResource PlatformFilterItemTemplate}"
                       Width="120"
                       Margin="0,0,12,0"
                       Background="#252525"

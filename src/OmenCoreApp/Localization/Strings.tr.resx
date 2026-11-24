@@ -10867,4 +10867,13 @@
   <data name="QuickPopup_CurveTooltipFormat" xml:space="preserve">
     <value>Eğri: {0}</value>
   </data>
+  <data name="Settings_NotSet" xml:space="preserve">
+    <value>Ayarlanmadı</value>
+  </data>
+  <data name="PlatformFilter_All" xml:space="preserve">
+    <value>Tümü</value>
+  </data>
+  <data name="PlatformFilter_Manual" xml:space="preserve">
+    <value>Elle eklenen</value>
+  </data>
 </root>

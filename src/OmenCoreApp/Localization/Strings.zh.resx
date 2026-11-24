@@ -596,7 +596,7 @@
     <value>系统功耗与散热配置</value>
   </data>
   <data name="AdvancedView_QuietPerformanceModeSilentOperationLowPowe" xml:space="preserve">
-    <value>冷静模式：静音运行、低功耗</value>
+    <value>静音模式：安静运行、低功耗</value>
   </data>
   <data name="AdvancedView_SilentOperation" xml:space="preserve">
     <value>静音运行</value>
@@ -1721,7 +1721,7 @@
     <value>自动风扇</value>
   </data>
   <data name="GeneralView_QuietProfileReducedPowerAndMinimalFanSpeed" xml:space="preserve">
-    <value>安静方案：降低功耗并使用最低风扇转速</value>
+    <value>静音方案：降低功耗并使用最低风扇转速</value>
   </data>
   <data name="GeneralView_ReducedPowerLimitsAndMinimalFanSpeedForSil" xml:space="preserve">
     <value>降低功耗限制与最低风扇转速，实现静音运行</value>
@@ -2513,7 +2513,7 @@
     <value>专用</value>
   </data>
   <data name="MemoryOptimizerView_Ram" xml:space="preserve">
-    <value>RAM %</value>
+    <value>内存占用 %</value>
   </data>
   <data name="MemoryOptimizerView_IndividualOperations" xml:space="preserve">
     <value>单项操作</value>
@@ -2600,7 +2600,7 @@
     <value>清理最小间隔</value>
   </data>
   <data name="MemoryOptimizerView_SetTo0ToUseTheSelectedProfileDefaultCooldo" xml:space="preserve">
-    <value>设为 0 则使用所选方案的默认冷却时间。</value>
+    <value>设为 0 则使用所选方案的默认等待时间。</value>
   </data>
   <data name="MemoryOptimizerView_GameAwareQuietWindow" xml:space="preserve">
     <value>游戏感知静默窗口</value>
@@ -2981,7 +2981,7 @@
     <value>最大风扇模式自动恢复</value>
   </data>
   <data name="SettingsView_OffKeepsMaxUntilYouChangeItCooldownHandsTh" xml:space="preserve">
-    <value>关闭：保持最大模式，直到你手动切换。降温后恢复：CPU 与 GPU 连续 2 分钟低于 60°C 后，交由 BIOS 自动控制。定时：到达设定时间后恢复。尚未在真机上验证。</value>
+    <value>关闭：一直保持最大风扇，直到你手动切换。降至 60°C 恢复：CPU 与 GPU 中较高的温度连续 2 分钟低于 60°C 后，把风扇交回 BIOS 自动控制。定时：到设定时间后恢复。该功能尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_Minutes" xml:space="preserve">
     <value>分钟</value>
@@ -3119,7 +3119,7 @@
     <value>Ctrl + Shift + Q</value>
   </data>
   <data name="SettingsView_QuietMode" xml:space="preserve">
-    <value>安静模式</value>
+    <value>静音模式</value>
   </data>
   <data name="SettingsView_CtrlShiftO" xml:space="preserve">
     <value>Ctrl + Shift + O</value>
@@ -4544,7 +4544,7 @@
     <value>关闭</value>
   </data>
   <data name="AdvancedView_Quiet" xml:space="preserve">
-    <value>冷静</value>
+    <value>静音</value>
   </data>
   <data name="AdvancedView_Apply" xml:space="preserve">
     <value>应用</value>
@@ -4949,7 +4949,7 @@
     <value>平衡</value>
   </data>
   <data name="PerformanceMode_Quiet" xml:space="preserve">
-    <value>冷静</value>
+    <value>静音</value>
   </data>
   <data name="SettingsViewModel_OnBattery" xml:space="preserve">
     <value>使用电池</value>
@@ -6311,7 +6311,7 @@
     <value>平衡——自动散热 + 平衡模式</value>
   </data>
   <data name="TrayIcon_ProfileQuiet" xml:space="preserve">
-    <value>冷静——风扇静音，延长续航</value>
+    <value>静音——风扇安静运行，延长续航</value>
   </data>
   <data name="TrayIcon_ProfileCustom" xml:space="preserve">
     <value>自定义——由你设定的风扇与电源策略</value>
@@ -6440,7 +6440,7 @@
     <value>最大</value>
   </data>
   <data name="TrayIcon_ModeQuiet" xml:space="preserve">
-    <value>安静</value>
+    <value>静音</value>
   </data>
   <data name="TrayIcon_ModeCustom" xml:space="preserve">
     <value>自定义</value>
@@ -6473,10 +6473,10 @@
     <value>监控状态：{0}</value>
   </data>
   <data name="QuickPopup_FanPerfDecoupled" xml:space="preserve">
-    <value>风扇与性能模式已解耦，风扇设置保持不变</value>
+    <value>风扇与性能模式已解耦，风扇设置不受性能模式影响</value>
   </data>
   <data name="QuickPopup_ApplyModeFormat" xml:space="preserve">
-    <value>应用此性能模式。解耦模式下 {0} 保持不变。</value>
+    <value>应用此性能模式。风扇与性能已解耦，{0}不会随之改变。</value>
   </data>
   <data name="QuickPopup_ApplySavedCurve" xml:space="preserve">
     <value>应用已保存的风扇曲线</value>
@@ -6713,7 +6713,7 @@
     <value> 最大——强力散热</value>
   </data>
   <data name="TrayIcon_FanQuietDesc" xml:space="preserve">
-    <value> 安静——降低噪音</value>
+    <value> 静音——降低噪音</value>
   </data>
   <data name="TrayIcon_HealthStale" xml:space="preserve">
     <value>已过期</value>
@@ -6731,7 +6731,7 @@
     <value>风扇/性能：{0}</value>
   </data>
   <data name="TrayIcon_PerfQuietLabel" xml:space="preserve">
-    <value> 冷静——风扇静音，延长续航</value>
+    <value> 静音——风扇静音运行，延长续航</value>
   </data>
   <data name="UpdateViewModel_NoReleaseData" xml:space="preserve">
     <value>未能从 GitHub 获取发布数据。</value>
@@ -7181,10 +7181,10 @@
     <value>紧凑</value>
   </data>
   <data name="Osd_DensityBalanced" xml:space="preserve">
-    <value>均衡</value>
+    <value>适中</value>
   </data>
   <data name="Osd_DensityComfortable" xml:space="preserve">
-    <value>舒适</value>
+    <value>宽松</value>
   </data>
   <data name="Osd_AccentCyan" xml:space="preserve">
     <value>青色</value>
@@ -7226,7 +7226,7 @@
     <value>自动</value>
   </data>
   <data name="FanPreset_Quiet" xml:space="preserve">
-    <value>安静</value>
+    <value>静音</value>
   </data>
   <data name="FanPreset_Extreme" xml:space="preserve">
     <value>极致</value>
@@ -7247,7 +7247,7 @@
     <value>性能</value>
   </data>
   <data name="PerfMode_Silent" xml:space="preserve">
-    <value>冷静</value>
+    <value>静音</value>
   </data>
   <data name="PerfMode_Balanced" xml:space="preserve">
     <value>平衡</value>
@@ -7256,7 +7256,7 @@
     <value>狂暴</value>
   </data>
   <data name="PerfMode_Turbo" xml:space="preserve">
-    <value>疾速</value>
+    <value>极速</value>
   </data>
   <data name="PerfMode_Comfort" xml:space="preserve">
     <value>舒适</value>
@@ -7295,25 +7295,25 @@
     <value>激进</value>
   </data>
   <data name="CleanProfile_Balanced" xml:space="preserve">
-    <value>均衡</value>
+    <value>平衡</value>
   </data>
   <data name="CleanProfile_Conservative" xml:space="preserve">
     <value>保守</value>
   </data>
   <data name="CleanProfile_OffPeakOnly" xml:space="preserve">
-    <value>仅闲时</value>
+    <value>仅空闲时段</value>
   </data>
   <data name="CleanProfile_Manual" xml:space="preserve">
     <value>手动</value>
   </data>
   <data name="Speed_Slow" xml:space="preserve">
-    <value>慢</value>
+    <value>慢速</value>
   </data>
   <data name="Speed_Medium" xml:space="preserve">
-    <value>中</value>
+    <value>中速</value>
   </data>
   <data name="Speed_Fast" xml:space="preserve">
-    <value>快</value>
+    <value>快速</value>
   </data>
   <data name="Battery_Below" xml:space="preserve">
     <value>低于</value>
@@ -7724,7 +7724,7 @@
     <value>关闭</value>
   </data>
   <data name="MaxAutoReturn_Cooldown" xml:space="preserve">
-    <value>降温后恢复</value>
+    <value>降至 60°C 恢复</value>
   </data>
   <data name="MaxAutoReturn_Timer" xml:space="preserve">
     <value>定时</value>
@@ -7751,7 +7751,7 @@
     <value>游戏</value>
   </data>
   <data name="PerfMode_Quiet" xml:space="preserve">
-    <value>冷静</value>
+    <value>静音</value>
   </data>
   <data name="FanControl_ModeDirect" xml:space="preserve">
     <value>直接控制</value>
@@ -8375,7 +8375,7 @@
     <value>GPU 风扇</value>
   </data>
   <data name="FanDiag_SourceEstimatedValue" xml:space="preserve">
-    <value>估</value>
+    <value>估算</value>
   </data>
   <data name="FanDiag_SourceNone" xml:space="preserve">
     <value>无</value>
@@ -8444,7 +8444,7 @@
     <value>未开始：CPU 或 GPU 温度为 {0}°C。请等待降至 {1}°C 以下后重新运行诊断。</value>
   </data>
   <data name="FanDiag_StatusTooHotShort" xml:space="preserve">
-    <value>温度过高，无法开始——请冷却后重试</value>
+    <value>温度过高，暂时无法开始——请等温度降下来再试</value>
   </data>
   <data name="FanDiag_StatusWaitingCoolFormat" xml:space="preserve">
     <value>正在等待笔记本降至 {0}°C 以下（当前 {1}°C）…</value>
@@ -8456,7 +8456,7 @@
     <value>部分测试未通过——得分：{0}/100（{1}）</value>
   </data>
   <data name="FanDiag_StatusInterruptedFormat" xml:space="preserve">
-    <value>被温度保护中断（{0} 步）——请冷却后重跑</value>
+    <value>被温度保护中断（{0} 步）——请等降温后重跑</value>
   </data>
   <data name="FanDiag_SummaryBackendFormat" xml:space="preserve">
     <value>后端：{0} | 转速来源：{1}</value>
@@ -8501,25 +8501,25 @@
     <value>就绪</value>
   </data>
   <data name="Trigger_Time" xml:space="preserve">
-    <value>时间</value>
+    <value>指定时间</value>
   </data>
   <data name="Trigger_Battery" xml:space="preserve">
-    <value>电量</value>
+    <value>电池电量</value>
   </data>
   <data name="Trigger_AcPower" xml:space="preserve">
-    <value>交流电源</value>
+    <value>接通电源</value>
   </data>
   <data name="Trigger_Temperature" xml:space="preserve">
-    <value>温度</value>
+    <value>温度阈值</value>
   </data>
   <data name="Trigger_Idle" xml:space="preserve">
-    <value>空闲</value>
+    <value>系统空闲</value>
   </data>
   <data name="Trigger_Process" xml:space="preserve">
-    <value>进程</value>
+    <value>进程启动</value>
   </data>
   <data name="Trigger_WifiSsid" xml:space="preserve">
-    <value>WiFi 网络</value>
+    <value>Wi-Fi 网络</value>
   </data>
   <data name="Automation_ErrPayloadMissing" xml:space="preserve">
     <value>规则内容缺失。</value>
@@ -9302,10 +9302,10 @@
     <value>当前风扇预设</value>
   </data>
   <data name="QuickPopup_PresetActiveFormat" xml:space="preserve">
-    <value>当前生效的曲线预设“{0}”</value>
+    <value>“{0}”风扇预设</value>
   </data>
   <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
-    <value>应用此性能模式。联动模式下会一并调整风扇策略。</value>
+    <value>应用此性能模式。已启用联动，风扇策略也会一并更新。</value>
   </data>
   <data name="Main_EventCustomPresetSavedFormat" xml:space="preserve">
     <value>自定义预设“{0}”已保存</value>
@@ -9449,7 +9449,7 @@
     <value>🔥 已激活加速模式（快捷键）</value>
   </data>
   <data name="Main_EventQuietHotkey" xml:space="preserve">
-    <value>🤫 已激活冷静模式（快捷键）</value>
+    <value>🤫 已激活静音模式（快捷键）</value>
   </data>
   <data name="Main_EventProfileHotkeyFormat" xml:space="preserve">
     <value>方案：{0}（快捷键）</value>
@@ -9461,13 +9461,13 @@
     <value>无法应用自定义风扇预设“{0}”。请到诊断页查看后端状态。</value>
   </data>
   <data name="Main_EventQuietSafetyMax" xml:space="preserve">
-    <value>🌡️ 冷静模式保护：风扇已切到最大（温度过高）</value>
+    <value>🌡️ 静音模式保护：风扇已切到最大（温度过高）</value>
   </data>
   <data name="Main_EventQuietSafetyMaxFailed" xml:space="preserve">
-    <value>⚠️ 冷静模式保护：温度过高，但最大散热未能应用——请检查风扇控制</value>
+    <value>⚠️ 静音模式保护：温度过高，但最大散热未能应用——请检查风扇控制</value>
   </data>
   <data name="Main_EventQuietSafetyRestored" xml:space="preserve">
-    <value>✅ 冷静模式保护：风扇已回到冷静（温度已恢复）</value>
+    <value>✅ 静音模式保护：风扇已回到静音（温度已恢复）</value>
   </data>
   <data name="Main_HotkeyOsdAutoBios" xml:space="preserve">
     <value>自动（BIOS 控制）</value>
@@ -10358,7 +10358,7 @@
     <value>加速</value>
   </data>
   <data name="Main_OsdCategoryQuietMode" xml:space="preserve">
-    <value>冷静模式</value>
+    <value>静音模式</value>
   </data>
   <data name="Main_OsdValueMaxCooling" xml:space="preserve">
     <value>最大散热</value>
@@ -10367,7 +10367,7 @@
     <value>性能</value>
   </data>
   <data name="Main_OsdValueQuiet" xml:space="preserve">
-    <value>冷静</value>
+    <value>静音</value>
   </data>
   <data name="Main_OsdSourceTray" xml:space="preserve">
     <value>托盘</value>
@@ -10866,5 +10866,14 @@
   </data>
   <data name="QuickPopup_CurveTooltipFormat" xml:space="preserve">
     <value>曲线：{0}</value>
+  </data>
+  <data name="Settings_NotSet" xml:space="preserve">
+    <value>未设置</value>
+  </data>
+  <data name="PlatformFilter_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="PlatformFilter_Manual" xml:space="preserve">
+    <value>手动添加</value>
   </data>
 </root>

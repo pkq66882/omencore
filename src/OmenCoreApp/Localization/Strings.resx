@@ -10871,4 +10871,13 @@
   <data name="QuickPopup_CurveTooltipFormat" xml:space="preserve">
     <value>Curve: {0}</value>
   </data>
+  <data name="Settings_NotSet" xml:space="preserve">
+    <value>Not set</value>
+  </data>
+  <data name="PlatformFilter_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="PlatformFilter_Manual" xml:space="preserve">
+    <value>Manually added</value>
+  </data>
 </root>

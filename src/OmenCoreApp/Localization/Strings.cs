@@ -3984,5 +3984,10 @@ namespace OmenCore.Localization
 
     public static string QuickPopup_CurveTooltipFormat => Get(nameof(QuickPopup_CurveTooltipFormat));
 
+    public static string Settings_NotSet => Get(nameof(Settings_NotSet));
+
+    public static string PlatformFilter_All => Get(nameof(PlatformFilter_All));
+    public static string PlatformFilter_Manual => Get(nameof(PlatformFilter_Manual));
+
     }
 }

@@ -1267,7 +1267,7 @@
                         <Grid Margin="0,12,0,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="110"/>
+                                <ColumnDefinition Width="150"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0">
@@ -3571,7 +3571,7 @@
                                                         <StackPanel Grid.Column="1" Margin="0,0,12,0"
                                                                     Visibility="{Binding IsTemperatureTrigger, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                             <TextBlock Text="{x:Static loc:Strings.SettingsView_TemperatureCondition}" FontSize="11" Foreground="{StaticResource TextTertiaryBrush}" Margin="0,0,0,4"/>
-                                                            <ComboBox AutomationProperties.Name="{x:Static loc:Strings.SettingsView_TemperatureCondition}" ItemsSource="{Binding TemperatureConditions}" SelectedItem="{Binding TemperatureCondition, Mode=TwoWay}"
+                                                            <ComboBox AutomationProperties.Name="{x:Static loc:Strings.SettingsView_TemperatureCondition}" ItemsSource="{Binding TemperatureConditions}" SelectedItem="{Binding TemperatureCondition, Mode=TwoWay}" ItemTemplate="{StaticResource SettingsTokenItemTemplate}"
                                                                       Style="{StaticResource ModernComboBox}"/>
                                                         </StackPanel>
 
