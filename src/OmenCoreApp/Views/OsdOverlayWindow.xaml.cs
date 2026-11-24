@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Threading;
+using OmenCore.Localization;
 using OmenCore.Hardware;
 using OmenCore.Models;
 using OmenCore.Services;
@@ -781,8 +782,8 @@ namespace OmenCore.Views
 
                             fpsSnapshot = OsdFpsDisplayFormatter.Unavailable(
                                 _rtssService == null
-                                    ? "RTSS disabled"
-                                    : "FPS needs RTSS running (RivaTuner Statistics Server)");
+                                    ? Strings.L2_RtssDisabled
+                                    : Strings.L2_FpsNeedsRtss);
                         }
 
                         ApplyFpsSnapshot(fpsSnapshot);

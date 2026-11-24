@@ -274,7 +274,7 @@ namespace OmenCore.ViewModels
                     _logging.ErrorWithContext(
                         component: "UpdateViewModel",
                         operation: "InstallUpdateAsync",
-                        message: $"Update installation failed: {installResult.Message}");
+                        message: string.Format(Strings.U2_InstallFailedFormat, installResult.Message));
                 }
                 else
                 {

@@ -9302,4 +9302,1573 @@
   <data name="Settings_Detecting" xml:space="preserve">
     <value>Detecting...</value>
   </data>
+  <data name="QuickPopup_PresetCurrent" xml:space="preserve">
+    <value>your current fan preset</value>
+  </data>
+  <data name="QuickPopup_PresetActiveFormat" xml:space="preserve">
+    <value>the active curve preset '{0}'</value>
+  </data>
+  <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
+    <value>Apply this performance mode. Linked mode can also update fan policy.</value>
+  </data>
+  <data name="Main_EventCustomPresetSavedFormat" xml:space="preserve">
+    <value>Custom preset '{0}' saved</value>
+  </data>
+  <data name="Main_EventLightingProfilePushedFormat" xml:space="preserve">
+    <value>Lighting profile '{0}' pushed</value>
+  </data>
+  <data name="Main_EventLightingProfilePushedByPerfFormat" xml:space="preserve">
+    <value>Lighting profile '{0}' pushed by a performance mode</value>
+  </data>
+  <data name="Main_EventDefaultsRestored" xml:space="preserve">
+    <value>Defaults restored</value>
+  </data>
+  <data name="Main_EventConfigurationReloaded" xml:space="preserve">
+    <value>Configuration reloaded</value>
+  </data>
+  <data name="Main_EventRestorePointCreated" xml:space="preserve">
+    <value>System restore point created</value>
+  </data>
+  <data name="Main_EventRestorePointFailed" xml:space="preserve">
+    <value>Restore point creation failed</value>
+  </data>
+  <data name="Main_EventCleanupCancelled" xml:space="preserve">
+    <value>OGH cleanup cancelled</value>
+  </data>
+  <data name="Main_EventCleanupDryRunComplete" xml:space="preserve">
+    <value>OMEN cleanup dry run completed</value>
+  </data>
+  <data name="Main_EventCleanupComplete" xml:space="preserve">
+    <value>OMEN Gaming Hub cleanup complete</value>
+  </data>
+  <data name="Main_EventCleanupCompletedWithErrors" xml:space="preserve">
+    <value>OMEN cleanup completed with errors</value>
+  </data>
+  <data name="Main_EventCleanupFailed" xml:space="preserve">
+    <value>OMEN cleanup failed</value>
+  </data>
+  <data name="Main_EventLogitechDiscoveredFormat" xml:space="preserve">
+    <value>Discovered {0} Logitech device(s)</value>
+  </data>
+  <data name="Main_EventConfigExported" xml:space="preserve">
+    <value>✓ Configuration exported successfully</value>
+  </data>
+  <data name="Main_EventExportFailedFormat" xml:space="preserve">
+    <value>✗ Export failed: {0}</value>
+  </data>
+  <data name="Main_EventImportInvalidFormat" xml:space="preserve">
+    <value>✗ Import failed: Invalid file format</value>
+  </data>
+  <data name="Main_EventConfigImported" xml:space="preserve">
+    <value>✓ Configuration imported - Restart recommended</value>
+  </data>
+  <data name="Main_EventImportFailedFormat" xml:space="preserve">
+    <value>✗ Import failed: {0}</value>
+  </data>
+  <data name="Main_EventDiagBundleCreated" xml:space="preserve">
+    <value>✓ Diagnostics bundle created and model info copied to clipboard</value>
+  </data>
+  <data name="Main_EventReportModelExportFailed" xml:space="preserve">
+    <value>✗ Report model failed: export error</value>
+  </data>
+  <data name="Main_EventReportModelFailedFormat" xml:space="preserve">
+    <value>✗ Report model failed: {0}</value>
+  </data>
+  <data name="Main_EventTelemetryExported" xml:space="preserve">
+    <value>✓ Telemetry exported</value>
+  </data>
+  <data name="Main_EventTelemetryExportFailed" xml:space="preserve">
+    <value>✗ Telemetry export failed</value>
+  </data>
+  <data name="Main_EventSafeModeBlockedFormat" xml:space="preserve">
+    <value>🛡 Safe Mode blocked tray write: {0}</value>
+  </data>
+  <data name="Main_EventSafeModeLifted" xml:space="preserve">
+    <value>🛡 Safe Mode lifted — monitoring healthy</value>
+  </data>
+  <data name="Main_EventSafeModeStartupActive" xml:space="preserve">
+    <value>🛡 Startup Safe Mode active — hardware write actions are temporarily restricted</value>
+  </data>
+  <data name="Main_EventSafeModeExpired" xml:space="preserve">
+    <value>🛡 Safe Mode expired — startup window complete</value>
+  </data>
+  <data name="Main_FanModeTitle" xml:space="preserve">
+    <value>Fan Mode</value>
+  </data>
+  <data name="Main_EventFanModeFailedFormat" xml:space="preserve">
+    <value>Fan mode failed: {0}</value>
+  </data>
+  <data name="Main_FanModeApplyFailedFormat" xml:space="preserve">
+    <value>Could not apply {0}. Check Diagnostics for backend state.</value>
+  </data>
+  <data name="Main_FanModeApplyFailedVictus16S0Format" xml:space="preserve">
+    <value>Could not apply {0}. Victus 16-s0 models may require firmware-path validation; run Diagnostics and share report + WMI logs in guide format.</value>
+  </data>
+  <data name="Main_FanModeApplyFailedVictusFormat" xml:space="preserve">
+    <value>Could not apply {0}. On Victus models, share Diagnostics output in guide format so backend mapping can be verified.</value>
+  </data>
+  <data name="Main_EventFanModeFormat" xml:space="preserve">
+    <value>🌀 Fan mode: {0}</value>
+  </data>
+  <data name="Main_EventFanModeIgnoredFormat" xml:space="preserve">
+    <value>⚠ Fan mode request ignored: preset not found for {0}</value>
+  </data>
+  <data name="Main_FanModePresetNotFoundFormat" xml:space="preserve">
+    <value>Could not resolve preset for {0}.</value>
+  </data>
+  <data name="Main_EventPerfModeFormat" xml:space="preserve">
+    <value>⚡ Performance: {0}</value>
+  </data>
+  <data name="Main_EventProfileFormat" xml:space="preserve">
+    <value>🎮 Profile: {0} (fan: {1})</value>
+  </data>
+  <data name="Main_GpuPowerTitle" xml:space="preserve">
+    <value>GPU Power</value>
+  </data>
+  <data name="Main_EventGpuPowerFormat" xml:space="preserve">
+    <value>⚡ GPU Power: {0}</value>
+  </data>
+  <data name="Main_GpuPowerSetFormat" xml:space="preserve">
+    <value>Set to {0}</value>
+  </data>
+  <data name="Main_EventKeyboardFormat" xml:space="preserve">
+    <value>💡 Keyboard: {0}</value>
+  </data>
+  <data name="Main_EventProfileAppliedFormat" xml:space="preserve">
+    <value>🎮 Profile: {0} for {1}</value>
+  </data>
+  <data name="Main_EventDefaultsRestoredGame" xml:space="preserve">
+    <value>🎮 Restored default settings</value>
+  </data>
+  <data name="Main_EventFanHotkeyFormat" xml:space="preserve">
+    <value>🌀 Fan: {0} (hotkey)</value>
+  </data>
+  <data name="Main_EventFanMaxCoolingHotkey" xml:space="preserve">
+    <value>🌀 Fan: Maximum Cooling (hotkey)</value>
+  </data>
+  <data name="Main_EventPerfHotkeyFormat" xml:space="preserve">
+    <value>⚡ Performance: {0} (hotkey)</value>
+  </data>
+  <data name="Main_EventBoostHotkey" xml:space="preserve">
+    <value>🔥 Boost mode activated (hotkey)</value>
+  </data>
+  <data name="Main_EventQuietHotkey" xml:space="preserve">
+    <value>🤫 Quiet mode activated (hotkey)</value>
+  </data>
+  <data name="Main_EventProfileHotkeyFormat" xml:space="preserve">
+    <value>Profile: {0} (hotkey)</value>
+  </data>
+  <data name="Main_EventCustomProfileFailedFormat" xml:space="preserve">
+    <value>Custom profile failed: {0}</value>
+  </data>
+  <data name="Main_CustomPresetApplyFailedFormat" xml:space="preserve">
+    <value>Could not apply custom fan preset '{0}'. Check Diagnostics for backend state.</value>
+  </data>
+  <data name="Main_EventQuietSafetyMax" xml:space="preserve">
+    <value>🌡️ Quiet safety: fans → Max (temp critical)</value>
+  </data>
+  <data name="Main_EventQuietSafetyMaxFailed" xml:space="preserve">
+    <value>⚠️ Quiet safety: temp critical, but Max cooling failed to apply — check fan control</value>
+  </data>
+  <data name="Main_EventQuietSafetyRestored" xml:space="preserve">
+    <value>✅ Quiet safety: fans → Quiet (temp recovered)</value>
+  </data>
+  <data name="Main_HotkeyOsdAutoBios" xml:space="preserve">
+    <value>Auto (BIOS Control)</value>
+  </data>
+  <data name="Main_HotkeyOsdOmenKey" xml:space="preserve">
+    <value>OMEN Key</value>
+  </data>
+  <data name="Main_EventHotkeysWindowActive" xml:space="preserve">
+    <value>⌨️ Hotkeys active (window focus)</value>
+  </data>
+  <data name="Main_EventHotkeysGlobalEnabled" xml:space="preserve">
+    <value>⌨️ Global hotkeys enabled</value>
+  </data>
+  <data name="Main_EventHotkeysWindowInactive" xml:space="preserve">
+    <value>⌨️ Hotkeys inactive (window lost focus)</value>
+  </data>
+  <data name="Main_HotkeyOsdTriggeredFormat" xml:space="preserve">
+    <value>via Hotkey ({0})</value>
+  </data>
+  <data name="Notify_GameProfileActivatedTitle" xml:space="preserve">
+    <value>Game Profile Activated</value>
+  </data>
+  <data name="Notify_GameProfileAppliedFormat" xml:space="preserve">
+    <value>Applied profile: {0}</value>
+  </data>
+  <data name="Notify_GameProfileInfoFormat" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="Notify_GameClosedTitle" xml:space="preserve">
+    <value>Game Closed</value>
+  </data>
+  <data name="Notify_GameDefaultsRestored" xml:space="preserve">
+    <value>Restored default settings</value>
+  </data>
+  <data name="Notify_GameClosedInfoFormat" xml:space="preserve">
+    <value>{0}: restored default settings</value>
+  </data>
+  <data name="Notify_FanModeTitleFormat" xml:space="preserve">
+    <value>Fan Mode: {0}</value>
+  </data>
+  <data name="Notify_PerfModeTitleFormat" xml:space="preserve">
+    <value>Performance: {0}</value>
+  </data>
+  <data name="Notify_ChangedViaFormat" xml:space="preserve">
+    <value>Changed via {0}</value>
+  </data>
+  <data name="Notify_MemoryFreedFormat" xml:space="preserve">
+    <value>Freed {0}</value>
+  </data>
+  <data name="Notify_MemoryOpsFormat" xml:space="preserve">
+    <value>{0} cleanup operation(s) completed</value>
+  </data>
+  <data name="Notify_HighTemperatureTitle" xml:space="preserve">
+    <value>High Temperature Warning</value>
+  </data>
+  <data name="Notify_TemperatureFormat" xml:space="preserve">
+    <value>{0}: {1:F0}°C</value>
+  </data>
+  <data name="Notify_HighTemperatureThresholdFormat" xml:space="preserve">
+    <value>Threshold: {0:F0}°C · informational only, not a fan trigger</value>
+  </data>
+  <data name="Notify_HighTemperatureInfoFormat" xml:space="preserve">
+    <value>{0}: {1:F0}°C (threshold {2:F0}°C). This is an informational notification only - it's independent of fan behavior and any BIOS thermal/TCC limit. Adjust or disable it under Settings → Notifications.</value>
+  </data>
+  <data name="Notify_ClampReturnedTitle" xml:space="preserve">
+    <value>GPU power clamp is back</value>
+  </data>
+  <data name="Notify_ClampReturnedBodyFormat" xml:space="preserve">
+    <value>The GPU is limited to {0:F0} W again, of its own {1:F0} W.</value>
+  </data>
+  <data name="Notify_ClampReturnedHint" xml:space="preserve">
+    <value>Restart the GPU from Diagnostics when nothing needs it.</value>
+  </data>
+  <data name="Notify_ClampReturnedInfoFormat" xml:space="preserve">
+    <value>Limited to {0:F0} W of {1:F0} W. The firmware told the driver about the adapter again - restarting the GPU drops it.</value>
+  </data>
+  <data name="Notify_CriticalTitleFormat" xml:space="preserve">
+    <value>CRITICAL: {0} Overheating!</value>
+  </data>
+  <data name="Notify_CriticalTemperatureFormat" xml:space="preserve">
+    <value>Temperature: {0:F0}°C</value>
+  </data>
+  <data name="Notify_CriticalBody" xml:space="preserve">
+    <value>Thermal throttling may occur. Consider reducing load or improving cooling.</value>
+  </data>
+  <data name="Notify_CriticalInfoFormat" xml:space="preserve">
+    <value>{0:F0}°C — thermal throttling may occur</value>
+  </data>
+  <data name="Notify_ThermalProtectionTitleFormat" xml:space="preserve">
+    <value>Thermal Protection: {0}</value>
+  </data>
+  <data name="Notify_ThermalProtectionBodyFormat" xml:space="preserve">
+    <value>{0:F0}°C - Fans boosted to max</value>
+  </data>
+  <data name="Notify_ThermalProtectionInfoFormat" xml:space="preserve">
+    <value>{0:F0}°C — fans boosted to max</value>
+  </data>
+  <data name="SC2_AmdGuidanceFormat" xml:space="preserve">
+    <value>AMD {0} detected.&#10;&#10;AMD Ryzen CPUs use Curve Optimizer (CO) instead of traditional voltage offset undervolting. CO requires specific SMU (System Management Unit) commands that may not be available or working on all models.&#10;&#10;Supported: Ryzen 5000+ series with PawnIO driver installed.&#10;Alternative: Use Ryzen Master or BIOS Curve Optimizer settings.</value>
+  </data>
+  <data name="SC2_IntelGuidanceFormat" xml:space="preserve">
+    <value>Intel {0} detected.&#10;&#10;CPU voltage control is blocked by Intel's Plundervolt security mitigations (CVE-2019-11157). Most BIOS updates after 2020 lock MSR 0x150 (voltage offset register).&#10;&#10;Possible solutions:&#10;• Check if your BIOS has an option to unlock overclocking/undervolt&#10;• Some manufacturers provide BIOS updates that re-enable voltage control&#10;• Use Intel XTU if your system supports it</value>
+  </data>
+  <data name="SC2_AmdCoGuidance" xml:space="preserve">
+    <value>AMD uses Curve Optimizer (CO) instead of direct mV offset writes. More negative values are stronger CO undervolt.</value>
+  </data>
+  <data name="SC2_BackendUnavailable" xml:space="preserve">
+    <value>Backend: unavailable</value>
+  </data>
+  <data name="SC2_BackendAmdCoFormat" xml:space="preserve">
+    <value>Backend: AMD Curve Optimizer via {0}</value>
+  </data>
+  <data name="SC2_BackendTypeFormat" xml:space="preserve">
+    <value>Backend: {0}</value>
+  </data>
+  <data name="SC2_SmuSourceFormat" xml:space="preserve">
+    <value>Read from the SMU power table (version 0x{0}).</value>
+  </data>
+  <data name="SC2_SmuMismatchFormat" xml:space="preserve">
+    <value>The slider asks for {0} W but the SMU is running {1:F1} W. Press Apply, or check that another tool is not re-asserting a limit.</value>
+  </data>
+  <data name="SC2_SmuNoProvider" xml:space="preserve">
+    <value>No AMD SMU provider on this system.</value>
+  </data>
+  <data name="SC2_SmuBackendUnavailable" xml:space="preserve">
+    <value>The SMU backend is unavailable, so the limits cannot be read. Install PawnIO and run OmenCore as administrator.</value>
+  </data>
+  <data name="SC2_SmuTableUnknown" xml:space="preserve">
+    <value>This CPU's SMU power table layout has not been identified, so a reading would come from an unknown slot. OmenCore reports nothing rather than a plausible wrong number. tools/SmuProbe --pmtable adds a new table version.</value>
+  </data>
+  <data name="SC2_SmuReadFailedFormat" xml:space="preserve">
+    <value>The SMU read failed: {0}</value>
+  </data>
+  <data name="SC2_BackendRyzenAvailableFormat" xml:space="preserve">
+    <value>Backend: {0}. STAPM and Tctl writes are available for this Ryzen platform.</value>
+  </data>
+  <data name="SC2_ControlFull" xml:space="preserve">
+    <value>✓ Full control (Power Plan + Fan + CPU/GPU Limits)</value>
+  </data>
+  <data name="SC2_ControlSpectre" xml:space="preserve">
+    <value>ℹ️ HP Spectre: Power Plan + Fan only (use Intel XTU or ThrottleStop for CPU power limits)</value>
+  </data>
+  <data name="SC2_ControlPartial" xml:space="preserve">
+    <value>ℹ️ Partial control (Power Plan + Fan only - EC unavailable)</value>
+  </data>
+  <data name="SC2_GpuFullPowerWaiting" xml:space="preserve">
+    <value>Full power • waiting for telemetry</value>
+  </data>
+  <data name="SC2_GpuFullPowerFormat" xml:space="preserve">
+    <value>Full power • {0:F0}W</value>
+  </data>
+  <data name="SC2_TestActiveFormat" xml:space="preserve">
+    <value>Test active: auto-revert in {0}s unless you press Keep</value>
+  </data>
+  <data name="SC2_NvapiPowerLockedOnly" xml:space="preserve">
+    <value>NVAPI clock offsets are available, but power limit writes are locked by the current driver or firmware path.</value>
+  </data>
+  <data name="SC2_NvapiBothLocked" xml:space="preserve">
+    <value>NVAPI detected the GPU, but both clock offsets and power limit writes are locked by the current driver or firmware path.</value>
+  </data>
+  <data name="SC2_NvapiPowerTuningOnly" xml:space="preserve">
+    <value>This GPU/driver exposes NVAPI power tuning, but clock and voltage offsets remain locked.</value>
+  </data>
+  <data name="SC2_NvapiClockLimitsFormat" xml:space="preserve">
+    <value>Detected clock limits for {0}: Core {1}, Memory {2}. Power limit writes are locked.</value>
+  </data>
+  <data name="SC2_NvapiPowerRangeFormat" xml:space="preserve">
+    <value>Detected power range for {0}: {1}. Clock offsets are blocked by the current driver or firmware path.</value>
+  </data>
+  <data name="SC2_NvapiNoWritable" xml:space="preserve">
+    <value>NVAPI detected the GPU, but this driver/firmware path does not expose writable tuning controls.</value>
+  </data>
+  <data name="SC2_ModelHintPowerOnlyFormat" xml:space="preserve">
+    <value>Model-specific note for {0}: power tuning only for now. Start near {1}% and treat clock changes as an external-tool job.</value>
+  </data>
+  <data name="SC2_ModelHintClocksFormat" xml:space="preserve">
+    <value>Model-specific note for {0}: start around Core {1} and Memory {2}. Leave Power at 100% because NVAPI power policy writes are locked.</value>
+  </data>
+  <data name="SC2_ModelHintAllFormat" xml:space="preserve">
+    <value>Model-specific note for {0}: start around Core {1}, Memory {2}, Power {3}%. Values close to the detected max are experimental until validated under load.</value>
+  </data>
+  <data name="SC2_TestApplied" xml:space="preserve">
+    <value>✓ Test applied</value>
+  </data>
+  <data name="SC2_TestLiveGpu" xml:space="preserve">
+    <value>Test tuning is live. Run a quick benchmark or game, then press Keep if stable.</value>
+  </data>
+  <data name="SC2_TestLiveCpu" xml:space="preserve">
+    <value>Test undervolt is live. Run a stress test or game, then press Keep if stable.</value>
+  </data>
+  <data name="SC2_GpuTestExpired" xml:space="preserve">
+    <value>GPU test expired; previous tuning restored.</value>
+  </data>
+  <data name="SC2_TestConfirmedFullFormat" xml:space="preserve">
+    <value>✓ Test confirmed: Core {0}, Mem {1}, Power {2}, Voltage {3}</value>
+  </data>
+  <data name="SC2_TestConfirmedPowerFormat" xml:space="preserve">
+    <value>✓ Test confirmed: Power {0}</value>
+  </data>
+  <data name="SC2_TestConfirmedKept" xml:space="preserve">
+    <value>✓ Test confirmed: supported GPU tuning kept</value>
+  </data>
+  <data name="SC2_AppClosedDuringGpuTest" xml:space="preserve">
+    <value>OmenCore closed during the GPU test; previous tuning restored.</value>
+  </data>
+  <data name="SC2_TestFailedFormat" xml:space="preserve">
+    <value>Test failed: {0}</value>
+  </data>
+  <data name="SC2_TestCoAppliedFormat" xml:space="preserve">
+    <value>Test CO applied: Core {0} mV eq.</value>
+  </data>
+  <data name="SC2_TestUndervoltAppliedFormat" xml:space="preserve">
+    <value>Test undervolt applied: Core {0} mV, Cache {1} mV</value>
+  </data>
+  <data name="SC2_CpuTestExpired" xml:space="preserve">
+    <value>CPU undervolt test expired; previous voltage restored.</value>
+  </data>
+  <data name="SC2_TestConfirmedCoFormat" xml:space="preserve">
+    <value>✓ Test confirmed: Core {0} mV eq. (startup reapply enabled)</value>
+  </data>
+  <data name="SC2_TestConfirmedUvFormat" xml:space="preserve">
+    <value>✓ Test confirmed: Core {0} mV, Cache {1} mV (startup reapply enabled)</value>
+  </data>
+  <data name="SC2_TestRevertedCoFormat" xml:space="preserve">
+    <value>Test reverted: Core {0} mV eq. restored</value>
+  </data>
+  <data name="SC2_TestRevertedUvFormat" xml:space="preserve">
+    <value>Test reverted: Core {0} mV, Cache {1} mV restored</value>
+  </data>
+  <data name="SC2_TccNoMsr" xml:space="preserve">
+    <value>No MSR access available (install PawnIO for TCC control)</value>
+  </data>
+  <data name="SC2_NotSupportedFormat" xml:space="preserve">
+    <value>Not supported: {0}</value>
+  </data>
+  <data name="SC2_SafeRollbackCleared" xml:space="preserve">
+    <value>Safe rollback cleared saved undervolt startup state; live CPU undervolt backend unavailable.</value>
+  </data>
+  <data name="SC2_PlNoMsr" xml:space="preserve">
+    <value>No MSR access (install PawnIO for power limit control)</value>
+  </data>
+  <data name="SC2_BiosLockedReadOnlyFormat" xml:space="preserve">
+    <value>⚠️ BIOS locked — read-only (PL1: {0:F0}W, PL2: {1:F0}W)</value>
+  </data>
+  <data name="SC2_BiosLockedReadOnlyPolicyFormat" xml:space="preserve">
+    <value>⚠️ BIOS locked — read-only (PL1: {0:F0}W, PL2: {1:F0}W). Mode policy still applies via OMEN/OGH</value>
+  </data>
+  <data name="SC2_PowerLimitIgnored" xml:space="preserve">
+    <value>power limit ignored (locked by driver/firmware)</value>
+  </data>
+  <data name="SC2_PowerLimitIgnoredFormat" xml:space="preserve">
+    <value>power {0}% ignored (locked by driver/firmware)</value>
+  </data>
+  <data name="SC2_GpuOcBlockedBattery" xml:space="preserve">
+    <value>GPU OC increase blocked: connect AC power first</value>
+  </data>
+  <data name="SC2_AcPowerRecommendedTitle" xml:space="preserve">
+    <value>AC Power Recommended</value>
+  </data>
+  <data name="SC2_GpuOcBatteryBody" xml:space="preserve">
+    <value>GPU OC increase detected while running on battery power.&#10;&#10;Applying higher clocks/power limits on battery can cause unstable clocks, rapid battery drain, and sudden throttling.&#10;&#10;Connect AC power before increasing GPU OC settings.</value>
+  </data>
+  <data name="SC2_ResetGpuDefaultsFormat" xml:space="preserve">
+    <value>Reset to defaults (Core: 0 MHz, Memory: 0 MHz, Power: 100%, Voltage: 0 mV)</value>
+  </data>
+  <data name="SC2_ResetGpuDefaultsPowerFormat" xml:space="preserve">
+    <value>Reset to defaults (Power: 100%)</value>
+  </data>
+  <data name="SC2_AmdGpuOcPartial" xml:space="preserve">
+    <value>AMD GPU OC: some settings failed to apply</value>
+  </data>
+  <data name="SC2_StartupResetBoth" xml:space="preserve">
+    <value>Startup safety reset applied: an unconfirmed CPU undervolt test and GPU OC test were detected from the previous session. Tuning has been reset to safe defaults.</value>
+  </data>
+  <data name="SC2_StartupResetCpu" xml:space="preserve">
+    <value>Startup safety reset applied: an unconfirmed CPU undervolt test was detected from the previous session. CPU undervolt has been reset to safe defaults.</value>
+  </data>
+  <data name="SC2_StartupResetGpu" xml:space="preserve">
+    <value>Startup safety reset applied: an unconfirmed GPU OC test was detected from the previous session. GPU tuning has been reset to safe defaults.</value>
+  </data>
+  <data name="SC2_SavedOffsetsUnchanged" xml:space="preserve">
+    <value>The saved offsets are unchanged; use Test Apply, then Keep, to re-confirm.</value>
+  </data>
+  <data name="SC2_UseTestApplyKeep" xml:space="preserve">
+    <value>Use Test Apply, then Keep, to re-confirm.</value>
+  </data>
+  <data name="SC2_LoadedProfileFormat" xml:space="preserve">
+    <value>Loaded profile: {0}</value>
+  </data>
+  <data name="SC2_LoadedProfileNoteFormat" xml:space="preserve">
+    <value>Loaded '{0}' with model notes: {1}</value>
+  </data>
+  <data name="SC2_CoAppliedFormat" xml:space="preserve">
+    <value>Curve Optimizer applied: Core {0} mV eq., iGPU {1} mV eq.</value>
+  </data>
+  <data name="SC2_UndervoltAppliedFormat" xml:space="preserve">
+    <value>Undervolt applied: Core {0} mV, Cache {1} mV</value>
+  </data>
+  <data name="SC2_ApplyFailedFormat" xml:space="preserve">
+    <value>Apply failed: {0}</value>
+  </data>
+  <data name="SC2_UndervoltFailedTitle" xml:space="preserve">
+    <value>Undervolt Failed</value>
+  </data>
+  <data name="SC2_UndervoltFailedBodyFormat" xml:space="preserve">
+    <value>Failed to apply undervolt settings:&#10;&#10;{0}&#10;&#10;This may be caused by:&#10;• MSR access blocked (install PawnIO or disable Secure Boot)&#10;• HVCI/Core Isolation enabled&#10;• Unsupported CPU</value>
+  </data>
+  <data name="SC2_ResetFailedFormat" xml:space="preserve">
+    <value>Reset failed: {0}</value>
+  </data>
+  <data name="SC2_AggressiveTitle" xml:space="preserve">
+    <value>Aggressive Undervolt Warning</value>
+  </data>
+  <data name="SC2_AggressiveBody" xml:space="preserve">
+    <value>⚠️ WARNING: Aggressive Undervolt&#10;&#10;You are about to apply a -140mV undervolt offset.&#10;&#10;This is an aggressive setting that may cause:&#10;• Blue screen crashes (BSOD)&#10;• Application crashes or freezes&#10;• System instability under load&#10;&#10;Only proceed if you understand the risks and are prepared to:&#10;• Reboot if your system becomes unstable&#10;• Test thoroughly with stress tests (Prime95, OCCT)&#10;&#10;The undervolt will not persist after reboot, so a crash will reset it.&#10;&#10;Continue with -140mV undervolt?</value>
+  </data>
+  <data name="SC2_ResettingCo" xml:space="preserve">
+    <value>Resetting Curve Optimizer offsets...</value>
+  </data>
+  <data name="SC2_ResettingUv" xml:space="preserve">
+    <value>Resetting undervolt offsets...</value>
+  </data>
+  <data name="SC2_ResetCoDone" xml:space="preserve">
+    <value>Curve Optimizer offsets reset to defaults</value>
+  </data>
+  <data name="SC2_ResetUvDone" xml:space="preserve">
+    <value>Undervolt offsets reset to defaults</value>
+  </data>
+  <data name="SC2_ClockOcReadyPowerLockedFormat" xml:space="preserve">
+    <value>✓ {0} — clock OC ready, power limit locked</value>
+  </data>
+  <data name="S2_ExclusiveEcTitle" xml:space="preserve">
+    <value>Exclusive EC Access Diagnostics</value>
+  </data>
+  <data name="S2_ExclusiveEcBody" xml:space="preserve">
+    <value>⚠️ EXCLUSIVE EC ACCESS DIAGNOSTICS ⚠️&#10;&#10;This diagnostic mode will:&#10;• Acquire exclusive access to EC registers&#10;• Block other applications from accessing EC&#10;• Log detailed contention information&#10;• May interfere with OMEN Gaming Hub or other fan control apps&#10;&#10;Use this only for troubleshooting EC register conflicts.&#10;It will help identify if other apps are causing fan RPM 0 issues.&#10;&#10;Enable exclusive diagnostics mode?</value>
+  </data>
+  <data name="S2_KeyboardBackendSetFormat" xml:space="preserve">
+    <value>Keyboard backend set to: {0}&#10;&#10;This change will take effect after restarting OmenCore.</value>
+  </data>
+  <data name="S2_BackendChangedTitle" xml:space="preserve">
+    <value>Backend Changed</value>
+  </data>
+  <data name="S2_BatteryCareUnavailableTitle" xml:space="preserve">
+    <value>Battery Care Unavailable</value>
+  </data>
+  <data name="S2_BatteryCareUnavailableBody" xml:space="preserve">
+    <value>Battery charge limit cannot be set - HP WMI BIOS interface not available.&#10;&#10;This feature requires HP OMEN/Victus laptop with WMI BIOS support.</value>
+  </data>
+  <data name="S2_BatteryCareFailedTitle" xml:space="preserve">
+    <value>Battery Care Failed</value>
+  </data>
+  <data name="S2_BatteryCareFailedBody" xml:space="preserve">
+    <value>Battery charge limit command failed.&#10;&#10;This may indicate:&#10;• Your laptop model doesn't support this feature&#10;• The HP BIOS needs an update&#10;• AC adapter is not connected&#10;&#10;Try toggling the setting in OMEN Gaming Hub to compare behavior.</value>
+  </data>
+  <data name="S2_BatteryCareErrorTitle" xml:space="preserve">
+    <value>Battery Care Error</value>
+  </data>
+  <data name="S2_BatteryCareErrorBodyFormat" xml:space="preserve">
+    <value>Failed to apply battery charge limit: {0}</value>
+  </data>
+  <data name="S2_BloatwareScanningProgress" xml:space="preserve">
+    <value>Scanning for HP bloatware packages...</value>
+  </data>
+  <data name="S2_BloatwareScanningList" xml:space="preserve">
+    <value>Scanning for HP bloatware...</value>
+  </data>
+  <data name="S2_BloatwareClean" xml:space="preserve">
+    <value>✓ No HP bloatware detected!&#10;&#10;Your system is clean.</value>
+  </data>
+  <data name="S2_BloatwareFoundFormat" xml:space="preserve">
+    <value>Found {0} HP bloatware package(s):</value>
+  </data>
+  <data name="S2_BloatwareScanFailedFormat" xml:space="preserve">
+    <value>❌ Scan failed: {0}</value>
+  </data>
+  <data name="S2_BloatwareStarting" xml:space="preserve">
+    <value>Starting bloatware removal...</value>
+  </data>
+  <data name="S2_BloatwareRemoving" xml:space="preserve">
+    <value>Removing HP bloatware packages...&#10;&#10;This may take a few minutes...</value>
+  </data>
+  <data name="S2_BloatwareStep1" xml:space="preserve">
+    <value>[1/3] Getting package list...</value>
+  </data>
+  <data name="S2_BloatwareStep2CountFormat" xml:space="preserve">
+    <value>[2/3] Removing {0} packages...</value>
+  </data>
+  <data name="S2_BloatwareStep2ItemFormat" xml:space="preserve">
+    <value>[2/3] Removing {0}/{1}: {2}...</value>
+  </data>
+  <data name="S2_BloatwareStep3" xml:space="preserve">
+    <value>[3/3] Cleanup complete!</value>
+  </data>
+  <data name="S2_BloatwareResultHeader" xml:space="preserve">
+    <value>✓ Bloatware removal complete!</value>
+  </data>
+  <data name="S2_BloatwareResultRemovedFormat" xml:space="preserve">
+    <value>• Removed: {0} package(s)</value>
+  </data>
+  <data name="S2_BloatwareResultFailedFormat" xml:space="preserve">
+    <value>• Failed: {0} package(s)</value>
+  </data>
+  <data name="S2_BloatwareFailedListHeader" xml:space="preserve">
+    <value>Failed packages:</value>
+  </data>
+  <data name="S2_BloatwareNeedsAdminTip" xml:space="preserve">
+    <value>💡 Tip: Run OmenCore as Administrator to remove provisioned packages.</value>
+  </data>
+  <data name="S2_BloatwareRescanNote" xml:space="preserve">
+    <value>Run a new scan to verify.</value>
+  </data>
+  <data name="S2_BloatwareRemovedCountFormat" xml:space="preserve">
+    <value>Removed {0} bloatware package(s).</value>
+  </data>
+  <data name="S2_NeedsAdminSuffix" xml:space="preserve">
+    <value>needs admin</value>
+  </data>
+  <data name="S2_DiagZipFilter" xml:space="preserve">
+    <value>ZIP Archive (*.zip)|*.zip|All Files (*.*)|*.*</value>
+  </data>
+  <data name="S2_OsdActionDoNothing" xml:space="preserve">
+    <value>Do nothing (block the key)</value>
+  </data>
+  <data name="S2_SyncStartFormat" xml:space="preserve">
+    <value>Partial sync: {0}/{1} providers updated</value>
+  </data>
+  <data name="S2_SyncFailedNoProviders" xml:space="preserve">
+    <value>Sync failed: no providers updated</value>
+  </data>
+  <data name="S2_SyncCompleteOne" xml:space="preserve">
+    <value>Sync complete: 1 target updated</value>
+  </data>
+  <data name="S2_SyncCompleteFormat" xml:space="preserve">
+    <value>Sync complete: {0} targets updated</value>
+  </data>
+  <data name="S2_SyncPartialTargetsFormat" xml:space="preserve">
+    <value>Partial sync: {0}/{1} targets updated</value>
+  </data>
+  <data name="S2_SyncFailedNoTargets" xml:space="preserve">
+    <value>Sync failed: no targets updated</value>
+  </data>
+  <data name="S2_DpiNotWritable" xml:space="preserve">
+    <value>OmenCore couldn't actually write these DPI settings to the device - the active Corsair connection (RGB.NET/iCUE) doesn't support DPI configuration. Nothing on the mouse changed.</value>
+  </data>
+  <data name="S2_DpiSaveProfileTitle" xml:space="preserve">
+    <value>Save DPI Profile</value>
+  </data>
+  <data name="S2_DpiSaveProfilePrompt" xml:space="preserve">
+    <value>Enter a name for the DPI profile:</value>
+  </data>
+  <data name="S2_KeyboardNoWmiVerifyHint" xml:space="preserve">
+    <value> WMI keyboard commands aren't verifying on your model - try enabling 'Experimental EC Keyboard' in Settings if colors don't visibly change.</value>
+  </data>
+  <data name="S2_KeyboardUnavailable" xml:space="preserve">
+    <value>Keyboard lighting is unavailable; check backend detection or Settings > Hardware.</value>
+  </data>
+  <data name="L2_SyncCompleteProviderOne" xml:space="preserve">
+    <value>Sync complete: 1 provider updated</value>
+  </data>
+  <data name="L2_SyncCompleteProvidersFormat" xml:space="preserve">
+    <value>Sync complete: {0} providers updated</value>
+  </data>
+  <data name="L2_NoRgbTargets" xml:space="preserve">
+    <value>No RGB targets available</value>
+  </data>
+  <data name="L2_ProbeUnavailable" xml:space="preserve">
+    <value>RGB probe unavailable because no HP keyboard lighting backend is active.</value>
+  </data>
+  <data name="L2_ProbeSentFormat" xml:space="preserve">
+    <value>Probe sent via {0}; select what changed and save. {1}</value>
+  </data>
+  <data name="L2_ObservationCannotSave" xml:space="preserve">
+    <value>RGB observation could not be saved because configuration is unavailable.</value>
+  </data>
+  <data name="L2_KeyboardUnavailableBackend" xml:space="preserve">
+    <value>Keyboard lighting is unavailable on this backend.</value>
+  </data>
+  <data name="L2_NoHistory" xml:space="preserve">
+    <value>No history collected yet.</value>
+  </data>
+  <data name="L2_ProfileDefaultCooldownFormat" xml:space="preserve">
+    <value>Profile default ({0} min)</value>
+  </data>
+  <data name="L2_ExcludeTip" xml:space="preserve">
+    <value>Tip: exclude apps you keep open (games, capture, chat, anti-cheat). You can add from the top-process list or type a process name without .exe.</value>
+  </data>
+  <data name="L2_ExclusionsActiveFormat" xml:space="preserve">
+    <value>{0} process exclusions active. Add more from the top-process list to avoid repeated working-set trims.</value>
+  </data>
+  <data name="L2_ExcludeSuggestionsFormat" xml:space="preserve">
+    <value>Suggested exclusions from current top processes: {0}.</value>
+  </data>
+  <data name="L2_CleanResultFormat" xml:space="preserve">
+    <value>Freed {0} MB  •  {1} ops succeeded</value>
+  </data>
+  <data name="L2_CleanFailedFormat" xml:space="preserve">
+    <value>Failed: {0}</value>
+  </data>
+  <data name="L2_CleanupPreviewFormat" xml:space="preserve">
+    <value>This profile will free approximately {0} MB</value>
+  </data>
+  <data name="L2_UpdateOpenReleasePrompt" xml:space="preserve">
+    <value>A new version is available on GitHub. Open the release page now?</value>
+  </data>
+  <data name="L2_UpdateAvailableTitle" xml:space="preserve">
+    <value>Update Available</value>
+  </data>
+  <data name="L2_UpdateDownloadPromptFormat" xml:space="preserve">
+    <value>A new version is available!\n\nCurrent: {0}\nLatest: {1}\n\nWould you like to download and install it now?</value>
+  </data>
+  <data name="L2_EcEmbeddedController" xml:space="preserve">
+    <value>EC (Embedded Controller)</value>
+  </data>
+  <data name="L2_CurveDangerFormat" xml:space="preserve">
+    <value>Dangerous curve: at {0}°C the fan drops to {1}% (was {2}% at {3}°C). This can cause overheating!</value>
+  </data>
+  <data name="L2_CurveSafetyFormat" xml:space="preserve">
+    <value>Safety warning: {0}°C has only {1}% fan speed. At high temperatures 70% or more is recommended to avoid throttling.</value>
+  </data>
+  <data name="L2_CurveCoverageFormat" xml:space="preserve">
+    <value>Incomplete coverage: the curve stops at {0}°C. Add points up to 95°C so thermal spikes are covered.</value>
+  </data>
+  <data name="L2_RtssDisabled" xml:space="preserve">
+    <value>RTSS disabled</value>
+  </data>
+  <data name="L2_FpsNeedsRtss" xml:space="preserve">
+    <value>FPS needs RTSS running (RivaTuner Statistics Server)</value>
+  </data>
+  <data name="L2_TrayTooltip" xml:space="preserve">
+    <value>OmenCore - Gaming Laptop Control&#10;&#10;Left-click: Quick Popup&#10;Double-click: Open Dashboard&#10;Right-click: Menu</value>
+  </data>
+  <data name="L2_RtssDetected" xml:space="preserve">
+    <value>RivaTuner Statistics Server (RTSS) is running and its D3D hooks have corrupted OmenCore's render thread.</value>
+  </data>
+  <data name="L2_OverlayDetected" xml:space="preserve">
+    <value>A D3D/DXGI overlay hook (possibly RTSS, an overlay tool, or a game anti-cheat) has corrupted OmenCore's render thread.</value>
+  </data>
+  <data name="L2_SoftwareRenderingBodyFormat" xml:space="preserve">
+    <value>{0}&#10;&#10;OmenCore has switched to software rendering for this session to prevent further crashes.&#10;&#10;To permanently fix this:&#10;  • Close RTSS / MSI Afterburner overlay before starting OmenCore, OR&#10;  • Enable 'Software Rendering' in OmenCore Settings → General&#10;&#10;OmenCore will continue running. Restart the app for full GPU-accelerated rendering once the overlay is closed.</value>
+  </data>
+  <data name="L2_RenderConflictTitle" xml:space="preserve">
+    <value>OmenCore — Render Conflict Detected</value>
+  </data>
+  <data name="L2_PawnIoBundled" xml:space="preserve">
+    <value>PawnIO (bundled with installer builds)</value>
+  </data>
+  <data name="L2_AdapterOverrideCpuHalfFormat" xml:space="preserve">
+    <value>It then raises the four CPU power limits to {0}, and puts them back after a resume or a change of supply - the events that take them away. OmenCore cannot read them back, so that half is what the SMU accepted rather than what it is running.&#10;&#10;</value>
+  </data>
+  <data name="L2_AdapterOverrideBodyFormat" xml:space="preserve">
+    <value>This disables and re-enables the discrete GPU.&#10;&#10;Your screens will go black for a few seconds, and any game, render or compute job using the GPU will lose it and may crash.&#10;&#10;{0}Neither figure is an overclock. The GPU lands on the limit its own driver reports as default, and the CPU limits are set to the number this machine's firmware states for a loaded CPU and GPU together. The clamp is a policy the firmware applies to a supply it does not rate highly enough, not a measurement of what that supply can deliver.&#10;&#10;Nothing here survives a reboot: the GPU limit holds until the firmware tells the driver about the adapter again - changing supply does that - and the CPU limits until you stop holding them.&#10;&#10;Drop the clamp now?</value>
+  </data>
+  <data name="L2_AdapterOverrideTitle" xml:space="preserve">
+    <value>Drop the adapter power clamp?</value>
+  </data>
+  <data name="L2_TgpUnlockBody" xml:space="preserve">
+    <value>This is an experimental, unconfirmed feature that pins two firmware-managed EC bits open for a moment and fires one WMI command, then measures whether the GPU's power actually moved.&#10;&#10;It has not been run on real hardware by anyone who wrote it. During the investigation it is built from, forcing this same mechanism on an undersized power adapter left the GPU in a degraded state - driver calls taking 20+ seconds, unable to render - that did not clear until the machine was rebooted, on hardware with a history of GPU-driver crashes.&#10;&#10;This offer only appears when the connected adapter is well above this machine's rated requirement, which is the one safeguard behind it. There is no way to preview the result, and no undo beyond a reboot if something goes wrong.&#10;&#10;Try it anyway?</value>
+  </data>
+  <data name="L2_TgpUnlockTitle" xml:space="preserve">
+    <value>Try the experimental GPU power unlock?</value>
+  </data>
+  <data name="M2_CpuTelemetryUnavailable" xml:space="preserve">
+    <value>CPU telemetry unavailable</value>
+  </data>
+  <data name="M2_GpuTelemetryUnavailable" xml:space="preserve">
+    <value>GPU telemetry unavailable</value>
+  </data>
+  <data name="M2_TelemetryUnavailableFormat" xml:space="preserve">
+    <value>Unavailable • {0:F0}% load</value>
+  </data>
+  <data name="M2_TempStaleFormat" xml:space="preserve">
+    <value>{0:F0}°C (stale)</value>
+  </data>
+  <data name="M2_Stale" xml:space="preserve">
+    <value>Stale</value>
+  </data>
+  <data name="M2_TelemetryStaleFormat" xml:space="preserve">
+    <value>{0} • {1:F0}% load</value>
+  </data>
+  <data name="M2_TelemetryInvalidFormat" xml:space="preserve">
+    <value>Invalid • {0:F0}% load</value>
+  </data>
+  <data name="M2_TelemetryLoadFormat" xml:space="preserve">
+    <value>{0} • {1:F0}% load</value>
+  </data>
+  <data name="M2_NoRestorePoint" xml:space="preserve">
+    <value>No restore point created</value>
+  </data>
+  <data name="M2_CleanupStatusNotChecked" xml:space="preserve">
+    <value>Status: Not checked</value>
+  </data>
+  <data name="M2_ResumeCompleteFormat" xml:space="preserve">
+    <value>Post-resume self-check passed. Monitoring recovered in {0:F0}s and fan state looks normal ({1}, peak fan {2} RPM).</value>
+  </data>
+  <data name="M2_ResumeTelemetryIssueFormat" xml:space="preserve">
+    <value>Telemetry is not fully healthy yet (sample age {0:F0}s, monitoring state {1}). </value>
+  </data>
+  <data name="M2_ResumeFanIssueFormat" xml:space="preserve">
+    <value>Fans still look elevated for the current thermal load ({0} RPM at {1:F0}C while fan state is {2}).</value>
+  </data>
+  <data name="M2_ResumeAttentionFormat" xml:space="preserve">
+    <value>Post-resume self-check flagged follow-up: {0}</value>
+  </data>
+  <data name="M2_ResumeFailedFormat" xml:space="preserve">
+    <value>Post-resume self-check failed: {0}</value>
+  </data>
+  <data name="O2_ApplyConfirmBodyFormat" xml:space="preserve">
+    <value>This will apply {0} optimization(s) in {1}.&#10;&#10;Continue?</value>
+  </data>
+  <data name="O2_ApplyConfirmTitleFormat" xml:space="preserve">
+    <value>Apply {0}</value>
+  </data>
+  <data name="O2_RevertAllBody" xml:space="preserve">
+    <value>This will revert ALL optimizations to Windows defaults.&#10;&#10;Your backed-up settings will be restored.&#10;&#10;Continue?</value>
+  </data>
+  <data name="O2_RevertAllTitle" xml:space="preserve">
+    <value>Revert All Optimizations</value>
+  </data>
+  <data name="O2_RevertTimeout" xml:space="preserve">
+    <value>Revert timed out — check system state manually</value>
+  </data>
+  <data name="T2_NoSource" xml:space="preserve">
+    <value>No CPU temperature source responded.</value>
+  </data>
+  <data name="T2_SourceCountFormat" xml:space="preserve">
+    <value>{0} source(s) responded.</value>
+  </data>
+  <data name="T2_WmiFormat" xml:space="preserve">
+    <value>WMI BIOS: {0:F1}°C</value>
+  </data>
+  <data name="T2_WmiUnavailable" xml:space="preserve">
+    <value>WMI BIOS: unavailable</value>
+  </data>
+  <data name="T2_AcpiFormat" xml:space="preserve">
+    <value>ACPI Thermal Zone ({0}): {1:F1}°C</value>
+  </data>
+  <data name="T2_AcpiUnavailable" xml:space="preserve">
+    <value>ACPI Thermal Zone: unavailable</value>
+  </data>
+  <data name="T2_LhmFormat" xml:space="preserve">
+    <value>LibreHardwareMonitor: {0:F1}°C</value>
+  </data>
+  <data name="T2_LhmUnavailable" xml:space="preserve">
+    <value>LibreHardwareMonitor: unavailable</value>
+  </data>
+  <data name="T2_TrustedFormat" xml:space="preserve">
+    <value>Currently trusted: {0}</value>
+  </data>
+  <data name="T2_DisagreeFormat" xml:space="preserve">
+    <value>⚠ Sources disagree by more than {0:F0}°C — the trusted reading may not be the right one for this board.</value>
+  </data>
+  <data name="T2_Agree" xml:space="preserve">
+    <value>✓ Available sources agree within a plausible margin.</value>
+  </data>
+  <data name="U2_InstallFailedFormat" xml:space="preserve">
+    <value>Update installation failed: {0}</value>
+  </data>
+  <data name="Osd_LabelMode" xml:space="preserve">
+    <value>MODE</value>
+  </data>
+  <data name="Osd_LabelFans" xml:space="preserve">
+    <value>FANS</value>
+  </data>
+  <data name="Osd_LabelHotspot" xml:space="preserve">
+    <value>TJUNC</value>
+  </data>
+  <data name="Osd_LabelVram" xml:space="preserve">
+    <value>VRAM</value>
+  </data>
+  <data name="Osd_LabelPackage" xml:space="preserve">
+    <value>PKG</value>
+  </data>
+  <data name="Osd_LabelFan" xml:space="preserve">
+    <value>FAN</value>
+  </data>
+  <data name="Osd_LabelBattery" xml:space="preserve">
+    <value>BAT</value>
+  </data>
+  <data name="Osd_LabelFrameTime" xml:space="preserve">
+    <value>FT</value>
+  </data>
+  <data name="Osd_LabelPing" xml:space="preserve">
+    <value>PING</value>
+  </data>
+  <data name="X2_DashboardFans" xml:space="preserve">
+    <value>FANS</value>
+  </data>
+  <data name="X2_DirectActive" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="X2_OsdFanIcon" xml:space="preserve">
+    <value>FAN</value>
+  </data>
+  <data name="G2_ShippingAdapterFormat" xml:space="preserve">
+    <value> This machine shipped with a {0} W adapter.</value>
+  </data>
+  <data name="G2_UnrecognisedAdapter" xml:space="preserve">
+    <value>an unrecognised</value>
+  </data>
+  <data name="G2_UsbcSupplyFormat" xml:space="preserve">
+    <value>This machine is running from a {0} W USB-C Power Delivery supply. </value>
+  </data>
+  <data name="G2_UsbcSupplyUnknown" xml:space="preserve">
+    <value>This machine is running from a USB-C Power Delivery supply of unreported wattage. </value>
+  </data>
+  <data name="G2_UsbcBelowDesignFormat" xml:space="preserve">
+    <value>That is below the {0} W this machine's USB-C input is designed for.</value>
+  </data>
+  <data name="G2_ChassisNoUsbc" xml:space="preserve">
+    <value>This chassis expects a barrel adapter and advertises no USB-C design rating, so HP's own rule treats any USB-C source as below its requirement.</value>
+  </data>
+  <data name="G2_UsbcVerdictFormat" xml:space="preserve">
+    <value>{0}The firmware describes it as USB-C rather than calling it under-rated. {1}{2}</value>
+  </data>
+  <data name="G2_BarrelVerdictFormat" xml:space="preserve">
+    <value>The firmware reports {0} adapter as below this machine's requirement.{1}</value>
+  </data>
+  <data name="G2_AdapterPolicyNote" xml:space="preserve">
+    <value>Some HP firmware reduces CPU and GPU power limits in this state, which can look like a fault in OmenCore or in the GPU driver but is a policy the firmware applies to a supply it does not rate highly enough - a limit it advertises, rather than a measurement of what the supply can deliver. If performance is lower than expected, this is the first thing to rule out.</value>
+  </data>
+  <data name="G2_PowerLimitReferenceFormat" xml:space="preserve">
+    <value> of this card's own {0:0.#} W limit</value>
+  </data>
+  <data name="G2_PowerLimitReadAtFormat" xml:space="preserve">
+    <value> — read at {0:HH:mm}</value>
+  </data>
+  <data name="G2_NoDefaultLimitRead" xml:space="preserve">
+    <value>Whether that is being held down cannot be told from here - nvidia-smi did not report this card's default limit, so there is nothing to compare it to.</value>
+  </data>
+  <data name="G2_AtOwnLimit" xml:space="preserve">
+    <value>That is the card's own limit, so nothing is holding it down at the moment and the restart below has no clamp to discard.</value>
+  </data>
+  <data name="G2_HeldBelowLimitFormat" xml:space="preserve">
+    <value>Something is holding this card {0:0.#} W below its own limit. With an under-rated supply attached, that is what the firmware's clamp looks like, and it is what the restart below discards. Another tool that sets a GPU power limit would look the same from here, and restarting the device would not clear that one.</value>
+  </data>
+  <data name="G2_ReadingLimit" xml:space="preserve">
+    <value>Reading the current limit...</value>
+  </data>
+  <data name="G2_NoNvidiaSmi" xml:space="preserve">
+    <value>The current limit cannot be read here: nvidia-smi is not installed, and it is the only thing that reports it. It ships with the NVIDIA driver.</value>
+  </data>
+  <data name="G2_LimitUnanswered" xml:space="preserve">
+    <value>The GPU did not report its power limit. It may have been busy waking up - try again in a moment.</value>
+  </data>
+  <data name="G2_GpuAsleep" xml:space="preserve">
+    <value>The GPU is parked and asleep. Reading its power limit wakes it, and the driver keeps it awake for a couple of minutes afterwards.</value>
+  </data>
+  <data name="G2_ReadAgain" xml:space="preserve">
+    <value>Read the limit again</value>
+  </data>
+  <data name="G2_ReadLimit" xml:space="preserve">
+    <value>Read the current limit</value>
+  </data>
+  <data name="G2_ApuTargetUserFormat" xml:space="preserve">
+    <value>the {0} W you set in AMD CPU Power Limits</value>
+  </data>
+  <data name="G2_ApuTargetFirmwareFormat" xml:space="preserve">
+    <value>the {0} W this machine's firmware states for a loaded CPU and GPU</value>
+  </data>
+  <data name="G2_OverrideScopeBothFormat" xml:space="preserve">
+    <value>This restarts the GPU to drop its clamp, and raises the four CPU power limits to {0}.</value>
+  </data>
+  <data name="G2_OverrideScopeGpuOnlyFormat" xml:space="preserve">
+    <value>This restarts the GPU to drop its clamp. The CPU side is not included{0}</value>
+  </data>
+  <data name="G2_ApuReasonCpuUnknown" xml:space="preserve">
+    <value>this CPU is not one whose SMU power-limit messages are known</value>
+  </data>
+  <data name="G2_ApuReasonNoTarget" xml:space="preserve">
+    <value>there is no CPU power limit to aim at - set one in AMD CPU Power Limits, or this machine's firmware would have to report its own</value>
+  </data>
+  <data name="G2_ApuReasonUsbc" xml:space="preserve">
+    <value>This is a USB-C Power Delivery supply. Raising the CPU power limit on top of the GPU restart is not offered there: the source negotiates far less than this chassis expects, and the GPU alone already accounts for most of it.</value>
+  </data>
+  <data name="G2_ApuReasonNoRating" xml:space="preserve">
+    <value>The connected adapter's rating was not reported, so there is no way to judge whether it can carry a raised CPU limit.</value>
+  </data>
+  <data name="G2_ApuReasonTooLowFormat" xml:space="preserve">
+    <value>The connected {0} W adapter is too far below this machine's {1} W requirement to raise the CPU limit on top of the GPU restart.</value>
+  </data>
+  <data name="G2_ReleaseApuClampStatus" xml:space="preserve">
+    <value>OmenCore will no longer put the CPU power limits back. The platform reclaims them on the next resume or change of supply; a reboot restores stock.</value>
+  </data>
+  <data name="G2_TgpUnlockBusy" xml:space="preserve">
+    <value>Pinning the firmware's power gates and asking the driver to re-read them...</value>
+  </data>
+  <data name="G2_TgpWatchDescription" xml:space="preserve">
+    <value>Watches for the adapter's GPU power clamp returning. Reads nothing while the dGPU is parked, so it cannot hold the card out of RTD3.</value>
+  </data>
+  <data name="G2_AutoDetailCpuRaised" xml:space="preserve">
+    <value>CPU limits raised and held</value>
+  </data>
+  <data name="G2_AutoDetailGpuRestarted" xml:space="preserve">
+    <value>GPU restarted while it was parked</value>
+  </data>
+  <data name="G2_AutoDetailGpuAwake" xml:space="preserve">
+    <value>the GPU was awake, so it was left alone - use the button when nothing needs it</value>
+  </data>
+  <data name="G2_AutoDetailDiscreteDisplay" xml:space="preserve">
+    <value>the display is running on the discrete GPU, so restarting it would black the screen - that one stays manual</value>
+  </data>
+  <data name="G2_AutoDetailBattery" xml:space="preserve">
+    <value>running on battery, so there is no adapter clamp to lift</value>
+  </data>
+  <data name="G2_AutoSummaryFormat" xml:space="preserve">
+    <value>Automatic ({0}): {1}.</value>
+  </data>
+  <data name="D2_CurveNeedsTwoPoints" xml:space="preserve">
+    <value>⚠️ Curve needs at least 2 points</value>
+  </data>
+  <data name="DB2_CpuSourceFormat" xml:space="preserve">
+    <value>CPU temperature source: {0}</value>
+  </data>
+  <data name="DB2_CpuSourceReasonFormat" xml:space="preserve">
+    <value>CPU temperature source: {0}&#10;{1}</value>
+  </data>
+  <data name="DB2_RpmUnavailable" xml:space="preserve">
+    <value>RPM unavailable (fan responding)</value>
+  </data>
+  <data name="DL2_SwipeNoPalette" xml:space="preserve">
+    <value>Swipe has no preset palette — with a theme selected it renders black. Tick custom colours.</value>
+  </data>
+  <data name="DL2_ConfettiNoColours" xml:space="preserve">
+    <value>Confetti and Sun take no custom colours — the theme is used regardless.</value>
+  </data>
+  <data name="DL2_KeyboardRefusedFormat" xml:space="preserve">
+    <value>The keyboard refused {0}.</value>
+  </data>
+  <data name="DL2_BarRefusedFormat" xml:space="preserve">
+    <value>The light bar refused {0}.</value>
+  </data>
+  <data name="DL2_NowShowing" xml:space="preserve">
+    <value>Now showing: </value>
+  </data>
+  <data name="FC2_NoCalibration" xml:space="preserve">
+    <value>No calibration data available. Run the calibration wizard to measure your fan's actual performance.</value>
+  </data>
+  <data name="FC2_CalibrationInfoFormat" xml:space="preserve">
+    <value>Calibrated for: {0}\nMax Level: {1}\nMin Spin Level: {2}\nCPU Fan Max: {3} RPM\nGPU Fan Max: {4} RPM\nLast calibrated: {5} ({6:F0} days ago)</value>
+  </data>
+  <data name="BL2_RelatedPackagesFormat" xml:space="preserve">
+    <value>Potentially related packages from same publisher: {0}</value>
+  </data>
+  <data name="BL2_BulkCancelledFormat" xml:space="preserve">
+    <value>Bulk restore canceled at {0}. {1} completed, {2} skipped.</value>
+  </data>
+  <data name="BL2_BulkFinishedFormat" xml:space="preserve">
+    <value>Bulk restore finished with {0} failures. Restored {1}/{2} items.</value>
+  </data>
+  <data name="MV2_SafeguardLabelFormat" xml:space="preserve">
+    <value>OmenCore safeguard {0}</value>
+  </data>
+  <data name="MV2_NoRestorePointConfirmed" xml:space="preserve">
+    <value>Continuing without restore point (user confirmed)</value>
+  </data>
+  <data name="MV2_RestorePointCreatedFormat" xml:space="preserve">
+    <value>✓ Restore point created (#{0})</value>
+  </data>
+  <data name="TI2_TrayTooltipFormat" xml:space="preserve">
+    <value>OmenCore - Gaming Laptop Control&#10;{0}&#10;{1}</value>
+  </data>
+  <data name="L2_CleanResultFailedSuffixFormat" xml:space="preserve">
+    <value>  •  {0} failed</value>
+  </data>
+  <data name="Main_FanBackendUnavailableFormat" xml:space="preserve">
+    <value>Fan control backend is unavailable. Max fan hotkey was not applied.</value>
+  </data>
+  <data name="Main_FanBackendUnavailableVictusFormat" xml:space="preserve">
+    <value>Victus fan backend is unavailable, so Max fan was not applied. Run Diagnostics and share the report using the guide format.</value>
+  </data>
+  <data name="Main_StatusCreatingRestorePoint" xml:space="preserve">
+    <value>Creating restore point...</value>
+  </data>
+  <data name="Main_StatusRemovingOgh" xml:space="preserve">
+    <value>Removing OMEN Gaming Hub...</value>
+  </data>
+  <data name="Main_ClipboardSystemInfoFormat" xml:space="preserve">
+    <value>Model: {0}&#10;ProductName: {1}&#10;SystemSku: {2}&#10;Diagnostics: {3}</value>
+  </data>
+  <data name="Main_OsdCategoryProfile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Main_OsdCategoryPerformance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="Main_OsdCategoryBoost" xml:space="preserve">
+    <value>Boost</value>
+  </data>
+  <data name="Main_OsdCategoryQuietMode" xml:space="preserve">
+    <value>Quiet Mode</value>
+  </data>
+  <data name="Main_OsdValueMaxCooling" xml:space="preserve">
+    <value>Maximum Cooling</value>
+  </data>
+  <data name="Main_OsdValuePerformance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="Main_OsdValueQuiet" xml:space="preserve">
+    <value>Quiet</value>
+  </data>
+  <data name="Main_OsdSourceTray" xml:space="preserve">
+    <value>Tray</value>
+  </data>
+  <data name="Main_SystemRestoreLabelOghCleanup" xml:space="preserve">
+    <value>OmenCore - Before OGH Cleanup</value>
+  </data>
+  <data name="Main_SystemRestoreLabelSystemChanges" xml:space="preserve">
+    <value>OmenCore - Before System Changes</value>
+  </data>
+  <data name="Dashboard_ModeLinkDecoupled" xml:space="preserve">
+    <value>Decoupled fan/perf</value>
+  </data>
+  <data name="Toast_FanProfileTitle" xml:space="preserve">
+    <value>Fan Profile</value>
+  </data>
+  <data name="Toast_PerformanceModeTitle" xml:space="preserve">
+    <value>Performance Mode</value>
+  </data>
+  <data name="Toast_GpuSettingTitleFormat" xml:space="preserve">
+    <value>GPU {0}</value>
+  </data>
+  <data name="Toast_KeyboardSettingTitleFormat" xml:space="preserve">
+    <value>Keyboard {0}</value>
+  </data>
+  <data name="Toast_SuccessTitle" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Toast_ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Tray_AppTooltip" xml:space="preserve">
+    <value>OmenCore - Gaming Laptop Control</value>
+  </data>
+  <data name="Tray_PerfHeaderFirmwareDefault" xml:space="preserve">
+    <value>Firmware default</value>
+  </data>
+  <data name="DeviceLighting_NothingStaged" xml:space="preserve">
+    <value>Nothing staged to write.</value>
+  </data>
+  <data name="FanCalibration_StatusNotStarted" xml:space="preserve">
+    <value>Not started</value>
+  </data>
+  <data name="FanControl_CurveStatusReadyToApply" xml:space="preserve">
+    <value>Ready to apply</value>
+  </data>
+  <data name="FanControl_UnknownModelName" xml:space="preserve">
+    <value>Unknown Model</value>
+  </data>
+  <data name="GpuClamp_RestartingGpu" xml:space="preserve">
+    <value>Restarting the GPU...</value>
+  </data>
+  <data name="SC_GpuOcStatusNotAvailable" xml:space="preserve">
+    <value>Not available</value>
+  </data>
+  <data name="SC_GpuOcNotAvailableMessage" xml:space="preserve">
+    <value>GPU overclocking not available</value>
+  </data>
+  <data name="SC_TestApplyNotStarted" xml:space="preserve">
+    <value>Test Apply did not start because one or more GPU settings failed to apply.</value>
+  </data>
+  <data name="SC_TestTuningKept" xml:space="preserve">
+    <value>Test tuning was kept and saved for startup reapply.</value>
+  </data>
+  <data name="SC_TestNoSnapshot" xml:space="preserve">
+    <value>No test snapshot was available to restore.</value>
+  </data>
+  <data name="SC_TestUndervoltKept" xml:space="preserve">
+    <value>Test undervolt was kept and saved for startup reapply.</value>
+  </data>
+  <data name="SC_ApplyingTestUndervolt" xml:space="preserve">
+    <value>Applying test CPU undervolt...</value>
+  </data>
+  <data name="SC_NvapiNotAvailable" xml:space="preserve">
+    <value>NVAPI not available</value>
+  </data>
+  <data name="SC_NvidiaGpuNotDetected" xml:space="preserve">
+    <value>NVIDIA GPU not detected</value>
+  </data>
+  <data name="SC_AmdGpuOcResetDefaults" xml:space="preserve">
+    <value>AMD GPU OC reset to defaults</value>
+  </data>
+  <data name="SC_StartupReapplyHeldBackPrefix" xml:space="preserve">
+    <value>Startup reapply held back - the last session ended in a crash.</value>
+  </data>
+  <data name="SC_ModeMemoryReadFailed" xml:space="preserve">
+    <value>Could not read the current settings on this machine.</value>
+  </data>
+  <data name="SC_ApplyingCpuTuning" xml:space="preserve">
+    <value>Applying CPU tuning settings...</value>
+  </data>
+  <data name="SC_ProfileMaxExperimental" xml:space="preserve">
+    <value>Max Experimental</value>
+  </data>
+  <data name="Optimizer_PreflightUpdated" xml:space="preserve">
+    <value>Preflight updated</value>
+  </data>
+  <data name="Optimizer_ExportReportNoPath" xml:space="preserve">
+    <value>Could not export optimization report</value>
+  </data>
+  <data name="Optimizer_ReportFileNotFound" xml:space="preserve">
+    <value>Report file not found</value>
+  </data>
+  <data name="Optimizer_ReportOpened" xml:space="preserve">
+    <value>Opened exported report</value>
+  </data>
+  <data name="Optimizer_NoReportPathToCopy" xml:space="preserve">
+    <value>No report path to copy</value>
+  </data>
+  <data name="Optimizer_ReportPathCopied" xml:space="preserve">
+    <value>Copied report path to clipboard</value>
+  </data>
+  <data name="Mem_EnablingCompression" xml:space="preserve">
+    <value>Enabling memory compression</value>
+  </data>
+  <data name="Mem_DisablingCompression" xml:space="preserve">
+    <value>Disabling memory compression</value>
+  </data>
+  <data name="Mem_CompressionChangeFailed" xml:space="preserve">
+    <value>Failed to change memory compression state</value>
+  </data>
+  <data name="Mem_CleaningMemory" xml:space="preserve">
+    <value>Cleaning memory</value>
+  </data>
+  <data name="Bloatware_PresetTelemetryOnly" xml:space="preserve">
+    <value>Telemetry Only Preset</value>
+  </data>
+  <data name="Bloatware_PresetOmenConflict" xml:space="preserve">
+    <value>OMEN Conflict Reducer Preset</value>
+  </data>
+  <data name="Bloatware_PresetWindowsConsumer" xml:space="preserve">
+    <value>Windows Consumer Apps Preset</value>
+  </data>
+  <data name="Bloatware_PresetFullStandalone" xml:space="preserve">
+    <value>Full Standalone Prep Preset</value>
+  </data>
+  <data name="Settings_FanBackendWmiPawnio" xml:space="preserve">
+    <value>WMI BIOS + PawnIO</value>
+  </data>
+  <data name="Settings_FanBackendWmiOgh" xml:space="preserve">
+    <value>WMI BIOS (OGH)</value>
+  </data>
+  <data name="Settings_FanBackendWmiLegacyEc" xml:space="preserve">
+    <value>WMI BIOS + Optional Legacy EC Path</value>
+  </data>
+  <data name="Settings_FanBackendWmiOnly" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="Settings_TimedOutFormat" xml:space="preserve">
+    <value>{0} (timed out)</value>
+  </data>
+  <data name="Dashboard_BatteryHealthGood" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="Dashboard_BatteryHealthFair" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="Dashboard_BatteryHealthReplace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="Dashboard_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Settings_ModelIdentityUnavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="KbdMap_StatusLedsAcceptedFormat" xml:space="preserve">
+    <value>{0} LEDs accepted</value>
+  </data>
+  <data name="KbdMap_StatusLedsRefusedFormat" xml:space="preserve">
+    <value>{0} LEDs refused</value>
+  </data>
+  <data name="KbdMap_StatusKeysAcceptedFormat" xml:space="preserve">
+    <value>{0} keys accepted</value>
+  </data>
+  <data name="KbdMap_StatusKeysRefusedFormat" xml:space="preserve">
+    <value>{0} keys refused</value>
+  </data>
+  <data name="KbdMap_StatusBarAccepted" xml:space="preserve">
+    <value>4 bar zones accepted</value>
+  </data>
+  <data name="KbdMap_StatusBarRefused" xml:space="preserve">
+    <value>4 bar zones refused</value>
+  </data>
+  <data name="KbdMap_StatusOnlyEyes" xml:space="preserve">
+    <value>Only looking confirms it.</value>
+  </data>
+  <data name="KbdMap_StatusBrightnessNotAppliedFormat" xml:space="preserve">
+    <value>Brightness {0} was NOT applied - this keyboard's backend has no brightness lever.</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSystemInfo" xml:space="preserve">
+    <value>Collecting system information...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressHardware" xml:space="preserve">
+    <value>Collecting hardware monitoring data...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressLogs" xml:space="preserve">
+    <value>Collecting application logs...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSettings" xml:space="preserve">
+    <value>Collecting settings and configuration...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressPerformance" xml:space="preserve">
+    <value>Collecting performance mode data...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressReadiness" xml:space="preserve">
+    <value>Collecting core control readiness...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressCalibration" xml:space="preserve">
+    <value>Collecting fan calibration data...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressFanMax" xml:space="preserve">
+    <value>Running fan Max verification...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressAnonymizing" xml:space="preserve">
+    <value>Anonymizing data...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSaving" xml:space="preserve">
+    <value>Saving diagnostic file...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressDone" xml:space="preserve">
+    <value>Export completed successfully</value>
+  </data>
+  <data name="SettingsViewModel_SourceNoResolvedProfile" xml:space="preserve">
+    <value>No resolved capability profile</value>
+  </data>
+  <data name="SettingsViewModel_SourceExactProductId" xml:space="preserve">
+    <value>Exact ProductId</value>
+  </data>
+  <data name="SettingsViewModel_SourceFamilyFallback" xml:space="preserve">
+    <value>Family fallback</value>
+  </data>
+  <data name="SettingsViewModel_SourceRuntimeFallback" xml:space="preserve">
+    <value>Runtime fallback</value>
+  </data>
+  <data name="SettingsViewModel_SourceAmbiguousProductId" xml:space="preserve">
+    <value>Ambiguous ProductId + model-name disambiguation</value>
+  </data>
+  <data name="SettingsViewModel_SourceModelSeriesMatch" xml:space="preserve">
+    <value>Model-name series match</value>
+  </data>
+  <data name="SettingsViewModel_SourcePartialProductId" xml:space="preserve">
+    <value>Partial ProductId match</value>
+  </data>
+  <data name="SettingsViewModel_SourceHeuristic" xml:space="preserve">
+    <value>Heuristic match</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityNoProfile" xml:space="preserve">
+    <value>Capability detection did not resolve a model profile.</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityUnverified" xml:space="preserve">
+    <value>Capability profile matched by ProductId, but the entry is not user-verified yet.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardSharedProductId" xml:space="preserve">
+    <value>Keyboard ProductId is shared across models; the profile was selected using the WMI model context.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardUnverified" xml:space="preserve">
+    <value>Keyboard profile matched by ProductId, but the entry is not user-verified yet.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardSeriesInferred" xml:space="preserve">
+    <value>Keyboard profile was inferred from the model series instead of an exact ProductId match.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardPartialProvisional" xml:space="preserve">
+    <value>Keyboard profile was selected from a partial ProductId match and should be treated as provisional.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardHeuristic" xml:space="preserve">
+    <value>Keyboard profile came from a heuristic fallback path and should be validated before relying on it.</value>
+  </data>
+  <data name="InputPromptWindow_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Main_MemoryTelemetryUnavailable" xml:space="preserve">
+    <value>Memory telemetry unavailable</value>
+  </data>
+  <data name="Main_StorageTelemetryUnavailable" xml:space="preserve">
+    <value>Storage telemetry unavailable</value>
+  </data>
+  <data name="Main_PerCoreClocksUnavailable" xml:space="preserve">
+    <value>Per-core clocks unavailable</value>
+  </data>
+  <data name="Main_DiskActiveFormat" xml:space="preserve">
+    <value>{0}% active</value>
+  </data>
+  <data name="SC_FanLinkedBadge" xml:space="preserve">
+    <value>Fan linked to performance</value>
+  </data>
+  <data name="SC_FanIndependentBadge" xml:space="preserve">
+    <value>Fan independent</value>
+  </data>
+  <data name="SC_LinkedPolicyHint" xml:space="preserve">
+    <value>This mode can also update fan policy because linked mode is enabled.</value>
+  </data>
+  <data name="SC_DecoupledPolicyHint" xml:space="preserve">
+    <value>This mode only changes power/performance behavior. Your current fan preset or custom curve stays active.</value>
+  </data>
+  <data name="SC_WindowsPowerPlanFallback" xml:space="preserve">
+    <value>Windows Power Plan</value>
+  </data>
+  <data name="SC_BadgePowerLocked" xml:space="preserve">
+    <value>Power Locked</value>
+  </data>
+  <data name="SC_BadgeLocked" xml:space="preserve">
+    <value>Locked</value>
+  </data>
+  <data name="SC_BadgePowerLimitOnly" xml:space="preserve">
+    <value>Power Limit Only</value>
+  </data>
+  <data name="SC_BadgeExtendedRange" xml:space="preserve">
+    <value>Extended Range</value>
+  </data>
+  <data name="SC_BadgeDetectedRange" xml:space="preserve">
+    <value>Detected Range</value>
+  </data>
+  <data name="SC_StandardNvapiRange" xml:space="preserve">
+    <value>This GPU is using the standard laptop-safe NVAPI range. Stability still varies by silicon and BIOS.</value>
+  </data>
+  <data name="SC_DetectedLimitsPending" xml:space="preserve">
+    <value>Detected GPU tuning limits will appear after initialization.</value>
+  </data>
+  <data name="SC_NvapiWritesLockedOemHint" xml:space="preserve">
+    <value>NVAPI tuning writes are locked on this driver/firmware path. Use OEM performance modes for TGP behavior if the machine exposes them.</value>
+  </data>
+  <data name="SC_PlatformRtx50Laptop" xml:space="preserve">
+    <value>RTX 50-series laptop GPUs</value>
+  </data>
+  <data name="SC_PlatformLaptopNvidia" xml:space="preserve">
+    <value>laptop NVIDIA GPUs</value>
+  </data>
+  <data name="SC_PlatformRtx40" xml:space="preserve">
+    <value>RTX 40-series GPUs</value>
+  </data>
+  <data name="SC_PlatformRtx30" xml:space="preserve">
+    <value>RTX 30-series GPUs</value>
+  </data>
+  <data name="SC_PlatformThisGpu" xml:space="preserve">
+    <value>this GPU</value>
+  </data>
+  <data name="SC_ResetToDefaultsGeneric" xml:space="preserve">
+    <value>Reset to defaults for supported GPU tuning controls</value>
+  </data>
+  <data name="SC_GpuReadyFormat" xml:space="preserve">
+    <value>✓ {0} - Ready</value>
+  </data>
+  <data name="SC_GpuDetectedWritesLockedFormat" xml:space="preserve">
+    <value>{0} was detected, but NVAPI tuning writes are locked by the current driver or firmware path.</value>
+  </data>
+  <data name="SC_ApplyingUndervoltSettings" xml:space="preserve">
+    <value>Applying undervolt settings...</value>
+  </data>
+  <data name="Settings_GuardrailOverrideOn" xml:space="preserve">
+    <value>OMEN 16/Victus guardrail override is enabled.</value>
+  </data>
+  <data name="Settings_GuardrailOverrideOff" xml:space="preserve">
+    <value>OMEN 16/Victus guardrail override is off.</value>
+  </data>
+  <data name="Settings_RestoreDisabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="Settings_NotDetected" xml:space="preserve">
+    <value>Not detected</value>
+  </data>
+  <data name="Lighting_AudioCaptureUnavailable" xml:space="preserve">
+    <value>Audio capture unavailable</value>
+  </data>
+  <data name="Lighting_SingleTarget" xml:space="preserve">
+    <value>1 active lighting target</value>
+  </data>
+  <data name="Lighting_SingleColourKeyboardHint" xml:space="preserve">
+    <value>This laptop has a single-colour backlit keyboard, so there are no colours to set (the firmware and OmenCore's model database agree). Use the Fn keys to adjust brightness.</value>
+  </data>
+  <data name="Lighting_StatusDiscoveringRazer" xml:space="preserve">
+    <value>Discovering Razer devices...</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerColor" xml:space="preserve">
+    <value>Applying Razer color...</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerBreathing" xml:space="preserve">
+    <value>Applying Razer breathing...</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerSpectrum" xml:space="preserve">
+    <value>Applying Razer spectrum...</value>
+  </data>
+  <data name="Lighting_StatusApplyingOpenRgbColor" xml:space="preserve">
+    <value>Applying OpenRGB color...</value>
+  </data>
+  <data name="Lighting_StatusApplyingCorsair" xml:space="preserve">
+    <value>Applying Corsair lighting...</value>
+  </data>
+  <data name="Lighting_StatusApplyingPreset" xml:space="preserve">
+    <value>Applying lighting preset to system...</value>
+  </data>
+  <data name="Lighting_StatusSyncingAll" xml:space="preserve">
+    <value>Syncing color to all RGB devices...</value>
+  </data>
+  <data name="Lighting_StatusApplyingCustomColor" xml:space="preserve">
+    <value>Applying custom color...</value>
+  </data>
+  <data name="Lighting_StatusApplyingDpi" xml:space="preserve">
+    <value>Applying DPI settings...</value>
+  </data>
+  <data name="Lighting_StatusApplyingLogitech" xml:space="preserve">
+    <value>Applying Logitech lighting...</value>
+  </data>
+  <data name="Lighting_StatusLoadingMacro" xml:space="preserve">
+    <value>Loading macro profile...</value>
+  </data>
+  <data name="Lighting_StatusApplyingKeyboardColors" xml:space="preserve">
+    <value>Applying keyboard colors...</value>
+  </data>
+  <data name="Lighting_StatusRestoringKeyboard" xml:space="preserve">
+    <value>Restoring keyboard lighting...</value>
+  </data>
+  <data name="Lighting_StatusProbingSurface" xml:space="preserve">
+    <value>Probing RGB surface...</value>
+  </data>
+  <data name="Lighting_NoApplyAttempted" xml:space="preserve">
+    <value>No keyboard lighting apply attempted this session.</value>
+  </data>
+  <data name="Lighting_UnknownBackend" xml:space="preserve">
+    <value>unknown backend</value>
+  </data>
+  <data name="Lighting_BackendWmiHint" xml:space="preserve">
+    <value>💡 If colors don't change, try enabling 'Experimental EC Keyboard' in Settings → Hardware.</value>
+  </data>
+  <data name="Lighting_BackendEcHint" xml:space="preserve">
+    <value>Using EC direct access (experimental). Changes may take a moment to apply.</value>
+  </data>
+  <data name="Lighting_BackendOghHint" xml:space="preserve">
+    <value>Using OMEN Gaming Hub proxy. Ensure Gaming Hub services are running.</value>
+  </data>
+  <data name="KbdMap_StatusSaveOk" xml:space="preserve">
+    <value>Saved to the keyboard. This picture now survives a power cycle, and shows with OmenCore closed.</value>
+  </data>
+  <data name="KbdMap_StatusSaveRefused" xml:space="preserve">
+    <value>Applied, but the keyboard refused the save-to-flash — the picture is showing now and will not survive a power cycle.</value>
+  </data>
+  <data name="KbdMap_StatusLoadedBarFormat" xml:space="preserve">
+    <value>{0} keys and 4 light bar zones. Click to select, or drag a box. Hold Ctrl to add.</value>
+  </data>
+  <data name="KbdMap_StatusLoadedFormat" xml:space="preserve">
+    <value>{0} keys. Click to select, or drag a box. Hold Ctrl to add.</value>
+  </data>
+  <data name="KbdMap_StatusLayoutUnconfirmed" xml:space="preserve">
+    <value> This layout has not been confirmed on hardware.</value>
+  </data>
+  <data name="KbdMap_StatusBarSuffix" xml:space="preserve">
+    <value> and 4 light bar zones.</value>
+  </data>
+  <data name="KbdMap_StatusFullStop" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="KbdMap_StatusClickHint" xml:space="preserve">
+    <value> Click to select, or drag a box. Hold Ctrl to add.</value>
+  </data>
+  <data name="GpuClamp_WattageNotReported" xml:space="preserve">
+    <value>Wattage not reported</value>
+  </data>
+  <data name="GpuClamp_NotReported" xml:space="preserve">
+    <value>Not reported</value>
+  </data>
+  <data name="GpuClamp_NoneOnBattery" xml:space="preserve">
+    <value>None — running on battery</value>
+  </data>
+  <data name="FanCalib_BiosAutoRestored" xml:space="preserve">
+    <value>BIOS auto fan control restored</value>
+  </data>
+  <data name="FanCalib_BiosAutoRestoreFailed" xml:space="preserve">
+    <value>Could not restore BIOS auto fan control from this backend</value>
+  </data>
+  <data name="Dashboard_PowerTelemetryUnavailable" xml:space="preserve">
+    <value>Power telemetry unavailable</value>
+  </data>
+  <data name="Dashboard_PowerSensorsUnavailable" xml:space="preserve">
+    <value>Power sensors unavailable</value>
+  </data>
+  <data name="Dashboard_PowerLineFormat" xml:space="preserve">
+    <value>CPU: {0}W • GPU: {1}W • Total: {2}W</value>
+  </data>
+  <data name="Dashboard_PowerInactiveFormat" xml:space="preserve">
+    <value>CPU: {0}W • GPU: inactive (Optimus)</value>
+  </data>
+  <data name="Bloatware_CurrentItem" xml:space="preserve">
+    <value>the current item</value>
+  </data>
+  <data name="HotkeyOsd_ViaHotkey" xml:space="preserve">
+    <value>via Hotkey</value>
+  </data>
+  <data name="Language_SystemDefault" xml:space="preserve">
+    <value>System default</value>
+  </data>
+  <data name="Main_SourceQuickAccess" xml:space="preserve">
+    <value>Quick Access</value>
+  </data>
+  <data name="KbdMap_StatusSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="QuickPopup_CurveTooltipFormat" xml:space="preserve">
+    <value>Curve: {0}</value>
+  </data>
 </root>

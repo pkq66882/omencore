@@ -517,9 +517,9 @@ namespace OmenCore.ViewModels
         private bool _monitoringLowOverhead;
         private bool _monitoringInitialized;
         private bool _restorePointInProgress;
-        private string _restorePointStatus = "No restore point created";
+        private string _restorePointStatus = Strings.M2_NoRestorePoint;
         private bool _cleanupInProgress;
-        private string _cleanupStatus = "Status: Not checked";
+        private string _cleanupStatus = Strings.M2_CleanupStatusNotChecked;
         private bool _cleanupRemoveStorePackage = true;
         private bool _cleanupRemoveLegacyInstallers = true;
         private bool _cleanupRemoveRegistry = true;
@@ -871,15 +871,15 @@ namespace OmenCore.ViewModels
         {
             if (sample == null)
             {
-                return "CPU telemetry unavailable";
+                return Strings.M2_CpuTelemetryUnavailable;
             }
 
             return sample.CpuTemperatureState switch
             {
-                TelemetryDataState.Unavailable => $"Unavailable • {sample.CpuLoadPercent:F0}% load",
-                TelemetryDataState.Stale => $"{(sample.CpuTemperatureC > 0 ? $"{sample.CpuTemperatureC:F0}°C (stale)" : "Stale")} • {sample.CpuLoadPercent:F0}% load",
-                TelemetryDataState.Invalid => $"Invalid • {sample.CpuLoadPercent:F0}% load",
-                _ => $"{(sample.CpuTemperatureC > 0 ? $"{sample.CpuTemperatureC:F0}°C" : "—°C")} • {sample.CpuLoadPercent:F0}% load"
+                TelemetryDataState.Unavailable => string.Format(Strings.M2_TelemetryUnavailableFormat, sample.CpuLoadPercent),
+                TelemetryDataState.Stale => string.Format(Strings.M2_TelemetryStaleFormat, sample.CpuTemperatureC > 0 ? string.Format(Strings.M2_TempStaleFormat, sample.CpuTemperatureC) : Strings.M2_Stale, sample.CpuLoadPercent),
+                TelemetryDataState.Invalid => string.Format(Strings.M2_TelemetryInvalidFormat, sample.CpuLoadPercent),
+                _ => string.Format(Strings.M2_TelemetryLoadFormat, sample.CpuTemperatureC > 0 ? $"{sample.CpuTemperatureC:F0}°C" : "—°C", sample.CpuLoadPercent)
             };
         }
 
@@ -887,7 +887,7 @@ namespace OmenCore.ViewModels
         {
             if (sample == null)
             {
-                return "GPU telemetry unavailable";
+                return Strings.M2_GpuTelemetryUnavailable;
             }
 
             return sample.GpuTemperatureState == TelemetryDataState.Inactive
@@ -896,14 +896,14 @@ namespace OmenCore.ViewModels
         }
 
         private static string BuildMemorySummary(MonitoringSample? sample)
-            => sample == null ? "Memory telemetry unavailable" : $"{sample.RamUsageGb:F1} / {sample.RamTotalGb:F0} GB";
+            => sample == null ? Strings.Main_MemoryTelemetryUnavailable : $"{sample.RamUsageGb:F1} / {sample.RamTotalGb:F0} GB";
 
         private static string BuildStorageSummary(MonitoringSample? sample)
-            => sample == null ? "Storage telemetry unavailable" : $"SSD {(sample.SsdTemperatureC > 0 ? $"{sample.SsdTemperatureC:F0}°C" : "—°C")} • {sample.DiskUsagePercent:F0}% active";
+            => sample == null ? Strings.Main_StorageTelemetryUnavailable : $"SSD {(sample.SsdTemperatureC > 0 ? $"{sample.SsdTemperatureC:F0}°C" : "—°C")} • {string.Format(Strings.Main_DiskActiveFormat, sample.DiskUsagePercent.ToString("F0"))}";
 
         private static string BuildCpuClockSummary(MonitoringSample? sample)
             => sample == null || sample.CpuCoreClocksMhz.Count == 0
-                ? "Per-core clocks unavailable"
+                ? Strings.Main_PerCoreClocksUnavailable
                 : string.Join(", ", sample.CpuCoreClocksMhz.Select((c, i) => $"C{i + 1}:{c:F0}MHz"));
 
         private static double SanitizeRange(double candidate, double fallback, double min, double max)
@@ -1868,27 +1868,27 @@ namespace OmenCore.ViewModels
 
                 if (telemetryHealthy && !fansPinnedUnexpectedly)
                 {
-                    _resumeRecoveryDiagnostics.Complete($"Post-resume self-check passed. Monitoring recovered in {sampleAgeSeconds:F0}s and fan state looks normal ({activeFanState}, peak fan {peakFanRpm} RPM).");
+                    _resumeRecoveryDiagnostics.Complete(string.Format(Strings.M2_ResumeCompleteFormat, sampleAgeSeconds, activeFanState, peakFanRpm));
                 }
                 else
                 {
                     var issues = new StringBuilder();
                     if (!telemetryHealthy)
                     {
-                        issues.Append($"Telemetry is not fully healthy yet (sample age {sampleAgeSeconds:F0}s, monitoring state {_hardwareMonitoringService?.HealthStatus}). ");
+                        issues.Append(string.Format(Strings.M2_ResumeTelemetryIssueFormat, sampleAgeSeconds, _hardwareMonitoringService?.HealthStatus));
                     }
 
                     if (fansPinnedUnexpectedly)
                     {
-                        issues.Append($"Fans still look elevated for the current thermal load ({peakFanRpm} RPM at {hottestComponent:F0}C while fan state is {activeFanState}).");
+                        issues.Append(string.Format(Strings.M2_ResumeFanIssueFormat, peakFanRpm, hottestComponent, activeFanState));
                     }
 
-                    _resumeRecoveryDiagnostics.Attention($"Post-resume self-check flagged follow-up: {issues.ToString().Trim()}");
+                    _resumeRecoveryDiagnostics.Attention(string.Format(Strings.M2_ResumeAttentionFormat, issues.ToString().Trim()));
                 }
             }
             catch (Exception ex)
             {
-                _resumeRecoveryDiagnostics.Attention($"Post-resume self-check failed: {ex.Message}");
+                _resumeRecoveryDiagnostics.Attention(string.Format(Strings.M2_ResumeFailedFormat, ex.Message));
             }
         }
 
@@ -2506,7 +2506,7 @@ namespace OmenCore.ViewModels
             FanPresets.Add(preset);
             _config.FanPresets.Add(preset);
             _configService.Save(_config);
-            PushEvent($"Custom preset '{preset.Name}' saved");
+            PushEvent(string.Format(Strings.Main_EventCustomPresetSavedFormat, preset.Name));
         }
 
         private async Task ApplyLightingProfile()
@@ -2523,7 +2523,7 @@ namespace OmenCore.ViewModels
             {
                 await _corsairDeviceService.SyncWithThemeAsync(SelectedLightingProfile);
             }
-            PushEvent($"Lighting profile '{SelectedLightingProfile.Name}' pushed");
+            PushEvent(string.Format(Strings.Main_EventLightingProfilePushedFormat, SelectedLightingProfile.Name));
         }
 
         /// <summary>
@@ -2554,7 +2554,7 @@ namespace OmenCore.ViewModels
                 await _corsairDeviceService.SyncWithThemeAsync(profile);
             }
 
-            PushEvent($"Lighting profile '{profile.Name}' pushed by a performance mode");
+            PushEvent(string.Format(Strings.Main_EventLightingProfilePushedByPerfFormat, profile.Name));
         }
 
         private void RestoreDefaults()
@@ -2563,7 +2563,7 @@ namespace OmenCore.ViewModels
             _keyboardLightingService.RestoreDefaults();
             _fanService.ApplyPreset(FanPresets.First());
             GamingModeActive = false;
-            PushEvent("Defaults restored");
+            PushEvent(Strings.Main_EventDefaultsRestored);
         }
 
         private void ReloadConfiguration()
@@ -2572,7 +2572,7 @@ namespace OmenCore.ViewModels
             // points at (see ConfigurationService), so no manual field-by-field copy is needed.
             _configService.Load();
             HydrateCollections();
-            PushEvent("Configuration reloaded");
+            PushEvent(Strings.Main_EventConfigurationReloaded);
         }
 
         private void OpenConfigFolder()
@@ -2603,20 +2603,20 @@ namespace OmenCore.ViewModels
         private async Task CreateRestorePointAsync()
         {
             RestorePointInProgress = true;
-            var label = $"OmenCore safeguard {DateTime.Now:yyyy-MM-dd HH:mm}";
-            RestorePointStatus = "Creating restore point...";
+            var label = string.Format(Strings.MV2_SafeguardLabelFormat, DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
+            RestorePointStatus = Strings.Main_StatusCreatingRestorePoint;
             try
             {
                 var result = await _systemRestoreService.CreateRestorePointAsync(label);
                 if (result.Success)
                 {
                     RestorePointStatus = string.Format(Strings.Main_RestorePointCreatedFormat, result.SequenceNumber);
-                    PushEvent("System restore point created");
+                    PushEvent(Strings.Main_EventRestorePointCreated);
                 }
                 else
                 {
                     RestorePointStatus = string.Format(Strings.Main_RestorePointFailedFormat, result.Message);
-                    PushEvent("Restore point creation failed");
+                    PushEvent(Strings.Main_EventRestorePointFailed);
                 }
             }
             catch (Exception ex)
@@ -2627,7 +2627,7 @@ namespace OmenCore.ViewModels
                     operation: "CreateRestorePointAsync",
                     message: "Unhandled restore point failure",
                     ex: ex);
-                PushEvent("Restore point creation failed");
+                PushEvent(Strings.Main_EventRestorePointFailed);
             }
             finally
             {
@@ -2647,9 +2647,9 @@ namespace OmenCore.ViewModels
                 // Automatically attempt to create restore point before cleanup
                 _logging.Info("Attempting to create restore point before OGH cleanup...");
                 CleanupStatus = Strings.MainViewModel_CleanupRestorePoint;
-                OmenCleanupSteps.Add("Creating system restore point...");
+                OmenCleanupSteps.Add(Strings.Main_StatusCreatingRestorePoint);
                 
-                var restoreResult = await _systemRestoreService.CreateRestorePointAsync("OmenCore - Before OGH Cleanup");
+                var restoreResult = await _systemRestoreService.CreateRestorePointAsync(Strings.Main_SystemRestoreLabelOghCleanup);
                 
                 if (!restoreResult.Success)
                 {
@@ -2668,21 +2668,21 @@ namespace OmenCore.ViewModels
                         CleanupStatus = Strings.Main_CleanupCanceledNoRestorePoint;
                         OmenCleanupSteps.Add(Strings.Main_CleanupCanceledByUser);
                         _logging.Info("OGH cleanup cancelled by user due to restore point failure");
-                        PushEvent("OGH cleanup cancelled");
+                        PushEvent(Strings.Main_EventCleanupCancelled);
                         CleanupInProgress = false;
                         return;
                     }
                     
                     _logging.Info("User chose to continue cleanup without restore point");
-                    OmenCleanupSteps.Add("Continuing without restore point (user confirmed)");
+                    OmenCleanupSteps.Add(Strings.MV2_NoRestorePointConfirmed);
                 }
                 else
                 {
                     _logging.Info($"✓ Restore point created (sequence: {restoreResult.SequenceNumber})");
-                    OmenCleanupSteps.Add($"✓ Restore point created (#{restoreResult.SequenceNumber})");
+                    OmenCleanupSteps.Add(string.Format(Strings.MV2_RestorePointCreatedFormat, restoreResult.SequenceNumber));
                 }
                 
-                CleanupStatus = "Removing OMEN Gaming Hub...";
+                CleanupStatus = Strings.Main_StatusRemovingOgh;
             }
             
             // Subscribe to real-time progress updates
@@ -2717,12 +2717,12 @@ namespace OmenCore.ViewModels
                 if (result.Success)
                 {
                     CleanupStatus = CleanupDryRun ? Strings.MainViewModel_CleanupDryDone : Strings.MainViewModel_CleanupRemoved;
-                    PushEvent(CleanupDryRun ? "OMEN cleanup dry run completed" : "OMEN Gaming Hub cleanup complete");
+                    PushEvent(CleanupDryRun ? Strings.Main_EventCleanupDryRunComplete : Strings.Main_EventCleanupComplete);
                 }
                 else
                 {
                     CleanupStatus = Strings.MainViewModel_CleanupErrors;
-                    PushEvent("OMEN cleanup completed with errors");
+                    PushEvent(Strings.Main_EventCleanupCompletedWithErrors);
                 }
             }
             catch (Exception ex)
@@ -2733,7 +2733,7 @@ namespace OmenCore.ViewModels
                     operation: "RunOmenCleanupAsync",
                     message: "OMEN cleanup failed",
                     ex: ex);
-                PushEvent("OMEN cleanup failed");
+                PushEvent(Strings.Main_EventCleanupFailed);
             }
             finally
             {
@@ -2920,7 +2920,7 @@ namespace OmenCore.ViewModels
                 if (_logitechDeviceService != null)
                 {
                     await _logitechDeviceService.DiscoverAsync();
-                    PushEvent($"Discovered {_logitechDeviceService.Devices.Count} Logitech device(s)");
+                    PushEvent(string.Format(Strings.Main_EventLogitechDiscoveredFormat, _logitechDeviceService.Devices.Count));
                 }
 
                 // Initialize Lighting sub-ViewModel after async services are ready.
@@ -3045,7 +3045,7 @@ namespace OmenCore.ViewModels
                 {
                     _configService.ExportConfiguration(dialog.FileName, _config);
                     _logging.Info($"Configuration exported to: {dialog.FileName}");
-                    PushEvent($"✓ Configuration exported successfully");
+                    PushEvent(Strings.Main_EventConfigExported);
                 }
                 catch (Exception ex)
                 {
@@ -3054,7 +3054,7 @@ namespace OmenCore.ViewModels
                         operation: "ExportConfigurationAsync",
                         message: "Failed to export configuration",
                         ex: ex);
-                    PushEvent($"✗ Export failed: {ex.Message}");
+                    PushEvent(string.Format(Strings.Main_EventExportFailedFormat, ex.Message));
                 }
             }
             await Task.CompletedTask;
@@ -3076,7 +3076,7 @@ namespace OmenCore.ViewModels
                     if (!_configService.ValidateConfiguration(dialog.FileName))
                     {
                         _logging.Warn("Invalid configuration file format");
-                        PushEvent($"✗ Import failed: Invalid file format");
+                        PushEvent(Strings.Main_EventImportInvalidFormat);
                         return;
                     }
 
@@ -3085,7 +3085,7 @@ namespace OmenCore.ViewModels
                     {
                         _configService.Save(importedConfig);
                         _logging.Info($"Configuration imported from: {dialog.FileName}");
-                        PushEvent($"✓ Configuration imported - Restart recommended");
+                        PushEvent(Strings.Main_EventConfigImported);
                         
                         // Notify user to restart
                         MessageBox.Show(
@@ -3102,7 +3102,7 @@ namespace OmenCore.ViewModels
                         operation: "ImportConfigurationAsync",
                         message: "Failed to import configuration",
                         ex: ex);
-                    PushEvent($"✗ Import failed: {ex.Message}");
+                    PushEvent(string.Format(Strings.Main_EventImportFailedFormat, ex.Message));
                 }
             }
             await Task.CompletedTask;
@@ -3131,15 +3131,15 @@ namespace OmenCore.ViewModels
                 if (!string.IsNullOrEmpty(exportedPath) && File.Exists(exportedPath))
                 {
                     var sysInfo = _systemInfoService.GetSystemInfo();
-                    var model = !string.IsNullOrEmpty(sysInfo.Model) ? sysInfo.Model : (sysInfo.ProductName ?? "Unknown");
+                    var model = !string.IsNullOrEmpty(sysInfo.Model) ? sysInfo.Model : (sysInfo.ProductName ?? Strings.Dashboard_Unknown);
                     var productName = sysInfo.ProductName ?? string.Empty;
                     var sku = sysInfo.SystemSku ?? string.Empty;
 
-                    var clipboardText = $"Model: {model}\nProductName: {productName}\nSystemSku: {sku}\nDiagnostics: {exportedPath}";
+                    var clipboardText = string.Format(Strings.Main_ClipboardSystemInfoFormat, model, productName, sku, exportedPath);
                     try { Clipboard.SetText(clipboardText); } catch { _logging.Warn("Clipboard unavailable for ReportModel"); }
 
                     _logging.Info($"ReportModel: diagnostics exported to {exportedPath} and model info copied to clipboard (Model={model})");
-                    PushEvent("✓ Diagnostics bundle created and model info copied to clipboard");
+                    PushEvent(Strings.Main_EventDiagBundleCreated);
 
                     if (Application.Current != null)
                     {
@@ -3153,7 +3153,7 @@ namespace OmenCore.ViewModels
                 else
                 {
                     _logging.Warn("ReportModel: diagnostics export returned no path");
-                    PushEvent("✗ Report model failed: export error");
+                    PushEvent(Strings.Main_EventReportModelExportFailed);
                     if (Application.Current != null)
                         MessageBox.Show(Strings.Main_ReportBundleFailed, Strings.Main_ReportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
                 }
@@ -3165,7 +3165,7 @@ namespace OmenCore.ViewModels
                     operation: "ReportModelAsync",
                     message: "ReportModel failed",
                     ex: ex);
-                PushEvent($"✗ Report model failed: {ex.Message}");
+                PushEvent(string.Format(Strings.Main_EventReportModelFailedFormat, ex.Message));
                 if (Application.Current != null)
                     MessageBox.Show(string.Format(Strings.Main_ReportFailedFormat, ex.Message), Strings.Main_ReportErrorTitle, MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -3180,12 +3180,12 @@ namespace OmenCore.ViewModels
             {
                 try { Clipboard.SetText(path); } catch { _logging.Warn("Clipboard unavailable for telemetry export"); }
                 _logging.Info($"Telemetry exported to: {path}");
-                PushEvent("✓ Telemetry exported");
+                PushEvent(Strings.Main_EventTelemetryExported);
             }
             else
             {
                 _logging.Warn("Telemetry export failed");
-                PushEvent("✗ Telemetry export failed");
+                PushEvent(Strings.Main_EventTelemetryExportFailed);
             }
             await Task.CompletedTask;
         }
@@ -3199,7 +3199,7 @@ namespace OmenCore.ViewModels
                 if (skipWhenSafeMode && _safeModeActive)
                 {
                     _logging.Warn($"Tray action '{actionName}' blocked: Startup Safe Mode active");
-                    Application.Current?.Dispatcher?.BeginInvoke(() => PushEvent($"🛡 Safe Mode blocked tray write: {actionName}"));
+                    Application.Current?.Dispatcher?.BeginInvoke(() => PushEvent(string.Format(Strings.Main_EventSafeModeBlockedFormat, actionName)));
                     return;
                 }
 
@@ -3237,7 +3237,7 @@ namespace OmenCore.ViewModels
                 _safeModeResetTimer?.Dispose();
                 _safeModeResetTimer = null;
                 _logging.Info("🛡 Startup Safe Mode deactivated — monitoring recovered to Healthy");
-                Application.Current?.Dispatcher?.BeginInvoke(() => PushEvent("🛡 Safe Mode lifted — monitoring healthy"));
+                Application.Current?.Dispatcher?.BeginInvoke(() => PushEvent(Strings.Main_EventSafeModeLifted));
                 return;
             }
 
@@ -3265,7 +3265,7 @@ namespace OmenCore.ViewModels
             {
                 _safeModeActive = true;
                 _logging.Warn($"🛡 Startup Safe Mode activated (status={status}, timeouts={_hardwareMonitoringService.ConsecutiveTimeouts})");
-                Application.Current?.Dispatcher?.BeginInvoke(() => PushEvent("🛡 Startup Safe Mode active — hardware write actions are temporarily restricted"));
+                Application.Current?.Dispatcher?.BeginInvoke(() => PushEvent(Strings.Main_EventSafeModeStartupActive));
 
                 // Schedule automatic reset after the remaining startup window elapses
                 var remainingMs = Math.Max(5000, (windowSeconds - elapsed.TotalSeconds) * 1000);
@@ -3275,7 +3275,7 @@ namespace OmenCore.ViewModels
                     {
                         _safeModeActive = false;
                         _logging.Info($"🛡 Startup Safe Mode auto-expired after startup window ({windowSeconds}s)");
-                        Application.Current?.Dispatcher?.BeginInvoke(() => PushEvent("🛡 Safe Mode expired — startup window complete"));
+                        Application.Current?.Dispatcher?.BeginInvoke(() => PushEvent(Strings.Main_EventSafeModeExpired));
                     }
                 }, null, (int)remainingMs, System.Threading.Timeout.Infinite);
             }
@@ -3306,18 +3306,18 @@ namespace OmenCore.ViewModels
                             await dispatcher.InvokeAsync(() =>
                             {
                                 var failedModeName = targetPreset.IsBuiltIn ? mode : targetPreset.Name;
-                                PushEvent($"Fan mode failed: {failedModeName}");
-                                var warningMessage = $"Could not apply {failedModeName}. Check Diagnostics for backend state.";
+                                PushEvent(string.Format(Strings.Main_EventFanModeFailedFormat, DisplayNames.FanPresetName(failedModeName)));
+                                var warningMessage = string.Format(Strings.Main_FanModeApplyFailedFormat, DisplayNames.FanPresetName(failedModeName));
                                 if (IsVictus16S0Model())
                                 {
-                                    warningMessage = $"Could not apply {failedModeName}. Victus 16-s0 models may require firmware-path validation; run Diagnostics and share report + WMI logs in guide format.";
+                                    warningMessage = string.Format(Strings.Main_FanModeApplyFailedVictus16S0Format, DisplayNames.FanPresetName(failedModeName));
                                 }
                                 else if (IsVictusModel())
                                 {
-                                    warningMessage = $"Could not apply {failedModeName}. On Victus models, share Diagnostics output in guide format so backend mapping can be verified.";
+                                    warningMessage = string.Format(Strings.Main_FanModeApplyFailedVictusFormat, DisplayNames.FanPresetName(failedModeName));
                                 }
 
-                                _notificationService.ShowWarning("Fan Mode", warningMessage);
+                                _notificationService.ShowWarning(Strings.Main_FanModeTitle, warningMessage);
                             });
                         }
                         return;
@@ -3338,8 +3338,8 @@ namespace OmenCore.ViewModels
                             // relaunch.
                             FanControl?.SelectPresetByNameNoApplyAndSave(confirmedModeName);
                             CurrentFanMode = confirmedModeName;
-                            PushEvent($"🌀 Fan mode: {confirmedModeName}");
-                            _notificationService.ShowFanModeChanged(confirmedModeName, "Quick Access");
+                            PushEvent(string.Format(Strings.Main_EventFanModeFormat, DisplayNames.FanPresetName(confirmedModeName)));
+                            _notificationService.ShowFanModeChanged(confirmedModeName, Strings.Main_SourceQuickAccess);
                         });
                     }
                 }
@@ -3349,8 +3349,8 @@ namespace OmenCore.ViewModels
                     {
                         await dispatcher.InvokeAsync(() =>
                         {
-                            PushEvent($"⚠ Fan mode request ignored: preset not found for {mode}");
-                            _notificationService.ShowWarning("Fan Mode", $"Could not resolve preset for {mode}.");
+                            PushEvent(string.Format(Strings.Main_EventFanModeIgnoredFormat, mode));
+                            _notificationService.ShowWarning(Strings.Main_FanModeTitle, string.Format(Strings.Main_FanModePresetNotFoundFormat, mode));
                         });
                     }
                 }
@@ -3516,7 +3516,7 @@ namespace OmenCore.ViewModels
                         var confirmedMode = _performanceModeService.GetCurrentMode() ?? mode;
                         CurrentPerformanceMode = confirmedMode;
                         General?.SyncRuntimeState(confirmedMode, CurrentFanMode);
-                        PushEvent($"⚡ Performance: {confirmedMode}");
+                        PushEvent(string.Format(Strings.Main_EventPerfModeFormat, DisplayNames.PerformanceModeName(confirmedMode)));
                     });
                 }
             });
@@ -3611,8 +3611,8 @@ namespace OmenCore.ViewModels
                         // Sync GPU Power Boost level on UI thread (setter calls OnPropertyChanged)
                         if (gpuBoostLevel != null && _systemControl?.GpuPowerBoostAvailable == true)
                             _systemControl.GpuPowerBoostLevel = gpuBoostLevel;
-                        ShowHotkeyOsd("Profile", profile, "Tray");
-                        PushEvent($"🎮 Profile: {profile} (fan: {confirmedFanMode})");
+                        ShowHotkeyOsd(Strings.Main_OsdCategoryProfile, profile, Strings.Main_OsdSourceTray);
+                        PushEvent(string.Format(Strings.Main_EventProfileFormat, profile, DisplayNames.FanPresetName(confirmedFanMode)));
                     });
                 }
             });
@@ -3666,8 +3666,8 @@ namespace OmenCore.ViewModels
                             SystemControl.GpuPowerBoostLevel = level;
                             SystemControl.ApplyGpuPowerBoostCommand?.Execute(null);
                             CurrentGpuPowerLevel = level;
-                            PushEvent($"⚡ GPU Power: {level}");
-                            _notificationService.ShowInfo("GPU Power", $"Set to {level}");
+                            PushEvent(string.Format(Strings.Main_EventGpuPowerFormat, level));
+                            _notificationService.ShowInfo(Strings.Main_GpuPowerTitle, string.Format(Strings.Main_GpuPowerSetFormat, level));
                         }
                     });
                 }
@@ -3699,7 +3699,7 @@ namespace OmenCore.ViewModels
                             await _keyboardLightingService.SetBrightness(brightness);
                             CurrentKeyboardBrightness = level;
                             string levelName = level switch { 0 => "Off", 1 => "Low", 2 => "Medium", _ => "High" };
-                            PushEvent($"💡 Keyboard: {levelName}");
+                            PushEvent(string.Format(Strings.Main_EventKeyboardFormat, levelName));
                         }
                     }
                     else
@@ -3718,7 +3718,7 @@ namespace OmenCore.ViewModels
                                 await _keyboardLightingService.SetBrightness(brightness);
                                 CurrentKeyboardBrightness = level;
                                 string levelName = level switch { 0 => "Off", 1 => "Low", 2 => "Medium", _ => "High" };
-                                PushEvent($"💡 Keyboard: {levelName}");
+                                PushEvent(string.Format(Strings.Main_EventKeyboardFormat, levelName));
                             }
                         }).Task.Unwrap();
                     }
@@ -3756,13 +3756,13 @@ namespace OmenCore.ViewModels
                 {
                     // Game profile activated
                     _notificationService.ShowGameProfileActivated(e.Profile.ExecutableName, e.Profile.Name);
-                    PushEvent($"🎮 Profile: {e.Profile.Name} for {e.Profile.ExecutableName}");
+                    PushEvent(string.Format(Strings.Main_EventProfileAppliedFormat, e.Profile.Name, e.Profile.ExecutableName));
                 }
                 else if (e.Trigger == ProfileTrigger.GameExit)
                 {
                     // Game exited, defaults restored
                     _notificationService.ShowGameProfileDeactivated("Game");
-                    PushEvent("🎮 Restored default settings");
+                    PushEvent(Strings.Main_EventDefaultsRestoredGame);
                 }
             });
         }
@@ -3791,8 +3791,8 @@ namespace OmenCore.ViewModels
                     General?.SyncRuntimeState(CurrentPerformanceMode, confirmedFanMode);
 
                     // Show what actually got applied, not only what we requested.
-                    ShowHotkeyOsd("Fan Mode", confirmedFanMode, "Ctrl+Shift+F");
-                    PushEvent($"🌀 Fan: {confirmedFanMode} (hotkey)");
+                    ShowHotkeyOsd(Strings.Main_FanModeTitle, DisplayNames.FanPresetName(confirmedFanMode), "Ctrl+Shift+F");
+                    PushEvent(string.Format(Strings.Main_EventFanHotkeyFormat, DisplayNames.FanPresetName(confirmedFanMode)));
                 }
                 catch (Exception ex)
                 {
@@ -3811,13 +3811,11 @@ namespace OmenCore.ViewModels
                     {
                         if (IsVictusModel())
                         {
-                            _notificationService.ShowWarning(
-                                "Fan Mode",
-                                "Victus fan backend is unavailable, so Max fan was not applied. Run Diagnostics and share the report using the guide format.");
+                            _notificationService.ShowWarning(Strings.Main_FanModeTitle, Strings.Main_FanBackendUnavailableVictusFormat);
                         }
                         else
                         {
-                            _notificationService.ShowWarning("Fan Mode", "Fan control backend is unavailable. Max fan hotkey was not applied.");
+                            _notificationService.ShowWarning(Strings.Main_FanModeTitle, Strings.Main_FanBackendUnavailableFormat);
                         }
 
                         _logging.Warn("Hotkey max fan toggle skipped: fan writes unavailable");
@@ -3826,8 +3824,8 @@ namespace OmenCore.ViewModels
 
                     _fanService.ApplyMaxCooling();
                     FanControl?.SelectPresetByNameNoApplyAndSave("Max");
-                    ShowHotkeyOsd("Fan Mode", "Maximum Cooling", "Ctrl+Shift+M");
-                    PushEvent("🌀 Fan: Maximum Cooling (hotkey)");
+                    ShowHotkeyOsd(Strings.Main_FanModeTitle, Strings.Main_OsdValueMaxCooling, "Ctrl+Shift+M");
+                    PushEvent(Strings.Main_EventFanMaxCoolingHotkey);
                 }
                 catch (Exception ex)
                 {
@@ -3853,8 +3851,8 @@ namespace OmenCore.ViewModels
                 try
                 {
                     _performanceModeService.SetPerformanceMode(nextMode);
-                    ShowHotkeyOsd("Performance", nextMode, "Ctrl+Shift+P");
-                    PushEvent($"⚡ Performance: {nextMode} (hotkey)");
+                    ShowHotkeyOsd(Strings.Main_OsdCategoryPerformance, DisplayNames.PerformanceModeName(nextMode), "Ctrl+Shift+P");
+                    PushEvent(string.Format(Strings.Main_EventPerfHotkeyFormat, DisplayNames.PerformanceModeName(nextMode)));
                 }
                 catch (Exception ex)
                 {
@@ -3871,8 +3869,8 @@ namespace OmenCore.ViewModels
                 {
                     FanControl?.ApplyFanMode("Performance");
                     _performanceModeService.SetPerformanceMode("Performance");
-                    ShowHotkeyOsd("Boost", "Performance", "Ctrl+Shift+B");
-                    PushEvent("🔥 Boost mode activated (hotkey)");
+                    ShowHotkeyOsd(Strings.Main_OsdCategoryBoost, Strings.Main_OsdValuePerformance, "Ctrl+Shift+B");
+                    PushEvent(Strings.Main_EventBoostHotkey);
                 }
                 catch (Exception ex)
                 {
@@ -3889,8 +3887,8 @@ namespace OmenCore.ViewModels
                 {
                     FanControl?.ApplyFanMode("Quiet");
                     _performanceModeService.SetPerformanceMode("Quiet");
-                    ShowHotkeyOsd("Quiet Mode", "Quiet", "Ctrl+Shift+Q");
-                    PushEvent("🤫 Quiet mode activated (hotkey)");
+                    ShowHotkeyOsd(Strings.Main_OsdCategoryQuietMode, Strings.Main_OsdValueQuiet, "Ctrl+Shift+Q");
+                    PushEvent(Strings.Main_EventQuietHotkey);
                 }
                 catch (Exception ex)
                 {
@@ -4002,8 +4000,8 @@ namespace OmenCore.ViewModels
                             break;
                     }
 
-                    ShowHotkeyOsd("Profile", nextProfile, "Ctrl+Shift+E");
-                    PushEvent($"Profile: {nextProfile} (hotkey)");
+                    ShowHotkeyOsd(Strings.Main_OsdCategoryProfile, nextProfile, "Ctrl+Shift+E");
+                    PushEvent(string.Format(Strings.Main_EventProfileHotkeyFormat, nextProfile));
                 }
                 catch (Exception ex)
                 {
@@ -4030,10 +4028,10 @@ namespace OmenCore.ViewModels
             var applied = _fanService.ApplyPreset(customPreset, immediate: true);
             if (!applied)
             {
-                PushEvent($"Custom profile failed: {customPreset.Name}");
+                PushEvent(string.Format(Strings.Main_EventCustomProfileFailedFormat, customPreset.Name));
                 _notificationService.ShowWarning(
-                    "Profile",
-                    $"Could not apply custom fan preset '{customPreset.Name}'. Check Diagnostics for backend state.");
+                    Strings.Main_OsdCategoryProfile,
+                    string.Format(Strings.Main_CustomPresetApplyFailedFormat, customPreset.Name));
                 return false;
             }
 
@@ -4099,12 +4097,12 @@ namespace OmenCore.ViewModels
                     General?.SyncRuntimeState(CurrentPerformanceMode, confirmedFanMode);
                     if (string.Equals(confirmedFanMode, "Max", StringComparison.OrdinalIgnoreCase))
                     {
-                        PushEvent("🌡️ Quiet safety: fans → Max (temp critical)");
+                        PushEvent(Strings.Main_EventQuietSafetyMax);
                     }
                     else
                     {
                         _logging.Warn($"[QuietSafety] Max cooling did not confirm (mode is '{confirmedFanMode}') — temp is critical and fans may not have responded");
-                        PushEvent("⚠️ Quiet safety: temp critical, but Max cooling failed to apply — check fan control");
+                        PushEvent(Strings.Main_EventQuietSafetyMaxFailed);
                     }
                 }
                 catch (Exception ex)
@@ -4128,7 +4126,7 @@ namespace OmenCore.ViewModels
                     CurrentFanMode = confirmedFanMode;
                     General?.SetQuietSafetyOverride(false);
                     General?.SyncRuntimeState(CurrentPerformanceMode, confirmedFanMode);
-                    PushEvent("✅ Quiet safety: fans → Quiet (temp recovered)");
+                    PushEvent(Strings.Main_EventQuietSafetyRestored);
                 }
                 catch (Exception ex)
                 {
@@ -4225,13 +4223,13 @@ namespace OmenCore.ViewModels
                     {
                         _fanService.ApplyAutoMode();
                         FanControl?.SelectPresetByNameNoApplyAndSave("Auto");
-                        ShowHotkeyOsd("Fan Mode", "Auto (BIOS Control)", "OMEN Key");
+                        ShowHotkeyOsd(Strings.Main_FanModeTitle, Strings.Main_HotkeyOsdAutoBios, Strings.Main_HotkeyOsdOmenKey);
                     }
                     else
                     {
                         _fanService.ApplyMaxCooling();
                         FanControl?.SelectPresetByNameNoApplyAndSave("Max");
-                        ShowHotkeyOsd("Fan Mode", "Maximum Cooling", "OMEN Key");
+                        ShowHotkeyOsd(Strings.Main_FanModeTitle, Strings.Main_OsdValueMaxCooling, Strings.Main_HotkeyOsdOmenKey);
                     }
                 }
                 catch (Exception ex)
@@ -4504,7 +4502,7 @@ namespace OmenCore.ViewModels
                                 _hotkeyService.RegisterDefaultHotkeys();
                                 _windowHotkeysActive = true;
                                 _logging.Info("Hotkeys registered (window already active)");
-                                PushEvent("⌨️ Hotkeys active (window focus)");
+                                PushEvent(Strings.Main_EventHotkeysWindowActive);
                             }
                         }
                         else
@@ -4512,7 +4510,7 @@ namespace OmenCore.ViewModels
                             // Fallback: no window handle, just register normally
                             _hotkeyService.RegisterDefaultHotkeys();
                             _logging.Info("Global hotkeys registered (no window handle)");
-                            PushEvent("⌨️ Global hotkeys enabled");
+                            PushEvent(Strings.Main_EventHotkeysGlobalEnabled);
                         }
                     }
                     else
@@ -4520,7 +4518,7 @@ namespace OmenCore.ViewModels
                         _hotkeyService.RegisterDefaultHotkeys();
                         _windowHotkeysActive = true;
                         _logging.Info("Global hotkeys registered");
-                        PushEvent("⌨️ Global hotkeys enabled");
+                        PushEvent(Strings.Main_EventHotkeysGlobalEnabled);
                     }
                 }
                 else
@@ -4583,7 +4581,7 @@ namespace OmenCore.ViewModels
 
                 _hotkeyOsd.ApplySettings(_configService?.Config?.Osd);
                 
-                _hotkeyOsd.ShowMode(category, modeName, $"via Hotkey ({hotkeyText})");
+                _hotkeyOsd.ShowMode(category, modeName, string.Format(Strings.Main_HotkeyOsdTriggeredFormat, hotkeyText));
             }
             catch (Exception ex)
             {
@@ -4607,7 +4605,7 @@ namespace OmenCore.ViewModels
                 _hotkeyService.RegisterDefaultHotkeys();
                 _windowHotkeysActive = true;
                 _logging.Info("Hotkeys registered (window activated)");
-                PushEvent("⌨️ Hotkeys active (window focused)");
+                PushEvent(Strings.Main_EventHotkeysWindowActive);
             }
             catch (Exception ex)
             {
@@ -4630,7 +4628,7 @@ namespace OmenCore.ViewModels
                 _hotkeyService.UnregisterAllExcept(HotkeyAction.ToggleWindow, HotkeyAction.ShowWindow);
                 _windowHotkeysActive = false;
                 _logging.Info("Hotkeys unregistered (window deactivated; window restore hotkeys preserved)");
-                PushEvent("⌨️ Hotkeys inactive (window lost focus)");
+                PushEvent(Strings.Main_EventHotkeysWindowInactive);
             }
             catch (Exception ex)
             {

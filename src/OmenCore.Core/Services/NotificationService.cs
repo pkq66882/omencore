@@ -96,9 +96,9 @@ namespace OmenCore.Services
             try
             {
                 var builder = new ToastContentBuilder()
-                    .AddText("Game Profile Activated")
+                    .AddText(NotificationText.GameProfileActivatedTitle)
                     .AddText($"{gameName}")
-                    .AddText($"Applied profile: {profileName}")
+                    .AddText(string.Format(NotificationText.GameProfileAppliedFormat, profileName))
                     .SetToastDuration(ToastDuration.Short);
                 
                 if (File.Exists(_altIconPath))
@@ -107,7 +107,7 @@ namespace OmenCore.Services
                 }
 
                 builder.Show();
-                AddInfo("Game Profile Activated", $"{gameName}: {profileName}");
+                AddInfo(NotificationText.GameProfileActivatedTitle, string.Format(NotificationText.GameProfileInfoFormat, gameName, profileName));
                 _logging.Info($"Notification: Game profile '{profileName}' activated for '{gameName}'");
             }
             catch (Exception ex)
@@ -126,13 +126,13 @@ namespace OmenCore.Services
             try
             {
                 new ToastContentBuilder()
-                    .AddText("Game Closed")
+                    .AddText(NotificationText.GameClosedTitle)
                     .AddText($"{gameName}")
-                    .AddText("Restored default settings")
+                    .AddText(NotificationText.GameDefaultsRestored)
                     .SetToastDuration(ToastDuration.Short)
                     .Show();
 
-                AddInfo("Game Closed", $"{gameName}: restored default settings");
+                AddInfo(NotificationText.GameClosedTitle, string.Format(NotificationText.GameClosedInfoFormat, gameName));
                 _logging.Info($"Notification: Game '{gameName}' closed, defaults restored");
             }
             catch (Exception ex)
@@ -151,12 +151,12 @@ namespace OmenCore.Services
             try
             {
                 new ToastContentBuilder()
-                    .AddText($"Fan Mode: {modeName}")
-                    .AddText($"Changed via {triggeredBy}")
+                    .AddText(string.Format(NotificationText.FanModeTitleFormat, modeName))
+                    .AddText(string.Format(NotificationText.ChangedViaFormat, triggeredBy))
                     .SetToastDuration(ToastDuration.Short)
                     .Show();
 
-                AddInfo($"Fan Mode: {modeName}", $"Changed via {triggeredBy}");
+                AddInfo(string.Format(NotificationText.FanModeTitleFormat, modeName), string.Format(NotificationText.ChangedViaFormat, triggeredBy));
                 _logging.Info($"Notification: Fan mode changed to '{modeName}'");
             }
             catch (Exception ex)
@@ -178,13 +178,16 @@ namespace OmenCore.Services
             {
                 var freedDisplay = freedMB >= 1024 ? $"{freedMB / 1024.0:F1} GB" : $"{freedMB} MB";
 
+                var freedText = string.Format(NotificationText.MemoryFreedFormat, freedDisplay);
+                var opsText = string.Format(NotificationText.MemoryOpsFormat, operationsSucceeded);
+
                 new ToastContentBuilder()
-                    .AddText($"Freed {freedDisplay}")
-                    .AddText($"{operationsSucceeded} cleanup operation{(operationsSucceeded == 1 ? "" : "s")} completed")
+                    .AddText(freedText)
+                    .AddText(opsText)
                     .SetToastDuration(ToastDuration.Short)
                     .Show();
 
-                AddInfo($"Freed {freedDisplay}", $"{operationsSucceeded} cleanup operation{(operationsSucceeded == 1 ? "" : "s")} completed");
+                AddInfo(freedText, opsText);
                 _logging.Info($"Notification: memory clean freed {freedMB} MB ({operationsSucceeded} operations)");
             }
             catch (Exception ex)
@@ -203,12 +206,12 @@ namespace OmenCore.Services
             try
             {
                 new ToastContentBuilder()
-                    .AddText($"Performance: {modeName}")
-                    .AddText($"Changed via {triggeredBy}")
+                    .AddText(string.Format(NotificationText.PerfModeTitleFormat, modeName))
+                    .AddText(string.Format(NotificationText.ChangedViaFormat, triggeredBy))
                     .SetToastDuration(ToastDuration.Short)
                     .Show();
 
-                AddInfo($"Performance: {modeName}", $"Changed via {triggeredBy}");
+                AddInfo(string.Format(NotificationText.PerfModeTitleFormat, modeName), string.Format(NotificationText.ChangedViaFormat, triggeredBy));
                 _logging.Info($"Notification: Performance mode changed to '{modeName}'");
             }
             catch (Exception ex)
@@ -233,16 +236,14 @@ namespace OmenCore.Services
                 // (90°C default) or to anything in firmware. Clarifying it right here, at the
                 // moment of actual confusion, rather than only in a GitHub reply after the fact.
                 new ToastContentBuilder()
-                    .AddText($"High Temperature Warning")
-                    .AddText($"{component}: {temperature:F0}°C")
-                    .AddText($"Threshold: {threshold:F0}°C · informational only, not a fan trigger")
+                    .AddText(NotificationText.HighTemperatureTitle)
+                    .AddText(string.Format(NotificationText.TemperatureFormat, component, temperature))
+                    .AddText(string.Format(NotificationText.HighTemperatureThresholdFormat, threshold))
                     .SetToastDuration(ToastDuration.Long)
                     .Show();
 
-                AddWarning("High Temperature Warning",
-                    $"{component}: {temperature:F0}°C (threshold {threshold:F0}°C). This is an informational " +
-                    "notification only - it's independent of fan behavior and any BIOS thermal/TCC limit. " +
-                    "Adjust or disable it under Settings → Notifications.");
+                AddWarning(NotificationText.HighTemperatureTitle,
+                    string.Format(NotificationText.HighTemperatureInfoFormat, component, temperature, threshold));
                 _logging.Info($"Notification: Temperature warning - {component} at {temperature}°C");
             }
             catch (Exception ex)
@@ -267,15 +268,14 @@ namespace OmenCore.Services
             try
             {
                 new ToastContentBuilder()
-                    .AddText("GPU power clamp is back")
-                    .AddText($"The GPU is limited to {enforcedWatts:F0} W again, of its own {defaultWatts:F0} W.")
-                    .AddText("Restart the GPU from Diagnostics when nothing needs it.")
+                    .AddText(NotificationText.ClampReturnedTitle)
+                    .AddText(string.Format(NotificationText.ClampReturnedBodyFormat, enforcedWatts, defaultWatts))
+                    .AddText(NotificationText.ClampReturnedHint)
                     .SetToastDuration(ToastDuration.Long)
                     .Show();
 
-                AddWarning("GPU power clamp is back",
-                    $"Limited to {enforcedWatts:F0} W of {defaultWatts:F0} W. The firmware told the " +
-                    "driver about the adapter again - restarting the GPU drops it.");
+                AddWarning(NotificationText.ClampReturnedTitle,
+                    string.Format(NotificationText.ClampReturnedInfoFormat, enforcedWatts, defaultWatts));
 
                 _logging.Info($"Notification: adapter GPU clamp returned - enforced {enforcedWatts:F2} W " +
                               $"against a {defaultWatts:F2} W default");
@@ -297,14 +297,16 @@ namespace OmenCore.Services
 
             try
             {
+                var criticalTitle = string.Format(NotificationText.CriticalTitleFormat, component);
+
                 new ToastContentBuilder()
-                    .AddText($"CRITICAL: {component} Overheating!")
-                    .AddText($"Temperature: {temperature:F0}°C")
-                    .AddText("Thermal throttling may occur. Consider reducing load or improving cooling.")
+                    .AddText(criticalTitle)
+                    .AddText(string.Format(NotificationText.CriticalTemperatureFormat, temperature))
+                    .AddText(NotificationText.CriticalBody)
                     .SetToastDuration(ToastDuration.Long)
                     .Show();
 
-                AddError($"CRITICAL: {component} Overheating!", $"{temperature:F0}°C — thermal throttling may occur");
+                AddError(criticalTitle, string.Format(NotificationText.CriticalInfoFormat, temperature));
                 _logging.Warn($"Critical temperature warning - {component} at {temperature}°C");
             }
             catch (Exception ex)
@@ -322,13 +324,15 @@ namespace OmenCore.Services
 
             try
             {
+                var thermalTitle = string.Format(NotificationText.ThermalProtectionTitleFormat, protectionLevel);
+
                 new ToastContentBuilder()
-                    .AddText($"Thermal Protection: {protectionLevel}")
-                    .AddText($"{temperature:F0}°C - Fans boosted to max")
+                    .AddText(thermalTitle)
+                    .AddText(string.Format(NotificationText.ThermalProtectionBodyFormat, temperature))
                     .SetToastDuration(ToastDuration.Short)
                     .Show();
 
-                AddWarning($"Thermal Protection: {protectionLevel}", $"{temperature:F0}°C — fans boosted to max");
+                AddWarning(thermalTitle, string.Format(NotificationText.ThermalProtectionInfoFormat, temperature));
                 _logging.Info($"Thermal protection notification: {protectionLevel} at {temperature}°C");
             }
             catch (Exception ex)

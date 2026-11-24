@@ -42,8 +42,8 @@ namespace OmenCore.Views
                     if (string.IsNullOrWhiteSpace(latest.DownloadUrl))
                     {
                         var openRelease = MessageBox.Show(
-                            "A new version is available on GitHub. Open the release page now?",
-                            "Update Available",
+                            Strings.L2_UpdateOpenReleasePrompt,
+                            Strings.L2_UpdateAvailableTitle,
                             MessageBoxButton.YesNo,
                             MessageBoxImage.Information);
 
@@ -56,8 +56,8 @@ namespace OmenCore.Views
                     }
 
                     var msgResult = MessageBox.Show(
-                        $"A new version is available!\n\nCurrent: {result.CurrentVersion.VersionString}\nLatest: {latest.VersionString}\n\nWould you like to download and install it now?",
-                        "Update Available",
+                        string.Format(Strings.L2_UpdateDownloadPromptFormat, result.CurrentVersion.VersionString, latest.VersionString),
+                        Strings.L2_UpdateAvailableTitle,
                         MessageBoxButton.YesNo,
                         MessageBoxImage.Information);
 

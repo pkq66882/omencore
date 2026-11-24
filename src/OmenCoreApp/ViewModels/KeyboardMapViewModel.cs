@@ -465,17 +465,17 @@ namespace OmenCore.ViewModels
             // in the LampArray spec, so the software cannot confirm a key changed - only that the
             // device took the report. The bar's colours ARE readable, but not through this call.
             var parts = new List<string>();
-            if (leds.Count > 0) parts.Add($"{leds.Count} LEDs {(ledsOk ? "accepted" : "REFUSED")}");
-            if (colors.Count > 0) parts.Add($"{colors.Count} keys {(keysOk ? "accepted" : "REFUSED")}");
-            if (anyBar) parts.Add($"4 bar zones {(barOk ? "accepted" : "REFUSED")}");
+            if (leds.Count > 0) parts.Add(string.Format(ledsOk ? Strings.KbdMap_StatusLedsAcceptedFormat : Strings.KbdMap_StatusLedsRefusedFormat, leds.Count));
+            if (colors.Count > 0) parts.Add(string.Format(keysOk ? Strings.KbdMap_StatusKeysAcceptedFormat : Strings.KbdMap_StatusKeysRefusedFormat, colors.Count));
+            if (anyBar) parts.Add(barOk ? Strings.KbdMap_StatusBarAccepted : Strings.KbdMap_StatusBarRefused);
 
-            Status = string.Join(", ", parts) + ". Only looking confirms it.";
+            Status = string.Join(Strings.KbdMap_StatusSeparator, parts) + Strings.KbdMap_StatusOnlyEyes;
 
             // A backend that cannot take brightness sends the colours at full strength, and the
             // slider sitting at 20 while the keyboard blazes is exactly the silent no-op this fix
             // was for. Say it happened rather than leaving the user to infer it from the light.
             if (!brightnessOk && Brightness < 100)
-                Status += $" Brightness {Brightness} was NOT applied - this keyboard's backend has no brightness lever.";
+                Status += " " + string.Format(Strings.KbdMap_StatusBrightnessNotAppliedFormat, Brightness);
 
             _logging.Info($"[KeyboardMap] Apply: {leds.Count} LEDs ledsOk={ledsOk}, " +
                           $"{colors.Count} keys keysOk={keysOk}, bar={anyBar} barOk={barOk}, " +
@@ -634,10 +634,8 @@ namespace OmenCore.ViewModels
             bool flashed = await _keyboard.StoreDeviceLightingToFlashAsync();
 
             Status = flashed
-                ? "Saved to the keyboard. This picture now survives a power cycle, and shows with " +
-                  "OmenCore closed."
-                : "Applied, but the keyboard refused the save-to-flash — the picture is showing now " +
-                  "and will not survive a power cycle.";
+                ? Strings.KbdMap_StatusSaveOk
+                : Strings.KbdMap_StatusSaveRefused;
 
             // Not a claim that the colours are right: the flash write is acknowledged over the same
             // interface that cannot read a colour back. It says the MCU took the store command.
@@ -742,8 +740,8 @@ namespace OmenCore.ViewModels
             AddLightBarZones(keySize);
 
             Status = HasLightBar
-                ? $"{keyCount} keys and 4 light bar zones. Click to select, or drag a box. Hold Ctrl to add."
-                : $"{keyCount} keys. Click to select, or drag a box. Hold Ctrl to add.";
+                ? string.Format(Strings.KbdMap_StatusLoadedBarFormat, keyCount)
+                : string.Format(Strings.KbdMap_StatusLoadedFormat, keyCount);
 
             _logging.Info($"[KeyboardMap] Loaded {keyCount} keys from the measured lamp map" +
                           (HasLightBar ? ", plus 4 light bar zones" : string.Empty));
@@ -823,11 +821,11 @@ namespace OmenCore.ViewModels
 
             string verified = layout.Verified
                 ? string.Empty
-                : " This layout has not been confirmed on hardware.";
+                : Strings.KbdMap_StatusLayoutUnconfirmed;
 
             Status = string.Format(Strings.KbdMap_DetectedFormat, ledCells, layout.Keys.Count, layout.Id) +
-                     (HasLightBar ? " and 4 light bar zones." : ".") +
-                     " Click to select, or drag a box. Hold Ctrl to add." + verified;
+                     (HasLightBar ? Strings.KbdMap_StatusBarSuffix : Strings.KbdMap_StatusFullStop) +
+                     Strings.KbdMap_StatusClickHint + verified;
 
             _logging.Info($"[KeyboardMap] Loaded {ledCells} LED cells from layout {layout.Id} " +
                           $"({layout.Keys.Count} keys, verified={layout.Verified})" +

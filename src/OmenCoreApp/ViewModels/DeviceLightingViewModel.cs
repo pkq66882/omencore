@@ -224,13 +224,13 @@ namespace OmenCore.ViewModels
             get
             {
                 if (SelectedEffect?.Wire == DojoKeyboardMcu.Effect.Swipe && !UseCustomColors)
-                    return "Swipe has no preset palette — with a theme selected it renders black. Tick custom colours.";
+                    return Strings.DL2_SwipeNoPalette;
 
                 if (SelectedEffect?.Wire == DojoKeyboardMcu.Effect.AudioPulse)
                     return "Audio pulse is driven by live audio levels the host feeds it. Applied on its own it shows a steady colour rather than pulsing.";
 
                 if (SelectedEffect?.Wire is DojoKeyboardMcu.Effect.Confetti or DojoKeyboardMcu.Effect.Sun && UseCustomColors)
-                    return "Confetti and Sun take no custom colours — the theme is used regardless.";
+                    return Strings.DL2_ConfettiNoColours;
 
                 return string.Empty;
             }
@@ -246,7 +246,7 @@ namespace OmenCore.ViewModels
             bool ok = await _keyboard.SetDeviceEffectAsync(FnCyclePlan.ToRecord(CurrentSlot()));
             Status = ok
                 ? $"{SelectedEffect.Name} installed. It keeps running with OmenCore closed."
-                : $"The keyboard refused {SelectedEffect.Name}.";
+                : string.Format(Strings.DL2_KeyboardRefusedFormat, SelectedEffect.Name);
         }
 
         /// <summary>
@@ -402,7 +402,7 @@ namespace OmenCore.ViewModels
             var ordered = FnCyclePlan.Order(FnCycleSlots.Select(s => s.Model).ToList());
             if (ordered.Count == 0)
             {
-                FnCycleStatus = "Nothing staged to write.";
+                FnCycleStatus = Strings.DeviceLighting_NothingStaged;
                 return;
             }
 
@@ -592,7 +592,7 @@ namespace OmenCore.ViewModels
 
             BarStatus = ok
                 ? $"{SelectedBarEffect.Name} sent. There is no readback for animations — look at the bar."
-                : $"The light bar refused {SelectedBarEffect.Name}.";
+                : string.Format(Strings.DL2_BarRefusedFormat, SelectedBarEffect.Name);
         }
 
         private void LightBarOff()
@@ -606,7 +606,7 @@ namespace OmenCore.ViewModels
             var zones = _keyboard?.GetLightBarColors() ?? Array.Empty<(byte R, byte G, byte B)?>();
             if (zones.Length == 0) return;
 
-            BarStatus = "Now showing: " + string.Join("  ",
+            BarStatus = Strings.DL2_NowShowing + string.Join("  ",
                 zones.Select(z => z == null ? "??" : $"#{z.Value.R:X2}{z.Value.G:X2}{z.Value.B:X2}"));
         }
 

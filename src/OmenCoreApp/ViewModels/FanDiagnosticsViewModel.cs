@@ -378,7 +378,7 @@ namespace OmenCore.ViewModels
                         catch (Exception ex)
                         {
                             _logging.Error($"[GuidedDiagnostic] {fanName} at {targetPercent}% FAILED: {ex.Message}");
-                            results.Add((fanName, targetPercent, false, "Physical RPM unavailable", 0, 0, "Failed", "None"));
+                            results.Add((fanName, targetPercent, false, Strings.FanDiag_RpmUnavailable, 0, 0, "Failed", "None"));
                         }
                     }
                     

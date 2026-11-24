@@ -19,9 +19,12 @@ namespace OmenCoreApp.Tests.ViewModels
     public class MainViewModelTests : IDisposable
     {
         private readonly string _tempDir;
+        private readonly System.Globalization.CultureInfo _originalUICulture = System.Globalization.CultureInfo.CurrentUICulture;
 
         public MainViewModelTests()
         {
+            // Telemetry/adapter summaries are localized; pin to en for canonical substring assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
             _tempDir = Path.Combine(Path.GetTempPath(), "OmenCoreTests", Guid.NewGuid().ToString());
             Directory.CreateDirectory(_tempDir);
             Environment.SetEnvironmentVariable("OMENCORE_CONFIG_DIR", _tempDir);
@@ -30,6 +33,7 @@ namespace OmenCoreApp.Tests.ViewModels
         public void Dispose()
         {
             Environment.SetEnvironmentVariable("OMENCORE_CONFIG_DIR", null);
+            System.Globalization.CultureInfo.CurrentUICulture = _originalUICulture;
         }
 
         private class FakeTelemetry : ITelemetryService

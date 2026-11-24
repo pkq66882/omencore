@@ -31,7 +31,7 @@ namespace OmenCore.Views
             var fb = _config?.EcDevicePath;
             if (!string.IsNullOrWhiteSpace(fb))
             {
-                FanBackendText.Text = "EC (Embedded Controller)";
+                FanBackendText.Text = Strings.L2_EcEmbeddedController;
                 FanBackendDot.Fill = (Brush)FindResource("SuccessBrush");
             }
             else

@@ -235,27 +235,28 @@
             <!-- Quick Actions -->
             <StackPanel Grid.Row="6" VerticalAlignment="Bottom" Margin="0,12,0,0">
                 <UniformGrid Rows="1">
-                    <Button x:Name="OpenDashboardBtn" Style="{StaticResource QuickButtonStyle}" Click="OpenDashboard_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_OpenFullDashboard}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{x:Static loc:Strings.QuickPopupWindow_Dashboard}" FontSize="11" TextWrapping="Wrap" TextAlignment="Center"/>
+                    <Button x:Name="OpenDashboardBtn" Style="{StaticResource QuickButtonStyle}" Padding="6,8" Click="OpenDashboard_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_OpenFullDashboard}">
+                        <StackPanel>
+                            <TextBlock Text="📊" FontSize="13" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{x:Static loc:Strings.QuickPopupWindow_Dashboard}" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,3,0,0"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="DisplayOffBtn" Style="{StaticResource QuickButtonStyle}" Click="DisplayOff_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_TurnOffDisplay}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock x:Name="QuickActionIcon" Text="🌙" FontSize="14" Margin="0,0,6,0"/>
-                            <TextBlock x:Name="QuickActionText" Text="{x:Static loc:Strings.QuickPopupWindow_DisplayOff}" FontSize="11" TextWrapping="Wrap" TextAlignment="Center"/>
+                    <Button x:Name="DisplayOffBtn" Style="{StaticResource QuickButtonStyle}" Padding="6,8" Click="DisplayOff_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_TurnOffDisplay}">
+                        <StackPanel>
+                            <TextBlock x:Name="QuickActionIcon" Text="🌙" FontSize="13" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="QuickActionText" Text="{x:Static loc:Strings.QuickPopupWindow_DisplayOff}" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,3,0,0"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="RefreshRateBtn" Style="{StaticResource QuickButtonStyle}" Click="RefreshRate_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_ToggleRefreshRate}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="🖥️" FontSize="14" Margin="0,0,6,0"/>
-                            <TextBlock x:Name="RefreshRateText" Text="{x:Static loc:Strings.QuickPopupWindow_N165hz}" FontSize="11" TextWrapping="Wrap" TextAlignment="Center"/>
+                    <Button x:Name="RefreshRateBtn" Style="{StaticResource QuickButtonStyle}" Padding="6,8" Click="RefreshRate_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_ToggleRefreshRate}">
+                        <StackPanel>
+                            <TextBlock Text="🖥️" FontSize="13" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="RefreshRateText" Text="{x:Static loc:Strings.QuickPopupWindow_N165hz}" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,3,0,0"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="MemoryCleanBtn" Style="{StaticResource QuickButtonStyle}" Click="MemoryClean_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_RunASafeRamClean}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="🧹" FontSize="14" Margin="0,0,6,0"/>
-                            <TextBlock Text="{x:Static loc:Strings.QuickPopupWindow_CleanRam}" FontSize="11" TextWrapping="Wrap" TextAlignment="Center"/>
+                    <Button x:Name="MemoryCleanBtn" Style="{StaticResource QuickButtonStyle}" Padding="6,8" Click="MemoryClean_Click" ToolTip="{x:Static loc:Strings.QuickPopupWindow_RunASafeRamClean}">
+                        <StackPanel>
+                            <TextBlock Text="🧹" FontSize="13" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{x:Static loc:Strings.QuickPopupWindow_CleanRam}" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,3,0,0"/>
                         </StackPanel>
                     </Button>
                 </UniformGrid>

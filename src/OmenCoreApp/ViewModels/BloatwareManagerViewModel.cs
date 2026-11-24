@@ -732,7 +732,7 @@ namespace OmenCore.ViewModels
                 return "No obvious linked packages detected";
             }
 
-            return $"Potentially related packages from same publisher: {relatedCount}";
+            return string.Format(Strings.BL2_RelatedPackagesFormat, relatedCount);
         }
 
         private async Task RestoreSelectedAsync()
@@ -790,14 +790,14 @@ namespace OmenCore.ViewModels
 
                 if (restoreResult.Canceled)
                 {
-                    var canceledAt = restoreResult.CanceledAt?.Name ?? "the current item";
+                    var canceledAt = restoreResult.CanceledAt?.Name ?? Strings.Bloatware_CurrentItem;
                     SetStatusFailed(
-                        $"Bulk restore canceled at {canceledAt}. {restoreResult.Succeeded.Count} completed, {restoreResult.Skipped.Count} skipped.");
+                        string.Format(Strings.BL2_BulkCancelledFormat, canceledAt, restoreResult.Succeeded.Count, restoreResult.Skipped.Count));
                 }
                 else if (restoreResult.Failed.Count > 0)
                 {
                     SetStatusFailed(
-                        $"Bulk restore finished with {restoreResult.Failed.Count} failures. Restored {restoreResult.Succeeded.Count}/{restoreResult.RequestedTotal} items.");
+                        string.Format(Strings.BL2_BulkFinishedFormat, restoreResult.Failed.Count, restoreResult.Succeeded.Count, restoreResult.RequestedTotal));
                 }
                 else
                 {
@@ -999,7 +999,7 @@ namespace OmenCore.ViewModels
                 SetStatusDone(Strings.Bloatware_NoTelemetryPackages);
                 return;
             }
-            BuildRemovalPreview("Telemetry Only Preset", toRemove);
+            BuildRemovalPreview(Strings.Bloatware_PresetTelemetryOnly, toRemove);
         }
 
         private void ApplyOmenConflictReducerPreset()
@@ -1018,7 +1018,7 @@ namespace OmenCore.ViewModels
                 SetStatusDone(Strings.Bloatware_NoConflictingPackages);
                 return;
             }
-            BuildRemovalPreview("OMEN Conflict Reducer Preset", toRemove);
+            BuildRemovalPreview(Strings.Bloatware_PresetOmenConflict, toRemove);
         }
 
         private void ApplyWindowsConsumerAppsPreset()
@@ -1031,7 +1031,7 @@ namespace OmenCore.ViewModels
                 SetStatusDone(Strings.Bloatware_NoConsumerApps);
                 return;
             }
-            BuildRemovalPreview("Windows Consumer Apps Preset", toRemove);
+            BuildRemovalPreview(Strings.Bloatware_PresetWindowsConsumer, toRemove);
         }
 
         private void ApplyFullStandalonePreset()
@@ -1051,7 +1051,7 @@ namespace OmenCore.ViewModels
                 SetStatusDone(Strings.Bloatware_NoFullStandaloneMatches);
                 return;
             }
-            BuildRemovalPreview("Full Standalone Prep Preset", toRemove);
+            BuildRemovalPreview(Strings.Bloatware_PresetFullStandalone, toRemove);
         }
 
         protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)

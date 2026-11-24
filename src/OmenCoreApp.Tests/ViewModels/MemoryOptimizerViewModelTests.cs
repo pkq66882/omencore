@@ -9,8 +9,20 @@ using Xunit;
 
 namespace OmenCoreApp.Tests.ViewModels
 {
-    public class MemoryOptimizerViewModelTests
+    public class MemoryOptimizerViewModelTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _originalUICulture = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public MemoryOptimizerViewModelTests()
+        {
+            // Status/guidance text is localized; pin to en for canonical substring assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _originalUICulture;
+        }
         [Fact]
         public void CopyLastCleanCommand_CopiesText_WhenResultAvailable()
         {

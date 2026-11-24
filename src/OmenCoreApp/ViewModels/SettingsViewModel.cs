@@ -587,9 +587,9 @@ namespace OmenCore.ViewModels
         public string StartupHardwareRestoreStatus => EnableStartupHardwareRestore
             ? $"{StartupRestorePolicy.BuildSummary(BuildStartupRestorePreviewConfig())}. " +
               (AllowStartupRestoreOnOmen16OrVictus
-                  ? "OMEN 16/Victus guardrail override is enabled."
-                  : "OMEN 16/Victus guardrail override is off.")
-            : "Disabled";
+                  ? Strings.Settings_GuardrailOverrideOn
+                  : Strings.Settings_GuardrailOverrideOff)
+            : Strings.Settings_RestoreDisabled;
 
         private AppConfig BuildStartupRestorePreviewConfig() => new()
         {
@@ -651,7 +651,11 @@ namespace OmenCore.ViewModels
         }
 
         public System.Collections.Generic.IReadOnlyList<OmenCore.Localization.LanguageOption> LanguageOptions =>
-            OmenCore.Localization.Language.Supported;
+            OmenCore.Localization.Language.Supported
+                .Select(option => option.Code == OmenCore.Localization.Language.SystemDefault
+                    ? option with { Name = Strings.Language_SystemDefault }
+                    : option)
+                .ToList();
 
         /// <summary>
         /// Display scale for the shell. Applies immediately (the window owns the transform) and is
@@ -1590,7 +1594,7 @@ namespace OmenCore.ViewModels
             new KeyValuePair<string, string>("ToggleMaxCooling", "Max cooling on / off"),
             new KeyValuePair<string, string>("ToggleOsd", "Show or hide the on-screen display"),
             new KeyValuePair<string, string>("LaunchExternalApp", "Launch an app"),
-            new KeyValuePair<string, string>("DoNothing", "Do nothing (block the key)"),
+            new KeyValuePair<string, string>("DoNothing", Strings.S2_OsdActionDoNothing),
         };
 
         internal static string NormalizeOmenKeyAction(string? action) => action switch
@@ -1679,16 +1683,8 @@ namespace OmenCore.ViewModels
                     if (value)
                     {
                         var result = MessageBox.Show(
-                            "⚠️ EXCLUSIVE EC ACCESS DIAGNOSTICS ⚠️\n\n" +
-                            "This diagnostic mode will:\n" +
-                            "• Acquire exclusive access to EC registers\n" +
-                            "• Block other applications from accessing EC\n" +
-                            "• Log detailed contention information\n" +
-                            "• May interfere with OMEN Gaming Hub or other fan control apps\n\n" +
-                            "Use this only for troubleshooting EC register conflicts.\n" +
-                            "It will help identify if other apps are causing fan RPM 0 issues.\n\n" +
-                            "Enable exclusive diagnostics mode?",
-                            "Exclusive EC Access Diagnostics",
+                            Strings.S2_ExclusiveEcBody,
+                            Strings.S2_ExclusiveEcTitle,
                             MessageBoxButton.YesNo,
                             MessageBoxImage.Warning,
                             MessageBoxResult.No);
@@ -1758,9 +1754,8 @@ namespace OmenCore.ViewModels
                     
                     // Note: Service restart required for change to take effect
                     MessageBox.Show(
-                        $"Keyboard backend set to: {value}\n\n" +
-                        "This change will take effect after restarting OmenCore.",
-                        "Backend Changed",
+                        string.Format(Strings.S2_KeyboardBackendSetFormat, value),
+                        Strings.S2_BackendChangedTitle,
                         MessageBoxButton.OK,
                         MessageBoxImage.Information);
                 }
@@ -2390,9 +2385,8 @@ namespace OmenCore.ViewModels
                 {
                     _logging.Warn("Cannot apply battery charge limit: WMI BIOS not available");
                     System.Windows.MessageBox.Show(
-                        "Battery charge limit cannot be set - HP WMI BIOS interface not available.\n\n" +
-                        "This feature requires HP OMEN/Victus laptop with WMI BIOS support.",
-                        "Battery Care Unavailable",
+                        Strings.S2_BatteryCareUnavailableBody,
+                        Strings.S2_BatteryCareUnavailableTitle,
                         System.Windows.MessageBoxButton.OK,
                         System.Windows.MessageBoxImage.Warning);
                     return;
@@ -2421,13 +2415,8 @@ namespace OmenCore.ViewModels
                 {
                     _logging.Warn("Battery charge limit WMI command returned failure");
                     System.Windows.MessageBox.Show(
-                        "Battery charge limit command failed.\n\n" +
-                        "This may indicate:\n" +
-                        "• Your laptop model doesn't support this feature\n" +
-                        "• The HP BIOS needs an update\n" +
-                        "• AC adapter is not connected\n\n" +
-                        "Try toggling the setting in OMEN Gaming Hub to compare behavior.",
-                        "Battery Care Failed",
+                        Strings.S2_BatteryCareFailedBody,
+                        Strings.S2_BatteryCareFailedTitle,
                         System.Windows.MessageBoxButton.OK,
                         System.Windows.MessageBoxImage.Warning);
                 }
@@ -2436,8 +2425,8 @@ namespace OmenCore.ViewModels
             {
                 _logging.Error($"Failed to apply battery charge limit: {ex.Message}", ex);
                 System.Windows.MessageBox.Show(
-                    $"Failed to apply battery charge limit: {ex.Message}",
-                    "Battery Care Error",
+                    string.Format(Strings.S2_BatteryCareErrorBodyFormat, ex.Message),
+                    Strings.S2_BatteryCareErrorTitle,
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Error);
             }
@@ -3119,8 +3108,16 @@ namespace OmenCore.ViewModels
                 };
                 string LocalizeSource(string s) => s switch
                 {
+                    "No resolved capability profile" => Strings.SettingsViewModel_SourceNoResolvedProfile,
+                    "Exact ProductId" => Strings.SettingsViewModel_SourceExactProductId,
+                    "Family fallback" => Strings.SettingsViewModel_SourceFamilyFallback,
                     "Default fallback" => Strings.SettingsViewModel_SourceDefaultFallback,
+                    "Runtime fallback" => Strings.SettingsViewModel_SourceRuntimeFallback,
                     "No database match" => Strings.SettingsViewModel_SourceNoDatabaseMatch,
+                    "Ambiguous ProductId + model-name disambiguation" => Strings.SettingsViewModel_SourceAmbiguousProductId,
+                    "Model-name series match" => Strings.SettingsViewModel_SourceModelSeriesMatch,
+                    "Partial ProductId match" => Strings.SettingsViewModel_SourcePartialProductId,
+                    "Heuristic match" => Strings.SettingsViewModel_SourceHeuristic,
                     _ => s
                 };
                 string LocalizeModelValue(string v) => v == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : v;
@@ -3150,15 +3147,27 @@ namespace OmenCore.ViewModels
                 var warningParts = new List<string>();
                 if (!string.IsNullOrWhiteSpace(summary.WarningText))
                 {
-                    warningParts.Add(summary.WarningText == "No exact model or family entry matched; default capabilities are in use."
-                        ? Strings.SettingsViewModel_WarnNoModelMatch
-                        : summary.WarningText);
+                    warningParts.Add(summary.WarningText switch
+                    {
+                        "No resolved capability profile" => Strings.SettingsViewModel_SourceNoResolvedProfile,
+                        "Capability detection did not resolve a model profile." => Strings.SettingsViewModel_WarnCapabilityNoProfile,
+                        "Capability profile matched by ProductId, but the entry is not user-verified yet." => Strings.SettingsViewModel_WarnCapabilityUnverified,
+                        "No exact model or family entry matched; default capabilities are in use." => Strings.SettingsViewModel_WarnNoModelMatch,
+                        _ => summary.WarningText
+                    });
                 }
                 if (!string.IsNullOrWhiteSpace(summary.KeyboardWarningText))
                 {
-                    warningParts.Add(summary.KeyboardWarningText == "Keyboard profile could not be matched from the current ProductId or WMI model."
-                        ? Strings.SettingsViewModel_WarnKeyboardNoMatch
-                        : summary.KeyboardWarningText);
+                    warningParts.Add(summary.KeyboardWarningText switch
+                    {
+                        "Keyboard profile could not be matched from the current ProductId or WMI model." => Strings.SettingsViewModel_WarnKeyboardNoMatch,
+                        "Keyboard ProductId is shared across models; the profile was selected using the WMI model context." => Strings.SettingsViewModel_WarnKeyboardSharedProductId,
+                        "Keyboard profile matched by ProductId, but the entry is not user-verified yet." => Strings.SettingsViewModel_WarnKeyboardUnverified,
+                        "Keyboard profile was inferred from the model series instead of an exact ProductId match." => Strings.SettingsViewModel_WarnKeyboardSeriesInferred,
+                        "Keyboard profile was selected from a partial ProductId match and should be treated as provisional." => Strings.SettingsViewModel_WarnKeyboardPartialProvisional,
+                        "Keyboard profile came from a heuristic fallback path and should be validated before relying on it." => Strings.SettingsViewModel_WarnKeyboardHeuristic,
+                        _ => summary.KeyboardWarningText
+                    });
                 }
 
                 ModelIdentityWarningText = string.Join(Environment.NewLine, warningParts);
@@ -3168,14 +3177,14 @@ namespace OmenCore.ViewModels
             {
                 _logging.Warn($"Failed to build model identity summary: {ex.Message}");
                 ModelIdentitySummary = Strings.SettingsViewModel_IdentityAnalysisFailed;
-                ModelIdentityResolvedModel = "Unknown";
+                ModelIdentityResolvedModel = Strings.SettingsViewModel_ValueUnknown;
                 ModelIdentityResolutionSource = Strings.SettingsViewModel_ValueUnavailable;
-                ModelIdentityConfidence = "Unknown";
-                ModelIdentityBadgeText = "Unavailable";
+                ModelIdentityConfidence = Strings.SettingsViewModel_ValueUnknown;
+                ModelIdentityBadgeText = Strings.Settings_ModelIdentityUnavailable;
                 ModelIdentityBadgeTone = "error";
-                ModelIdentityKeyboardModel = "Unknown";
-                ModelIdentityKeyboardSource = "Unavailable";
-                ModelIdentityKeyboardConfidence = "Unknown";
+                ModelIdentityKeyboardModel = Strings.SettingsViewModel_ValueUnknown;
+                ModelIdentityKeyboardSource = Strings.Settings_ModelIdentityUnavailable;
+                ModelIdentityKeyboardConfidence = Strings.SettingsViewModel_ValueUnknown;
                 ModelIdentityWarningText = ex.Message;
                 ModelIdentityHasWarning = true;
                 ModelIdentityRawSummary = string.Empty;
@@ -4391,7 +4400,7 @@ namespace OmenCore.ViewModels
                     
                     OghDetectionDetail = detectedItems.Count > 0 
                         ? string.Join("\n", detectedItems) 
-                        : "Not detected";
+                        : Strings.Settings_NotDetected;
                 }
                 catch
                 {
@@ -4400,13 +4409,13 @@ namespace OmenCore.ViewModels
                 
                 // Determine fan backend
                 if (PawnIOAvailable)
-                    FanBackend = "WMI BIOS + PawnIO";
+                    FanBackend = Strings.Settings_FanBackendWmiPawnio;
                 else if (OghInstalled)
-                    FanBackend = "WMI BIOS (OGH)";
+                    FanBackend = Strings.Settings_FanBackendWmiOgh;
                 else if (!SecureBootEnabled)
-                    FanBackend = "WMI BIOS + Optional Legacy EC Path";
+                    FanBackend = Strings.Settings_FanBackendWmiLegacyEc;
                 else
-                    FanBackend = "WMI BIOS";
+                    FanBackend = Strings.Settings_FanBackendWmiOnly;
                     
                 // Perform standalone dependency audit (v2.7.0)
                 RefreshStandaloneStatus();
@@ -4566,8 +4575,8 @@ namespace OmenCore.ViewModels
             if (IsScanningBloatware) return;
             
             IsScanningBloatware = true;
-            BloatwareProgress = "Scanning for HP bloatware packages...";
-            BloatwareList = "Scanning for HP bloatware...";
+            BloatwareProgress = Strings.S2_BloatwareScanningProgress;
+            BloatwareList = Strings.S2_BloatwareScanningList;
             BloatwareCount = 0;
             
             try
@@ -4660,11 +4669,11 @@ namespace OmenCore.ViewModels
                 
                 if (bloatware.Count == 0)
                 {
-                    BloatwareList = "✓ No HP bloatware detected!\n\nYour system is clean.";
+                    BloatwareList = Strings.S2_BloatwareClean;
                 }
                 else
                 {
-                    BloatwareList = $"Found {bloatware.Count} HP bloatware package(s):\n\n" +
+                    BloatwareList = string.Format(Strings.S2_BloatwareFoundFormat, bloatware.Count) + "\n\n" +
                                   string.Join("\n", bloatware.Select(p => $"• {p.Replace("AD2F1837.", "").Replace("HPInc.", "")}"));
                 }
                 
@@ -4677,7 +4686,7 @@ namespace OmenCore.ViewModels
                     operation: "ScanBloatwareAsync",
                     message: "Failed to scan for bloatware",
                     ex: ex);
-                BloatwareList = $"❌ Scan failed: {ex.Message}";
+                BloatwareList = string.Format(Strings.S2_BloatwareScanFailedFormat, ex.Message);
             }
             finally
             {
@@ -4703,8 +4712,8 @@ namespace OmenCore.ViewModels
                 return;
                 
             IsScanningBloatware = true;
-            BloatwareProgress = "Starting bloatware removal...";
-            BloatwareList = "Removing HP bloatware packages...\n\nThis may take a few minutes...";
+            BloatwareProgress = Strings.S2_BloatwareStarting;
+            BloatwareList = Strings.S2_BloatwareRemoving;
             
             try
             {
@@ -4714,7 +4723,7 @@ namespace OmenCore.ViewModels
                 var packageNames = new System.Collections.Generic.List<string>();
                 
                 // First get the list of packages to remove — matches scan filter exactly
-                BloatwareProgress = "[1/3] Getting package list...";
+                BloatwareProgress = Strings.S2_BloatwareStep1;
                 await Task.Run(() =>
                 {
                     var psi = new ProcessStartInfo
@@ -4742,7 +4751,7 @@ namespace OmenCore.ViewModels
                     }
                 });
                 
-                BloatwareProgress = $"[2/3] Removing {packageNames.Count} packages...";
+                BloatwareProgress = string.Format(Strings.S2_BloatwareStep2CountFormat, packageNames.Count);
                 var total = packageNames.Count;
                 var current = 0;
                 
@@ -4752,7 +4761,7 @@ namespace OmenCore.ViewModels
                 {
                     current++;
                     var friendlyName = packageName.Replace("AD2F1837.", "").Replace("HPInc.", "");
-                    BloatwareProgress = $"[2/3] Removing {current}/{total}: {friendlyName}...";
+                    BloatwareProgress = string.Format(Strings.S2_BloatwareStep2ItemFormat, current, total, friendlyName);
                     
                     await Task.Run(() =>
                     {
@@ -4787,7 +4796,7 @@ namespace OmenCore.ViewModels
                             if (!exited)
                             {
                                 failed++;
-                                failedNames.Add($"{friendlyName} (timed out)");
+                                failedNames.Add(string.Format(Strings.Settings_TimedOutFormat, friendlyName));
                                 _logging.Warn($"Removal timed out after 60s: {packageName}");
                             }
                             else if (process.ExitCode == 0 || string.IsNullOrWhiteSpace(stderr))
@@ -4802,7 +4811,7 @@ namespace OmenCore.ViewModels
                                     stderr.Contains("0x80070005", StringComparison.OrdinalIgnoreCase))
                                 {
                                     failed++;
-                                    failedNames.Add($"{friendlyName} (needs admin)");
+                                    failedNames.Add($"{friendlyName} ({Strings.S2_NeedsAdminSuffix})");
                                     _logging.Warn($"Access denied removing: {packageName} - needs elevation");
                                 }
                                 else
@@ -4816,33 +4825,33 @@ namespace OmenCore.ViewModels
                     });
                 }
                 
-                BloatwareProgress = "[3/3] Cleanup complete!";
+                BloatwareProgress = Strings.S2_BloatwareStep3;
                 
-                var resultText = $"✓ Bloatware removal complete!\n\n" +
-                              $"• Removed: {removed} package(s)\n" +
-                              $"• Failed: {failed} package(s)\n";
+                var resultText = Strings.S2_BloatwareResultHeader + "\n\n" +
+                              string.Format(Strings.S2_BloatwareResultRemovedFormat, removed) + "\n" +
+                              string.Format(Strings.S2_BloatwareResultFailedFormat, failed) + "\n";
                 
                 if (failedNames.Count > 0)
                 {
-                    resultText += $"\nFailed packages:\n" + string.Join("\n", failedNames.Select(n => $"  ✗ {n}"));
+                    resultText += "\n" + Strings.S2_BloatwareFailedListHeader + "\n" + string.Join("\n", failedNames.Select(n => $"  ✗ {n}"));
                     
-                    if (failedNames.Any(n => n.Contains("needs admin")))
+                    if (failedNames.Any(n => n.Contains(Strings.S2_NeedsAdminSuffix)))
                     {
-                        resultText += "\n\n💡 Tip: Run OmenCore as Administrator to remove provisioned packages.";
+                        resultText += "\n\n" + Strings.S2_BloatwareNeedsAdminTip;
                     }
                 }
                 
-                resultText += "\n\nRun a new scan to verify.";
+                resultText += "\n\n" + Strings.S2_BloatwareRescanNote;
                 BloatwareList = resultText;
                 BloatwareCount = 0;
                 
                 _logging.Info($"Bloatware removal complete: {removed} removed, {failed} failed");
                 
-                var msgText = $"Removed {removed} bloatware package(s).";
+                var msgText = string.Format(Strings.S2_BloatwareRemovedCountFormat, removed);
                 if (failed > 0)
                 {
                     msgText += "\n\n" + string.Format(Strings.Settings_BloatwareFailedPackagesFormat, failed);
-                    if (failedNames.Any(n => n.Contains("needs admin")))
+                    if (failedNames.Any(n => n.Contains(Strings.S2_NeedsAdminSuffix)))
                     {
                         msgText += "\n\n" + Strings.Settings_BloatwareNeedsAdmin;
                     }
@@ -4978,7 +4987,7 @@ namespace OmenCore.ViewModels
                 var dialog = new Microsoft.Win32.SaveFileDialog
                 {
                     Title = Strings.Settings_ExportDiagDialogTitle,
-                    Filter = "ZIP Archive (*.zip)|*.zip|All Files (*.*)|*.*",
+                    Filter = Strings.S2_DiagZipFilter,
                     DefaultExt = ".zip",
                     FileName = $"omencore-diagnostics-{DateTime.Now:yyyy-MM-dd-HHmmss}.zip"
                 };

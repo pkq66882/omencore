@@ -91,11 +91,11 @@ namespace OmenCore.ViewModels
                 // that with "running on battery" would render as the nonsensical "0 W - running on
                 // battery".
                 if (info.Status == HpWmiBios.SmartAdapterStatus.BatteryPower)
-                    return "None — running on battery";
+                    return Strings.GpuClamp_NoneOnBattery;
 
                 var watts = info.PowerRatingKnown
                     ? $"{info.PowerRatingWatts} W"
-                    : "Wattage not reported";
+                    : Strings.GpuClamp_WattageNotReported;
 
                 var verdict = info.Status switch
                 {
@@ -121,7 +121,7 @@ namespace OmenCore.ViewModels
             get
             {
                 var shipping = _wmiBios?.SystemDesign?.ShippingAdapterPowerRatingWatts ?? 0;
-                return shipping > 0 ? $"{shipping} W" : "Not reported";
+                return shipping > 0 ? $"{shipping} W" : Strings.GpuClamp_NotReported;
             }
         }
 
@@ -148,8 +148,8 @@ namespace OmenCore.ViewModels
                     return null;
 
                 var shipping = _wmiBios?.SystemDesign?.ShippingAdapterPowerRatingWatts ?? 0;
-                var connected = info.PowerRatingKnown ? $"{info.PowerRatingWatts} W" : "an unrecognised";
-                var required = shipping > 0 ? $" This machine shipped with a {shipping} W adapter." : string.Empty;
+                var connected = info.PowerRatingKnown ? $"{info.PowerRatingWatts} W" : Strings.G2_UnrecognisedAdapter;
+                var required = shipping > 0 ? string.Format(Strings.G2_ShippingAdapterFormat, shipping) : string.Empty;
 
                 // Attribute the verdict to whoever actually reached it. On a barrel adapter the
                 // firmware says BelowRequirement outright and quoting it is accurate. On USB-C it
@@ -162,24 +162,22 @@ namespace OmenCore.ViewModels
                 if (info.Status == HpWmiBios.SmartAdapterStatus.ConnectedTypeC)
                 {
                     var supply = info.PowerRatingKnown
-                        ? $"This machine is running from a {info.PowerRatingWatts} W USB-C Power Delivery supply. "
-                        : "This machine is running from a USB-C Power Delivery supply of unreported wattage. ";
+                        ? string.Format(Strings.G2_UsbcSupplyFormat, info.PowerRatingWatts)
+                        : Strings.G2_UsbcSupplyUnknown;
 
                     // Two different reasons reach "under-rated" on Type-C, and they are not
                     // interchangeable. Either the chassis advertises a USB-C design rating and this
                     // supply came in under it, or it advertises none at all and expects a barrel
                     // adapter - in which case no USB-C source would satisfy it, whatever it offers.
                     var reason = info.UsbcDesignRatingWatts > 0
-                        ? $"That is below the {info.UsbcDesignRatingWatts} W this machine's USB-C input is designed for."
-                        : "This chassis expects a barrel adapter and advertises no USB-C design rating, so HP's " +
-                          "own rule treats any USB-C source as below its requirement.";
+                        ? string.Format(Strings.G2_UsbcBelowDesignFormat, info.UsbcDesignRatingWatts)
+                        : Strings.G2_ChassisNoUsbc;
 
-                    verdict = supply + "The firmware describes it as USB-C rather than calling it " +
-                              $"under-rated. {reason}{required}";
+                    verdict = string.Format(Strings.G2_UsbcVerdictFormat, supply, reason, required);
                 }
                 else
                 {
-                    verdict = $"The firmware reports {connected} adapter as below this machine's requirement.{required}";
+                    verdict = string.Format(Strings.G2_BarrelVerdictFormat, connected, required);
                 }
 
                 // Deliberately does not say the platform is "protecting" the supply, which is what
@@ -188,11 +186,7 @@ namespace OmenCore.ViewModels
                 // with the clamp on, and the clamp is not even proportional to the shortfall. It is
                 // an advertised number, and telling a user their machine is defending itself sends
                 // them to buy a power supply they may well not need.
-                return verdict + " " +
-                       "Some HP firmware reduces CPU and GPU power limits in this state, which can look like a fault " +
-                       "in OmenCore or in the GPU driver but is a policy the firmware applies to a supply it does not " +
-                       "rate highly enough - a limit it advertises, rather than a measurement of what the supply can " +
-                       "deliver. If performance is lower than expected, this is the first thing to rule out.";
+                return verdict + " " + Strings.G2_AdapterPolicyNote;
             }
         }
 
@@ -266,11 +260,11 @@ namespace OmenCore.ViewModels
                 if (_gpuPowerLimits?.EnforcedWatts is not double enforced) return string.Empty;
 
                 var reference = _gpuPowerLimits.DefaultWatts is double standard
-                    ? $" of this card's own {standard:0.#} W limit"
+                    ? string.Format(Strings.G2_PowerLimitReferenceFormat, standard)
                     : string.Empty;
 
                 var when = _gpuPowerLimitReadAt is DateTime taken
-                    ? $" — read at {taken:HH:mm}"
+                    ? string.Format(Strings.G2_PowerLimitReadAtFormat, taken)
                     : string.Empty;
 
                 return $"{enforced:0.#} W{reference}{when}";
@@ -297,21 +291,15 @@ namespace OmenCore.ViewModels
 
                 if (limits.DefaultWatts is not double standard)
                 {
-                    return "Whether that is being held down cannot be told from here - nvidia-smi did " +
-                           "not report this card's default limit, so there is nothing to compare it to.";
+                    return Strings.G2_NoDefaultLimitRead;
                 }
 
                 if (!limits.EnforcedIsBelowDefault)
                 {
-                    return "That is the card's own limit, so nothing is holding it down at the moment " +
-                           "and the restart below has no clamp to discard.";
+                    return Strings.G2_AtOwnLimit;
                 }
 
-                return $"Something is holding this card {standard - enforced:0.#} W below its own limit. " +
-                       "With an under-rated supply attached, that is what the firmware's clamp looks " +
-                       "like, and it is what the restart below discards. Another tool that sets a GPU " +
-                       "power limit would look the same from here, and restarting the device would not " +
-                       "clear that one.";
+                return string.Format(Strings.G2_HeldBelowLimitFormat, standard - enforced);
             }
         }
 
@@ -325,23 +313,20 @@ namespace OmenCore.ViewModels
         {
             get
             {
-                if (_gpuPowerLimitBusy) return "Reading the current limit...";
+                if (_gpuPowerLimitBusy) return Strings.G2_ReadingLimit;
                 if (HasGpuPowerLimitReading) return string.Empty;
 
                 if (!_adapterOverrideService.CanReadPowerLimit)
                 {
-                    return "The current limit cannot be read here: nvidia-smi is not installed, and it " +
-                           "is the only thing that reports it. It ships with the NVIDIA driver.";
+                    return Strings.G2_NoNvidiaSmi;
                 }
 
                 if (_gpuPowerLimitUnanswered)
                 {
-                    return "The GPU did not report its power limit. It may have been busy waking up - " +
-                           "try again in a moment.";
+                    return Strings.G2_LimitUnanswered;
                 }
 
-                return "The GPU is parked and asleep. Reading its power limit wakes it, and the driver " +
-                       "keeps it awake for a couple of minutes afterwards.";
+                return Strings.G2_GpuAsleep;
             }
         }
 
@@ -349,7 +334,7 @@ namespace OmenCore.ViewModels
 
         /// <summary>Label that says which of the two things the button does.</summary>
         public string CheckGpuPowerLimitLabel =>
-            HasGpuPowerLimitReading ? "Read the limit again" : "Read the current limit";
+            HasGpuPowerLimitReading ? Strings.G2_ReadAgain : Strings.G2_ReadLimit;
 
         public bool CanCheckGpuPowerLimit =>
             !_gpuPowerLimitBusy && _adapterOverrideService.CanReadPowerLimit && !_adapterOverrideBusy;
@@ -485,9 +470,9 @@ namespace OmenCore.ViewModels
                 return target.Source switch
                 {
                     ApuPowerClampService.TargetSource.UserSetting =>
-                        $"the {target.Watts} W you set in AMD CPU Power Limits",
+                        string.Format(Strings.G2_ApuTargetUserFormat, target.Watts),
                     ApuPowerClampService.TargetSource.Firmware =>
-                        $"the {target.Watts} W this machine's firmware states for a loaded CPU and GPU",
+                        string.Format(Strings.G2_ApuTargetFirmwareFormat, target.Watts),
                     _ => string.Empty
                 };
             }
@@ -520,13 +505,11 @@ namespace OmenCore.ViewModels
 
                 if (CanOfferApuClampLift)
                 {
-                    return "This restarts the GPU to drop its clamp, and raises the four CPU power " +
-                           $"limits to {ApuClampTargetDescription}.";
+                    return string.Format(Strings.G2_OverrideScopeBothFormat, ApuClampTargetDescription);
                 }
 
                 var why = ApuClampReason();
-                return "This restarts the GPU to drop its clamp. The CPU side is not included" +
-                       (why.Length > 0 ? $": {why}" : ".");
+                return string.Format(Strings.G2_OverrideScopeGpuOnlyFormat, why.Length > 0 ? $": {why}" : ".");
             }
         }
 
@@ -537,27 +520,52 @@ namespace OmenCore.ViewModels
         {
             if (ApuClamp == null || !ApuPowerClampService.CpuIsSupported(RyzenControl.Family))
             {
-                return "this CPU is not one whose SMU power-limit messages are known";
+                return Strings.G2_ApuReasonCpuUnknown;
             }
 
             if (ApuClampTargetWatts == 0)
             {
-                return "there is no CPU power limit to aim at - set one in AMD CPU Power Limits, or " +
-                       "this machine's firmware would have to report its own";
+                return Strings.G2_ApuReasonNoTarget;
             }
 
             if (_adapterInfo is HpWmiBios.AdapterInfo info &&
                 !ApuPowerClampService.SupplyCanCarryIt(
                     info, _wmiBios?.SystemDesign?.ShippingAdapterPowerRatingWatts ?? 0, out var reason))
             {
-                // The service phrases these as whole sentences for a panel of their own; folded into
-                // the middle of one here, so the leading capital has to go.
-                return char.ToLowerInvariant(reason[0]) + reason[1..];
+                return LocalizeApuReason(reason);
             }
 
             return string.Empty;
         }
 
+        /// <summary>Maps ApuPowerClampService's English supply reason into the UI language.</summary>
+        private static string LocalizeApuReason(string reason)
+        {
+            if (string.IsNullOrWhiteSpace(reason))
+            {
+                return string.Empty;
+            }
+
+            if (reason.StartsWith("This is a USB-C Power Delivery supply", StringComparison.Ordinal))
+            {
+                return Strings.G2_ApuReasonUsbc;
+            }
+
+            if (reason.StartsWith("The connected adapter's rating was not reported", StringComparison.Ordinal))
+            {
+                return Strings.G2_ApuReasonNoRating;
+            }
+
+            var match = System.Text.RegularExpressions.Regex.Match(
+                reason,
+                @"The connected (\d+) W adapter is too far below this machine's (\d+) W requirement");
+            if (match.Success)
+            {
+                return string.Format(Strings.G2_ApuReasonTooLowFormat, match.Groups[1].Value, match.Groups[2].Value);
+            }
+
+            return char.ToLowerInvariant(reason[0]) + reason[1..];
+        }
         /// <summary>True while OmenCore will put the four SMU limits back after an event.</summary>
         public bool IsApuClampHeld => _apuClampService?.IsHeld == true;
 
@@ -587,9 +595,7 @@ namespace OmenCore.ViewModels
             _releaseApuClampCommand ??= new RelayCommand(_ =>
             {
                 _apuClampService?.Release();
-                ApuClampStatus = "OmenCore will no longer put the CPU power limits back. The " +
-                                 "platform reclaims them on the next resume or change of supply; a " +
-                                 "reboot restores stock.";
+                ApuClampStatus = Strings.G2_ReleaseApuClampStatus;
                 OnPropertyChanged(nameof(IsApuClampHeld));
             }, _ => IsApuClampHeld);
 
@@ -695,7 +701,7 @@ namespace OmenCore.ViewModels
             if (service == null) return;
 
             GpuTgpUnlockBusy = true;
-            GpuTgpUnlockStatus = "Pinning the firmware's power gates and asking the driver to re-read them...";
+            GpuTgpUnlockStatus = Strings.G2_TgpUnlockBusy;
 
             try
             {
@@ -775,7 +781,7 @@ namespace OmenCore.ViewModels
         private async Task ApplyAdapterOverrideAsync()
         {
             AdapterOverrideBusy = true;
-            AdapterOverrideStatus = "Restarting the GPU...";
+            AdapterOverrideStatus = Strings.GpuClamp_RestartingGpu;
 
             try
             {
@@ -857,8 +863,7 @@ namespace OmenCore.ViewModels
             BackgroundTimerRegistry.Register(
                 GpuClampWatchTimerName,
                 nameof(GpuClampViewModel),
-                "Watches for the adapter's GPU power clamp returning. Reads nothing while the dGPU " +
-                "is parked, so it cannot hold the card out of RTD3.",
+                Strings.G2_TgpWatchDescription,
                 (int)GpuClampWatchInterval.TotalMilliseconds,
                 BackgroundTimerTier.Optional);
         }
@@ -1075,30 +1080,29 @@ namespace OmenCore.ViewModels
         {
             var parts = new List<string>();
 
-            if (cpu == ClampLiftDecision.Apply) parts.Add("CPU limits raised and held");
-            if (gpu == ClampLiftDecision.Apply) parts.Add("GPU restarted while it was parked");
+            if (cpu == ClampLiftDecision.Apply) parts.Add(Strings.G2_AutoDetailCpuRaised);
+            if (gpu == ClampLiftDecision.Apply) parts.Add(Strings.G2_AutoDetailGpuRestarted);
 
             if (gpu == ClampLiftDecision.DeferredGpuAwake)
             {
-                parts.Add("the GPU was awake, so it was left alone - use the button when nothing needs it");
+                parts.Add(Strings.G2_AutoDetailGpuAwake);
             }
 
             if (gpu == ClampLiftDecision.DeferredDiscreteDisplay)
             {
-                parts.Add("the display is running on the discrete GPU, so restarting it would black " +
-                          "the screen - that one stays manual");
+                parts.Add(Strings.G2_AutoDetailDiscreteDisplay);
             }
 
             // Reported once for both halves: they refuse together, and saying it twice reads as two
             // separate problems rather than one machine that is simply not plugged in.
             if (cpu == ClampLiftDecision.DeferredOnBattery || gpu == ClampLiftDecision.DeferredOnBattery)
             {
-                parts.Add("running on battery, so there is no adapter clamp to lift");
+                parts.Add(Strings.G2_AutoDetailBattery);
             }
 
             return parts.Count == 0
                 ? string.Empty
-                : $"Automatic ({trigger}): {string.Join("; ", parts)}.";
+                : string.Format(Strings.G2_AutoSummaryFormat, trigger, string.Join("; ", parts));
         }
 
         /// <summary>

@@ -16,6 +16,34 @@ namespace OmenCore.Utils
     public static class DisplayNames
     {
         /// <summary>Localized GPU switch mode name for the selector and restart prompt.</summary>
+        /// <summary>Localized label for a built-in fan preset name; custom preset names pass through.</summary>
+        public static string FanPresetName(string? name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return name ?? string.Empty;
+            }
+
+            if (FanModeNameResolver.IsAutoAlias(name)) return Strings.TrayIcon_ModeAuto;
+            if (FanModeNameResolver.IsMaxAlias(name)) return Strings.TrayIcon_ModeMax;
+            if (FanModeNameResolver.IsQuietAlias(name)) return Strings.TrayIcon_ModeQuiet;
+            if (FanModeNameResolver.IsCustomAlias(name)) return Strings.TrayIcon_ModeCustom;
+            return name;
+        }
+
+        /// <summary>Localized label for a built-in performance mode name.</summary>
+        public static string PerformanceModeName(string? name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return name ?? string.Empty;
+            }
+
+            if (PerformanceModeNameResolver.IsQuietAlias(name)) return Strings.PerformanceMode_Quiet;
+            if (PerformanceModeNameResolver.IsBalancedAlias(name)) return Strings.PerformanceMode_Balanced;
+            if (PerformanceModeNameResolver.IsPerformanceAlias(name)) return Strings.PerformanceMode_Performance;
+            return name;
+        }
         public static string GpuSwitchName(GpuSwitchMode mode) => mode switch
         {
             GpuSwitchMode.Hybrid => Strings.GpuSwitch_ModeHybrid,

@@ -119,6 +119,40 @@ namespace OmenCore
         /// - CultureInfo.CurrentCulture alone does not reach those. Must run before any window,
         /// timer, or background thread is created, so it's the first thing this constructor does.
         /// </summary>
+        /// <summary>
+        /// Hands the localized toast wording to the Core notification service, which cannot
+        /// reference the application's resource file itself.
+        /// </summary>
+        private static void ApplyNotificationText()
+        {
+            NotificationText.GameProfileActivatedTitle = Strings.Notify_GameProfileActivatedTitle;
+            NotificationText.GameProfileAppliedFormat = Strings.Notify_GameProfileAppliedFormat;
+            NotificationText.GameProfileInfoFormat = Strings.Notify_GameProfileInfoFormat;
+            NotificationText.GameClosedTitle = Strings.Notify_GameClosedTitle;
+            NotificationText.GameDefaultsRestored = Strings.Notify_GameDefaultsRestored;
+            NotificationText.GameClosedInfoFormat = Strings.Notify_GameClosedInfoFormat;
+            NotificationText.FanModeTitleFormat = Strings.Notify_FanModeTitleFormat;
+            NotificationText.PerfModeTitleFormat = Strings.Notify_PerfModeTitleFormat;
+            NotificationText.ChangedViaFormat = Strings.Notify_ChangedViaFormat;
+            NotificationText.MemoryFreedFormat = Strings.Notify_MemoryFreedFormat;
+            NotificationText.MemoryOpsFormat = Strings.Notify_MemoryOpsFormat;
+            NotificationText.HighTemperatureTitle = Strings.Notify_HighTemperatureTitle;
+            NotificationText.TemperatureFormat = Strings.Notify_TemperatureFormat;
+            NotificationText.HighTemperatureThresholdFormat = Strings.Notify_HighTemperatureThresholdFormat;
+            NotificationText.HighTemperatureInfoFormat = Strings.Notify_HighTemperatureInfoFormat;
+            NotificationText.ClampReturnedTitle = Strings.Notify_ClampReturnedTitle;
+            NotificationText.ClampReturnedBodyFormat = Strings.Notify_ClampReturnedBodyFormat;
+            NotificationText.ClampReturnedHint = Strings.Notify_ClampReturnedHint;
+            NotificationText.ClampReturnedInfoFormat = Strings.Notify_ClampReturnedInfoFormat;
+            NotificationText.CriticalTitleFormat = Strings.Notify_CriticalTitleFormat;
+            NotificationText.CriticalTemperatureFormat = Strings.Notify_CriticalTemperatureFormat;
+            NotificationText.CriticalBody = Strings.Notify_CriticalBody;
+            NotificationText.CriticalInfoFormat = Strings.Notify_CriticalInfoFormat;
+            NotificationText.ThermalProtectionTitleFormat = Strings.Notify_ThermalProtectionTitleFormat;
+            NotificationText.ThermalProtectionBodyFormat = Strings.Notify_ThermalProtectionBodyFormat;
+            NotificationText.ThermalProtectionInfoFormat = Strings.Notify_ThermalProtectionInfoFormat;
+        }
+
         private static void ForceInvariantNumberFormatting()
         {
             CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
@@ -304,6 +338,7 @@ namespace OmenCore
             // invariant (see ForceInvariantNumberFormatting), so a Russian window still shows
             // "95.0%".
             OmenCore.Localization.Language.Apply(Configuration.Config.Language);
+            ApplyNotificationText();
             Logging.Info($"UI language: {Configuration.Config.Language} " +
                          $"(culture {CultureInfo.CurrentUICulture.Name})");
             
@@ -646,7 +681,7 @@ namespace OmenCore
             {
                 IconSource = new System.Windows.Media.Imaging.BitmapImage(
                     new Uri("pack://application:,,,/Assets/OmenCore.ico")),
-                ToolTipText = "OmenCore - Gaming Laptop Control\n\nLeft-click: Quick Popup\nDouble-click: Open Dashboard\nRight-click: Menu"
+                ToolTipText = Strings.L2_TrayTooltip
             };
             
             // Retry tray icon visibility after boot (Windows sometimes fails to show icons during login)
@@ -1175,7 +1210,7 @@ namespace OmenCore
 
         private void PromptDriverInstallation()
         {
-            var recommendedBackend = "PawnIO (bundled with installer builds)";
+            var recommendedBackend = Strings.L2_PawnIoBundled;
 
             var result = MessageBox.Show(
                 string.Format(Strings.App_DriverPromptBody, recommendedBackend),
@@ -1479,17 +1514,12 @@ namespace OmenCore
 
                 bool rtssRunning = IsRtssRunning();
                 string detail = rtssRunning
-                    ? "RivaTuner Statistics Server (RTSS) is running and its D3D hooks have corrupted OmenCore's render thread."
-                    : "A D3D/DXGI overlay hook (possibly RTSS, an overlay tool, or a game anti-cheat) has corrupted OmenCore's render thread.";
+                    ? Strings.L2_RtssDetected
+                    : Strings.L2_OverlayDetected;
 
                 MessageBox.Show(
-                    $"{detail}\n\n" +
-                    "OmenCore has switched to software rendering for this session to prevent further crashes.\n\n" +
-                    "To permanently fix this:\n" +
-                    "  • Close RTSS / MSI Afterburner overlay before starting OmenCore, OR\n" +
-                    "  • Enable 'Software Rendering' in OmenCore Settings → General\n\n" +
-                    "OmenCore will continue running. Restart the app for full GPU-accelerated rendering once the overlay is closed.",
-                    "OmenCore — Render Conflict Detected",
+                    string.Format(Strings.L2_SoftwareRenderingBodyFormat, detail),
+                    Strings.L2_RenderConflictTitle,
                     MessageBoxButton.OK,
                     MessageBoxImage.Warning);
                 return;

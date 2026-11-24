@@ -75,7 +75,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="MODE" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.Osd_LabelMode}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding PerformanceMode}" FontSize="12" Foreground="#FFD700" FontFamily="{StaticResource AppFontFamily}" FontWeight="SemiBold" HorizontalAlignment="Right"/>
             </Grid>
             
@@ -86,7 +86,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="FANS" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.Osd_LabelFans}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding FanMode}" FontSize="12" Foreground="#00BFFF" FontFamily="{StaticResource AppFontFamily}" FontWeight="SemiBold" HorizontalAlignment="Right"/>
             </Grid>
             
@@ -163,7 +163,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="TJUNC" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.Osd_LabelHotspot}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding GpuHotspotTemp, StringFormat={}{0:F0}°}" FontSize="13" Foreground="{Binding GpuHotspotTempColor}" FontFamily="{StaticResource AppFontFamily}" FontWeight="SemiBold" HorizontalAlignment="Right"/>
             </Grid>
             
@@ -174,7 +174,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="VRAM" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.Osd_LabelVram}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding VramUsage}" FontSize="12" Foreground="#AB47BC" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium" HorizontalAlignment="Right"/>
             </Grid>
             
@@ -185,7 +185,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="PKG" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.Osd_LabelPackage}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding PackagePower}" FontSize="12" Foreground="#FFA726" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium" HorizontalAlignment="Right"/>
             </Grid>
             
@@ -196,7 +196,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="FAN" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.Osd_LabelFan}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding FanSpeed}" FontSize="12" Foreground="#AAAAAA" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium" HorizontalAlignment="Right"/>
             </Grid>
             
@@ -218,7 +218,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="BAT" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.Osd_LabelBattery}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding BatteryPercent}" FontSize="12" Foreground="{Binding BatteryColor}" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium" HorizontalAlignment="Right"/>
             </Grid>
             
@@ -248,7 +248,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="FT" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.Osd_LabelFrameTime}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding FrametimeDisplay}" FontSize="12" Foreground="#66BB6A" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium" HorizontalAlignment="Right"/>
             </Grid>
             
@@ -259,7 +259,7 @@
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="*" SharedSizeGroup="MetricValue"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="PING" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
+                <TextBlock Grid.Column="0" Text="{x:Static loc:Strings.Osd_LabelPing}" FontSize="11" Foreground="#888888" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium"/>
                 <TextBlock Grid.Column="2" Text="{Binding NetworkLatency}" FontSize="12" Foreground="{Binding NetworkLatencyColor}" FontFamily="{StaticResource AppFontFamily}" FontWeight="Medium" HorizontalAlignment="Right"/>
             </Grid>
             

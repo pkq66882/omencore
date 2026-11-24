@@ -345,17 +345,17 @@ namespace OmenCore.Controls
                     }
                     else if (batteryHealth >= 80)
                     {
-                        BatteryHealthStatus.Text = "Good";
+                        BatteryHealthStatus.Text = Strings.Dashboard_BatteryHealthGood;
                         BatteryHealthStatus.Foreground = Brushes.LimeGreen;
                     }
                     else if (batteryHealth >= 50)
                     {
-                        BatteryHealthStatus.Text = "Fair";
+                        BatteryHealthStatus.Text = Strings.Dashboard_BatteryHealthFair;
                         BatteryHealthStatus.Foreground = Brushes.Orange;
                     }
                     else
                     {
-                        BatteryHealthStatus.Text = "Replace";
+                        BatteryHealthStatus.Text = Strings.Dashboard_BatteryHealthReplace;
                         BatteryHealthStatus.Foreground = Brushes.Red;
                     }
                 }
@@ -536,10 +536,10 @@ namespace OmenCore.Controls
             if (GpuTempValue != null) GpuTempValue.Text = "--";
             if (GpuTempStatus != null) GpuTempStatus.Text = Strings.DashboardChart_NoData;
             if (PowerEfficiencyValue != null) PowerEfficiencyValue.Text = "--";
-            if (PowerEfficiencyRating != null) PowerEfficiencyRating.Text = "Unknown";
+            if (PowerEfficiencyRating != null) PowerEfficiencyRating.Text = Strings.Dashboard_Unknown;
             if (BatteryCyclesValue != null) BatteryCyclesValue.Text = "--";
             if (BatteryLifeEstimate != null) BatteryLifeEstimate.Text = Strings.DashboardChart_NoData;
-            if (ThermalStatusValue != null) ThermalStatusValue.Text = "Unknown";
+            if (ThermalStatusValue != null) ThermalStatusValue.Text = Strings.Dashboard_Unknown;
             if (ThermalEfficiency != null) ThermalEfficiency.Text = Strings.DashboardChart_NoData;
             
             // System Activity fields

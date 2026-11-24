@@ -145,7 +145,7 @@ namespace OmenCore.Views
             _curvePresetName = presetName;
             var tooltip = string.IsNullOrWhiteSpace(presetName)
                 ? Strings.QuickPopup_ApplySavedCurve
-                : $"Curve: {presetName}";
+                : string.Format(Strings.QuickPopup_CurveTooltipFormat, DisplayNames.FanPresetName(presetName));
             if (!string.Equals(FanCustomBtn.ToolTip as string, tooltip, StringComparison.Ordinal))
             {
                 FanCustomBtn.ToolTip = tooltip;
@@ -297,11 +297,11 @@ namespace OmenCore.Views
         private void UpdatePerformanceModeTooltips()
         {
             var preservedFanText = string.IsNullOrWhiteSpace(_curvePresetName)
-                ? "your current fan preset"
-                : $"the active curve preset '{_curvePresetName}'";
+                ? Strings.QuickPopup_PresetCurrent
+                : string.Format(Strings.QuickPopup_PresetActiveFormat, DisplayNames.FanPresetName(_curvePresetName));
 
             var tooltip = _isFanPerformanceLinked
-                ? "Apply this performance mode. Linked mode can also update fan policy."
+                ? Strings.QuickPopup_ApplyLinkedTip
                 : string.Format(Strings.QuickPopup_ApplyModeFormat, preservedFanText);
 
             QuickQuietBtn.ToolTip = tooltip;
@@ -365,13 +365,13 @@ namespace OmenCore.Views
 
             if (target == null)
             {
-                RefreshRateText.Text = currentRate > 0 ? $"{currentRate}Hz" : "N/A";
+                RefreshRateText.Text = currentRate > 0 ? $"{currentRate}Hz" : "—";
                 RefreshRateBtn.ToolTip = Strings.QuickPopup_ToggleRefreshRate;
                 return;
             }
 
             var targetLabel = $"D{_activeDisplayTargetIndex + 1}";
-            RefreshRateText.Text = currentRate > 0 ? $"{targetLabel} {currentRate}Hz" : $"{targetLabel} N/A";
+            RefreshRateText.Text = currentRate > 0 ? $"{targetLabel}{Environment.NewLine}{currentRate}Hz" : $"{targetLabel} —";
             RefreshRateBtn.ToolTip = string.Format(Strings.QuickPopup_ToggleRefreshRateFormat, target.FriendlyName);
         }
 

@@ -287,8 +287,8 @@ namespace OmenCore.Controls
 
             var restored = _fanVerifier.RestoreFanControlAfterCalibration();
             ProgressText.Text = restored
-                ? "BIOS auto fan control restored"
-                : "Could not restore BIOS auto fan control from this backend";
+                ? Strings.FanCalib_BiosAutoRestored
+                : Strings.FanCalib_BiosAutoRestoreFailed;
             ProgressGroup.Visibility = Visibility.Visible;
             UpdateFanStatus();
         }

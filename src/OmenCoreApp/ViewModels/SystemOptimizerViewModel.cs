@@ -669,8 +669,8 @@ namespace OmenCore.ViewModels
             }
 
             var confirmation = MessageBox.Show(
-                $"This will apply {pendingItems.Count} optimization(s) in {categoryName}.\n\nContinue?",
-                $"Apply {categoryName}",
+                string.Format(Strings.O2_ApplyConfirmBodyFormat, pendingItems.Count, categoryName),
+                string.Format(Strings.O2_ApplyConfirmTitleFormat, categoryName),
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
 
@@ -766,10 +766,8 @@ namespace OmenCore.ViewModels
         private async Task RevertAllAsync()
         {
             var msgResult = MessageBox.Show(
-                "This will revert ALL optimizations to Windows defaults.\n\n" +
-                "Your backed-up settings will be restored.\n\n" +
-                "Continue?",
-                "Revert All Optimizations",
+                Strings.O2_RevertAllBody,
+                Strings.O2_RevertAllTitle,
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
             
@@ -789,7 +787,7 @@ namespace OmenCore.ViewModels
             catch (OperationCanceledException)
             {
                 _logger.Error("Revert operation timed out after 60 seconds");
-                SetStatusFailed("Revert timed out — check system state manually");
+                SetStatusFailed(Strings.O2_RevertTimeout);
             }
             catch (Exception ex)
             {
@@ -943,7 +941,7 @@ namespace OmenCore.ViewModels
 
                 if (showStatus)
                 {
-                    SetStatusDone("Preflight updated");
+                    SetStatusDone(Strings.Optimizer_PreflightUpdated);
                 }
             }
             catch (Exception ex)
@@ -964,7 +962,7 @@ namespace OmenCore.ViewModels
                 var exportPath = await _optimizerService.ExportOptimizationReportAsync(_expectedStateForDrift);
                 if (string.IsNullOrWhiteSpace(exportPath))
                 {
-                    SetStatusFailed("Could not export optimization report");
+                    SetStatusFailed(Strings.Optimizer_ExportReportNoPath);
                     return;
                 }
 
@@ -983,7 +981,7 @@ namespace OmenCore.ViewModels
             var path = SystemOptimizerReportActionGuard.NormalizePath(LastExportedReportPath);
             if (!SystemOptimizerReportActionGuard.CanOpenReport(path))
             {
-                SetStatusFailed("Report file not found");
+                SetStatusFailed(Strings.Optimizer_ReportFileNotFound);
                 return;
             }
 
@@ -993,7 +991,7 @@ namespace OmenCore.ViewModels
                 {
                     UseShellExecute = true
                 });
-                SetStatusDone("Opened exported report");
+                SetStatusDone(Strings.Optimizer_ReportOpened);
             }
             catch (Exception ex)
             {
@@ -1007,14 +1005,14 @@ namespace OmenCore.ViewModels
             var path = SystemOptimizerReportActionGuard.NormalizePath(LastExportedReportPath);
             if (!SystemOptimizerReportActionGuard.CanCopyPath(path))
             {
-                SetStatusFailed("No report path to copy");
+                SetStatusFailed(Strings.Optimizer_NoReportPathToCopy);
                 return;
             }
 
             try
             {
                 Clipboard.SetText(path);
-                SetStatusDone("Copied report path to clipboard");
+                SetStatusDone(Strings.Optimizer_ReportPathCopied);
             }
             catch (Exception ex)
             {

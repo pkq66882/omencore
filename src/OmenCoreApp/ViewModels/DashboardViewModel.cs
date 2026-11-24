@@ -42,7 +42,7 @@ namespace OmenCore.ViewModels
         private bool _monitoringLowOverhead;
         private string _currentPerformanceMode = "Auto";
         private string _currentFanMode = "Auto";
-        private string _modeLinkStatus = "Decoupled fan/perf";
+        private string _modeLinkStatus = Strings.Dashboard_ModeLinkDecoupled;
         private bool _disposed;
         private volatile bool _pendingUIUpdate; // Throttle BeginInvoke backlog
         private volatile bool _pendingFanTelemetryUIUpdate;
@@ -440,8 +440,8 @@ namespace OmenCore.ViewModels
 
                 var reason = LatestMonitoringSample?.CpuTemperatureSourceReason;
                 return string.IsNullOrWhiteSpace(reason)
-                    ? $"CPU temperature source: {source}"
-                    : $"CPU temperature source: {source}\n{reason}";
+                    ? string.Format(Strings.DB2_CpuSourceFormat, source)
+                    : string.Format(Strings.DB2_CpuSourceReasonFormat, source, reason);
             }
         }
 
@@ -510,7 +510,7 @@ namespace OmenCore.ViewModels
             };
 
         public string CpuClockSummary => LatestMonitoringSample == null || LatestMonitoringSample.CpuCoreClocksMhz.Count == 0
-            ? "Per-core clocks unavailable"
+            ? Strings.Main_PerCoreClocksUnavailable
             : string.Join(", ", LatestMonitoringSample.CpuCoreClocksMhz.Select((c, i) => $"C{i + 1}:{c:F0}MHz"));
         
         /// <summary>
@@ -522,7 +522,7 @@ namespace OmenCore.ViewModels
         /// Human-readable throttling status for display.
         /// </summary>
         public string ThrottlingSummary => LatestMonitoringSample == null 
-            ? "Unknown" 
+            ? Strings.Dashboard_Unknown
             : LatestMonitoringSample.ThrottlingStatus;
         
         /// <summary>
@@ -533,12 +533,12 @@ namespace OmenCore.ViewModels
         
         // Power consumption and efficiency properties
         public string PowerConsumptionSummary => LatestMonitoringSample == null 
-            ? "Power telemetry unavailable"
+            ? Strings.Dashboard_PowerTelemetryUnavailable
             : LatestMonitoringSample.GpuTemperatureState == TelemetryDataState.Inactive
-                ? $"CPU: {LatestMonitoringSample.CpuPowerWatts:F0}W • GPU: inactive (Optimus)"
+                ? string.Format(Strings.Dashboard_PowerInactiveFormat, LatestMonitoringSample.CpuPowerWatts)
             : LatestMonitoringSample.CpuPowerWatts > 0 || LatestMonitoringSample.GpuPowerWatts > 0
-                ? $"CPU: {LatestMonitoringSample.CpuPowerWatts:F0}W • GPU: {LatestMonitoringSample.GpuPowerWatts:F0}W • Total: {LatestMonitoringSample.CpuPowerWatts + LatestMonitoringSample.GpuPowerWatts:F0}W"
-                : "Power sensors unavailable";
+                ? string.Format(Strings.Dashboard_PowerLineFormat, LatestMonitoringSample.CpuPowerWatts, LatestMonitoringSample.GpuPowerWatts, LatestMonitoringSample.CpuPowerWatts + LatestMonitoringSample.GpuPowerWatts)
+                : Strings.Dashboard_PowerSensorsUnavailable;
 
         public string PowerTotalDisplay
         {
@@ -670,7 +670,7 @@ namespace OmenCore.ViewModels
         {
             if (telemetry.RpmState == TelemetryDataState.Unavailable)
             {
-                return "RPM unavailable (fan responding)";
+                return Strings.DB2_RpmUnavailable;
             }
 
             return $"{telemetry.SpeedRpm} RPM";

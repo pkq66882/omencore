@@ -103,27 +103,27 @@ namespace OmenCore.ViewModels
             var sb = new StringBuilder();
 
             sb.AppendLine(comparison.AvailableSourceCount == 0
-                ? "No CPU temperature source responded."
-                : $"{comparison.AvailableSourceCount} source(s) responded.");
+                ? Strings.T2_NoSource
+                : string.Format(Strings.T2_SourceCountFormat, comparison.AvailableSourceCount));
 
             sb.AppendLine(comparison.WmiBiosTempC.HasValue
-                ? $"WMI BIOS: {comparison.WmiBiosTempC.Value:F1}°C"
-                : "WMI BIOS: unavailable");
+                ? string.Format(Strings.T2_WmiFormat, comparison.WmiBiosTempC.Value)
+                : Strings.T2_WmiUnavailable);
 
             sb.AppendLine(comparison.AcpiTempC.HasValue
-                ? $"ACPI Thermal Zone ({comparison.AcpiZoneName}): {comparison.AcpiTempC.Value:F1}°C"
-                : "ACPI Thermal Zone: unavailable");
+                ? string.Format(Strings.T2_AcpiFormat, comparison.AcpiZoneName, comparison.AcpiTempC.Value)
+                : Strings.T2_AcpiUnavailable);
 
             sb.AppendLine(comparison.LhmTempC.HasValue
-                ? $"LibreHardwareMonitor: {comparison.LhmTempC.Value:F1}°C"
-                : "LibreHardwareMonitor: unavailable");
+                ? string.Format(Strings.T2_LhmFormat, comparison.LhmTempC.Value)
+                : Strings.T2_LhmUnavailable);
 
-            sb.AppendLine($"Currently trusted: {comparison.CurrentAuthoritySource}" +
+            sb.AppendLine(string.Format(Strings.T2_TrustedFormat, comparison.CurrentAuthoritySource) +
                 (string.IsNullOrEmpty(comparison.CurrentAuthorityReason) ? "" : $" ({comparison.CurrentAuthorityReason})"));
 
             sb.Append(comparison.SourcesDisagreeMaterially
-                ? $"⚠ Sources disagree by more than {CpuTemperatureSourceComparison.DisagreementThresholdC:F0}°C — the trusted reading may not be the right one for this board."
-                : "✓ Available sources agree within a plausible margin.");
+                ? string.Format(Strings.T2_DisagreeFormat, CpuTemperatureSourceComparison.DisagreementThresholdC)
+                : Strings.T2_Agree);
 
             return sb.ToString();
         }

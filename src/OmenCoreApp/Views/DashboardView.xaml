@@ -153,7 +153,7 @@
                 <StackPanel Grid.Column="0" Orientation="Horizontal">
                     <Path Data="{StaticResource IconFan}" Width="18" Height="18" Fill="{StaticResource AccentBlueBrush}" Stretch="Uniform" VerticalAlignment="Center" Margin="0,0,8,0"/>
                     <StackPanel>
-                        <TextBlock Text="FANS" Style="{StaticResource Label}" FontSize="10" Opacity="0.7"/>
+                        <TextBlock Text="{x:Static loc:Strings.X2_DashboardFans}" Style="{StaticResource Label}" FontSize="10" Opacity="0.7"/>
                         <TextBlock Text="{Binding FanSummary}" FontSize="12" Foreground="{StaticResource TextPrimaryBrush}"/>
                     </StackPanel>
                 </StackPanel>

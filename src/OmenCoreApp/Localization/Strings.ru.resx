@@ -9298,4 +9298,1573 @@
   <data name="Settings_Detecting" xml:space="preserve">
     <value>Обнаружение...</value>
   </data>
+  <data name="QuickPopup_PresetCurrent" xml:space="preserve">
+    <value>ваш текущий профиль вентиляторов</value>
+  </data>
+  <data name="QuickPopup_PresetActiveFormat" xml:space="preserve">
+    <value>активный профиль кривой «{0}»</value>
+  </data>
+  <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
+    <value>Применить этот режим производительности. В связанном режиме политика вентиляторов тоже обновляется.</value>
+  </data>
+  <data name="Main_EventCustomPresetSavedFormat" xml:space="preserve">
+    <value>Пользовательский профиль «{0}» сохранён</value>
+  </data>
+  <data name="Main_EventLightingProfilePushedFormat" xml:space="preserve">
+    <value>Профиль подсветки «{0}» применён</value>
+  </data>
+  <data name="Main_EventLightingProfilePushedByPerfFormat" xml:space="preserve">
+    <value>Профиль подсветки «{0}» применён режимом производительности</value>
+  </data>
+  <data name="Main_EventDefaultsRestored" xml:space="preserve">
+    <value>Настройки по умолчанию восстановлены</value>
+  </data>
+  <data name="Main_EventConfigurationReloaded" xml:space="preserve">
+    <value>Конфигурация перезагружена</value>
+  </data>
+  <data name="Main_EventRestorePointCreated" xml:space="preserve">
+    <value>Точка восстановления системы создана</value>
+  </data>
+  <data name="Main_EventRestorePointFailed" xml:space="preserve">
+    <value>Не удалось создать точку восстановления</value>
+  </data>
+  <data name="Main_EventCleanupCancelled" xml:space="preserve">
+    <value>Очистка OGH отменена</value>
+  </data>
+  <data name="Main_EventCleanupDryRunComplete" xml:space="preserve">
+    <value>Проверка очистки OMEN завершена</value>
+  </data>
+  <data name="Main_EventCleanupComplete" xml:space="preserve">
+    <value>Очистка OMEN Gaming Hub завершена</value>
+  </data>
+  <data name="Main_EventCleanupCompletedWithErrors" xml:space="preserve">
+    <value>Очистка OMEN завершена с ошибками</value>
+  </data>
+  <data name="Main_EventCleanupFailed" xml:space="preserve">
+    <value>Очистка OMEN не удалась</value>
+  </data>
+  <data name="Main_EventLogitechDiscoveredFormat" xml:space="preserve">
+    <value>Обнаружено устройств Logitech: {0}</value>
+  </data>
+  <data name="Main_EventConfigExported" xml:space="preserve">
+    <value>✓ Конфигурация экспортирована</value>
+  </data>
+  <data name="Main_EventExportFailedFormat" xml:space="preserve">
+    <value>✗ Ошибка экспорта: {0}</value>
+  </data>
+  <data name="Main_EventImportInvalidFormat" xml:space="preserve">
+    <value>✗ Ошибка импорта: неверный формат файла</value>
+  </data>
+  <data name="Main_EventConfigImported" xml:space="preserve">
+    <value>✓ Конфигурация импортирована — рекомендуется перезапуск</value>
+  </data>
+  <data name="Main_EventImportFailedFormat" xml:space="preserve">
+    <value>✗ Ошибка импорта: {0}</value>
+  </data>
+  <data name="Main_EventDiagBundleCreated" xml:space="preserve">
+    <value>✓ Пакет диагностики создан, сведения о модели скопированы</value>
+  </data>
+  <data name="Main_EventReportModelExportFailed" xml:space="preserve">
+    <value>✗ Не удалось отправить модель: ошибка экспорта</value>
+  </data>
+  <data name="Main_EventReportModelFailedFormat" xml:space="preserve">
+    <value>✗ Не удалось отправить модель: {0}</value>
+  </data>
+  <data name="Main_EventTelemetryExported" xml:space="preserve">
+    <value>✓ Телеметрия экспортирована</value>
+  </data>
+  <data name="Main_EventTelemetryExportFailed" xml:space="preserve">
+    <value>✗ Не удалось экспортировать телеметрию</value>
+  </data>
+  <data name="Main_EventSafeModeBlockedFormat" xml:space="preserve">
+    <value>🛡 Безопасный режим заблокировал запись из трея: {0}</value>
+  </data>
+  <data name="Main_EventSafeModeLifted" xml:space="preserve">
+    <value>🛡 Безопасный режим снят — мониторинг в норме</value>
+  </data>
+  <data name="Main_EventSafeModeStartupActive" xml:space="preserve">
+    <value>🛡 Активен безопасный режим запуска — запись в оборудование временно ограничена</value>
+  </data>
+  <data name="Main_EventSafeModeExpired" xml:space="preserve">
+    <value>🛡 Безопасный режим завершён — окно запуска истекло</value>
+  </data>
+  <data name="Main_FanModeTitle" xml:space="preserve">
+    <value>Режим вентиляторов</value>
+  </data>
+  <data name="Main_EventFanModeFailedFormat" xml:space="preserve">
+    <value>Ошибка режима вентиляторов: {0}</value>
+  </data>
+  <data name="Main_FanModeApplyFailedFormat" xml:space="preserve">
+    <value>Не удалось применить «{0}». Проверьте состояние бэкенда на странице диагностики.</value>
+  </data>
+  <data name="Main_FanModeApplyFailedVictus16S0Format" xml:space="preserve">
+    <value>Не удалось применить «{0}». Моделям Victus 16-s0 может требоваться проверка пути прошивки: запустите диагностику и пришлите отчёт и журналы WMI по формату из руководства.</value>
+  </data>
+  <data name="Main_FanModeApplyFailedVictusFormat" xml:space="preserve">
+    <value>Не удалось применить «{0}». Для моделей Victus пришлите вывод диагностики по формату из руководства, чтобы проверить сопоставление бэкенда.</value>
+  </data>
+  <data name="Main_EventFanModeFormat" xml:space="preserve">
+    <value>🌀 Режим вентиляторов: {0}</value>
+  </data>
+  <data name="Main_EventFanModeIgnoredFormat" xml:space="preserve">
+    <value>⚠ Запрос режима вентиляторов проигнорирован: профиль для «{0}» не найден</value>
+  </data>
+  <data name="Main_FanModePresetNotFoundFormat" xml:space="preserve">
+    <value>Не удалось определить профиль для «{0}».</value>
+  </data>
+  <data name="Main_EventPerfModeFormat" xml:space="preserve">
+    <value>⚡ Производительность: {0}</value>
+  </data>
+  <data name="Main_EventProfileFormat" xml:space="preserve">
+    <value>🎮 Профиль: {0} (вентиляторы: {1})</value>
+  </data>
+  <data name="Main_GpuPowerTitle" xml:space="preserve">
+    <value>Питание GPU</value>
+  </data>
+  <data name="Main_EventGpuPowerFormat" xml:space="preserve">
+    <value>⚡ Питание GPU: {0}</value>
+  </data>
+  <data name="Main_GpuPowerSetFormat" xml:space="preserve">
+    <value>Установлено: {0}</value>
+  </data>
+  <data name="Main_EventKeyboardFormat" xml:space="preserve">
+    <value>💡 Клавиатура: {0}</value>
+  </data>
+  <data name="Main_EventProfileAppliedFormat" xml:space="preserve">
+    <value>🎮 Профиль {0} для {1}</value>
+  </data>
+  <data name="Main_EventDefaultsRestoredGame" xml:space="preserve">
+    <value>🎮 Настройки по умолчанию восстановлены</value>
+  </data>
+  <data name="Main_EventFanHotkeyFormat" xml:space="preserve">
+    <value>🌀 Вентиляторы: {0} (горячая клавиша)</value>
+  </data>
+  <data name="Main_EventFanMaxCoolingHotkey" xml:space="preserve">
+    <value>🌀 Вентиляторы: максимальное охлаждение (горячая клавиша)</value>
+  </data>
+  <data name="Main_EventPerfHotkeyFormat" xml:space="preserve">
+    <value>⚡ Производительность: {0} (горячая клавиша)</value>
+  </data>
+  <data name="Main_EventBoostHotkey" xml:space="preserve">
+    <value>🔥 Режим Boost активирован (горячая клавиша)</value>
+  </data>
+  <data name="Main_EventQuietHotkey" xml:space="preserve">
+    <value>🤫 Тихий режим активирован (горячая клавиша)</value>
+  </data>
+  <data name="Main_EventProfileHotkeyFormat" xml:space="preserve">
+    <value>Профиль: {0} (горячая клавиша)</value>
+  </data>
+  <data name="Main_EventCustomProfileFailedFormat" xml:space="preserve">
+    <value>Ошибка пользовательского профиля: {0}</value>
+  </data>
+  <data name="Main_CustomPresetApplyFailedFormat" xml:space="preserve">
+    <value>Не удалось применить пользовательский профиль вентиляторов «{0}». Проверьте состояние бэкенда на странице диагностики.</value>
+  </data>
+  <data name="Main_EventQuietSafetyMax" xml:space="preserve">
+    <value>🌡️ Защита тихого режима: вентиляторы → максимум (критическая температура)</value>
+  </data>
+  <data name="Main_EventQuietSafetyMaxFailed" xml:space="preserve">
+    <value>⚠️ Защита тихого режима: критическая температура, но максимальное охлаждение не применилось — проверьте управление вентиляторами</value>
+  </data>
+  <data name="Main_EventQuietSafetyRestored" xml:space="preserve">
+    <value>✅ Защита тихого режима: вентиляторы → тихо (температура в норме)</value>
+  </data>
+  <data name="Main_HotkeyOsdAutoBios" xml:space="preserve">
+    <value>Авто (управление BIOS)</value>
+  </data>
+  <data name="Main_HotkeyOsdOmenKey" xml:space="preserve">
+    <value>Клавиша OMEN</value>
+  </data>
+  <data name="Main_EventHotkeysWindowActive" xml:space="preserve">
+    <value>⌨️ Горячие клавиши активны (окно в фокусе)</value>
+  </data>
+  <data name="Main_EventHotkeysGlobalEnabled" xml:space="preserve">
+    <value>⌨️ Глобальные горячие клавиши включены</value>
+  </data>
+  <data name="Main_EventHotkeysWindowInactive" xml:space="preserve">
+    <value>⌨️ Горячие клавиши неактивны (окно потеряло фокус)</value>
+  </data>
+  <data name="Main_HotkeyOsdTriggeredFormat" xml:space="preserve">
+    <value>через горячую клавишу ({0})</value>
+  </data>
+  <data name="Notify_GameProfileActivatedTitle" xml:space="preserve">
+    <value>Игровой профиль активирован</value>
+  </data>
+  <data name="Notify_GameProfileAppliedFormat" xml:space="preserve">
+    <value>Применён профиль: {0}</value>
+  </data>
+  <data name="Notify_GameProfileInfoFormat" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="Notify_GameClosedTitle" xml:space="preserve">
+    <value>Игра закрыта</value>
+  </data>
+  <data name="Notify_GameDefaultsRestored" xml:space="preserve">
+    <value>Настройки по умолчанию восстановлены</value>
+  </data>
+  <data name="Notify_GameClosedInfoFormat" xml:space="preserve">
+    <value>{0}: настройки по умолчанию восстановлены</value>
+  </data>
+  <data name="Notify_FanModeTitleFormat" xml:space="preserve">
+    <value>Режим вентиляторов: {0}</value>
+  </data>
+  <data name="Notify_PerfModeTitleFormat" xml:space="preserve">
+    <value>Производительность: {0}</value>
+  </data>
+  <data name="Notify_ChangedViaFormat" xml:space="preserve">
+    <value>Источник изменения: {0}</value>
+  </data>
+  <data name="Notify_MemoryFreedFormat" xml:space="preserve">
+    <value>Освобождено: {0}</value>
+  </data>
+  <data name="Notify_MemoryOpsFormat" xml:space="preserve">
+    <value>Выполнено операций очистки: {0}</value>
+  </data>
+  <data name="Notify_HighTemperatureTitle" xml:space="preserve">
+    <value>Предупреждение о высокой температуре</value>
+  </data>
+  <data name="Notify_TemperatureFormat" xml:space="preserve">
+    <value>{0}: {1:F0}°C</value>
+  </data>
+  <data name="Notify_HighTemperatureThresholdFormat" xml:space="preserve">
+    <value>Порог: {0:F0}°C · только для сведения, не запускает вентиляторы</value>
+  </data>
+  <data name="Notify_HighTemperatureInfoFormat" xml:space="preserve">
+    <value>{0}: {1:F0}°C (порог {2:F0}°C). Это только информационное уведомление — оно не связано с работой вентиляторов и тепловым лимитом/TCC в BIOS. Настроить или отключить можно в разделе «Параметры → Уведомления».</value>
+  </data>
+  <data name="Notify_ClampReturnedTitle" xml:space="preserve">
+    <value>Ограничение питания GPU снова активно</value>
+  </data>
+  <data name="Notify_ClampReturnedBodyFormat" xml:space="preserve">
+    <value>GPU снова ограничен до {0:F0} Вт из собственных {1:F0} Вт.</value>
+  </data>
+  <data name="Notify_ClampReturnedHint" xml:space="preserve">
+    <value>Когда GPU никому не нужен, перезапустите его со страницы диагностики.</value>
+  </data>
+  <data name="Notify_ClampReturnedInfoFormat" xml:space="preserve">
+    <value>Ограничено до {0:F0} Вт из {1:F0} Вт. Прошивка снова сообщила драйверу об адаптере — перезапуск GPU снимает ограничение.</value>
+  </data>
+  <data name="Notify_CriticalTitleFormat" xml:space="preserve">
+    <value>КРИТИЧНО: перегрев {0}!</value>
+  </data>
+  <data name="Notify_CriticalTemperatureFormat" xml:space="preserve">
+    <value>Температура: {0:F0}°C</value>
+  </data>
+  <data name="Notify_CriticalBody" xml:space="preserve">
+    <value>Возможно троттлинг. Снизьте нагрузку или улучшите охлаждение.</value>
+  </data>
+  <data name="Notify_CriticalInfoFormat" xml:space="preserve">
+    <value>{0:F0}°C — возможен троттлинг</value>
+  </data>
+  <data name="Notify_ThermalProtectionTitleFormat" xml:space="preserve">
+    <value>Тепловая защита: {0}</value>
+  </data>
+  <data name="Notify_ThermalProtectionBodyFormat" xml:space="preserve">
+    <value>{0:F0}°C — вентиляторы переведены на максимум</value>
+  </data>
+  <data name="Notify_ThermalProtectionInfoFormat" xml:space="preserve">
+    <value>{0:F0}°C — вентиляторы переведены на максимум</value>
+  </data>
+  <data name="SC2_AmdGuidanceFormat" xml:space="preserve">
+    <value>Обнаружен AMD {0}.&#10;&#10;Процессоры AMD Ryzen используют Curve Optimizer (CO) вместо классического андервольта смещением напряжения. CO требует особых команд SMU, которые поддерживаются не на всех моделях.&#10;&#10;Поддержка: Ryzen 5000 и новее с установленным драйвером PawnIO.&#10;Альтернатива: Ryzen Master или настройки Curve Optimizer в BIOS.</value>
+  </data>
+  <data name="SC2_IntelGuidanceFormat" xml:space="preserve">
+    <value>Обнаружен Intel {0}.&#10;&#10;Управление напряжением CPU блокируется защитой Intel Plundervolt (CVE-2019-11157). Большинство обновлений BIOS после 2020 года блокируют MSR 0x150.&#10;&#10;Возможные решения:&#10;• Проверьте, есть ли в BIOS опция разблокировки разгона/андервольта&#10;• Некоторые производители выпускают BIOS с возвратом управления напряжением&#10;• Используйте Intel XTU, если система поддерживает</value>
+  </data>
+  <data name="SC2_AmdCoGuidance" xml:space="preserve">
+    <value>AMD использует Curve Optimizer (CO) вместо прямой записи смещения в мВ. Чем отрицательнее значение, тем сильнее андервольт CO.</value>
+  </data>
+  <data name="SC2_BackendUnavailable" xml:space="preserve">
+    <value>Бэкенд: недоступен</value>
+  </data>
+  <data name="SC2_BackendAmdCoFormat" xml:space="preserve">
+    <value>Бэкенд: AMD Curve Optimizer через {0}</value>
+  </data>
+  <data name="SC2_BackendTypeFormat" xml:space="preserve">
+    <value>Бэкенд: {0}</value>
+  </data>
+  <data name="SC2_SmuSourceFormat" xml:space="preserve">
+    <value>Считано из таблицы питания SMU (версия 0x{0}).</value>
+  </data>
+  <data name="SC2_SmuMismatchFormat" xml:space="preserve">
+    <value>Ползунок задаёт {0} Вт, но SMU работает на {1:F1} Вт. Нажмите «Применить» или проверьте, не задаёт ли лимит другая программа.</value>
+  </data>
+  <data name="SC2_SmuNoProvider" xml:space="preserve">
+    <value>На этой системе нет поставщика AMD SMU.</value>
+  </data>
+  <data name="SC2_SmuBackendUnavailable" xml:space="preserve">
+    <value>Бэкенд SMU недоступен, поэтому лимиты прочитать нельзя. Установите PawnIO и запустите OmenCore от имени администратора.</value>
+  </data>
+  <data name="SC2_SmuTableUnknown" xml:space="preserve">
+    <value>Раскладка таблицы питания SMU для этого CPU не определена, поэтому чтение попало бы в неизвестный слот. OmenCore ничего не показывает вместо правдоподобного, но неверного числа. tools/SmuProbe --pmtable добавляет новую версию таблицы.</value>
+  </data>
+  <data name="SC2_SmuReadFailedFormat" xml:space="preserve">
+    <value>Ошибка чтения SMU: {0}</value>
+  </data>
+  <data name="SC2_BackendRyzenAvailableFormat" xml:space="preserve">
+    <value>Бэкенд: {0}. На этой платформе Ryzen доступна запись STAPM и Tctl.</value>
+  </data>
+  <data name="SC2_ControlFull" xml:space="preserve">
+    <value>✓ Полный контроль (план питания + вентиляторы + лимиты CPU/GPU)</value>
+  </data>
+  <data name="SC2_ControlSpectre" xml:space="preserve">
+    <value>ℹ️ HP Spectre: только план питания и вентиляторы (лимиты CPU — через Intel XTU или ThrottleStop)</value>
+  </data>
+  <data name="SC2_ControlPartial" xml:space="preserve">
+    <value>ℹ️ Частичный контроль (только план питания и вентиляторы — EC недоступен)</value>
+  </data>
+  <data name="SC2_GpuFullPowerWaiting" xml:space="preserve">
+    <value>Полная мощность • ожидание телеметрии</value>
+  </data>
+  <data name="SC2_GpuFullPowerFormat" xml:space="preserve">
+    <value>Полная мощность • {0:F0} Вт</value>
+  </data>
+  <data name="SC2_TestActiveFormat" xml:space="preserve">
+    <value>Идёт тест: автооткат через {0} с, если не нажать «Оставить»</value>
+  </data>
+  <data name="SC2_NvapiPowerLockedOnly" xml:space="preserve">
+    <value>Смещения частот через NVAPI доступны, но запись лимита мощности заблокирована драйвером или путём прошивки.</value>
+  </data>
+  <data name="SC2_NvapiBothLocked" xml:space="preserve">
+    <value>NVAPI обнаружил GPU, но и смещения частот, и запись лимита мощности заблокированы драйвером или путём прошивки.</value>
+  </data>
+  <data name="SC2_NvapiPowerTuningOnly" xml:space="preserve">
+    <value>Этот GPU/драйвер даёт настройку мощности NVAPI, но смещения частот и напряжения остаются заблокированы.</value>
+  </data>
+  <data name="SC2_NvapiClockLimitsFormat" xml:space="preserve">
+    <value>Обнаружены пределы частот {0}: ядро {1}, память {2}. Запись лимита мощности заблокирована.</value>
+  </data>
+  <data name="SC2_NvapiPowerRangeFormat" xml:space="preserve">
+    <value>Обнаружен диапазон мощности {0}: {1}. Смещения частот блокируются драйвером или путём прошивки.</value>
+  </data>
+  <data name="SC2_NvapiNoWritable" xml:space="preserve">
+    <value>NVAPI обнаружил GPU, но этот драйвер/путь прошивки не предоставляет доступных для записи настроек.</value>
+  </data>
+  <data name="SC2_ModelHintPowerOnlyFormat" xml:space="preserve">
+    <value>Примечание для {0}: пока доступна только настройка мощности. Начните около {1}% и меняйте частоты внешним инструментом.</value>
+  </data>
+  <data name="SC2_ModelHintClocksFormat" xml:space="preserve">
+    <value>Примечание для {0}: начните с ядра {1} и памяти {2}. Мощность оставьте на 100%, запись политики питания NVAPI заблокирована.</value>
+  </data>
+  <data name="SC2_ModelHintAllFormat" xml:space="preserve">
+    <value>Примечание для {0}: начните с ядра {1}, памяти {2}, мощности {3}%. Значения у обнаруженного максимума считаются экспериментальными до проверки под нагрузкой.</value>
+  </data>
+  <data name="SC2_TestApplied" xml:space="preserve">
+    <value>✓ Тестовое значение применено</value>
+  </data>
+  <data name="SC2_TestLiveGpu" xml:space="preserve">
+    <value>Тестовые настройки активны. Запустите короткий тест или игру и нажмите «Оставить», если всё стабильно.</value>
+  </data>
+  <data name="SC2_TestLiveCpu" xml:space="preserve">
+    <value>Тестовый андервольт активен. Запустите стресс-тест или игру и нажмите «Оставить», если всё стабильно.</value>
+  </data>
+  <data name="SC2_GpuTestExpired" xml:space="preserve">
+    <value>Время теста GPU истекло; прежние настройки восстановлены.</value>
+  </data>
+  <data name="SC2_TestConfirmedFullFormat" xml:space="preserve">
+    <value>✓ Тест подтверждён: ядро {0}, память {1}, мощность {2}, напряжение {3}</value>
+  </data>
+  <data name="SC2_TestConfirmedPowerFormat" xml:space="preserve">
+    <value>✓ Тест подтверждён: мощность {0}</value>
+  </data>
+  <data name="SC2_TestConfirmedKept" xml:space="preserve">
+    <value>✓ Тест подтверждён: поддерживаемые настройки GPU сохранены</value>
+  </data>
+  <data name="SC2_AppClosedDuringGpuTest" xml:space="preserve">
+    <value>OmenCore закрыт во время теста GPU; прежние настройки восстановлены.</value>
+  </data>
+  <data name="SC2_TestFailedFormat" xml:space="preserve">
+    <value>Ошибка теста: {0}</value>
+  </data>
+  <data name="SC2_TestCoAppliedFormat" xml:space="preserve">
+    <value>Тестовый CO применён: ядро {0} мВ экв.</value>
+  </data>
+  <data name="SC2_TestUndervoltAppliedFormat" xml:space="preserve">
+    <value>Тестовый андервольт применён: ядро {0} мВ, кэш {1} мВ</value>
+  </data>
+  <data name="SC2_CpuTestExpired" xml:space="preserve">
+    <value>Время теста андервольта CPU истекло; прежнее напряжение восстановлено.</value>
+  </data>
+  <data name="SC2_TestConfirmedCoFormat" xml:space="preserve">
+    <value>✓ Тест подтверждён: ядро {0} мВ экв. (повтор при запуске включён)</value>
+  </data>
+  <data name="SC2_TestConfirmedUvFormat" xml:space="preserve">
+    <value>✓ Тест подтверждён: ядро {0} мВ, кэш {1} мВ (повтор при запуске включён)</value>
+  </data>
+  <data name="SC2_TestRevertedCoFormat" xml:space="preserve">
+    <value>Тест отменён: восстановлено ядро {0} мВ экв.</value>
+  </data>
+  <data name="SC2_TestRevertedUvFormat" xml:space="preserve">
+    <value>Тест отменён: восстановлены ядро {0} мВ и кэш {1} мВ</value>
+  </data>
+  <data name="SC2_TccNoMsr" xml:space="preserve">
+    <value>Нет доступа к MSR (для управления TCC установите PawnIO)</value>
+  </data>
+  <data name="SC2_NotSupportedFormat" xml:space="preserve">
+    <value>Не поддерживается: {0}</value>
+  </data>
+  <data name="SC2_SafeRollbackCleared" xml:space="preserve">
+    <value>Безопасный откат сбросил сохранённое состояние андервольта при запуске; активный бэкенд андервольта CPU недоступен.</value>
+  </data>
+  <data name="SC2_PlNoMsr" xml:space="preserve">
+    <value>Нет доступа к MSR (для управления лимитами мощности установите PawnIO)</value>
+  </data>
+  <data name="SC2_BiosLockedReadOnlyFormat" xml:space="preserve">
+    <value>⚠️ BIOS заблокирован — только чтение (PL1: {0:F0} Вт, PL2: {1:F0} Вт)</value>
+  </data>
+  <data name="SC2_BiosLockedReadOnlyPolicyFormat" xml:space="preserve">
+    <value>⚠️ BIOS заблокирован — только чтение (PL1: {0:F0} Вт, PL2: {1:F0} Вт). Политика режима по-прежнему работает через OMEN/OGH</value>
+  </data>
+  <data name="SC2_PowerLimitIgnored" xml:space="preserve">
+    <value>лимит мощности проигнорирован (заблокирован драйвером/прошивкой)</value>
+  </data>
+  <data name="SC2_PowerLimitIgnoredFormat" xml:space="preserve">
+    <value>мощность {0}% проигнорирована (заблокирована драйвером/прошивкой)</value>
+  </data>
+  <data name="SC2_GpuOcBlockedBattery" xml:space="preserve">
+    <value>Повышение разгона GPU заблокировано: сначала подключите питание</value>
+  </data>
+  <data name="SC2_AcPowerRecommendedTitle" xml:space="preserve">
+    <value>Рекомендуется питание от сети</value>
+  </data>
+  <data name="SC2_GpuOcBatteryBody" xml:space="preserve">
+    <value>Обнаружено повышение разгона GPU при работе от батареи.&#10;&#10;Повышение частот и лимитов мощности от батареи может привести к нестабильным частотам, быстрому разряду и резкому троттлингу.&#10;&#10;Подключите питание, прежде чем повышать настройки разгона GPU.</value>
+  </data>
+  <data name="SC2_ResetGpuDefaultsFormat" xml:space="preserve">
+    <value>Сброшено к значениям по умолчанию (ядро 0 МГц, память 0 МГц, мощность 100%, напряжение 0 мВ)</value>
+  </data>
+  <data name="SC2_ResetGpuDefaultsPowerFormat" xml:space="preserve">
+    <value>Сброшено к значениям по умолчанию (мощность 100%)</value>
+  </data>
+  <data name="SC2_AmdGpuOcPartial" xml:space="preserve">
+    <value>Разгон AMD GPU: часть настроек не применилась</value>
+  </data>
+  <data name="SC2_StartupResetBoth" xml:space="preserve">
+    <value>Выполнен безопасный сброс при запуске: обнаружены неподтверждённые тесты андервольта CPU и разгона GPU из прошлого сеанса. Настройки сброшены к безопасным значениям.</value>
+  </data>
+  <data name="SC2_StartupResetCpu" xml:space="preserve">
+    <value>Выполнен безопасный сброс при запуске: обнаружен неподтверждённый тест андервольта CPU из прошлого сеанса. Андервольт CPU сброшен к безопасным значениям.</value>
+  </data>
+  <data name="SC2_StartupResetGpu" xml:space="preserve">
+    <value>Выполнен безопасный сброс при запуске: обнаружен неподтверждённый тест разгона GPU из прошлого сеанса. Настройки GPU сброшены к безопасным значениям.</value>
+  </data>
+  <data name="SC2_SavedOffsetsUnchanged" xml:space="preserve">
+    <value>Сохранённые смещения не изменены; используйте «Тестовое применение», затем «Оставить», чтобы подтвердить заново.</value>
+  </data>
+  <data name="SC2_UseTestApplyKeep" xml:space="preserve">
+    <value>Используйте «Тестовое применение», затем «Оставить», чтобы подтвердить заново.</value>
+  </data>
+  <data name="SC2_LoadedProfileFormat" xml:space="preserve">
+    <value>Профиль загружен: {0}</value>
+  </data>
+  <data name="SC2_LoadedProfileNoteFormat" xml:space="preserve">
+    <value>Загружен «{0}» с примечаниями для модели: {1}</value>
+  </data>
+  <data name="SC2_CoAppliedFormat" xml:space="preserve">
+    <value>Curve Optimizer применён: ядро {0} мВ экв., iGPU {1} мВ экв.</value>
+  </data>
+  <data name="SC2_UndervoltAppliedFormat" xml:space="preserve">
+    <value>Андервольт применён: ядро {0} мВ, кэш {1} мВ</value>
+  </data>
+  <data name="SC2_ApplyFailedFormat" xml:space="preserve">
+    <value>Ошибка применения: {0}</value>
+  </data>
+  <data name="SC2_UndervoltFailedTitle" xml:space="preserve">
+    <value>Андервольт не удался</value>
+  </data>
+  <data name="SC2_UndervoltFailedBodyFormat" xml:space="preserve">
+    <value>Не удалось применить настройки андервольта:&#10;&#10;{0}&#10;&#10;Возможные причины:&#10;• Заблокирован доступ к MSR (установите PawnIO или отключите Secure Boot)&#10;• Включена HVCI/изоляция ядра&#10;• Неподдерживаемый CPU</value>
+  </data>
+  <data name="SC2_ResetFailedFormat" xml:space="preserve">
+    <value>Ошибка сброса: {0}</value>
+  </data>
+  <data name="SC2_AggressiveTitle" xml:space="preserve">
+    <value>Предупреждение о сильном андервольте</value>
+  </data>
+  <data name="SC2_AggressiveBody" xml:space="preserve">
+    <value>⚠️ ВНИМАНИЕ: сильный андервольт&#10;&#10;Вы собираетесь применить смещение -140 мВ.&#10;&#10;Это агрессивная настройка, которая может вызвать:&#10;• Синие экраны (BSOD)&#10;• Падения и зависания приложений&#10;• Нестабильность системы под нагрузкой&#10;&#10;Продолжайте только если понимаете риски и готовы:&#10;• Перезагрузить систему при нестабильности&#10;• Тщательно проверить стресс-тестами (Prime95, OCCT)&#10;&#10;Андервольт не сохраняется после перезагрузки, поэтому сбой его сбросит.&#10;&#10;Продолжить с андервольтом -140 мВ?</value>
+  </data>
+  <data name="SC2_ResettingCo" xml:space="preserve">
+    <value>Сброс смещений Curve Optimizer...</value>
+  </data>
+  <data name="SC2_ResettingUv" xml:space="preserve">
+    <value>Сброс смещений андервольта...</value>
+  </data>
+  <data name="SC2_ResetCoDone" xml:space="preserve">
+    <value>Смещения Curve Optimizer сброшены к значениям по умолчанию</value>
+  </data>
+  <data name="SC2_ResetUvDone" xml:space="preserve">
+    <value>Смещения андервольта сброшены к значениям по умолчанию</value>
+  </data>
+  <data name="SC2_ClockOcReadyPowerLockedFormat" xml:space="preserve">
+    <value>✓ {0} — разгон частот доступен, лимит мощности заблокирован</value>
+  </data>
+  <data name="S2_ExclusiveEcTitle" xml:space="preserve">
+    <value>Диагностика монопольного доступа к EC</value>
+  </data>
+  <data name="S2_ExclusiveEcBody" xml:space="preserve">
+    <value>⚠️ ДИАГНОСТИКА МОНОПОЛЬНОГО ДОСТУПА К EC ⚠️&#10;&#10;Этот режим диагностики:&#10;• Получит монопольный доступ к регистрам EC&#10;• Заблокирует доступ других приложений к EC&#10;• Запишет подробные сведения о конфликтах&#10;• Может помешать OMEN Gaming Hub и другим программам управления вентиляторами&#10;&#10;Используйте только для поиска конфликтов регистров EC.&#10;Это поможет понять, не из-за других ли программ обороты вентиляторов равны 0.&#10;&#10;Включить монопольную диагностику?</value>
+  </data>
+  <data name="S2_KeyboardBackendSetFormat" xml:space="preserve">
+    <value>Бэкенд клавиатуры: {0}.&#10;&#10;Изменение вступит в силу после перезапуска OmenCore.</value>
+  </data>
+  <data name="S2_BackendChangedTitle" xml:space="preserve">
+    <value>Бэкенд изменён</value>
+  </data>
+  <data name="S2_BatteryCareUnavailableTitle" xml:space="preserve">
+    <value>Уход за батареей недоступен</value>
+  </data>
+  <data name="S2_BatteryCareUnavailableBody" xml:space="preserve">
+    <value>Нельзя задать предел заряда — интерфейс HP WMI BIOS недоступен.&#10;&#10;Функция требует ноутбук HP OMEN/Victus с поддержкой WMI BIOS.</value>
+  </data>
+  <data name="S2_BatteryCareFailedTitle" xml:space="preserve">
+    <value>Уход за батареей не удался</value>
+  </data>
+  <data name="S2_BatteryCareFailedBody" xml:space="preserve">
+    <value>Команда предела заряда не выполнена.&#10;&#10;Возможные причины:&#10;• Ваша модель не поддерживает функцию&#10;• Требуется обновление BIOS HP&#10;• Не подключён адаптер питания&#10;&#10;Сравните поведение, переключив ту же настройку в OMEN Gaming Hub.</value>
+  </data>
+  <data name="S2_BatteryCareErrorTitle" xml:space="preserve">
+    <value>Ошибка ухода за батареей</value>
+  </data>
+  <data name="S2_BatteryCareErrorBodyFormat" xml:space="preserve">
+    <value>Не удалось задать предел заряда: {0}</value>
+  </data>
+  <data name="S2_BloatwareScanningProgress" xml:space="preserve">
+    <value>Поиск предустановленных программ HP...</value>
+  </data>
+  <data name="S2_BloatwareScanningList" xml:space="preserve">
+    <value>Поиск предустановленных программ HP...</value>
+  </data>
+  <data name="S2_BloatwareClean" xml:space="preserve">
+    <value>✓ Предустановленные программы HP не найдены.&#10;&#10;Система чиста.</value>
+  </data>
+  <data name="S2_BloatwareFoundFormat" xml:space="preserve">
+    <value>Найдено предустановленных программ HP: {0}</value>
+  </data>
+  <data name="S2_BloatwareScanFailedFormat" xml:space="preserve">
+    <value>❌ Ошибка сканирования: {0}</value>
+  </data>
+  <data name="S2_BloatwareStarting" xml:space="preserve">
+    <value>Запуск удаления предустановленных программ...</value>
+  </data>
+  <data name="S2_BloatwareRemoving" xml:space="preserve">
+    <value>Удаление предустановленных программ HP...&#10;&#10;Это может занять несколько минут...</value>
+  </data>
+  <data name="S2_BloatwareStep1" xml:space="preserve">
+    <value>[1/3] Получение списка пакетов...</value>
+  </data>
+  <data name="S2_BloatwareStep2CountFormat" xml:space="preserve">
+    <value>[2/3] Удаление пакетов: {0}...</value>
+  </data>
+  <data name="S2_BloatwareStep2ItemFormat" xml:space="preserve">
+    <value>[2/3] Удаление {0}/{1}: {2}...</value>
+  </data>
+  <data name="S2_BloatwareStep3" xml:space="preserve">
+    <value>[3/3] Очистка завершена!</value>
+  </data>
+  <data name="S2_BloatwareResultHeader" xml:space="preserve">
+    <value>✓ Удаление предустановленных программ завершено!</value>
+  </data>
+  <data name="S2_BloatwareResultRemovedFormat" xml:space="preserve">
+    <value>• Удалено пакетов: {0}</value>
+  </data>
+  <data name="S2_BloatwareResultFailedFormat" xml:space="preserve">
+    <value>• Не удалось: {0}</value>
+  </data>
+  <data name="S2_BloatwareFailedListHeader" xml:space="preserve">
+    <value>Пакеты с ошибками:</value>
+  </data>
+  <data name="S2_BloatwareNeedsAdminTip" xml:space="preserve">
+    <value>💡 Совет: запустите OmenCore от имени администратора, чтобы удалить зарезервированные пакеты.</value>
+  </data>
+  <data name="S2_BloatwareRescanNote" xml:space="preserve">
+    <value>Запустите новое сканирование для проверки.</value>
+  </data>
+  <data name="S2_BloatwareRemovedCountFormat" xml:space="preserve">
+    <value>Удалено предустановленных программ: {0}.</value>
+  </data>
+  <data name="S2_NeedsAdminSuffix" xml:space="preserve">
+    <value>нужен админ</value>
+  </data>
+  <data name="S2_DiagZipFilter" xml:space="preserve">
+    <value>Архив ZIP (*.zip)|*.zip|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="S2_OsdActionDoNothing" xml:space="preserve">
+    <value>Ничего не делать (блокировать клавишу)</value>
+  </data>
+  <data name="S2_SyncStartFormat" xml:space="preserve">
+    <value>Частичная синхронизация: обновлено {0} из {1}</value>
+  </data>
+  <data name="S2_SyncFailedNoProviders" xml:space="preserve">
+    <value>Синхронизация не удалась: ни один поставщик не обновлён</value>
+  </data>
+  <data name="S2_SyncCompleteOne" xml:space="preserve">
+    <value>Синхронизация завершена: обновлена 1 цель</value>
+  </data>
+  <data name="S2_SyncCompleteFormat" xml:space="preserve">
+    <value>Синхронизация завершена: обновлено целей: {0}</value>
+  </data>
+  <data name="S2_SyncPartialTargetsFormat" xml:space="preserve">
+    <value>Частичная синхронизация: обновлено {0} из {1}</value>
+  </data>
+  <data name="S2_SyncFailedNoTargets" xml:space="preserve">
+    <value>Синхронизация не удалась: ни одна цель не обновлена</value>
+  </data>
+  <data name="S2_DpiNotWritable" xml:space="preserve">
+    <value>OmenCore не смог записать эти настройки DPI в устройство: активное подключение Corsair (RGB.NET/iCUE) не поддерживает настройку DPI. На мыши ничего не изменилось.</value>
+  </data>
+  <data name="S2_DpiSaveProfileTitle" xml:space="preserve">
+    <value>Сохранить профиль DPI</value>
+  </data>
+  <data name="S2_DpiSaveProfilePrompt" xml:space="preserve">
+    <value>Введите имя профиля DPI:</value>
+  </data>
+  <data name="S2_KeyboardNoWmiVerifyHint" xml:space="preserve">
+    <value> Команды клавиатуры через WMI не подтверждаются на вашей модели — если цвет не меняется, включите «Экспериментальная EC-клавиатура» в настройках.</value>
+  </data>
+  <data name="S2_KeyboardUnavailable" xml:space="preserve">
+    <value>Подсветка клавиатуры недоступна; проверьте определение бэкенда или раздел «Параметры > Оборудование».</value>
+  </data>
+  <data name="L2_SyncCompleteProviderOne" xml:space="preserve">
+    <value>Синхронизация завершена: обновлён 1 поставщик</value>
+  </data>
+  <data name="L2_SyncCompleteProvidersFormat" xml:space="preserve">
+    <value>Синхронизация завершена: обновлено поставщиков: {0}</value>
+  </data>
+  <data name="L2_NoRgbTargets" xml:space="preserve">
+    <value>Нет доступных RGB-целей</value>
+  </data>
+  <data name="L2_ProbeUnavailable" xml:space="preserve">
+    <value>Проверка RGB недоступна: активный бэкенд подсветки клавиатуры HP отсутствует.</value>
+  </data>
+  <data name="L2_ProbeSentFormat" xml:space="preserve">
+    <value>Проверка отправлена через {0}; отметьте, что изменилось, и сохраните. {1}</value>
+  </data>
+  <data name="L2_ObservationCannotSave" xml:space="preserve">
+    <value>Не удалось сохранить наблюдение RGB: конфигурация недоступна.</value>
+  </data>
+  <data name="L2_KeyboardUnavailableBackend" xml:space="preserve">
+    <value>Подсветка клавиатуры недоступна на этом бэкенде.</value>
+  </data>
+  <data name="L2_NoHistory" xml:space="preserve">
+    <value>История пока не собрана.</value>
+  </data>
+  <data name="L2_ProfileDefaultCooldownFormat" xml:space="preserve">
+    <value>По умолчанию для профиля ({0} мин)</value>
+  </data>
+  <data name="L2_ExcludeTip" xml:space="preserve">
+    <value>Совет: исключайте приложения, которые держите открытыми (игры, запись, чат, анти-чит). Можно добавлять из списка топ-процессов или вписать имя без .exe.</value>
+  </data>
+  <data name="L2_ExclusionsActiveFormat" xml:space="preserve">
+    <value>Активных исключений процессов: {0}. Добавьте ещё из списка топ-процессов, чтобы не обрезать рабочий набор повторно.</value>
+  </data>
+  <data name="L2_ExcludeSuggestionsFormat" xml:space="preserve">
+    <value>Рекомендуемые исключения из текущих топ-процессов: {0}.</value>
+  </data>
+  <data name="L2_CleanResultFormat" xml:space="preserve">
+    <value>Освобождено {0} МБ  •  успешных операций: {1}</value>
+  </data>
+  <data name="L2_CleanFailedFormat" xml:space="preserve">
+    <value>Ошибка: {0}</value>
+  </data>
+  <data name="L2_CleanupPreviewFormat" xml:space="preserve">
+    <value>Этот профиль освободит примерно {0} МБ</value>
+  </data>
+  <data name="L2_UpdateOpenReleasePrompt" xml:space="preserve">
+    <value>На GitHub доступна новая версия. Открыть страницу релиза?</value>
+  </data>
+  <data name="L2_UpdateAvailableTitle" xml:space="preserve">
+    <value>Доступно обновление</value>
+  </data>
+  <data name="L2_UpdateDownloadPromptFormat" xml:space="preserve">
+    <value>Доступна новая версия!&#10;&#10;Текущая: {0}&#10;Новая: {1}&#10;&#10;Скачать и установить сейчас?</value>
+  </data>
+  <data name="L2_EcEmbeddedController" xml:space="preserve">
+    <value>EC (встроенный контроллер)</value>
+  </data>
+  <data name="L2_CurveDangerFormat" xml:space="preserve">
+    <value>Опасная кривая: при {0}°C вентилятор падает до {1}% (было {2}% при {3}°C). Это может привести к перегреву!</value>
+  </data>
+  <data name="L2_CurveSafetyFormat" xml:space="preserve">
+    <value>Предупреждение: при {0}°C скорость вентилятора всего {1}%. При высоких температурах рекомендуется не менее 70%, чтобы избежать троттлинга.</value>
+  </data>
+  <data name="L2_CurveCoverageFormat" xml:space="preserve">
+    <value>Неполный охват: кривая заканчивается на {0}°C. Добавьте точки до 95°C, чтобы покрыть тепловые всплески.</value>
+  </data>
+  <data name="L2_RtssDisabled" xml:space="preserve">
+    <value>RTSS отключён</value>
+  </data>
+  <data name="L2_FpsNeedsRtss" xml:space="preserve">
+    <value>Для FPS нужен запущенный RTSS (RivaTuner Statistics Server)</value>
+  </data>
+  <data name="L2_TrayTooltip" xml:space="preserve">
+    <value>OmenCore — управление игровым ноутбуком&#10;&#10;Левый клик: быстрое меню&#10;Двойной клик: открыть главное окно&#10;Правый клик: меню</value>
+  </data>
+  <data name="L2_RtssDetected" xml:space="preserve">
+    <value>RivaTuner Statistics Server (RTSS) запущен, и его D3D-хуки повредили поток отрисовки OmenCore.</value>
+  </data>
+  <data name="L2_OverlayDetected" xml:space="preserve">
+    <value>Хук наложения D3D/DXGI (возможно, RTSS, оверлей или анти-чит игры) повредил поток отрисовки OmenCore.</value>
+  </data>
+  <data name="L2_SoftwareRenderingBodyFormat" xml:space="preserve">
+    <value>{0}&#10;&#10;Чтобы избежать новых сбоев, OmenCore на этот сеанс перешёл на программную отрисовку.&#10;&#10;Как исправить навсегда:&#10;  • Закройте оверлей RTSS / MSI Afterburner перед запуском OmenCore, ИЛИ&#10;  • Включите «Программная отрисовка» в настройках OmenCore → Общие&#10;&#10;OmenCore продолжит работу. Перезапустите приложение после закрытия оверлея, чтобы вернуть аппаратное ускорение.</value>
+  </data>
+  <data name="L2_RenderConflictTitle" xml:space="preserve">
+    <value>OmenCore — обнаружен конфликт отрисовки</value>
+  </data>
+  <data name="L2_PawnIoBundled" xml:space="preserve">
+    <value>PawnIO (входит в установщик)</value>
+  </data>
+  <data name="L2_AdapterOverrideCpuHalfFormat" xml:space="preserve">
+    <value>Затем он поднимает четыре лимита мощности CPU до {0} и возвращает их после выхода из сна или смены питания — событий, которые эти лимиты снимают. OmenCore не может их перечитать, поэтому эта половина отражает то, что принял SMU, а не то, что он реально выполняет.&#10;&#10;</value>
+  </data>
+  <data name="L2_AdapterOverrideBodyFormat" xml:space="preserve">
+    <value>Это отключает и снова включает дискретный GPU.&#10;&#10;Экраны погаснут на несколько секунд, а любая игра, рендер или расчёт на GPU потеряют устройство и могут аварийно завершиться.&#10;&#10;{0}Ни одно из значений не является разгоном. GPU возвращается к пределу, который его драйвер считает значением по умолчанию, а лимиты CPU берутся из прошивки для одновременной нагрузки CPU и GPU. Ограничение — это политика прошивки для адаптера, который она считает недостаточно мощным, а не измерение его реальных возможностей.&#10;&#10;Ничего из этого не переживёт перезагрузку: лимит GPU держится, пока прошивка снова не сообщит драйверу об адаптере (смена питания это делает), а лимиты CPU — пока вы их удерживаете.&#10;&#10;Снять ограничение сейчас?</value>
+  </data>
+  <data name="L2_AdapterOverrideTitle" xml:space="preserve">
+    <value>Снять ограничение питания адаптера?</value>
+  </data>
+  <data name="L2_TgpUnlockBody" xml:space="preserve">
+    <value>Это экспериментальная, неподтверждённая функция: она на мгновение открывает два бита EC, управляемых прошивкой, отправляет одну команду WMI и затем измеряет, действительно ли изменилось питание GPU.&#10;&#10;Никто из её авторов не запускал её на реальном оборудовании. В ходе исследования, из которого она выросла, принудительное включение того же механизма на слабом адаптере оставило GPU в деградированном состоянии — вызовы драйвера по 20+ секунд, невозможность рендерить — и это не проходило до перезагрузки, на оборудовании с историей сбоев драйвера GPU.&#10;&#10;Предложение появляется, только когда подключённый адаптер заметно мощнее требований машины, — это и есть единственная защита. Результат нельзя предварительно увидеть, и отменить его, кроме перезагрузки, нельзя.&#10;&#10;Всё равно попробовать?</value>
+  </data>
+  <data name="L2_TgpUnlockTitle" xml:space="preserve">
+    <value>Попробовать экспериментальную разблокировку питания GPU?</value>
+  </data>
+  <data name="M2_CpuTelemetryUnavailable" xml:space="preserve">
+    <value>Телеметрия CPU недоступна</value>
+  </data>
+  <data name="M2_GpuTelemetryUnavailable" xml:space="preserve">
+    <value>Телеметрия GPU недоступна</value>
+  </data>
+  <data name="M2_TelemetryUnavailableFormat" xml:space="preserve">
+    <value>Недоступно • нагрузка {0:F0}%</value>
+  </data>
+  <data name="M2_TempStaleFormat" xml:space="preserve">
+    <value>{0:F0}°C (устарело)</value>
+  </data>
+  <data name="M2_Stale" xml:space="preserve">
+    <value>Устарело</value>
+  </data>
+  <data name="M2_TelemetryStaleFormat" xml:space="preserve">
+    <value>{0} • нагрузка {1:F0}%</value>
+  </data>
+  <data name="M2_TelemetryInvalidFormat" xml:space="preserve">
+    <value>Неверные данные • нагрузка {0:F0}%</value>
+  </data>
+  <data name="M2_TelemetryLoadFormat" xml:space="preserve">
+    <value>{0} • нагрузка {1:F0}%</value>
+  </data>
+  <data name="M2_NoRestorePoint" xml:space="preserve">
+    <value>Точка восстановления не создана</value>
+  </data>
+  <data name="M2_CleanupStatusNotChecked" xml:space="preserve">
+    <value>Статус: не проверено</value>
+  </data>
+  <data name="M2_ResumeCompleteFormat" xml:space="preserve">
+    <value>Самопроверка после выхода из сна пройдена. Мониторинг восстановился за {0:F0} с, состояние вентиляторов в норме ({1}, пик {2} об/мин).</value>
+  </data>
+  <data name="M2_ResumeTelemetryIssueFormat" xml:space="preserve">
+    <value>Телеметрия ещё не в норме (возраст данных {0:F0} с, состояние мониторинга {1}). </value>
+  </data>
+  <data name="M2_ResumeFanIssueFormat" xml:space="preserve">
+    <value>Вентиляторы всё ещё завышены для текущей тепловой нагрузки ({0} об/мин при {1:F0}C, состояние {2}).</value>
+  </data>
+  <data name="M2_ResumeAttentionFormat" xml:space="preserve">
+    <value>Самопроверка после сна требует внимания: {0}</value>
+  </data>
+  <data name="M2_ResumeFailedFormat" xml:space="preserve">
+    <value>Самопроверка после сна не удалась: {0}</value>
+  </data>
+  <data name="O2_ApplyConfirmBodyFormat" xml:space="preserve">
+    <value>Будет применено оптимизаций: {0} в категории {1}.&#10;&#10;Продолжить?</value>
+  </data>
+  <data name="O2_ApplyConfirmTitleFormat" xml:space="preserve">
+    <value>Применить {0}</value>
+  </data>
+  <data name="O2_RevertAllBody" xml:space="preserve">
+    <value>Все оптимизации будут возвращены к значениям Windows по умолчанию.&#10;&#10;Сохранённые резервные настройки будут восстановлены.&#10;&#10;Продолжить?</value>
+  </data>
+  <data name="O2_RevertAllTitle" xml:space="preserve">
+    <value>Отменить все оптимизации</value>
+  </data>
+  <data name="O2_RevertTimeout" xml:space="preserve">
+    <value>Время отмены истекло — проверьте состояние системы вручную</value>
+  </data>
+  <data name="T2_NoSource" xml:space="preserve">
+    <value>Ни один источник температуры CPU не ответил.</value>
+  </data>
+  <data name="T2_SourceCountFormat" xml:space="preserve">
+    <value>Ответивших источников: {0}.</value>
+  </data>
+  <data name="T2_WmiFormat" xml:space="preserve">
+    <value>WMI BIOS: {0:F1}°C</value>
+  </data>
+  <data name="T2_WmiUnavailable" xml:space="preserve">
+    <value>WMI BIOS: недоступен</value>
+  </data>
+  <data name="T2_AcpiFormat" xml:space="preserve">
+    <value>Термозона ACPI ({0}): {1:F1}°C</value>
+  </data>
+  <data name="T2_AcpiUnavailable" xml:space="preserve">
+    <value>Термозона ACPI: недоступна</value>
+  </data>
+  <data name="T2_LhmFormat" xml:space="preserve">
+    <value>LibreHardwareMonitor: {0:F1}°C</value>
+  </data>
+  <data name="T2_LhmUnavailable" xml:space="preserve">
+    <value>LibreHardwareMonitor: недоступен</value>
+  </data>
+  <data name="T2_TrustedFormat" xml:space="preserve">
+    <value>Сейчас используется: {0}</value>
+  </data>
+  <data name="T2_DisagreeFormat" xml:space="preserve">
+    <value>⚠ Источники расходятся более чем на {0:F0}°C — используемое значение может не подходить этой плате.</value>
+  </data>
+  <data name="T2_Agree" xml:space="preserve">
+    <value>✓ Доступные источники согласуются в разумных пределах.</value>
+  </data>
+  <data name="U2_InstallFailedFormat" xml:space="preserve">
+    <value>Не удалось установить обновление: {0}</value>
+  </data>
+  <data name="Osd_LabelMode" xml:space="preserve">
+    <value>РЕЖИМ</value>
+  </data>
+  <data name="Osd_LabelFans" xml:space="preserve">
+    <value>ВЕНТ.</value>
+  </data>
+  <data name="Osd_LabelHotspot" xml:space="preserve">
+    <value>TJUNC</value>
+  </data>
+  <data name="Osd_LabelVram" xml:space="preserve">
+    <value>VRAM</value>
+  </data>
+  <data name="Osd_LabelPackage" xml:space="preserve">
+    <value>ПАКЕТ</value>
+  </data>
+  <data name="Osd_LabelFan" xml:space="preserve">
+    <value>ВЕНТ.</value>
+  </data>
+  <data name="Osd_LabelBattery" xml:space="preserve">
+    <value>БАТ.</value>
+  </data>
+  <data name="Osd_LabelFrameTime" xml:space="preserve">
+    <value>FT</value>
+  </data>
+  <data name="Osd_LabelPing" xml:space="preserve">
+    <value>PING</value>
+  </data>
+  <data name="X2_DashboardFans" xml:space="preserve">
+    <value>ВЕНТИЛЯТОРЫ</value>
+  </data>
+  <data name="X2_DirectActive" xml:space="preserve">
+    <value>АКТИВНО</value>
+  </data>
+  <data name="X2_OsdFanIcon" xml:space="preserve">
+    <value>ВЕНТ.</value>
+  </data>
+  <data name="G2_ShippingAdapterFormat" xml:space="preserve">
+    <value> Эта машина поставлялась с адаптером {0} Вт.</value>
+  </data>
+  <data name="G2_UnrecognisedAdapter" xml:space="preserve">
+    <value>нераспознанный</value>
+  </data>
+  <data name="G2_UsbcSupplyFormat" xml:space="preserve">
+    <value>Машина работает от источника USB-C Power Delivery на {0} Вт. </value>
+  </data>
+  <data name="G2_UsbcSupplyUnknown" xml:space="preserve">
+    <value>Машина работает от источника USB-C Power Delivery с неуказанной мощностью. </value>
+  </data>
+  <data name="G2_UsbcBelowDesignFormat" xml:space="preserve">
+    <value>Это ниже {0} Вт, на которые рассчитан вход USB-C этой машины.</value>
+  </data>
+  <data name="G2_ChassisNoUsbc" xml:space="preserve">
+    <value>Этот корпус рассчитан на цилиндрический адаптер и не заявляет мощность для USB-C, поэтому правило HP считает любой источник USB-C недостаточным.</value>
+  </data>
+  <data name="G2_UsbcVerdictFormat" xml:space="preserve">
+    <value>{0}Прошивка описывает его как USB-C, но не называет недостаточным. {1}{2}</value>
+  </data>
+  <data name="G2_BarrelVerdictFormat" xml:space="preserve">
+    <value>Прошивка сообщает, что {0} адаптер ниже требований машины.{1}</value>
+  </data>
+  <data name="G2_AdapterPolicyNote" xml:space="preserve">
+    <value>В этом состоянии часть прошивок HP снижает лимиты мощности CPU и GPU. Это выглядит как сбой OmenCore или драйвера GPU, но на деле это политика прошивки для источника, который она считает недостаточно мощным: заявленный предел, а не измерение реальных возможностей адаптера. Если производительность ниже ожидаемой, начните проверку с этого.</value>
+  </data>
+  <data name="G2_PowerLimitReferenceFormat" xml:space="preserve">
+    <value> (собственный предел карты {0:0.#} Вт)</value>
+  </data>
+  <data name="G2_PowerLimitReadAtFormat" xml:space="preserve">
+    <value> — считано в {0:HH:mm}</value>
+  </data>
+  <data name="G2_NoDefaultLimitRead" xml:space="preserve">
+    <value>Понять, занижен ли он, отсюда нельзя: nvidia-smi не сообщил предел по умолчанию для этой карты, сравнивать не с чем.</value>
+  </data>
+  <data name="G2_AtOwnLimit" xml:space="preserve">
+    <value>Это собственный предел карты, сейчас её ничто не занижает, и перезапуск ниже ничего не снимет.</value>
+  </data>
+  <data name="G2_HeldBelowLimitFormat" xml:space="preserve">
+    <value>Что-то держит карту на {0:0.#} Вт ниже её собственного предела. При недостаточно мощном адаптере именно так выглядит ограничение прошивки, и его снимает перезапуск ниже. Сторонний инструмент с лимитом мощности GPU выглядел бы отсюда так же, но перезапуск устройства его не снимет.</value>
+  </data>
+  <data name="G2_ReadingLimit" xml:space="preserve">
+    <value>Чтение текущего предела...</value>
+  </data>
+  <data name="G2_NoNvidiaSmi" xml:space="preserve">
+    <value>Текущий предел здесь прочитать нельзя: nvidia-smi не установлен, а сообщает его только он. Он ставится вместе с драйвером NVIDIA.</value>
+  </data>
+  <data name="G2_LimitUnanswered" xml:space="preserve">
+    <value>GPU не сообщил предел мощности. Возможно, он просыпался — повторите через мгновение.</value>
+  </data>
+  <data name="G2_GpuAsleep" xml:space="preserve">
+    <value>GPU находится в спящем состоянии. Чтение предела мощности разбудит его, и драйвер продержит его активным ещё пару минут.</value>
+  </data>
+  <data name="G2_ReadAgain" xml:space="preserve">
+    <value>Прочитать предел снова</value>
+  </data>
+  <data name="G2_ReadLimit" xml:space="preserve">
+    <value>Прочитать текущий предел</value>
+  </data>
+  <data name="G2_ApuTargetUserFormat" xml:space="preserve">
+    <value>значение {0} Вт, заданное в «Лимиты мощности AMD CPU»</value>
+  </data>
+  <data name="G2_ApuTargetFirmwareFormat" xml:space="preserve">
+    <value>значение {0} Вт, которое прошивка машины указывает для нагруженных CPU и GPU</value>
+  </data>
+  <data name="G2_OverrideScopeBothFormat" xml:space="preserve">
+    <value>Это перезапускает GPU, чтобы снять ограничение, и поднимает четыре лимита мощности CPU до {0}.</value>
+  </data>
+  <data name="G2_OverrideScopeGpuOnlyFormat" xml:space="preserve">
+    <value>Это перезапускает GPU, чтобы снять ограничение. Часть с CPU не включена{0}</value>
+  </data>
+  <data name="G2_ApuReasonCpuUnknown" xml:space="preserve">
+    <value>для этого CPU неизвестны сообщения SMU о лимитах мощности</value>
+  </data>
+  <data name="G2_ApuReasonNoTarget" xml:space="preserve">
+    <value>не к чему стремиться: задайте лимит в «Лимиты мощности AMD CPU» или дождитесь, пока прошивка сообщит свой</value>
+  </data>
+  <data name="G2_ApuReasonUsbc" xml:space="preserve">
+    <value>Это источник USB-C Power Delivery. Поднимать лимит CPU вдобавок к перезапуску GPU здесь не предлагается: источник выдаёт заметно меньше, чем ожидает корпус, и большую часть уже занимает GPU.</value>
+  </data>
+  <data name="G2_ApuReasonNoRating" xml:space="preserve">
+    <value>Мощность подключённого адаптера не сообщена, поэтому нельзя судить, выдержит ли он повышенный лимит CPU.</value>
+  </data>
+  <data name="G2_ApuReasonTooLowFormat" xml:space="preserve">
+    <value>Подключённый адаптер {0} Вт слишком далёк от требования {1} Вт, чтобы поднимать лимит CPU вдобавок к перезапуску GPU.</value>
+  </data>
+  <data name="G2_ReleaseApuClampStatus" xml:space="preserve">
+    <value>OmenCore больше не будет возвращать лимиты мощности CPU. Платформа снимет их при следующем выходе из сна или смене питания; перезагрузка вернёт заводские значения.</value>
+  </data>
+  <data name="G2_TgpUnlockBusy" xml:space="preserve">
+    <value>Открываем шлюзы питания прошивки и просим драйвер перечитать их...</value>
+  </data>
+  <data name="G2_TgpWatchDescription" xml:space="preserve">
+    <value>Следит за возвратом ограничения питания GPU от адаптера. Пока дискретный GPU спит, ничего не читает, поэтому не мешает ему уходить в RTD3.</value>
+  </data>
+  <data name="G2_AutoDetailCpuRaised" xml:space="preserve">
+    <value>Лимиты CPU подняты и удерживаются</value>
+  </data>
+  <data name="G2_AutoDetailGpuRestarted" xml:space="preserve">
+    <value>GPU перезапущен, пока спал</value>
+  </data>
+  <data name="G2_AutoDetailGpuAwake" xml:space="preserve">
+    <value>GPU был активен, поэтому его не трогали — нажмите кнопку, когда он не нужен</value>
+  </data>
+  <data name="G2_AutoDetailDiscreteDisplay" xml:space="preserve">
+    <value>Изображение идёт через дискретный GPU, перезапуск погасит экран — это только вручную</value>
+  </data>
+  <data name="G2_AutoDetailBattery" xml:space="preserve">
+    <value>Работа от батареи, ограничения адаптера нет</value>
+  </data>
+  <data name="G2_AutoSummaryFormat" xml:space="preserve">
+    <value>Автоматически ({0}): {1}.</value>
+  </data>
+  <data name="D2_CurveNeedsTwoPoints" xml:space="preserve">
+    <value>⚠️ Кривой нужно минимум 2 точки</value>
+  </data>
+  <data name="DB2_CpuSourceFormat" xml:space="preserve">
+    <value>Источник температуры CPU: {0}</value>
+  </data>
+  <data name="DB2_CpuSourceReasonFormat" xml:space="preserve">
+    <value>Источник температуры CPU: {0}&#10;{1}</value>
+  </data>
+  <data name="DB2_RpmUnavailable" xml:space="preserve">
+    <value>Обороты недоступны (вентилятор реагирует)</value>
+  </data>
+  <data name="DL2_SwipeNoPalette" xml:space="preserve">
+    <value>У «Swipe» нет готовой палитры — с выбранной темой он отрисуется чёрным. Отметьте свои цвета.</value>
+  </data>
+  <data name="DL2_ConfettiNoColours" xml:space="preserve">
+    <value>«Confetti» и «Sun» не используют свои цвета — тема применяется в любом случае.</value>
+  </data>
+  <data name="DL2_KeyboardRefusedFormat" xml:space="preserve">
+    <value>Клавиатура не приняла {0}.</value>
+  </data>
+  <data name="DL2_BarRefusedFormat" xml:space="preserve">
+    <value>Световая полоса не приняла {0}.</value>
+  </data>
+  <data name="DL2_NowShowing" xml:space="preserve">
+    <value>Сейчас показано: </value>
+  </data>
+  <data name="FC2_NoCalibration" xml:space="preserve">
+    <value>Данных калибровки нет. Запустите мастер калибровки, чтобы измерить реальную работу вентилятора.</value>
+  </data>
+  <data name="FC2_CalibrationInfoFormat" xml:space="preserve">
+    <value>Откалибровано для: {0}&#10;Макс. уровень: {1}&#10;Мин. уровень вращения: {2}&#10;Макс. вентилятор CPU: {3} об/мин&#10;Макс. вентилятор GPU: {4} об/мин&#10;Последняя калибровка: {5} ({6:F0} дн. назад)</value>
+  </data>
+  <data name="BL2_RelatedPackagesFormat" xml:space="preserve">
+    <value>Возможно связанные пакеты того же издателя: {0}</value>
+  </data>
+  <data name="BL2_BulkCancelledFormat" xml:space="preserve">
+    <value>Массовое восстановление отменено в {0}. Выполнено: {1}, пропущено: {2}.</value>
+  </data>
+  <data name="BL2_BulkFinishedFormat" xml:space="preserve">
+    <value>Массовое восстановление завершено с ошибками: {0}. Восстановлено {1} из {2}.</value>
+  </data>
+  <data name="MV2_SafeguardLabelFormat" xml:space="preserve">
+    <value>Точка защиты OmenCore {0}</value>
+  </data>
+  <data name="MV2_NoRestorePointConfirmed" xml:space="preserve">
+    <value>Продолжаем без точки восстановления (подтверждено пользователем)</value>
+  </data>
+  <data name="MV2_RestorePointCreatedFormat" xml:space="preserve">
+    <value>✓ Точка восстановления создана (#{0})</value>
+  </data>
+  <data name="TI2_TrayTooltipFormat" xml:space="preserve">
+    <value>OmenCore — управление игровым ноутбуком&#10;{0}&#10;{1}</value>
+  </data>
+  <data name="L2_CleanResultFailedSuffixFormat" xml:space="preserve">
+    <value>  •  ошибок: {0}</value>
+  </data>
+  <data name="Main_FanBackendUnavailableFormat" xml:space="preserve">
+    <value>Бэкенд управления вентиляторами недоступен. Горячая клавиша максимального обдува не применена.</value>
+  </data>
+  <data name="Main_FanBackendUnavailableVictusFormat" xml:space="preserve">
+    <value>Бэкенд вентиляторов Victus недоступен, поэтому максимальный обдув не применён. Запустите диагностику и поделитесь отчётом в формате руководства.</value>
+  </data>
+  <data name="Main_StatusCreatingRestorePoint" xml:space="preserve">
+    <value>Создание точки восстановления...</value>
+  </data>
+  <data name="Main_StatusRemovingOgh" xml:space="preserve">
+    <value>Удаление OMEN Gaming Hub...</value>
+  </data>
+  <data name="Main_ClipboardSystemInfoFormat" xml:space="preserve">
+    <value>Модель: {0}&#10;ProductName: {1}&#10;SystemSku: {2}&#10;Диагностика: {3}</value>
+  </data>
+  <data name="Main_OsdCategoryProfile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="Main_OsdCategoryPerformance" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="Main_OsdCategoryBoost" xml:space="preserve">
+    <value>Ускорение</value>
+  </data>
+  <data name="Main_OsdCategoryQuietMode" xml:space="preserve">
+    <value>Тихий режим</value>
+  </data>
+  <data name="Main_OsdValueMaxCooling" xml:space="preserve">
+    <value>Максимальное охлаждение</value>
+  </data>
+  <data name="Main_OsdValuePerformance" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="Main_OsdValueQuiet" xml:space="preserve">
+    <value>Тихий</value>
+  </data>
+  <data name="Main_OsdSourceTray" xml:space="preserve">
+    <value>Трей</value>
+  </data>
+  <data name="Main_SystemRestoreLabelOghCleanup" xml:space="preserve">
+    <value>OmenCore — перед удалением OGH</value>
+  </data>
+  <data name="Main_SystemRestoreLabelSystemChanges" xml:space="preserve">
+    <value>OmenCore — перед изменениями системы</value>
+  </data>
+  <data name="Dashboard_ModeLinkDecoupled" xml:space="preserve">
+    <value>Вентиляторы и производительность развязаны</value>
+  </data>
+  <data name="Toast_FanProfileTitle" xml:space="preserve">
+    <value>Профиль вентиляторов</value>
+  </data>
+  <data name="Toast_PerformanceModeTitle" xml:space="preserve">
+    <value>Режим производительности</value>
+  </data>
+  <data name="Toast_GpuSettingTitleFormat" xml:space="preserve">
+    <value>GPU {0}</value>
+  </data>
+  <data name="Toast_KeyboardSettingTitleFormat" xml:space="preserve">
+    <value>Клавиатура {0}</value>
+  </data>
+  <data name="Toast_SuccessTitle" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="Toast_ErrorTitle" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Tray_AppTooltip" xml:space="preserve">
+    <value>OmenCore — управление игровым ноутбуком</value>
+  </data>
+  <data name="Tray_PerfHeaderFirmwareDefault" xml:space="preserve">
+    <value>По умолчанию из прошивки</value>
+  </data>
+  <data name="DeviceLighting_NothingStaged" xml:space="preserve">
+    <value>Нечего записывать.</value>
+  </data>
+  <data name="FanCalibration_StatusNotStarted" xml:space="preserve">
+    <value>Не запущено</value>
+  </data>
+  <data name="FanControl_CurveStatusReadyToApply" xml:space="preserve">
+    <value>Готово к применению</value>
+  </data>
+  <data name="FanControl_UnknownModelName" xml:space="preserve">
+    <value>Неизвестная модель</value>
+  </data>
+  <data name="GpuClamp_RestartingGpu" xml:space="preserve">
+    <value>Перезапуск GPU...</value>
+  </data>
+  <data name="SC_GpuOcStatusNotAvailable" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
+  <data name="SC_GpuOcNotAvailableMessage" xml:space="preserve">
+    <value>Разгон GPU недоступен</value>
+  </data>
+  <data name="SC_TestApplyNotStarted" xml:space="preserve">
+    <value>Тестовое применение не началось: не удалось применить одну или несколько настроек GPU.</value>
+  </data>
+  <data name="SC_TestTuningKept" xml:space="preserve">
+    <value>Тестовая настройка сохранена и будет применена при запуске.</value>
+  </data>
+  <data name="SC_TestNoSnapshot" xml:space="preserve">
+    <value>Нет тестового снимка для восстановления.</value>
+  </data>
+  <data name="SC_TestUndervoltKept" xml:space="preserve">
+    <value>Тестовое понижение напряжения сохранено и будет применено при запуске.</value>
+  </data>
+  <data name="SC_ApplyingTestUndervolt" xml:space="preserve">
+    <value>Применение тестового понижения напряжения CPU...</value>
+  </data>
+  <data name="SC_NvapiNotAvailable" xml:space="preserve">
+    <value>NVAPI недоступен</value>
+  </data>
+  <data name="SC_NvidiaGpuNotDetected" xml:space="preserve">
+    <value>GPU NVIDIA не обнаружен</value>
+  </data>
+  <data name="SC_AmdGpuOcResetDefaults" xml:space="preserve">
+    <value>Разгон AMD GPU сброшен к значениям по умолчанию</value>
+  </data>
+  <data name="SC_StartupReapplyHeldBackPrefix" xml:space="preserve">
+    <value>Автоприменение при запуске приостановлено: прошлый сеанс завершился сбоем.</value>
+  </data>
+  <data name="SC_ModeMemoryReadFailed" xml:space="preserve">
+    <value>Не удалось прочитать текущие настройки на этой машине.</value>
+  </data>
+  <data name="SC_ApplyingCpuTuning" xml:space="preserve">
+    <value>Применение настроек CPU...</value>
+  </data>
+  <data name="SC_ProfileMaxExperimental" xml:space="preserve">
+    <value>Максимум (эксперим.)</value>
+  </data>
+  <data name="Optimizer_PreflightUpdated" xml:space="preserve">
+    <value>Предпроверка обновлена</value>
+  </data>
+  <data name="Optimizer_ExportReportNoPath" xml:space="preserve">
+    <value>Не удалось экспортировать отчёт об оптимизации</value>
+  </data>
+  <data name="Optimizer_ReportFileNotFound" xml:space="preserve">
+    <value>Файл отчёта не найден</value>
+  </data>
+  <data name="Optimizer_ReportOpened" xml:space="preserve">
+    <value>Отчёт открыт</value>
+  </data>
+  <data name="Optimizer_NoReportPathToCopy" xml:space="preserve">
+    <value>Нет пути отчёта для копирования</value>
+  </data>
+  <data name="Optimizer_ReportPathCopied" xml:space="preserve">
+    <value>Путь отчёта скопирован в буфер обмена</value>
+  </data>
+  <data name="Mem_EnablingCompression" xml:space="preserve">
+    <value>Включение сжатия памяти</value>
+  </data>
+  <data name="Mem_DisablingCompression" xml:space="preserve">
+    <value>Отключение сжатия памяти</value>
+  </data>
+  <data name="Mem_CompressionChangeFailed" xml:space="preserve">
+    <value>Не удалось изменить состояние сжатия памяти</value>
+  </data>
+  <data name="Mem_CleaningMemory" xml:space="preserve">
+    <value>Очистка памяти</value>
+  </data>
+  <data name="Bloatware_PresetTelemetryOnly" xml:space="preserve">
+    <value>Набор «Только телеметрия»</value>
+  </data>
+  <data name="Bloatware_PresetOmenConflict" xml:space="preserve">
+    <value>Набор «Меньше конфликтов OMEN»</value>
+  </data>
+  <data name="Bloatware_PresetWindowsConsumer" xml:space="preserve">
+    <value>Набор «Потребительские приложения Windows»</value>
+  </data>
+  <data name="Bloatware_PresetFullStandalone" xml:space="preserve">
+    <value>Набор «Полностью автономный режим»</value>
+  </data>
+  <data name="Settings_FanBackendWmiPawnio" xml:space="preserve">
+    <value>WMI BIOS + PawnIO</value>
+  </data>
+  <data name="Settings_FanBackendWmiOgh" xml:space="preserve">
+    <value>WMI BIOS (OGH)</value>
+  </data>
+  <data name="Settings_FanBackendWmiLegacyEc" xml:space="preserve">
+    <value>WMI BIOS + необязательный старый путь EC</value>
+  </data>
+  <data name="Settings_FanBackendWmiOnly" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="Settings_TimedOutFormat" xml:space="preserve">
+    <value>{0} (тайм-аут)</value>
+  </data>
+  <data name="Dashboard_BatteryHealthGood" xml:space="preserve">
+    <value>Хорошо</value>
+  </data>
+  <data name="Dashboard_BatteryHealthFair" xml:space="preserve">
+    <value>Удовлетворительно</value>
+  </data>
+  <data name="Dashboard_BatteryHealthReplace" xml:space="preserve">
+    <value>Заменить</value>
+  </data>
+  <data name="Dashboard_Unknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="Settings_ModelIdentityUnavailable" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
+  <data name="KbdMap_StatusLedsAcceptedFormat" xml:space="preserve">
+    <value>{0} LED принято</value>
+  </data>
+  <data name="KbdMap_StatusLedsRefusedFormat" xml:space="preserve">
+    <value>{0} LED отклонено</value>
+  </data>
+  <data name="KbdMap_StatusKeysAcceptedFormat" xml:space="preserve">
+    <value>Клавиш принято: {0}</value>
+  </data>
+  <data name="KbdMap_StatusKeysRefusedFormat" xml:space="preserve">
+    <value>Клавиш отклонено: {0}</value>
+  </data>
+  <data name="KbdMap_StatusBarAccepted" xml:space="preserve">
+    <value>4 зоны подсветки приняты</value>
+  </data>
+  <data name="KbdMap_StatusBarRefused" xml:space="preserve">
+    <value>4 зоны подсветки отклонены</value>
+  </data>
+  <data name="KbdMap_StatusOnlyEyes" xml:space="preserve">
+    <value>Подтвердить можно только визуально.</value>
+  </data>
+  <data name="KbdMap_StatusBrightnessNotAppliedFormat" xml:space="preserve">
+    <value>Яркость {0} НЕ применена: у этой клавиатуры нет регулировки яркости.</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSystemInfo" xml:space="preserve">
+    <value>Сбор сведений о системе...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressHardware" xml:space="preserve">
+    <value>Сбор данных мониторинга оборудования...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressLogs" xml:space="preserve">
+    <value>Сбор журналов приложения...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSettings" xml:space="preserve">
+    <value>Сбор параметров и конфигурации...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressPerformance" xml:space="preserve">
+    <value>Сбор данных режимов производительности...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressReadiness" xml:space="preserve">
+    <value>Сбор готовности основного управления...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressCalibration" xml:space="preserve">
+    <value>Сбор данных калибровки вентиляторов...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressFanMax" xml:space="preserve">
+    <value>Проверка максимального обдува...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressAnonymizing" xml:space="preserve">
+    <value>Анонимизация данных...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSaving" xml:space="preserve">
+    <value>Сохранение файла диагностики...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressDone" xml:space="preserve">
+    <value>Экспорт успешно завершён</value>
+  </data>
+  <data name="SettingsViewModel_SourceNoResolvedProfile" xml:space="preserve">
+    <value>Профиль возможностей не определён</value>
+  </data>
+  <data name="SettingsViewModel_SourceExactProductId" xml:space="preserve">
+    <value>Точный ProductId</value>
+  </data>
+  <data name="SettingsViewModel_SourceFamilyFallback" xml:space="preserve">
+    <value>Откат по семейству</value>
+  </data>
+  <data name="SettingsViewModel_SourceRuntimeFallback" xml:space="preserve">
+    <value>Откат во время работы</value>
+  </data>
+  <data name="SettingsViewModel_SourceAmbiguousProductId" xml:space="preserve">
+    <value>Неоднозначный ProductId + уточнение по имени модели</value>
+  </data>
+  <data name="SettingsViewModel_SourceModelSeriesMatch" xml:space="preserve">
+    <value>Совпадение по серии модели</value>
+  </data>
+  <data name="SettingsViewModel_SourcePartialProductId" xml:space="preserve">
+    <value>Частичное совпадение ProductId</value>
+  </data>
+  <data name="SettingsViewModel_SourceHeuristic" xml:space="preserve">
+    <value>Эвристическое совпадение</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityNoProfile" xml:space="preserve">
+    <value>Обнаружение возможностей не определило профиль модели.</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityUnverified" xml:space="preserve">
+    <value>Профиль возможностей сопоставлен по ProductId, но запись ещё не проверена пользователями.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardSharedProductId" xml:space="preserve">
+    <value>ProductId клавиатуры общий для нескольких моделей; профиль выбран по контексту модели WMI.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardUnverified" xml:space="preserve">
+    <value>Профиль клавиатуры сопоставлен по ProductId, но запись ещё не проверена пользователями.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardSeriesInferred" xml:space="preserve">
+    <value>Профиль клавиатуры выведен по серии модели, а не по точному ProductId.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardPartialProvisional" xml:space="preserve">
+    <value>Профиль клавиатуры выбран по частичному ProductId и считается предварительным.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardHeuristic" xml:space="preserve">
+    <value>Профиль клавиатуры получен эвристическим путём; проверьте его перед использованием.</value>
+  </data>
+  <data name="InputPromptWindow_Ok" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="Main_MemoryTelemetryUnavailable" xml:space="preserve">
+    <value>Телеметрия памяти недоступна</value>
+  </data>
+  <data name="Main_StorageTelemetryUnavailable" xml:space="preserve">
+    <value>Телеметрия накопителя недоступна</value>
+  </data>
+  <data name="Main_PerCoreClocksUnavailable" xml:space="preserve">
+    <value>Частоты ядер недоступны</value>
+  </data>
+  <data name="Main_DiskActiveFormat" xml:space="preserve">
+    <value>активность {0}%</value>
+  </data>
+  <data name="SC_FanLinkedBadge" xml:space="preserve">
+    <value>Вентиляторы связаны с производительностью</value>
+  </data>
+  <data name="SC_FanIndependentBadge" xml:space="preserve">
+    <value>Вентиляторы независимы</value>
+  </data>
+  <data name="SC_LinkedPolicyHint" xml:space="preserve">
+    <value>Этот режим также обновляет политику вентиляторов, так как включена связка.</value>
+  </data>
+  <data name="SC_DecoupledPolicyHint" xml:space="preserve">
+    <value>Этот режим меняет только питание и производительность; текущий профиль вентиляторов или кривая остаются.</value>
+  </data>
+  <data name="SC_WindowsPowerPlanFallback" xml:space="preserve">
+    <value>Схема электропитания Windows</value>
+  </data>
+  <data name="SC_BadgePowerLocked" xml:space="preserve">
+    <value>Питание заблокировано</value>
+  </data>
+  <data name="SC_BadgeLocked" xml:space="preserve">
+    <value>Заблокировано</value>
+  </data>
+  <data name="SC_BadgePowerLimitOnly" xml:space="preserve">
+    <value>Только лимит питания</value>
+  </data>
+  <data name="SC_BadgeExtendedRange" xml:space="preserve">
+    <value>Расширенный диапазон</value>
+  </data>
+  <data name="SC_BadgeDetectedRange" xml:space="preserve">
+    <value>Обнаруженный диапазон</value>
+  </data>
+  <data name="SC_StandardNvapiRange" xml:space="preserve">
+    <value>Этот GPU использует стандартный безопасный для ноутбуков диапазон NVAPI. Стабильность зависит от кристалла и BIOS.</value>
+  </data>
+  <data name="SC_DetectedLimitsPending" xml:space="preserve">
+    <value>Обнаруженные пределы настройки GPU появятся после инициализации.</value>
+  </data>
+  <data name="SC_NvapiWritesLockedOemHint" xml:space="preserve">
+    <value>Записи настройки NVAPI заблокированы на этом пути драйвера/прошивки. Для поведения TGP используйте режимы производительности производителя, если они доступны.</value>
+  </data>
+  <data name="SC_PlatformRtx50Laptop" xml:space="preserve">
+    <value>Ноутбучные GPU RTX 50-й серии</value>
+  </data>
+  <data name="SC_PlatformLaptopNvidia" xml:space="preserve">
+    <value>Ноутбучные GPU NVIDIA</value>
+  </data>
+  <data name="SC_PlatformRtx40" xml:space="preserve">
+    <value>GPU RTX 40-й серии</value>
+  </data>
+  <data name="SC_PlatformRtx30" xml:space="preserve">
+    <value>GPU RTX 30-й серии</value>
+  </data>
+  <data name="SC_PlatformThisGpu" xml:space="preserve">
+    <value>этот GPU</value>
+  </data>
+  <data name="SC_ResetToDefaultsGeneric" xml:space="preserve">
+    <value>Сброс поддерживаемых настроек GPU к значениям по умолчанию</value>
+  </data>
+  <data name="SC_GpuReadyFormat" xml:space="preserve">
+    <value>✓ {0} — готово</value>
+  </data>
+  <data name="SC_GpuDetectedWritesLockedFormat" xml:space="preserve">
+    <value>Обнаружен {0}, но записи настройки NVAPI заблокированы текущим драйвером или прошивкой.</value>
+  </data>
+  <data name="SC_ApplyingUndervoltSettings" xml:space="preserve">
+    <value>Применение настроек понижения напряжения...</value>
+  </data>
+  <data name="Settings_GuardrailOverrideOn" xml:space="preserve">
+    <value>Переопределение ограничений OMEN 16/Victus включено.</value>
+  </data>
+  <data name="Settings_GuardrailOverrideOff" xml:space="preserve">
+    <value>Переопределение ограничений OMEN 16/Victus выключено.</value>
+  </data>
+  <data name="Settings_RestoreDisabled" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="Settings_NotDetected" xml:space="preserve">
+    <value>Не обнаружено</value>
+  </data>
+  <data name="Lighting_AudioCaptureUnavailable" xml:space="preserve">
+    <value>Захват звука недоступен</value>
+  </data>
+  <data name="Lighting_SingleTarget" xml:space="preserve">
+    <value>1 активная цель подсветки</value>
+  </data>
+  <data name="Lighting_SingleColourKeyboardHint" xml:space="preserve">
+    <value>У этого ноутбука одноцветная подсветка клавиатуры, поэтому настраивать цвета нечего (прошивка и база моделей OmenCore это подтверждают). Яркость регулируется клавишами Fn.</value>
+  </data>
+  <data name="Lighting_StatusDiscoveringRazer" xml:space="preserve">
+    <value>Поиск устройств Razer...</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerColor" xml:space="preserve">
+    <value>Применение цвета Razer...</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerBreathing" xml:space="preserve">
+    <value>Применение эффекта дыхания Razer...</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerSpectrum" xml:space="preserve">
+    <value>Применение спектра Razer...</value>
+  </data>
+  <data name="Lighting_StatusApplyingOpenRgbColor" xml:space="preserve">
+    <value>Применение цвета OpenRGB...</value>
+  </data>
+  <data name="Lighting_StatusApplyingCorsair" xml:space="preserve">
+    <value>Применение подсветки Corsair...</value>
+  </data>
+  <data name="Lighting_StatusApplyingPreset" xml:space="preserve">
+    <value>Применение профиля подсветки к системе...</value>
+  </data>
+  <data name="Lighting_StatusSyncingAll" xml:space="preserve">
+    <value>Синхронизация цвета со всеми устройствами RGB...</value>
+  </data>
+  <data name="Lighting_StatusApplyingCustomColor" xml:space="preserve">
+    <value>Применение пользовательского цвета...</value>
+  </data>
+  <data name="Lighting_StatusApplyingDpi" xml:space="preserve">
+    <value>Применение настроек DPI...</value>
+  </data>
+  <data name="Lighting_StatusApplyingLogitech" xml:space="preserve">
+    <value>Применение подсветки Logitech...</value>
+  </data>
+  <data name="Lighting_StatusLoadingMacro" xml:space="preserve">
+    <value>Загрузка профиля макросов...</value>
+  </data>
+  <data name="Lighting_StatusApplyingKeyboardColors" xml:space="preserve">
+    <value>Применение цветов клавиатуры...</value>
+  </data>
+  <data name="Lighting_StatusRestoringKeyboard" xml:space="preserve">
+    <value>Восстановление подсветки клавиатуры...</value>
+  </data>
+  <data name="Lighting_StatusProbingSurface" xml:space="preserve">
+    <value>Определение зоны подсветки RGB...</value>
+  </data>
+  <data name="Lighting_NoApplyAttempted" xml:space="preserve">
+    <value>В этом сеансе применение подсветки клавиатуры не выполнялось.</value>
+  </data>
+  <data name="Lighting_UnknownBackend" xml:space="preserve">
+    <value>неизвестный бэкенд</value>
+  </data>
+  <data name="Lighting_BackendWmiHint" xml:space="preserve">
+    <value>💡 Если цвета не меняются, включите «Экспериментальная EC-клавиатура» в Настройки → Оборудование.</value>
+  </data>
+  <data name="Lighting_BackendEcHint" xml:space="preserve">
+    <value>Используется прямой доступ к EC (экспериментально). Изменения могут примениться не сразу.</value>
+  </data>
+  <data name="Lighting_BackendOghHint" xml:space="preserve">
+    <value>Используется прокси OMEN Gaming Hub. Убедитесь, что службы Gaming Hub запущены.</value>
+  </data>
+  <data name="KbdMap_StatusSaveOk" xml:space="preserve">
+    <value>Сохранено в клавиатуре. Рисунок сохраняется после отключения питания и отображается при закрытом OmenCore.</value>
+  </data>
+  <data name="KbdMap_StatusSaveRefused" xml:space="preserve">
+    <value>Применено, но клавиатура отказалась сохранять во флеш-память: рисунок отображается сейчас и не сохранится после отключения питания.</value>
+  </data>
+  <data name="KbdMap_StatusLoadedBarFormat" xml:space="preserve">
+    <value>Клавиш: {0} и 4 зоны подсветки. Щёлкните для выбора или обведите рамкой. Удерживайте Ctrl, чтобы добавить.</value>
+  </data>
+  <data name="KbdMap_StatusLoadedFormat" xml:space="preserve">
+    <value>Клавиш: {0}. Щёлкните для выбора или обведите рамкой. Удерживайте Ctrl, чтобы добавить.</value>
+  </data>
+  <data name="KbdMap_StatusLayoutUnconfirmed" xml:space="preserve">
+    <value> Эта раскладка не проверена на реальном устройстве.</value>
+  </data>
+  <data name="KbdMap_StatusBarSuffix" xml:space="preserve">
+    <value> и 4 зоны подсветки.</value>
+  </data>
+  <data name="KbdMap_StatusFullStop" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="KbdMap_StatusClickHint" xml:space="preserve">
+    <value> Щёлкните для выбора или обведите рамкой. Удерживайте Ctrl, чтобы добавить.</value>
+  </data>
+  <data name="GpuClamp_WattageNotReported" xml:space="preserve">
+    <value>Мощность не сообщается</value>
+  </data>
+  <data name="GpuClamp_NotReported" xml:space="preserve">
+    <value>Не сообщается</value>
+  </data>
+  <data name="GpuClamp_NoneOnBattery" xml:space="preserve">
+    <value>Нет — работа от батареи</value>
+  </data>
+  <data name="FanCalib_BiosAutoRestored" xml:space="preserve">
+    <value>Автоуправление вентиляторами BIOS восстановлено</value>
+  </data>
+  <data name="FanCalib_BiosAutoRestoreFailed" xml:space="preserve">
+    <value>Не удалось восстановить автоуправление вентиляторами BIOS через этот бэкенд</value>
+  </data>
+  <data name="Dashboard_PowerTelemetryUnavailable" xml:space="preserve">
+    <value>Телеметрия питания недоступна</value>
+  </data>
+  <data name="Dashboard_PowerSensorsUnavailable" xml:space="preserve">
+    <value>Датчики питания недоступны</value>
+  </data>
+  <data name="Dashboard_PowerLineFormat" xml:space="preserve">
+    <value>CPU: {0}W • GPU: {1}W • Всего: {2}W</value>
+  </data>
+  <data name="Dashboard_PowerInactiveFormat" xml:space="preserve">
+    <value>CPU: {0}W • GPU: неактивен (Optimus)</value>
+  </data>
+  <data name="Bloatware_CurrentItem" xml:space="preserve">
+    <value>текущий элемент</value>
+  </data>
+  <data name="HotkeyOsd_ViaHotkey" xml:space="preserve">
+    <value>через горячую клавишу</value>
+  </data>
+  <data name="Language_SystemDefault" xml:space="preserve">
+    <value>Как в системе</value>
+  </data>
+  <data name="Main_SourceQuickAccess" xml:space="preserve">
+    <value>Быстрый доступ</value>
+  </data>
+  <data name="KbdMap_StatusSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="QuickPopup_CurveTooltipFormat" xml:space="preserve">
+    <value>Кривая: {0}</value>
+  </data>
 </root>

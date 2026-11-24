@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
+using OmenCore.Localization;
 using OmenCore.Utils;
 
 namespace OmenCore.Services;
@@ -63,7 +64,7 @@ public class ToastNotificationService : IDisposable
     /// </summary>
     public void ShowFanProfileChange(string profile)
     {
-        ShowModeChange("Fan Profile", profile, "🌀");
+        ShowModeChange(Strings.Toast_FanProfileTitle, profile, "🌀");
     }
     
     /// <summary>
@@ -71,7 +72,7 @@ public class ToastNotificationService : IDisposable
     /// </summary>
     public void ShowPerformanceModeChange(string mode)
     {
-        ShowModeChange("Performance Mode", mode, "⚡");
+        ShowModeChange(Strings.Toast_PerformanceModeTitle, mode, "⚡");
     }
     
     /// <summary>
@@ -79,7 +80,7 @@ public class ToastNotificationService : IDisposable
     /// </summary>
     public void ShowGpuPowerChange(string setting, string value)
     {
-        ShowModeChange($"GPU {setting}", value, "🎮");
+        ShowModeChange(string.Format(Strings.Toast_GpuSettingTitleFormat, setting), value, "🎮");
     }
     
     /// <summary>
@@ -87,7 +88,7 @@ public class ToastNotificationService : IDisposable
     /// </summary>
     public void ShowKeyboardLightingChange(string setting, string value)
     {
-        ShowModeChange($"Keyboard {setting}", value, "💡");
+        ShowModeChange(string.Format(Strings.Toast_KeyboardSettingTitleFormat, setting), value, "💡");
     }
     
     /// <summary>
@@ -95,7 +96,7 @@ public class ToastNotificationService : IDisposable
     /// </summary>
     public void ShowSuccess(string message)
     {
-        ShowModeChange("Success", message, "✓");
+        ShowModeChange(Strings.Toast_SuccessTitle, message, "✓");
     }
     
     /// <summary>
@@ -103,7 +104,7 @@ public class ToastNotificationService : IDisposable
     /// </summary>
     public void ShowError(string message)
     {
-        ShowModeChange("Error", message, "✗");
+        ShowModeChange(Strings.Toast_ErrorTitle, message, "✗");
     }
     
     private void ShowToastInternal(string title, string value, string? icon)

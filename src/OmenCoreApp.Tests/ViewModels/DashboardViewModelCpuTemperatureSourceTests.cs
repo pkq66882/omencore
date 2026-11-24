@@ -39,8 +39,12 @@ namespace OmenCoreApp.Tests.ViewModels
         private readonly HardwareMonitoringService _monitoring;
         private readonly MethodInfo _onSampleUpdated;
 
+        private readonly System.Globalization.CultureInfo _originalUICulture = System.Globalization.CultureInfo.CurrentUICulture;
+
         public DashboardViewModelCpuTemperatureSourceTests()
         {
+            // Temperature-source tooltips are localized; pin to en for canonical assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
             _tmpConfigDir = Path.Combine(Path.GetTempPath(), "OmenCoreTests", Guid.NewGuid().ToString());
             Directory.CreateDirectory(_tmpConfigDir);
             Environment.SetEnvironmentVariable("OMENCORE_CONFIG_DIR", _tmpConfigDir);
@@ -62,6 +66,7 @@ namespace OmenCoreApp.Tests.ViewModels
         {
             _monitoring.Dispose();
             _logging.Dispose();
+            System.Globalization.CultureInfo.CurrentUICulture = _originalUICulture;
         }
 
         private void Push(DashboardViewModel vm, MonitoringSample sample) =>

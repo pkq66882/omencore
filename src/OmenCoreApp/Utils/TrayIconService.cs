@@ -1032,7 +1032,7 @@ namespace OmenCore.Utils
                 if (_performanceModeMenuItem != null)
                 {
                     _performanceModeMenuItem.Header = _performanceIsFirmwareDefault
-                        ? BuildPerformanceModeHeaderText("Firmware default")
+                        ? BuildPerformanceModeHeaderText(Strings.Tray_PerfHeaderFirmwareDefault)
                         : BuildPerformanceModeHeaderText(_currentPerformanceMode);
                 }
 

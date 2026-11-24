@@ -251,10 +251,10 @@
     <value>1. 用下方按钮导出诊断</value>
   </data>
   <data name="DiagnosticExportControl_N2ClickCreateGithubIssueToOpenAPreFilledIss" xml:space="preserve">
-    <value>2. 点击“创建 GitHub Issue”打开预填写的 issue</value>
+    <value>2. 点击“创建 GitHub Issue”，打开已预填内容的议题</value>
   </data>
   <data name="DiagnosticExportControl_N3AttachTheExportedDiagnosticFileToTheIssue" xml:space="preserve">
-    <value>3. 将导出的诊断文件附加到 issue</value>
+    <value>3. 将导出的诊断文件附加到议题</value>
   </data>
   <data name="DiagnosticExportControl_CreateGithubIssue" xml:space="preserve">
     <value>创建 GitHub Issue</value>
@@ -1001,7 +1001,7 @@
     <value>CPU 温度覆盖：</value>
   </data>
   <data name="DiagnosticsView_SaveTheFullCoreControlReadinessReportToAFi" xml:space="preserve">
-    <value>将完整的核心控制就绪报告保存到文件，用于排障或提交 bug 报告</value>
+    <value>将完整的核心控制就绪报告保存到文件，用于排障或提交缺陷报告</value>
   </data>
   <data name="DiagnosticsView_ExportFullDiagnosticsReport" xml:space="preserve">
     <value>导出完整诊断报告</value>
@@ -1097,7 +1097,7 @@
     <value>停止保持 CPU 限制</value>
   </data>
   <data name="DiagnosticsView_ReleaseTheAmdSmuPowerLimitsOmencoreIsCurre" xml:space="preserve">
-    <value>释放 OmenCore 为绕过适配器钳制而钉低的 AMD SMU 功耗限制</value>
+    <value>释放 OmenCore 为绕过适配器钳制而压低的 AMD SMU 功耗限制</value>
   </data>
   <data name="DiagnosticsView_StopHoldingTheCpuPowerLimits" xml:space="preserve">
     <value>停止保持 CPU 功耗限制</value>
@@ -1151,7 +1151,7 @@
     <value>⚠️ 推断值，尚未验证</value>
   </data>
   <data name="DiagnosticsView_ThisReflectsWhatOmencoreSModelDatabaseKnow" xml:space="preserve">
-    <value>这反映的是 OmenCore 机型数据库对这台机器检测到的主板的识别结果——某项功能显示“不支持”可能是真实的硬件/固件限制，而不是 OmenCore 的 bug。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功耗提升）；常规标签页里的基础风扇模式（自动/性能/最大）由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
+    <value>这反映的是 OmenCore 机型数据库对这台机器检测到的主板的识别结果——某项功能显示“不支持”可能是真实的硬件/固件限制，而不是 OmenCore 的缺陷。这些条目描述的是高级功能（自定义曲线、独立分区、GPU 功耗提升）；常规标签页里的基础风扇模式（自动/性能/最大）由单独逻辑控制，不受此列表影响。如果你的机型显示“未验证”且下方内容有误，请上报。</value>
   </data>
   <data name="DiagnosticsView_CustomFanCurves" xml:space="preserve">
     <value>自定义风扇曲线</value>
@@ -2153,7 +2153,7 @@
     <value> 控制 OpenRGB 支持的任何 RGB 设备（主板、内存、显卡、散热器、灯带等）。</value>
   </data>
   <data name="LightingView_DownloadOpenrgbFromOpenrgbOrgAndEnableTheS" xml:space="preserve">
-    <value>从 openrgb.org 下载 OpenRGB 并启用 SDK 服务器（Settings → SDK Server → Start Server）。</value>
+    <value>从 openrgb.org 下载 OpenRGB，并在其中打开 Settings → SDK Server → Start Server 启用 SDK 服务器。</value>
   </data>
   <data name="LightingView_HpOmenKeyboard" xml:space="preserve">
     <value>HP OMEN 键盘</value>
@@ -2732,7 +2732,7 @@
     <value>↓ 降</value>
   </data>
   <data name="OsdOverlayWindow_ThermalThrottle" xml:space="preserve">
-    <value>⚠ 温度降频</value>
+    <value>⚠️ 温度降频</value>
   </data>
   <data name="QuickPopupWindow_OmencoreQuickAccess" xml:space="preserve">
     <value>OmenCore 快速访问</value>
@@ -2753,10 +2753,10 @@
     <value>狂暴</value>
   </data>
   <data name="QuickPopupWindow_OpenFullDashboard" xml:space="preserve">
-    <value>打开完整面板</value>
+    <value>打开完整主界面</value>
   </data>
   <data name="QuickPopupWindow_Dashboard" xml:space="preserve">
-    <value>面板</value>
+    <value>主界面</value>
   </data>
   <data name="QuickPopupWindow_TurnOffDisplay" xml:space="preserve">
     <value>关闭屏幕</value>
@@ -2792,10 +2792,10 @@
     <value>当前系统使用的风扇控制方式</value>
   </data>
   <data name="SettingsView_SecureBoot" xml:space="preserve">
-    <value>Secure Boot</value>
+    <value>安全启动</value>
   </data>
   <data name="SettingsView_SecureBootCompatibleDriverForEcMsrAccess" xml:space="preserve">
-    <value>兼容 Secure Boot 的 EC/MSR 访问驱动</value>
+    <value>兼容安全启动的 EC/MSR 访问驱动</value>
   </data>
   <data name="SettingsView_OmenGamingHub" xml:space="preserve">
     <value>OMEN Gaming Hub</value>
@@ -2981,7 +2981,7 @@
     <value>最大风扇模式自动恢复</value>
   </data>
   <data name="SettingsView_OffKeepsMaxUntilYouChangeItCooldownHandsTh" xml:space="preserve">
-    <value>关闭：保持最大模式，直到你手动切换。冷却：CPU 与 GPU 连续 2 分钟低于 60°C 后，交由 BIOS 自动控制。定时：到达设定时间后恢复。尚未在真机上验证。</value>
+    <value>关闭：保持最大模式，直到你手动切换。降温后恢复：CPU 与 GPU 连续 2 分钟低于 60°C 后，交由 BIOS 自动控制。定时：到达设定时间后恢复。尚未在真机上验证。</value>
   </data>
   <data name="SettingsView_Minutes" xml:space="preserve">
     <value>分钟</value>
@@ -3008,7 +3008,7 @@
     <value>启动时重新应用已保存的风扇预设或曲线。</value>
   </data>
   <data name="SettingsView_RestoreSavedFanMax" xml:space="preserve">
-    <value>恢复已保存的 Fan Max</value>
+    <value>恢复已保存的最大档位</value>
   </data>
   <data name="SettingsView_AllowASavedMaxPresetToStartFansAtFullSpeed" xml:space="preserve">
     <value>允许已保存的 Max 预设在启动时全速运转风扇。默认关闭；改用 BIOS 自动。</value>
@@ -3170,7 +3170,7 @@
     <value>📥 获取 PawnIO（推荐）</value>
   </data>
   <data name="SettingsView_DownloadAndInstallPawnioASecureBootCompati" xml:space="preserve">
-    <value>下载并安装 PawnIO——兼容 Secure Boot 的 EC/MSR 访问驱动</value>
+    <value>下载并安装 PawnIO——兼容安全启动的 EC/MSR 访问驱动</value>
   </data>
   <data name="SettingsView_RefreshStatus" xml:space="preserve">
     <value>刷新状态</value>
@@ -3551,13 +3551,13 @@
     <value>在自定义阈值停止充电，保护电池健康</value>
   </data>
   <data name="SettingsView_ChargeThreshold" xml:space="preserve">
-    <value>充电阈值</value>
+    <value>电池充电上限</value>
   </data>
   <data name="SettingsView_SetMaximumBatteryChargeLevel" xml:space="preserve">
     <value>设置电池充电上限</value>
   </data>
   <data name="SettingsView_BatteryChargeThresholdPercent" xml:space="preserve">
-    <value>电池充电阈值（%）</value>
+    <value>电池充电上限（%）</value>
   </data>
   <data name="SettingsView_FanHysteresis" xml:space="preserve">
     <value>风扇滞回</value>
@@ -3767,7 +3767,7 @@
     <value>🐛 报告问题</value>
   </data>
   <data name="SettingsView_OpenTheGithubIssueTrackerToReportABugOrReq" xml:space="preserve">
-    <value>打开 GitHub issue 跟踪器报告 bug 或请求功能</value>
+    <value>打开 GitHub 议题页，报告缺陷或提出功能建议</value>
   </data>
   <data name="SettingsView_SupportDevelopment" xml:space="preserve">
     <value>💖 支持开发</value>
@@ -4979,10 +4979,10 @@
     <value>无方案</value>
   </data>
   <data name="Setter_Running" xml:space="preserve">
-    <value>⚠ 运行中</value>
+    <value>⚠️ 运行中</value>
   </data>
   <data name="Setter_SecureBootIsDisabledLegacyUnsignedDriversA" xml:space="preserve">
-    <value>Secure Boot 已禁用——可使用旧版未签名驱动</value>
+    <value>安全启动已禁用——可使用旧版未签名驱动</value>
   </data>
   <data name="Setter_UsingLegacyWmiBiosF15Fallback" xml:space="preserve">
     <value>使用旧版 WMI（BIOS F.15+ 回退）</value>
@@ -4991,7 +4991,7 @@
     <value>已移除</value>
   </data>
   <data name="Setter_SecureBootEnabledUnsignedDriversBlockedPaw" xml:space="preserve">
-    <value>Secure Boot 已启用——未签名驱动被阻止。PawnIO 或 WMI BIOS 提供兼容访问。</value>
+    <value>安全启动已启用——未签名驱动被阻止。PawnIO 或 WMI BIOS 提供兼容访问。</value>
   </data>
   <data name="Setter_Installed" xml:space="preserve">
     <value>已安装</value>
@@ -5018,7 +5018,7 @@
     <value>音频电平：{0}%</value>
   </data>
   <data name="LightingViewModel_LogitechNotDetected" xml:space="preserve">
-    <value>未检测到 Logitech G HUB</value>
+    <value>未检测到罗技 G HUB</value>
   </data>
   <data name="LightingViewModel_NotRecorded" xml:space="preserve">
     <value>未记录</value>
@@ -5048,7 +5048,7 @@
     <value>Corsair iCUE 未配置</value>
   </data>
   <data name="LightingViewModel_LogitechNotConfigured" xml:space="preserve">
-    <value>Logitech G HUB 未配置</value>
+    <value>罗技 G HUB 未配置</value>
   </data>
   <data name="SystemControlViewModel_ConflictDetected" xml:space="preserve">
     <value>检测到</value>
@@ -5123,7 +5123,7 @@
     <value>启动恢复已应用</value>
   </data>
   <data name="DashboardViewModel_HealthDegraded" xml:space="preserve">
-    <value>⚠ 已降级</value>
+    <value>⚠️ 已降级</value>
   </data>
   <data name="DashboardViewModel_HealthHealthy" xml:space="preserve">
     <value>✓ 健康</value>
@@ -6989,7 +6989,7 @@
     <value>正在清理服务与计划任务…</value>
   </data>
   <data name="Cleanup_StepOmenCap" xml:space="preserve">
-    <value>⚠ 在 DriverStore 中检测到 OmenCap——移除方法请见日志</value>
+    <value>⚠️ 在 DriverStore 中检测到 OmenCap——移除方法请见日志</value>
   </data>
   <data name="Cleanup_StepFirewallPreserved" xml:space="preserve">
     <value>已按用户偏好保留防火墙规则</value>
@@ -6998,7 +6998,7 @@
     <value>✓ 清理已成功完成</value>
   </data>
   <data name="Cleanup_StepCancelled" xml:space="preserve">
-    <value>⚠ 清理已取消</value>
+    <value>⚠️ 清理已取消</value>
   </data>
   <data name="GpuBoost_LevelMinimum" xml:space="preserve">
     <value>最低</value>
@@ -7724,7 +7724,7 @@
     <value>关闭</value>
   </data>
   <data name="MaxAutoReturn_Cooldown" xml:space="preserve">
-    <value>冷却</value>
+    <value>降温后恢复</value>
   </data>
   <data name="MaxAutoReturn_Timer" xml:space="preserve">
     <value>定时</value>
@@ -7943,10 +7943,10 @@
     <value>错误</value>
   </data>
   <data name="Main_RestorePointFailedStepFormat" xml:space="preserve">
-    <value>⚠ 还原点创建失败：{0}</value>
+    <value>⚠️ 还原点创建失败：{0}</value>
   </data>
   <data name="Main_CleanupCanceledNoRestorePoint" xml:space="preserve">
-    <value>⚠ 清理已取消——未创建还原点</value>
+    <value>⚠️ 清理已取消——未创建还原点</value>
   </data>
   <data name="Main_CleanupCanceledByUser" xml:space="preserve">
     <value>用户已取消清理</value>
@@ -8105,7 +8105,7 @@
     <value>导出诊断包</value>
   </data>
   <data name="Settings_DiagExportedBodyFormat" xml:space="preserve">
-    <value>诊断包导出成功！&#10;&#10;文件：{0}&#10;位置：{1}&#10;&#10;可以把 ZIP 附加到 GitHub issue，方便排障。</value>
+    <value>诊断包导出成功！&#10;&#10;文件：{0}&#10;位置：{1}&#10;&#10;可以把 ZIP 附加到 GitHub 议题，方便排障。</value>
   </data>
   <data name="Settings_ExportDiagErrorFormat" xml:space="preserve">
     <value>导出诊断失败：{0}</value>
@@ -8471,7 +8471,7 @@
     <value>{0} {1} @ {2}%：{3} —— 得分 {4}［证据：{5}］</value>
   </data>
   <data name="FanDiag_SummaryInterruptedNoteFormat" xml:space="preserve">
-    <value>⚠ {0} 步被温度保护中断，未计为失败：{1}。</value>
+    <value>⚠️ {0} 步被温度保护中断，未计为失败：{1}。</value>
   </data>
   <data name="FanDiag_SummaryCoolNoteFormat" xml:space="preserve">
     <value>请等待笔记本降至 {0}°C 以下后重新运行诊断以完成这些步骤。</value>
@@ -8846,7 +8846,7 @@
     <value>错误：{0}</value>
   </data>
   <data name="SC_PartialFormat" xml:space="preserve">
-    <value>⚠ 部分失败（{0} 项失败）：{1}</value>
+    <value>⚠️ 部分失败（{0} 项失败）：{1}</value>
   </data>
   <data name="SC_ErrorFormat" xml:space="preserve">
     <value>错误：{0}</value>
@@ -8876,7 +8876,7 @@
     <value>✓ {0} —— 可通过 ADL2 进行 AMD 超频</value>
   </data>
   <data name="SC_AmdDriverMissingFormat" xml:space="preserve">
-    <value>⚠ {0} —— 请安装 AMD Adrenalin 驱动以启用 GPU 调优</value>
+    <value>⚠️ {0} —— 请安装 AMD Adrenalin 驱动以启用 GPU 调优</value>
   </data>
   <data name="SC_AmdOcAppliedFormat" xml:space="preserve">
     <value>AMD GPU 超频已应用：核心 {0} MHz，显存 {1} MHz，功耗 {2}%</value>
@@ -9026,7 +9026,7 @@
     <value>RGB 载荷探测</value>
   </data>
   <data name="KbdDiag_ProbeConfirmBody" xml:space="preserve">
-    <value>将发送 {0} 条实验性键盘颜色命令，每 4 秒一条，均为红色。&#10;&#10;请观察键盘，记下它变红时对应的步骤编号，然后在 GitHub issue 中反馈。当前键盘颜色会先保存，探测结束后自动恢复。</value>
+    <value>将发送 {0} 条实验性键盘颜色命令，每 4 秒一条，均为红色。&#10;&#10;请观察键盘，记下它变红时对应的步骤编号，然后在 GitHub 议题中反馈。当前键盘颜色会先保存，探测结束后自动恢复。</value>
   </data>
   <data name="KbdDiag_ProbeFinished" xml:space="preserve">
     <value>探测结束。请反馈第几步让键盘变红（如有）。</value>
@@ -9297,5 +9297,1574 @@
   </data>
   <data name="Settings_Detecting" xml:space="preserve">
     <value>正在检测…</value>
+  </data>
+  <data name="QuickPopup_PresetCurrent" xml:space="preserve">
+    <value>当前风扇预设</value>
+  </data>
+  <data name="QuickPopup_PresetActiveFormat" xml:space="preserve">
+    <value>当前生效的曲线预设“{0}”</value>
+  </data>
+  <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
+    <value>应用此性能模式。联动模式下会一并调整风扇策略。</value>
+  </data>
+  <data name="Main_EventCustomPresetSavedFormat" xml:space="preserve">
+    <value>自定义预设“{0}”已保存</value>
+  </data>
+  <data name="Main_EventLightingProfilePushedFormat" xml:space="preserve">
+    <value>已应用灯效方案“{0}”</value>
+  </data>
+  <data name="Main_EventLightingProfilePushedByPerfFormat" xml:space="preserve">
+    <value>性能模式已应用灯效方案“{0}”</value>
+  </data>
+  <data name="Main_EventDefaultsRestored" xml:space="preserve">
+    <value>已恢复默认设置</value>
+  </data>
+  <data name="Main_EventConfigurationReloaded" xml:space="preserve">
+    <value>配置已重新加载</value>
+  </data>
+  <data name="Main_EventRestorePointCreated" xml:space="preserve">
+    <value>已创建系统还原点</value>
+  </data>
+  <data name="Main_EventRestorePointFailed" xml:space="preserve">
+    <value>还原点创建失败</value>
+  </data>
+  <data name="Main_EventCleanupCancelled" xml:space="preserve">
+    <value>已取消 OMEN Gaming Hub 清理</value>
+  </data>
+  <data name="Main_EventCleanupDryRunComplete" xml:space="preserve">
+    <value>OMEN 清理检查已完成</value>
+  </data>
+  <data name="Main_EventCleanupComplete" xml:space="preserve">
+    <value>OMEN Gaming Hub 清理完成</value>
+  </data>
+  <data name="Main_EventCleanupCompletedWithErrors" xml:space="preserve">
+    <value>OMEN 清理已完成，但有项目失败</value>
+  </data>
+  <data name="Main_EventCleanupFailed" xml:space="preserve">
+    <value>OMEN 清理失败</value>
+  </data>
+  <data name="Main_EventLogitechDiscoveredFormat" xml:space="preserve">
+    <value>已发现 {0} 个罗技设备</value>
+  </data>
+  <data name="Main_EventConfigExported" xml:space="preserve">
+    <value>✓ 配置已导出</value>
+  </data>
+  <data name="Main_EventExportFailedFormat" xml:space="preserve">
+    <value>✗ 导出失败：{0}</value>
+  </data>
+  <data name="Main_EventImportInvalidFormat" xml:space="preserve">
+    <value>✗ 导入失败：文件格式无效</value>
+  </data>
+  <data name="Main_EventConfigImported" xml:space="preserve">
+    <value>✓ 配置已导入——建议重启 OmenCore</value>
+  </data>
+  <data name="Main_EventImportFailedFormat" xml:space="preserve">
+    <value>✗ 导入失败：{0}</value>
+  </data>
+  <data name="Main_EventDiagBundleCreated" xml:space="preserve">
+    <value>✓ 诊断包已生成，机型信息已复制到剪贴板</value>
+  </data>
+  <data name="Main_EventReportModelExportFailed" xml:space="preserve">
+    <value>✗ 上报机型失败：导出出错</value>
+  </data>
+  <data name="Main_EventReportModelFailedFormat" xml:space="preserve">
+    <value>✗ 上报机型失败：{0}</value>
+  </data>
+  <data name="Main_EventTelemetryExported" xml:space="preserve">
+    <value>✓ 遥测数据已导出</value>
+  </data>
+  <data name="Main_EventTelemetryExportFailed" xml:space="preserve">
+    <value>✗ 遥测数据导出失败</value>
+  </data>
+  <data name="Main_EventSafeModeBlockedFormat" xml:space="preserve">
+    <value>🛡 安全模式已阻止托盘写入：{0}</value>
+  </data>
+  <data name="Main_EventSafeModeLifted" xml:space="preserve">
+    <value>🛡 安全模式已解除——监控状态正常</value>
+  </data>
+  <data name="Main_EventSafeModeStartupActive" xml:space="preserve">
+    <value>🛡 启动安全模式已生效——硬件写入操作暂时受限</value>
+  </data>
+  <data name="Main_EventSafeModeExpired" xml:space="preserve">
+    <value>🛡 安全模式已到期——启动保护窗口结束</value>
+  </data>
+  <data name="Main_FanModeTitle" xml:space="preserve">
+    <value>风扇模式</value>
+  </data>
+  <data name="Main_EventFanModeFailedFormat" xml:space="preserve">
+    <value>风扇模式切换失败：{0}</value>
+  </data>
+  <data name="Main_FanModeApplyFailedFormat" xml:space="preserve">
+    <value>无法应用“{0}”。请到诊断页查看后端状态。</value>
+  </data>
+  <data name="Main_FanModeApplyFailedVictus16S0Format" xml:space="preserve">
+    <value>无法应用“{0}”。Victus 16-s0 机型可能需要验证固件路径：请运行诊断，并按指南格式分享报告与 WMI 日志。</value>
+  </data>
+  <data name="Main_FanModeApplyFailedVictusFormat" xml:space="preserve">
+    <value>无法应用“{0}”。Victus 机型请按指南格式分享诊断输出，以便核对后端映射。</value>
+  </data>
+  <data name="Main_EventFanModeFormat" xml:space="preserve">
+    <value>🌀 风扇模式：{0}</value>
+  </data>
+  <data name="Main_EventFanModeIgnoredFormat" xml:space="preserve">
+    <value>⚠️ 已忽略风扇模式请求：找不到 {0} 对应的预设</value>
+  </data>
+  <data name="Main_FanModePresetNotFoundFormat" xml:space="preserve">
+    <value>无法解析“{0}”对应的预设。</value>
+  </data>
+  <data name="Main_EventPerfModeFormat" xml:space="preserve">
+    <value>⚡ 性能模式：{0}</value>
+  </data>
+  <data name="Main_EventProfileFormat" xml:space="preserve">
+    <value>🎮 方案：{0}（风扇：{1}）</value>
+  </data>
+  <data name="Main_GpuPowerTitle" xml:space="preserve">
+    <value>GPU 功耗</value>
+  </data>
+  <data name="Main_EventGpuPowerFormat" xml:space="preserve">
+    <value>⚡ GPU 功耗：{0}</value>
+  </data>
+  <data name="Main_GpuPowerSetFormat" xml:space="preserve">
+    <value>已设为 {0}</value>
+  </data>
+  <data name="Main_EventKeyboardFormat" xml:space="preserve">
+    <value>💡 键盘：{0}</value>
+  </data>
+  <data name="Main_EventProfileAppliedFormat" xml:space="preserve">
+    <value>🎮 已应用方案“{0}”（{1}）</value>
+  </data>
+  <data name="Main_EventDefaultsRestoredGame" xml:space="preserve">
+    <value>🎮 已恢复默认设置</value>
+  </data>
+  <data name="Main_EventFanHotkeyFormat" xml:space="preserve">
+    <value>🌀 风扇：{0}（快捷键）</value>
+  </data>
+  <data name="Main_EventFanMaxCoolingHotkey" xml:space="preserve">
+    <value>🌀 风扇：最大散热（快捷键）</value>
+  </data>
+  <data name="Main_EventPerfHotkeyFormat" xml:space="preserve">
+    <value>⚡ 性能模式：{0}（快捷键）</value>
+  </data>
+  <data name="Main_EventBoostHotkey" xml:space="preserve">
+    <value>🔥 已激活加速模式（快捷键）</value>
+  </data>
+  <data name="Main_EventQuietHotkey" xml:space="preserve">
+    <value>🤫 已激活冷静模式（快捷键）</value>
+  </data>
+  <data name="Main_EventProfileHotkeyFormat" xml:space="preserve">
+    <value>方案：{0}（快捷键）</value>
+  </data>
+  <data name="Main_EventCustomProfileFailedFormat" xml:space="preserve">
+    <value>自定义方案应用失败：{0}</value>
+  </data>
+  <data name="Main_CustomPresetApplyFailedFormat" xml:space="preserve">
+    <value>无法应用自定义风扇预设“{0}”。请到诊断页查看后端状态。</value>
+  </data>
+  <data name="Main_EventQuietSafetyMax" xml:space="preserve">
+    <value>🌡️ 冷静模式保护：风扇已切到最大（温度过高）</value>
+  </data>
+  <data name="Main_EventQuietSafetyMaxFailed" xml:space="preserve">
+    <value>⚠️ 冷静模式保护：温度过高，但最大散热未能应用——请检查风扇控制</value>
+  </data>
+  <data name="Main_EventQuietSafetyRestored" xml:space="preserve">
+    <value>✅ 冷静模式保护：风扇已回到冷静（温度已恢复）</value>
+  </data>
+  <data name="Main_HotkeyOsdAutoBios" xml:space="preserve">
+    <value>自动（BIOS 控制）</value>
+  </data>
+  <data name="Main_HotkeyOsdOmenKey" xml:space="preserve">
+    <value>OMEN 键</value>
+  </data>
+  <data name="Main_EventHotkeysWindowActive" xml:space="preserve">
+    <value>⌨️ 快捷键已生效（窗口焦点内）</value>
+  </data>
+  <data name="Main_EventHotkeysGlobalEnabled" xml:space="preserve">
+    <value>⌨️ 全局快捷键已启用</value>
+  </data>
+  <data name="Main_EventHotkeysWindowInactive" xml:space="preserve">
+    <value>⌨️ 快捷键已停用（窗口失去焦点）</value>
+  </data>
+  <data name="Main_HotkeyOsdTriggeredFormat" xml:space="preserve">
+    <value>经快捷键 {0}</value>
+  </data>
+  <data name="Notify_GameProfileActivatedTitle" xml:space="preserve">
+    <value>游戏方案已启用</value>
+  </data>
+  <data name="Notify_GameProfileAppliedFormat" xml:space="preserve">
+    <value>已应用方案：{0}</value>
+  </data>
+  <data name="Notify_GameProfileInfoFormat" xml:space="preserve">
+    <value>{0}：{1}</value>
+  </data>
+  <data name="Notify_GameClosedTitle" xml:space="preserve">
+    <value>游戏已退出</value>
+  </data>
+  <data name="Notify_GameDefaultsRestored" xml:space="preserve">
+    <value>已恢复默认设置</value>
+  </data>
+  <data name="Notify_GameClosedInfoFormat" xml:space="preserve">
+    <value>{0}：已恢复默认设置</value>
+  </data>
+  <data name="Notify_FanModeTitleFormat" xml:space="preserve">
+    <value>风扇模式：{0}</value>
+  </data>
+  <data name="Notify_PerfModeTitleFormat" xml:space="preserve">
+    <value>性能模式：{0}</value>
+  </data>
+  <data name="Notify_ChangedViaFormat" xml:space="preserve">
+    <value>触发方式：{0}</value>
+  </data>
+  <data name="Notify_MemoryFreedFormat" xml:space="preserve">
+    <value>已释放 {0}</value>
+  </data>
+  <data name="Notify_MemoryOpsFormat" xml:space="preserve">
+    <value>已完成 {0} 项清理操作</value>
+  </data>
+  <data name="Notify_HighTemperatureTitle" xml:space="preserve">
+    <value>温度过高提醒</value>
+  </data>
+  <data name="Notify_TemperatureFormat" xml:space="preserve">
+    <value>{0}：{1:F0}°C</value>
+  </data>
+  <data name="Notify_HighTemperatureThresholdFormat" xml:space="preserve">
+    <value>阈值：{0:F0}°C · 仅作提示，不会触发风扇</value>
+  </data>
+  <data name="Notify_HighTemperatureInfoFormat" xml:space="preserve">
+    <value>{0}：{1:F0}°C（阈值 {2:F0}°C）。此通知仅作提示，与风扇行为以及 BIOS 的温度/TCC 限制都没有关系。可在“设置 → 通知”中调整或关闭。</value>
+  </data>
+  <data name="Notify_ClampReturnedTitle" xml:space="preserve">
+    <value>GPU 功耗限制已恢复</value>
+  </data>
+  <data name="Notify_ClampReturnedBodyFormat" xml:space="preserve">
+    <value>GPU 再次被限制在 {0:F0} W（自身额度 {1:F0} W）。</value>
+  </data>
+  <data name="Notify_ClampReturnedHint" xml:space="preserve">
+    <value>没有程序需要独显时，可在诊断页重新启动 GPU。</value>
+  </data>
+  <data name="Notify_ClampReturnedInfoFormat" xml:space="preserve">
+    <value>被限制在 {0:F0} W（额度 {1:F0} W）。固件又把适配器信息告诉了驱动——重启 GPU 即可解除。</value>
+  </data>
+  <data name="Notify_CriticalTitleFormat" xml:space="preserve">
+    <value>严重：{0} 过热！</value>
+  </data>
+  <data name="Notify_CriticalTemperatureFormat" xml:space="preserve">
+    <value>温度：{0:F0}°C</value>
+  </data>
+  <data name="Notify_CriticalBody" xml:space="preserve">
+    <value>可能出现热降频。请降低负载或改善散热。</value>
+  </data>
+  <data name="Notify_CriticalInfoFormat" xml:space="preserve">
+    <value>{0:F0}°C——可能出现热降频</value>
+  </data>
+  <data name="Notify_ThermalProtectionTitleFormat" xml:space="preserve">
+    <value>温度保护：{0}</value>
+  </data>
+  <data name="Notify_ThermalProtectionBodyFormat" xml:space="preserve">
+    <value>{0:F0}°C——风扇已升到最大</value>
+  </data>
+  <data name="Notify_ThermalProtectionInfoFormat" xml:space="preserve">
+    <value>{0:F0}°C——风扇已升到最大</value>
+  </data>
+  <data name="SC2_AmdGuidanceFormat" xml:space="preserve">
+    <value>检测到 AMD {0}。&#10;&#10;AMD 锐龙处理器使用曲线优化（CO），而不是传统的电压偏移降压。CO 需要特定的 SMU（系统管理单元）命令，并非所有机型都支持或可用。&#10;&#10;支持范围：已安装 PawnIO 驱动的锐龙 5000 系列及更新型号。&#10;替代方案：使用 Ryzen Master 或 BIOS 中的曲线优化设置。</value>
+  </data>
+  <data name="SC2_IntelGuidanceFormat" xml:space="preserve">
+    <value>检测到 Intel {0}。&#10;&#10;CPU 电压控制被 Intel 的 Plundervolt 安全缓解措施（CVE-2019-11157）阻止。2020 年之后的大多数 BIOS 更新都会锁定 MSR 0x150（电压偏移寄存器）。&#10;&#10;可尝试以下办法：&#10;• 检查 BIOS 中是否有解锁超频/降压的选项&#10;• 部分厂商会提供重新开放电压控制的 BIOS 更新&#10;• 系统支持时可使用 Intel XTU</value>
+  </data>
+  <data name="SC2_AmdCoGuidance" xml:space="preserve">
+    <value>AMD 使用曲线优化（CO），而不是直接写入 mV 偏移。数值越负，CO 降压越强。</value>
+  </data>
+  <data name="SC2_BackendUnavailable" xml:space="preserve">
+    <value>后端：不可用</value>
+  </data>
+  <data name="SC2_BackendAmdCoFormat" xml:space="preserve">
+    <value>后端：AMD 曲线优化（经 {0}）</value>
+  </data>
+  <data name="SC2_BackendTypeFormat" xml:space="preserve">
+    <value>后端：{0}</value>
+  </data>
+  <data name="SC2_SmuSourceFormat" xml:space="preserve">
+    <value>取自 SMU 功耗表（版本 0x{0}）。</value>
+  </data>
+  <data name="SC2_SmuMismatchFormat" xml:space="preserve">
+    <value>滑块要求 {0} W，但 SMU 当前运行在 {1:F1} W。请点击“应用”，或检查是否有其他工具在重复施加限制。</value>
+  </data>
+  <data name="SC2_SmuNoProvider" xml:space="preserve">
+    <value>此系统没有可用的 AMD SMU 接口。</value>
+  </data>
+  <data name="SC2_SmuBackendUnavailable" xml:space="preserve">
+    <value>SMU 后端不可用，无法读取功耗限制。请安装 PawnIO，并以管理员身份运行 OmenCore。</value>
+  </data>
+  <data name="SC2_SmuTableUnknown" xml:space="preserve">
+    <value>尚未识别这颗 CPU 的 SMU 功耗表布局，读取只能落到未知槽位。OmenCore 宁可什么都不显示，也不给出看似合理的错误数值。可用 tools/SmuProbe --pmtable 补充新的表版本。</value>
+  </data>
+  <data name="SC2_SmuReadFailedFormat" xml:space="preserve">
+    <value>SMU 读取失败：{0}</value>
+  </data>
+  <data name="SC2_BackendRyzenAvailableFormat" xml:space="preserve">
+    <value>后端：{0}。此锐龙平台支持写入 STAPM 与 Tctl。</value>
+  </data>
+  <data name="SC2_ControlFull" xml:space="preserve">
+    <value>✓ 完整控制（电源计划 + 风扇 + CPU/GPU 限制）</value>
+  </data>
+  <data name="SC2_ControlSpectre" xml:space="preserve">
+    <value>ℹ️ HP Spectre：仅电源计划 + 风扇（CPU 功耗限制请用 Intel XTU 或 ThrottleStop）</value>
+  </data>
+  <data name="SC2_ControlPartial" xml:space="preserve">
+    <value>ℹ️ 部分控制（仅电源计划 + 风扇——EC 不可用）</value>
+  </data>
+  <data name="SC2_GpuFullPowerWaiting" xml:space="preserve">
+    <value>满功耗 • 等待遥测数据</value>
+  </data>
+  <data name="SC2_GpuFullPowerFormat" xml:space="preserve">
+    <value>满功耗 • {0:F0} W</value>
+  </data>
+  <data name="SC2_TestActiveFormat" xml:space="preserve">
+    <value>测试进行中：{0} 秒后自动还原，除非点击“保留”</value>
+  </data>
+  <data name="SC2_NvapiPowerLockedOnly" xml:space="preserve">
+    <value>NVAPI 频率偏移可用，但功耗限制写入被当前驱动或固件路径锁定。</value>
+  </data>
+  <data name="SC2_NvapiBothLocked" xml:space="preserve">
+    <value>NVAPI 已识别到 GPU，但频率偏移与功耗限制写入都被当前驱动或固件路径锁定。</value>
+  </data>
+  <data name="SC2_NvapiPowerTuningOnly" xml:space="preserve">
+    <value>此 GPU/驱动开放了 NVAPI 功耗调节，但频率与电压偏移仍被锁定。</value>
+  </data>
+  <data name="SC2_NvapiClockLimitsFormat" xml:space="preserve">
+    <value>检测到 {0} 的频率范围：核心 {1}，显存 {2}。功耗限制写入被锁定。</value>
+  </data>
+  <data name="SC2_NvapiPowerRangeFormat" xml:space="preserve">
+    <value>检测到 {0} 的功耗范围：{1}。频率偏移被当前驱动或固件路径阻止。</value>
+  </data>
+  <data name="SC2_NvapiNoWritable" xml:space="preserve">
+    <value>NVAPI 已识别到 GPU，但当前驱动/固件路径没有开放可写的调节项。</value>
+  </data>
+  <data name="SC2_ModelHintPowerOnlyFormat" xml:space="preserve">
+    <value>{0} 的机型提示：目前仅支持功耗调节。请从 {1}% 附近开始，频率调节请交给外部工具。</value>
+  </data>
+  <data name="SC2_ModelHintClocksFormat" xml:space="preserve">
+    <value>{0} 的机型提示：核心从 {1} 附近开始，显存 {2}。功耗保持 100%，因为 NVAPI 功耗策略写入被锁定。</value>
+  </data>
+  <data name="SC2_ModelHintAllFormat" xml:space="preserve">
+    <value>{0} 的机型提示：核心 {1}、显存 {2}、功耗 {3}% 附近起步。接近检测上限的数值在负载验证通过前都应按实验性对待。</value>
+  </data>
+  <data name="SC2_TestApplied" xml:space="preserve">
+    <value>✓ 已应用测试值</value>
+  </data>
+  <data name="SC2_TestLiveGpu" xml:space="preserve">
+    <value>测试值已生效。请跑一次快速跑分或游戏，稳定后点击“保留”。</value>
+  </data>
+  <data name="SC2_TestLiveCpu" xml:space="preserve">
+    <value>测试降压已生效。请跑一次压力测试或游戏，稳定后点击“保留”。</value>
+  </data>
+  <data name="SC2_GpuTestExpired" xml:space="preserve">
+    <value>GPU 测试已到期，已恢复之前的设置。</value>
+  </data>
+  <data name="SC2_TestConfirmedFullFormat" xml:space="preserve">
+    <value>✓ 测试已确认：核心 {0}，显存 {1}，功耗 {2}，电压 {3}</value>
+  </data>
+  <data name="SC2_TestConfirmedPowerFormat" xml:space="preserve">
+    <value>✓ 测试已确认：功耗 {0}</value>
+  </data>
+  <data name="SC2_TestConfirmedKept" xml:space="preserve">
+    <value>✓ 测试已确认：已保留受支持的 GPU 设置</value>
+  </data>
+  <data name="SC2_AppClosedDuringGpuTest" xml:space="preserve">
+    <value>OmenCore 在 GPU 测试期间关闭，已恢复之前的设置。</value>
+  </data>
+  <data name="SC2_TestFailedFormat" xml:space="preserve">
+    <value>测试失败：{0}</value>
+  </data>
+  <data name="SC2_TestCoAppliedFormat" xml:space="preserve">
+    <value>已应用测试曲线优化：核心 {0} mV 等效值</value>
+  </data>
+  <data name="SC2_TestUndervoltAppliedFormat" xml:space="preserve">
+    <value>已应用测试降压：核心 {0} mV，缓存 {1} mV</value>
+  </data>
+  <data name="SC2_CpuTestExpired" xml:space="preserve">
+    <value>CPU 降压测试已到期，已恢复之前的电压。</value>
+  </data>
+  <data name="SC2_TestConfirmedCoFormat" xml:space="preserve">
+    <value>✓ 测试已确认：核心 {0} mV 等效值（已启用开机重新应用）</value>
+  </data>
+  <data name="SC2_TestConfirmedUvFormat" xml:space="preserve">
+    <value>✓ 测试已确认：核心 {0} mV，缓存 {1} mV（已启用开机重新应用）</value>
+  </data>
+  <data name="SC2_TestRevertedCoFormat" xml:space="preserve">
+    <value>测试已还原：已恢复核心 {0} mV 等效值</value>
+  </data>
+  <data name="SC2_TestRevertedUvFormat" xml:space="preserve">
+    <value>测试已还原：已恢复核心 {0} mV、缓存 {1} mV</value>
+  </data>
+  <data name="SC2_TccNoMsr" xml:space="preserve">
+    <value>无法访问 MSR（安装 PawnIO 后才能控制 TCC）</value>
+  </data>
+  <data name="SC2_NotSupportedFormat" xml:space="preserve">
+    <value>不支持：{0}</value>
+  </data>
+  <data name="SC2_SafeRollbackCleared" xml:space="preserve">
+    <value>安全回滚已清除已保存的降压开机状态；当前没有可用的 CPU 降压后端。</value>
+  </data>
+  <data name="SC2_PlNoMsr" xml:space="preserve">
+    <value>无法访问 MSR（安装 PawnIO 后才能控制功耗限制）</value>
+  </data>
+  <data name="SC2_BiosLockedReadOnlyFormat" xml:space="preserve">
+    <value>⚠️ BIOS 已锁定——只读（PL1：{0:F0} W，PL2：{1:F0} W）</value>
+  </data>
+  <data name="SC2_BiosLockedReadOnlyPolicyFormat" xml:space="preserve">
+    <value>⚠️ BIOS 已锁定——只读（PL1：{0:F0} W，PL2：{1:F0} W）。风扇策略仍可经 OMEN/OGH 模式调整</value>
+  </data>
+  <data name="SC2_PowerLimitIgnored" xml:space="preserve">
+    <value>功耗限制已忽略（被驱动/固件锁定）</value>
+  </data>
+  <data name="SC2_PowerLimitIgnoredFormat" xml:space="preserve">
+    <value>功耗 {0}% 已忽略（被驱动/固件锁定）</value>
+  </data>
+  <data name="SC2_GpuOcBlockedBattery" xml:space="preserve">
+    <value>已阻止提高 GPU 超频：请先连接电源适配器</value>
+  </data>
+  <data name="SC2_AcPowerRecommendedTitle" xml:space="preserve">
+    <value>建议连接电源适配器</value>
+  </data>
+  <data name="SC2_GpuOcBatteryBody" xml:space="preserve">
+    <value>检测到在电池供电时提高 GPU 超频。&#10;&#10;电池供电下提高频率/功耗限制，可能导致频率不稳、电量快速耗尽与突然降频。&#10;&#10;请先连接电源适配器，再提高 GPU 超频设置。</value>
+  </data>
+  <data name="SC2_ResetGpuDefaultsFormat" xml:space="preserve">
+    <value>已恢复默认值（核心 0 MHz、显存 0 MHz、功耗 100%、电压 0 mV）</value>
+  </data>
+  <data name="SC2_ResetGpuDefaultsPowerFormat" xml:space="preserve">
+    <value>已恢复默认值（功耗 100%）</value>
+  </data>
+  <data name="SC2_AmdGpuOcPartial" xml:space="preserve">
+    <value>AMD GPU 超频：部分设置未能应用</value>
+  </data>
+  <data name="SC2_StartupResetBoth" xml:space="preserve">
+    <value>已执行启动安全重置：检测到上次会话有未确认的 CPU 降压测试与 GPU 超频测试。调节值已重置为安全的默认值。</value>
+  </data>
+  <data name="SC2_StartupResetCpu" xml:space="preserve">
+    <value>已执行启动安全重置：检测到上次会话有未确认的 CPU 降压测试。CPU 降压已重置为安全的默认值。</value>
+  </data>
+  <data name="SC2_StartupResetGpu" xml:space="preserve">
+    <value>已执行启动安全重置：检测到上次会话有未确认的 GPU 超频测试。GPU 调节已重置为安全的默认值。</value>
+  </data>
+  <data name="SC2_SavedOffsetsUnchanged" xml:space="preserve">
+    <value>已保存的偏移没有变化；请用“测试应用”，再点“保留”重新确认。</value>
+  </data>
+  <data name="SC2_UseTestApplyKeep" xml:space="preserve">
+    <value>请用“测试应用”，再点“保留”重新确认。</value>
+  </data>
+  <data name="SC2_LoadedProfileFormat" xml:space="preserve">
+    <value>已加载方案：{0}</value>
+  </data>
+  <data name="SC2_LoadedProfileNoteFormat" xml:space="preserve">
+    <value>已加载“{0}”，并附机型提示：{1}</value>
+  </data>
+  <data name="SC2_CoAppliedFormat" xml:space="preserve">
+    <value>已应用曲线优化：核心 {0} mV 等效值，核显 {1} mV 等效值</value>
+  </data>
+  <data name="SC2_UndervoltAppliedFormat" xml:space="preserve">
+    <value>已应用降压：核心 {0} mV，缓存 {1} mV</value>
+  </data>
+  <data name="SC2_ApplyFailedFormat" xml:space="preserve">
+    <value>应用失败：{0}</value>
+  </data>
+  <data name="SC2_UndervoltFailedTitle" xml:space="preserve">
+    <value>降压失败</value>
+  </data>
+  <data name="SC2_UndervoltFailedBodyFormat" xml:space="preserve">
+    <value>应用降压设置失败：&#10;&#10;{0}&#10;&#10;可能原因：&#10;• MSR 访问被阻止（安装 PawnIO 或关闭安全启动）&#10;• 已启用 HVCI/内核隔离&#10;• CPU 不受支持</value>
+  </data>
+  <data name="SC2_ResetFailedFormat" xml:space="preserve">
+    <value>重置失败：{0}</value>
+  </data>
+  <data name="SC2_AggressiveTitle" xml:space="preserve">
+    <value>高风险降压警告</value>
+  </data>
+  <data name="SC2_AggressiveBody" xml:space="preserve">
+    <value>⚠️ 警告：高风险降压&#10;&#10;你即将应用 -140 mV 的降压偏移。&#10;&#10;这是激进的设置，可能导致：&#10;• 蓝屏崩溃（BSOD）&#10;• 应用崩溃或卡死&#10;• 负载下系统不稳定&#10;&#10;只有在你理解风险并愿意承担以下后果时才继续：&#10;• 系统不稳定时重启电脑&#10;• 用压力测试（Prime95、OCCT）充分验证&#10;&#10;降压不会在重启后保留，因此一旦崩溃就会自动复位。&#10;&#10;仍要应用 -140 mV 降压吗？</value>
+  </data>
+  <data name="SC2_ResettingCo" xml:space="preserve">
+    <value>正在重置曲线优化偏移…</value>
+  </data>
+  <data name="SC2_ResettingUv" xml:space="preserve">
+    <value>正在重置降压偏移…</value>
+  </data>
+  <data name="SC2_ResetCoDone" xml:space="preserve">
+    <value>曲线优化偏移已重置为默认值</value>
+  </data>
+  <data name="SC2_ResetUvDone" xml:space="preserve">
+    <value>降压偏移已重置为默认值</value>
+  </data>
+  <data name="SC2_ClockOcReadyPowerLockedFormat" xml:space="preserve">
+    <value>✓ {0}——可调整频率超频，功耗限制已锁定</value>
+  </data>
+  <data name="S2_ExclusiveEcTitle" xml:space="preserve">
+    <value>EC 独占访问诊断</value>
+  </data>
+  <data name="S2_ExclusiveEcBody" xml:space="preserve">
+    <value>⚠️ EC 独占访问诊断 ⚠️&#10;&#10;此诊断模式会：&#10;• 独占访问 EC 寄存器&#10;• 阻止其他应用访问 EC&#10;• 记录详细的抢占信息&#10;• 可能影响 OMEN Gaming Hub 或其他风扇控制应用&#10;&#10;仅在排查 EC 寄存器冲突时使用。&#10;它可以帮助判断是否由其他应用导致风扇转速为 0。&#10;&#10;要启用独占诊断模式吗？</value>
+  </data>
+  <data name="S2_KeyboardBackendSetFormat" xml:space="preserve">
+    <value>键盘后端已设为：{0}。&#10;&#10;重启 OmenCore 后生效。</value>
+  </data>
+  <data name="S2_BackendChangedTitle" xml:space="preserve">
+    <value>后端已更改</value>
+  </data>
+  <data name="S2_BatteryCareUnavailableTitle" xml:space="preserve">
+    <value>暂不支持电池保养</value>
+  </data>
+  <data name="S2_BatteryCareUnavailableBody" xml:space="preserve">
+    <value>无法设置电池充电上限——HP WMI BIOS 接口不可用。&#10;&#10;此功能需要支持 WMI BIOS 的 HP OMEN/Victus 笔记本。</value>
+  </data>
+  <data name="S2_BatteryCareFailedTitle" xml:space="preserve">
+    <value>电池保养设置失败</value>
+  </data>
+  <data name="S2_BatteryCareFailedBody" xml:space="preserve">
+    <value>电池充电上限命令执行失败。&#10;&#10;可能原因：&#10;• 你的机型不支持此功能&#10;• HP BIOS 需要更新&#10;• 未连接电源适配器&#10;&#10;可到 OMEN Gaming Hub 中切换同一设置做对比。</value>
+  </data>
+  <data name="S2_BatteryCareErrorTitle" xml:space="preserve">
+    <value>电池保养出错</value>
+  </data>
+  <data name="S2_BatteryCareErrorBodyFormat" xml:space="preserve">
+    <value>应用电池充电上限失败：{0}</value>
+  </data>
+  <data name="S2_BloatwareScanningProgress" xml:space="preserve">
+    <value>正在扫描 HP 预装软件…</value>
+  </data>
+  <data name="S2_BloatwareScanningList" xml:space="preserve">
+    <value>正在扫描 HP 预装软件…</value>
+  </data>
+  <data name="S2_BloatwareClean" xml:space="preserve">
+    <value>✓ 未检测到 HP 预装软件。&#10;&#10;系统很干净。</value>
+  </data>
+  <data name="S2_BloatwareFoundFormat" xml:space="preserve">
+    <value>发现 {0} 个 HP 预装软件包：</value>
+  </data>
+  <data name="S2_BloatwareScanFailedFormat" xml:space="preserve">
+    <value>❌ 扫描失败：{0}</value>
+  </data>
+  <data name="S2_BloatwareStarting" xml:space="preserve">
+    <value>正在开始移除预装软件…</value>
+  </data>
+  <data name="S2_BloatwareRemoving" xml:space="preserve">
+    <value>正在移除 HP 预装软件包…&#10;&#10;可能需要几分钟。</value>
+  </data>
+  <data name="S2_BloatwareStep1" xml:space="preserve">
+    <value>[1/3] 正在获取软件包列表…</value>
+  </data>
+  <data name="S2_BloatwareStep2CountFormat" xml:space="preserve">
+    <value>[2/3] 正在移除 {0} 个软件包…</value>
+  </data>
+  <data name="S2_BloatwareStep2ItemFormat" xml:space="preserve">
+    <value>[2/3] 正在移除 {0}/{1}：{2}…</value>
+  </data>
+  <data name="S2_BloatwareStep3" xml:space="preserve">
+    <value>[3/3] 清理完成！</value>
+  </data>
+  <data name="S2_BloatwareResultHeader" xml:space="preserve">
+    <value>✓ 预装软件移除完成！</value>
+  </data>
+  <data name="S2_BloatwareResultRemovedFormat" xml:space="preserve">
+    <value>• 已移除：{0} 个</value>
+  </data>
+  <data name="S2_BloatwareResultFailedFormat" xml:space="preserve">
+    <value>• 失败：{0} 个</value>
+  </data>
+  <data name="S2_BloatwareFailedListHeader" xml:space="preserve">
+    <value>失败的软件包：</value>
+  </data>
+  <data name="S2_BloatwareNeedsAdminTip" xml:space="preserve">
+    <value>💡 提示：以管理员身份运行 OmenCore 才能移除系统预置的软件包。</value>
+  </data>
+  <data name="S2_BloatwareRescanNote" xml:space="preserve">
+    <value>请重新扫描以确认结果。</value>
+  </data>
+  <data name="S2_BloatwareRemovedCountFormat" xml:space="preserve">
+    <value>已移除 {0} 个预装软件包。</value>
+  </data>
+  <data name="S2_NeedsAdminSuffix" xml:space="preserve">
+    <value>需要管理员权限</value>
+  </data>
+  <data name="S2_DiagZipFilter" xml:space="preserve">
+    <value>ZIP 压缩包 (*.zip)|*.zip|所有文件 (*.*)|*.*</value>
+  </data>
+  <data name="S2_OsdActionDoNothing" xml:space="preserve">
+    <value>不执行操作（拦截该键）</value>
+  </data>
+  <data name="S2_SyncStartFormat" xml:space="preserve">
+    <value>部分同步：已更新 {0}/{1} 个提供程序</value>
+  </data>
+  <data name="S2_SyncFailedNoProviders" xml:space="preserve">
+    <value>同步失败：没有提供程序被更新</value>
+  </data>
+  <data name="S2_SyncCompleteOne" xml:space="preserve">
+    <value>同步完成：已更新 1 个目标</value>
+  </data>
+  <data name="S2_SyncCompleteFormat" xml:space="preserve">
+    <value>同步完成：已更新 {0} 个目标</value>
+  </data>
+  <data name="S2_SyncPartialTargetsFormat" xml:space="preserve">
+    <value>部分同步：已更新 {0}/{1} 个目标</value>
+  </data>
+  <data name="S2_SyncFailedNoTargets" xml:space="preserve">
+    <value>同步失败：没有目标被更新</value>
+  </data>
+  <data name="S2_DpiNotWritable" xml:space="preserve">
+    <value>OmenCore 无法真正把这些 DPI 设置写入设备——当前使用的 Corsair 连接方式（RGB.NET/iCUE）不支持 DPI 配置。鼠标上的设置没有任何变化。</value>
+  </data>
+  <data name="S2_DpiSaveProfileTitle" xml:space="preserve">
+    <value>保存 DPI 方案</value>
+  </data>
+  <data name="S2_DpiSaveProfilePrompt" xml:space="preserve">
+    <value>请输入 DPI 方案名称：</value>
+  </data>
+  <data name="S2_KeyboardNoWmiVerifyHint" xml:space="preserve">
+    <value> 在这台机型上 WMI 键盘命令得不到确认——如果颜色没有实际变化，可到设置里开启“实验性 EC 键盘”。</value>
+  </data>
+  <data name="S2_KeyboardUnavailable" xml:space="preserve">
+    <value>键盘灯效不可用；请检查后端检测结果，或查看“设置 > 硬件”。</value>
+  </data>
+  <data name="L2_SyncCompleteProviderOne" xml:space="preserve">
+    <value>同步完成：已更新 1 个提供程序</value>
+  </data>
+  <data name="L2_SyncCompleteProvidersFormat" xml:space="preserve">
+    <value>同步完成：已更新 {0} 个提供程序</value>
+  </data>
+  <data name="L2_NoRgbTargets" xml:space="preserve">
+    <value>没有可用的 RGB 目标</value>
+  </data>
+  <data name="L2_ProbeUnavailable" xml:space="preserve">
+    <value>没有可用的 HP 键盘灯效后端，无法发送 RGB 探测。</value>
+  </data>
+  <data name="L2_ProbeSentFormat" xml:space="preserve">
+    <value>已通过 {0} 发送探测；请选择实际发生变化的区域并保存。{1}</value>
+  </data>
+  <data name="L2_ObservationCannotSave" xml:space="preserve">
+    <value>配置不可用，无法保存 RGB 观测结果。</value>
+  </data>
+  <data name="L2_KeyboardUnavailableBackend" xml:space="preserve">
+    <value>当前后端不支持键盘灯效。</value>
+  </data>
+  <data name="L2_NoHistory" xml:space="preserve">
+    <value>尚未采集到历史数据。</value>
+  </data>
+  <data name="L2_ProfileDefaultCooldownFormat" xml:space="preserve">
+    <value>方案默认（{0} 分钟）</value>
+  </data>
+  <data name="L2_ExcludeTip" xml:space="preserve">
+    <value>提示：把常驻使用的应用（游戏、录屏、聊天、反作弊）加入排除列表。可以从进程排行里添加，也可以直接输入进程名（不必带 .exe）。</value>
+  </data>
+  <data name="L2_ExclusionsActiveFormat" xml:space="preserve">
+    <value>已排除 {0} 个进程。可再从进程排行里继续添加，避免反复修剪工作集。</value>
+  </data>
+  <data name="L2_ExcludeSuggestionsFormat" xml:space="preserve">
+    <value>建议从当前占用靠前的进程中排除：{0}。</value>
+  </data>
+  <data name="L2_CleanResultFormat" xml:space="preserve">
+    <value>已释放 {0} MB  •  成功 {1} 项操作</value>
+  </data>
+  <data name="L2_CleanFailedFormat" xml:space="preserve">
+    <value>失败：{0}</value>
+  </data>
+  <data name="L2_CleanupPreviewFormat" xml:space="preserve">
+    <value>此方案预计可释放约 {0} MB</value>
+  </data>
+  <data name="L2_UpdateOpenReleasePrompt" xml:space="preserve">
+    <value>GitHub 上有新版本可用。现在打开发布页面吗？</value>
+  </data>
+  <data name="L2_UpdateAvailableTitle" xml:space="preserve">
+    <value>有可用更新</value>
+  </data>
+  <data name="L2_UpdateDownloadPromptFormat" xml:space="preserve">
+    <value>有新版本可用！&#10;&#10;当前版本：{0}&#10;最新版本：{1}&#10;&#10;现在下载并安装吗？</value>
+  </data>
+  <data name="L2_EcEmbeddedController" xml:space="preserve">
+    <value>EC（嵌入式控制器）</value>
+  </data>
+  <data name="L2_CurveDangerFormat" xml:space="preserve">
+    <value>曲线存在风险：{3}°C 时为 {2}%，到 {0}°C 反而降到 {1}%，可能造成过热！</value>
+  </data>
+  <data name="L2_CurveSafetyFormat" xml:space="preserve">
+    <value>安全提醒：{0}°C 时风扇仅 {1}%。高温段建议不低于 70%，以免降频。</value>
+  </data>
+  <data name="L2_CurveCoverageFormat" xml:space="preserve">
+    <value>覆盖不足：曲线只到 {0}°C。请补到 95°C，以应对瞬时高温。</value>
+  </data>
+  <data name="L2_RtssDisabled" xml:space="preserve">
+    <value>RTSS 已禁用</value>
+  </data>
+  <data name="L2_FpsNeedsRtss" xml:space="preserve">
+    <value>FPS 需要 RTSS（RivaTuner Statistics Server）处于运行状态</value>
+  </data>
+  <data name="L2_TrayTooltip" xml:space="preserve">
+    <value>OmenCore——游戏本控制工具&#10;&#10;左键单击：快捷面板&#10;双击：打开主界面&#10;右键单击：菜单</value>
+  </data>
+  <data name="L2_RtssDetected" xml:space="preserve">
+    <value>RivaTuner Statistics Server（RTSS）正在运行，它的 D3D 钩子破坏了 OmenCore 的渲染线程。</value>
+  </data>
+  <data name="L2_OverlayDetected" xml:space="preserve">
+    <value>某个 D3D/DXGI 覆盖层钩子（可能是 RTSS、覆盖工具或游戏反作弊）破坏了 OmenCore 的渲染线程。</value>
+  </data>
+  <data name="L2_SoftwareRenderingBodyFormat" xml:space="preserve">
+    <value>{0}&#10;&#10;为避免继续崩溃，OmenCore 已在本次运行中改为软件渲染。&#10;&#10;要彻底解决：&#10;  • 启动 OmenCore 前关闭 RTSS / MSI Afterburner 的覆盖层，或&#10;  • 在 OmenCore 设置 → 常规中启用“软件渲染”&#10;&#10;OmenCore 会继续运行。关闭覆盖层后重启应用，即可恢复完整的 GPU 硬件加速渲染。</value>
+  </data>
+  <data name="L2_RenderConflictTitle" xml:space="preserve">
+    <value>OmenCore——检测到渲染冲突</value>
+  </data>
+  <data name="L2_PawnIoBundled" xml:space="preserve">
+    <value>PawnIO（安装包已内置）</value>
+  </data>
+  <data name="L2_AdapterOverrideCpuHalfFormat" xml:space="preserve">
+    <value>随后还会把这四项 CPU 功耗限制提到 {0}，并在系统唤醒或更换电源——也就是会撤销限制的这两种情况——之后重新设回去。这些数值 OmenCore 读不回来，所以这一半反映的是 SMU 接受了什么，而不是它实际在跑什么。&#10;&#10;</value>
+  </data>
+  <data name="L2_AdapterOverrideBodyFormat" xml:space="preserve">
+    <value>这会先禁用、再重新启用独立显卡。&#10;&#10;屏幕会黑几秒，正在使用 GPU 的游戏、渲染或计算任务会失去设备，可能直接崩溃。&#10;&#10;{0}这两个数值都不是超频。GPU 只会回到其驱动自身报告的默认上限；CPU 限制取的是本机固件针对 CPU 与 GPU 同时满载给出的数值。钳制是固件对“它认为规格不够高”的电源适配器所施加的策略，而不是对该适配器实际供电能力的测量。&#10;&#10;这些改动都不会在重启后保留：GPU 限制会维持到固件再次把适配器信息告知驱动（更换电源就会触发），CPU 限制则维持到你不再保持它们为止。&#10;&#10;现在解除钳制吗？</value>
+  </data>
+  <data name="L2_AdapterOverrideTitle" xml:space="preserve">
+    <value>要解除适配器功耗钳制吗？</value>
+  </data>
+  <data name="L2_TgpUnlockBody" xml:space="preserve">
+    <value>这是一个实验性、尚未确认的功能：它会短暂放开两个由固件管理的 EC 位，发出一条 WMI 命令，然后测量 GPU 功耗是否真的发生了变化。&#10;&#10;写出它的人从未在真机上运行过。在它所依据的那次排查中，有人在小功率适配器上强行触发同一机制，结果把 GPU 留在了降级状态——驱动调用要 20 秒以上、无法渲染——直到重启才恢复，而那台机器本来就有 GPU 驱动崩溃的历史。&#10;&#10;只有接入的适配器明显高于本机额定需求时才会出现这个选项，这也是它唯一的保护条件。结果无法预览，一旦出问题，除了重启没有别的撤销办法。&#10;&#10;仍要尝试吗？</value>
+  </data>
+  <data name="L2_TgpUnlockTitle" xml:space="preserve">
+    <value>要尝试实验性的 GPU 功耗解锁吗？</value>
+  </data>
+  <data name="M2_CpuTelemetryUnavailable" xml:space="preserve">
+    <value>CPU 遥测不可用</value>
+  </data>
+  <data name="M2_GpuTelemetryUnavailable" xml:space="preserve">
+    <value>GPU 遥测不可用</value>
+  </data>
+  <data name="M2_TelemetryUnavailableFormat" xml:space="preserve">
+    <value>不可用 • 负载 {0:F0}%</value>
+  </data>
+  <data name="M2_TempStaleFormat" xml:space="preserve">
+    <value>{0:F0}°C（已过期）</value>
+  </data>
+  <data name="M2_Stale" xml:space="preserve">
+    <value>已过期</value>
+  </data>
+  <data name="M2_TelemetryStaleFormat" xml:space="preserve">
+    <value>{0} • 负载 {1:F0}%</value>
+  </data>
+  <data name="M2_TelemetryInvalidFormat" xml:space="preserve">
+    <value>数据无效 • 负载 {0:F0}%</value>
+  </data>
+  <data name="M2_TelemetryLoadFormat" xml:space="preserve">
+    <value>{0} • 负载 {1:F0}%</value>
+  </data>
+  <data name="M2_NoRestorePoint" xml:space="preserve">
+    <value>尚未创建还原点</value>
+  </data>
+  <data name="M2_CleanupStatusNotChecked" xml:space="preserve">
+    <value>状态：未检查</value>
+  </data>
+  <data name="M2_ResumeCompleteFormat" xml:space="preserve">
+    <value>唤醒后自检通过。监控在 {0:F0} 秒内恢复，风扇状态正常（{1}，峰值 {2} RPM）。</value>
+  </data>
+  <data name="M2_ResumeTelemetryIssueFormat" xml:space="preserve">
+    <value>遥测尚未完全正常（采样距今 {0:F0} 秒，监控状态 {1}）。</value>
+  </data>
+  <data name="M2_ResumeFanIssueFormat" xml:space="preserve">
+    <value>当前热负载下风扇转速仍偏高（{1:F0}°C 时 {0} RPM，风扇状态为 {2}）。</value>
+  </data>
+  <data name="M2_ResumeAttentionFormat" xml:space="preserve">
+    <value>唤醒后自检发现需要跟进：{0}</value>
+  </data>
+  <data name="M2_ResumeFailedFormat" xml:space="preserve">
+    <value>唤醒后自检失败：{0}</value>
+  </data>
+  <data name="O2_ApplyConfirmBodyFormat" xml:space="preserve">
+    <value>将应用“{1}”分类下的 {0} 项优化。&#10;&#10;继续吗？</value>
+  </data>
+  <data name="O2_ApplyConfirmTitleFormat" xml:space="preserve">
+    <value>应用“{0}”</value>
+  </data>
+  <data name="O2_RevertAllBody" xml:space="preserve">
+    <value>这会把所有优化恢复为 Windows 默认设置。&#10;&#10;之前备份的设置会被还原。&#10;&#10;继续吗？</value>
+  </data>
+  <data name="O2_RevertAllTitle" xml:space="preserve">
+    <value>撤销全部优化</value>
+  </data>
+  <data name="O2_RevertTimeout" xml:space="preserve">
+    <value>撤销超时——请手动检查系统状态</value>
+  </data>
+  <data name="T2_NoSource" xml:space="preserve">
+    <value>没有 CPU 温度数据源响应。</value>
+  </data>
+  <data name="T2_SourceCountFormat" xml:space="preserve">
+    <value>有 {0} 个数据源响应。</value>
+  </data>
+  <data name="T2_WmiFormat" xml:space="preserve">
+    <value>WMI BIOS：{0:F1}°C</value>
+  </data>
+  <data name="T2_WmiUnavailable" xml:space="preserve">
+    <value>WMI BIOS：不可用</value>
+  </data>
+  <data name="T2_AcpiFormat" xml:space="preserve">
+    <value>ACPI 热区（{0}）：{1:F1}°C</value>
+  </data>
+  <data name="T2_AcpiUnavailable" xml:space="preserve">
+    <value>ACPI 热区：不可用</value>
+  </data>
+  <data name="T2_LhmFormat" xml:space="preserve">
+    <value>LibreHardwareMonitor：{0:F1}°C</value>
+  </data>
+  <data name="T2_LhmUnavailable" xml:space="preserve">
+    <value>LibreHardwareMonitor：不可用</value>
+  </data>
+  <data name="T2_TrustedFormat" xml:space="preserve">
+    <value>当前采信：{0}</value>
+  </data>
+  <data name="T2_DisagreeFormat" xml:space="preserve">
+    <value>⚠️ 各来源差异超过 {0:F0}°C——当前采信值未必适合这块主板。</value>
+  </data>
+  <data name="T2_Agree" xml:space="preserve">
+    <value>✓ 可用来源的读数在合理范围内一致。</value>
+  </data>
+  <data name="U2_InstallFailedFormat" xml:space="preserve">
+    <value>更新安装失败：{0}</value>
+  </data>
+  <data name="Osd_LabelMode" xml:space="preserve">
+    <value>模式</value>
+  </data>
+  <data name="Osd_LabelFans" xml:space="preserve">
+    <value>风扇</value>
+  </data>
+  <data name="Osd_LabelHotspot" xml:space="preserve">
+    <value>结温</value>
+  </data>
+  <data name="Osd_LabelVram" xml:space="preserve">
+    <value>显存</value>
+  </data>
+  <data name="Osd_LabelPackage" xml:space="preserve">
+    <value>封装</value>
+  </data>
+  <data name="Osd_LabelFan" xml:space="preserve">
+    <value>风扇</value>
+  </data>
+  <data name="Osd_LabelBattery" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="Osd_LabelFrameTime" xml:space="preserve">
+    <value>帧时</value>
+  </data>
+  <data name="Osd_LabelPing" xml:space="preserve">
+    <value>延迟</value>
+  </data>
+  <data name="X2_DashboardFans" xml:space="preserve">
+    <value>风扇</value>
+  </data>
+  <data name="X2_DirectActive" xml:space="preserve">
+    <value>生效中</value>
+  </data>
+  <data name="X2_OsdFanIcon" xml:space="preserve">
+    <value>风扇</value>
+  </data>
+  <data name="G2_ShippingAdapterFormat" xml:space="preserve">
+    <value> 这台机器出厂配置的是 {0} W 适配器。</value>
+  </data>
+  <data name="G2_UnrecognisedAdapter" xml:space="preserve">
+    <value>一个无法识别的</value>
+  </data>
+  <data name="G2_UsbcSupplyFormat" xml:space="preserve">
+    <value>这台机器当前由 {0} W 的 USB-C Power Delivery 供电。</value>
+  </data>
+  <data name="G2_UsbcSupplyUnknown" xml:space="preserve">
+    <value>这台机器当前由未上报瓦数的 USB-C Power Delivery 供电。</value>
+  </data>
+  <data name="G2_UsbcBelowDesignFormat" xml:space="preserve">
+    <value>这低于本机 USB-C 输入设计的 {0} W。</value>
+  </data>
+  <data name="G2_ChassisNoUsbc" xml:space="preserve">
+    <value>本机机壳按圆口适配器设计，没有标注 USB-C 设计功率，因此 HP 自己的判定规则会把任何 USB-C 电源都视为低于需求。</value>
+  </data>
+  <data name="G2_UsbcVerdictFormat" xml:space="preserve">
+    <value>{0}固件只是把它描述为 USB-C 供电，并没有判定为功率不足。{1}{2}</value>
+  </data>
+  <data name="G2_BarrelVerdictFormat" xml:space="preserve">
+    <value>固件报告连接的{0}适配器低于本机需求。{1}</value>
+  </data>
+  <data name="G2_AdapterPolicyNote" xml:space="preserve">
+    <value>在这种状态下，部分 HP 固件会降低 CPU 与 GPU 的功耗限制。这看起来像 OmenCore 或显卡驱动的故障，但其实是固件对“它认为规格不够高”的电源所施加的策略——这是一个标称值，而不是对适配器实际供电能力的测量。如果性能低于预期，请先排除这一项。</value>
+  </data>
+  <data name="G2_PowerLimitReferenceFormat" xml:space="preserve">
+    <value>（这张卡自身上限 {0:0.#} W）</value>
+  </data>
+  <data name="G2_PowerLimitReadAtFormat" xml:space="preserve">
+    <value>——读取于 {0:HH:mm}</value>
+  </data>
+  <data name="G2_NoDefaultLimitRead" xml:space="preserve">
+    <value>无法从这里判断它是否被压低——nvidia-smi 没有报告这张卡的默认上限，没有可对比的基准。</value>
+  </data>
+  <data name="G2_AtOwnLimit" xml:space="preserve">
+    <value>这就是这张卡自身的上限，目前没有任何东西在压低它，下面的重启也没有可解除的限制。</value>
+  </data>
+  <data name="G2_HeldBelowLimitFormat" xml:space="preserve">
+    <value>有东西把这张卡压低了 {0:0.#} W，低于它自身的上限。接入功率不足的电源时，固件限制看起来就是这样，下面的重启会把这一限制清除。若是别的工具设置了 GPU 功耗上限，从这里看也是一样的，而重启设备并不能清除它。</value>
+  </data>
+  <data name="G2_ReadingLimit" xml:space="preserve">
+    <value>正在读取当前上限…</value>
+  </data>
+  <data name="G2_NoNvidiaSmi" xml:space="preserve">
+    <value>无法读取当前上限：系统没有安装 nvidia-smi，而只有它能报告该数值。它随 NVIDIA 驱动一起安装。</value>
+  </data>
+  <data name="G2_LimitUnanswered" xml:space="preserve">
+    <value>GPU 没有报告功耗上限。它可能正在唤醒，稍后再试。</value>
+  </data>
+  <data name="G2_GpuAsleep" xml:space="preserve">
+    <value>GPU 处于停驻休眠状态。读取它的功耗上限会把它唤醒，之后驱动会让它保持唤醒几分钟。</value>
+  </data>
+  <data name="G2_ReadAgain" xml:space="preserve">
+    <value>重新读取上限</value>
+  </data>
+  <data name="G2_ReadLimit" xml:space="preserve">
+    <value>读取当前上限</value>
+  </data>
+  <data name="G2_ApuTargetUserFormat" xml:space="preserve">
+    <value>你在“AMD CPU 功耗限制”中设置的 {0} W</value>
+  </data>
+  <data name="G2_ApuTargetFirmwareFormat" xml:space="preserve">
+    <value>本机固件针对 CPU 与 GPU 同时满载给出的 {0} W</value>
+  </data>
+  <data name="G2_OverrideScopeBothFormat" xml:space="preserve">
+    <value>这会重启 GPU 以解除限制，并把四项 CPU 功耗限制提到 {0}。</value>
+  </data>
+  <data name="G2_OverrideScopeGpuOnlyFormat" xml:space="preserve">
+    <value>这会重启 GPU 以解除限制，不包含 CPU 部分{0}</value>
+  </data>
+  <data name="G2_ApuReasonCpuUnknown" xml:space="preserve">
+    <value>这颗 CPU 的 SMU 功耗限制消息尚未被确认识别</value>
+  </data>
+  <data name="G2_ApuReasonNoTarget" xml:space="preserve">
+    <value>没有可对准的 CPU 功耗限制——请在“AMD CPU 功耗限制”中设置一个，或等本机固件自己上报</value>
+  </data>
+  <data name="G2_ApuReasonUsbc" xml:space="preserve">
+    <value>这是 USB-C Power Delivery 供电。在这种情况下不提供“重启 GPU 之外再提高 CPU 功耗限制”：USB-C 协商到的功率远低于本机机壳的预期，而 GPU 本身就占去了大部分。</value>
+  </data>
+  <data name="G2_ApuReasonNoRating" xml:space="preserve">
+    <value>没有读取到已连接适配器的额定功率，无法判断它能否再承担提高后的 CPU 功耗限制。</value>
+  </data>
+  <data name="G2_ApuReasonTooLowFormat" xml:space="preserve">
+    <value>已连接的 {0} W 适配器远低于本机 {1} W 的需求，无法在重启 GPU 的同时再提高 CPU 功耗限制。</value>
+  </data>
+  <data name="G2_ReleaseApuClampStatus" xml:space="preserve">
+    <value>OmenCore 不再把 CPU 功耗限制重新设回去。平台会在下次唤醒或更换电源时收走这些限制；重启则会恢复出厂状态。</value>
+  </data>
+  <data name="G2_TgpUnlockBusy" xml:space="preserve">
+    <value>正在短暂放开固件的功耗门控，并让驱动重新读取…</value>
+  </data>
+  <data name="G2_TgpWatchDescription" xml:space="preserve">
+    <value>监视适配器对 GPU 的功耗限制是否重新生效。独显停驻时不做任何读取，因此不会把它挡在 RTD3 之外。</value>
+  </data>
+  <data name="G2_AutoDetailCpuRaised" xml:space="preserve">
+    <value>CPU 限制已提高并保持</value>
+  </data>
+  <data name="G2_AutoDetailGpuRestarted" xml:space="preserve">
+    <value>GPU 在停驻状态下已重启</value>
+  </data>
+  <data name="G2_AutoDetailGpuAwake" xml:space="preserve">
+    <value>GPU 当时处于唤醒状态，因此没有动它——等没有程序占用时再用按钮</value>
+  </data>
+  <data name="G2_AutoDetailDiscreteDisplay" xml:space="preserve">
+    <value>显示输出正走在独显上，重启会黑屏——这一项只能手动处理</value>
+  </data>
+  <data name="G2_AutoDetailBattery" xml:space="preserve">
+    <value>当前电池供电，没有适配器限制可解除</value>
+  </data>
+  <data name="G2_AutoSummaryFormat" xml:space="preserve">
+    <value>自动执行（{0}）：{1}。</value>
+  </data>
+  <data name="D2_CurveNeedsTwoPoints" xml:space="preserve">
+    <value>⚠️ 曲线至少需要 2 个点</value>
+  </data>
+  <data name="DB2_CpuSourceFormat" xml:space="preserve">
+    <value>CPU 温度来源：{0}</value>
+  </data>
+  <data name="DB2_CpuSourceReasonFormat" xml:space="preserve">
+    <value>CPU 温度来源：{0}&#10;{1}</value>
+  </data>
+  <data name="DB2_RpmUnavailable" xml:space="preserve">
+    <value>转速不可读（风扇有响应）</value>
+  </data>
+  <data name="DL2_SwipeNoPalette" xml:space="preserve">
+    <value>滑动效果没有预设色板——选中主题后会渲染成黑色。请勾选自定义颜色。</value>
+  </data>
+  <data name="DL2_ConfettiNoColours" xml:space="preserve">
+    <value>五彩纸屑与太阳效果不使用自定义颜色——无论如何都会使用主题配色。</value>
+  </data>
+  <data name="DL2_KeyboardRefusedFormat" xml:space="preserve">
+    <value>键盘未接受“{0}”。</value>
+  </data>
+  <data name="DL2_BarRefusedFormat" xml:space="preserve">
+    <value>灯条未接受“{0}”。</value>
+  </data>
+  <data name="DL2_NowShowing" xml:space="preserve">
+    <value>当前显示：</value>
+  </data>
+  <data name="FC2_NoCalibration" xml:space="preserve">
+    <value>暂无校准数据。运行校准向导，测量风扇的实际性能。</value>
+  </data>
+  <data name="FC2_CalibrationInfoFormat" xml:space="preserve">
+    <value>校准机型：{0}&#10;最高档位：{1}&#10;最低启动档位：{2}&#10;CPU 风扇上限：{3} RPM&#10;GPU 风扇上限：{4} RPM&#10;上次校准：{5}（{6:F0} 天前）</value>
+  </data>
+  <data name="BL2_RelatedPackagesFormat" xml:space="preserve">
+    <value>同一发布者下可能相关的软件包：{0}</value>
+  </data>
+  <data name="BL2_BulkCancelledFormat" xml:space="preserve">
+    <value>批量还原已于 {0} 取消。完成 {1} 项，跳过 {2} 项。</value>
+  </data>
+  <data name="BL2_BulkFinishedFormat" xml:space="preserve">
+    <value>批量还原结束，失败 {0} 项。已还原 {1}/{2} 项。</value>
+  </data>
+  <data name="MV2_SafeguardLabelFormat" xml:space="preserve">
+    <value>OmenCore 保护点 {0}</value>
+  </data>
+  <data name="MV2_NoRestorePointConfirmed" xml:space="preserve">
+    <value>未创建还原点，继续执行（用户已确认）</value>
+  </data>
+  <data name="MV2_RestorePointCreatedFormat" xml:space="preserve">
+    <value>✓ 已创建还原点（#{0}）</value>
+  </data>
+  <data name="TI2_TrayTooltipFormat" xml:space="preserve">
+    <value>OmenCore——游戏本控制工具&#10;{0}&#10;{1}</value>
+  </data>
+  <data name="L2_CleanResultFailedSuffixFormat" xml:space="preserve">
+    <value>  •  失败 {0} 项</value>
+  </data>
+  <data name="Main_FanBackendUnavailableFormat" xml:space="preserve">
+    <value>风扇控制后端不可用，最大风扇快捷键未生效。</value>
+  </data>
+  <data name="Main_FanBackendUnavailableVictusFormat" xml:space="preserve">
+    <value>Victus 的风扇后端不可用，最大风扇设置未生效。请运行诊断，并按指南格式分享报告。</value>
+  </data>
+  <data name="Main_StatusCreatingRestorePoint" xml:space="preserve">
+    <value>正在创建系统还原点…</value>
+  </data>
+  <data name="Main_StatusRemovingOgh" xml:space="preserve">
+    <value>正在移除 OMEN Gaming Hub…</value>
+  </data>
+  <data name="Main_ClipboardSystemInfoFormat" xml:space="preserve">
+    <value>机型：{0}&#10;产品名：{1}&#10;系统 SKU：{2}&#10;诊断导出：{3}</value>
+  </data>
+  <data name="Main_OsdCategoryProfile" xml:space="preserve">
+    <value>方案</value>
+  </data>
+  <data name="Main_OsdCategoryPerformance" xml:space="preserve">
+    <value>性能</value>
+  </data>
+  <data name="Main_OsdCategoryBoost" xml:space="preserve">
+    <value>加速</value>
+  </data>
+  <data name="Main_OsdCategoryQuietMode" xml:space="preserve">
+    <value>冷静模式</value>
+  </data>
+  <data name="Main_OsdValueMaxCooling" xml:space="preserve">
+    <value>最大散热</value>
+  </data>
+  <data name="Main_OsdValuePerformance" xml:space="preserve">
+    <value>性能</value>
+  </data>
+  <data name="Main_OsdValueQuiet" xml:space="preserve">
+    <value>冷静</value>
+  </data>
+  <data name="Main_OsdSourceTray" xml:space="preserve">
+    <value>托盘</value>
+  </data>
+  <data name="Main_SystemRestoreLabelOghCleanup" xml:space="preserve">
+    <value>OmenCore — 清理 OGH 前</value>
+  </data>
+  <data name="Main_SystemRestoreLabelSystemChanges" xml:space="preserve">
+    <value>OmenCore — 系统更改前</value>
+  </data>
+  <data name="Dashboard_ModeLinkDecoupled" xml:space="preserve">
+    <value>风扇与性能已解耦</value>
+  </data>
+  <data name="Toast_FanProfileTitle" xml:space="preserve">
+    <value>风扇方案</value>
+  </data>
+  <data name="Toast_PerformanceModeTitle" xml:space="preserve">
+    <value>性能模式</value>
+  </data>
+  <data name="Toast_GpuSettingTitleFormat" xml:space="preserve">
+    <value>GPU {0}</value>
+  </data>
+  <data name="Toast_KeyboardSettingTitleFormat" xml:space="preserve">
+    <value>键盘 {0}</value>
+  </data>
+  <data name="Toast_SuccessTitle" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="Toast_ErrorTitle" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Tray_AppTooltip" xml:space="preserve">
+    <value>OmenCore — 游戏本控制中心</value>
+  </data>
+  <data name="Tray_PerfHeaderFirmwareDefault" xml:space="preserve">
+    <value>固件默认</value>
+  </data>
+  <data name="DeviceLighting_NothingStaged" xml:space="preserve">
+    <value>没有待写入的更改。</value>
+  </data>
+  <data name="FanCalibration_StatusNotStarted" xml:space="preserve">
+    <value>未开始</value>
+  </data>
+  <data name="FanControl_CurveStatusReadyToApply" xml:space="preserve">
+    <value>可以应用</value>
+  </data>
+  <data name="FanControl_UnknownModelName" xml:space="preserve">
+    <value>未知机型</value>
+  </data>
+  <data name="GpuClamp_RestartingGpu" xml:space="preserve">
+    <value>正在重启 GPU…</value>
+  </data>
+  <data name="SC_GpuOcStatusNotAvailable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="SC_GpuOcNotAvailableMessage" xml:space="preserve">
+    <value>GPU 超频不可用</value>
+  </data>
+  <data name="SC_TestApplyNotStarted" xml:space="preserve">
+    <value>测试应用未启动，因为有一项或多项 GPU 设置未能应用。</value>
+  </data>
+  <data name="SC_TestTuningKept" xml:space="preserve">
+    <value>测试调校已保留，并保存为开机时重新应用。</value>
+  </data>
+  <data name="SC_TestNoSnapshot" xml:space="preserve">
+    <value>没有可恢复的测试快照。</value>
+  </data>
+  <data name="SC_TestUndervoltKept" xml:space="preserve">
+    <value>测试降压已保留，并保存为开机时重新应用。</value>
+  </data>
+  <data name="SC_ApplyingTestUndervolt" xml:space="preserve">
+    <value>正在应用测试用 CPU 降压…</value>
+  </data>
+  <data name="SC_NvapiNotAvailable" xml:space="preserve">
+    <value>NVAPI 不可用</value>
+  </data>
+  <data name="SC_NvidiaGpuNotDetected" xml:space="preserve">
+    <value>未检测到 NVIDIA 显卡</value>
+  </data>
+  <data name="SC_AmdGpuOcResetDefaults" xml:space="preserve">
+    <value>AMD 显卡超频已恢复默认</value>
+  </data>
+  <data name="SC_StartupReapplyHeldBackPrefix" xml:space="preserve">
+    <value>已暂缓开机自动重新应用——上次会话以崩溃结束。</value>
+  </data>
+  <data name="SC_ModeMemoryReadFailed" xml:space="preserve">
+    <value>无法读取这台机器当前的设置。</value>
+  </data>
+  <data name="SC_ApplyingCpuTuning" xml:space="preserve">
+    <value>正在应用 CPU 调校设置…</value>
+  </data>
+  <data name="SC_ProfileMaxExperimental" xml:space="preserve">
+    <value>最大（实验性）</value>
+  </data>
+  <data name="Optimizer_PreflightUpdated" xml:space="preserve">
+    <value>预检已更新</value>
+  </data>
+  <data name="Optimizer_ExportReportNoPath" xml:space="preserve">
+    <value>无法导出优化报告</value>
+  </data>
+  <data name="Optimizer_ReportFileNotFound" xml:space="preserve">
+    <value>未找到报告文件</value>
+  </data>
+  <data name="Optimizer_ReportOpened" xml:space="preserve">
+    <value>已打开导出的报告</value>
+  </data>
+  <data name="Optimizer_NoReportPathToCopy" xml:space="preserve">
+    <value>没有可复制的报告路径</value>
+  </data>
+  <data name="Optimizer_ReportPathCopied" xml:space="preserve">
+    <value>已把报告路径复制到剪贴板</value>
+  </data>
+  <data name="Mem_EnablingCompression" xml:space="preserve">
+    <value>正在启用内存压缩</value>
+  </data>
+  <data name="Mem_DisablingCompression" xml:space="preserve">
+    <value>正在禁用内存压缩</value>
+  </data>
+  <data name="Mem_CompressionChangeFailed" xml:space="preserve">
+    <value>无法更改内存压缩状态</value>
+  </data>
+  <data name="Mem_CleaningMemory" xml:space="preserve">
+    <value>正在清理内存</value>
+  </data>
+  <data name="Bloatware_PresetTelemetryOnly" xml:space="preserve">
+    <value>“仅遥测”预设</value>
+  </data>
+  <data name="Bloatware_PresetOmenConflict" xml:space="preserve">
+    <value>“减少 OMEN 冲突”预设</value>
+  </data>
+  <data name="Bloatware_PresetWindowsConsumer" xml:space="preserve">
+    <value>“Windows 消费级应用”预设</value>
+  </data>
+  <data name="Bloatware_PresetFullStandalone" xml:space="preserve">
+    <value>“完全独立运行”预设</value>
+  </data>
+  <data name="Settings_FanBackendWmiPawnio" xml:space="preserve">
+    <value>WMI BIOS + PawnIO</value>
+  </data>
+  <data name="Settings_FanBackendWmiOgh" xml:space="preserve">
+    <value>WMI BIOS（OGH）</value>
+  </data>
+  <data name="Settings_FanBackendWmiLegacyEc" xml:space="preserve">
+    <value>WMI BIOS + 可选旧版 EC 通道</value>
+  </data>
+  <data name="Settings_FanBackendWmiOnly" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="Settings_TimedOutFormat" xml:space="preserve">
+    <value>{0}（超时）</value>
+  </data>
+  <data name="Dashboard_BatteryHealthGood" xml:space="preserve">
+    <value>良好</value>
+  </data>
+  <data name="Dashboard_BatteryHealthFair" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="Dashboard_BatteryHealthReplace" xml:space="preserve">
+    <value>建议更换</value>
+  </data>
+  <data name="Dashboard_Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Settings_ModelIdentityUnavailable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="KbdMap_StatusLedsAcceptedFormat" xml:space="preserve">
+    <value>{0} 个 LED 已接受</value>
+  </data>
+  <data name="KbdMap_StatusLedsRefusedFormat" xml:space="preserve">
+    <value>{0} 个 LED 未接受</value>
+  </data>
+  <data name="KbdMap_StatusKeysAcceptedFormat" xml:space="preserve">
+    <value>{0} 个键已接受</value>
+  </data>
+  <data name="KbdMap_StatusKeysRefusedFormat" xml:space="preserve">
+    <value>{0} 个键未接受</value>
+  </data>
+  <data name="KbdMap_StatusBarAccepted" xml:space="preserve">
+    <value>4 个灯条分区已接受</value>
+  </data>
+  <data name="KbdMap_StatusBarRefused" xml:space="preserve">
+    <value>4 个灯条分区未接受</value>
+  </data>
+  <data name="KbdMap_StatusOnlyEyes" xml:space="preserve">
+    <value>只有肉眼确认才作准。</value>
+  </data>
+  <data name="KbdMap_StatusBrightnessNotAppliedFormat" xml:space="preserve">
+    <value>亮度 {0} 未生效——该键盘的后端没有亮度调节通道。</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSystemInfo" xml:space="preserve">
+    <value>正在收集系统信息…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressHardware" xml:space="preserve">
+    <value>正在收集硬件监控数据…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressLogs" xml:space="preserve">
+    <value>正在收集应用日志…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSettings" xml:space="preserve">
+    <value>正在收集设置与配置…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressPerformance" xml:space="preserve">
+    <value>正在收集性能模式数据…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressReadiness" xml:space="preserve">
+    <value>正在收集核心控制就绪状态…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressCalibration" xml:space="preserve">
+    <value>正在收集风扇校准数据…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressFanMax" xml:space="preserve">
+    <value>正在校验最大风扇转速…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressAnonymizing" xml:space="preserve">
+    <value>正在匿名化数据…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSaving" xml:space="preserve">
+    <value>正在保存诊断文件…</value>
+  </data>
+  <data name="DiagnosticExport_ProgressDone" xml:space="preserve">
+    <value>导出完成</value>
+  </data>
+  <data name="SettingsViewModel_SourceNoResolvedProfile" xml:space="preserve">
+    <value>未解析出机型能力配置</value>
+  </data>
+  <data name="SettingsViewModel_SourceExactProductId" xml:space="preserve">
+    <value>精确 ProductId 匹配</value>
+  </data>
+  <data name="SettingsViewModel_SourceFamilyFallback" xml:space="preserve">
+    <value>按机型系列回退</value>
+  </data>
+  <data name="SettingsViewModel_SourceRuntimeFallback" xml:space="preserve">
+    <value>运行时回退</value>
+  </data>
+  <data name="SettingsViewModel_SourceAmbiguousProductId" xml:space="preserve">
+    <value>ProductId 有歧义，按机型名区分</value>
+  </data>
+  <data name="SettingsViewModel_SourceModelSeriesMatch" xml:space="preserve">
+    <value>按机型系列匹配</value>
+  </data>
+  <data name="SettingsViewModel_SourcePartialProductId" xml:space="preserve">
+    <value>ProductId 部分匹配</value>
+  </data>
+  <data name="SettingsViewModel_SourceHeuristic" xml:space="preserve">
+    <value>启发式匹配</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityNoProfile" xml:space="preserve">
+    <value>能力检测未能确定机型配置。</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityUnverified" xml:space="preserve">
+    <value>能力配置已按 ProductId 匹配，但该条目尚未经用户验证。</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardSharedProductId" xml:space="preserve">
+    <value>该键盘 ProductId 由多个机型共用，已按 WMI 机型信息选择配置。</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardUnverified" xml:space="preserve">
+    <value>键盘配置已按 ProductId 匹配，但该条目尚未经用户验证。</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardSeriesInferred" xml:space="preserve">
+    <value>键盘配置是按机型系列推断的，而非精确的 ProductId 匹配。</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardPartialProvisional" xml:space="preserve">
+    <value>键盘配置来自部分 ProductId 匹配，只能视为临时结果。</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardHeuristic" xml:space="preserve">
+    <value>键盘配置来自启发式回退路径，依赖前请先验证。</value>
+  </data>
+  <data name="InputPromptWindow_Ok" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Main_MemoryTelemetryUnavailable" xml:space="preserve">
+    <value>内存遥测不可用</value>
+  </data>
+  <data name="Main_StorageTelemetryUnavailable" xml:space="preserve">
+    <value>存储遥测不可用</value>
+  </data>
+  <data name="Main_PerCoreClocksUnavailable" xml:space="preserve">
+    <value>各核心频率不可用</value>
+  </data>
+  <data name="Main_DiskActiveFormat" xml:space="preserve">
+    <value>活动 {0}%</value>
+  </data>
+  <data name="SC_FanLinkedBadge" xml:space="preserve">
+    <value>风扇与性能已联动</value>
+  </data>
+  <data name="SC_FanIndependentBadge" xml:space="preserve">
+    <value>风扇独立控制</value>
+  </data>
+  <data name="SC_LinkedPolicyHint" xml:space="preserve">
+    <value>已启用联动模式，此模式也会一并更新风扇策略。</value>
+  </data>
+  <data name="SC_DecoupledPolicyHint" xml:space="preserve">
+    <value>此模式只改变功耗/性能行为，当前风扇预设或自定义曲线保持生效。</value>
+  </data>
+  <data name="SC_WindowsPowerPlanFallback" xml:space="preserve">
+    <value>Windows 电源计划</value>
+  </data>
+  <data name="SC_BadgePowerLocked" xml:space="preserve">
+    <value>功耗已锁定</value>
+  </data>
+  <data name="SC_BadgeLocked" xml:space="preserve">
+    <value>已锁定</value>
+  </data>
+  <data name="SC_BadgePowerLimitOnly" xml:space="preserve">
+    <value>仅限功耗</value>
+  </data>
+  <data name="SC_BadgeExtendedRange" xml:space="preserve">
+    <value>扩展范围</value>
+  </data>
+  <data name="SC_BadgeDetectedRange" xml:space="preserve">
+    <value>检测范围</value>
+  </data>
+  <data name="SC_StandardNvapiRange" xml:space="preserve">
+    <value>此 GPU 使用的是笔记本安全的标准 NVAPI 范围。稳定性仍因芯片体质和 BIOS 而异。</value>
+  </data>
+  <data name="SC_DetectedLimitsPending" xml:space="preserve">
+    <value>检测到的 GPU 调校上限会在初始化后显示。</value>
+  </data>
+  <data name="SC_NvapiWritesLockedOemHint" xml:space="preserve">
+    <value>当前驱动/固件路径锁定了 NVAPI 调校写入。如果机器提供厂商性能模式，请用它调整 TGP 行为。</value>
+  </data>
+  <data name="SC_PlatformRtx50Laptop" xml:space="preserve">
+    <value>RTX 50 系列笔记本 GPU</value>
+  </data>
+  <data name="SC_PlatformLaptopNvidia" xml:space="preserve">
+    <value>笔记本 NVIDIA GPU</value>
+  </data>
+  <data name="SC_PlatformRtx40" xml:space="preserve">
+    <value>RTX 40 系列 GPU</value>
+  </data>
+  <data name="SC_PlatformRtx30" xml:space="preserve">
+    <value>RTX 30 系列 GPU</value>
+  </data>
+  <data name="SC_PlatformThisGpu" xml:space="preserve">
+    <value>此 GPU</value>
+  </data>
+  <data name="SC_ResetToDefaultsGeneric" xml:space="preserve">
+    <value>已将受支持的 GPU 调校项恢复默认</value>
+  </data>
+  <data name="SC_GpuReadyFormat" xml:space="preserve">
+    <value>✓ {0} —— 就绪</value>
+  </data>
+  <data name="SC_GpuDetectedWritesLockedFormat" xml:space="preserve">
+    <value>已检测到 {0}，但当前驱动或固件路径锁定了 NVAPI 调校写入。</value>
+  </data>
+  <data name="SC_ApplyingUndervoltSettings" xml:space="preserve">
+    <value>正在应用降压设置…</value>
+  </data>
+  <data name="Settings_GuardrailOverrideOn" xml:space="preserve">
+    <value>OMEN 16/Victus 防护限制覆盖已启用。</value>
+  </data>
+  <data name="Settings_GuardrailOverrideOff" xml:space="preserve">
+    <value>OMEN 16/Victus 防护限制覆盖已关闭。</value>
+  </data>
+  <data name="Settings_RestoreDisabled" xml:space="preserve">
+    <value>已禁用</value>
+  </data>
+  <data name="Settings_NotDetected" xml:space="preserve">
+    <value>未检测到</value>
+  </data>
+  <data name="Lighting_AudioCaptureUnavailable" xml:space="preserve">
+    <value>音频采集不可用</value>
+  </data>
+  <data name="Lighting_SingleTarget" xml:space="preserve">
+    <value>1 个已启用的灯效目标</value>
+  </data>
+  <data name="Lighting_SingleColourKeyboardHint" xml:space="preserve">
+    <value>这台笔记本是单色背光键盘，没有可设置的颜色（固件与 OmenCore 机型数据库的结论一致）。亮度请用 Fn 快捷键调节。</value>
+  </data>
+  <data name="Lighting_StatusDiscoveringRazer" xml:space="preserve">
+    <value>正在查找雷蛇设备…</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerColor" xml:space="preserve">
+    <value>正在应用雷蛇颜色…</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerBreathing" xml:space="preserve">
+    <value>正在应用雷蛇呼吸效果…</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerSpectrum" xml:space="preserve">
+    <value>正在应用雷蛇光谱效果…</value>
+  </data>
+  <data name="Lighting_StatusApplyingOpenRgbColor" xml:space="preserve">
+    <value>正在应用 OpenRGB 颜色…</value>
+  </data>
+  <data name="Lighting_StatusApplyingCorsair" xml:space="preserve">
+    <value>正在应用 Corsair 灯效…</value>
+  </data>
+  <data name="Lighting_StatusApplyingPreset" xml:space="preserve">
+    <value>正在向系统应用灯效预设…</value>
+  </data>
+  <data name="Lighting_StatusSyncingAll" xml:space="preserve">
+    <value>正在把颜色同步到所有 RGB 设备…</value>
+  </data>
+  <data name="Lighting_StatusApplyingCustomColor" xml:space="preserve">
+    <value>正在应用自定义颜色…</value>
+  </data>
+  <data name="Lighting_StatusApplyingDpi" xml:space="preserve">
+    <value>正在应用 DPI 设置…</value>
+  </data>
+  <data name="Lighting_StatusApplyingLogitech" xml:space="preserve">
+    <value>正在应用罗技灯效…</value>
+  </data>
+  <data name="Lighting_StatusLoadingMacro" xml:space="preserve">
+    <value>正在加载宏方案…</value>
+  </data>
+  <data name="Lighting_StatusApplyingKeyboardColors" xml:space="preserve">
+    <value>正在应用键盘颜色…</value>
+  </data>
+  <data name="Lighting_StatusRestoringKeyboard" xml:space="preserve">
+    <value>正在恢复键盘灯效…</value>
+  </data>
+  <data name="Lighting_StatusProbingSurface" xml:space="preserve">
+    <value>正在探测 RGB 灯效区域…</value>
+  </data>
+  <data name="Lighting_NoApplyAttempted" xml:space="preserve">
+    <value>本次会话尚未尝试应用键盘灯效。</value>
+  </data>
+  <data name="Lighting_UnknownBackend" xml:space="preserve">
+    <value>未知后端</value>
+  </data>
+  <data name="Lighting_BackendWmiHint" xml:space="preserve">
+    <value>💡 如果颜色没有变化，请到“设置 → 硬件”中启用“实验性 EC 键盘”。</value>
+  </data>
+  <data name="Lighting_BackendEcHint" xml:space="preserve">
+    <value>正在使用 EC 直连（实验性）。更改可能需要一点时间才生效。</value>
+  </data>
+  <data name="Lighting_BackendOghHint" xml:space="preserve">
+    <value>正在通过 OMEN Gaming Hub 代理。请确保 Gaming Hub 服务正在运行。</value>
+  </data>
+  <data name="KbdMap_StatusSaveOk" xml:space="preserve">
+    <value>已保存到键盘。这张图案在断电重启后仍会保留，关闭 OmenCore 也能显示。</value>
+  </data>
+  <data name="KbdMap_StatusSaveRefused" xml:space="preserve">
+    <value>已应用，但键盘拒绝写入闪存——图案现在可以显示，断电重启后不会保留。</value>
+  </data>
+  <data name="KbdMap_StatusLoadedBarFormat" xml:space="preserve">
+    <value>{0} 个键和 4 个灯条分区。单击选中，或拖框选择；按住 Ctrl 可追加选择。</value>
+  </data>
+  <data name="KbdMap_StatusLoadedFormat" xml:space="preserve">
+    <value>{0} 个键。单击选中，或拖框选择；按住 Ctrl 可追加选择。</value>
+  </data>
+  <data name="KbdMap_StatusLayoutUnconfirmed" xml:space="preserve">
+    <value> 该布局尚未在实机上验证。</value>
+  </data>
+  <data name="KbdMap_StatusBarSuffix" xml:space="preserve">
+    <value>，另有 4 个灯条分区。</value>
+  </data>
+  <data name="KbdMap_StatusFullStop" xml:space="preserve">
+    <value>。</value>
+  </data>
+  <data name="KbdMap_StatusClickHint" xml:space="preserve">
+    <value> 单击选中，或拖框选择；按住 Ctrl 可追加选择。</value>
+  </data>
+  <data name="GpuClamp_WattageNotReported" xml:space="preserve">
+    <value>未报告功率</value>
+  </data>
+  <data name="GpuClamp_NotReported" xml:space="preserve">
+    <value>未报告</value>
+  </data>
+  <data name="GpuClamp_NoneOnBattery" xml:space="preserve">
+    <value>无——正在使用电池</value>
+  </data>
+  <data name="FanCalib_BiosAutoRestored" xml:space="preserve">
+    <value>已恢复 BIOS 自动风扇控制</value>
+  </data>
+  <data name="FanCalib_BiosAutoRestoreFailed" xml:space="preserve">
+    <value>无法通过当前后端恢复 BIOS 自动风扇控制</value>
+  </data>
+  <data name="Dashboard_PowerTelemetryUnavailable" xml:space="preserve">
+    <value>功耗遥测不可用</value>
+  </data>
+  <data name="Dashboard_PowerSensorsUnavailable" xml:space="preserve">
+    <value>功耗传感器不可用</value>
+  </data>
+  <data name="Dashboard_PowerLineFormat" xml:space="preserve">
+    <value>CPU：{0}W • GPU：{1}W • 合计：{2}W</value>
+  </data>
+  <data name="Dashboard_PowerInactiveFormat" xml:space="preserve">
+    <value>CPU：{0}W • GPU：未激活（Optimus）</value>
+  </data>
+  <data name="Bloatware_CurrentItem" xml:space="preserve">
+    <value>当前这一项</value>
+  </data>
+  <data name="HotkeyOsd_ViaHotkey" xml:space="preserve">
+    <value>经快捷键</value>
+  </data>
+  <data name="Language_SystemDefault" xml:space="preserve">
+    <value>跟随系统</value>
+  </data>
+  <data name="Main_SourceQuickAccess" xml:space="preserve">
+    <value>快速面板</value>
+  </data>
+  <data name="KbdMap_StatusSeparator" xml:space="preserve">
+    <value>，</value>
+  </data>
+  <data name="QuickPopup_CurveTooltipFormat" xml:space="preserve">
+    <value>曲线：{0}</value>
   </data>
 </root>

@@ -35,9 +35,9 @@ namespace OmenCore.ViewModels
         private IEnumerable<FanCurvePoint>? _hoveredPresetCurve;
         private bool _isApplyingCustomCurve;
         private volatile bool _isApplyingConstantSpeed;
-        private string _curveApplyStatus = "Ready to apply";
+        private string _curveApplyStatus = Strings.FanControl_CurveStatusReadyToApply;
         private string _fanCalibrationModelId = "unknown";
-        private string _fanCalibrationModelName = "Unknown Model";
+        private string _fanCalibrationModelName = Strings.FanControl_UnknownModelName;
         private bool _showRpmSanityWarning = false;
         private string _rpmSanityWarningMessage = string.Empty;
         private readonly SemaphoreSlim _fanApplySemaphore = new(1, 1);
@@ -159,7 +159,7 @@ namespace OmenCore.ViewModels
             get
             {
                 if (CustomFanCurve == null || CustomFanCurve.Count < 2)
-                    return "⚠️ Curve needs at least 2 points";
+                    return Strings.D2_CurveNeedsTwoPoints;
                 
                 var sorted = CustomFanCurve.OrderBy(p => p.TemperatureC).ToList();
                 
@@ -1024,7 +1024,7 @@ namespace OmenCore.ViewModels
 
                 if (string.IsNullOrWhiteSpace(_fanCalibrationModelName))
                 {
-                    _fanCalibrationModelName = "Unknown Model";
+                    _fanCalibrationModelName = Strings.FanControl_UnknownModelName;
                 }
 
                 _fanCalibrationModelId = GenerateFanCalibrationModelId(_fanCalibrationModelName);
@@ -1032,7 +1032,7 @@ namespace OmenCore.ViewModels
             catch (Exception ex)
             {
                 _logging.Warn($"Failed to initialize fan calibration model context: {ex.Message}");
-                _fanCalibrationModelName = "Unknown Model";
+                _fanCalibrationModelName = Strings.FanControl_UnknownModelName;
                 _fanCalibrationModelId = "unknown";
             }
         }

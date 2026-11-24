@@ -1,5 +1,6 @@
 using System;
 using Hardcodet.Wpf.TaskbarNotification;
+using OmenCore.Localization;
 
 namespace OmenCore.Utils
 {
@@ -15,7 +16,7 @@ namespace OmenCore.Utils
         public TrayIconManager(TaskbarIcon trayIcon)
         {
             _trayIcon = trayIcon;
-            _trayIcon.ToolTipText = "OmenCore - Gaming Laptop Control";
+            _trayIcon.ToolTipText = Strings.Tray_AppTooltip;
         }
 
         /// <summary>
@@ -27,7 +28,7 @@ namespace OmenCore.Utils
 
             try
             {
-                _trayIcon.ToolTipText = $"OmenCore - Gaming Laptop Control\n{cpuInfo}\n{gpuInfo}";
+                _trayIcon.ToolTipText = string.Format(Strings.TI2_TrayTooltipFormat, cpuInfo, gpuInfo);
             }
             catch (Exception ex)
             {

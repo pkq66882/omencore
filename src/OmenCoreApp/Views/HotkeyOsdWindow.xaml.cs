@@ -4,6 +4,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
 using System.Windows.Forms;
+using OmenCore.Localization;
 using OmenCore.Models;
 
 namespace OmenCore.Views
@@ -48,7 +49,7 @@ namespace OmenCore.Views
                 ModeCategory.Text = category;
                 ModeName.Text = modeName;
                 ModeIcon.Text = GetModeIcon(category, modeName);
-                TriggerText.Text = hotkeyDescription ?? "via Hotkey";
+                TriggerText.Text = hotkeyDescription ?? Strings.HotkeyOsd_ViaHotkey;
                 UpdateAccentColor(modeName);
                 _dismissTimer.Stop();
                 _dismissTimer.Interval = TimeSpan.FromMilliseconds(_dismissDurationMs);
@@ -66,7 +67,7 @@ namespace OmenCore.Views
             ModeCategory.Text = category;
             ModeName.Text = modeName;
             ModeIcon.Text = GetModeIcon(category, modeName);
-            TriggerText.Text = hotkeyDescription ?? "via Hotkey";
+            TriggerText.Text = hotkeyDescription ?? Strings.HotkeyOsd_ViaHotkey;
             
             // Update accent color based on mode
             UpdateAccentColor(modeName);

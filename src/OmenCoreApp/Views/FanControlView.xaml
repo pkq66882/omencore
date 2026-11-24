@@ -269,7 +269,7 @@
 
                             <Border Grid.Row="3" Background="#2026C6DA" CornerRadius="4" Padding="6,2" HorizontalAlignment="Center"
                                     Visibility="{Binding IsConstantSelected, Converter={StaticResource BoolToVisibility}}">
-                                <TextBlock Text="OK" FontSize="10" FontWeight="Bold" Foreground="#26C6DA"/>
+                                <TextBlock Text="{x:Static loc:Strings.X2_DirectActive}" FontSize="10" FontWeight="Bold" Foreground="#26C6DA"/>
                             </Border>
                         </Grid>
                     </RadioButton>

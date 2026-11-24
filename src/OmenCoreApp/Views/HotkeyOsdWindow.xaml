@@ -72,7 +72,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
                 <TextBlock x:Name="ModeIcon"
-                           Text="FAN"
+                           Text="{x:Static loc:Strings.X2_OsdFanIcon}"
                            FontSize="14"
                            FontWeight="Bold"
                            FontFamily="{StaticResource AppFontFamily}"

@@ -22,7 +22,7 @@ namespace OmenCore.ViewModels
         private readonly LoggingService _logging;
         private CancellationTokenSource? _cts;
 
-        private string _status = "Not started";
+        private string _status = Strings.FanCalibration_StatusNotStarted;
         private int _progress = 0;
         private bool _isCalibrating = false;
         private string _calibrationInfo = "";
@@ -177,17 +177,20 @@ namespace OmenCore.ViewModels
             var profile = _calibrationService.ActiveProfile;
             if (profile == null || !profile.IsValid)
             {
-                CalibrationInfo = "No calibration data available. Run the calibration wizard to measure your fan's actual performance.";
+                CalibrationInfo = Strings.FC2_NoCalibration;
             }
             else
             {
                 var age = DateTime.Now - profile.CalibratedAt;
-                CalibrationInfo = $"Calibrated for: {profile.ModelName}\n" +
-                                  $"Max Level: {profile.MaxLevel}\n" +
-                                  $"Min Spin Level: {profile.MinSpinLevel}\n" +
-                                  $"CPU Fan Max: {profile.Fan0MaxRpm} RPM\n" +
-                                  $"GPU Fan Max: {profile.Fan1MaxRpm} RPM\n" +
-                                  $"Last calibrated: {profile.CalibratedAt:g} ({age.TotalDays:F0} days ago)";
+                CalibrationInfo = string.Format(
+                                    Strings.FC2_CalibrationInfoFormat,
+                                    profile.ModelName,
+                                    profile.MaxLevel,
+                                    profile.MinSpinLevel,
+                                    profile.Fan0MaxRpm,
+                                    profile.Fan1MaxRpm,
+                                    profile.CalibratedAt.ToString("g"),
+                                    age.TotalDays);
             }
         }
 

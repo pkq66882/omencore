@@ -96,8 +96,8 @@ namespace OmenCore.ViewModels
                 {
                     if (result.Success)
                     {
-                        LastCleanResult = $"Freed {result.FreedMB} MB  •  {result.OperationsSucceeded} ops succeeded" +
-                            (result.OperationsFailed > 0 ? $"  •  {result.OperationsFailed} failed" : "") +
+                        LastCleanResult = string.Format(Strings.L2_CleanResultFormat, result.FreedMB, result.OperationsSucceeded) +
+                            (result.OperationsFailed > 0 ? string.Format(Strings.L2_CleanResultFailedSuffixFormat, result.OperationsFailed) : "") +
                             $"  •  {result.Timestamp:HH:mm:ss}" +
                             Environment.NewLine +
                             result.GetDeltaSummary();
@@ -113,7 +113,7 @@ namespace OmenCore.ViewModels
                     }
                     else
                     {
-                        LastCleanResult = $"Failed: {result.ErrorMessage}";
+                        LastCleanResult = string.Format(Strings.L2_CleanFailedFormat, result.ErrorMessage);
                         SetStatusFailed(result.ErrorMessage);
                     }
                 });
@@ -413,7 +413,7 @@ namespace OmenCore.ViewModels
             {
                 if (_memoryHistory.Count == 0)
                 {
-                    return "No history collected yet.";
+                    return Strings.L2_NoHistory;
                 }
 
                 var loads = _memoryHistory.Select(sample => sample.LoadPercent).ToArray();
@@ -542,7 +542,7 @@ namespace OmenCore.ViewModels
                 if (AutoCleanCooldownMinutes <= 0)
                 {
                     var profile = ParseAutoCleanProfile(_selectedAutoCleanProfile);
-                    return $"Profile default ({GetAutoCleanCooldownMinutes(profile)} min)";
+                    return string.Format(Strings.L2_ProfileDefaultCooldownFormat, GetAutoCleanCooldownMinutes(profile));
                 }
 
                 return $"{AutoCleanCooldownMinutes} min";
@@ -730,11 +730,11 @@ namespace OmenCore.ViewModels
                 if (suggestions.Count == 0)
                 {
                     return ExcludedProcesses.Count == 0
-                        ? "Tip: exclude apps you keep open (games, capture, chat, anti-cheat). You can add from the top-process list or type a process name without .exe."
-                        : $"{ExcludedProcesses.Count} process exclusions active. Add more from the top-process list to avoid repeated working-set trims.";
+                        ? Strings.L2_ExcludeTip
+                        : string.Format(Strings.L2_ExclusionsActiveFormat, ExcludedProcesses.Count);
                 }
 
-                return $"Suggested exclusions from current top processes: {string.Join(", ", suggestions)}.";
+                return string.Format(Strings.L2_ExcludeSuggestionsFormat, string.Join(", ", suggestions));
             }
         }
 
@@ -780,7 +780,7 @@ namespace OmenCore.ViewModels
             {
                 var flags = GetProfileFlags(_selectedProfile);
                 var preview = _memoryService.PreviewMemoryCleaning(flags, currentInfo);
-                CleanupPreviewText = $"This profile will free approximately {preview.EstimatedFreeMB} MB";
+                CleanupPreviewText = string.Format(Strings.L2_CleanupPreviewFormat, preview.EstimatedFreeMB);
             }
             catch (Exception ex)
             {
@@ -974,11 +974,11 @@ namespace OmenCore.ViewModels
             }
 
             var target = !MemoryCompressionEnabled;
-            SetStatusAction(target ? "Enabling memory compression" : "Disabling memory compression");
+            SetStatusAction(target ? Strings.Mem_EnablingCompression : Strings.Mem_DisablingCompression);
             var success = _memoryService.SetMemoryCompressionEnabled(target);
             if (!success)
             {
-                SetStatusFailed("Failed to change memory compression state");
+                SetStatusFailed(Strings.Mem_CompressionChangeFailed);
                 return;
             }
 
@@ -1179,7 +1179,7 @@ namespace OmenCore.ViewModels
             try
             {
                 IsCleaning = true;
-                SetStatusAction("Cleaning memory");
+                SetStatusAction(Strings.Mem_CleaningMemory);
 
                 var result = await _memoryService.CleanMemoryAsync(flags);
 

@@ -1,3 +1,4 @@
+using OmenCore.Localization;
 using OmenCore.Models;
 using System;
 using System.Collections.Generic;
@@ -268,7 +269,7 @@ namespace OmenCore.Controls
                 // If temperature increases by 10°C+ but fan speed decreases by 15%+, that's dangerous
                 if (tempDiff >= 10 && fanDiff <= -15)
                 {
-                    ShowValidationWarning($"Dangerous curve: At {sorted[i+1].TemperatureC}°C the fan speed drops to {sorted[i+1].FanPercent}% (was {sorted[i].FanPercent}% at {sorted[i].TemperatureC}°C). This could cause overheating!");
+                    ShowValidationWarning(string.Format(Strings.L2_CurveDangerFormat, sorted[i+1].TemperatureC, sorted[i+1].FanPercent, sorted[i].FanPercent, sorted[i].TemperatureC));
                     return;
                 }
             }
@@ -278,14 +279,14 @@ namespace OmenCore.Controls
             if (highTempPoints.Any(p => p.FanPercent < 50))
             {
                 var problematic = highTempPoints.First(p => p.FanPercent < 50);
-                ShowValidationWarning($"Safety warning: {problematic.TemperatureC}°C has only {problematic.FanPercent}% fan speed. Recommend at least 70% at high temperatures to prevent throttling.");
+                ShowValidationWarning(string.Format(Strings.L2_CurveSafetyFormat, problematic.TemperatureC, problematic.FanPercent));
                 return;
             }
             
             // Check if curve doesn't cover high temps (< 85°C)
             if (sorted[^1].TemperatureC < 85)
             {
-                ShowValidationWarning($"Incomplete coverage: Curve only extends to {sorted[^1].TemperatureC}°C. Add points up to 95°C to protect against thermal spikes.");
+                ShowValidationWarning(string.Format(Strings.L2_CurveCoverageFormat, sorted[^1].TemperatureC));
                 return;
             }
             

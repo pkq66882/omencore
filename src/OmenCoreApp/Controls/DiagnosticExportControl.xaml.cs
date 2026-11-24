@@ -146,7 +146,7 @@ namespace OmenCore.Controls
                 // Collect system information
                 if (IncludeSystemInfoCheck.IsChecked == true)
                 {
-                    UpdateProgress("Collecting system information...", 10);
+                    UpdateProgress(Strings.DiagnosticExport_ProgressSystemInfo, 10);
                     diagnosticData.Sections["SystemInfo"] = await CollectSystemInfoAsync(ct);
                     result.Sections.Add("System Information");
                 }
@@ -154,7 +154,7 @@ namespace OmenCore.Controls
                 // Collect hardware data
                 if (IncludeHardwareDataCheck.IsChecked == true)
                 {
-                    UpdateProgress("Collecting hardware monitoring data...", 30);
+                    UpdateProgress(Strings.DiagnosticExport_ProgressHardware, 30);
                     diagnosticData.Sections["HardwareData"] = await CollectHardwareDataAsync(ct);
                     result.Sections.Add("Hardware Monitoring Data");
                 }
@@ -162,7 +162,7 @@ namespace OmenCore.Controls
                 // Collect logs
                 if (IncludeLogsCheck.IsChecked == true)
                 {
-                    UpdateProgress("Collecting application logs...", 50);
+                    UpdateProgress(Strings.DiagnosticExport_ProgressLogs, 50);
                     diagnosticData.Sections["Logs"] = await CollectLogsAsync(ct);
                     result.Sections.Add("Application Logs");
                 }
@@ -170,7 +170,7 @@ namespace OmenCore.Controls
                 // Collect settings
                 if (IncludeSettingsCheck.IsChecked == true)
                 {
-                    UpdateProgress("Collecting settings and configuration...", 70);
+                    UpdateProgress(Strings.DiagnosticExport_ProgressSettings, 70);
                     diagnosticData.Sections["Settings"] = CollectSettings();
                     result.Sections.Add("Settings & Configuration");
                 }
@@ -178,19 +178,19 @@ namespace OmenCore.Controls
                 // Collect performance data
                 if (IncludePerformanceDataCheck.IsChecked == true)
                 {
-                    UpdateProgress("Collecting performance mode data...", 85);
+                    UpdateProgress(Strings.DiagnosticExport_ProgressPerformance, 85);
                     diagnosticData.Sections["PerformanceData"] = CollectPerformanceData();
                     result.Sections.Add("Performance Mode Data");
                 }
 
-                UpdateProgress("Collecting core control readiness...", 90);
+                UpdateProgress(Strings.DiagnosticExport_ProgressReadiness, 90);
                 diagnosticData.Sections["CoreControlReadiness"] = CollectCoreControlReadinessData();
                 result.Sections.Add("Core Control Readiness");
 
                 // Collect fan calibration
                 if (IncludeFanCalibrationCheck.IsChecked == true)
                 {
-                    UpdateProgress("Collecting fan calibration data...", 95);
+                    UpdateProgress(Strings.DiagnosticExport_ProgressCalibration, 95);
                     diagnosticData.Sections["FanCalibration"] = CollectFanCalibrationData();
                     result.Sections.Add("Fan Calibration Data");
                 }
@@ -198,7 +198,7 @@ namespace OmenCore.Controls
                 // Optional: Run quick fan verification to check 'Max' preset application
                 if (IncludeFanVerificationCheck.IsChecked == true)
                 {
-                    UpdateProgress("Running fan Max verification...", 96);
+                    UpdateProgress(Strings.DiagnosticExport_ProgressFanMax, 96);
                     try
                     {
                         if (_fanService != null)
@@ -238,19 +238,19 @@ namespace OmenCore.Controls
                 // Anonymize if requested
                 if (AnonymizeDataCheck.IsChecked == true)
                 {
-                    UpdateProgress("Anonymizing data...", 98);
+                    UpdateProgress(Strings.DiagnosticExport_ProgressAnonymizing, 98);
                     AnonymizeData(diagnosticData);
                 }
 
                 // Save to file
-                UpdateProgress("Saving diagnostic file...", 99);
+                UpdateProgress(Strings.DiagnosticExport_ProgressSaving, 99);
                 await SaveDiagnosticDataAsync(diagnosticData, filePath, ct);
 
                 result.EndTime = DateTime.Now;
                 result.Success = true;
                 result.FileSize = new FileInfo(filePath).Length;
 
-                UpdateProgress("Export completed successfully", 100);
+                UpdateProgress(Strings.DiagnosticExport_ProgressDone, 100);
             }
             catch (Exception ex)
             {

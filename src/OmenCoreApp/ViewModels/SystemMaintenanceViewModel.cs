@@ -467,7 +467,7 @@ namespace OmenCore.ViewModels
             await ExecuteWithLoadingAsync(async () =>
             {
                 _logging.Info("Creating system restore point...");
-                var result = await _restoreService.CreateRestorePointAsync("OmenCore - Before System Changes");
+                var result = await _restoreService.CreateRestorePointAsync(Strings.Main_SystemRestoreLabelSystemChanges);
 
                 if (result.Success)
                 {

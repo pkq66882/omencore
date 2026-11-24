@@ -9298,4 +9298,1573 @@
   <data name="Settings_Detecting" xml:space="preserve">
     <value>Algılanıyor...</value>
   </data>
+  <data name="QuickPopup_PresetCurrent" xml:space="preserve">
+    <value>geçerli fan profiliniz</value>
+  </data>
+  <data name="QuickPopup_PresetActiveFormat" xml:space="preserve">
+    <value>etkin eğri profili “{0}”</value>
+  </data>
+  <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
+    <value>Bu performans modunu uygular. Bağlı modda fan ilkesi de güncellenir.</value>
+  </data>
+  <data name="Main_EventCustomPresetSavedFormat" xml:space="preserve">
+    <value>Özel profil “{0}” kaydedildi</value>
+  </data>
+  <data name="Main_EventLightingProfilePushedFormat" xml:space="preserve">
+    <value>Aydınlatma profili “{0}” uygulandı</value>
+  </data>
+  <data name="Main_EventLightingProfilePushedByPerfFormat" xml:space="preserve">
+    <value>Aydınlatma profili “{0}” performans modu tarafından uygulandı</value>
+  </data>
+  <data name="Main_EventDefaultsRestored" xml:space="preserve">
+    <value>Varsayılanlar geri yüklendi</value>
+  </data>
+  <data name="Main_EventConfigurationReloaded" xml:space="preserve">
+    <value>Yapılandırma yeniden yüklendi</value>
+  </data>
+  <data name="Main_EventRestorePointCreated" xml:space="preserve">
+    <value>Sistem geri yükleme noktası oluşturuldu</value>
+  </data>
+  <data name="Main_EventRestorePointFailed" xml:space="preserve">
+    <value>Geri yükleme noktası oluşturulamadı</value>
+  </data>
+  <data name="Main_EventCleanupCancelled" xml:space="preserve">
+    <value>OGH temizliği iptal edildi</value>
+  </data>
+  <data name="Main_EventCleanupDryRunComplete" xml:space="preserve">
+    <value>OMEN temizlik denemesi tamamlandı</value>
+  </data>
+  <data name="Main_EventCleanupComplete" xml:space="preserve">
+    <value>OMEN Gaming Hub temizliği tamamlandı</value>
+  </data>
+  <data name="Main_EventCleanupCompletedWithErrors" xml:space="preserve">
+    <value>OMEN temizliği hatalarla tamamlandı</value>
+  </data>
+  <data name="Main_EventCleanupFailed" xml:space="preserve">
+    <value>OMEN temizliği başarısız</value>
+  </data>
+  <data name="Main_EventLogitechDiscoveredFormat" xml:space="preserve">
+    <value>{0} Logitech cihazı bulundu</value>
+  </data>
+  <data name="Main_EventConfigExported" xml:space="preserve">
+    <value>✓ Yapılandırma dışa aktarıldı</value>
+  </data>
+  <data name="Main_EventExportFailedFormat" xml:space="preserve">
+    <value>✗ Dışa aktarma başarısız: {0}</value>
+  </data>
+  <data name="Main_EventImportInvalidFormat" xml:space="preserve">
+    <value>✗ İçe aktarma başarısız: geçersiz dosya biçimi</value>
+  </data>
+  <data name="Main_EventConfigImported" xml:space="preserve">
+    <value>✓ Yapılandırma içe aktarıldı — yeniden başlatma önerilir</value>
+  </data>
+  <data name="Main_EventImportFailedFormat" xml:space="preserve">
+    <value>✗ İçe aktarma başarısız: {0}</value>
+  </data>
+  <data name="Main_EventDiagBundleCreated" xml:space="preserve">
+    <value>✓ Tanılama paketi oluşturuldu, model bilgisi kopyalandı</value>
+  </data>
+  <data name="Main_EventReportModelExportFailed" xml:space="preserve">
+    <value>✗ Model bildirilemedi: dışa aktarma hatası</value>
+  </data>
+  <data name="Main_EventReportModelFailedFormat" xml:space="preserve">
+    <value>✗ Model bildirilemedi: {0}</value>
+  </data>
+  <data name="Main_EventTelemetryExported" xml:space="preserve">
+    <value>✓ Telemetri dışa aktarıldı</value>
+  </data>
+  <data name="Main_EventTelemetryExportFailed" xml:space="preserve">
+    <value>✗ Telemetri dışa aktarılamadı</value>
+  </data>
+  <data name="Main_EventSafeModeBlockedFormat" xml:space="preserve">
+    <value>🛡 Güvenli Mod tepsi yazmasını engelledi: {0}</value>
+  </data>
+  <data name="Main_EventSafeModeLifted" xml:space="preserve">
+    <value>🛡 Güvenli Mod kaldırıldı — izleme sağlıklı</value>
+  </data>
+  <data name="Main_EventSafeModeStartupActive" xml:space="preserve">
+    <value>🛡 Başlangıç Güvenli Modu etkin — donanım yazma işlemleri geçici olarak kısıtlı</value>
+  </data>
+  <data name="Main_EventSafeModeExpired" xml:space="preserve">
+    <value>🛡 Güvenli Mod süresi doldu — başlangıç penceresi tamamlandı</value>
+  </data>
+  <data name="Main_FanModeTitle" xml:space="preserve">
+    <value>Fan Modu</value>
+  </data>
+  <data name="Main_EventFanModeFailedFormat" xml:space="preserve">
+    <value>Fan modu başarısız: {0}</value>
+  </data>
+  <data name="Main_FanModeApplyFailedFormat" xml:space="preserve">
+    <value>“{0}” uygulanamadı. Arka uç durumu için Tanılama sayfasına bakın.</value>
+  </data>
+  <data name="Main_FanModeApplyFailedVictus16S0Format" xml:space="preserve">
+    <value>“{0}” uygulanamadı. Victus 16-s0 modelleri ürün yazılımı yolunun doğrulanmasını gerektirebilir: Tanılama çalıştırıp raporu ve WMI günlüklerini kılavuz biçiminde paylaşın.</value>
+  </data>
+  <data name="Main_FanModeApplyFailedVictusFormat" xml:space="preserve">
+    <value>“{0}” uygulanamadı. Victus modellerinde arka uç eşlemesinin doğrulanabilmesi için Tanılama çıktısını kılavuz biçiminde paylaşın.</value>
+  </data>
+  <data name="Main_EventFanModeFormat" xml:space="preserve">
+    <value>🌀 Fan modu: {0}</value>
+  </data>
+  <data name="Main_EventFanModeIgnoredFormat" xml:space="preserve">
+    <value>⚠ Fan modu isteği yok sayıldı: {0} için profil bulunamadı</value>
+  </data>
+  <data name="Main_FanModePresetNotFoundFormat" xml:space="preserve">
+    <value>{0} için profil çözümlenemedi.</value>
+  </data>
+  <data name="Main_EventPerfModeFormat" xml:space="preserve">
+    <value>⚡ Performans: {0}</value>
+  </data>
+  <data name="Main_EventProfileFormat" xml:space="preserve">
+    <value>🎮 Profil: {0} (fan: {1})</value>
+  </data>
+  <data name="Main_GpuPowerTitle" xml:space="preserve">
+    <value>GPU Gücü</value>
+  </data>
+  <data name="Main_EventGpuPowerFormat" xml:space="preserve">
+    <value>⚡ GPU gücü: {0}</value>
+  </data>
+  <data name="Main_GpuPowerSetFormat" xml:space="preserve">
+    <value>{0} olarak ayarlandı</value>
+  </data>
+  <data name="Main_EventKeyboardFormat" xml:space="preserve">
+    <value>💡 Klavye: {0}</value>
+  </data>
+  <data name="Main_EventProfileAppliedFormat" xml:space="preserve">
+    <value>🎮 {1} için “{0}” profili uygulandı</value>
+  </data>
+  <data name="Main_EventDefaultsRestoredGame" xml:space="preserve">
+    <value>🎮 Varsayılan ayarlar geri yüklendi</value>
+  </data>
+  <data name="Main_EventFanHotkeyFormat" xml:space="preserve">
+    <value>🌀 Fan: {0} (kısayol)</value>
+  </data>
+  <data name="Main_EventFanMaxCoolingHotkey" xml:space="preserve">
+    <value>🌀 Fan: Maksimum soğutma (kısayol)</value>
+  </data>
+  <data name="Main_EventPerfHotkeyFormat" xml:space="preserve">
+    <value>⚡ Performans: {0} (kısayol)</value>
+  </data>
+  <data name="Main_EventBoostHotkey" xml:space="preserve">
+    <value>🔥 Hızlandırma modu etkinleştirildi (kısayol)</value>
+  </data>
+  <data name="Main_EventQuietHotkey" xml:space="preserve">
+    <value>🤫 Sessiz mod etkinleştirildi (kısayol)</value>
+  </data>
+  <data name="Main_EventProfileHotkeyFormat" xml:space="preserve">
+    <value>Profil: {0} (kısayol)</value>
+  </data>
+  <data name="Main_EventCustomProfileFailedFormat" xml:space="preserve">
+    <value>Özel profil başarısız: {0}</value>
+  </data>
+  <data name="Main_CustomPresetApplyFailedFormat" xml:space="preserve">
+    <value>Özel fan profili “{0}” uygulanamadı. Arka uç durumu için Tanılama sayfasına bakın.</value>
+  </data>
+  <data name="Main_EventQuietSafetyMax" xml:space="preserve">
+    <value>🌡️ Sessiz mod koruması: fanlar → maksimum (kritik sıcaklık)</value>
+  </data>
+  <data name="Main_EventQuietSafetyMaxFailed" xml:space="preserve">
+    <value>⚠️ Sessiz mod koruması: sıcaklık kritik, ancak maksimum soğutma uygulanamadı — fan denetimini kontrol edin</value>
+  </data>
+  <data name="Main_EventQuietSafetyRestored" xml:space="preserve">
+    <value>✅ Sessiz mod koruması: fanlar → sessiz (sıcaklık düzeldi)</value>
+  </data>
+  <data name="Main_HotkeyOsdAutoBios" xml:space="preserve">
+    <value>Otomatik (BIOS denetimi)</value>
+  </data>
+  <data name="Main_HotkeyOsdOmenKey" xml:space="preserve">
+    <value>OMEN tuşu</value>
+  </data>
+  <data name="Main_EventHotkeysWindowActive" xml:space="preserve">
+    <value>⌨️ Kısayollar etkin (pencere odakta)</value>
+  </data>
+  <data name="Main_EventHotkeysGlobalEnabled" xml:space="preserve">
+    <value>⌨️ Genel kısayollar etkinleştirildi</value>
+  </data>
+  <data name="Main_EventHotkeysWindowInactive" xml:space="preserve">
+    <value>⌨️ Kısayollar devre dışı (pencere odağı kaybetti)</value>
+  </data>
+  <data name="Main_HotkeyOsdTriggeredFormat" xml:space="preserve">
+    <value>kısayol ile ({0})</value>
+  </data>
+  <data name="Notify_GameProfileActivatedTitle" xml:space="preserve">
+    <value>Oyun profili etkinleştirildi</value>
+  </data>
+  <data name="Notify_GameProfileAppliedFormat" xml:space="preserve">
+    <value>Uygulanan profil: {0}</value>
+  </data>
+  <data name="Notify_GameProfileInfoFormat" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="Notify_GameClosedTitle" xml:space="preserve">
+    <value>Oyun kapatıldı</value>
+  </data>
+  <data name="Notify_GameDefaultsRestored" xml:space="preserve">
+    <value>Varsayılan ayarlar geri yüklendi</value>
+  </data>
+  <data name="Notify_GameClosedInfoFormat" xml:space="preserve">
+    <value>{0}: varsayılan ayarlar geri yüklendi</value>
+  </data>
+  <data name="Notify_FanModeTitleFormat" xml:space="preserve">
+    <value>Fan modu: {0}</value>
+  </data>
+  <data name="Notify_PerfModeTitleFormat" xml:space="preserve">
+    <value>Performans: {0}</value>
+  </data>
+  <data name="Notify_ChangedViaFormat" xml:space="preserve">
+    <value>Değişiklik kaynağı: {0}</value>
+  </data>
+  <data name="Notify_MemoryFreedFormat" xml:space="preserve">
+    <value>{0} boşaltıldı</value>
+  </data>
+  <data name="Notify_MemoryOpsFormat" xml:space="preserve">
+    <value>{0} temizlik işlemi tamamlandı</value>
+  </data>
+  <data name="Notify_HighTemperatureTitle" xml:space="preserve">
+    <value>Yüksek sıcaklık uyarısı</value>
+  </data>
+  <data name="Notify_TemperatureFormat" xml:space="preserve">
+    <value>{0}: {1:F0}°C</value>
+  </data>
+  <data name="Notify_HighTemperatureThresholdFormat" xml:space="preserve">
+    <value>Eşik: {0:F0}°C · yalnızca bilgi amaçlı, fanı tetiklemez</value>
+  </data>
+  <data name="Notify_HighTemperatureInfoFormat" xml:space="preserve">
+    <value>{0}: {1:F0}°C (eşik {2:F0}°C). Bu yalnızca bilgilendirme amaçlı bir bildirimdir — fan davranışından ve BIOS termal/TCC sınırından bağımsızdır. Ayarlar → Bildirimler bölümünden değiştirebilir veya kapatabilirsiniz.</value>
+  </data>
+  <data name="Notify_ClampReturnedTitle" xml:space="preserve">
+    <value>GPU güç sınırı geri geldi</value>
+  </data>
+  <data name="Notify_ClampReturnedBodyFormat" xml:space="preserve">
+    <value>GPU yeniden {0:F0} W ile sınırlandı (kendi sınırı {1:F0} W).</value>
+  </data>
+  <data name="Notify_ClampReturnedHint" xml:space="preserve">
+    <value>GPU'ye ihtiyaç duyulmadığında Tanılama sayfasından yeniden başlatın.</value>
+  </data>
+  <data name="Notify_ClampReturnedInfoFormat" xml:space="preserve">
+    <value>{1:F0} W içinden {0:F0} W ile sınırlı. Ürün yazılımı sürücüye adaptörü yeniden bildirdi — GPU'yu yeniden başlatmak sınırı kaldırır.</value>
+  </data>
+  <data name="Notify_CriticalTitleFormat" xml:space="preserve">
+    <value>KRİTİK: {0} aşırı ısınıyor!</value>
+  </data>
+  <data name="Notify_CriticalTemperatureFormat" xml:space="preserve">
+    <value>Sıcaklık: {0:F0}°C</value>
+  </data>
+  <data name="Notify_CriticalBody" xml:space="preserve">
+    <value>Termal kısıtlama oluşabilir. Yükü azaltmayı veya soğutmayı iyileştirmeyi düşünün.</value>
+  </data>
+  <data name="Notify_CriticalInfoFormat" xml:space="preserve">
+    <value>{0:F0}°C — termal kısıtlama oluşabilir</value>
+  </data>
+  <data name="Notify_ThermalProtectionTitleFormat" xml:space="preserve">
+    <value>Termal koruma: {0}</value>
+  </data>
+  <data name="Notify_ThermalProtectionBodyFormat" xml:space="preserve">
+    <value>{0:F0}°C — fanlar maksimuma alındı</value>
+  </data>
+  <data name="Notify_ThermalProtectionInfoFormat" xml:space="preserve">
+    <value>{0:F0}°C — fanlar maksimuma alındı</value>
+  </data>
+  <data name="SC2_AmdGuidanceFormat" xml:space="preserve">
+    <value>AMD {0} algılandı.&#10;&#10;AMD Ryzen işlemciler geleneksel voltaj ofseti düşürme yerine Curve Optimizer (CO) kullanır. CO, her modelde bulunmayan özel SMU komutları gerektirir.&#10;&#10;Destek: PawnIO sürücüsü kurulu Ryzen 5000 ve sonrası.&#10;Alternatif: Ryzen Master veya BIOS Curve Optimizer ayarları.</value>
+  </data>
+  <data name="SC2_IntelGuidanceFormat" xml:space="preserve">
+    <value>Intel {0} algılandı.&#10;&#10;CPU voltaj denetimi Intel Plundervolt güvenlik önlemleriyle (CVE-2019-11157) engelleniyor. 2020 sonrası BIOS güncellemelerinin çoğu MSR 0x150'yi kilitler.&#10;&#10;Olası çözümler:&#10;• BIOS'ta hız aşırtma/voltaj düşürme kilidini açan seçenek var mı bakın&#10;• Bazı üreticiler voltaj denetimini geri açan BIOS güncellemesi yayınlar&#10;• Sisteminiz destekliyorsa Intel XTU kullanın</value>
+  </data>
+  <data name="SC2_AmdCoGuidance" xml:space="preserve">
+    <value>AMD doğrudan mV ofseti yerine Curve Optimizer (CO) kullanır. Değer negatifleştikçe CO voltaj düşürmesi güçlenir.</value>
+  </data>
+  <data name="SC2_BackendUnavailable" xml:space="preserve">
+    <value>Arka uç: kullanılamıyor</value>
+  </data>
+  <data name="SC2_BackendAmdCoFormat" xml:space="preserve">
+    <value>Arka uç: {0} üzerinden AMD Curve Optimizer</value>
+  </data>
+  <data name="SC2_BackendTypeFormat" xml:space="preserve">
+    <value>Arka uç: {0}</value>
+  </data>
+  <data name="SC2_SmuSourceFormat" xml:space="preserve">
+    <value>SMU güç tablosundan okundu (sürüm 0x{0}).</value>
+  </data>
+  <data name="SC2_SmuMismatchFormat" xml:space="preserve">
+    <value>Kaydırıcı {0} W istiyor ancak SMU {1:F1} W ile çalışıyor. Uygula'ya basın veya başka bir aracın sınırı yeniden dayatmadığını kontrol edin.</value>
+  </data>
+  <data name="SC2_SmuNoProvider" xml:space="preserve">
+    <value>Bu sistemde AMD SMU sağlayıcısı yok.</value>
+  </data>
+  <data name="SC2_SmuBackendUnavailable" xml:space="preserve">
+    <value>SMU arka ucu kullanılamıyor, bu yüzden sınırlar okunamıyor. PawnIO kurun ve OmenCore'u yönetici olarak çalıştırın.</value>
+  </data>
+  <data name="SC2_SmuTableUnknown" xml:space="preserve">
+    <value>Bu CPU'nun SMU güç tablosu düzeni tanımlanmadı, bu yüzden okuma bilinmeyen bir yuvadan gelirdi. OmenCore makul görünen yanlış bir sayı yerine hiçbir şey göstermez. tools/SmuProbe --pmtable yeni tablo sürümü ekler.</value>
+  </data>
+  <data name="SC2_SmuReadFailedFormat" xml:space="preserve">
+    <value>SMU okuma hatası: {0}</value>
+  </data>
+  <data name="SC2_BackendRyzenAvailableFormat" xml:space="preserve">
+    <value>Arka uç: {0}. Bu Ryzen platformunda STAPM ve Tctl yazma destekleniyor.</value>
+  </data>
+  <data name="SC2_ControlFull" xml:space="preserve">
+    <value>✓ Tam denetim (güç planı + fan + CPU/GPU sınırları)</value>
+  </data>
+  <data name="SC2_ControlSpectre" xml:space="preserve">
+    <value>ℹ️ HP Spectre: yalnızca güç planı + fan (CPU güç sınırları için Intel XTU veya ThrottleStop kullanın)</value>
+  </data>
+  <data name="SC2_ControlPartial" xml:space="preserve">
+    <value>ℹ️ Kısmi denetim (yalnızca güç planı + fan — EC kullanılamıyor)</value>
+  </data>
+  <data name="SC2_GpuFullPowerWaiting" xml:space="preserve">
+    <value>Tam güç • telemetri bekleniyor</value>
+  </data>
+  <data name="SC2_GpuFullPowerFormat" xml:space="preserve">
+    <value>Tam güç • {0:F0} W</value>
+  </data>
+  <data name="SC2_TestActiveFormat" xml:space="preserve">
+    <value>Test etkin: Sakla'ya basmazsanız {0} sn sonra otomatik geri alınacak</value>
+  </data>
+  <data name="SC2_NvapiPowerLockedOnly" xml:space="preserve">
+    <value>NVAPI saat ofsetleri kullanılabilir, ancak güç sınırı yazımı sürücü veya ürün yazılımı yolu tarafından kilitli.</value>
+  </data>
+  <data name="SC2_NvapiBothLocked" xml:space="preserve">
+    <value>NVAPI GPU'yu buldu, ancak hem saat ofsetleri hem de güç sınırı yazımı sürücü veya ürün yazılımı yolu tarafından kilitli.</value>
+  </data>
+  <data name="SC2_NvapiPowerTuningOnly" xml:space="preserve">
+    <value>Bu GPU/sürücü NVAPI güç ayarına izin veriyor, ancak saat ve voltaj ofsetleri kilitli.</value>
+  </data>
+  <data name="SC2_NvapiClockLimitsFormat" xml:space="preserve">
+    <value>{0} için saat sınırları: çekirdek {1}, bellek {2}. Güç sınırı yazımı kilitli.</value>
+  </data>
+  <data name="SC2_NvapiPowerRangeFormat" xml:space="preserve">
+    <value>{0} için güç aralığı: {1}. Saat ofsetleri sürücü veya ürün yazılımı yolu tarafından engelleniyor.</value>
+  </data>
+  <data name="SC2_NvapiNoWritable" xml:space="preserve">
+    <value>NVAPI GPU'yu buldu, ancak bu sürücü/ürün yazılımı yolu yazılabilir ayar sunmuyor.</value>
+  </data>
+  <data name="SC2_ModelHintPowerOnlyFormat" xml:space="preserve">
+    <value>{0} için modele özel not: şimdilik yalnızca güç ayarı destekleniyor. {1}% civarından başlayın, saat değişikliklerini harici araca bırakın.</value>
+  </data>
+  <data name="SC2_ModelHintClocksFormat" xml:space="preserve">
+    <value>{0} için modele özel not: çekirdek {1}, bellek {2} civarından başlayın. NVAPI güç ilkesi yazımı kilitli olduğundan gücü %100 bırakın.</value>
+  </data>
+  <data name="SC2_ModelHintAllFormat" xml:space="preserve">
+    <value>{0} için modele özel not: çekirdek {1}, bellek {2}, güç %{3} civarından başlayın. Algılanan üst sınıra yakın değerler yük altında doğrulanana kadar deneyseldir.</value>
+  </data>
+  <data name="SC2_TestApplied" xml:space="preserve">
+    <value>✓ Test değeri uygulandı</value>
+  </data>
+  <data name="SC2_TestLiveGpu" xml:space="preserve">
+    <value>Test ayarı etkin. Kısa bir kıyaslama veya oyun çalıştırın, kararlıysa Sakla'ya basın.</value>
+  </data>
+  <data name="SC2_TestLiveCpu" xml:space="preserve">
+    <value>Test voltaj düşürmesi etkin. Stres testi veya oyun çalıştırın, kararlıysa Sakla'ya basın.</value>
+  </data>
+  <data name="SC2_GpuTestExpired" xml:space="preserve">
+    <value>GPU testi sona erdi; önceki ayarlar geri yüklendi.</value>
+  </data>
+  <data name="SC2_TestConfirmedFullFormat" xml:space="preserve">
+    <value>✓ Test onaylandı: çekirdek {0}, bellek {1}, güç {2}, voltaj {3}</value>
+  </data>
+  <data name="SC2_TestConfirmedPowerFormat" xml:space="preserve">
+    <value>✓ Test onaylandı: güç {0}</value>
+  </data>
+  <data name="SC2_TestConfirmedKept" xml:space="preserve">
+    <value>✓ Test onaylandı: desteklenen GPU ayarları korundu</value>
+  </data>
+  <data name="SC2_AppClosedDuringGpuTest" xml:space="preserve">
+    <value>OmenCore GPU testi sırasında kapandı; önceki ayarlar geri yüklendi.</value>
+  </data>
+  <data name="SC2_TestFailedFormat" xml:space="preserve">
+    <value>Test başarısız: {0}</value>
+  </data>
+  <data name="SC2_TestCoAppliedFormat" xml:space="preserve">
+    <value>Test CO uygulandı: çekirdek {0} mV eşd.</value>
+  </data>
+  <data name="SC2_TestUndervoltAppliedFormat" xml:space="preserve">
+    <value>Test voltaj düşürmesi uygulandı: çekirdek {0} mV, önbellek {1} mV</value>
+  </data>
+  <data name="SC2_CpuTestExpired" xml:space="preserve">
+    <value>CPU voltaj testi sona erdi; önceki voltaj geri yüklendi.</value>
+  </data>
+  <data name="SC2_TestConfirmedCoFormat" xml:space="preserve">
+    <value>✓ Test onaylandı: çekirdek {0} mV eşd. (başlangıçta yeniden uygulama açık)</value>
+  </data>
+  <data name="SC2_TestConfirmedUvFormat" xml:space="preserve">
+    <value>✓ Test onaylandı: çekirdek {0} mV, önbellek {1} mV (başlangıçta yeniden uygulama açık)</value>
+  </data>
+  <data name="SC2_TestRevertedCoFormat" xml:space="preserve">
+    <value>Test geri alındı: çekirdek {0} mV eşd. geri yüklendi</value>
+  </data>
+  <data name="SC2_TestRevertedUvFormat" xml:space="preserve">
+    <value>Test geri alındı: çekirdek {0} mV ve önbellek {1} mV geri yüklendi</value>
+  </data>
+  <data name="SC2_TccNoMsr" xml:space="preserve">
+    <value>MSR erişimi yok (TCC denetimi için PawnIO kurun)</value>
+  </data>
+  <data name="SC2_NotSupportedFormat" xml:space="preserve">
+    <value>Desteklenmiyor: {0}</value>
+  </data>
+  <data name="SC2_SafeRollbackCleared" xml:space="preserve">
+    <value>Güvenli geri alma, kayıtlı voltaj başlangıç durumunu temizledi; etkin CPU voltaj arka ucu kullanılamıyor.</value>
+  </data>
+  <data name="SC2_PlNoMsr" xml:space="preserve">
+    <value>MSR erişimi yok (güç sınırı denetimi için PawnIO kurun)</value>
+  </data>
+  <data name="SC2_BiosLockedReadOnlyFormat" xml:space="preserve">
+    <value>⚠️ BIOS kilitli — salt okunur (PL1: {0:F0} W, PL2: {1:F0} W)</value>
+  </data>
+  <data name="SC2_BiosLockedReadOnlyPolicyFormat" xml:space="preserve">
+    <value>⚠️ BIOS kilitli — salt okunur (PL1: {0:F0} W, PL2: {1:F0} W). Mod ilkesi OMEN/OGH üzerinden uygulanmaya devam eder</value>
+  </data>
+  <data name="SC2_PowerLimitIgnored" xml:space="preserve">
+    <value>güç sınırı yok sayıldı (sürücü/ürün yazılımı kilitli)</value>
+  </data>
+  <data name="SC2_PowerLimitIgnoredFormat" xml:space="preserve">
+    <value>güç %{0} yok sayıldı (sürücü/ürün yazılımı kilitli)</value>
+  </data>
+  <data name="SC2_GpuOcBlockedBattery" xml:space="preserve">
+    <value>GPU hız aşırtma artışı engellendi: önce güç adaptörünü bağlayın</value>
+  </data>
+  <data name="SC2_AcPowerRecommendedTitle" xml:space="preserve">
+    <value>Güç adaptörü önerilir</value>
+  </data>
+  <data name="SC2_GpuOcBatteryBody" xml:space="preserve">
+    <value>Pil gücünde GPU hız aşırtma artışı algılandı.&#10;&#10;Pilde daha yüksek saat/güç sınırları kararsız saatlere, hızlı pil tükenmesine ve ani kısıtlamaya yol açabilir.&#10;&#10;GPU hız aşırtma ayarlarını artırmadan önce güç adaptörünü bağlayın.</value>
+  </data>
+  <data name="SC2_ResetGpuDefaultsFormat" xml:space="preserve">
+    <value>Varsayılana döndürüldü (çekirdek 0 MHz, bellek 0 MHz, güç %100, voltaj 0 mV)</value>
+  </data>
+  <data name="SC2_ResetGpuDefaultsPowerFormat" xml:space="preserve">
+    <value>Varsayılana döndürüldü (güç %100)</value>
+  </data>
+  <data name="SC2_AmdGpuOcPartial" xml:space="preserve">
+    <value>AMD GPU hız aşırtma: bazı ayarlar uygulanamadı</value>
+  </data>
+  <data name="SC2_StartupResetBoth" xml:space="preserve">
+    <value>Başlangıç güvenlik sıfırlaması uygulandı: önceki oturumdan onaylanmamış CPU voltaj testi ve GPU hız aşırtma testi algılandı. Ayarlar güvenli varsayılanlara döndürüldü.</value>
+  </data>
+  <data name="SC2_StartupResetCpu" xml:space="preserve">
+    <value>Başlangıç güvenlik sıfırlaması uygulandı: önceki oturumdan onaylanmamış CPU voltaj testi algılandı. CPU voltaj düşürmesi güvenli varsayılanlara döndürüldü.</value>
+  </data>
+  <data name="SC2_StartupResetGpu" xml:space="preserve">
+    <value>Başlangıç güvenlik sıfırlaması uygulandı: önceki oturumdan onaylanmamış GPU hız aşırtma testi algılandı. GPU ayarları güvenli varsayılanlara döndürüldü.</value>
+  </data>
+  <data name="SC2_SavedOffsetsUnchanged" xml:space="preserve">
+    <value>Kayıtlı ofsetler değişmedi; yeniden onaylamak için Test Uygula, ardından Sakla'yı kullanın.</value>
+  </data>
+  <data name="SC2_UseTestApplyKeep" xml:space="preserve">
+    <value>Yeniden onaylamak için Test Uygula, ardından Sakla'yı kullanın.</value>
+  </data>
+  <data name="SC2_LoadedProfileFormat" xml:space="preserve">
+    <value>Profil yüklendi: {0}</value>
+  </data>
+  <data name="SC2_LoadedProfileNoteFormat" xml:space="preserve">
+    <value>“{0}” model notlarıyla yüklendi: {1}</value>
+  </data>
+  <data name="SC2_CoAppliedFormat" xml:space="preserve">
+    <value>Curve Optimizer uygulandı: çekirdek {0} mV eşd., iGPU {1} mV eşd.</value>
+  </data>
+  <data name="SC2_UndervoltAppliedFormat" xml:space="preserve">
+    <value>Voltaj düşürmesi uygulandı: çekirdek {0} mV, önbellek {1} mV</value>
+  </data>
+  <data name="SC2_ApplyFailedFormat" xml:space="preserve">
+    <value>Uygulama başarısız: {0}</value>
+  </data>
+  <data name="SC2_UndervoltFailedTitle" xml:space="preserve">
+    <value>Voltaj düşürme başarısız</value>
+  </data>
+  <data name="SC2_UndervoltFailedBodyFormat" xml:space="preserve">
+    <value>Voltaj ayarları uygulanamadı:&#10;&#10;{0}&#10;&#10;Olası nedenler:&#10;• MSR erişimi engellendi (PawnIO kurun veya Secure Boot'u kapatın)&#10;• HVCI/çekirdek yalıtımı açık&#10;• Desteklenmeyen CPU</value>
+  </data>
+  <data name="SC2_ResetFailedFormat" xml:space="preserve">
+    <value>Sıfırlama başarısız: {0}</value>
+  </data>
+  <data name="SC2_AggressiveTitle" xml:space="preserve">
+    <value>Agresif voltaj düşürme uyarısı</value>
+  </data>
+  <data name="SC2_AggressiveBody" xml:space="preserve">
+    <value>⚠️ UYARI: Agresif voltaj düşürme&#10;&#10;-140 mV voltaj ofseti uygulamak üzeresiniz.&#10;&#10;Bu agresif bir ayardır ve şunlara yol açabilir:&#10;• Mavi ekran çökmeleri (BSOD)&#10;• Uygulama çökmeleri veya donmaları&#10;• Yük altında sistem kararsızlığı&#10;&#10;Yalnızca riskleri anlıyorsanız ve şunlara hazırsanız devam edin:&#10;• Sistem kararsızlaşırsa yeniden başlatmaya&#10;• Stres testleriyle (Prime95, OCCT) iyice test etmeye&#10;&#10;Voltaj düşürmesi yeniden başlatmadan sonra korunmaz, çökme durumunda sıfırlanır.&#10;&#10;-140 mV voltaj düşürmesiyle devam edilsin mi?</value>
+  </data>
+  <data name="SC2_ResettingCo" xml:space="preserve">
+    <value>Curve Optimizer ofsetleri sıfırlanıyor...</value>
+  </data>
+  <data name="SC2_ResettingUv" xml:space="preserve">
+    <value>Voltaj ofsetleri sıfırlanıyor...</value>
+  </data>
+  <data name="SC2_ResetCoDone" xml:space="preserve">
+    <value>Curve Optimizer ofsetleri varsayılana döndürüldü</value>
+  </data>
+  <data name="SC2_ResetUvDone" xml:space="preserve">
+    <value>Voltaj ofsetleri varsayılana döndürüldü</value>
+  </data>
+  <data name="SC2_ClockOcReadyPowerLockedFormat" xml:space="preserve">
+    <value>✓ {0} — saat hız aşırtma hazır, güç sınırı kilitli</value>
+  </data>
+  <data name="S2_ExclusiveEcTitle" xml:space="preserve">
+    <value>Özel EC erişimi tanılaması</value>
+  </data>
+  <data name="S2_ExclusiveEcBody" xml:space="preserve">
+    <value>⚠️ ÖZEL EC ERİŞİMİ TANILAMASI ⚠️&#10;&#10;Bu tanılama modu:&#10;• EC yazmaçlarına özel erişim alır&#10;• Diğer uygulamaların EC erişimini engeller&#10;• Ayrıntılı çakışma bilgisi kaydeder&#10;• OMEN Gaming Hub veya diğer fan denetim uygulamalarını etkileyebilir&#10;&#10;Bunu yalnızca EC yazmaç çakışmalarını giderirken kullanın.&#10;Fan devrinin 0 olmasına başka uygulamaların yol açıp açmadığını anlamaya yardımcı olur.&#10;&#10;Özel tanılama modu etkinleştirilsin mi?</value>
+  </data>
+  <data name="S2_KeyboardBackendSetFormat" xml:space="preserve">
+    <value>Klavye arka ucu şu olarak ayarlandı: {0}.&#10;&#10;Değişiklik OmenCore yeniden başlatıldıktan sonra geçerli olur.</value>
+  </data>
+  <data name="S2_BackendChangedTitle" xml:space="preserve">
+    <value>Arka uç değiştirildi</value>
+  </data>
+  <data name="S2_BatteryCareUnavailableTitle" xml:space="preserve">
+    <value>Pil bakımı kullanılamıyor</value>
+  </data>
+  <data name="S2_BatteryCareUnavailableBody" xml:space="preserve">
+    <value>Pil şarj sınırı ayarlanamıyor — HP WMI BIOS arayüzü kullanılamıyor.&#10;&#10;Bu özellik WMI BIOS destekli HP OMEN/Victus dizüstü gerektirir.</value>
+  </data>
+  <data name="S2_BatteryCareFailedTitle" xml:space="preserve">
+    <value>Pil bakımı başarısız</value>
+  </data>
+  <data name="S2_BatteryCareFailedBody" xml:space="preserve">
+    <value>Pil şarj sınırı komutu başarısız.&#10;&#10;Olası nedenler:&#10;• Modeliniz bu özelliği desteklemiyor&#10;• HP BIOS güncellemesi gerekiyor&#10;• Güç adaptörü bağlı değil&#10;&#10;Davranışı karşılaştırmak için aynı ayarı OMEN Gaming Hub'da deneyin.</value>
+  </data>
+  <data name="S2_BatteryCareErrorTitle" xml:space="preserve">
+    <value>Pil bakımı hatası</value>
+  </data>
+  <data name="S2_BatteryCareErrorBodyFormat" xml:space="preserve">
+    <value>Pil şarj sınırı uygulanamadı: {0}</value>
+  </data>
+  <data name="S2_BloatwareScanningProgress" xml:space="preserve">
+    <value>HP hazır yazılımları taranıyor...</value>
+  </data>
+  <data name="S2_BloatwareScanningList" xml:space="preserve">
+    <value>HP hazır yazılımları taranıyor...</value>
+  </data>
+  <data name="S2_BloatwareClean" xml:space="preserve">
+    <value>✓ HP hazır yazılımı bulunamadı.&#10;&#10;Sisteminiz temiz.</value>
+  </data>
+  <data name="S2_BloatwareFoundFormat" xml:space="preserve">
+    <value>{0} HP hazır yazılım paketi bulundu:</value>
+  </data>
+  <data name="S2_BloatwareScanFailedFormat" xml:space="preserve">
+    <value>❌ Tarama başarısız: {0}</value>
+  </data>
+  <data name="S2_BloatwareStarting" xml:space="preserve">
+    <value>Hazır yazılım kaldırma başlıyor...</value>
+  </data>
+  <data name="S2_BloatwareRemoving" xml:space="preserve">
+    <value>HP hazır yazılım paketleri kaldırılıyor...&#10;&#10;Bu birkaç dakika sürebilir...</value>
+  </data>
+  <data name="S2_BloatwareStep1" xml:space="preserve">
+    <value>[1/3] Paket listesi alınıyor...</value>
+  </data>
+  <data name="S2_BloatwareStep2CountFormat" xml:space="preserve">
+    <value>[2/3] {0} paket kaldırılıyor...</value>
+  </data>
+  <data name="S2_BloatwareStep2ItemFormat" xml:space="preserve">
+    <value>[2/3] {0}/{1} kaldırılıyor: {2}...</value>
+  </data>
+  <data name="S2_BloatwareStep3" xml:space="preserve">
+    <value>[3/3] Temizlik tamamlandı!</value>
+  </data>
+  <data name="S2_BloatwareResultHeader" xml:space="preserve">
+    <value>✓ Hazır yazılım kaldırma tamamlandı!</value>
+  </data>
+  <data name="S2_BloatwareResultRemovedFormat" xml:space="preserve">
+    <value>• Kaldırılan: {0} paket</value>
+  </data>
+  <data name="S2_BloatwareResultFailedFormat" xml:space="preserve">
+    <value>• Başarısız: {0} paket</value>
+  </data>
+  <data name="S2_BloatwareFailedListHeader" xml:space="preserve">
+    <value>Başarısız paketler:</value>
+  </data>
+  <data name="S2_BloatwareNeedsAdminTip" xml:space="preserve">
+    <value>💡 İpucu: Hazırlanmış paketleri kaldırmak için OmenCore'u yönetici olarak çalıştırın.</value>
+  </data>
+  <data name="S2_BloatwareRescanNote" xml:space="preserve">
+    <value>Doğrulamak için yeni bir tarama çalıştırın.</value>
+  </data>
+  <data name="S2_BloatwareRemovedCountFormat" xml:space="preserve">
+    <value>{0} hazır yazılım paketi kaldırıldı.</value>
+  </data>
+  <data name="S2_NeedsAdminSuffix" xml:space="preserve">
+    <value>yönetici gerekli</value>
+  </data>
+  <data name="S2_DiagZipFilter" xml:space="preserve">
+    <value>ZIP arşivi (*.zip)|*.zip|Tüm dosyalar (*.*)|*.*</value>
+  </data>
+  <data name="S2_OsdActionDoNothing" xml:space="preserve">
+    <value>Hiçbir şey yapma (tuşu engelle)</value>
+  </data>
+  <data name="S2_SyncStartFormat" xml:space="preserve">
+    <value>Kısmi eşitleme: {0}/{1} sağlayıcı güncellendi</value>
+  </data>
+  <data name="S2_SyncFailedNoProviders" xml:space="preserve">
+    <value>Eşitleme başarısız: hiçbir sağlayıcı güncellenmedi</value>
+  </data>
+  <data name="S2_SyncCompleteOne" xml:space="preserve">
+    <value>Eşitleme tamamlandı: 1 hedef güncellendi</value>
+  </data>
+  <data name="S2_SyncCompleteFormat" xml:space="preserve">
+    <value>Eşitleme tamamlandı: {0} hedef güncellendi</value>
+  </data>
+  <data name="S2_SyncPartialTargetsFormat" xml:space="preserve">
+    <value>Kısmi eşitleme: {0}/{1} hedef güncellendi</value>
+  </data>
+  <data name="S2_SyncFailedNoTargets" xml:space="preserve">
+    <value>Eşitleme başarısız: hiçbir hedef güncellenmedi</value>
+  </data>
+  <data name="S2_DpiNotWritable" xml:space="preserve">
+    <value>OmenCore bu DPI ayarlarını cihaza yazamadı — etkin Corsair bağlantısı (RGB.NET/iCUE) DPI yapılandırmasını desteklemiyor. Farede hiçbir şey değişmedi.</value>
+  </data>
+  <data name="S2_DpiSaveProfileTitle" xml:space="preserve">
+    <value>DPI profilini kaydet</value>
+  </data>
+  <data name="S2_DpiSaveProfilePrompt" xml:space="preserve">
+    <value>DPI profili için bir ad girin:</value>
+  </data>
+  <data name="S2_KeyboardNoWmiVerifyHint" xml:space="preserve">
+    <value> WMI klavye komutları modelinizde doğrulanmıyor — renkler değişmiyorsa Ayarlar'da “Deneysel EC Klavyesi”ni açın.</value>
+  </data>
+  <data name="S2_KeyboardUnavailable" xml:space="preserve">
+    <value>Klavye aydınlatması kullanılamıyor; arka uç algılamasını veya Ayarlar > Donanım bölümünü kontrol edin.</value>
+  </data>
+  <data name="L2_SyncCompleteProviderOne" xml:space="preserve">
+    <value>Eşitleme tamamlandı: 1 sağlayıcı güncellendi</value>
+  </data>
+  <data name="L2_SyncCompleteProvidersFormat" xml:space="preserve">
+    <value>Eşitleme tamamlandı: {0} sağlayıcı güncellendi</value>
+  </data>
+  <data name="L2_NoRgbTargets" xml:space="preserve">
+    <value>Kullanılabilir RGB hedefi yok</value>
+  </data>
+  <data name="L2_ProbeUnavailable" xml:space="preserve">
+    <value>Etkin HP klavye aydınlatma arka ucu olmadığından RGB testi kullanılamıyor.</value>
+  </data>
+  <data name="L2_ProbeSentFormat" xml:space="preserve">
+    <value>{0} üzerinden test gönderildi; neyin değiştiğini seçip kaydedin. {1}</value>
+  </data>
+  <data name="L2_ObservationCannotSave" xml:space="preserve">
+    <value>Yapılandırma kullanılamadığından RGB gözlemi kaydedilemedi.</value>
+  </data>
+  <data name="L2_KeyboardUnavailableBackend" xml:space="preserve">
+    <value>Bu arka uçta klavye aydınlatması kullanılamıyor.</value>
+  </data>
+  <data name="L2_NoHistory" xml:space="preserve">
+    <value>Henüz geçmiş verisi toplanmadı.</value>
+  </data>
+  <data name="L2_ProfileDefaultCooldownFormat" xml:space="preserve">
+    <value>Profil varsayılanı ({0} dk)</value>
+  </data>
+  <data name="L2_ExcludeTip" xml:space="preserve">
+    <value>İpucu: açık tuttuğunuz uygulamaları (oyunlar, kayıt, sohbet, anti-cheat) hariç tutun. En çok kullanan işlemler listesinden ekleyebilir veya .exe olmadan işlem adı yazabilirsiniz.</value>
+  </data>
+  <data name="L2_ExclusionsActiveFormat" xml:space="preserve">
+    <value>{0} işlem hariç tutuluyor. Çalışma kümesinin tekrar tekrar kırpılmasını önlemek için listeden ekleyin.</value>
+  </data>
+  <data name="L2_ExcludeSuggestionsFormat" xml:space="preserve">
+    <value>Mevcut en çok kullanan işlemlerden önerilen hariç tutmalar: {0}.</value>
+  </data>
+  <data name="L2_CleanResultFormat" xml:space="preserve">
+    <value>{0} MB boşaltıldı  •  {1} işlem başarılı</value>
+  </data>
+  <data name="L2_CleanFailedFormat" xml:space="preserve">
+    <value>Başarısız: {0}</value>
+  </data>
+  <data name="L2_CleanupPreviewFormat" xml:space="preserve">
+    <value>Bu profil yaklaşık {0} MB boşaltır</value>
+  </data>
+  <data name="L2_UpdateOpenReleasePrompt" xml:space="preserve">
+    <value>GitHub'da yeni bir sürüm var. Sürüm sayfası açılsın mı?</value>
+  </data>
+  <data name="L2_UpdateAvailableTitle" xml:space="preserve">
+    <value>Güncelleme var</value>
+  </data>
+  <data name="L2_UpdateDownloadPromptFormat" xml:space="preserve">
+    <value>Yeni bir sürüm var!&#10;&#10;Geçerli: {0}&#10;Yeni: {1}&#10;&#10;Şimdi indirip kurmak ister misiniz?</value>
+  </data>
+  <data name="L2_EcEmbeddedController" xml:space="preserve">
+    <value>EC (gömülü denetleyici)</value>
+  </data>
+  <data name="L2_CurveDangerFormat" xml:space="preserve">
+    <value>Tehlikeli eğri: {0}°C'de fan %{1}'e düşüyor ({3}°C'de %{2} idi). Aşırı ısınmaya yol açabilir!</value>
+  </data>
+  <data name="L2_CurveSafetyFormat" xml:space="preserve">
+    <value>Güvenlik uyarısı: {0}°C'de fan hızı yalnızca %{1}. Kısıtlamayı önlemek için yüksek sıcaklıklarda en az %70 önerilir.</value>
+  </data>
+  <data name="L2_CurveCoverageFormat" xml:space="preserve">
+    <value>Kapsam eksik: eğri {0}°C'de bitiyor. Ani sıcaklık artışlarını kapsamak için 95°C'ye kadar nokta ekleyin.</value>
+  </data>
+  <data name="L2_RtssDisabled" xml:space="preserve">
+    <value>RTSS devre dışı</value>
+  </data>
+  <data name="L2_FpsNeedsRtss" xml:space="preserve">
+    <value>FPS için RTSS (RivaTuner Statistics Server) çalışıyor olmalı</value>
+  </data>
+  <data name="L2_TrayTooltip" xml:space="preserve">
+    <value>OmenCore — oyun dizüstü denetimi&#10;&#10;Sol tık: hızlı menü&#10;Çift tık: ana pencereyi aç&#10;Sağ tık: menü</value>
+  </data>
+  <data name="L2_RtssDetected" xml:space="preserve">
+    <value>RivaTuner Statistics Server (RTSS) çalışıyor ve D3D kancaları OmenCore'un işleme iş parçacığını bozdu.</value>
+  </data>
+  <data name="L2_OverlayDetected" xml:space="preserve">
+    <value>Bir D3D/DXGI kaplama kancası (RTSS, kaplama aracı veya oyun anti-cheat'i olabilir) OmenCore'un işleme iş parçacığını bozdu.</value>
+  </data>
+  <data name="L2_SoftwareRenderingBodyFormat" xml:space="preserve">
+    <value>{0}&#10;&#10;OmenCore daha fazla çökmeyi önlemek için bu oturumda yazılım işlemeye geçti.&#10;&#10;Kalıcı çözüm:&#10;  • OmenCore'u başlatmadan önce RTSS / MSI Afterburner kaplamasını kapatın, VEYA&#10;  • OmenCore Ayarları → Genel bölümünde “Yazılım İşleme”yi açın&#10;&#10;OmenCore çalışmaya devam eder. Kaplama kapatıldıktan sonra tam GPU hızlandırması için uygulamayı yeniden başlatın.</value>
+  </data>
+  <data name="L2_RenderConflictTitle" xml:space="preserve">
+    <value>OmenCore — işleme çakışması algılandı</value>
+  </data>
+  <data name="L2_PawnIoBundled" xml:space="preserve">
+    <value>PawnIO (kurulum paketiyle gelir)</value>
+  </data>
+  <data name="L2_AdapterOverrideCpuHalfFormat" xml:space="preserve">
+    <value>Ardından dört CPU güç sınırını {0} değerine yükseltir ve uyandırma ya da güç kaynağı değişiminden — yani bu sınırları kaldıran olaylardan — sonra geri koyar. OmenCore bunları geri okuyamaz, bu yüzden bu kısım SMU'nun gerçekte ne çalıştırdığını değil, neyi kabul ettiğini gösterir.&#10;&#10;</value>
+  </data>
+  <data name="L2_AdapterOverrideBodyFormat" xml:space="preserve">
+    <value>Bu, ayrık GPU'yu devre dışı bırakıp yeniden etkinleştirir.&#10;&#10;Ekranlar birkaç saniye kararır ve GPU'yu kullanan oyun, render veya hesaplama işleri cihazı kaybedip çökebilir.&#10;&#10;{0}Bu değerlerin hiçbiri hız aşırtma değildir. GPU, kendi sürücüsünün varsayılan olarak bildirdiği sınıra döner; CPU sınırları ise bu makinenin ürün yazılımının CPU ve GPU birlikte yük altındayken belirttiği değere ayarlanır. Sınırlama, ürün yazılımının yeterince güçlü görmediği adaptöre uyguladığı bir ilkedir; adaptörün gerçek kapasitesinin ölçümü değildir.&#10;&#10;Buradaki hiçbir şey yeniden başlatmadan sonra kalmaz: GPU sınırı, ürün yazılımı adaptörü sürücüye yeniden bildirene kadar (güç kaynağı değişimi bunu yapar), CPU sınırları ise siz tutmayı bırakana kadar geçerli olur.&#10;&#10;Sınırlama şimdi kaldırılsın mı?</value>
+  </data>
+  <data name="L2_AdapterOverrideTitle" xml:space="preserve">
+    <value>Adaptör güç sınırı kaldırılsın mı?</value>
+  </data>
+  <data name="L2_TgpUnlockBody" xml:space="preserve">
+    <value>Bu, iki ürün yazılımı denetimli EC bitini kısa süreliğine açıp bir WMI komutu gönderen ve GPU gücünün gerçekten değişip değişmediğini ölçen deneysel, doğrulanmamış bir özelliktir.&#10;&#10;Yazanlardan hiçbiri bunu gerçek donanımda çalıştırmadı. Dayandığı araştırmada, aynı mekanizmayı yetersiz bir güç adaptöründe zorlamak GPU'yu bozuk bir durumda bıraktı — sürücü çağrıları 20+ saniye sürdü, render yapılamadı — ve makine yeniden başlatılana kadar düzelmedi; üstelik o donanımın GPU sürücüsü çökme geçmişi vardı.&#10;&#10;Bu seçenek yalnızca bağlı adaptör bu makinenin gereksiniminin belirgin şekilde üzerindeyken görünür; arkasındaki tek koruma budur. Sonucu önizlemenin yolu yok ve bir sorun çıkarsa yeniden başlatmadan başka geri alma yolu yok.&#10;&#10;Yine de denemek ister misiniz?</value>
+  </data>
+  <data name="L2_TgpUnlockTitle" xml:space="preserve">
+    <value>Deneysel GPU güç kilidi açma denensin mi?</value>
+  </data>
+  <data name="M2_CpuTelemetryUnavailable" xml:space="preserve">
+    <value>CPU telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="M2_GpuTelemetryUnavailable" xml:space="preserve">
+    <value>GPU telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="M2_TelemetryUnavailableFormat" xml:space="preserve">
+    <value>Kullanılamıyor • yük %{0:F0}</value>
+  </data>
+  <data name="M2_TempStaleFormat" xml:space="preserve">
+    <value>{0:F0}°C (eski veri)</value>
+  </data>
+  <data name="M2_Stale" xml:space="preserve">
+    <value>Eski veri</value>
+  </data>
+  <data name="M2_TelemetryStaleFormat" xml:space="preserve">
+    <value>{0} • yük %{1:F0}</value>
+  </data>
+  <data name="M2_TelemetryInvalidFormat" xml:space="preserve">
+    <value>Geçersiz • yük %{0:F0}</value>
+  </data>
+  <data name="M2_TelemetryLoadFormat" xml:space="preserve">
+    <value>{0} • yük %{1:F0}</value>
+  </data>
+  <data name="M2_NoRestorePoint" xml:space="preserve">
+    <value>Geri yükleme noktası oluşturulmadı</value>
+  </data>
+  <data name="M2_CleanupStatusNotChecked" xml:space="preserve">
+    <value>Durum: denetlenmedi</value>
+  </data>
+  <data name="M2_ResumeCompleteFormat" xml:space="preserve">
+    <value>Uyandıktan sonraki öz denetim geçti. İzleme {0:F0} sn içinde düzeldi, fan durumu normal ({1}, tepe {2} RPM).</value>
+  </data>
+  <data name="M2_ResumeTelemetryIssueFormat" xml:space="preserve">
+    <value>Telemetri henüz tam sağlıklı değil (örnek yaşı {0:F0} sn, izleme durumu {1}). </value>
+  </data>
+  <data name="M2_ResumeFanIssueFormat" xml:space="preserve">
+    <value>Mevcut termal yük için fanlar hâlâ yüksek görünüyor ({1:F0}C'de {0} RPM, fan durumu {2}).</value>
+  </data>
+  <data name="M2_ResumeAttentionFormat" xml:space="preserve">
+    <value>Uyandıktan sonraki öz denetim takip gerektiriyor: {0}</value>
+  </data>
+  <data name="M2_ResumeFailedFormat" xml:space="preserve">
+    <value>Uyandıktan sonraki öz denetim başarısız: {0}</value>
+  </data>
+  <data name="O2_ApplyConfirmBodyFormat" xml:space="preserve">
+    <value>{1} kategorisinde {0} iyileştirme uygulanacak.&#10;&#10;Devam edilsin mi?</value>
+  </data>
+  <data name="O2_ApplyConfirmTitleFormat" xml:space="preserve">
+    <value>{0} uygula</value>
+  </data>
+  <data name="O2_RevertAllBody" xml:space="preserve">
+    <value>Tüm iyileştirmeler Windows varsayılanlarına döndürülecek.&#10;&#10;Yedeklenen ayarlarınız geri yüklenecek.&#10;&#10;Devam edilsin mi?</value>
+  </data>
+  <data name="O2_RevertAllTitle" xml:space="preserve">
+    <value>Tüm iyileştirmeleri geri al</value>
+  </data>
+  <data name="O2_RevertTimeout" xml:space="preserve">
+    <value>Geri alma zaman aşımına uğradı — sistem durumunu elle kontrol edin</value>
+  </data>
+  <data name="T2_NoSource" xml:space="preserve">
+    <value>Hiçbir CPU sıcaklık kaynağı yanıt vermedi.</value>
+  </data>
+  <data name="T2_SourceCountFormat" xml:space="preserve">
+    <value>{0} kaynak yanıt verdi.</value>
+  </data>
+  <data name="T2_WmiFormat" xml:space="preserve">
+    <value>WMI BIOS: {0:F1}°C</value>
+  </data>
+  <data name="T2_WmiUnavailable" xml:space="preserve">
+    <value>WMI BIOS: kullanılamıyor</value>
+  </data>
+  <data name="T2_AcpiFormat" xml:space="preserve">
+    <value>ACPI termal bölgesi ({0}): {1:F1}°C</value>
+  </data>
+  <data name="T2_AcpiUnavailable" xml:space="preserve">
+    <value>ACPI termal bölgesi: kullanılamıyor</value>
+  </data>
+  <data name="T2_LhmFormat" xml:space="preserve">
+    <value>LibreHardwareMonitor: {0:F1}°C</value>
+  </data>
+  <data name="T2_LhmUnavailable" xml:space="preserve">
+    <value>LibreHardwareMonitor: kullanılamıyor</value>
+  </data>
+  <data name="T2_TrustedFormat" xml:space="preserve">
+    <value>Şu anda güvenilen: {0}</value>
+  </data>
+  <data name="T2_DisagreeFormat" xml:space="preserve">
+    <value>⚠ Kaynaklar {0:F0}°C'den fazla farklı — güvenilen değer bu kart için doğru olmayabilir.</value>
+  </data>
+  <data name="T2_Agree" xml:space="preserve">
+    <value>✓ Kullanılabilir kaynaklar makul aralıkta uyuşuyor.</value>
+  </data>
+  <data name="U2_InstallFailedFormat" xml:space="preserve">
+    <value>Güncelleme kurulumu başarısız: {0}</value>
+  </data>
+  <data name="Osd_LabelMode" xml:space="preserve">
+    <value>MOD</value>
+  </data>
+  <data name="Osd_LabelFans" xml:space="preserve">
+    <value>FANLAR</value>
+  </data>
+  <data name="Osd_LabelHotspot" xml:space="preserve">
+    <value>TJUNC</value>
+  </data>
+  <data name="Osd_LabelVram" xml:space="preserve">
+    <value>VRAM</value>
+  </data>
+  <data name="Osd_LabelPackage" xml:space="preserve">
+    <value>PAKET</value>
+  </data>
+  <data name="Osd_LabelFan" xml:space="preserve">
+    <value>FAN</value>
+  </data>
+  <data name="Osd_LabelBattery" xml:space="preserve">
+    <value>PİL</value>
+  </data>
+  <data name="Osd_LabelFrameTime" xml:space="preserve">
+    <value>FT</value>
+  </data>
+  <data name="Osd_LabelPing" xml:space="preserve">
+    <value>PING</value>
+  </data>
+  <data name="X2_DashboardFans" xml:space="preserve">
+    <value>FANLAR</value>
+  </data>
+  <data name="X2_DirectActive" xml:space="preserve">
+    <value>ETKİN</value>
+  </data>
+  <data name="X2_OsdFanIcon" xml:space="preserve">
+    <value>FAN</value>
+  </data>
+  <data name="G2_ShippingAdapterFormat" xml:space="preserve">
+    <value> Bu makine {0} W adaptörle geliyordu.</value>
+  </data>
+  <data name="G2_UnrecognisedAdapter" xml:space="preserve">
+    <value>tanınmayan bir</value>
+  </data>
+  <data name="G2_UsbcSupplyFormat" xml:space="preserve">
+    <value>Bu makine {0} W USB-C Power Delivery kaynağından çalışıyor. </value>
+  </data>
+  <data name="G2_UsbcSupplyUnknown" xml:space="preserve">
+    <value>Bu makine gücü bildirilmeyen bir USB-C Power Delivery kaynağından çalışıyor. </value>
+  </data>
+  <data name="G2_UsbcBelowDesignFormat" xml:space="preserve">
+    <value>Bu, makinenin USB-C girişinin tasarlandığı {0} W'ın altında.</value>
+  </data>
+  <data name="G2_ChassisNoUsbc" xml:space="preserve">
+    <value>Bu kasa fişli adaptör bekliyor ve USB-C tasarım gücü bildirmiyor; bu yüzden HP'nin kendi kuralı her USB-C kaynağını gereksinimin altında sayar.</value>
+  </data>
+  <data name="G2_UsbcVerdictFormat" xml:space="preserve">
+    <value>{0}Ürün yazılımı bunu yetersiz demek yerine USB-C olarak tanımlıyor. {1}{2}</value>
+  </data>
+  <data name="G2_BarrelVerdictFormat" xml:space="preserve">
+    <value>Ürün yazılımı {0} adaptörü bu makinenin gereksiniminin altında bildiriyor.{1}</value>
+  </data>
+  <data name="G2_AdapterPolicyNote" xml:space="preserve">
+    <value>Bu durumda bazı HP ürün yazılımları CPU ve GPU güç sınırlarını düşürür. Bu, OmenCore veya GPU sürücüsünde bir arıza gibi görünse de aslında ürün yazılımının yeterince güçlü görmediği kaynağa uyguladığı bir ilkedir: adaptörün gerçek kapasitesinin ölçümü değil, bildirdiği bir sınırdır. Performans beklenenden düşükse önce bunu eleyin.</value>
+  </data>
+  <data name="G2_PowerLimitReferenceFormat" xml:space="preserve">
+    <value> (kartın kendi {0:0.#} W sınırı)</value>
+  </data>
+  <data name="G2_PowerLimitReadAtFormat" xml:space="preserve">
+    <value> — {0:HH:mm} itibarıyla okundu</value>
+  </data>
+  <data name="G2_NoDefaultLimitRead" xml:space="preserve">
+    <value>Bunun baskı altında olup olmadığı buradan anlaşılamaz — nvidia-smi bu kartın varsayılan sınırını bildirmedi, karşılaştıracak bir şey yok.</value>
+  </data>
+  <data name="G2_AtOwnLimit" xml:space="preserve">
+    <value>Bu kartın kendi sınırı; şu anda onu baskılayan bir şey yok ve aşağıdaki yeniden başlatmanın kaldıracağı bir sınırlama da yok.</value>
+  </data>
+  <data name="G2_HeldBelowLimitFormat" xml:space="preserve">
+    <value>Bir şey bu kartı kendi sınırının {0:0.#} W altında tutuyor. Yetersiz güç kaynağı bağlıyken ürün yazılımı sınırlaması tam böyle görünür ve aşağıdaki yeniden başlatma onu kaldırır. GPU güç sınırı koyan başka bir araç da buradan aynı görünür, ancak cihazı yeniden başlatmak onu temizlemez.</value>
+  </data>
+  <data name="G2_ReadingLimit" xml:space="preserve">
+    <value>Geçerli sınır okunuyor...</value>
+  </data>
+  <data name="G2_NoNvidiaSmi" xml:space="preserve">
+    <value>Geçerli sınır burada okunamıyor: nvidia-smi kurulu değil ve bunu yalnızca o bildiriyor. NVIDIA sürücüsüyle birlikte gelir.</value>
+  </data>
+  <data name="G2_LimitUnanswered" xml:space="preserve">
+    <value>GPU güç sınırını bildirmedi. Uyanmakla meşgul olabilir — birazdan tekrar deneyin.</value>
+  </data>
+  <data name="G2_GpuAsleep" xml:space="preserve">
+    <value>GPU uyku durumunda. Güç sınırını okumak onu uyandırır ve sürücü sonrasında birkaç dakika uyanık tutar.</value>
+  </data>
+  <data name="G2_ReadAgain" xml:space="preserve">
+    <value>Sınırı yeniden oku</value>
+  </data>
+  <data name="G2_ReadLimit" xml:space="preserve">
+    <value>Geçerli sınırı oku</value>
+  </data>
+  <data name="G2_ApuTargetUserFormat" xml:space="preserve">
+    <value>AMD CPU Güç Sınırları'nda ayarladığınız {0} W</value>
+  </data>
+  <data name="G2_ApuTargetFirmwareFormat" xml:space="preserve">
+    <value>Bu makinenin ürün yazılımının yüklü CPU ve GPU için belirttiği {0} W</value>
+  </data>
+  <data name="G2_OverrideScopeBothFormat" xml:space="preserve">
+    <value>Bu, sınırlamayı kaldırmak için GPU'yu yeniden başlatır ve dört CPU güç sınırını {0} değerine yükseltir.</value>
+  </data>
+  <data name="G2_OverrideScopeGpuOnlyFormat" xml:space="preserve">
+    <value>Bu, sınırlamayı kaldırmak için GPU'yu yeniden başlatır. CPU tarafı dahil değil{0}</value>
+  </data>
+  <data name="G2_ApuReasonCpuUnknown" xml:space="preserve">
+    <value>bu CPU'nun SMU güç sınırı iletileri bilinmiyor</value>
+  </data>
+  <data name="G2_ApuReasonNoTarget" xml:space="preserve">
+    <value>hedeflenecek bir CPU güç sınırı yok — AMD CPU Güç Sınırları'nda bir tane ayarlayın ya da ürün yazılımının kendi değerini bildirmesini bekleyin</value>
+  </data>
+  <data name="G2_ApuReasonUsbc" xml:space="preserve">
+    <value>Bu bir USB-C Power Delivery kaynağı. Burada GPU yeniden başlatmasına ek olarak CPU güç sınırını yükseltmek sunulmuyor: kaynak, kasanın beklediğinden çok daha az güç veriyor ve bunun çoğunu zaten GPU kullanıyor.</value>
+  </data>
+  <data name="G2_ApuReasonNoRating" xml:space="preserve">
+    <value>Bağlı adaptörün gücü bildirilmedi; yükseltilmiş CPU sınırını taşıyıp taşıyamayacağı anlaşılamıyor.</value>
+  </data>
+  <data name="G2_ApuReasonTooLowFormat" xml:space="preserve">
+    <value>Bağlı {0} W adaptör, GPU yeniden başlatmasına ek olarak CPU sınırını yükseltmek için makinenin {1} W gereksiniminin çok altında.</value>
+  </data>
+  <data name="G2_ReleaseApuClampStatus" xml:space="preserve">
+    <value>OmenCore artık CPU güç sınırlarını geri koymayacak. Platform bunları bir sonraki uyandırma veya güç kaynağı değişiminde geri alır; yeniden başlatma fabrika değerlerine döner.</value>
+  </data>
+  <data name="G2_TgpUnlockBusy" xml:space="preserve">
+    <value>Ürün yazılımının güç kapıları açılıyor ve sürücüden yeniden okuması isteniyor...</value>
+  </data>
+  <data name="G2_TgpWatchDescription" xml:space="preserve">
+    <value>Adaptörün GPU güç sınırlamasının geri gelmesini izler. Ayrık GPU uyurken hiçbir şey okumaz, böylece kartı RTD3'ten çıkarmaz.</value>
+  </data>
+  <data name="G2_AutoDetailCpuRaised" xml:space="preserve">
+    <value>CPU sınırları yükseltildi ve tutuluyor</value>
+  </data>
+  <data name="G2_AutoDetailGpuRestarted" xml:space="preserve">
+    <value>GPU uyurken yeniden başlatıldı</value>
+  </data>
+  <data name="G2_AutoDetailGpuAwake" xml:space="preserve">
+    <value>GPU uyanıktı, bu yüzden dokunulmadı — kimse kullanmıyorken düğmeyi kullanın</value>
+  </data>
+  <data name="G2_AutoDetailDiscreteDisplay" xml:space="preserve">
+    <value>Görüntü ayrık GPU üzerinden gidiyor, yeniden başlatma ekranı karartır — bu elle yapılmalı</value>
+  </data>
+  <data name="G2_AutoDetailBattery" xml:space="preserve">
+    <value>Pil ile çalışıyor, kaldırılacak adaptör sınırı yok</value>
+  </data>
+  <data name="G2_AutoSummaryFormat" xml:space="preserve">
+    <value>Otomatik ({0}): {1}.</value>
+  </data>
+  <data name="D2_CurveNeedsTwoPoints" xml:space="preserve">
+    <value>⚠️ Eğri en az 2 nokta gerektirir</value>
+  </data>
+  <data name="DB2_CpuSourceFormat" xml:space="preserve">
+    <value>CPU sıcaklık kaynağı: {0}</value>
+  </data>
+  <data name="DB2_CpuSourceReasonFormat" xml:space="preserve">
+    <value>CPU sıcaklık kaynağı: {0}&#10;{1}</value>
+  </data>
+  <data name="DB2_RpmUnavailable" xml:space="preserve">
+    <value>RPM okunamıyor (fan yanıt veriyor)</value>
+  </data>
+  <data name="DL2_SwipeNoPalette" xml:space="preserve">
+    <value>Swipe'ın hazır paleti yok — tema seçiliyken siyah görünür. Özel renkleri işaretleyin.</value>
+  </data>
+  <data name="DL2_ConfettiNoColours" xml:space="preserve">
+    <value>Confetti ve Sun özel renk kullanmaz — tema yine de uygulanır.</value>
+  </data>
+  <data name="DL2_KeyboardRefusedFormat" xml:space="preserve">
+    <value>Klavye {0} efektini kabul etmedi.</value>
+  </data>
+  <data name="DL2_BarRefusedFormat" xml:space="preserve">
+    <value>Işık çubuğu {0} efektini kabul etmedi.</value>
+  </data>
+  <data name="DL2_NowShowing" xml:space="preserve">
+    <value>Şu anda gösterilen: </value>
+  </data>
+  <data name="FC2_NoCalibration" xml:space="preserve">
+    <value>Kalibrasyon verisi yok. Fanın gerçek performansını ölçmek için kalibrasyon sihirbazını çalıştırın.</value>
+  </data>
+  <data name="FC2_CalibrationInfoFormat" xml:space="preserve">
+    <value>Kalibre edilen: {0}&#10;En yüksek seviye: {1}&#10;En düşük dönüş seviyesi: {2}&#10;CPU fan üst sınırı: {3} RPM&#10;GPU fan üst sınırı: {4} RPM&#10;Son kalibrasyon: {5} ({6:F0} gün önce)</value>
+  </data>
+  <data name="BL2_RelatedPackagesFormat" xml:space="preserve">
+    <value>Aynı yayıncıdan olası ilgili paketler: {0}</value>
+  </data>
+  <data name="BL2_BulkCancelledFormat" xml:space="preserve">
+    <value>Toplu geri yükleme {0} itibarıyla iptal edildi. {1} tamamlandı, {2} atlandı.</value>
+  </data>
+  <data name="BL2_BulkFinishedFormat" xml:space="preserve">
+    <value>Toplu geri yükleme {0} hatayla tamamlandı. {1}/{2} öğe geri yüklendi.</value>
+  </data>
+  <data name="MV2_SafeguardLabelFormat" xml:space="preserve">
+    <value>OmenCore koruma noktası {0}</value>
+  </data>
+  <data name="MV2_NoRestorePointConfirmed" xml:space="preserve">
+    <value>Geri yükleme noktası olmadan devam ediliyor (kullanıcı onayladı)</value>
+  </data>
+  <data name="MV2_RestorePointCreatedFormat" xml:space="preserve">
+    <value>✓ Geri yükleme noktası oluşturuldu (#{0})</value>
+  </data>
+  <data name="TI2_TrayTooltipFormat" xml:space="preserve">
+    <value>OmenCore — oyun dizüstü denetimi&#10;{0}&#10;{1}</value>
+  </data>
+  <data name="L2_CleanResultFailedSuffixFormat" xml:space="preserve">
+    <value>  •  {0} başarısız</value>
+  </data>
+  <data name="Main_FanBackendUnavailableFormat" xml:space="preserve">
+    <value>Fan denetim arka ucu kullanılamıyor. Maksimum fan kısayolu uygulanmadı.</value>
+  </data>
+  <data name="Main_FanBackendUnavailableVictusFormat" xml:space="preserve">
+    <value>Victus fan arka ucu kullanılamıyor, bu yüzden maksimum fan uygulanmadı. Tanılamayı çalıştırın ve raporu kılavuz biçiminde paylaşın.</value>
+  </data>
+  <data name="Main_StatusCreatingRestorePoint" xml:space="preserve">
+    <value>Geri yükleme noktası oluşturuluyor...</value>
+  </data>
+  <data name="Main_StatusRemovingOgh" xml:space="preserve">
+    <value>OMEN Gaming Hub kaldırılıyor...</value>
+  </data>
+  <data name="Main_ClipboardSystemInfoFormat" xml:space="preserve">
+    <value>Model: {0}&#10;ProductName: {1}&#10;SystemSku: {2}&#10;Tanılama: {3}</value>
+  </data>
+  <data name="Main_OsdCategoryProfile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Main_OsdCategoryPerformance" xml:space="preserve">
+    <value>Performans</value>
+  </data>
+  <data name="Main_OsdCategoryBoost" xml:space="preserve">
+    <value>Hızlandırma</value>
+  </data>
+  <data name="Main_OsdCategoryQuietMode" xml:space="preserve">
+    <value>Sessiz Mod</value>
+  </data>
+  <data name="Main_OsdValueMaxCooling" xml:space="preserve">
+    <value>Maksimum Soğutma</value>
+  </data>
+  <data name="Main_OsdValuePerformance" xml:space="preserve">
+    <value>Performans</value>
+  </data>
+  <data name="Main_OsdValueQuiet" xml:space="preserve">
+    <value>Sessiz</value>
+  </data>
+  <data name="Main_OsdSourceTray" xml:space="preserve">
+    <value>Tepsi</value>
+  </data>
+  <data name="Main_SystemRestoreLabelOghCleanup" xml:space="preserve">
+    <value>OmenCore — OGH temizliğinden önce</value>
+  </data>
+  <data name="Main_SystemRestoreLabelSystemChanges" xml:space="preserve">
+    <value>OmenCore — sistem değişikliklerinden önce</value>
+  </data>
+  <data name="Dashboard_ModeLinkDecoupled" xml:space="preserve">
+    <value>Fan ve performans ayrık</value>
+  </data>
+  <data name="Toast_FanProfileTitle" xml:space="preserve">
+    <value>Fan Profili</value>
+  </data>
+  <data name="Toast_PerformanceModeTitle" xml:space="preserve">
+    <value>Performans Modu</value>
+  </data>
+  <data name="Toast_GpuSettingTitleFormat" xml:space="preserve">
+    <value>GPU {0}</value>
+  </data>
+  <data name="Toast_KeyboardSettingTitleFormat" xml:space="preserve">
+    <value>Klavye {0}</value>
+  </data>
+  <data name="Toast_SuccessTitle" xml:space="preserve">
+    <value>Başarılı</value>
+  </data>
+  <data name="Toast_ErrorTitle" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="Tray_AppTooltip" xml:space="preserve">
+    <value>OmenCore — Oyun Dizüstü Denetimi</value>
+  </data>
+  <data name="Tray_PerfHeaderFirmwareDefault" xml:space="preserve">
+    <value>Ürün yazılımı varsayılanı</value>
+  </data>
+  <data name="DeviceLighting_NothingStaged" xml:space="preserve">
+    <value>Yazılacak değişiklik yok.</value>
+  </data>
+  <data name="FanCalibration_StatusNotStarted" xml:space="preserve">
+    <value>Başlamadı</value>
+  </data>
+  <data name="FanControl_CurveStatusReadyToApply" xml:space="preserve">
+    <value>Uygulamaya hazır</value>
+  </data>
+  <data name="FanControl_UnknownModelName" xml:space="preserve">
+    <value>Bilinmeyen Model</value>
+  </data>
+  <data name="GpuClamp_RestartingGpu" xml:space="preserve">
+    <value>GPU yeniden başlatılıyor...</value>
+  </data>
+  <data name="SC_GpuOcStatusNotAvailable" xml:space="preserve">
+    <value>Kullanılamıyor</value>
+  </data>
+  <data name="SC_GpuOcNotAvailableMessage" xml:space="preserve">
+    <value>GPU hız aşırtma kullanılamıyor</value>
+  </data>
+  <data name="SC_TestApplyNotStarted" xml:space="preserve">
+    <value>Test uygulaması başlamadı çünkü bir veya daha fazla GPU ayarı uygulanamadı.</value>
+  </data>
+  <data name="SC_TestTuningKept" xml:space="preserve">
+    <value>Test ayarı korundu ve açılışta yeniden uygulanmak üzere kaydedildi.</value>
+  </data>
+  <data name="SC_TestNoSnapshot" xml:space="preserve">
+    <value>Geri yüklenecek test anlık görüntüsü yoktu.</value>
+  </data>
+  <data name="SC_TestUndervoltKept" xml:space="preserve">
+    <value>Test voltaj düşürmesi korundu ve açılışta yeniden uygulanmak üzere kaydedildi.</value>
+  </data>
+  <data name="SC_ApplyingTestUndervolt" xml:space="preserve">
+    <value>Test CPU voltaj düşürmesi uygulanıyor...</value>
+  </data>
+  <data name="SC_NvapiNotAvailable" xml:space="preserve">
+    <value>NVAPI kullanılamıyor</value>
+  </data>
+  <data name="SC_NvidiaGpuNotDetected" xml:space="preserve">
+    <value>NVIDIA GPU algılanmadı</value>
+  </data>
+  <data name="SC_AmdGpuOcResetDefaults" xml:space="preserve">
+    <value>AMD GPU hız aşırtma varsayılana sıfırlandı</value>
+  </data>
+  <data name="SC_StartupReapplyHeldBackPrefix" xml:space="preserve">
+    <value>Açılışta yeniden uygulama bekletildi: son oturum çökmeyle sona erdi.</value>
+  </data>
+  <data name="SC_ModeMemoryReadFailed" xml:space="preserve">
+    <value>Bu makinedeki geçerli ayarlar okunamadı.</value>
+  </data>
+  <data name="SC_ApplyingCpuTuning" xml:space="preserve">
+    <value>CPU ayar ayarları uygulanıyor...</value>
+  </data>
+  <data name="SC_ProfileMaxExperimental" xml:space="preserve">
+    <value>Maksimum (Deneysel)</value>
+  </data>
+  <data name="Optimizer_PreflightUpdated" xml:space="preserve">
+    <value>Ön kontrol güncellendi</value>
+  </data>
+  <data name="Optimizer_ExportReportNoPath" xml:space="preserve">
+    <value>Optimizasyon raporu dışa aktarılamadı</value>
+  </data>
+  <data name="Optimizer_ReportFileNotFound" xml:space="preserve">
+    <value>Rapor dosyası bulunamadı</value>
+  </data>
+  <data name="Optimizer_ReportOpened" xml:space="preserve">
+    <value>Dışa aktarılan rapor açıldı</value>
+  </data>
+  <data name="Optimizer_NoReportPathToCopy" xml:space="preserve">
+    <value>Kopyalanacak rapor yolu yok</value>
+  </data>
+  <data name="Optimizer_ReportPathCopied" xml:space="preserve">
+    <value>Rapor yolu panoya kopyalandı</value>
+  </data>
+  <data name="Mem_EnablingCompression" xml:space="preserve">
+    <value>Bellek sıkıştırma etkinleştiriliyor</value>
+  </data>
+  <data name="Mem_DisablingCompression" xml:space="preserve">
+    <value>Bellek sıkıştırma devre dışı bırakılıyor</value>
+  </data>
+  <data name="Mem_CompressionChangeFailed" xml:space="preserve">
+    <value>Bellek sıkıştırma durumu değiştirilemedi</value>
+  </data>
+  <data name="Mem_CleaningMemory" xml:space="preserve">
+    <value>Bellek temizleniyor</value>
+  </data>
+  <data name="Bloatware_PresetTelemetryOnly" xml:space="preserve">
+    <value>"Yalnızca Telemetri" Ön Ayarı</value>
+  </data>
+  <data name="Bloatware_PresetOmenConflict" xml:space="preserve">
+    <value>"OMEN Çakışmasını Azalt" Ön Ayarı</value>
+  </data>
+  <data name="Bloatware_PresetWindowsConsumer" xml:space="preserve">
+    <value>"Windows Tüketici Uygulamaları" Ön Ayarı</value>
+  </data>
+  <data name="Bloatware_PresetFullStandalone" xml:space="preserve">
+    <value>"Tam Bağımsız Hazırlık" Ön Ayarı</value>
+  </data>
+  <data name="Settings_FanBackendWmiPawnio" xml:space="preserve">
+    <value>WMI BIOS + PawnIO</value>
+  </data>
+  <data name="Settings_FanBackendWmiOgh" xml:space="preserve">
+    <value>WMI BIOS (OGH)</value>
+  </data>
+  <data name="Settings_FanBackendWmiLegacyEc" xml:space="preserve">
+    <value>WMI BIOS + isteğe bağlı eski EC yolu</value>
+  </data>
+  <data name="Settings_FanBackendWmiOnly" xml:space="preserve">
+    <value>WMI BIOS</value>
+  </data>
+  <data name="Settings_TimedOutFormat" xml:space="preserve">
+    <value>{0} (zaman aşımı)</value>
+  </data>
+  <data name="Dashboard_BatteryHealthGood" xml:space="preserve">
+    <value>İyi</value>
+  </data>
+  <data name="Dashboard_BatteryHealthFair" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="Dashboard_BatteryHealthReplace" xml:space="preserve">
+    <value>Değiştirin</value>
+  </data>
+  <data name="Dashboard_Unknown" xml:space="preserve">
+    <value>Bilinmiyor</value>
+  </data>
+  <data name="Settings_ModelIdentityUnavailable" xml:space="preserve">
+    <value>Kullanılamıyor</value>
+  </data>
+  <data name="KbdMap_StatusLedsAcceptedFormat" xml:space="preserve">
+    <value>{0} LED kabul edildi</value>
+  </data>
+  <data name="KbdMap_StatusLedsRefusedFormat" xml:space="preserve">
+    <value>{0} LED reddedildi</value>
+  </data>
+  <data name="KbdMap_StatusKeysAcceptedFormat" xml:space="preserve">
+    <value>{0} tuş kabul edildi</value>
+  </data>
+  <data name="KbdMap_StatusKeysRefusedFormat" xml:space="preserve">
+    <value>{0} tuş reddedildi</value>
+  </data>
+  <data name="KbdMap_StatusBarAccepted" xml:space="preserve">
+    <value>4 ışık çubuğu bölgesi kabul edildi</value>
+  </data>
+  <data name="KbdMap_StatusBarRefused" xml:space="preserve">
+    <value>4 ışık çubuğu bölgesi reddedildi</value>
+  </data>
+  <data name="KbdMap_StatusOnlyEyes" xml:space="preserve">
+    <value>Bunu yalnızca gözle bakarak doğrulayabilirsiniz.</value>
+  </data>
+  <data name="KbdMap_StatusBrightnessNotAppliedFormat" xml:space="preserve">
+    <value>Parlaklık {0} UYGULANMADI: bu klavyenin arka ucunda parlaklık ayarı yok.</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSystemInfo" xml:space="preserve">
+    <value>Sistem bilgileri toplanıyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressHardware" xml:space="preserve">
+    <value>Donanım izleme verileri toplanıyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressLogs" xml:space="preserve">
+    <value>Uygulama günlükleri toplanıyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSettings" xml:space="preserve">
+    <value>Ayarlar ve yapılandırma toplanıyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressPerformance" xml:space="preserve">
+    <value>Performans modu verileri toplanıyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressReadiness" xml:space="preserve">
+    <value>Çekirdek denetim hazırlığı toplanıyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressCalibration" xml:space="preserve">
+    <value>Fan kalibrasyon verileri toplanıyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressFanMax" xml:space="preserve">
+    <value>Maksimum fan doğrulaması çalıştırılıyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressAnonymizing" xml:space="preserve">
+    <value>Veriler anonimleştiriliyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressSaving" xml:space="preserve">
+    <value>Tanılama dosyası kaydediliyor...</value>
+  </data>
+  <data name="DiagnosticExport_ProgressDone" xml:space="preserve">
+    <value>Dışa aktarma başarıyla tamamlandı</value>
+  </data>
+  <data name="SettingsViewModel_SourceNoResolvedProfile" xml:space="preserve">
+    <value>Yetenek profili çözümlenmedi</value>
+  </data>
+  <data name="SettingsViewModel_SourceExactProductId" xml:space="preserve">
+    <value>Tam ProductId</value>
+  </data>
+  <data name="SettingsViewModel_SourceFamilyFallback" xml:space="preserve">
+    <value>Seri geri dönüşü</value>
+  </data>
+  <data name="SettingsViewModel_SourceRuntimeFallback" xml:space="preserve">
+    <value>Çalışma zamanı geri dönüşü</value>
+  </data>
+  <data name="SettingsViewModel_SourceAmbiguousProductId" xml:space="preserve">
+    <value>Belirsiz ProductId + model adıyla ayırma</value>
+  </data>
+  <data name="SettingsViewModel_SourceModelSeriesMatch" xml:space="preserve">
+    <value>Model serisi eşleşmesi</value>
+  </data>
+  <data name="SettingsViewModel_SourcePartialProductId" xml:space="preserve">
+    <value>Kısmi ProductId eşleşmesi</value>
+  </data>
+  <data name="SettingsViewModel_SourceHeuristic" xml:space="preserve">
+    <value>Sezgisel eşleşme</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityNoProfile" xml:space="preserve">
+    <value>Yetenek algılama bir model profili çözümleyemedi.</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityUnverified" xml:space="preserve">
+    <value>Yetenek profili ProductId ile eşleşti ancak kayıt henüz kullanıcı doğrulamasından geçmedi.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardSharedProductId" xml:space="preserve">
+    <value>Klavye ProductId'si birden çok modelde ortak; profil WMI model bağlamıyla seçildi.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardUnverified" xml:space="preserve">
+    <value>Klavye profili ProductId ile eşleşti ancak kayıt henüz kullanıcı doğrulamasından geçmedi.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardSeriesInferred" xml:space="preserve">
+    <value>Klavye profili tam ProductId eşleşmesi yerine model serisinden çıkarıldı.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardPartialProvisional" xml:space="preserve">
+    <value>Klavye profili kısmi ProductId eşleşmesinden seçildi ve geçici sayılmalı.</value>
+  </data>
+  <data name="SettingsViewModel_WarnKeyboardHeuristic" xml:space="preserve">
+    <value>Klavye profili sezgisel geri dönüş yolundan geldi; güvenmeden önce doğrulayın.</value>
+  </data>
+  <data name="InputPromptWindow_Ok" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="Main_MemoryTelemetryUnavailable" xml:space="preserve">
+    <value>Bellek telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="Main_StorageTelemetryUnavailable" xml:space="preserve">
+    <value>Depolama telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="Main_PerCoreClocksUnavailable" xml:space="preserve">
+    <value>Çekirdek frekansları kullanılamıyor</value>
+  </data>
+  <data name="Main_DiskActiveFormat" xml:space="preserve">
+    <value>%{0} etkin</value>
+  </data>
+  <data name="SC_FanLinkedBadge" xml:space="preserve">
+    <value>Fan performansa bağlı</value>
+  </data>
+  <data name="SC_FanIndependentBadge" xml:space="preserve">
+    <value>Fan bağımsız</value>
+  </data>
+  <data name="SC_LinkedPolicyHint" xml:space="preserve">
+    <value>Bağlı mod etkin olduğu için bu mod fan ilkesini de güncelleyebilir.</value>
+  </data>
+  <data name="SC_DecoupledPolicyHint" xml:space="preserve">
+    <value>Bu mod yalnızca güç/performans davranışını değiştirir; mevcut fan ön ayarınız veya özel eğriniz etkin kalır.</value>
+  </data>
+  <data name="SC_WindowsPowerPlanFallback" xml:space="preserve">
+    <value>Windows Güç Planı</value>
+  </data>
+  <data name="SC_BadgePowerLocked" xml:space="preserve">
+    <value>Güç Kilitli</value>
+  </data>
+  <data name="SC_BadgeLocked" xml:space="preserve">
+    <value>Kilitli</value>
+  </data>
+  <data name="SC_BadgePowerLimitOnly" xml:space="preserve">
+    <value>Yalnızca Güç Limiti</value>
+  </data>
+  <data name="SC_BadgeExtendedRange" xml:space="preserve">
+    <value>Genişletilmiş Aralık</value>
+  </data>
+  <data name="SC_BadgeDetectedRange" xml:space="preserve">
+    <value>Algılanan Aralık</value>
+  </data>
+  <data name="SC_StandardNvapiRange" xml:space="preserve">
+    <value>Bu GPU standart dizüstü güvenli NVAPI aralığını kullanıyor. Kararlılık yine de çipe ve BIOS'a göre değişir.</value>
+  </data>
+  <data name="SC_DetectedLimitsPending" xml:space="preserve">
+    <value>Algılanan GPU ayar limitleri başlatmadan sonra görünecek.</value>
+  </data>
+  <data name="SC_NvapiWritesLockedOemHint" xml:space="preserve">
+    <value>Bu sürücü/ürün yazılımı yolunda NVAPI ayar yazmaları kilitli. Makine sunuyorsa TGP davranışı için OEM performans modlarını kullanın.</value>
+  </data>
+  <data name="SC_PlatformRtx50Laptop" xml:space="preserve">
+    <value>RTX 50 serisi dizüstü GPU'lar</value>
+  </data>
+  <data name="SC_PlatformLaptopNvidia" xml:space="preserve">
+    <value>Dizüstü NVIDIA GPU'lar</value>
+  </data>
+  <data name="SC_PlatformRtx40" xml:space="preserve">
+    <value>RTX 40 serisi GPU'lar</value>
+  </data>
+  <data name="SC_PlatformRtx30" xml:space="preserve">
+    <value>RTX 30 serisi GPU'lar</value>
+  </data>
+  <data name="SC_PlatformThisGpu" xml:space="preserve">
+    <value>bu GPU</value>
+  </data>
+  <data name="SC_ResetToDefaultsGeneric" xml:space="preserve">
+    <value>Desteklenen GPU ayar denetimleri varsayılana sıfırlandı</value>
+  </data>
+  <data name="SC_GpuReadyFormat" xml:space="preserve">
+    <value>✓ {0} — hazır</value>
+  </data>
+  <data name="SC_GpuDetectedWritesLockedFormat" xml:space="preserve">
+    <value>{0} algılandı ancak NVAPI ayar yazmaları geçerli sürücü veya ürün yazılımı yoluyla kilitli.</value>
+  </data>
+  <data name="SC_ApplyingUndervoltSettings" xml:space="preserve">
+    <value>Voltaj düşürme ayarları uygulanıyor...</value>
+  </data>
+  <data name="Settings_GuardrailOverrideOn" xml:space="preserve">
+    <value>OMEN 16/Victus koruma sınırı geçersiz kılma açık.</value>
+  </data>
+  <data name="Settings_GuardrailOverrideOff" xml:space="preserve">
+    <value>OMEN 16/Victus koruma sınırı geçersiz kılma kapalı.</value>
+  </data>
+  <data name="Settings_RestoreDisabled" xml:space="preserve">
+    <value>Devre dışı</value>
+  </data>
+  <data name="Settings_NotDetected" xml:space="preserve">
+    <value>Algılanmadı</value>
+  </data>
+  <data name="Lighting_AudioCaptureUnavailable" xml:space="preserve">
+    <value>Ses yakalama kullanılamıyor</value>
+  </data>
+  <data name="Lighting_SingleTarget" xml:space="preserve">
+    <value>1 etkin aydınlatma hedefi</value>
+  </data>
+  <data name="Lighting_SingleColourKeyboardHint" xml:space="preserve">
+    <value>Bu dizüstünün tek renkli arka aydınlatmalı klavyesi var, ayarlanacak renk yok (ürün yazılımı ve OmenCore model veritabanı aynı sonuçta). Parlaklığı Fn tuşlarıyla ayarlayın.</value>
+  </data>
+  <data name="Lighting_StatusDiscoveringRazer" xml:space="preserve">
+    <value>Razer aygıtları aranıyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerColor" xml:space="preserve">
+    <value>Razer rengi uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerBreathing" xml:space="preserve">
+    <value>Razer nefes efekti uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingRazerSpectrum" xml:space="preserve">
+    <value>Razer spektrumu uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingOpenRgbColor" xml:space="preserve">
+    <value>OpenRGB rengi uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingCorsair" xml:space="preserve">
+    <value>Corsair aydınlatması uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingPreset" xml:space="preserve">
+    <value>Aydınlatma ön ayarı sisteme uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusSyncingAll" xml:space="preserve">
+    <value>Renk tüm RGB aygıtlara eşitleniyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingCustomColor" xml:space="preserve">
+    <value>Özel renk uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingDpi" xml:space="preserve">
+    <value>DPI ayarları uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingLogitech" xml:space="preserve">
+    <value>Logitech aydınlatması uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusLoadingMacro" xml:space="preserve">
+    <value>Makro profili yükleniyor...</value>
+  </data>
+  <data name="Lighting_StatusApplyingKeyboardColors" xml:space="preserve">
+    <value>Klavye renkleri uygulanıyor...</value>
+  </data>
+  <data name="Lighting_StatusRestoringKeyboard" xml:space="preserve">
+    <value>Klavye aydınlatması geri yükleniyor...</value>
+  </data>
+  <data name="Lighting_StatusProbingSurface" xml:space="preserve">
+    <value>RGB yüzeyi yoklanıyor...</value>
+  </data>
+  <data name="Lighting_NoApplyAttempted" xml:space="preserve">
+    <value>Bu oturumda klavye aydınlatması uygulanmadı.</value>
+  </data>
+  <data name="Lighting_UnknownBackend" xml:space="preserve">
+    <value>bilinmeyen arka uç</value>
+  </data>
+  <data name="Lighting_BackendWmiHint" xml:space="preserve">
+    <value>💡 Renkler değişmiyorsa Ayarlar → Donanım bölümünde "Deneysel EC Klavye"yi açmayı deneyin.</value>
+  </data>
+  <data name="Lighting_BackendEcHint" xml:space="preserve">
+    <value>Doğrudan EC erişimi kullanılıyor (deneysel). Değişiklikler biraz gecikmeyle uygulanabilir.</value>
+  </data>
+  <data name="Lighting_BackendOghHint" xml:space="preserve">
+    <value>OMEN Gaming Hub vekili kullanılıyor. Gaming Hub hizmetlerinin çalıştığından emin olun.</value>
+  </data>
+  <data name="KbdMap_StatusSaveOk" xml:space="preserve">
+    <value>Klavyeye kaydedildi. Bu görsel güç kesintisinden sonra da kalır ve OmenCore kapalıyken görünür.</value>
+  </data>
+  <data name="KbdMap_StatusSaveRefused" xml:space="preserve">
+    <value>Uygulandı ancak klavye flaşa kaydetmeyi reddetti: görsel şu anda görünüyor, güç kesintisinden sonra kalmayacak.</value>
+  </data>
+  <data name="KbdMap_StatusLoadedBarFormat" xml:space="preserve">
+    <value>{0} tuş ve 4 ışık çubuğu bölgesi. Seçmek için tıklayın veya kutu çizin. Eklemek için Ctrl'yi basılı tutun.</value>
+  </data>
+  <data name="KbdMap_StatusLoadedFormat" xml:space="preserve">
+    <value>{0} tuş. Seçmek için tıklayın veya kutu çizin. Eklemek için Ctrl'yi basılı tutun.</value>
+  </data>
+  <data name="KbdMap_StatusLayoutUnconfirmed" xml:space="preserve">
+    <value> Bu düzen donanımda doğrulanmadı.</value>
+  </data>
+  <data name="KbdMap_StatusBarSuffix" xml:space="preserve">
+    <value> ve 4 ışık çubuğu bölgesi.</value>
+  </data>
+  <data name="KbdMap_StatusFullStop" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="KbdMap_StatusClickHint" xml:space="preserve">
+    <value> Seçmek için tıklayın veya kutu çizin. Eklemek için Ctrl'yi basılı tutun.</value>
+  </data>
+  <data name="GpuClamp_WattageNotReported" xml:space="preserve">
+    <value>Watt değeri bildirilmedi</value>
+  </data>
+  <data name="GpuClamp_NotReported" xml:space="preserve">
+    <value>Bildirilmedi</value>
+  </data>
+  <data name="GpuClamp_NoneOnBattery" xml:space="preserve">
+    <value>Yok — pille çalışıyor</value>
+  </data>
+  <data name="FanCalib_BiosAutoRestored" xml:space="preserve">
+    <value>BIOS otomatik fan denetimi geri yüklendi</value>
+  </data>
+  <data name="FanCalib_BiosAutoRestoreFailed" xml:space="preserve">
+    <value>Bu arka uçtan BIOS otomatik fan denetimi geri yüklenemedi</value>
+  </data>
+  <data name="Dashboard_PowerTelemetryUnavailable" xml:space="preserve">
+    <value>Güç telemetrisi kullanılamıyor</value>
+  </data>
+  <data name="Dashboard_PowerSensorsUnavailable" xml:space="preserve">
+    <value>Güç sensörleri kullanılamıyor</value>
+  </data>
+  <data name="Dashboard_PowerLineFormat" xml:space="preserve">
+    <value>CPU: {0}W • GPU: {1}W • Toplam: {2}W</value>
+  </data>
+  <data name="Dashboard_PowerInactiveFormat" xml:space="preserve">
+    <value>CPU: {0}W • GPU: etkin değil (Optimus)</value>
+  </data>
+  <data name="Bloatware_CurrentItem" xml:space="preserve">
+    <value>geçerli öğe</value>
+  </data>
+  <data name="HotkeyOsd_ViaHotkey" xml:space="preserve">
+    <value>kısayol ile</value>
+  </data>
+  <data name="Language_SystemDefault" xml:space="preserve">
+    <value>Sistem varsayılanı</value>
+  </data>
+  <data name="Main_SourceQuickAccess" xml:space="preserve">
+    <value>Hızlı Erişim</value>
+  </data>
+  <data name="KbdMap_StatusSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="QuickPopup_CurveTooltipFormat" xml:space="preserve">
+    <value>Eğri: {0}</value>
+  </data>
 </root>

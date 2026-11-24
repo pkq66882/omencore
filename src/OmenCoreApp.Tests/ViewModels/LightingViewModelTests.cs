@@ -11,13 +11,22 @@ using Xunit;
 namespace OmenCoreApp.Tests.ViewModels
 {
     [Collection("Config Isolation")]
-    public class LightingViewModelTests
+    public class LightingViewModelTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _originalUICulture = System.Globalization.CultureInfo.CurrentUICulture;
+
         public LightingViewModelTests()
         {
+            // Status text is localized; pin to en for canonical substring assertions.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
             var tmp = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "OmenCoreTests", Guid.NewGuid().ToString());
             System.IO.Directory.CreateDirectory(tmp);
             Environment.SetEnvironmentVariable("OMENCORE_CONFIG_DIR", tmp);
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _originalUICulture;
         }
 
         [Fact]
