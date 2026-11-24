@@ -182,7 +182,7 @@ namespace OmenCore.ViewModels
                 {
                     return Strings.DiagnosticsView_ModelNotesUnrecognized;
                 }
-                return notes;
+                return notes ?? string.Empty;
             }
         }
 

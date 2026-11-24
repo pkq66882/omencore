@@ -4460,7 +4460,7 @@
     <value>风扇与性能模式独立：切换性能模式不会改变当前风扇设置或曲线。</value>
   </data>
   <data name="QuickPopup_FanPerfLinked" xml:space="preserve">
-    <value>风扇与性能：已联动</value>
+    <value>风扇与性能：联动</value>
   </data>
   <data name="QuickPopup_LinkedMode" xml:space="preserve">
     <value>风扇与性能模式联动：切换性能模式时，风扇设置也会跟着变。</value>
@@ -4487,7 +4487,7 @@
     <value>开启后 OmenCore 始终显示在其他窗口之上。</value>
   </data>
   <data name="TrayIcon_Linked" xml:space="preserve">
-    <value>已联动</value>
+    <value>联动</value>
   </data>
   <data name="TrayIcon_OnBattery" xml:space="preserve">
     <value>使用电池</value>
@@ -6473,7 +6473,7 @@
     <value>监控状态：{0}</value>
   </data>
   <data name="QuickPopup_FanPerfDecoupled" xml:space="preserve">
-    <value>风扇与性能模式独立，风扇设置不受影响</value>
+    <value>风扇与性能：独立</value>
   </data>
   <data name="QuickPopup_ApplyModeFormat" xml:space="preserve">
     <value>切换到{1}模式，风扇保持{0}不变。</value>
@@ -9305,7 +9305,7 @@
     <value>“{0}”</value>
   </data>
   <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
-    <value>应用此性能模式。已启用联动，风扇策略也会一并更新。</value>
+    <value>切换到该模式时，风扇也会一起切换。</value>
   </data>
   <data name="Main_EventCustomPresetSavedFormat" xml:space="preserve">
     <value>自定义预设“{0}”已保存</value>
@@ -9713,7 +9713,7 @@
     <value>⚠️ BIOS 已锁定——只读（PL1：{0:F0} W，PL2：{1:F0} W）</value>
   </data>
   <data name="SC2_BiosLockedReadOnlyPolicyFormat" xml:space="preserve">
-    <value>⚠️ BIOS 已锁定——只读（PL1：{0:F0} W，PL2：{1:F0} W）。风扇策略仍可经 OMEN/OGH 模式调整</value>
+    <value>⚠️ BIOS 已锁定——只读（PL1：{0:F0} W，PL2：{1:F0} W）。风扇转速仍会随 OMEN/OGH 模式变化</value>
   </data>
   <data name="SC2_PowerLimitIgnored" xml:space="preserve">
     <value>功耗限制已忽略（被驱动/固件锁定）</value>

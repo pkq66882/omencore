@@ -1047,7 +1047,7 @@ namespace OmenCore.ViewModels
                 item.DetailedDescription = LocalizeOptimizerDetail(details.DetailedDescription);
                 item.AffectedRegistryKeys = details.AffectedRegistryKeys;
                 item.ServiceNamesAffected = details.ServiceNamesAffected;
-                item.UndoInstructions = LocalizeOptimizerUndo(details.UndoInstructions);
+                item.UndoInstructions = LocalizeOptimizerUndo(details.UndoInstructions ?? string.Empty);
             }
         }
 
