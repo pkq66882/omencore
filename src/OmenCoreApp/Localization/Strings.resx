@@ -6480,7 +6480,7 @@
     <value>Fan/Perf: Decoupled - fan stays</value>
   </data>
   <data name="QuickPopup_ApplyModeFormat" xml:space="preserve">
-    <value>Apply this performance mode. Decoupled mode keeps {0} active.</value>
+    <value>Switch to {1} mode — fans stay on {0}.</value>
   </data>
   <data name="QuickPopup_ApplySavedCurve" xml:space="preserve">
     <value>Apply saved fan curve</value>
@@ -9306,7 +9306,7 @@
     <value>your current fan preset</value>
   </data>
   <data name="QuickPopup_PresetActiveFormat" xml:space="preserve">
-    <value>the active curve preset '{0}'</value>
+    <value>'{0}'</value>
   </data>
   <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
     <value>Apply this performance mode. Linked mode can also update fan policy.</value>
@@ -10879,5 +10879,11 @@
   </data>
   <data name="PlatformFilter_Manual" xml:space="preserve">
     <value>Manually added</value>
+  </data>
+  <data name="QuickPopup_ApplyLinkedModeFormat" xml:space="preserve">
+    <value>Switch to {0} mode — fans switch with it.</value>
+  </data>
+  <data name="QuickPopup_ModeAlreadyActiveFormat" xml:space="preserve">
+    <value>{0} mode is already active.</value>
   </data>
 </root>

@@ -3989,5 +3989,9 @@ namespace OmenCore.Localization
     public static string PlatformFilter_All => Get(nameof(PlatformFilter_All));
     public static string PlatformFilter_Manual => Get(nameof(PlatformFilter_Manual));
 
+    public static string QuickPopup_ApplyLinkedModeFormat => Get(nameof(QuickPopup_ApplyLinkedModeFormat));
+
+    public static string QuickPopup_ModeAlreadyActiveFormat => Get(nameof(QuickPopup_ModeAlreadyActiveFormat));
+
     }
 }

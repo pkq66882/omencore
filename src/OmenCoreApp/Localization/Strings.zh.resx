@@ -1229,10 +1229,10 @@
     <value>曲线已启用</value>
   </data>
   <data name="FanControlView_FanPerformanceDecouplingIsNowTheDefault" xml:space="preserve">
-    <value>风扇/性能解耦现已成为默认行为</value>
+    <value>风扇与性能模式现在默认为独立设置</value>
   </data>
   <data name="FanControlView_DismissFanPerformanceDecouplingNotice" xml:space="preserve">
-    <value>关闭风扇/性能解耦提示</value>
+    <value>关闭“风扇与性能模式独立设置”提示</value>
   </data>
   <data name="FanControlView_Dismiss" xml:space="preserve">
     <value>知道了</value>
@@ -2744,7 +2744,7 @@
     <value>监控：未知</value>
   </data>
   <data name="QuickPopupWindow_FanPerfDecoupled" xml:space="preserve">
-    <value>风扇与性能模式已解耦</value>
+    <value>风扇与性能模式独立</value>
   </data>
   <data name="QuickPopupWindow_QuickProfile" xml:space="preserve">
     <value>快速方案</value>
@@ -4373,16 +4373,16 @@
     <value>选择一个 OEM 风扇预设</value>
   </data>
   <data name="FanControlViewModel_LinkBadgeIndependent" xml:space="preserve">
-    <value>独立：风扇模式不受性能方案影响</value>
+    <value>独立：切换性能模式不影响风扇</value>
   </data>
   <data name="FanControlViewModel_LinkBadgeLinked" xml:space="preserve">
-    <value>联动：切换性能可能改变风扇模式</value>
+    <value>联动：风扇跟随性能模式切换</value>
   </data>
   <data name="FanControlViewModel_LinkDescIndependent" xml:space="preserve">
-    <value>独立模式下，切换性能方案不会重写风扇策略。你选择的风扇预设/曲线将保持生效，直到你直接更改风扇控制。</value>
+    <value>独立模式下，切换性能模式不会改变风扇设置；你选的风扇预设或曲线会一直生效，直到你手动改风扇。</value>
   </data>
   <data name="FanControlViewModel_LinkDescLinked" xml:space="preserve">
-    <value>联动模式下，切换性能方案会同时切换风扇模式。只有当你希望风扇跟随性能方案时才开启。</value>
+    <value>联动模式下，切换性能模式会同时切换风扇模式。只有当你想让风扇跟随性能模式时才开启。</value>
   </data>
   <data name="FanControlViewModel_OemAutoFailed" xml:space="preserve">
     <value>OEM 自动模式恢复未成功</value>
@@ -4439,10 +4439,10 @@
     <value>正在创建还原点…</value>
   </data>
   <data name="MainViewModel_LinkStatusDecoupled" xml:space="preserve">
-    <value>已与性能模式解耦</value>
+    <value>风扇独立，不受性能模式影响</value>
   </data>
   <data name="MainViewModel_LinkStatusLinked" xml:space="preserve">
-    <value>已联动：风扇跟随性能</value>
+    <value>风扇跟随性能模式</value>
   </data>
   <data name="MainViewModel_LogsHide" xml:space="preserve">
     <value>隐藏活动日志</value>
@@ -4457,13 +4457,13 @@
     <value>已启用低开销监控</value>
   </data>
   <data name="QuickPopup_DecoupledMode" xml:space="preserve">
-    <value>已启用解耦模式。更改性能不会影响你当前的风扇预设或曲线。</value>
+    <value>风扇与性能模式独立：切换性能模式不会改变当前风扇设置或曲线。</value>
   </data>
   <data name="QuickPopup_FanPerfLinked" xml:space="preserve">
-    <value>风扇/性能：已联动</value>
+    <value>风扇与性能：已联动</value>
   </data>
   <data name="QuickPopup_LinkedMode" xml:space="preserve">
-    <value>已启用联动模式。更改性能可能同时重写风扇策略。</value>
+    <value>风扇与性能模式联动：切换性能模式时，风扇设置也会跟着变。</value>
   </data>
   <data name="TrayIcon_AcPower" xml:space="preserve">
     <value>交流电源</value>
@@ -4475,7 +4475,7 @@
     <value>充电中</value>
   </data>
   <data name="TrayIcon_Decoupled" xml:space="preserve">
-    <value>已解耦</value>
+    <value>独立</value>
   </data>
   <data name="TrayIcon_Enabled" xml:space="preserve">
     <value>已启用</value>
@@ -6473,10 +6473,10 @@
     <value>监控状态：{0}</value>
   </data>
   <data name="QuickPopup_FanPerfDecoupled" xml:space="preserve">
-    <value>风扇与性能模式已解耦，风扇设置不受性能模式影响</value>
+    <value>风扇与性能模式独立，风扇设置不受影响</value>
   </data>
   <data name="QuickPopup_ApplyModeFormat" xml:space="preserve">
-    <value>应用此性能模式。风扇与性能已解耦，{0}不会随之改变。</value>
+    <value>切换到{1}模式，风扇保持{0}不变。</value>
   </data>
   <data name="QuickPopup_ApplySavedCurve" xml:space="preserve">
     <value>应用已保存的风扇曲线</value>
@@ -9299,10 +9299,10 @@
     <value>正在检测…</value>
   </data>
   <data name="QuickPopup_PresetCurrent" xml:space="preserve">
-    <value>当前风扇预设</value>
+    <value>当前设置</value>
   </data>
   <data name="QuickPopup_PresetActiveFormat" xml:space="preserve">
-    <value>“{0}”风扇预设</value>
+    <value>“{0}”</value>
   </data>
   <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
     <value>应用此性能模式。已启用联动，风扇策略也会一并更新。</value>
@@ -10253,7 +10253,7 @@
     <value>OmenCore 不再把 CPU 功耗限制重新设回去。平台会在下次唤醒或更换电源时收走这些限制；重启则会恢复出厂状态。</value>
   </data>
   <data name="G2_TgpUnlockBusy" xml:space="preserve">
-    <value>正在短暂放开固件的功耗门控，并让驱动重新读取…</value>
+    <value>正在短暂解除固件的功耗限制，并让驱动重新读取…</value>
   </data>
   <data name="G2_TgpWatchDescription" xml:space="preserve">
     <value>监视适配器对 GPU 的功耗限制是否重新生效。独显停驻时不做任何读取，因此不会把它挡在 RTD3 之外。</value>
@@ -10379,7 +10379,7 @@
     <value>OmenCore — 系统更改前</value>
   </data>
   <data name="Dashboard_ModeLinkDecoupled" xml:space="preserve">
-    <value>风扇与性能已解耦</value>
+    <value>风扇与性能模式独立</value>
   </data>
   <data name="Toast_FanProfileTitle" xml:space="preserve">
     <value>风扇方案</value>
@@ -10658,10 +10658,10 @@
     <value>风扇独立控制</value>
   </data>
   <data name="SC_LinkedPolicyHint" xml:space="preserve">
-    <value>已启用联动模式，此模式也会一并更新风扇策略。</value>
+    <value>已启用联动，切换性能模式时会一起切换风扇模式。</value>
   </data>
   <data name="SC_DecoupledPolicyHint" xml:space="preserve">
-    <value>此模式只改变功耗/性能行为，当前风扇预设或自定义曲线保持生效。</value>
+    <value>风扇与性能模式独立：切换性能模式只改变功耗和性能，风扇设置不变。</value>
   </data>
   <data name="SC_WindowsPowerPlanFallback" xml:space="preserve">
     <value>Windows 电源计划</value>
@@ -10875,5 +10875,11 @@
   </data>
   <data name="PlatformFilter_Manual" xml:space="preserve">
     <value>手动添加</value>
+  </data>
+  <data name="QuickPopup_ApplyLinkedModeFormat" xml:space="preserve">
+    <value>切换到{0}模式，风扇也会一起切换。</value>
+  </data>
+  <data name="QuickPopup_ModeAlreadyActiveFormat" xml:space="preserve">
+    <value>已在使用{0}模式。</value>
   </data>
 </root>

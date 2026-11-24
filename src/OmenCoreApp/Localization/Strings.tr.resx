@@ -6476,7 +6476,7 @@
     <value>Fan/Perf: Ayrık — fan kalır</value>
   </data>
   <data name="QuickPopup_ApplyModeFormat" xml:space="preserve">
-    <value>Bu performans modunu uygula. Ayrık modda {0} etkin kalır.</value>
+    <value>{1} moduna geç — fanlar {0} ayarında kalır.</value>
   </data>
   <data name="QuickPopup_ApplySavedCurve" xml:space="preserve">
     <value>Kayıtlı fan eğrisini uygula</value>
@@ -9299,10 +9299,10 @@
     <value>Algılanıyor...</value>
   </data>
   <data name="QuickPopup_PresetCurrent" xml:space="preserve">
-    <value>geçerli fan profiliniz</value>
+    <value>geçerli ayarlar</value>
   </data>
   <data name="QuickPopup_PresetActiveFormat" xml:space="preserve">
-    <value>etkin eğri profili “{0}”</value>
+    <value>"{0}"</value>
   </data>
   <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
     <value>Bu performans modunu uygular. Bağlı modda fan ilkesi de güncellenir.</value>
@@ -10875,5 +10875,11 @@
   </data>
   <data name="PlatformFilter_Manual" xml:space="preserve">
     <value>Elle eklenen</value>
+  </data>
+  <data name="QuickPopup_ApplyLinkedModeFormat" xml:space="preserve">
+    <value>{0} moduna geç — fanlar da birlikte değişir.</value>
+  </data>
+  <data name="QuickPopup_ModeAlreadyActiveFormat" xml:space="preserve">
+    <value>{0} modu zaten etkin.</value>
   </data>
 </root>

@@ -296,17 +296,31 @@ namespace OmenCore.Views
 
         private void UpdatePerformanceModeTooltips()
         {
+            // Each button names the mode it will switch to, so the hover text says exactly what
+            // happens instead of "this performance mode" three times.
+            QuickQuietBtn.ToolTip = BuildPerformanceModeTooltip("Quiet");
+            QuickBalancedBtn.ToolTip = BuildPerformanceModeTooltip("Balanced");
+            QuickPerformanceBtn.ToolTip = BuildPerformanceModeTooltip("Performance");
+        }
+
+        private string BuildPerformanceModeTooltip(string mode)
+        {
+            var modeName = DisplayNames.PerformanceModeName(mode);
+            if (string.Equals(PerformanceModeNameResolver.ToDisplayName(_currentPerformanceMode), mode, StringComparison.Ordinal))
+            {
+                return string.Format(Strings.QuickPopup_ModeAlreadyActiveFormat, modeName);
+            }
+
+            if (_isFanPerformanceLinked)
+            {
+                return string.Format(Strings.QuickPopup_ApplyLinkedModeFormat, modeName);
+            }
+
             var preservedFanText = string.IsNullOrWhiteSpace(_curvePresetName)
                 ? Strings.QuickPopup_PresetCurrent
                 : string.Format(Strings.QuickPopup_PresetActiveFormat, DisplayNames.FanPresetName(_curvePresetName));
 
-            var tooltip = _isFanPerformanceLinked
-                ? Strings.QuickPopup_ApplyLinkedTip
-                : string.Format(Strings.QuickPopup_ApplyModeFormat, preservedFanText);
-
-            QuickQuietBtn.ToolTip = tooltip;
-            QuickBalancedBtn.ToolTip = tooltip;
-            QuickPerformanceBtn.ToolTip = tooltip;
+            return string.Format(Strings.QuickPopup_ApplyModeFormat, preservedFanText, modeName);
         }
 
         private void UpdateFanModeButtons()

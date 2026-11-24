@@ -6476,7 +6476,7 @@
     <value>Вентилятор/Производительность: развязаны — вентилятор сохраняется</value>
   </data>
   <data name="QuickPopup_ApplyModeFormat" xml:space="preserve">
-    <value>Применить этот режим производительности. В развязанном режиме {0} сохраняется активным.</value>
+    <value>Переключение в режим {1} — вентиляторы остаются на {0}.</value>
   </data>
   <data name="QuickPopup_ApplySavedCurve" xml:space="preserve">
     <value>Применить сохранённую кривую вентилятора</value>
@@ -9299,10 +9299,10 @@
     <value>Обнаружение...</value>
   </data>
   <data name="QuickPopup_PresetCurrent" xml:space="preserve">
-    <value>ваш текущий профиль вентиляторов</value>
+    <value>текущие настройки</value>
   </data>
   <data name="QuickPopup_PresetActiveFormat" xml:space="preserve">
-    <value>активный профиль кривой «{0}»</value>
+    <value>«{0}»</value>
   </data>
   <data name="QuickPopup_ApplyLinkedTip" xml:space="preserve">
     <value>Применить этот режим производительности. В связанном режиме политика вентиляторов тоже обновляется.</value>
@@ -10875,5 +10875,11 @@
   </data>
   <data name="PlatformFilter_Manual" xml:space="preserve">
     <value>Добавленные вручную</value>
+  </data>
+  <data name="QuickPopup_ApplyLinkedModeFormat" xml:space="preserve">
+    <value>Переключение в режим {0} — вентиляторы переключатся вместе с ним.</value>
+  </data>
+  <data name="QuickPopup_ModeAlreadyActiveFormat" xml:space="preserve">
+    <value>Режим {0} уже активен.</value>
   </data>
 </root>
