@@ -1127,7 +1127,7 @@
     <value>这块主板的 GPU 被两道固件限制压在 175W 完整额定值之下，OMEN Gaming Hub 平时会放开它们。此操作会短暂解除这两道限制并让驱动重新读取——不是超频，也不持久：下次唤醒、更换适配器或重启时，固件会重新加上限制。</value>
   </data>
   <data name="DiagnosticsView_NotConfirmedOnRealHardwareForcingThisOnAnU" xml:space="preserve">
-    <value>尚未在真机上确认。根据这组功能所依据的排查记录，在小功率电源适配器上强行启用，曾让 GPU 进入降级状态，只有重启才能恢复——而且那台机器此前有过 GPU 驱动崩溃史。因此只有在适配器余量明显高于本机额定需求时，才会显示此操作。</value>
+    <value>尚未在真机上确认。根据这组功能所依据的排查记录，在小功率电源适配器上强行启用，曾让 GPU 进入受限状态，只有重启才能恢复——而且那台机器此前有过 GPU 驱动崩溃史。因此只有在适配器余量明显高于本机额定需求时，才会显示此操作。</value>
   </data>
   <data name="DiagnosticsView_TryTheGpuPowerUnlock" xml:space="preserve">
     <value>尝试 GPU 功耗解锁</value>
@@ -5090,7 +5090,7 @@
     <value>OmenCore 正在完全独立运行，无 HP 依赖</value>
   </data>
   <data name="SettingsViewModel_StandaloneOptionalDegradation" xml:space="preserve">
-    <value>可选降级：完全独立运行，但有 {0} 个可选组件不可用（OGH 与 HP-SEU 并非核心运行所必需）</value>
+    <value>部分依赖缺失：仍可完全独立运行，但有 {0} 个可选组件不可用（OGH 与 HP-SEU 并非核心运行所必需）</value>
   </data>
   <data name="SettingsViewModel_StatusDegraded" xml:space="preserve">
     <value>依赖不完整</value>
@@ -7031,7 +7031,7 @@
     <value>EC 模式 0x{0}（实验性）——将应用用户设置</value>
   </data>
   <data name="GpuBoost_DegradedWarning" xml:space="preserve">
-    <value>⚠️ 命令已发送，但 GPU 功耗可能未变（BIOS WMI 降级）</value>
+    <value>⚠️ 命令已发送，但 GPU 功耗可能未变（BIOS WMI 通道异常）</value>
   </data>
   <data name="GpuBoost_NvapiPercentFormat" xml:space="preserve">
     <value>{0} + NVAPI {1}% 功耗上限</value>
@@ -7430,7 +7430,7 @@
     <value>遥测数据已过期：传感器数据延迟或停滞。OmenCore 正在尝试自动恢复。</value>
   </data>
   <data name="Dashboard_TelemetryDegraded" xml:space="preserve">
-    <value>遥测已降级：数据质量下降，正在恢复监控。</value>
+    <value>监控数据不完整：部分传感器暂时读不到数据，正在自动恢复。</value>
   </data>
   <data name="Dashboard_AmdQuarantineWarningFormat" xml:space="preserve">
     <value>AMD GPU 遥测在驱动/库故障后已暂时隔离。CPU、风扇、内存与系统遥测仍正常工作。{0}</value>
@@ -7559,10 +7559,10 @@
     <value>等待命令中…</value>
   </data>
   <data name="Settings_StandaloneCriticalMissingFormat" xml:space="preserve">
-    <value>严重降级：缺少 {0} 个必需组件：{1}</value>
+    <value>缺少必需组件（{0} 个）：{1}</value>
   </data>
   <data name="Settings_StandaloneDirectWmiUnavailable" xml:space="preserve">
-    <value>严重降级：HP WMI BIOS 直连接口不可用，已启用回退后端（核心风扇控制可用，部分依赖 HP 的功能可能受限）</value>
+    <value>直连不可用：HP WMI BIOS 直连接口不可用，已启用回退后端（核心风扇控制可用，部分依赖 HP 的功能可能受限）</value>
   </data>
   <data name="Settings_ResumeStatusSuspended" xml:space="preserve">
     <value>已挂起</value>
@@ -10025,7 +10025,7 @@
     <value>要解除适配器功耗钳制吗？</value>
   </data>
   <data name="L2_TgpUnlockBody" xml:space="preserve">
-    <value>这是一个实验性、尚未确认的功能：它会短暂放开两个由固件管理的 EC 位，发出一条 WMI 命令，然后测量 GPU 功耗是否真的发生了变化。&#10;&#10;写出它的人从未在真机上运行过。在它所依据的那次排查中，有人在小功率适配器上强行触发同一机制，结果把 GPU 留在了降级状态——驱动调用要 20 秒以上、无法渲染——直到重启才恢复，而那台机器本来就有 GPU 驱动崩溃的历史。&#10;&#10;只有接入的适配器明显高于本机额定需求时才会出现这个选项，这也是它唯一的保护条件。结果无法预览，一旦出问题，除了重启没有别的撤销办法。&#10;&#10;仍要尝试吗？</value>
+    <value>这是一个实验性、尚未确认的功能：它会短暂放开两个由固件管理的 EC 位，发出一条 WMI 命令，然后测量 GPU 功耗是否真的发生了变化。&#10;&#10;写出它的人从未在真机上运行过。在它所依据的那次排查中，有人在小功率适配器上强行触发同一机制，结果把 GPU 留在了受限状态——驱动调用要 20 秒以上、无法渲染——直到重启才恢复，而那台机器本来就有 GPU 驱动崩溃的历史。&#10;&#10;只有接入的适配器明显高于本机额定需求时才会出现这个选项，这也是它唯一的保护条件。结果无法预览，一旦出问题，除了重启没有别的撤销办法。&#10;&#10;仍要尝试吗？</value>
   </data>
   <data name="L2_TgpUnlockTitle" xml:space="preserve">
     <value>要尝试实验性的 GPU 功耗解锁吗？</value>
