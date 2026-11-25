@@ -601,23 +601,10 @@ namespace OmenCore.ViewModels
             private set => SetProperty(ref _lastRgbSyncBrush, value);
         }
 
-        public string LastRgbSyncVisualState
-        {
-            get
-            {
-                if (LastRgbSyncSummary.StartsWith("Sync failed", StringComparison.OrdinalIgnoreCase))
-                    return "blocked";
+        // Canonical state set where the summary is produced; the summary itself is localized.
+        private string _lastRgbSyncState = "confirmed";
 
-                if (LastRgbSyncSummary.StartsWith("Partial", StringComparison.OrdinalIgnoreCase) ||
-                    LastRgbSyncSummary.StartsWith("No RGB", StringComparison.OrdinalIgnoreCase) ||
-                    LastRgbSyncSummary.StartsWith("Ready", StringComparison.OrdinalIgnoreCase))
-                {
-                    return "degraded";
-                }
-
-                return "confirmed";
-            }
-        }
+        public string LastRgbSyncVisualState => _lastRgbSyncState;
 
         public string LastRgbSyncVisualLabel => LastRgbSyncVisualState switch
         {
@@ -1849,16 +1836,19 @@ namespace OmenCore.ViewModels
                         ? Strings.L2_SyncCompleteProviderOne
                         : string.Format(Strings.L2_SyncCompleteProvidersFormat, totalAttempted);
                     LastRgbSyncBrush = StatusToBrush(OmenCore.Services.Rgb.RgbProviderConnectionStatus.Connected);
+                    _lastRgbSyncState = "confirmed";
                 }
                 else if (totalSucceeded > 0)
                 {
                     LastRgbSyncSummary = string.Format(Strings.S2_SyncStartFormat, totalSucceeded, totalAttempted);
                     LastRgbSyncBrush = StatusToBrush(OmenCore.Services.Rgb.RgbProviderConnectionStatus.NoDevices);
+                    _lastRgbSyncState = "degraded";
                 }
                 else
                 {
                     LastRgbSyncSummary = Strings.S2_SyncFailedNoProviders;
                     LastRgbSyncBrush = StatusToBrush(OmenCore.Services.Rgb.RgbProviderConnectionStatus.Error);
+                    _lastRgbSyncState = "blocked";
                 }
 
                 LastRgbSyncDetail = $"{DateTime.Now:HH:mm:ss} - {e.EffectId}";
@@ -1877,6 +1867,7 @@ namespace OmenCore.ViewModels
             {
                 LastRgbSyncSummary = Strings.L2_NoRgbTargets;
                 LastRgbSyncBrush = StatusToBrush(OmenCore.Services.Rgb.RgbProviderConnectionStatus.NoDevices);
+                _lastRgbSyncState = "degraded";
             }
             else if (failed == 0)
             {
@@ -1884,16 +1875,19 @@ namespace OmenCore.ViewModels
                     ? Strings.S2_SyncCompleteOne
                     : string.Format(Strings.S2_SyncCompleteFormat, attempted);
                 LastRgbSyncBrush = StatusToBrush(OmenCore.Services.Rgb.RgbProviderConnectionStatus.Connected);
+                _lastRgbSyncState = "confirmed";
             }
             else if (succeeded > 0)
             {
                 LastRgbSyncSummary = string.Format(Strings.S2_SyncPartialTargetsFormat, succeeded, attempted);
                 LastRgbSyncBrush = StatusToBrush(OmenCore.Services.Rgb.RgbProviderConnectionStatus.NoDevices);
+                _lastRgbSyncState = "degraded";
             }
             else
             {
                 LastRgbSyncSummary = Strings.S2_SyncFailedNoTargets;
                 LastRgbSyncBrush = StatusToBrush(OmenCore.Services.Rgb.RgbProviderConnectionStatus.Error);
+                _lastRgbSyncState = "blocked";
             }
 
             LastRgbSyncDetail = $"{DateTime.Now:HH:mm:ss} - Static {colorHex}";

@@ -254,7 +254,7 @@
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
                         <Path Data="{StaticResource IconWarning}" Width="14" Height="14" Fill="{StaticResource WarningBrush}" Stretch="Uniform" Margin="0,0,6,0" VerticalAlignment="Center"/>
-                        <TextBlock Text="{Binding RemovalPreviewTitle}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}"/>
+                        <TextBlock Text="{Binding RemovalPreviewTitleDisplay}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}"/>
                     </StackPanel>
 
                     <TextBlock Text="{Binding RemovalPreviewSummary}" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>

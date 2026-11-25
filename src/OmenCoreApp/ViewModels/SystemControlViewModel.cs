@@ -973,24 +973,27 @@ namespace OmenCore.ViewModels
             }
         }
 
-        public string GpuPowerBoostVisualState
-        {
-            get
-            {
-                if (!GpuPowerBoostAvailable ||
-                    GpuPowerBoostStatus.StartsWith("Failed", StringComparison.OrdinalIgnoreCase) ||
-                    GpuPowerBoostStatus.StartsWith("Not supported", StringComparison.OrdinalIgnoreCase) ||
-                    GpuPowerBoostStatus.StartsWith("Not available", StringComparison.OrdinalIgnoreCase))
-                {
-                    return "blocked";
-                }
+        // Canonical state, set where the status is produced. The status text itself is localized,
+        // so it must never be parsed to decide what the chip says.
+        private bool _gpuPowerBoostConfirmed;
 
-                return GpuPowerBoostStatus.Contains("detected", StringComparison.OrdinalIgnoreCase) ||
-                       GpuPowerBoostStatus.Contains("restored", StringComparison.OrdinalIgnoreCase) ||
-                       GpuPowerBoostStatus.Contains("applied", StringComparison.OrdinalIgnoreCase)
-                    ? "confirmed"
-                    : "degraded";
-            }
+        public string GpuPowerBoostVisualState =>
+            !GpuPowerBoostAvailable ? "blocked" : (_gpuPowerBoostConfirmed ? "confirmed" : "degraded");
+
+        private void MarkGpuPowerBoostConfirmed()
+        {
+            if (_gpuPowerBoostConfirmed) return;
+            _gpuPowerBoostConfirmed = true;
+            OnPropertyChanged(nameof(GpuPowerBoostVisualState));
+            OnPropertyChanged(nameof(GpuPowerBoostVisualLabel));
+        }
+
+        private void MarkGpuPowerBoostNotConfirmed()
+        {
+            if (!_gpuPowerBoostConfirmed) return;
+            _gpuPowerBoostConfirmed = false;
+            OnPropertyChanged(nameof(GpuPowerBoostVisualState));
+            OnPropertyChanged(nameof(GpuPowerBoostVisualLabel));
         }
 
         public string GpuPowerBoostVisualLabel => GpuPowerBoostVisualState switch
@@ -3452,9 +3455,13 @@ namespace OmenCore.ViewModels
         // CPU Power Limits (PL1/PL2) Methods
         // ==========================================
 
+        /// <summary>True when the MSR readback returned 0 W/0 W (firmware-managed limits).</summary>
+        public bool CpuPowerLimitReadbackUnavailable { get; private set; }
+
         private void InitializeCpuPowerLimits()
         {
             bool is8d2fIntelCoreUltra = IsIntelCoreUltraOn8d2f();
+            CpuPowerLimitReadbackUnavailable = false;
 
             if (_msrAccess == null || !_msrAccess.IsAvailable)
             {
@@ -3484,6 +3491,7 @@ namespace OmenCore.ViewModels
 
                 if (pl1 <= 0 && pl2 <= 0)
                 {
+                    CpuPowerLimitReadbackUnavailable = true;
                     CpuPowerLimitsAvailable = true;
                     CpuPowerLimitsLocked = true;
                     CpuPl1Watts = Math.Max(CpuPl1Watts, 15);
@@ -3770,6 +3778,7 @@ namespace OmenCore.ViewModels
                     GpuPowerBoostStatus = (hasSavedPreference && !string.Equals(detectedLevel, savedLevel, StringComparison.OrdinalIgnoreCase))
                         ? string.Format(Strings.GpuBoost_DetectedWmiSavedFormat, BoostLevelName(detectedLevel), BoostLevelName(savedLevel ?? ""))
                         : string.Format(Strings.GpuBoost_DetectedWmiFormat, BoostLevelName(detectedLevel));
+                    MarkGpuPowerBoostConfirmed();
                     _logging.Info($"✓ GPU Power Boost available via WMI BIOS. Detected: {detectedLevel}, User pref: {savedLevel ?? "none"}");
                     return;
                 }
@@ -3800,6 +3809,7 @@ namespace OmenCore.ViewModels
                         GpuPowerBoostLevel = mappedLevel;
                     }
                     GpuPowerBoostStatus = string.Format(Strings.GpuBoost_DetectedOghFormat, BoostLevelName(mappedLevel));
+                    MarkGpuPowerBoostConfirmed();
                     _logging.Info($"✓ GPU Power Boost available via OGH. Detected: {mappedLevel}, User pref: {savedLevel ?? "none"}");
                     return;
                 }
@@ -3957,6 +3967,7 @@ namespace OmenCore.ViewModels
                         // BIOS accepted the command but hardware state didn't change — surface this clearly.
                         _logging.Warn($"⚠️ GPU power command accepted by BIOS but readback shows no change. This BIOS may not support WMI GPU power control (BIOS WMI reliability may be degraded).");
                         GpuPowerBoostStatus = Strings.GpuBoost_DegradedWarning;
+                        MarkGpuPowerBoostNotConfirmed();
                         // Still save so it re-attempts on next launch
                         SaveGpuPowerBoostToConfig();
                         return;
@@ -3983,6 +3994,7 @@ namespace OmenCore.ViewModels
                     }
 
                     _logging.Info($"✓ GPU Power Boost set to: {GpuPowerBoostLevel} via WMI BIOS");
+                    MarkGpuPowerBoostConfirmed();
                     
                     // Save to config for persistence (note: may still reset after sleep/reboot on some models)
                     SaveGpuPowerBoostToConfig();
@@ -4013,6 +4025,7 @@ namespace OmenCore.ViewModels
                         _ => Strings.GpuBoost_AppliedViaOgh
                     };
                     _logging.Info($"✓ GPU Power Boost set to: {GpuPowerBoostLevel} via OGH");
+                    MarkGpuPowerBoostConfirmed();
                     
                     // Save to config for persistence
                     SaveGpuPowerBoostToConfig();
@@ -4033,6 +4046,7 @@ namespace OmenCore.ViewModels
                     _ => Strings.GpuBoost_AppliedViaEc
                 };
                 _logging.Info($"✓ GPU Power Boost set to: {GpuPowerBoostLevel} via EC (experimental)");
+                MarkGpuPowerBoostConfirmed();
 
                 // Save to config for persistence
                 SaveGpuPowerBoostToConfig();
@@ -4045,6 +4059,7 @@ namespace OmenCore.ViewModels
             GpuPowerBoostStatus = string.Equals(GpuPowerBoostLevel, "Extended", StringComparison.OrdinalIgnoreCase)
                 ? Strings.SystemControlViewModel_TccNotAvailableWmi
                 : Strings.GpuBoost_ApplyFailedWmiEc;
+            MarkGpuPowerBoostNotConfirmed();
             _logging.Warn($"Failed to set GPU Power Boost to: {GpuPowerBoostLevel} - WMI and EC methods unavailable");
         }
 
@@ -4197,6 +4212,7 @@ namespace OmenCore.ViewModels
                                 _ => string.Format(Strings.GpuBoost_RestoredFormat, BoostLevelName(savedLevel))
                             }
                             : Strings.GpuBoost_RestoreNoChange;
+                        if (readbackOk) MarkGpuPowerBoostConfirmed();
                     });
                     return;
                 }
@@ -4223,6 +4239,7 @@ namespace OmenCore.ViewModels
                         GpuPowerBoostAvailable = true;
                         GpuPowerBoostLevel = savedLevel;
                         GpuPowerBoostStatus = string.Format(Strings.GpuBoost_RestoredOghFormat, BoostLevelName(savedLevel));
+                        MarkGpuPowerBoostConfirmed();
                     });
                     return;
                 }
@@ -4274,6 +4291,7 @@ namespace OmenCore.ViewModels
                                     "Extended" => string.Format(Strings.GpuBoost_RestoredEcFormat, Strings.GpuBoost_LevelExtended, Strings.GpuBoost_DetailPpab25W),
                                     _ => string.Format(Strings.GpuBoost_RestoredFormat, BoostLevelName(savedLevel))
                                 };
+                                MarkGpuPowerBoostConfirmed();
                             });
                             return;
                         }

@@ -100,3 +100,7 @@ test-build3/
 
 # Local security-hook state
 .mimosa/
+
+# Tooling state
+.mimosa/
+**/.mimosa/

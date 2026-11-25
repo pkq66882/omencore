@@ -10913,4 +10913,19 @@
   <data name="CorsairPreset_SyncWave" xml:space="preserve">
     <value>Sync Wave</value>
   </data>
+  <data name="Notify_JustNow" xml:space="preserve">
+    <value>Just now</value>
+  </data>
+  <data name="Notify_MinutesAgoFormat" xml:space="preserve">
+    <value>{0}m ago</value>
+  </data>
+  <data name="Notify_HoursAgoFormat" xml:space="preserve">
+    <value>{0}h ago</value>
+  </data>
+  <data name="Notify_DaysAgoFormat" xml:space="preserve">
+    <value>{0}d ago</value>
+  </data>
+  <data name="Notify_AgeDatePattern" xml:space="preserve">
+    <value>MMM d</value>
+  </data>
 </root>

@@ -261,7 +261,10 @@ namespace OmenCore.ViewModels
             // Load schedule rules from config
             foreach (var rule in _config.ScheduleRules)
             {
-                if (rule.RuleName == "New Rule") rule.RuleName = Strings.Settings_ScheduleNewRuleName;
+                if (rule.RuleName == "New Rule" || rule.RuleName == Strings.Settings_ScheduleNewRuleName)
+                {
+                    rule.RuleName = Strings.Settings_ScheduleNewRuleName;
+                }
                 ScheduleRules.Add(rule);
             }
 

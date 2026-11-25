@@ -813,11 +813,13 @@ namespace OmenCore.ViewModels
         private void SetStatusDone(string? details = null)
         {
             StatusMessage = string.IsNullOrWhiteSpace(details) ? Strings.SystemOptimizer_StatusDone : string.Format(Strings.SystemOptimizer_StatusDoneDetails, details);
+            ClearOperationProgress();
         }
 
         private void SetStatusFailed(string? reason)
         {
             StatusMessage = string.Format(Strings.SystemOptimizer_StatusFailedDetails, reason);
+            ClearOperationProgress();
         }
 
         private void HandleServiceStatus(string status)

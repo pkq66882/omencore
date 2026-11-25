@@ -1085,7 +1085,7 @@
     <value>同一电源还会通过另一条路径限制 CPU：AMD SMU 的四个功耗限制里有三个被固定在低值，重启设备也不会解除。这些值是直接写入的，在唤醒或更换电源适配器后会重新生效——因为这些事件会移除限制。</value>
   </data>
   <data name="DiagnosticsView_YourScreensWillGoBlackForAFewSecondsAndAny" xml:space="preserve">
-    <value>你的屏幕会黑几秒钟，所有正在使用 GPU 的程序都会失去它。游戏或渲染进行中请勿执行。</value>
+    <value>屏幕会黑几秒，正在使用 GPU 的程序会随之中断。游戏或渲染进行中请勿执行。</value>
   </data>
   <data name="DiagnosticsView_DropTheClamp" xml:space="preserve">
     <value>解除钳制</value>
@@ -1223,7 +1223,7 @@
     <value>风扇与散热控制</value>
   </data>
   <data name="FanControlView_ManageYourLaptopSCoolingPerformanceAllFanC" xml:space="preserve">
-    <value>管理笔记本的散热性能。全部风扇控制均通过笔记本的标准固件接口（WMI BIOS）进行，软件命令不会损坏硬件。</value>
+    <value>管理笔记本的散热表现。所有风扇控制都通过笔记本的标准固件接口（WMI BIOS）完成，软件命令不会损坏硬件。</value>
   </data>
   <data name="FanControlView_CurveActive" xml:space="preserve">
     <value>曲线已启用</value>
@@ -5132,7 +5132,7 @@
     <value>⛔ 过期</value>
   </data>
   <data name="DashboardViewModel_HealthUnknown" xml:space="preserve">
-    <value>? 未知</value>
+    <value>❔ 未知</value>
   </data>
   <data name="DashboardViewModel_JustNow" xml:space="preserve">
     <value>刚刚</value>
@@ -5633,7 +5633,7 @@
     <value>该更新需要手动下载（发行说明中缺少 SHA256）。</value>
   </data>
   <data name="UpdateViewModel_DownloadFailedManual" xml:space="preserve">
-    <value>下载失败。请查看发行说明进行手动下载。</value>
+    <value>下载失败。请打开发行说明手动下载。</value>
   </data>
   <data name="UpdateViewModel_InstallBlockedSha" xml:space="preserve">
     <value>在提供 SHA256 前无法安装</value>
@@ -7862,7 +7862,7 @@
     <value>确认移除高风险项</value>
   </data>
   <data name="Bloatware_RestorePointAskFormat" xml:space="preserve">
-    <value>移除 {0} 项前是否创建 Windows 还原点？&#10;&#10;建议在进行系统更改前创建。</value>
+    <value>移除 {0} 项前是否创建 Windows 还原点？&#10;&#10;建议在更改系统前创建。</value>
   </data>
   <data name="Bloatware_RestorePointAskTitle" xml:space="preserve">
     <value>创建还原点</value>
@@ -10908,5 +10908,20 @@
   </data>
   <data name="CorsairPreset_SyncWave" xml:space="preserve">
     <value>同步波浪</value>
+  </data>
+  <data name="Notify_JustNow" xml:space="preserve">
+    <value>刚刚</value>
+  </data>
+  <data name="Notify_MinutesAgoFormat" xml:space="preserve">
+    <value>{0} 分钟前</value>
+  </data>
+  <data name="Notify_HoursAgoFormat" xml:space="preserve">
+    <value>{0} 小时前</value>
+  </data>
+  <data name="Notify_DaysAgoFormat" xml:space="preserve">
+    <value>{0} 天前</value>
+  </data>
+  <data name="Notify_AgeDatePattern" xml:space="preserve">
+    <value>M月d日</value>
   </data>
 </root>

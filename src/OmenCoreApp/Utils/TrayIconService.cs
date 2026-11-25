@@ -132,6 +132,16 @@ namespace OmenCore.Utils
             UpdateTrayDisplay(null, EventArgs.Empty);
         }
 
+        /// <summary>Localized age label for the notification submenu (Core's TimeAgo is English-only).</summary>
+        private static string FormatNotificationAge(DateTime timestamp)
+        {
+            var elapsed = DateTime.Now - timestamp;
+            if (elapsed.TotalMinutes < 1) return Strings.Notify_JustNow;
+            if (elapsed.TotalMinutes < 60) return string.Format(Strings.Notify_MinutesAgoFormat, (int)elapsed.TotalMinutes);
+            if (elapsed.TotalHours < 24) return string.Format(Strings.Notify_HoursAgoFormat, (int)elapsed.TotalHours);
+            if (elapsed.TotalDays < 7) return string.Format(Strings.Notify_DaysAgoFormat, (int)elapsed.TotalDays);
+            return timestamp.ToString(Strings.Notify_AgeDatePattern);
+        }
         private void InitializeContextMenu()
         {
             // Use the fully templated dark menu to avoid default system gutters/white edges.
@@ -247,7 +257,7 @@ namespace OmenCore.Utils
                         {
                             var item = new MenuItem
                             {
-                                Header = $"{n.Title} — {n.TimeAgo}",
+                                Header = $"{n.Title} — {FormatNotificationAge(n.Timestamp)}",
                                 ToolTip = n.Message,
                                 FontWeight = n.IsRead ? FontWeights.Normal : FontWeights.Bold
                             };

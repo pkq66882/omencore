@@ -190,7 +190,9 @@ namespace OmenCore.ViewModels
         {
             get
             {
-                var label = Hardware.PowerLimitReadbackLabel.Describe(DetectedCapabilities?.ModelConfig?.SupportsPowerLimits ?? false, _systemControl?.CpuPowerLimitsStatus?.StartsWith("MSR package limits unavailable", StringComparison.Ordinal) == true);
+                var label = Hardware.PowerLimitReadbackLabel.Describe(
+                    DetectedCapabilities?.ModelConfig?.SupportsPowerLimits ?? false,
+                    _systemControl?.CpuPowerLimitReadbackUnavailable == true);
                 if (label == "✗ Not supported") return Strings.DiagnosticsView_PowerLimitNotSupported;
                 if (label == "✗ Firmware-managed (readback 0 W)") return Strings.DiagnosticsView_PowerLimitFirmwareManaged;
                 if (label == "✓ Supported") return Strings.DiagnosticsView_Supported;

@@ -4005,5 +4005,11 @@ namespace OmenCore.Localization
     public static string CorsairPreset_SyncStatic => Get(nameof(CorsairPreset_SyncStatic));
     public static string CorsairPreset_SyncWave => Get(nameof(CorsairPreset_SyncWave));
 
+    public static string Notify_AgeDatePattern => Get(nameof(Notify_AgeDatePattern));
+    public static string Notify_DaysAgoFormat => Get(nameof(Notify_DaysAgoFormat));
+    public static string Notify_HoursAgoFormat => Get(nameof(Notify_HoursAgoFormat));
+    public static string Notify_JustNow => Get(nameof(Notify_JustNow));
+    public static string Notify_MinutesAgoFormat => Get(nameof(Notify_MinutesAgoFormat));
+
     }
 }
