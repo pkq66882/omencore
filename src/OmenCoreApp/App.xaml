@@ -34,6 +34,7 @@
             <local:ModeDisplayNameConverter x:Key="ModeDisplayNameConverter" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:SceneDisplayNameConverter x:Key="SceneDisplayName" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:PlatformFilterDisplayConverter x:Key="PlatformFilterDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
+            <local:CorsairPresetNameDisplayConverter x:Key="CorsairPresetNameDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:AudioVizModeDisplayConverter x:Key="AudioVizModeDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:FxNameDisplayConverter x:Key="FxNameDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
             <local:RiskLevelDisplayConverter x:Key="RiskLevelDisplay" xmlns:local="clr-namespace:OmenCore.Utils" />
@@ -90,6 +91,9 @@
             </DataTemplate>
             <DataTemplate x:Key="RgbSurfaceItemTemplate">
                 <TextBlock Text="{Binding Converter={StaticResource SettingsTokenDisplay}, ConverterParameter=RgbSurface}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="CorsairPresetItemTemplate">
+                <TextBlock Text="{Binding Name, Converter={StaticResource CorsairPresetNameDisplay}}"/>
             </DataTemplate>
             <DataTemplate x:Key="PlatformFilterItemTemplate">
                 <TextBlock Text="{Binding Converter={StaticResource PlatformFilterDisplay}}"/>

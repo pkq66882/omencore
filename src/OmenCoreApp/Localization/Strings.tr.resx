@@ -10894,4 +10894,19 @@
   <data name="SystemControl_PerfVisualDegraded" xml:space="preserve">
     <value>Kısmen etkin</value>
   </data>
+  <data name="ColorPicker_Hue" xml:space="preserve">
+    <value>Ton</value>
+  </data>
+  <data name="ColorPicker_Saturation" xml:space="preserve">
+    <value>Doygunluk</value>
+  </data>
+  <data name="ColorPicker_Brightness" xml:space="preserve">
+    <value>Parlaklık</value>
+  </data>
+  <data name="CorsairPreset_SyncStatic" xml:space="preserve">
+    <value>Eşzamanlı Sabit</value>
+  </data>
+  <data name="CorsairPreset_SyncWave" xml:space="preserve">
+    <value>Eşzamanlı Dalga</value>
+  </data>
 </root>

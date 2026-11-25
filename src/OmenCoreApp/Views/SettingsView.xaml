@@ -1281,7 +1281,7 @@
                                       ItemsSource="{Binding MaxAutoReturnModeOptions}"
                                       ItemTemplate="{StaticResource MaxAutoReturnItemTemplate}"
                                       AutomationProperties.Name="{x:Static loc:Strings.SettingsView_ReturnMaxFanModeToAuto}"/>
-                            <ComboBox Grid.Column="2" Margin="8,0,0,0" VerticalAlignment="Center" MinWidth="64"
+                            <ComboBox Grid.Column="2" Margin="8,0,0,0" VerticalAlignment="Center" MinWidth="86"
                                       SelectedItem="{Binding MaxAutoReturnTimerMinutes, Mode=TwoWay}"
                                       ItemsSource="{Binding MaxAutoReturnTimerOptions}"
                                       ItemTemplate="{StaticResource MinutesItemTemplate}"

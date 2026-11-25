@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using OmenCore.Localization;
 
 namespace OmenCore.Controls
 {
@@ -72,7 +73,7 @@ namespace OmenCore.Controls
             Grid.SetColumn(slidersPanel, 1);
 
             // Hue slider
-            var hueLabel = new TextBlock { Text = "Hue", FontSize = 11, Margin = new Thickness(0, 0, 0, 2) };
+            var hueLabel = new TextBlock { Text = Strings.ColorPicker_Hue, FontSize = 11, Margin = new Thickness(0, 0, 0, 2) };
             hueLabel.SetResourceReference(TextBlock.ForegroundProperty, "TextSecondaryBrush");
             slidersPanel.Children.Add(hueLabel);
 
@@ -82,7 +83,7 @@ namespace OmenCore.Controls
             slidersPanel.Children.Add(_hueSlider);
 
             // Saturation slider
-            var satLabel = new TextBlock { Text = "Saturation", FontSize = 11, Margin = new Thickness(0, 8, 0, 2) };
+            var satLabel = new TextBlock { Text = Strings.ColorPicker_Saturation, FontSize = 11, Margin = new Thickness(0, 8, 0, 2) };
             satLabel.SetResourceReference(TextBlock.ForegroundProperty, "TextSecondaryBrush");
             slidersPanel.Children.Add(satLabel);
 
@@ -91,7 +92,7 @@ namespace OmenCore.Controls
             slidersPanel.Children.Add(_saturationSlider);
 
             // Brightness slider
-            var brightLabel = new TextBlock { Text = "Brightness", FontSize = 11, Margin = new Thickness(0, 8, 0, 2) };
+            var brightLabel = new TextBlock { Text = Strings.ColorPicker_Brightness, FontSize = 11, Margin = new Thickness(0, 8, 0, 2) };
             brightLabel.SetResourceReference(TextBlock.ForegroundProperty, "TextSecondaryBrush");
             slidersPanel.Children.Add(brightLabel);
 

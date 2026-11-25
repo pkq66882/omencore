@@ -10894,4 +10894,19 @@
   <data name="SystemControl_PerfVisualDegraded" xml:space="preserve">
     <value>部分生效</value>
   </data>
+  <data name="ColorPicker_Hue" xml:space="preserve">
+    <value>色相</value>
+  </data>
+  <data name="ColorPicker_Saturation" xml:space="preserve">
+    <value>饱和度</value>
+  </data>
+  <data name="ColorPicker_Brightness" xml:space="preserve">
+    <value>亮度</value>
+  </data>
+  <data name="CorsairPreset_SyncStatic" xml:space="preserve">
+    <value>同步静态</value>
+  </data>
+  <data name="CorsairPreset_SyncWave" xml:space="preserve">
+    <value>同步波浪</value>
+  </data>
 </root>

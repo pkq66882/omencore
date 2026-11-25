@@ -336,6 +336,16 @@ namespace OmenCore.Utils
             }
         };
 
+        /// <summary>Localized default Corsair lighting preset names; user-created names pass through.</summary>
+        public static string CorsairPreset(string? name)
+        {
+            return name switch
+            {
+                "Sync Static" => Strings.CorsairPreset_SyncStatic,
+                "Sync Wave" => Strings.CorsairPreset_SyncWave,
+                _ => name ?? string.Empty
+            };
+        }
         /// <summary>Localized game-library platform filter (enum name to label; brands pass through).</summary>
         public static string PlatformFilter(object? value)
         {
@@ -447,6 +457,15 @@ namespace OmenCore.Utils
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             => DisplayNames.Fx(value);
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            => throw new NotSupportedException();
+    }
+    /// <summary>Default Corsair lighting preset names shown in the preset picker.</summary>
+    public class CorsairPresetNameDisplayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            => DisplayNames.CorsairPreset(value as string);
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
             => throw new NotSupportedException();

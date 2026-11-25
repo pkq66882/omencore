@@ -10894,4 +10894,19 @@
   <data name="SystemControl_PerfVisualDegraded" xml:space="preserve">
     <value>Частично активно</value>
   </data>
+  <data name="ColorPicker_Hue" xml:space="preserve">
+    <value>Оттенок</value>
+  </data>
+  <data name="ColorPicker_Saturation" xml:space="preserve">
+    <value>Насыщенность</value>
+  </data>
+  <data name="ColorPicker_Brightness" xml:space="preserve">
+    <value>Яркость</value>
+  </data>
+  <data name="CorsairPreset_SyncStatic" xml:space="preserve">
+    <value>Синхронный статичный</value>
+  </data>
+  <data name="CorsairPreset_SyncWave" xml:space="preserve">
+    <value>Синхронная волна</value>
+  </data>
 </root>

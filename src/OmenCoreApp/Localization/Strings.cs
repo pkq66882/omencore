@@ -3999,5 +3999,11 @@ namespace OmenCore.Localization
     public static string SystemControl_PerfVisualConfirmed => Get(nameof(SystemControl_PerfVisualConfirmed));
     public static string SystemControl_PerfVisualDegraded => Get(nameof(SystemControl_PerfVisualDegraded));
 
+    public static string ColorPicker_Brightness => Get(nameof(ColorPicker_Brightness));
+    public static string ColorPicker_Hue => Get(nameof(ColorPicker_Hue));
+    public static string ColorPicker_Saturation => Get(nameof(ColorPicker_Saturation));
+    public static string CorsairPreset_SyncStatic => Get(nameof(CorsairPreset_SyncStatic));
+    public static string CorsairPreset_SyncWave => Get(nameof(CorsairPreset_SyncWave));
+
     }
 }

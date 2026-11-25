@@ -670,7 +670,7 @@
                                       Style="{StaticResource ModernComboBox}"
                                       ItemsSource="{Binding CorsairLightingPresets}"
                                       SelectedItem="{Binding SelectedCorsairLightingPreset}"
-                                      DisplayMemberPath="Name"
+                                      ItemTemplate="{StaticResource CorsairPresetItemTemplate}"
                                       Margin="0,0,12,0"/>
                             
                             <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
@@ -831,7 +831,7 @@
                                            Foreground="{StaticResource TextSecondaryBrush}" Margin="0,0,0,12"/>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                     <controls:ColorPickerControl HexValue="{Binding SystemColorHex, Mode=TwoWay}" Width="220"/>
-                                    <Button Content="{x:Static loc:Strings.LightingView_ApplyToSystem}" Style="{StaticResource ModernButton}" Command="{Binding ApplyToSystemCommand}" Padding="16,8" Margin="12,0,0,0"/>
+                                    <Button Content="{x:Static loc:Strings.LightingView_ApplyToSystem}" Style="{StaticResource ModernButton}" Command="{Binding ApplyToSystemCommand}" Padding="16,8" Margin="12,0,0,0" VerticalAlignment="Center" MinHeight="38"/>
                                 </StackPanel>
                             </StackPanel>
                         </Border>
