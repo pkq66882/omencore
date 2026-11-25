@@ -2921,19 +2921,19 @@
     <value>硬件工作进程</value>
   </data>
   <data name="SettingsView_EnableOrphanTimeout" xml:space="preserve">
-    <value>启用孤儿超时</value>
+    <value>主程序关闭后自动退出</value>
   </data>
   <data name="SettingsView_WorkerProcessExitsAfterMainAppClosesIfNoRe" xml:space="preserve">
-    <value>主应用关闭后若无重连，工作进程将退出</value>
+    <value>主程序关闭后，如果工作进程一直没有重新连接，就会自动退出</value>
   </data>
   <data name="SettingsView_OrphanTimeoutDuration" xml:space="preserve">
-    <value>孤儿超时时长</value>
+    <value>退出前等待时长</value>
   </data>
   <data name="SettingsView_MinutesToWaitForReconnectionBeforeWorkerEx" xml:space="preserve">
-    <value>工作进程退出前等待重连的分钟数</value>
+    <value>退出前最多等待重新连接的分钟数</value>
   </data>
   <data name="SettingsView_HardwareWorkerOrphanTimeoutMinutes" xml:space="preserve">
-    <value>硬件工作进程孤儿超时（分钟）</value>
+    <value>硬件工作进程失联超时（分钟）</value>
   </data>
   <data name="SettingsView_PowerAutomation" xml:space="preserve">
     <value>电源自动化</value>

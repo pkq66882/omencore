@@ -602,7 +602,7 @@ namespace OmenCore.ViewModels
         }
 
         // Canonical state set where the summary is produced; the summary itself is localized.
-        private string _lastRgbSyncState = "confirmed";
+        private string _lastRgbSyncState = "degraded";
 
         public string LastRgbSyncVisualState => _lastRgbSyncState;
 
