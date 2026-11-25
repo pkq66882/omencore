@@ -4513,9 +4513,6 @@
   <data name="UpdateViewModel_YouAreRunningLatest" xml:space="preserve">
     <value>你正在运行最新版本。</value>
   </data>
-  <data name="UpdateViewModel_YouAreRunningLatestCmp" xml:space="preserve">
-    <value>你正在运行最新版本。</value>
-  </data>
   <data name="DiagnosticExportControl_Cancel" xml:space="preserve">
     <value>取消</value>
   </data>

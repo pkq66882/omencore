@@ -4763,9 +4763,6 @@
   <data name="UpdateViewModel_YouAreRunningLatest" xml:space="preserve">
     <value>You are running the latest version.</value>
   </data>
-  <data name="UpdateViewModel_YouAreRunningLatestCmp" xml:space="preserve">
-    <value>You are running the latest version.</value>
-  </data>
   <data name="AdvancedView_Active" xml:space="preserve">
     <value>ACTIVE</value>
   </data>

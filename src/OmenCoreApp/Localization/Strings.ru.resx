@@ -4513,9 +4513,6 @@
   <data name="UpdateViewModel_YouAreRunningLatest" xml:space="preserve">
     <value>У вас последняя версия.</value>
   </data>
-  <data name="UpdateViewModel_YouAreRunningLatestCmp" xml:space="preserve">
-    <value>У вас последняя версия.</value>
-  </data>
   <data name="DiagnosticExportControl_Cancel" xml:space="preserve">
     <value>Отмена</value>
   </data>

@@ -4513,9 +4513,6 @@
   <data name="UpdateViewModel_YouAreRunningLatest" xml:space="preserve">
     <value>En son sürümü çalıştırıyorsunuz.</value>
   </data>
-  <data name="UpdateViewModel_YouAreRunningLatestCmp" xml:space="preserve">
-    <value>En son sürümü çalıştırıyorsunuz.</value>
-  </data>
   <data name="DiagnosticExportControl_Cancel" xml:space="preserve">
     <value>İptal</value>
   </data>

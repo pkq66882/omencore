@@ -1759,7 +1759,6 @@ namespace OmenCore.Localization
     public static string TuningStatus_VerifiedNotControlled => Get(nameof(TuningStatus_VerifiedNotControlled));
     public static string TuningStatus_VerifiedReadback => Get(nameof(TuningStatus_VerifiedReadback));
     public static string UpdateViewModel_YouAreRunningLatest => Get(nameof(UpdateViewModel_YouAreRunningLatest));
-    public static string UpdateViewModel_YouAreRunningLatestCmp => Get(nameof(UpdateViewModel_YouAreRunningLatestCmp));
 
     // Auto-extracted literals from AboutWindow.xaml
 
