@@ -6,8 +6,20 @@ using Xunit;
 
 namespace OmenCoreApp.Tests.Services
 {
-    public class ModelIdentityResolutionSummaryTests
+    public class ModelIdentityResolutionSummaryTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _originalUICulture = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public ModelIdentityResolutionSummaryTests()
+        {
+            // These assertions use canonical English wording; pin the UI culture.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _originalUICulture;
+        }
         [Fact]
         public void Build_SeparatesBoardProductIdFromHpSupportProductNumber()
         {

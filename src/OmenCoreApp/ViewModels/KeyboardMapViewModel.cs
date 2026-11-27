@@ -572,7 +572,7 @@ namespace OmenCore.ViewModels
 
                 if (restored > 0)
                     Status = string.Format(Strings.KbdMap_RestoredFormat, restored) +
-                             "Apply to send it to the keyboard.";
+                             Strings.KbdMap_StatusApplyToSend;
 
                 _logging.Info($"[KeyboardMap] Restored {restored} of {saved.Count} saved cells");
             }

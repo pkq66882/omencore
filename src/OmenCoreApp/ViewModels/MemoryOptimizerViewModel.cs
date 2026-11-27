@@ -1170,7 +1170,7 @@ namespace OmenCore.ViewModels
             catch (Exception ex)
             {
                 _logger.Warn($"Failed to open process location: {ex.Message}");
-                SetStatusFailed("Failed to open process location");
+                SetStatusFailed(Strings.Mem_OpenProcessLocationFailed);
             }
         }
 

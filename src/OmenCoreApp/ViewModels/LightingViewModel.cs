@@ -459,11 +459,11 @@ namespace OmenCore.ViewModels
 
                 if (IsKeyboardLightingAvailable && _keyboardLightingService != null)
                 {
-                    parts.Add($"HP Keyboard ({_keyboardLightingService.BackendType})");
+                    parts.Add(string.Format(Strings.Lighting_OwnershipKeyboardFormat, _keyboardLightingService.BackendType));
                 }
                 else if (_keyboardLightingService?.IsPerKeyCapableHardware == true)
                 {
-                    parts.Add("HP Keyboard (unavailable)");
+                    parts.Add(Strings.Lighting_OwnershipKeyboardUnavailable);
                 }
 
                 var providers = _rgbManager?.AvailableProviders
@@ -780,15 +780,15 @@ namespace OmenCore.ViewModels
         {
             if (isPerKeyLightingAvailable)
             {
-                return "Per-key RGB editor is active for this keyboard.";
+                return Strings.Lighting_PerKeyEditorActive;
             }
 
             if (isPerKeyHardwareCapable)
             {
-                return "Per-key RGB capable hardware detected. OmenCore currently cannot open the per-key editor on this backend yet; zone lighting remains available in this build.";
+                return Strings.Lighting_PerKeyCapableUnsupported;
             }
 
-            return "Per-key RGB is available on select OMEN Max models with HID per-key keyboards. This keyboard does not support per-key control.";
+            return Strings.Lighting_PerKeyUnsupported;
         }
         
         /// <summary>
@@ -2403,7 +2403,7 @@ namespace OmenCore.ViewModels
                 }
 
                 _logging.Info($"✓ Applied keyboard zone colors: Z1={_zone1ColorHex}, Z2={_zone2ColorHex}, Z3={_zone3ColorHex}, Z4={_zone4ColorHex}");
-                KeyboardRestoreStatusText = string.Format(Strings.Lighting_RestoreStatusFormat, _keyboardLightingService.LastApplyStatus, _keyboardLightingService.LastApplySurface, backendHint);
+                KeyboardRestoreStatusText = string.Format(Strings.Lighting_RestoreStatusFormat, DisplayNames.KeyboardApplyStatus(_keyboardLightingService.LastApplyStatus), DisplayNames.KeyboardSurface(_keyboardLightingService.LastApplySurface), backendHint);
                 await Task.CompletedTask;
             }, Strings.Lighting_StatusApplyingKeyboardColors);
         }
@@ -2442,7 +2442,7 @@ namespace OmenCore.ViewModels
 
                 SaveRgbSurfaceObservationProbeMetadata(updateSurface: false);
                 RgbSurfaceObservationStatusText =
-                    string.Format(Strings.L2_ProbeSentFormat, KeyboardLightingBackend, _keyboardLightingService.LastApplyStatus);
+                    string.Format(Strings.L2_ProbeSentFormat, KeyboardLightingBackend);
                 _logging.Info($"RGB observed-surface probe applied {RgbObservationProbeColorHex} via {KeyboardLightingBackend}; surface selection pending");
             }, Strings.Lighting_StatusProbingSurface);
         }
@@ -2655,7 +2655,11 @@ namespace OmenCore.ViewModels
                 ? RgbObservationProbeColorHex
                 : settings.ObservedProbeColorHex.Trim();
 
-            return $"Observed {settings.ObservedSurface} using {backend} at {settings.ObservedAtUtc.Value.ToLocalTime():g}; probe {color}.";
+            return string.Format(Strings.Lighting_ObservationStatusFormat,
+                DisplayNames.KeyboardSurface(settings.ObservedSurface),
+                backend,
+                settings.ObservedAtUtc.Value.ToLocalTime().ToString("g"),
+                color);
         }
         
         private void SaveKeyboardColorsToConfig()

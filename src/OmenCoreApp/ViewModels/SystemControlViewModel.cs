@@ -953,9 +953,21 @@ namespace OmenCore.ViewModels
         private void RefreshGpuPowerPolicy() => Task.Run(() =>
         {
             var policy = NvmlPowerPolicy.Read(new GpuPowerStateProbe());
-            var text = policy.HasData ? policy.Describe() : "";
+            var text = policy.HasData ? FormatGpuPowerPolicy(policy) : "";
             System.Windows.Application.Current?.Dispatcher.BeginInvoke(() => GpuPowerPolicyText = text);
         });
+
+        private static string FormatGpuPowerPolicy(OmenCore.Hardware.NvmlPowerPolicy policy)
+        {
+            static string W(double? v) => v.HasValue ? $"{v.Value:0.#} W" : Strings.Nvidia_PowerPolicyNotReported;
+            var text = string.Format(Strings.Nvidia_PowerPolicyFormat,
+                W(policy.EnforcedLimitW), W(policy.DefaultLimitW), W(policy.MinLimitW), W(policy.MaxLimitW), W(policy.DrawW));
+            if (policy.EnforcedLimitW.HasValue && policy.MaxLimitW.HasValue && policy.EnforcedLimitW.Value + 0.5 < policy.MaxLimitW.Value)
+            {
+                text += Strings.Nvidia_PowerPolicyHeldDownNote;
+            }
+            return text;
+        }
 
         private string _gpuPowerBoostStatus = "Detecting...";
         public string GpuPowerBoostStatus

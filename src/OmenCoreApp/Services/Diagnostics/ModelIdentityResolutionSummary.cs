@@ -80,7 +80,7 @@ namespace OmenCore.Services.Diagnostics
             PopulateCapabilityResolution(summary, effectiveCapabilities);
             PopulateKeyboardResolution(summary, systemInfo);
 
-            summary.RawIdentitySummary = $"WMI Model: {summary.RawWmiModel} | Baseboard ProductId: {summary.RawBaseboardProduct} | System SKU: {summary.RawSystemSku} | System product identifying number: {summary.RawSystemProductIdentifyingNumber} | HP support product: {summary.HpSupportProductNumber}";
+            summary.RawIdentitySummary = string.Format(Strings.Settings_ModelRawIdentityFormat, summary.RawWmiModel, summary.RawBaseboardProduct, summary.RawSystemSku, summary.RawSystemProductIdentifyingNumber, summary.HpSupportProductNumber);
             summary.Summary = BuildShortSummary(summary);
             summary.ClipboardSummary = BuildClipboardSummary(summary);
             summary.TraceText = BuildTraceText(summary, systemInfo);
@@ -110,7 +110,7 @@ namespace OmenCore.Services.Diagnostics
                 summary.Confidence = "Low";
                 summary.BadgeText = "Unknown";
                 summary.BadgeTone = "error";
-                summary.WarningText = "Capability detection did not resolve a model profile.";
+                summary.WarningText = Strings.Settings_WarnNoResolvedProfile;
                 return;
             }
 
@@ -129,7 +129,7 @@ namespace OmenCore.Services.Diagnostics
                 summary.BadgeTone = resolvedModel.UserVerified ? "success" : "warning";
                 if (!resolvedModel.UserVerified)
                 {
-                    summary.WarningText = "Capability profile matched by ProductId, but the entry is not user-verified yet.";
+                    summary.WarningText = Strings.Settings_WarnProductIdUnverified;
                 }
                 return;
             }
@@ -156,9 +156,9 @@ namespace OmenCore.Services.Diagnostics
                 summary.BadgeTone = "error";
                 summary.WarningText = BuildFallbackWarning(
                     summary,
-                    "No exact model entry matched; capability defaults were inferred from the broader model family.",
-                    "HP system detected, but no validated OMEN/Victus model mapping was found; capability defaults were inferred from a broad family match.",
-                    "OMEN/Victus hints were detected, but the specific model could not be verified; capability defaults were inferred from a broad family match.");
+                    Strings.Settings_WarnNoExactModelFamily,
+                    Strings.Settings_WarnHpNoValidatedMapping,
+                    Strings.Settings_WarnOmenHintsUnverified);
                 return;
             }
 
@@ -170,9 +170,9 @@ namespace OmenCore.Services.Diagnostics
                 summary.BadgeTone = "error";
                 summary.WarningText = BuildFallbackWarning(
                     summary,
-                    "No exact model or family entry matched; default capabilities are in use.",
-                    "HP system detected, but no validated OMEN/Victus mapping was found; generic default capabilities are in use.",
-                    "OMEN/Victus hints were detected, but model identity confidence is low; generic default capabilities are in use.");
+                    Strings.SettingsViewModel_WarnNoModelMatch,
+                    Strings.Settings_WarnHpNoValidatedMappingDefaults,
+                    Strings.Settings_WarnOmenHintsLowConfidence);
                 return;
             }
 
@@ -182,9 +182,9 @@ namespace OmenCore.Services.Diagnostics
             summary.BadgeTone = "error";
             summary.WarningText = BuildFallbackWarning(
                 summary,
-                "Capability profile came from a runtime fallback path and should be treated as provisional.",
-                "HP system detected, but capability profile came from a runtime fallback path; treat this mapping as provisional.",
-                "OMEN/Victus hints were detected, but capability profile came from a runtime fallback path; treat this mapping as provisional.");
+                Strings.Settings_WarnRuntimeFallbackProvisional,
+                Strings.Settings_WarnHpRuntimeFallbackProvisional,
+                Strings.Settings_WarnOmenRuntimeFallbackProvisional);
         }
 
         private static void PopulateKeyboardResolution(ModelIdentityResolutionSummary summary, SystemInfo systemInfo)
@@ -208,7 +208,7 @@ namespace OmenCore.Services.Diagnostics
                 summary.KeyboardModel = "Unknown";
                 summary.KeyboardResolutionSource = "No database match";
                 summary.KeyboardConfidence = "Low";
-                summary.KeyboardWarningText = "Keyboard profile could not be matched from the current ProductId or WMI model.";
+                summary.KeyboardWarningText = Strings.SettingsViewModel_WarnKeyboardNoMatch;
                 return;
             }
 
@@ -221,7 +221,7 @@ namespace OmenCore.Services.Diagnostics
             {
                 summary.KeyboardResolutionSource = "Ambiguous ProductId + model-name disambiguation";
                 summary.KeyboardConfidence = effectiveKeyboardConfig.UserVerified ? "Medium" : "Low";
-                summary.KeyboardWarningText = "Keyboard ProductId is shared across models; the profile was selected using the WMI model context.";
+                summary.KeyboardWarningText = Strings.SettingsViewModel_WarnKeyboardSharedProductId;
                 return;
             }
 
@@ -231,7 +231,7 @@ namespace OmenCore.Services.Diagnostics
                 summary.KeyboardConfidence = effectiveKeyboardConfig.UserVerified ? "High" : "Medium";
                 if (!effectiveKeyboardConfig.UserVerified)
                 {
-                    summary.KeyboardWarningText = "Keyboard profile matched by ProductId, but the entry is not user-verified yet.";
+                    summary.KeyboardWarningText = Strings.SettingsViewModel_WarnKeyboardUnverified;
                 }
                 return;
             }
@@ -240,7 +240,7 @@ namespace OmenCore.Services.Diagnostics
             {
                 summary.KeyboardResolutionSource = "Model-name series match";
                 summary.KeyboardConfidence = effectiveKeyboardConfig.UserVerified ? "Medium" : "Low";
-                summary.KeyboardWarningText = "Keyboard profile was inferred from the model series instead of an exact ProductId match.";
+                summary.KeyboardWarningText = Strings.SettingsViewModel_WarnKeyboardSeriesInferred;
                 return;
             }
 
@@ -248,21 +248,30 @@ namespace OmenCore.Services.Diagnostics
             {
                 summary.KeyboardResolutionSource = "Partial ProductId match";
                 summary.KeyboardConfidence = effectiveKeyboardConfig.UserVerified ? "Medium" : "Low";
-                summary.KeyboardWarningText = "Keyboard profile was selected from a partial ProductId match and should be treated as provisional.";
+                summary.KeyboardWarningText = Strings.SettingsViewModel_WarnKeyboardPartialProvisional;
                 return;
             }
 
             summary.KeyboardResolutionSource = "Heuristic match";
             summary.KeyboardConfidence = "Low";
-            summary.KeyboardWarningText = "Keyboard profile came from a heuristic fallback path and should be validated before relying on it.";
+            summary.KeyboardWarningText = Strings.SettingsViewModel_WarnKeyboardHeuristic;
         }
 
         private static string BuildShortSummary(ModelIdentityResolutionSummary summary)
         {
             string Src(string s) => s switch
             {
-                "Default fallback" => Strings.SettingsViewModel_BadgeDefaultFallback,
-                "No database match" => Strings.SettingsViewModel_SourceNoDatabaseMatch,
+                "No resolved capability profile" => Strings.Settings_ModelSourceNoResolvedProfile,
+                "Exact ProductId" => Strings.Settings_ModelSourceExactProductId,
+                "Family fallback" => Strings.Settings_ModelSourceFamilyFallback,
+                "Default fallback" => Strings.Settings_ModelSourceDefaultFallback,
+                "Runtime fallback" => Strings.Settings_ModelSourceRuntimeFallback,
+                "No database match" => Strings.Settings_ModelSourceNoDatabaseMatch,
+                "Ambiguous ProductId + model-name disambiguation" => Strings.Settings_ModelSourceAmbiguousProductId,
+                "Model-name series match" => Strings.Settings_ModelSourceModelSeriesMatch,
+                "Partial ProductId match" => Strings.Settings_ModelSourcePartialProductId,
+                "Heuristic match" => Strings.Settings_ModelSourceHeuristic,
+                "Unknown" => Strings.Settings_ModelSourceUnknown,
                 _ => s
             };
             string Conf(string c) => c switch
@@ -278,7 +287,7 @@ namespace OmenCore.Services.Diagnostics
                     ? (summary.HasOmenVictusHint ? Strings.SettingsViewModel_PlatformHpOmen : Strings.SettingsViewModel_PlatformHp)
                 : Strings.SettingsViewModel_PlatformNonHp;
 
-            return string.Format(Strings.SettingsViewModel_IdentitySummaryFormat,
+            return string.Format(Strings.Settings_ModelSummaryFormat,
                 Model(summary.ResolvedModel), Src(summary.ResolutionSource), Conf(summary.Confidence), platformQualifier,
                 Model(summary.KeyboardModel), Src(summary.KeyboardResolutionSource), Conf(summary.KeyboardConfidence));
         }
@@ -410,7 +419,7 @@ namespace OmenCore.Services.Diagnostics
             {
                     if (summary.HasOmenVictusHint)
                     {
-                        return $"{omenHint} Model name contains OMEN/Victus branding, but exact model is not in database.";
+                        return $"{omenHint} {Strings.Settings_WarnOmenBrandingExactModelMissing}";
                     }
                     return hpSpecific;
             }

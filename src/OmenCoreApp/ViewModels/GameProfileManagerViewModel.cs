@@ -164,22 +164,22 @@ namespace OmenCore.ViewModels
                 return null;
 
             if (string.IsNullOrWhiteSpace(profile.Name))
-                return "Profile name is required";
+                return Strings.GameProfile_ValidationNameRequired;
 
             if (profile.Name.Length > 100)
-                return "Profile name must be 100 characters or less";
+                return Strings.GameProfile_ValidationNameTooLong;
 
             if (string.IsNullOrWhiteSpace(profile.ExecutableName))
-                return "Executable name is required";
+                return Strings.GameProfile_ValidationExeRequired;
 
             if (!profile.ExecutableName.EndsWith(".exe", StringComparison.OrdinalIgnoreCase))
-                return "Executable must end with .exe";
+                return Strings.GameProfile_ValidationExeSuffix;
 
             if (profile.CpuCoreOffsetMv < -200 || profile.CpuCoreOffsetMv > 0)
-                return "CPU undervolt must be between -200 and 0 mV";
+                return Strings.GameProfile_ValidationUndervoltRange;
 
             if (profile.Priority < 0 || profile.Priority > 100)
-                return "Priority must be between 0 and 100";
+                return Strings.GameProfile_ValidationPriorityRange;
 
             return null;
         }

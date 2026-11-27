@@ -4,8 +4,20 @@ using Xunit;
 
 namespace OmenCoreApp.Tests.ViewModels
 {
-    public class LightingViewModelPerKeyCapabilityTests
+    public class LightingViewModelPerKeyCapabilityTests : IDisposable
     {
+        private readonly System.Globalization.CultureInfo _originalUICulture = System.Globalization.CultureInfo.CurrentUICulture;
+
+        public LightingViewModelPerKeyCapabilityTests()
+        {
+            // These assertions use canonical English wording; pin the UI culture.
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+        }
+
+        public void Dispose()
+        {
+            System.Globalization.CultureInfo.CurrentUICulture = _originalUICulture;
+        }
         [Fact]
         public void BuildPerKeyCapabilitySummary_WhenPerKeyEditorActive_ReturnsActiveMessage()
         {

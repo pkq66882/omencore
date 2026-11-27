@@ -10921,4 +10921,274 @@
   <data name="Notify_AgeDatePattern" xml:space="preserve">
     <value>d MMM</value>
   </data>
+  <data name="Settings_ModelSummaryFormat" xml:space="preserve">
+    <value>{0} (kaynak: {1}; güven: {2}); {3}. Klavye: {4} (kaynak: {5}; güven: {6}).</value>
+  </data>
+  <data name="Settings_ModelSourceNoResolvedProfile" xml:space="preserve">
+    <value>Yetenek profili çözümlenmedi</value>
+  </data>
+  <data name="Settings_ModelSourceExactProductId" xml:space="preserve">
+    <value>Tam ProductId</value>
+  </data>
+  <data name="Settings_ModelSourceFamilyFallback" xml:space="preserve">
+    <value>Seri geri dönüşü</value>
+  </data>
+  <data name="Settings_ModelSourceDefaultFallback" xml:space="preserve">
+    <value>Varsayılan geri dönüş</value>
+  </data>
+  <data name="Settings_ModelSourceRuntimeFallback" xml:space="preserve">
+    <value>Çalışma zamanı geri dönüşü</value>
+  </data>
+  <data name="Settings_ModelSourceNoDatabaseMatch" xml:space="preserve">
+    <value>Veritabanında eşleşme yok</value>
+  </data>
+  <data name="Settings_ModelSourceAmbiguousProductId" xml:space="preserve">
+    <value>Belirsiz ProductId, model adıyla ayrıştırıldı</value>
+  </data>
+  <data name="Settings_ModelSourceModelSeriesMatch" xml:space="preserve">
+    <value>Model serisi eşleşmesi</value>
+  </data>
+  <data name="Settings_ModelSourcePartialProductId" xml:space="preserve">
+    <value>Kısmi ProductId eşleşmesi</value>
+  </data>
+  <data name="Settings_ModelSourceHeuristic" xml:space="preserve">
+    <value>Sezgisel eşleşme</value>
+  </data>
+  <data name="Settings_ModelNone" xml:space="preserve">
+    <value>yok</value>
+  </data>
+  <data name="Settings_WarnNoResolvedProfile" xml:space="preserve">
+    <value>Yetenek algılama bir model profili çözümleyemedi.</value>
+  </data>
+  <data name="Settings_WarnProductIdUnverified" xml:space="preserve">
+    <value>Yetenek profili ProductId ile eşleşti ancak kayıt henüz kullanıcı doğrulamasından geçmedi.</value>
+  </data>
+  <data name="Settings_WarnNoExactModelFamily" xml:space="preserve">
+    <value>Tam model kaydı yok; yetenekler yakın seriden çıkarıldı.</value>
+  </data>
+  <data name="Settings_WarnHpNoValidatedMapping" xml:space="preserve">
+    <value>HP sistemi algılandı ancak doğrulanmış OMEN/Victus eşleşmesi yok; yetenekler yakın seriden çıkarıldı.</value>
+  </data>
+  <data name="Settings_WarnOmenHintsUnverified" xml:space="preserve">
+    <value>OMEN/Victus izleri bulundu ancak model doğrulanamadı; yetenekler yakın seriden çıkarıldı.</value>
+  </data>
+  <data name="Settings_WarnHpNoValidatedMappingDefaults" xml:space="preserve">
+    <value>HP sistemi algılandı ancak doğrulanmış OMEN/Victus eşleşmesi yok; genel varsayılan yetenekler kullanılıyor.</value>
+  </data>
+  <data name="Settings_WarnOmenHintsLowConfidence" xml:space="preserve">
+    <value>OMEN/Victus izleri bulundu ancak model güveni düşük; genel varsayılan yetenekler kullanılıyor.</value>
+  </data>
+  <data name="Settings_WarnRuntimeFallbackProvisional" xml:space="preserve">
+    <value>Yetenek profili çalışma zamanı geri dönüşünden geldi ve geçici sayılmalı.</value>
+  </data>
+  <data name="Settings_WarnHpRuntimeFallbackProvisional" xml:space="preserve">
+    <value>HP sistemi algılandı ancak yetenek profili çalışma zamanı geri dönüşünden geldi; bu eşleşmeyi geçici sayın.</value>
+  </data>
+  <data name="Settings_WarnOmenRuntimeFallbackProvisional" xml:space="preserve">
+    <value>OMEN/Victus izleri bulundu ancak yetenek profili çalışma zamanı geri dönüşünden geldi; bu eşleşmeyi geçici sayın.</value>
+  </data>
+  <data name="Settings_WarnOmenBrandingExactModelMissing" xml:space="preserve">
+    <value>Model adı OMEN/Victus markası içeriyor ancak tam model veritabanında yok.</value>
+  </data>
+  <data name="Settings_ModelRawIdentityFormat" xml:space="preserve">
+    <value>WMI modeli: {0} | Anakart ProductId: {1} | Sistem SKU: {2} | Sistem ürün kimliği: {3} | HP destek ürünü: {4}</value>
+  </data>
+  <data name="Settings_StandaloneStatusStandalone" xml:space="preserve">
+    <value>Bağımsız</value>
+  </data>
+  <data name="Settings_StandaloneStatusLimited" xml:space="preserve">
+    <value>Kısıtlı</value>
+  </data>
+  <data name="Settings_StandaloneStatusCritical" xml:space="preserve">
+    <value>Kritik</value>
+  </data>
+  <data name="Settings_OghServiceLineFormat" xml:space="preserve">
+    <value>Hizmet: {0} ({1})</value>
+  </data>
+  <data name="Settings_OghProcessLineFormat" xml:space="preserve">
+    <value>Süreç: {0} ({1})</value>
+  </data>
+  <data name="Settings_OghProcessLineNoPathFormat" xml:space="preserve">
+    <value>Süreç: {0}</value>
+  </data>
+  <data name="Settings_StateRunning" xml:space="preserve">
+    <value>çalışıyor</value>
+  </data>
+  <data name="Settings_StateStopped" xml:space="preserve">
+    <value>durdu</value>
+  </data>
+  <data name="Nvidia_PowerPolicyFormat" xml:space="preserve">
+    <value>zorunlu {0}, varsayılan {1}, aralık {2}-{3}, çekilen {4}</value>
+  </data>
+  <data name="Nvidia_PowerPolicyHeldDownNote" xml:space="preserve">
+    <value> (zorunlu sınır sürücü maksimumunun altında: OEM/ürün yazılımı politikası onu baskılıyor)</value>
+  </data>
+  <data name="Nvidia_PowerPolicyNotReported" xml:space="preserve">
+    <value>bildirilmedi</value>
+  </data>
+  <data name="Lighting_PerKeyEditorActive" xml:space="preserve">
+    <value>Bu klavye için tuş başına RGB düzenleyici etkin.</value>
+  </data>
+  <data name="Lighting_PerKeyCapableUnsupported" xml:space="preserve">
+    <value>Tuş başına RGB donanımı algılandı ancak bu arka uçta düzenleyici henüz açılamıyor; bölge aydınlatması kullanılabilir.</value>
+  </data>
+  <data name="Lighting_PerKeyUnsupported" xml:space="preserve">
+    <value>Tuş başına RGB yalnızca HID tuş başına klavyeli bazı OMEN Max modellerinde var; bu klavye desteklemiyor.</value>
+  </data>
+  <data name="Lighting_BarAnimationStatusFormat" xml:space="preserve">
+    <value>{0} gönderildi. Animasyonlar için geri okuma yok — ışık çubuğuna bakın.</value>
+  </data>
+  <data name="KbdStatus_AppliedViaV2Format" xml:space="preserve">
+    <value>V2 {0} ile uygulandı. {1}</value>
+  </data>
+  <data name="KbdStatus_V2AcceptedNotVerifiedFormat" xml:space="preserve">
+    <value>V2 {0} yazmayı kabul etti ancak doğrulamadı: {1}</value>
+  </data>
+  <data name="KbdStatus_V2NotVerifiedFormat" xml:space="preserve">
+    <value>V2 {0} doğrulamadı: {1}</value>
+  </data>
+  <data name="KbdStatus_AppliedWmiZones" xml:space="preserve">
+    <value>Tek tek WMI bölge yazmalarıyla uygulandı.</value>
+  </data>
+  <data name="KbdStatus_ColorTableAccepted" xml:space="preserve">
+    <value>WMI BIOS ColorTable yazmayı kabul etti. Hangi yüzeyin değiştiğini doğrulayın; bazı modellerde klavye yerine ışık çubuğu olabilir.</value>
+  </data>
+  <data name="KbdStatus_AppliedOghProxy" xml:space="preserve">
+    <value>OMEN Gaming Hub vekili ColorTable geri dönüşüyle uygulandı.</value>
+  </data>
+  <data name="KbdStatus_AppliedEcFallback" xml:space="preserve">
+    <value>WMI yöntemleri başarısız olduktan sonra deneysel EC geri dönüşüyle uygulandı.</value>
+  </data>
+  <data name="KbdStatus_EcThrottled" xml:space="preserve">
+    <value>Deneysel EC klavye yazması EC'yi korumak için sınırlandı.</value>
+  </data>
+  <data name="KbdStatus_AppliedEc" xml:space="preserve">
+    <value>Deneysel EC klavye kayıt yazmalarıyla uygulandı.</value>
+  </data>
+  <data name="KbdStatus_AllFailed" xml:space="preserve">
+    <value>Tüm klavye aydınlatma arka uçları başarısız. Renkler uygulanmamış olabilir.</value>
+  </data>
+  <data name="KbdStatus_ApplyFailedFormat" xml:space="preserve">
+    <value>Klavye aydınlatması uygulanamadı: {0}</value>
+  </data>
+  <data name="KbdStatus_ReadbackVerified" xml:space="preserve">
+    <value>geri okuma doğrulandı</value>
+  </data>
+  <data name="KbdStatus_ReadbackNotVerified" xml:space="preserve">
+    <value>geri okuma doğrulamadı</value>
+  </data>
+  <data name="KbdStatus_Unknown" xml:space="preserve">
+    <value>durum bilinmiyor</value>
+  </data>
+  <data name="KbdSurface_WmiColorTable" xml:space="preserve">
+    <value>HP WMI ColorTable bölgeleri (modele göre klavye veya ışık çubuğu)</value>
+  </data>
+  <data name="KbdSurface_WmiZones" xml:space="preserve">
+    <value>HP WMI ayrı klavye bölgeleri</value>
+  </data>
+  <data name="KbdSurface_EcZones" xml:space="preserve">
+    <value>Klavye bölgeleri (deneysel EC)</value>
+  </data>
+  <data name="KbdSurface_EcZonesFallback" xml:space="preserve">
+    <value>Klavye bölgeleri (EC geri dönüşü)</value>
+  </data>
+  <data name="KbdSurface_OghZones" xml:space="preserve">
+    <value>OGH vekili HP aydınlatma bölgeleri</value>
+  </data>
+  <data name="KbdSurface_Unavailable" xml:space="preserve">
+    <value>Kullanılamıyor</value>
+  </data>
+  <data name="KbdSurface_Unknown" xml:space="preserve">
+    <value>Bilinmiyor</value>
+  </data>
+  <data name="Lighting_ObservationStatusFormat" xml:space="preserve">
+    <value>{2} tarihinde {1} üzerinden gözlemlendi: {0}; sonda rengi {3}.</value>
+  </data>
+  <data name="Lighting_OwnershipKeyboardFormat" xml:space="preserve">
+    <value>HP klavye ({0})</value>
+  </data>
+  <data name="Lighting_OwnershipKeyboardUnavailable" xml:space="preserve">
+    <value>HP klavye (kullanılamıyor)</value>
+  </data>
+  <data name="Resume_TimelineLineFormat" xml:space="preserve">
+    <value>{0} | {1} | {2}</value>
+  </data>
+  <data name="Resume_LastUpdatedFormat" xml:space="preserve">
+    <value>Son güncelleme: {0}</value>
+  </data>
+  <data name="Resume_SourcePower" xml:space="preserve">
+    <value>güç</value>
+  </data>
+  <data name="Resume_SourceMonitoring" xml:space="preserve">
+    <value>izleme</value>
+  </data>
+  <data name="Resume_SourceWatchdog" xml:space="preserve">
+    <value>bekçi</value>
+  </data>
+  <data name="Resume_SourceSelfCheck" xml:space="preserve">
+    <value>öz denetim</value>
+  </data>
+  <data name="Resume_MsgSuspendDetected" xml:space="preserve">
+    <value>Askıya alma algılandı</value>
+  </data>
+  <data name="Resume_MsgResumeDetected" xml:space="preserve">
+    <value>Uyandırma algılandı</value>
+  </data>
+  <data name="Resume_MsgMonitoringPaused" xml:space="preserve">
+    <value>İzleme askıya alma için duraklatıldı</value>
+  </data>
+  <data name="Resume_MsgMonitoringResumed" xml:space="preserve">
+    <value>Bekleme sonrası izleme sürdürüldü</value>
+  </data>
+  <data name="Resume_MsgBridgeSucceeded" xml:space="preserve">
+    <value>Uyandırma sonrası köprü yenilemesi başarılı</value>
+  </data>
+  <data name="Resume_MsgBridgeIncomplete" xml:space="preserve">
+    <value>Uyandırma sonrası köprü tam olmayan kurtarma bildirdi</value>
+  </data>
+  <data name="Resume_MsgBridgeFailedFormat" xml:space="preserve">
+    <value>Uyandırma sonrası köprü yenilemesi başarısız: {0}</value>
+  </data>
+  <data name="Resume_MsgFreezeSuspended" xml:space="preserve">
+    <value>Donma algılama uyku için askıya alındı</value>
+  </data>
+  <data name="Resume_MsgGraceStartedFormat" xml:space="preserve">
+    <value>Uyandırma bekleme penceresi başladı ({0} sn)</value>
+  </data>
+  <data name="Resume_MsgGraceEnded" xml:space="preserve">
+    <value>Uyandırma bekleme penceresi bitti</value>
+  </data>
+  <data name="Resume_MsgAllRecovered" xml:space="preserve">
+    <value>Tüm hizmetler başarıyla kurtarıldı.</value>
+  </data>
+  <data name="Settings_ModelSourceUnknown" xml:space="preserve">
+    <value>Bilinmiyor</value>
+  </data>
+  <data name="Resume_SourceFan" xml:space="preserve">
+    <value>fan</value>
+  </data>
+  <data name="GameProfile_ValidationNameRequired" xml:space="preserve">
+    <value>Profil adı gerekli</value>
+  </data>
+  <data name="GameProfile_ValidationNameTooLong" xml:space="preserve">
+    <value>Profil adı en fazla 100 karakter olabilir</value>
+  </data>
+  <data name="GameProfile_ValidationExeRequired" xml:space="preserve">
+    <value>Çalıştırılabilir adı gerekli</value>
+  </data>
+  <data name="GameProfile_ValidationExeSuffix" xml:space="preserve">
+    <value>Çalıştırılabilir dosya .exe ile bitmeli</value>
+  </data>
+  <data name="GameProfile_ValidationUndervoltRange" xml:space="preserve">
+    <value>CPU voltaj düşürmesi -200 ile 0 mV arasında olmalı</value>
+  </data>
+  <data name="GameProfile_ValidationPriorityRange" xml:space="preserve">
+    <value>Öncelik 0 ile 100 arasında olmalı</value>
+  </data>
+  <data name="Mem_OpenProcessLocationFailed" xml:space="preserve">
+    <value>Süreç konumu açılamadı</value>
+  </data>
+  <data name="KbdMap_StatusApplyToSend" xml:space="preserve">
+    <value> Klavyeye göndermek için Uygula'ya basın.</value>
+  </data>
 </root>

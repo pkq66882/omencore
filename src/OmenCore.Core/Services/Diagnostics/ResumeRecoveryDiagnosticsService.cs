@@ -67,6 +67,15 @@ namespace OmenCore.Services.Diagnostics
             }
         }
 
+        /// <summary>Snapshot of the timeline for display-side localization. Core keeps canonical English.</summary>
+        public IReadOnlyList<(DateTime TimestampUtc, string Source, string Message)> SnapshotEntries()
+        {
+            lock (_sync)
+            {
+                return _entries.Select(e => (e.TimestampUtc, e.Source, e.Message)).ToList();
+            }
+        }
+
         public void BeginSuspend()
         {
             lock (_sync)

@@ -336,6 +336,64 @@ namespace OmenCore.Utils
             }
         };
 
+        /// <summary>Localized keyboard lighting apply status (Core emits canonical English).</summary>
+        public static string KeyboardApplyStatus(string? status)
+        {
+            if (string.IsNullOrWhiteSpace(status)) return Strings.KbdStatus_Unknown;
+            var s = status.Trim();
+
+            var v2Applied = Regex.Match(s, @"^Applied via V2 (.+)\. (.+)$");
+            if (v2Applied.Success)
+                return string.Format(Strings.KbdStatus_AppliedViaV2Format, v2Applied.Groups[1].Value, KeyboardVerification(v2Applied.Groups[2].Value));
+
+            var v2Accepted = Regex.Match(s, @"^V2 (.+) accepted the write but did not verify: (.+)$");
+            if (v2Accepted.Success)
+                return string.Format(Strings.KbdStatus_V2AcceptedNotVerifiedFormat, v2Accepted.Groups[1].Value, KeyboardVerification(v2Accepted.Groups[2].Value));
+
+            var v2Unverified = Regex.Match(s, @"^V2 (.+) did not verify: (.+)$");
+            if (v2Unverified.Success)
+                return string.Format(Strings.KbdStatus_V2NotVerifiedFormat, v2Unverified.Groups[1].Value, KeyboardVerification(v2Unverified.Groups[2].Value));
+
+            if (s.StartsWith("Keyboard lighting apply failed: ", StringComparison.Ordinal))
+                return string.Format(Strings.KbdStatus_ApplyFailedFormat, s.Substring("Keyboard lighting apply failed: ".Length));
+
+            return s switch
+            {
+                "Applied through individual WMI zone writes." => Strings.KbdStatus_AppliedWmiZones,
+                "WMI BIOS ColorTable accepted the write. Verify the intended physical surface changed; on some models this may be a light bar rather than the keyboard." => Strings.KbdStatus_ColorTableAccepted,
+                "Applied via OMEN Gaming Hub proxy ColorTable fallback." => Strings.KbdStatus_AppliedOghProxy,
+                "Applied via experimental EC fallback after WMI methods failed." => Strings.KbdStatus_AppliedEcFallback,
+                "Experimental EC keyboard write was throttled to protect the EC." => Strings.KbdStatus_EcThrottled,
+                "Applied via experimental EC keyboard register writes." => Strings.KbdStatus_AppliedEc,
+                "All keyboard lighting backends failed. Colors may not be applied." => Strings.KbdStatus_AllFailed,
+                _ => s
+            };
+        }
+
+        private static string KeyboardVerification(string status)
+        {
+            if (status.Contains("Readback verified", StringComparison.OrdinalIgnoreCase)) return Strings.KbdStatus_ReadbackVerified;
+            if (status.Contains("did not verify", StringComparison.OrdinalIgnoreCase) ||
+                status.Contains("not verified", StringComparison.OrdinalIgnoreCase)) return Strings.KbdStatus_ReadbackNotVerified;
+            return status;
+        }
+
+        /// <summary>Localized physical lighting surface reported by the keyboard backend.</summary>
+        public static string KeyboardSurface(string? surface)
+        {
+            return surface?.Trim() switch
+            {
+                "HP WMI ColorTable zones (keyboard or light bar depending model wiring)" => Strings.KbdSurface_WmiColorTable,
+                "HP WMI individual keyboard zones" => Strings.KbdSurface_WmiZones,
+                "Keyboard zones (experimental EC)" => Strings.KbdSurface_EcZones,
+                "Keyboard zones (experimental EC fallback)" => Strings.KbdSurface_EcZonesFallback,
+                "OGH-proxied HP lighting zones" => Strings.KbdSurface_OghZones,
+                "Unavailable" => Strings.KbdSurface_Unavailable,
+                "Unknown" => Strings.KbdSurface_Unknown,
+                null or "" => Strings.KbdSurface_Unknown,
+                var other => other
+            };
+        }
         /// <summary>Localized default Corsair lighting preset names; user-created names pass through.</summary>
         public static string CorsairPreset(string? name)
         {

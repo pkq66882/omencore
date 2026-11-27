@@ -10921,4 +10921,274 @@
   <data name="Notify_AgeDatePattern" xml:space="preserve">
     <value>d MMM</value>
   </data>
+  <data name="Settings_ModelSummaryFormat" xml:space="preserve">
+    <value>{0} (источник: {1}; достоверность: {2}); {3}. Клавиатура: {4} (источник: {5}; достоверность: {6}).</value>
+  </data>
+  <data name="Settings_ModelSourceNoResolvedProfile" xml:space="preserve">
+    <value>Профиль возможностей не определён</value>
+  </data>
+  <data name="Settings_ModelSourceExactProductId" xml:space="preserve">
+    <value>Точный ProductId</value>
+  </data>
+  <data name="Settings_ModelSourceFamilyFallback" xml:space="preserve">
+    <value>Откат по семейству</value>
+  </data>
+  <data name="Settings_ModelSourceDefaultFallback" xml:space="preserve">
+    <value>Откат к значениям по умолчанию</value>
+  </data>
+  <data name="Settings_ModelSourceRuntimeFallback" xml:space="preserve">
+    <value>Откат во время работы</value>
+  </data>
+  <data name="Settings_ModelSourceNoDatabaseMatch" xml:space="preserve">
+    <value>Нет совпадения в базе</value>
+  </data>
+  <data name="Settings_ModelSourceAmbiguousProductId" xml:space="preserve">
+    <value>Неоднозначный ProductId, уточнён по имени модели</value>
+  </data>
+  <data name="Settings_ModelSourceModelSeriesMatch" xml:space="preserve">
+    <value>Совпадение по серии модели</value>
+  </data>
+  <data name="Settings_ModelSourcePartialProductId" xml:space="preserve">
+    <value>Частичное совпадение ProductId</value>
+  </data>
+  <data name="Settings_ModelSourceHeuristic" xml:space="preserve">
+    <value>Эвристическое совпадение</value>
+  </data>
+  <data name="Settings_ModelNone" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="Settings_WarnNoResolvedProfile" xml:space="preserve">
+    <value>Обнаружение возможностей не определило профиль модели.</value>
+  </data>
+  <data name="Settings_WarnProductIdUnverified" xml:space="preserve">
+    <value>Профиль возможностей сопоставлен по ProductId, но запись ещё не проверена пользователями.</value>
+  </data>
+  <data name="Settings_WarnNoExactModelFamily" xml:space="preserve">
+    <value>Точной записи модели нет; возможности выведены по семейству моделей.</value>
+  </data>
+  <data name="Settings_WarnHpNoValidatedMapping" xml:space="preserve">
+    <value>Обнаружена система HP, но проверенного сопоставления OMEN/Victus нет; возможности выведены по семейству.</value>
+  </data>
+  <data name="Settings_WarnOmenHintsUnverified" xml:space="preserve">
+    <value>Обнаружены признаки OMEN/Victus, но конкретная модель не подтверждена; возможности выведены по семейству.</value>
+  </data>
+  <data name="Settings_WarnHpNoValidatedMappingDefaults" xml:space="preserve">
+    <value>Обнаружена система HP, но проверенного сопоставления OMEN/Victus нет; используются общие возможности по умолчанию.</value>
+  </data>
+  <data name="Settings_WarnOmenHintsLowConfidence" xml:space="preserve">
+    <value>Обнаружены признаки OMEN/Victus, но достоверность модели низкая; используются общие возможности по умолчанию.</value>
+  </data>
+  <data name="Settings_WarnRuntimeFallbackProvisional" xml:space="preserve">
+    <value>Профиль возможностей получен через откат во время работы и считается предварительным.</value>
+  </data>
+  <data name="Settings_WarnHpRuntimeFallbackProvisional" xml:space="preserve">
+    <value>Обнаружена система HP, но профиль возможностей получен через откат; считайте сопоставление предварительным.</value>
+  </data>
+  <data name="Settings_WarnOmenRuntimeFallbackProvisional" xml:space="preserve">
+    <value>Обнаружены признаки OMEN/Victus, но профиль возможностей получен через откат; считайте сопоставление предварительным.</value>
+  </data>
+  <data name="Settings_WarnOmenBrandingExactModelMissing" xml:space="preserve">
+    <value>В имени модели есть брендинг OMEN/Victus, но точной модели нет в базе.</value>
+  </data>
+  <data name="Settings_ModelRawIdentityFormat" xml:space="preserve">
+    <value>Модель WMI: {0} | ProductId платы: {1} | System SKU: {2} | Идентификатор продукта: {3} | Продукт поддержки HP: {4}</value>
+  </data>
+  <data name="Settings_StandaloneStatusStandalone" xml:space="preserve">
+    <value>Автономно</value>
+  </data>
+  <data name="Settings_StandaloneStatusLimited" xml:space="preserve">
+    <value>Ограниченно</value>
+  </data>
+  <data name="Settings_StandaloneStatusCritical" xml:space="preserve">
+    <value>Критично</value>
+  </data>
+  <data name="Settings_OghServiceLineFormat" xml:space="preserve">
+    <value>Служба: {0} ({1})</value>
+  </data>
+  <data name="Settings_OghProcessLineFormat" xml:space="preserve">
+    <value>Процесс: {0} ({1})</value>
+  </data>
+  <data name="Settings_OghProcessLineNoPathFormat" xml:space="preserve">
+    <value>Процесс: {0}</value>
+  </data>
+  <data name="Settings_StateRunning" xml:space="preserve">
+    <value>работает</value>
+  </data>
+  <data name="Settings_StateStopped" xml:space="preserve">
+    <value>остановлена</value>
+  </data>
+  <data name="Nvidia_PowerPolicyFormat" xml:space="preserve">
+    <value>принудительно {0}, по умолчанию {1}, диапазон {2}-{3}, потребление {4}</value>
+  </data>
+  <data name="Nvidia_PowerPolicyHeldDownNote" xml:space="preserve">
+    <value> (принудительный лимит ниже максимума драйвера: его сдерживает политика OEM/прошивки)</value>
+  </data>
+  <data name="Nvidia_PowerPolicyNotReported" xml:space="preserve">
+    <value>не сообщается</value>
+  </data>
+  <data name="Lighting_PerKeyEditorActive" xml:space="preserve">
+    <value>Редактор подсветки отдельных клавиш активен для этой клавиатуры.</value>
+  </data>
+  <data name="Lighting_PerKeyCapableUnsupported" xml:space="preserve">
+    <value>Обнаружено оборудование с поддержкой подсветки клавиш, но редактор на этом бэкенде пока недоступен; зонная подсветка работает.</value>
+  </data>
+  <data name="Lighting_PerKeyUnsupported" xml:space="preserve">
+    <value>Подсветка отдельных клавиш есть только у некоторых моделей OMEN Max с HID-клавиатурой; эта клавиатура её не поддерживает.</value>
+  </data>
+  <data name="Lighting_BarAnimationStatusFormat" xml:space="preserve">
+    <value>{0} отправлено. Обратной связи для анимаций нет — смотрите на подсветку.</value>
+  </data>
+  <data name="KbdStatus_AppliedViaV2Format" xml:space="preserve">
+    <value>Применено через V2 {0}. {1}</value>
+  </data>
+  <data name="KbdStatus_V2AcceptedNotVerifiedFormat" xml:space="preserve">
+    <value>V2 {0} принял запись, но не подтвердил: {1}</value>
+  </data>
+  <data name="KbdStatus_V2NotVerifiedFormat" xml:space="preserve">
+    <value>V2 {0} не подтвердил: {1}</value>
+  </data>
+  <data name="KbdStatus_AppliedWmiZones" xml:space="preserve">
+    <value>Применено отдельными WMI-записями зон.</value>
+  </data>
+  <data name="KbdStatus_ColorTableAccepted" xml:space="preserve">
+    <value>WMI BIOS ColorTable принял запись. Проверьте, какая поверхность изменилась; на некоторых моделях это может быть подсветка, а не клавиатура.</value>
+  </data>
+  <data name="KbdStatus_AppliedOghProxy" xml:space="preserve">
+    <value>Применено через резервный ColorTable прокси OMEN Gaming Hub.</value>
+  </data>
+  <data name="KbdStatus_AppliedEcFallback" xml:space="preserve">
+    <value>Применено через экспериментальный откат EC после сбоя WMI.</value>
+  </data>
+  <data name="KbdStatus_EcThrottled" xml:space="preserve">
+    <value>Экспериментальная запись EC ограничена для защиты EC.</value>
+  </data>
+  <data name="KbdStatus_AppliedEc" xml:space="preserve">
+    <value>Применено через экспериментальные записи регистров EC.</value>
+  </data>
+  <data name="KbdStatus_AllFailed" xml:space="preserve">
+    <value>Все бэкенды подсветки клавиатуры отказали. Цвета могли не примениться.</value>
+  </data>
+  <data name="KbdStatus_ApplyFailedFormat" xml:space="preserve">
+    <value>Ошибка применения подсветки клавиатуры: {0}</value>
+  </data>
+  <data name="KbdStatus_ReadbackVerified" xml:space="preserve">
+    <value>обратное чтение подтверждено</value>
+  </data>
+  <data name="KbdStatus_ReadbackNotVerified" xml:space="preserve">
+    <value>обратное чтение не подтверждено</value>
+  </data>
+  <data name="KbdStatus_Unknown" xml:space="preserve">
+    <value>состояние неизвестно</value>
+  </data>
+  <data name="KbdSurface_WmiColorTable" xml:space="preserve">
+    <value>Зоны HP WMI ColorTable (клавиатура или подсветка в зависимости от модели)</value>
+  </data>
+  <data name="KbdSurface_WmiZones" xml:space="preserve">
+    <value>Отдельные зоны клавиатуры HP WMI</value>
+  </data>
+  <data name="KbdSurface_EcZones" xml:space="preserve">
+    <value>Зоны клавиатуры (эксперим. EC)</value>
+  </data>
+  <data name="KbdSurface_EcZonesFallback" xml:space="preserve">
+    <value>Зоны клавиатуры (откат EC)</value>
+  </data>
+  <data name="KbdSurface_OghZones" xml:space="preserve">
+    <value>Зоны подсветки HP через OGH</value>
+  </data>
+  <data name="KbdSurface_Unavailable" xml:space="preserve">
+    <value>Недоступно</value>
+  </data>
+  <data name="KbdSurface_Unknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="Lighting_ObservationStatusFormat" xml:space="preserve">
+    <value>Наблюдение: {0} через {1} в {2}; цвет пробы {3}.</value>
+  </data>
+  <data name="Lighting_OwnershipKeyboardFormat" xml:space="preserve">
+    <value>Клавиатура HP ({0})</value>
+  </data>
+  <data name="Lighting_OwnershipKeyboardUnavailable" xml:space="preserve">
+    <value>Клавиатура HP (недоступна)</value>
+  </data>
+  <data name="Resume_TimelineLineFormat" xml:space="preserve">
+    <value>{0} | {1} | {2}</value>
+  </data>
+  <data name="Resume_LastUpdatedFormat" xml:space="preserve">
+    <value>Последнее обновление: {0}</value>
+  </data>
+  <data name="Resume_SourcePower" xml:space="preserve">
+    <value>питание</value>
+  </data>
+  <data name="Resume_SourceMonitoring" xml:space="preserve">
+    <value>мониторинг</value>
+  </data>
+  <data name="Resume_SourceWatchdog" xml:space="preserve">
+    <value>сторожевой таймер</value>
+  </data>
+  <data name="Resume_SourceSelfCheck" xml:space="preserve">
+    <value>самопроверка</value>
+  </data>
+  <data name="Resume_MsgSuspendDetected" xml:space="preserve">
+    <value>Обнаружен переход в сон</value>
+  </data>
+  <data name="Resume_MsgResumeDetected" xml:space="preserve">
+    <value>Обнаружено пробуждение</value>
+  </data>
+  <data name="Resume_MsgMonitoringPaused" xml:space="preserve">
+    <value>Мониторинг приостановлен на время сна</value>
+  </data>
+  <data name="Resume_MsgMonitoringResumed" xml:space="preserve">
+    <value>Мониторинг возобновлён после сна</value>
+  </data>
+  <data name="Resume_MsgBridgeSucceeded" xml:space="preserve">
+    <value>Обновление моста после пробуждения успешно</value>
+  </data>
+  <data name="Resume_MsgBridgeIncomplete" xml:space="preserve">
+    <value>Обновление моста сообщило о неполном восстановлении</value>
+  </data>
+  <data name="Resume_MsgBridgeFailedFormat" xml:space="preserve">
+    <value>Ошибка обновления моста после пробуждения: {0}</value>
+  </data>
+  <data name="Resume_MsgFreezeSuspended" xml:space="preserve">
+    <value>Обнаружение зависаний приостановлено на время сна</value>
+  </data>
+  <data name="Resume_MsgGraceStartedFormat" xml:space="preserve">
+    <value>Начато окно ожидания после пробуждения ({0} с)</value>
+  </data>
+  <data name="Resume_MsgGraceEnded" xml:space="preserve">
+    <value>Окно ожидания после пробуждения завершено</value>
+  </data>
+  <data name="Resume_MsgAllRecovered" xml:space="preserve">
+    <value>Все службы успешно восстановлены.</value>
+  </data>
+  <data name="Settings_ModelSourceUnknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="Resume_SourceFan" xml:space="preserve">
+    <value>вентиляторы</value>
+  </data>
+  <data name="GameProfile_ValidationNameRequired" xml:space="preserve">
+    <value>Укажите имя профиля</value>
+  </data>
+  <data name="GameProfile_ValidationNameTooLong" xml:space="preserve">
+    <value>Имя профиля не длиннее 100 символов</value>
+  </data>
+  <data name="GameProfile_ValidationExeRequired" xml:space="preserve">
+    <value>Укажите имя исполняемого файла</value>
+  </data>
+  <data name="GameProfile_ValidationExeSuffix" xml:space="preserve">
+    <value>Исполняемый файл должен оканчиваться на .exe</value>
+  </data>
+  <data name="GameProfile_ValidationUndervoltRange" xml:space="preserve">
+    <value>Понижение CPU должно быть от -200 до 0 мВ</value>
+  </data>
+  <data name="GameProfile_ValidationPriorityRange" xml:space="preserve">
+    <value>Приоритет должен быть от 0 до 100</value>
+  </data>
+  <data name="Mem_OpenProcessLocationFailed" xml:space="preserve">
+    <value>Не удалось открыть расположение процесса</value>
+  </data>
+  <data name="KbdMap_StatusApplyToSend" xml:space="preserve">
+    <value> Нажмите «Применить», чтобы отправить на клавиатуру.</value>
+  </data>
 </root>

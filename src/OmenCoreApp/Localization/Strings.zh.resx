@@ -4178,7 +4178,7 @@
     <value>NVIDIA 功耗解锁（高级，默认关闭）</value>
   </data>
   <data name="TuningView_Order1ResolveVbios2ApplyMax3RestartWindows" xml:space="preserve">
-    <value>顺序：1) 解析 VBIOS，2) 应用 MAX，3) 重启 Windows，4) 应用 CURRENT。更换 NVIDIA 驱动后，请先点一次“验证驱动”再应用 CURRENT。把 GPU 功耗上限提到笔记本厂商设定之上。MAX 写入 NVIDIA 驱动注册表，需要重启；CURRENT 实时应用，重启后失效。功耗越大发热越大。基于 timmyy123 的 nvidia-power-control 与 bobshmo 的 Prophecy Power Unlocker（1.2.9），经许可使用。</value>
+    <value>操作顺序：① 解析 VBIOS；② 应用 MAX（写入 NVIDIA 驱动注册表，需重启）；③ 重启 Windows；④ 应用 CURRENT（立即生效，重启后失效）。更换 NVIDIA 驱动后，请先点一次“验证驱动”，再应用 CURRENT。该功能会把 GPU 功耗上限提高到笔记本厂商设定之上；功耗越高，发热越大。基于 timmyy123 的 nvidia-power-control 与 bobshmo 的 Prophecy Power Unlocker（1.2.9），经许可使用。</value>
   </data>
   <data name="TuningView_EnableNvidiaPowerUnlock" xml:space="preserve">
     <value>启用 NVIDIA 功耗解锁</value>
@@ -4829,7 +4829,7 @@
     <value>未检测到 OpenRGB 服务器</value>
   </data>
   <data name="LightingViewModel_RazerNotDetected" xml:space="preserve">
-    <value>未检测到 Razer Synapse</value>
+    <value>未检测到雷蛇 Synapse</value>
   </data>
   <data name="LightingViewModel_ReadyToRestore" xml:space="preserve">
     <value>已就绪，可恢复已保存的键盘颜色。</value>
@@ -5009,7 +5009,7 @@
     <value>激活：{0}</value>
   </data>
   <data name="LightingViewModel_IcueNotDetected" xml:space="preserve">
-    <value>iCUE 未检测到</value>
+    <value>未检测到 Corsair iCUE</value>
   </data>
   <data name="LightingViewModel_Level" xml:space="preserve">
     <value>音频电平：{0}%</value>
@@ -5021,7 +5021,7 @@
     <value>未记录</value>
   </data>
   <data name="LightingViewModel_RazerNotConfigured" xml:space="preserve">
-    <value>Razer Synapse 未配置</value>
+    <value>雷蛇 Synapse 未配置</value>
   </data>
   <data name="SystemControlViewModel_RollbackNotRun" xml:space="preserve">
     <value>本次会话尚未运行安全回滚。</value>
@@ -8894,7 +8894,7 @@
     <value>“{0}”不是已保存的模式，无处存储当前状态。</value>
   </data>
   <data name="Lighting_RestoreStatusFormat" xml:space="preserve">
-    <value>{0} 表面：{1}。{2}</value>
+    <value>{0}表面：{1}。{2}</value>
   </data>
   <data name="Lighting_RestoredSavedFormat" xml:space="preserve">
     <value>已恢复保存的键盘颜色。{0} 表面：{1}。</value>
@@ -9926,7 +9926,7 @@
     <value>同步完成：已更新 1 个提供程序</value>
   </data>
   <data name="L2_SyncCompleteProvidersFormat" xml:space="preserve">
-    <value>同步完成：已更新 {0} 个提供程序</value>
+    <value>同步完成：已更新 {0} 个灯效来源</value>
   </data>
   <data name="L2_NoRgbTargets" xml:space="preserve">
     <value>没有可用的 RGB 目标</value>
@@ -9935,7 +9935,7 @@
     <value>没有可用的 HP 键盘灯效后端，无法发送 RGB 探测。</value>
   </data>
   <data name="L2_ProbeSentFormat" xml:space="preserve">
-    <value>已通过 {0} 发送探测；请选择实际发生变化的区域并保存。{1}</value>
+    <value>已通过 {0} 发送探测；请选择实际发生变化的区域并保存。</value>
   </data>
   <data name="L2_ObservationCannotSave" xml:space="preserve">
     <value>配置不可用，无法保存 RGB 观测结果。</value>
@@ -10920,5 +10920,275 @@
   </data>
   <data name="Notify_AgeDatePattern" xml:space="preserve">
     <value>M月d日</value>
+  </data>
+  <data name="Settings_ModelSummaryFormat" xml:space="preserve">
+    <value>{0}（识别来源：{1}；置信度：{2}）；{3}。键盘：{4}（来源：{5}；置信度：{6}）。</value>
+  </data>
+  <data name="Settings_ModelSourceNoResolvedProfile" xml:space="preserve">
+    <value>未解析出机型配置</value>
+  </data>
+  <data name="Settings_ModelSourceExactProductId" xml:space="preserve">
+    <value>精确 ProductId</value>
+  </data>
+  <data name="Settings_ModelSourceFamilyFallback" xml:space="preserve">
+    <value>按机型系列回退</value>
+  </data>
+  <data name="Settings_ModelSourceDefaultFallback" xml:space="preserve">
+    <value>默认回退</value>
+  </data>
+  <data name="Settings_ModelSourceRuntimeFallback" xml:space="preserve">
+    <value>运行时回退</value>
+  </data>
+  <data name="Settings_ModelSourceNoDatabaseMatch" xml:space="preserve">
+    <value>无数据库匹配</value>
+  </data>
+  <data name="Settings_ModelSourceAmbiguousProductId" xml:space="preserve">
+    <value>ProductId 有歧义，已按机型名区分</value>
+  </data>
+  <data name="Settings_ModelSourceModelSeriesMatch" xml:space="preserve">
+    <value>机型系列匹配</value>
+  </data>
+  <data name="Settings_ModelSourcePartialProductId" xml:space="preserve">
+    <value>ProductId 部分匹配</value>
+  </data>
+  <data name="Settings_ModelSourceHeuristic" xml:space="preserve">
+    <value>启发式匹配</value>
+  </data>
+  <data name="Settings_ModelNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="Settings_WarnNoResolvedProfile" xml:space="preserve">
+    <value>能力检测未能确定机型配置。</value>
+  </data>
+  <data name="Settings_WarnProductIdUnverified" xml:space="preserve">
+    <value>能力配置已按 ProductId 匹配，但该条目尚未经用户验证。</value>
+  </data>
+  <data name="Settings_WarnNoExactModelFamily" xml:space="preserve">
+    <value>未匹配到精确的机型条目；已按相近系列推断能力配置。</value>
+  </data>
+  <data name="Settings_WarnHpNoValidatedMapping" xml:space="preserve">
+    <value>检测到 HP 系统，但没有找到已验证的 OMEN/Victus 机型映射；已按相近系列推断能力配置。</value>
+  </data>
+  <data name="Settings_WarnOmenHintsUnverified" xml:space="preserve">
+    <value>检测到 OMEN/Victus 特征，但未能确认具体机型；已按相近系列推断能力配置。</value>
+  </data>
+  <data name="Settings_WarnHpNoValidatedMappingDefaults" xml:space="preserve">
+    <value>检测到 HP 系统，但没有找到已验证的 OMEN/Victus 映射；正在使用通用默认能力配置。</value>
+  </data>
+  <data name="Settings_WarnOmenHintsLowConfidence" xml:space="preserve">
+    <value>检测到 OMEN/Victus 特征，但机型识别置信度较低；正在使用通用默认能力配置。</value>
+  </data>
+  <data name="Settings_WarnRuntimeFallbackProvisional" xml:space="preserve">
+    <value>能力配置来自运行时回退路径，只能视为临时结果。</value>
+  </data>
+  <data name="Settings_WarnHpRuntimeFallbackProvisional" xml:space="preserve">
+    <value>检测到 HP 系统，但能力配置来自运行时回退路径；请把这份映射当作临时结果。</value>
+  </data>
+  <data name="Settings_WarnOmenRuntimeFallbackProvisional" xml:space="preserve">
+    <value>检测到 OMEN/Victus 特征，但能力配置来自运行时回退路径；请把这份映射当作临时结果。</value>
+  </data>
+  <data name="Settings_WarnOmenBrandingExactModelMissing" xml:space="preserve">
+    <value>机型名带有 OMEN/Victus 标识，但数据库中没有精确机型。</value>
+  </data>
+  <data name="Settings_ModelRawIdentityFormat" xml:space="preserve">
+    <value>WMI 机型：{0} | 主板 ProductId：{1} | 系统 SKU：{2} | 系统产品识别号：{3} | HP 支持产品号：{4}</value>
+  </data>
+  <data name="Settings_StandaloneStatusStandalone" xml:space="preserve">
+    <value>独立运行</value>
+  </data>
+  <data name="Settings_StandaloneStatusLimited" xml:space="preserve">
+    <value>功能受限</value>
+  </data>
+  <data name="Settings_StandaloneStatusCritical" xml:space="preserve">
+    <value>缺少必需组件</value>
+  </data>
+  <data name="Settings_OghServiceLineFormat" xml:space="preserve">
+    <value>服务：{0}（{1}）</value>
+  </data>
+  <data name="Settings_OghProcessLineFormat" xml:space="preserve">
+    <value>进程：{0}（{1}）</value>
+  </data>
+  <data name="Settings_OghProcessLineNoPathFormat" xml:space="preserve">
+    <value>进程：{0}</value>
+  </data>
+  <data name="Settings_StateRunning" xml:space="preserve">
+    <value>运行中</value>
+  </data>
+  <data name="Settings_StateStopped" xml:space="preserve">
+    <value>已停止</value>
+  </data>
+  <data name="Nvidia_PowerPolicyFormat" xml:space="preserve">
+    <value>强制上限 {0}，驱动默认 {1}，可调范围 {2}–{3}，当前功耗 {4}</value>
+  </data>
+  <data name="Nvidia_PowerPolicyHeldDownNote" xml:space="preserve">
+    <value>（强制上限低于驱动最大值：OEM/固件策略把它压住了）</value>
+  </data>
+  <data name="Nvidia_PowerPolicyNotReported" xml:space="preserve">
+    <value>未报告</value>
+  </data>
+  <data name="Lighting_PerKeyEditorActive" xml:space="preserve">
+    <value>此键盘已启用单键 RGB 编辑器。</value>
+  </data>
+  <data name="Lighting_PerKeyCapableUnsupported" xml:space="preserve">
+    <value>检测到支持单键 RGB 的硬件，但当前后端还无法打开单键编辑器；本版本仍可使用分区灯效。</value>
+  </data>
+  <data name="Lighting_PerKeyUnsupported" xml:space="preserve">
+    <value>单键 RGB 仅限部分采用 HID 单键键盘的 OMEN Max 机型；此键盘不支持单键控制。</value>
+  </data>
+  <data name="Lighting_BarAnimationStatusFormat" xml:space="preserve">
+    <value>{0} 已发送。动画没有回读，请直接看灯条确认。</value>
+  </data>
+  <data name="KbdStatus_AppliedViaV2Format" xml:space="preserve">
+    <value>已通过 V2 {0} 应用。{1}</value>
+  </data>
+  <data name="KbdStatus_V2AcceptedNotVerifiedFormat" xml:space="preserve">
+    <value>V2 {0} 接受了写入，但未能验证：{1}</value>
+  </data>
+  <data name="KbdStatus_V2NotVerifiedFormat" xml:space="preserve">
+    <value>V2 {0} 未能验证：{1}</value>
+  </data>
+  <data name="KbdStatus_AppliedWmiZones" xml:space="preserve">
+    <value>已通过逐分区 WMI 写入应用。</value>
+  </data>
+  <data name="KbdStatus_ColorTableAccepted" xml:space="preserve">
+    <value>WMI BIOS ColorTable 已接受写入；请确认实际变化的物理区域（部分机型可能是灯条而非键盘）。</value>
+  </data>
+  <data name="KbdStatus_AppliedOghProxy" xml:space="preserve">
+    <value>已通过 OMEN Gaming Hub 代理的 ColorTable 回退应用。</value>
+  </data>
+  <data name="KbdStatus_AppliedEcFallback" xml:space="preserve">
+    <value>WMI 方式失败后，已通过实验性 EC 回退应用。</value>
+  </data>
+  <data name="KbdStatus_EcThrottled" xml:space="preserve">
+    <value>实验性 EC 键盘写入已被限流，以保护 EC。</value>
+  </data>
+  <data name="KbdStatus_AppliedEc" xml:space="preserve">
+    <value>已通过实验性 EC 键盘寄存器写入应用。</value>
+  </data>
+  <data name="KbdStatus_AllFailed" xml:space="preserve">
+    <value>所有键盘灯效后端均失败，颜色可能未生效。</value>
+  </data>
+  <data name="KbdStatus_ApplyFailedFormat" xml:space="preserve">
+    <value>键盘灯效应用失败：{0}</value>
+  </data>
+  <data name="KbdStatus_ReadbackVerified" xml:space="preserve">
+    <value>回读已验证</value>
+  </data>
+  <data name="KbdStatus_ReadbackNotVerified" xml:space="preserve">
+    <value>回读未通过验证</value>
+  </data>
+  <data name="KbdStatus_Unknown" xml:space="preserve">
+    <value>状态未知</value>
+  </data>
+  <data name="KbdSurface_WmiColorTable" xml:space="preserve">
+    <value>HP WMI ColorTable 区域（键盘或灯条，取决于机型布线）</value>
+  </data>
+  <data name="KbdSurface_WmiZones" xml:space="preserve">
+    <value>HP WMI 独立键盘分区</value>
+  </data>
+  <data name="KbdSurface_EcZones" xml:space="preserve">
+    <value>键盘分区（实验性 EC）</value>
+  </data>
+  <data name="KbdSurface_EcZonesFallback" xml:space="preserve">
+    <value>键盘分区（实验性 EC 回退）</value>
+  </data>
+  <data name="KbdSurface_OghZones" xml:space="preserve">
+    <value>OMEN Gaming Hub 代理的 HP 灯效分区</value>
+  </data>
+  <data name="KbdSurface_Unavailable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="KbdSurface_Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Lighting_ObservationStatusFormat" xml:space="preserve">
+    <value>已于 {2} 通过 {1} 记录观测：{0}；探测颜色 {3}。</value>
+  </data>
+  <data name="Lighting_OwnershipKeyboardFormat" xml:space="preserve">
+    <value>HP 键盘（{0}）</value>
+  </data>
+  <data name="Lighting_OwnershipKeyboardUnavailable" xml:space="preserve">
+    <value>HP 键盘（不可用）</value>
+  </data>
+  <data name="Resume_TimelineLineFormat" xml:space="preserve">
+    <value>{0}｜{1}｜{2}</value>
+  </data>
+  <data name="Resume_LastUpdatedFormat" xml:space="preserve">
+    <value>最后更新：{0}</value>
+  </data>
+  <data name="Resume_SourcePower" xml:space="preserve">
+    <value>电源</value>
+  </data>
+  <data name="Resume_SourceMonitoring" xml:space="preserve">
+    <value>监控</value>
+  </data>
+  <data name="Resume_SourceWatchdog" xml:space="preserve">
+    <value>看门狗</value>
+  </data>
+  <data name="Resume_SourceSelfCheck" xml:space="preserve">
+    <value>自检</value>
+  </data>
+  <data name="Resume_MsgSuspendDetected" xml:space="preserve">
+    <value>检测到系统挂起</value>
+  </data>
+  <data name="Resume_MsgResumeDetected" xml:space="preserve">
+    <value>检测到系统恢复</value>
+  </data>
+  <data name="Resume_MsgMonitoringPaused" xml:space="preserve">
+    <value>挂起期间已暂停监控</value>
+  </data>
+  <data name="Resume_MsgMonitoringResumed" xml:space="preserve">
+    <value>待机结束后已恢复监控</value>
+  </data>
+  <data name="Resume_MsgBridgeSucceeded" xml:space="preserve">
+    <value>恢复后监控桥接刷新成功</value>
+  </data>
+  <data name="Resume_MsgBridgeIncomplete" xml:space="preserve">
+    <value>恢复后监控桥接报告未完全恢复</value>
+  </data>
+  <data name="Resume_MsgBridgeFailedFormat" xml:space="preserve">
+    <value>恢复后监控桥接刷新失败：{0}</value>
+  </data>
+  <data name="Resume_MsgFreezeSuspended" xml:space="preserve">
+    <value>睡眠期间已暂停卡死检测</value>
+  </data>
+  <data name="Resume_MsgGraceStartedFormat" xml:space="preserve">
+    <value>恢复宽限期开始（{0} 秒）</value>
+  </data>
+  <data name="Resume_MsgGraceEnded" xml:space="preserve">
+    <value>恢复宽限期结束</value>
+  </data>
+  <data name="Resume_MsgAllRecovered" xml:space="preserve">
+    <value>所有服务均已恢复。</value>
+  </data>
+  <data name="Settings_ModelSourceUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Resume_SourceFan" xml:space="preserve">
+    <value>风扇</value>
+  </data>
+  <data name="GameProfile_ValidationNameRequired" xml:space="preserve">
+    <value>请输入方案名称</value>
+  </data>
+  <data name="GameProfile_ValidationNameTooLong" xml:space="preserve">
+    <value>方案名称不能超过 100 个字符</value>
+  </data>
+  <data name="GameProfile_ValidationExeRequired" xml:space="preserve">
+    <value>请输入可执行文件名</value>
+  </data>
+  <data name="GameProfile_ValidationExeSuffix" xml:space="preserve">
+    <value>可执行文件必须以 .exe 结尾</value>
+  </data>
+  <data name="GameProfile_ValidationUndervoltRange" xml:space="preserve">
+    <value>CPU 降压必须在 -200 到 0 mV 之间</value>
+  </data>
+  <data name="GameProfile_ValidationPriorityRange" xml:space="preserve">
+    <value>优先级必须在 0 到 100 之间</value>
+  </data>
+  <data name="Mem_OpenProcessLocationFailed" xml:space="preserve">
+    <value>无法打开进程所在位置</value>
+  </data>
+  <data name="KbdMap_StatusApplyToSend" xml:space="preserve">
+    <value> 点“应用”即可发送到键盘。</value>
   </data>
 </root>

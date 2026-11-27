@@ -10925,4 +10925,274 @@
   <data name="Notify_AgeDatePattern" xml:space="preserve">
     <value>MMM d</value>
   </data>
+  <data name="Settings_ModelSummaryFormat" xml:space="preserve">
+    <value>{0} (source: {1}; confidence: {2}); {3}. Keyboard: {4} (source: {5}; confidence: {6}).</value>
+  </data>
+  <data name="Settings_ModelSourceNoResolvedProfile" xml:space="preserve">
+    <value>No resolved capability profile</value>
+  </data>
+  <data name="Settings_ModelSourceExactProductId" xml:space="preserve">
+    <value>Exact ProductId</value>
+  </data>
+  <data name="Settings_ModelSourceFamilyFallback" xml:space="preserve">
+    <value>Family fallback</value>
+  </data>
+  <data name="Settings_ModelSourceDefaultFallback" xml:space="preserve">
+    <value>Default fallback</value>
+  </data>
+  <data name="Settings_ModelSourceRuntimeFallback" xml:space="preserve">
+    <value>Runtime fallback</value>
+  </data>
+  <data name="Settings_ModelSourceNoDatabaseMatch" xml:space="preserve">
+    <value>No database match</value>
+  </data>
+  <data name="Settings_ModelSourceAmbiguousProductId" xml:space="preserve">
+    <value>Ambiguous ProductId + model-name disambiguation</value>
+  </data>
+  <data name="Settings_ModelSourceModelSeriesMatch" xml:space="preserve">
+    <value>Model-name series match</value>
+  </data>
+  <data name="Settings_ModelSourcePartialProductId" xml:space="preserve">
+    <value>Partial ProductId match</value>
+  </data>
+  <data name="Settings_ModelSourceHeuristic" xml:space="preserve">
+    <value>Heuristic match</value>
+  </data>
+  <data name="Settings_ModelNone" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="Settings_WarnNoResolvedProfile" xml:space="preserve">
+    <value>Capability detection did not resolve a model profile.</value>
+  </data>
+  <data name="Settings_WarnProductIdUnverified" xml:space="preserve">
+    <value>Capability profile matched by ProductId, but the entry is not user-verified yet.</value>
+  </data>
+  <data name="Settings_WarnNoExactModelFamily" xml:space="preserve">
+    <value>No exact model entry matched; capability defaults were inferred from the broader model family.</value>
+  </data>
+  <data name="Settings_WarnHpNoValidatedMapping" xml:space="preserve">
+    <value>HP system detected, but no validated OMEN/Victus model mapping was found; capability defaults were inferred from a broad family match.</value>
+  </data>
+  <data name="Settings_WarnOmenHintsUnverified" xml:space="preserve">
+    <value>OMEN/Victus hints were detected, but the specific model could not be verified; capability defaults were inferred from a broad family match.</value>
+  </data>
+  <data name="Settings_WarnHpNoValidatedMappingDefaults" xml:space="preserve">
+    <value>HP system detected, but no validated OMEN/Victus mapping was found; generic default capabilities are in use.</value>
+  </data>
+  <data name="Settings_WarnOmenHintsLowConfidence" xml:space="preserve">
+    <value>OMEN/Victus hints were detected, but model identity confidence is low; generic default capabilities are in use.</value>
+  </data>
+  <data name="Settings_WarnRuntimeFallbackProvisional" xml:space="preserve">
+    <value>Capability profile came from a runtime fallback path and should be treated as provisional.</value>
+  </data>
+  <data name="Settings_WarnHpRuntimeFallbackProvisional" xml:space="preserve">
+    <value>HP system detected, but capability profile came from a runtime fallback path; treat this mapping as provisional.</value>
+  </data>
+  <data name="Settings_WarnOmenRuntimeFallbackProvisional" xml:space="preserve">
+    <value>OMEN/Victus hints were detected, but capability profile came from a runtime fallback path; treat this mapping as provisional.</value>
+  </data>
+  <data name="Settings_WarnOmenBrandingExactModelMissing" xml:space="preserve">
+    <value>Model name contains OMEN/Victus branding, but exact model is not in database.</value>
+  </data>
+  <data name="Settings_ModelRawIdentityFormat" xml:space="preserve">
+    <value>WMI model: {0} | Baseboard ProductId: {1} | System SKU: {2} | System product identifying number: {3} | HP support product: {4}</value>
+  </data>
+  <data name="Settings_StandaloneStatusStandalone" xml:space="preserve">
+    <value>Standalone</value>
+  </data>
+  <data name="Settings_StandaloneStatusLimited" xml:space="preserve">
+    <value>Limited</value>
+  </data>
+  <data name="Settings_StandaloneStatusCritical" xml:space="preserve">
+    <value>Critical</value>
+  </data>
+  <data name="Settings_OghServiceLineFormat" xml:space="preserve">
+    <value>Service: {0} ({1})</value>
+  </data>
+  <data name="Settings_OghProcessLineFormat" xml:space="preserve">
+    <value>Process: {0} ({1})</value>
+  </data>
+  <data name="Settings_OghProcessLineNoPathFormat" xml:space="preserve">
+    <value>Process: {0}</value>
+  </data>
+  <data name="Settings_StateRunning" xml:space="preserve">
+    <value>running</value>
+  </data>
+  <data name="Settings_StateStopped" xml:space="preserve">
+    <value>stopped</value>
+  </data>
+  <data name="Nvidia_PowerPolicyFormat" xml:space="preserve">
+    <value>enforced {0}, default {1}, range {2}-{3}, draw {4}</value>
+  </data>
+  <data name="Nvidia_PowerPolicyHeldDownNote" xml:space="preserve">
+    <value> (enforced limit is below the driver maximum: an OEM/firmware policy is holding it down)</value>
+  </data>
+  <data name="Nvidia_PowerPolicyNotReported" xml:space="preserve">
+    <value>not reported</value>
+  </data>
+  <data name="Lighting_PerKeyEditorActive" xml:space="preserve">
+    <value>Per-key RGB editor is active for this keyboard.</value>
+  </data>
+  <data name="Lighting_PerKeyCapableUnsupported" xml:space="preserve">
+    <value>Per-key RGB capable hardware detected. OmenCore currently cannot open the per-key editor on this backend yet; zone lighting remains available in this build.</value>
+  </data>
+  <data name="Lighting_PerKeyUnsupported" xml:space="preserve">
+    <value>Per-key RGB is available on select OMEN Max models with HID per-key keyboards. This keyboard does not support per-key control.</value>
+  </data>
+  <data name="Lighting_BarAnimationStatusFormat" xml:space="preserve">
+    <value>{0} sent. There is no readback for animations — look at the bar.</value>
+  </data>
+  <data name="KbdStatus_AppliedViaV2Format" xml:space="preserve">
+    <value>Applied via V2 {0}. {1}</value>
+  </data>
+  <data name="KbdStatus_V2AcceptedNotVerifiedFormat" xml:space="preserve">
+    <value>V2 {0} accepted the write but did not verify: {1}</value>
+  </data>
+  <data name="KbdStatus_V2NotVerifiedFormat" xml:space="preserve">
+    <value>V2 {0} did not verify: {1}</value>
+  </data>
+  <data name="KbdStatus_AppliedWmiZones" xml:space="preserve">
+    <value>Applied through individual WMI zone writes.</value>
+  </data>
+  <data name="KbdStatus_ColorTableAccepted" xml:space="preserve">
+    <value>WMI BIOS ColorTable accepted the write. Verify the intended physical surface changed; on some models this may be a light bar rather than the keyboard.</value>
+  </data>
+  <data name="KbdStatus_AppliedOghProxy" xml:space="preserve">
+    <value>Applied via OMEN Gaming Hub proxy ColorTable fallback.</value>
+  </data>
+  <data name="KbdStatus_AppliedEcFallback" xml:space="preserve">
+    <value>Applied via experimental EC fallback after WMI methods failed.</value>
+  </data>
+  <data name="KbdStatus_EcThrottled" xml:space="preserve">
+    <value>Experimental EC keyboard write was throttled to protect the EC.</value>
+  </data>
+  <data name="KbdStatus_AppliedEc" xml:space="preserve">
+    <value>Applied via experimental EC keyboard register writes.</value>
+  </data>
+  <data name="KbdStatus_AllFailed" xml:space="preserve">
+    <value>All keyboard lighting backends failed. Colors may not be applied.</value>
+  </data>
+  <data name="KbdStatus_ApplyFailedFormat" xml:space="preserve">
+    <value>Keyboard lighting apply failed: {0}</value>
+  </data>
+  <data name="KbdStatus_ReadbackVerified" xml:space="preserve">
+    <value>readback verified</value>
+  </data>
+  <data name="KbdStatus_ReadbackNotVerified" xml:space="preserve">
+    <value>readback did not verify</value>
+  </data>
+  <data name="KbdStatus_Unknown" xml:space="preserve">
+    <value>status unknown</value>
+  </data>
+  <data name="KbdSurface_WmiColorTable" xml:space="preserve">
+    <value>HP WMI ColorTable zones (keyboard or light bar depending model wiring)</value>
+  </data>
+  <data name="KbdSurface_WmiZones" xml:space="preserve">
+    <value>HP WMI individual keyboard zones</value>
+  </data>
+  <data name="KbdSurface_EcZones" xml:space="preserve">
+    <value>Keyboard zones (experimental EC)</value>
+  </data>
+  <data name="KbdSurface_EcZonesFallback" xml:space="preserve">
+    <value>Keyboard zones (experimental EC fallback)</value>
+  </data>
+  <data name="KbdSurface_OghZones" xml:space="preserve">
+    <value>OGH-proxied HP lighting zones</value>
+  </data>
+  <data name="KbdSurface_Unavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="KbdSurface_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Lighting_ObservationStatusFormat" xml:space="preserve">
+    <value>Observed {0} via {1} at {2}; probe color {3}.</value>
+  </data>
+  <data name="Lighting_OwnershipKeyboardFormat" xml:space="preserve">
+    <value>HP keyboard ({0})</value>
+  </data>
+  <data name="Lighting_OwnershipKeyboardUnavailable" xml:space="preserve">
+    <value>HP keyboard (unavailable)</value>
+  </data>
+  <data name="Resume_TimelineLineFormat" xml:space="preserve">
+    <value>{0} | {1} | {2}</value>
+  </data>
+  <data name="Resume_LastUpdatedFormat" xml:space="preserve">
+    <value>Last update: {0}</value>
+  </data>
+  <data name="Resume_SourcePower" xml:space="preserve">
+    <value>power</value>
+  </data>
+  <data name="Resume_SourceMonitoring" xml:space="preserve">
+    <value>monitoring</value>
+  </data>
+  <data name="Resume_SourceWatchdog" xml:space="preserve">
+    <value>watchdog</value>
+  </data>
+  <data name="Resume_SourceSelfCheck" xml:space="preserve">
+    <value>self-check</value>
+  </data>
+  <data name="Resume_MsgSuspendDetected" xml:space="preserve">
+    <value>Suspend detected</value>
+  </data>
+  <data name="Resume_MsgResumeDetected" xml:space="preserve">
+    <value>Resume detected</value>
+  </data>
+  <data name="Resume_MsgMonitoringPaused" xml:space="preserve">
+    <value>Monitoring paused for suspend</value>
+  </data>
+  <data name="Resume_MsgMonitoringResumed" xml:space="preserve">
+    <value>Monitoring resumed after standby</value>
+  </data>
+  <data name="Resume_MsgBridgeSucceeded" xml:space="preserve">
+    <value>Bridge refresh succeeded after resume</value>
+  </data>
+  <data name="Resume_MsgBridgeIncomplete" xml:space="preserve">
+    <value>Bridge refresh after resume reported incomplete recovery</value>
+  </data>
+  <data name="Resume_MsgBridgeFailedFormat" xml:space="preserve">
+    <value>Bridge refresh after resume failed: {0}</value>
+  </data>
+  <data name="Resume_MsgFreezeSuspended" xml:space="preserve">
+    <value>Freeze detection suspended for sleep</value>
+  </data>
+  <data name="Resume_MsgGraceStartedFormat" xml:space="preserve">
+    <value>Resume grace window started ({0}s)</value>
+  </data>
+  <data name="Resume_MsgGraceEnded" xml:space="preserve">
+    <value>Resume grace window ended</value>
+  </data>
+  <data name="Resume_MsgAllRecovered" xml:space="preserve">
+    <value>All services recovered successfully.</value>
+  </data>
+  <data name="Settings_ModelSourceUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Resume_SourceFan" xml:space="preserve">
+    <value>fan</value>
+  </data>
+  <data name="GameProfile_ValidationNameRequired" xml:space="preserve">
+    <value>Profile name is required</value>
+  </data>
+  <data name="GameProfile_ValidationNameTooLong" xml:space="preserve">
+    <value>Profile name must be 100 characters or less</value>
+  </data>
+  <data name="GameProfile_ValidationExeRequired" xml:space="preserve">
+    <value>Executable name is required</value>
+  </data>
+  <data name="GameProfile_ValidationExeSuffix" xml:space="preserve">
+    <value>Executable must end with .exe</value>
+  </data>
+  <data name="GameProfile_ValidationUndervoltRange" xml:space="preserve">
+    <value>CPU undervolt must be between -200 and 0 mV</value>
+  </data>
+  <data name="GameProfile_ValidationPriorityRange" xml:space="preserve">
+    <value>Priority must be between 0 and 100</value>
+  </data>
+  <data name="Mem_OpenProcessLocationFailed" xml:space="preserve">
+    <value>Failed to open process location</value>
+  </data>
+  <data name="KbdMap_StatusApplyToSend" xml:space="preserve">
+    <value> Apply to send it to the keyboard.</value>
+  </data>
 </root>

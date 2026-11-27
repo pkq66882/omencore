@@ -591,7 +591,7 @@ namespace OmenCore.ViewModels
                 custom ? new[] { ToRgb(BarColorHex) } : null);
 
             BarStatus = ok
-                ? $"{SelectedBarEffect.Name} sent. There is no readback for animations — look at the bar."
+                ? string.Format(Strings.Lighting_BarAnimationStatusFormat, SelectedBarEffect.Name)
                 : string.Format(Strings.DL2_BarRefusedFormat, SelectedBarEffect.Name);
         }
 

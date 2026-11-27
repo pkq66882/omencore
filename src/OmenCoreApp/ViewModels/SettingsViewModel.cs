@@ -3039,6 +3039,9 @@ namespace OmenCore.ViewModels
                 {
                     "Degraded" => Strings.SettingsViewModel_StatusDegraded,
                     "Healthy" => Strings.SettingsViewModel_StatusHealthy,
+                    "Standalone" => Strings.Settings_StandaloneStatusStandalone,
+                    "Limited" => Strings.Settings_StandaloneStatusLimited,
+                    "Critical" => Strings.Settings_StandaloneStatusCritical,
                     _ => audit.StatusText
                 };
                 StandaloneStatusColor = audit.StatusColor;
@@ -3089,10 +3092,51 @@ namespace OmenCore.ViewModels
                 "Resume detected. Recovery timeline is being collected." => Strings.Settings_ResumeSummaryRecovering,
                 var s => s
             };
-            ResumeRecoveryTimeline = _resumeRecoveryDiagnostics.TimelineText == "No timeline recorded yet."
+            var entries = _resumeRecoveryDiagnostics.SnapshotEntries();
+            ResumeRecoveryTimeline = entries.Count == 0
                 ? Strings.SettingsViewModel_NoTimelineRecorded
-                : _resumeRecoveryDiagnostics.TimelineText;
-            ResumeRecoveryLastUpdated = statusMap.TryGetValue(_resumeRecoveryDiagnostics.LastUpdatedText, out var lu) ? lu : _resumeRecoveryDiagnostics.LastUpdatedText;
+                : string.Join(Environment.NewLine, entries.Select(e => string.Format(
+                    Strings.Resume_TimelineLineFormat,
+                    e.TimestampUtc.ToLocalTime().ToString("HH:mm:ss"),
+                    LocalizeResumeSource(e.Source),
+                    LocalizeResumeMessage(e.Message))));
+            var lastUpdated = _resumeRecoveryDiagnostics.LastUpdatedText;
+            if (lastUpdated.StartsWith("Last update: ", StringComparison.Ordinal))
+            {
+                ResumeRecoveryLastUpdated = string.Format(Strings.Resume_LastUpdatedFormat, lastUpdated.Substring("Last update: ".Length));
+            }
+            else
+            {
+                ResumeRecoveryLastUpdated = statusMap.TryGetValue(lastUpdated, out var lu) ? lu : lastUpdated;
+            }
+        }
+
+        private static string LocalizeResumeSource(string source) => source switch
+        {
+            "power" => Strings.Resume_SourcePower,
+            "monitoring" => Strings.Resume_SourceMonitoring,
+            "watchdog" => Strings.Resume_SourceWatchdog,
+            "self-check" => Strings.Resume_SourceSelfCheck,
+            "fan" => Strings.Resume_SourceFan,
+            _ => source
+        };
+
+        private static string LocalizeResumeMessage(string message)
+        {
+            if (message == "Suspend detected") return Strings.Resume_MsgSuspendDetected;
+            if (message == "Resume detected") return Strings.Resume_MsgResumeDetected;
+            if (message == "Monitoring paused for suspend") return Strings.Resume_MsgMonitoringPaused;
+            if (message == "Monitoring resumed after standby") return Strings.Resume_MsgMonitoringResumed;
+            if (message == "Bridge refresh succeeded after resume") return Strings.Resume_MsgBridgeSucceeded;
+            if (message == "Bridge refresh after resume reported incomplete recovery") return Strings.Resume_MsgBridgeIncomplete;
+            if (message.StartsWith("Bridge refresh after resume failed: ", StringComparison.Ordinal))
+                return string.Format(Strings.Resume_MsgBridgeFailedFormat, message.Substring("Bridge refresh after resume failed: ".Length));
+            if (message == "Freeze detection suspended for sleep") return Strings.Resume_MsgFreezeSuspended;
+            if (message == "Resume grace window ended") return Strings.Resume_MsgGraceEnded;
+            if (message == "All services recovered successfully.") return Strings.Resume_MsgAllRecovered;
+            if (message.StartsWith("Resume grace window started (", StringComparison.Ordinal) && message.EndsWith("s)", StringComparison.Ordinal))
+                return string.Format(Strings.Resume_MsgGraceStartedFormat, message.Substring("Resume grace window started (".Length, message.Length - "Resume grace window started (".Length - 2));
+            return message;
         }
 
         public void RefreshModelIdentityStatus()
@@ -4360,7 +4404,7 @@ namespace OmenCore.ViewModels
                             if (sc.Status == System.ServiceProcess.ServiceControllerStatus.Running)
                             {
                                 OghInstalled = true;
-                                detectedItems.Add($"Service: {serviceName} (running)");
+                                detectedItems.Add(string.Format(Strings.Settings_OghServiceLineFormat, serviceName, Strings.Settings_StateRunning));
                             }
                         }
                         catch (InvalidOperationException)
@@ -4390,7 +4434,7 @@ namespace OmenCore.ViewModels
                                 {
                                     _logging.Debug($"Unable to read OGH process path for '{proc}': {ex.Message}");
                                 }
-                                var detail = string.IsNullOrEmpty(path) ? $"Process: {proc}" : $"Process: {proc} ({path})";
+                                var detail = string.IsNullOrEmpty(path) ? string.Format(Strings.Settings_OghProcessLineNoPathFormat, proc) : string.Format(Strings.Settings_OghProcessLineFormat, proc, path);
                                 detectedItems.Add(detail);
                                 foreach (var p in procs) p.Dispose();
                             }
