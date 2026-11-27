@@ -44,7 +44,7 @@ namespace OmenCore.ViewModels
             }
             else if (!string.IsNullOrWhiteSpace(status.Error))
             {
-                verified = string.Format(Strings.TuningStatus_VerifiedFailed, status.Error);
+                verified = string.Format(Strings.TuningStatus_VerifiedFailed, DisplayNames.UndervoltDiagnostic(status.Error));
             }
             else if (!string.IsNullOrWhiteSpace(status.Warning))
             {

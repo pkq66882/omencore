@@ -331,38 +331,10 @@ namespace OmenCore.ViewModels
             }
         }
         
-        /// <summary>
-        /// Explanation of why undervolting is not supported on this system.
-        /// </summary>
-        public string UndervoltNotSupportedReason
-        {
-            get
-            {
-                if (_undervoltService == null)
-                    return Strings.Undervolt_ServiceInitFailed;
+        // The old UndervoltNotSupportedReason property had no XAML binding; the reason actually shown
+        // on the tuning card comes from CapabilityReasonText (UndervoltReason), which localizes the
+        // provider's English block reason itself.
 
-                if (!UndervoltStatus.IsRuntimeReady && !string.IsNullOrWhiteSpace(UndervoltStatus.RuntimeBlockReason))
-                    return DisplayNames.UndervoltDiagnostic(UndervoltStatus.RuntimeBlockReason);
-
-                var warning = UndervoltStatus?.Warning;
-                if (!string.IsNullOrEmpty(warning))
-                    return DisplayNames.UndervoltDiagnostic(warning);
-                
-                // Check CPU type
-                var cpuVendor = Hardware.CpuUndervoltProviderFactory.DetectedVendor;
-                var cpuName = Hardware.CpuUndervoltProviderFactory.CpuName;
-                
-                if (cpuVendor == Hardware.CpuUndervoltProviderFactory.CpuVendor.AMD)
-                {
-                    return string.Format(Strings.SC2_AmdGuidanceFormat, cpuName);
-                }
-                else
-                {
-                    return string.Format(Strings.SC2_IntelGuidanceFormat, cpuName);
-                }
-            }
-        }
-        
         public string UndervoltStatusText => TuningStatusFormatter.BuildUndervoltStatusText(
             RequestedCoreOffset,
             RequestedCacheOffset,
@@ -2762,7 +2734,6 @@ namespace OmenCore.ViewModels
                 OnPropertyChanged(nameof(UndervoltStatusText));
                 OnPropertyChanged(nameof(UndervoltStatusColor));
                 OnPropertyChanged(nameof(IsUndervoltSupported));
-                OnPropertyChanged(nameof(UndervoltNotSupportedReason));
                 OnPropertyChanged(nameof(UndervoltSectionTitle));
                 OnPropertyChanged(nameof(UndervoltActionLabel));
                 OnPropertyChanged(nameof(UndervoltGuidanceText));

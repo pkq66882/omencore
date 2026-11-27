@@ -98,7 +98,9 @@ namespace OmenCore.Utils
                 var model = message.Substring(modelDbPrefix.Length).TrimEnd(')');
                 return string.Format(Strings.CapabilityReason_Undervolt_ModelDbDisabledFormat, model);
             }
-            return string.Format(Strings.CapabilityReason_Undervolt_NotReadyFormat, message);
+            // The probe's block reason is a Core English sentence (MSR/SMU/XTU/CPU-no-CO...); localize
+            // it before it lands inside "undervolt unavailable: {0}".
+            return string.Format(Strings.CapabilityReason_Undervolt_NotReadyFormat, DisplayNames.UndervoltDiagnostic(message));
         }
     }
 }
