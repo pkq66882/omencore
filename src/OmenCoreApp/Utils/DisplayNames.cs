@@ -254,6 +254,7 @@ namespace OmenCore.Utils
                 "Single backlight changed" => Strings.RgbSurface_SingleBacklight,
                 "Nothing changed" => Strings.RgbSurface_NothingChanged,
                 "Different or unknown surface changed" => Strings.RgbSurface_Other,
+                "Not recorded" => Strings.LightingViewModel_NotRecorded,
                 _ => token ?? string.Empty
             },
             "KeyboardProfile" => token switch
@@ -388,6 +389,7 @@ namespace OmenCore.Utils
                 "Keyboard zones (experimental EC)" => Strings.KbdSurface_EcZones,
                 "Keyboard zones (experimental EC fallback)" => Strings.KbdSurface_EcZonesFallback,
                 "OGH-proxied HP lighting zones" => Strings.KbdSurface_OghZones,
+                "Not recorded" => Strings.LightingViewModel_NotRecorded,
                 "Unavailable" => Strings.KbdSurface_Unavailable,
                 "Unknown" => Strings.KbdSurface_Unknown,
                 null or "" => Strings.KbdSurface_Unknown,
@@ -513,6 +515,59 @@ namespace OmenCore.Utils
                 m => string.Format(Strings.Undervolt_WarnIgpuNoConfirmedFormat, m.Groups[1].Value, m.Groups[2].Value));
 
             return result;
+        }
+
+        /// <summary>
+        /// Capability-database model names carry an English generation suffix. Translate only the
+        /// suffix, so the product name ("OMEN 15/17") stays exactly as the database stores it.
+        /// </summary>
+        public static string ModelName(string? name)
+        {
+            if (string.IsNullOrWhiteSpace(name)) return name ?? string.Empty;
+            var text = name.Trim();
+
+            var range = Regex.Match(text, @"^(.*) \((\d{4})-(\d{4}) generation\)$");
+            if (range.Success)
+            {
+                return range.Groups[1].Value + string.Format(Strings.ModelName_YearRangeFormat,
+                    range.Groups[2].Value, range.Groups[3].Value);
+            }
+
+            var single = Regex.Match(text, @"^(.*) \((\d{4}) generation\)$");
+            if (single.Success)
+            {
+                return single.Groups[1].Value + string.Format(Strings.ModelName_YearFormat, single.Groups[2].Value);
+            }
+
+            const string legacySuffix = " (legacy/unknown generation)";
+            if (text.EndsWith(legacySuffix, StringComparison.Ordinal))
+            {
+                return text.Substring(0, text.Length - legacySuffix.Length) + Strings.ModelName_LegacyUnknown;
+            }
+
+            return text;
+        }
+
+        /// <summary>
+        /// The RGB manager reports sync work by internal effect id ("color:#RRGGBB", "effect:wave",
+        /// "preset:Name", "off"). Those ids are data; the sync detail line needs a readable label.
+        /// </summary>
+        public static string RgbEffectId(string? effectId)
+        {
+            var text = effectId?.Trim() ?? string.Empty;
+            if (text.StartsWith("color:", StringComparison.Ordinal))
+                return $"{Strings.Lighting_StaticEffectLabel} {text.Substring("color:".Length)}";
+            if (text.StartsWith("preset:", StringComparison.Ordinal))
+                return CorsairPreset(text.Substring("preset:".Length));
+
+            return text switch
+            {
+                "effect:breathing" => Strings.KeyboardFx_Breathing,
+                "effect:spectrum" => Strings.LightingView_SpectrumCycle,
+                "effect:wave" => Strings.KeyboardFx_Wave,
+                "off" => Strings.RgbScene_NameLightsOff,
+                _ => text
+            };
         }
 
         /// <summary>Localized game-library platform filter (enum name to label; brands pass through).</summary>
@@ -688,7 +743,7 @@ namespace OmenCore.Utils
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             => value as string is string s && s == "Unknown OMEN"
                 ? Strings.DiagnosticsView_UnknownModel
-                : value?.ToString() ?? string.Empty;
+                : DisplayNames.ModelName(value as string);
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
             => throw new NotSupportedException();

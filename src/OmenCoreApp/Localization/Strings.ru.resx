@@ -11386,4 +11386,34 @@
   <data name="Undervolt_WarnIgpuNoConfirmedFormat" xml:space="preserve">
     <value>Смещение Curve Optimizer для iGPU было запрошено, но не записано: для семейства {0} ({1}) нет подтверждённого сообщения iGPU CO, применено только общее смещение.</value>
   </data>
+  <data name="Lighting_ConflictWarningFormat" xml:space="preserve">
+    <value>{0} запущен и может перехватывать подсветку клавиатуры OmenCore. Закройте его, чтобы OmenCore полностью управлял подсветкой.</value>
+  </data>
+  <data name="Lighting_StaticEffectLabel" xml:space="preserve">
+    <value>статический</value>
+  </data>
+  <data name="DiagnosticsView_ModelNotesBoardUnverified" xml:space="preserve">
+    <value>Название платы взято из других открытых проектов управления HP и драйвера hp-wmi для Linux; отчёта OmenCore по этой плате пока нет. До подтверждения экспортом поведение остаётся консервативным по умолчанию для семейства (только переключение режимов вентиляторов через WMI и профили производительности). Отправьте диагностический экспорт, чтобы плата стала полной записью.</value>
+  </data>
+  <data name="ModelName_YearFormat" xml:space="preserve">
+    <value> ({0} поколение)</value>
+  </data>
+  <data name="ModelName_YearRangeFormat" xml:space="preserve">
+    <value> ({0}-{1} поколение)</value>
+  </data>
+  <data name="ModelName_LegacyUnknown" xml:space="preserve">
+    <value> (старое/неизвестное поколение)</value>
+  </data>
+  <data name="Main_KeyboardBrightnessOff" xml:space="preserve">
+    <value>Выкл.</value>
+  </data>
+  <data name="Main_KeyboardBrightnessLow" xml:space="preserve">
+    <value>Низкая</value>
+  </data>
+  <data name="Main_KeyboardBrightnessMedium" xml:space="preserve">
+    <value>Средняя</value>
+  </data>
+  <data name="Main_KeyboardBrightnessHigh" xml:space="preserve">
+    <value>Высокая</value>
+  </data>
 </root>

@@ -482,7 +482,9 @@ namespace OmenCore.ViewModels
 
             public Models.FnCycleSlot Model { get; }
 
-            public string DisplayName => Model.DisplayName;
+            // The slot stores the canonical English effect name; the list must show the same label as
+            // the effect picker, so map at display time.
+            public string DisplayName => DisplayNames.Fx(Model.DisplayName);
 
             public bool IsActive
             {

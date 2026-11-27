@@ -110,6 +110,9 @@ namespace OmenCore.ViewModels
         private static readonly ReadOnlyObservableCollection<LogitechDevice> _emptyLogitechDevices = 
             new(new ObservableCollection<LogitechDevice>());
         private static string RgbObservationNotRecorded => Strings.LightingViewModel_NotRecorded;
+        // Config stores the canonical English sentinel; the UI item above is its localized label.
+        private const string RgbObservationNotRecordedCanonical = "Not recorded";
+        private const string RgbObservationNoApplyStatusCanonical = "No keyboard lighting apply attempted this session.";
         private const string RgbObservationProbeColorHex = "#00FF66";
         private string _selectedObservedRgbSurface = RgbObservationNotRecorded;
         private string _rgbSurfaceObservationStatusText = Strings.LightingViewModel_NoSurfaceObservation;
@@ -537,7 +540,7 @@ namespace OmenCore.ViewModels
                 var conflict = DetectRgbConflictProcess();
                 return conflict == null
                     ? string.Empty
-                    : $"{conflict} is running and may override OmenCore keyboard lighting. Close it to allow OmenCore full control.";
+                    : string.Format(Strings.Lighting_ConflictWarningFormat, conflict);
             }
         }
 
@@ -1857,7 +1860,7 @@ namespace OmenCore.ViewModels
                     _lastRgbSyncState = "blocked";
                 }
 
-                LastRgbSyncDetail = $"{DateTime.Now:HH:mm:ss} - {e.EffectId}";
+                LastRgbSyncDetail = $"{DateTime.Now:HH:mm:ss} - {DisplayNames.RgbEffectId(e.EffectId)}";
                 RefreshRgbStatus();
             }
 
@@ -1896,7 +1899,7 @@ namespace OmenCore.ViewModels
                 _lastRgbSyncState = "blocked";
             }
 
-            LastRgbSyncDetail = $"{DateTime.Now:HH:mm:ss} - Static {colorHex}";
+            LastRgbSyncDetail = $"{DateTime.Now:HH:mm:ss} - {DisplayNames.RgbEffectId($"color:{colorHex}")}";
             RefreshRgbStatus();
         }
 
@@ -2484,14 +2487,16 @@ namespace OmenCore.ViewModels
             var settings = _configService.Config.KeyboardLighting;
             if (updateSurface)
             {
-                settings.ObservedSurface = string.IsNullOrWhiteSpace(SelectedObservedRgbSurface)
-                    ? RgbObservationNotRecorded
+                // Persist the canonical English sentinel, never a localized label.
+                settings.ObservedSurface = string.IsNullOrWhiteSpace(SelectedObservedRgbSurface) ||
+                                           SelectedObservedRgbSurface == RgbObservationNotRecorded
+                    ? RgbObservationNotRecordedCanonical
                     : SelectedObservedRgbSurface.Trim();
             }
 
             settings.ObservedProbeColorHex = RgbObservationProbeColorHex;
             settings.ObservedBackend = KeyboardLightingBackend;
-            settings.ObservedApplyStatus = _keyboardLightingService?.LastApplyStatus ?? Strings.Lighting_NoApplyAttempted;
+            settings.ObservedApplyStatus = _keyboardLightingService?.LastApplyStatus ?? RgbObservationNoApplyStatusCanonical;
             settings.ObservedAtUtc = DateTime.UtcNow;
             _configService.Save(_configService.Config);
         }
@@ -2625,8 +2630,9 @@ namespace OmenCore.ViewModels
                     ? RgbObservationNotRecorded
                     : config.ObservedSurface.Trim();
 
-                // Values saved before localization persist as English - normalize them.
-                if (observedSurface == "Not recorded")
+                // Older builds persisted either the English sentinel or its localized label.
+                if (observedSurface == RgbObservationNotRecordedCanonical ||
+                    observedSurface == RgbObservationNotRecorded)
                 {
                     observedSurface = RgbObservationNotRecorded;
                 }
@@ -2649,7 +2655,8 @@ namespace OmenCore.ViewModels
         {
             if (settings.ObservedAtUtc == null ||
                 string.IsNullOrWhiteSpace(settings.ObservedSurface) ||
-                string.Equals(settings.ObservedSurface, RgbObservationNotRecorded, StringComparison.OrdinalIgnoreCase))
+                string.Equals(settings.ObservedSurface, RgbObservationNotRecorded, StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(settings.ObservedSurface, RgbObservationNotRecordedCanonical, StringComparison.OrdinalIgnoreCase))
             {
                 return Strings.LightingViewModel_NoSurfaceObservation;
             }

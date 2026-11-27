@@ -680,7 +680,7 @@
     <value>应用 GPU 功耗提升档位</value>
   </data>
   <data name="AdvancedView_GpuSwitchingAdvancedOptimus" xml:space="preserve">
-    <value>GPU 切换（Advanced Optimus）</value>
+    <value>Advanced Optimus 显卡切换</value>
   </data>
   <data name="AdvancedView_SwitchBetweenIntegratedAndDiscreteGpuForOp" xml:space="preserve">
     <value>在核显与独显之间切换，兼顾性能或续航。</value>
@@ -1181,7 +1181,7 @@
     <value>GPU 功耗提升（TGP）</value>
   </data>
   <data name="DiagnosticsView_AdvancedOptimusGpuSwitching" xml:space="preserve">
-    <value>Advanced Optimus GPU 切换</value>
+    <value>Advanced Optimus 显卡切换</value>
   </data>
   <data name="DiagnosticsView_N4ZoneKeyboardRgb" xml:space="preserve">
     <value>四分区键盘 RGB</value>
@@ -8894,7 +8894,7 @@
     <value>“{0}”不是已保存的模式，无处存储当前状态。</value>
   </data>
   <data name="Lighting_RestoreStatusFormat" xml:space="preserve">
-    <value>{0}区域：{1}。{2}</value>
+    <value>{0}；区域：{1}。{2}</value>
   </data>
   <data name="Lighting_RestoredSavedFormat" xml:space="preserve">
     <value>已恢复保存的键盘颜色。{0} 区域：{1}。</value>
@@ -9896,16 +9896,16 @@
     <value>同步失败：没有灯效来源被更新</value>
   </data>
   <data name="S2_SyncCompleteOne" xml:space="preserve">
-    <value>同步完成：已更新 1 个目标</value>
+    <value>同步完成：已更新 1 个灯效目标</value>
   </data>
   <data name="S2_SyncCompleteFormat" xml:space="preserve">
-    <value>同步完成：已更新 {0} 个目标</value>
+    <value>同步完成：已更新 {0} 个灯效目标</value>
   </data>
   <data name="S2_SyncPartialTargetsFormat" xml:space="preserve">
-    <value>部分同步：已更新 {0}/{1} 个目标</value>
+    <value>部分同步：已更新 {0}/{1} 个灯效目标</value>
   </data>
   <data name="S2_SyncFailedNoTargets" xml:space="preserve">
-    <value>同步失败：没有目标被更新</value>
+    <value>同步失败：没有灯效目标被更新</value>
   </data>
   <data name="S2_DpiNotWritable" xml:space="preserve">
     <value>OmenCore 无法真正把这些 DPI 设置写入设备——当前使用的 海盗船连接方式（RGB.NET/iCUE）不支持 DPI 配置。鼠标上的设置没有任何变化。</value>
@@ -9929,7 +9929,7 @@
     <value>同步完成：已更新 {0} 个灯效来源</value>
   </data>
   <data name="L2_NoRgbTargets" xml:space="preserve">
-    <value>没有可用的 RGB 目标</value>
+    <value>没有可用的灯效目标</value>
   </data>
   <data name="L2_ProbeUnavailable" xml:space="preserve">
     <value>没有可用的 HP 键盘灯效后端，无法发送 RGB 探测。</value>
@@ -11385,5 +11385,35 @@
   </data>
   <data name="Undervolt_WarnIgpuNoConfirmedFormat" xml:space="preserve">
     <value>已请求核显 Curve Optimizer 偏移但未写入：{0} 家族（{1}）没有已确认的核显 CO 消息，因此只应用了全核偏移。</value>
+  </data>
+  <data name="Lighting_ConflictWarningFormat" xml:space="preserve">
+    <value>{0} 正在运行，可能会覆盖 OmenCore 的键盘灯效。请关闭它，让 OmenCore 完全接管。</value>
+  </data>
+  <data name="Lighting_StaticEffectLabel" xml:space="preserve">
+    <value>静态</value>
+  </data>
+  <data name="DiagnosticsView_ModelNotesBoardUnverified" xml:space="preserve">
+    <value>这块主板的名称来自其他开源 HP 控制项目与 Linux hp-wmi 驱动，OmenCore 尚未收到它的实机报告。在诊断导出确认之前，行为保持保守的系列默认值（仅支持 WMI 风扇模式切换与性能配置文件）。寄出一份诊断导出即可把该主板升级为完整条目。</value>
+  </data>
+  <data name="ModelName_YearFormat" xml:space="preserve">
+    <value>（{0} 款）</value>
+  </data>
+  <data name="ModelName_YearRangeFormat" xml:space="preserve">
+    <value>（{0}–{1} 款）</value>
+  </data>
+  <data name="ModelName_LegacyUnknown" xml:space="preserve">
+    <value>（早期/未知代）</value>
+  </data>
+  <data name="Main_KeyboardBrightnessOff" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Main_KeyboardBrightnessLow" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="Main_KeyboardBrightnessMedium" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="Main_KeyboardBrightnessHigh" xml:space="preserve">
+    <value>高</value>
   </data>
 </root>

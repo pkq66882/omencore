@@ -182,6 +182,10 @@ namespace OmenCore.ViewModels
                 {
                     return Strings.DiagnosticsView_ModelNotesUnrecognized;
                 }
+                if (notes != null && notes.StartsWith("Board named by other open-source HP control projects", StringComparison.Ordinal))
+                {
+                    return Strings.DiagnosticsView_ModelNotesBoardUnverified;
+                }
                 return notes ?? string.Empty;
             }
         }
@@ -3756,7 +3760,13 @@ namespace OmenCore.ViewModels
                             };
                             await _keyboardLightingService.SetBrightness(brightness);
                             CurrentKeyboardBrightness = level;
-                            string levelName = level switch { 0 => "Off", 1 => "Low", 2 => "Medium", _ => "High" };
+                            string levelName = level switch
+                            {
+                                0 => Strings.Main_KeyboardBrightnessOff,
+                                1 => Strings.Main_KeyboardBrightnessLow,
+                                2 => Strings.Main_KeyboardBrightnessMedium,
+                                _ => Strings.Main_KeyboardBrightnessHigh
+                            };
                             PushEvent(string.Format(Strings.Main_EventKeyboardFormat, levelName));
                         }
                     }
@@ -3775,7 +3785,13 @@ namespace OmenCore.ViewModels
                                 };
                                 await _keyboardLightingService.SetBrightness(brightness);
                                 CurrentKeyboardBrightness = level;
-                                string levelName = level switch { 0 => "Off", 1 => "Low", 2 => "Medium", _ => "High" };
+                                string levelName = level switch
+                            {
+                                0 => Strings.Main_KeyboardBrightnessOff,
+                                1 => Strings.Main_KeyboardBrightnessLow,
+                                2 => Strings.Main_KeyboardBrightnessMedium,
+                                _ => Strings.Main_KeyboardBrightnessHigh
+                            };
                                 PushEvent(string.Format(Strings.Main_EventKeyboardFormat, levelName));
                             }
                         }).Task.Unwrap();

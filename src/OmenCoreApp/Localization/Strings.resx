@@ -11390,4 +11390,34 @@
   <data name="Undervolt_WarnIgpuNoConfirmedFormat" xml:space="preserve">
     <value>The iGPU Curve Optimizer offset was requested but not written: there is no confirmed iGPU CO message for the {0} family ({1}), so only the all-core offset was applied.</value>
   </data>
+  <data name="Lighting_ConflictWarningFormat" xml:space="preserve">
+    <value>{0} is running and may override OmenCore keyboard lighting. Close it to allow OmenCore full control.</value>
+  </data>
+  <data name="Lighting_StaticEffectLabel" xml:space="preserve">
+    <value>Static</value>
+  </data>
+  <data name="DiagnosticsView_ModelNotesBoardUnverified" xml:space="preserve">
+    <value>Board named by other open-source HP control projects and the Linux hp-wmi driver; no OmenCore field report yet. Behaviour is the conservative family default (WMI fan-mode switching and performance profiles only) until an export confirms more. Send a diagnostics export to have this board promoted to a full entry.</value>
+  </data>
+  <data name="ModelName_YearFormat" xml:space="preserve">
+    <value> ({0} generation)</value>
+  </data>
+  <data name="ModelName_YearRangeFormat" xml:space="preserve">
+    <value> ({0}-{1} generation)</value>
+  </data>
+  <data name="ModelName_LegacyUnknown" xml:space="preserve">
+    <value> (legacy/unknown generation)</value>
+  </data>
+  <data name="Main_KeyboardBrightnessOff" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="Main_KeyboardBrightnessLow" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Main_KeyboardBrightnessMedium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Main_KeyboardBrightnessHigh" xml:space="preserve">
+    <value>High</value>
+  </data>
 </root>

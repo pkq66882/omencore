@@ -11386,4 +11386,34 @@
   <data name="Undervolt_WarnIgpuNoConfirmedFormat" xml:space="preserve">
     <value>iGPU Curve Optimizer ofseti istendi ancak yazılmadı: {0} ailesi ({1}) için doğrulanmış iGPU CO mesajı yok; yalnızca tüm çekirdek ofseti uygulandı.</value>
   </data>
+  <data name="Lighting_ConflictWarningFormat" xml:space="preserve">
+    <value>{0} çalışıyor ve OmenCore klavye aydınlatmasını geçersiz kılabilir. OmenCore'un tam kontrolü için kapatın.</value>
+  </data>
+  <data name="Lighting_StaticEffectLabel" xml:space="preserve">
+    <value>statik</value>
+  </data>
+  <data name="DiagnosticsView_ModelNotesBoardUnverified" xml:space="preserve">
+    <value>Bu kartın adı diğer açık kaynak HP kontrol projelerinden ve Linux hp-wmi sürücüsünden geliyor; OmenCore için henüz saha raporu yok. Bir dışa aktarım doğrulayana kadar davranış ailenin tutucu varsayılanı olarak kalır (yalnızca WMI fan modu geçişi ve performans profilleri). Kartın tam kayda yükseltilmesi için tanılama dışa aktarımı gönderin.</value>
+  </data>
+  <data name="ModelName_YearFormat" xml:space="preserve">
+    <value> ({0} nesil)</value>
+  </data>
+  <data name="ModelName_YearRangeFormat" xml:space="preserve">
+    <value> ({0}-{1} nesil)</value>
+  </data>
+  <data name="ModelName_LegacyUnknown" xml:space="preserve">
+    <value> (eski/bilinmeyen nesil)</value>
+  </data>
+  <data name="Main_KeyboardBrightnessOff" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="Main_KeyboardBrightnessLow" xml:space="preserve">
+    <value>Düşük</value>
+  </data>
+  <data name="Main_KeyboardBrightnessMedium" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="Main_KeyboardBrightnessHigh" xml:space="preserve">
+    <value>Yüksek</value>
+  </data>
 </root>

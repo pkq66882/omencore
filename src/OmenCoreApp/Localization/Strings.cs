@@ -4168,5 +4168,15 @@ namespace OmenCore.Localization
     public static string Undervolt_WarnIgpuSmuRefusedFormat => Get(nameof(Undervolt_WarnIgpuSmuRefusedFormat));
     public static string Undervolt_WarnIgpuUnvalidatedFormat => Get(nameof(Undervolt_WarnIgpuUnvalidatedFormat));
     public static string Undervolt_WarnIgpuNoConfirmedFormat => Get(nameof(Undervolt_WarnIgpuNoConfirmedFormat));
+    public static string Lighting_ConflictWarningFormat => Get(nameof(Lighting_ConflictWarningFormat));
+    public static string Lighting_StaticEffectLabel => Get(nameof(Lighting_StaticEffectLabel));
+    public static string DiagnosticsView_ModelNotesBoardUnverified => Get(nameof(DiagnosticsView_ModelNotesBoardUnverified));
+    public static string ModelName_YearFormat => Get(nameof(ModelName_YearFormat));
+    public static string ModelName_YearRangeFormat => Get(nameof(ModelName_YearRangeFormat));
+    public static string ModelName_LegacyUnknown => Get(nameof(ModelName_LegacyUnknown));
+    public static string Main_KeyboardBrightnessOff => Get(nameof(Main_KeyboardBrightnessOff));
+    public static string Main_KeyboardBrightnessLow => Get(nameof(Main_KeyboardBrightnessLow));
+    public static string Main_KeyboardBrightnessMedium => Get(nameof(Main_KeyboardBrightnessMedium));
+    public static string Main_KeyboardBrightnessHigh => Get(nameof(Main_KeyboardBrightnessHigh));
     }
 }
