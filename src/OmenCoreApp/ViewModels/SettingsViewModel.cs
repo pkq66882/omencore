@@ -3170,7 +3170,7 @@ namespace OmenCore.ViewModels
                 string LocalizeModelValue(string v) => v == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : v;
 
                 ModelIdentitySummary = summary.Summary;
-                ModelIdentityResolvedModel = summary.ResolvedModel == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : summary.ResolvedModel;
+                ModelIdentityResolvedModel = summary.ResolvedModel == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : DisplayNames.ModelName(summary.ResolvedModel);
                 ModelIdentityResolutionSource = LocalizeSource(summary.ResolutionSource);
                 ModelIdentityConfidence = LocalizeConfidence(summary.Confidence);
                 ModelIdentityBadgeText = summary.BadgeText switch

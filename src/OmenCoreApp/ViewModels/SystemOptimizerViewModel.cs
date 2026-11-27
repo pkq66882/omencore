@@ -825,12 +825,69 @@ namespace OmenCore.ViewModels
         private void HandleServiceStatus(string status)
         {
             UpdateOperationProgressFromStatus(status);
-            StatusMessage = status switch
-            {
-                "Verifying optimization state..." => Strings.SystemOptimizerViewModel_VerifyingState,
-                _ => status
-            };
+            StatusMessage = LocalizeOptimizerStatus(status);
         }
+
+        /// <summary>
+        /// The optimizer service reports progress as canonical English sentences (fixed text, counters,
+        /// stage names). Map them here; unknown text passes through so nothing is hidden.
+        /// </summary>
+        internal static string LocalizeOptimizerStatus(string status)
+        {
+            if (string.IsNullOrWhiteSpace(status)) return status;
+            var text = status.Trim();
+
+            var exact = text switch
+            {
+                "Verifying optimization state..." => Strings.Opt_StatusVerifying,
+                "Checking optimization status..." => Strings.Opt_StatusChecking,
+                "Creating system restore point..." => Strings.Opt_StatusRestorePoint,
+                "Applying power optimizations..." => Strings.Opt_StatusApplyingPower,
+                "Optimizing services..." => Strings.Opt_StatusOptimizingServices,
+                "Applying network tweaks..." => Strings.Opt_StatusApplyingNetwork,
+                "Optimizing input settings..." => Strings.Opt_StatusOptimizingInput,
+                "Adjusting visual effects..." => Strings.Opt_StatusAdjustingVisual,
+                "Configuring storage..." => Strings.Opt_StatusConfiguringStorage,
+                "Creating backup..." => Strings.Opt_StatusCreatingBackup,
+                "Applying recommended optimizations..." => Strings.Opt_StatusApplyingRecommended,
+                "[3-6/6] Reverting network, input, visual, and storage settings in parallel..." => Strings.Opt_StatusRevertParallel,
+                _ => null
+            };
+            if (exact != null) return exact;
+
+            var m = Regex.Match(text, @"^Verification complete: (\d+)/(\d+) optimizations active$");
+            if (m.Success) return string.Format(Strings.Opt_StatusVerifyCompleteFormat, m.Groups[1].Value, m.Groups[2].Value);
+
+            m = Regex.Match(text, @"^Status check complete: (\d+)/(\d+) optimizations active$");
+            if (m.Success) return string.Format(Strings.Opt_StatusCheckCompleteFormat, m.Groups[1].Value, m.Groups[2].Value);
+
+            m = Regex.Match(text, @"^Complete: (\d+)/(\d+) optimizations applied$");
+            if (m.Success) return string.Format(Strings.Opt_StatusCompleteFormat, m.Groups[1].Value, m.Groups[2].Value);
+
+            m = Regex.Match(text, @"^Revert complete: (\d+)/(\d+) settings restored$");
+            if (m.Success) return string.Format(Strings.Opt_StatusRevertCompleteFormat, m.Groups[1].Value, m.Groups[2].Value);
+
+            m = Regex.Match(text, @"^\[(\d+)/(\d+)\] Reverting (.+)\.\.\.$");
+            if (m.Success)
+                return string.Format(Strings.Opt_StatusRevertingFormat, m.Groups[1].Value, m.Groups[2].Value, LocalizeStageName(m.Groups[3].Value));
+
+            m = Regex.Match(text, @"^\[(\d+)/(\d+)\] Failed to revert (.+): (.+)$");
+            if (m.Success)
+                return string.Format(Strings.Opt_StatusRevertFailedFormat, m.Groups[1].Value, m.Groups[2].Value, LocalizeStageName(m.Groups[3].Value), m.Groups[4].Value);
+
+            return status;
+        }
+
+        private static string LocalizeStageName(string stage) => stage.Trim() switch
+        {
+            "power settings" => Strings.Opt_StagePowerSettings,
+            "services" => Strings.Opt_StageServices,
+            "network tweaks" => Strings.Opt_StageNetworkTweaks,
+            "input settings" => Strings.Opt_StageInputSettings,
+            "visual effects" => Strings.Opt_StageVisualEffects,
+            "storage settings" => Strings.Opt_StageStorageSettings,
+            _ => stage
+        };
 
         private void UpdateOperationProgressFromStatus(string status)
         {

@@ -1221,13 +1221,45 @@ namespace OmenCore.ViewModels
         /// <summary>Maps the optimizer's own progress phrases; unknown text passes through.</summary>
         private static string LocalizeOptimizerStatus(string status)
         {
+            if (string.IsNullOrWhiteSpace(status)) return status;
             var trimmed = status.Trim();
             if (string.Equals(trimmed, "Cleaning memory...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusCleaning;
             if (string.Equals(trimmed, "Trimming process working sets...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusTrimmingWorkingSets;
             if (string.Equals(trimmed, "Flushing system file cache...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusFlushingFileCache;
             if (string.Equals(trimmed, "Purging low-priority standby list...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusPurgingLowStandby;
             if (string.Equals(trimmed, "Purging standby list...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusPurgingStandby;
+            if (string.Equals(trimmed, "Flushing modified page list...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusFlushingModifiedPageList;
+            if (string.Equals(trimmed, "Combining memory pages...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusCombiningPages;
+
+            var m = System.Text.RegularExpressions.Regex.Match(trimmed, @"^Freed (\d+) MB \((\d+) operations, (\d+) failed\)$");
+            if (m.Success) return string.Format(Strings.Mem_StatusFreedDeltaFormat, m.Groups[1].Value, m.Groups[2].Value, m.Groups[3].Value);
+
+            m = System.Text.RegularExpressions.Regex.Match(trimmed, @"^Auto-clean: scheduled every (\d+) minute\(s\)\.\.\.$");
+            if (m.Success) return string.Format(Strings.Mem_StatusAutoCleanScheduledFormat, m.Groups[1].Value);
+
+            m = System.Text.RegularExpressions.Regex.Match(trimmed, @"^Auto-clean: (.+)\.\.\.$");
+            if (m.Success) return string.Format(Strings.Mem_StatusAutoCleanFormat, LocalizeAutoCleanReason(m.Groups[1].Value));
+
             return status;
+        }
+
+        /// <summary>The auto-clean decision reason is a canonical English sentence with counters.</summary>
+        private static string LocalizeAutoCleanReason(string reason)
+        {
+            var text = reason.Trim();
+            var m = System.Text.RegularExpressions.Regex.Match(text, @"^memory pressure below actionable threshold \((\d+)%\)$");
+            if (m.Success) return string.Format(Strings.Mem_ReasonPressureBelowThresholdFormat, m.Groups[1].Value);
+
+            m = System.Text.RegularExpressions.Regex.Match(text, @"^cooldown active for (\d+)s$");
+            if (m.Success) return string.Format(Strings.Mem_ReasonCooldownFormat, m.Groups[1].Value);
+
+            m = System.Text.RegularExpressions.Regex.Match(text, @"^waiting for sustained memory pressure \((\d+)s\)$");
+            if (m.Success) return string.Format(Strings.Mem_ReasonSustainedPressureFormat, m.Groups[1].Value);
+
+            m = System.Text.RegularExpressions.Regex.Match(text, @"^memory ([\d.]+)% load, ([\d.]+)% available, ([\d.]+)% commit$");
+            if (m.Success) return string.Format(Strings.Mem_ReasonMemoryStateFormat, m.Groups[1].Value, m.Groups[2].Value, m.Groups[3].Value);
+
+            return reason;
         }
 
         private void SetStatusDone(string? details = null)

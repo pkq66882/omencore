@@ -9890,10 +9890,10 @@
     <value>不执行操作（拦截该键）</value>
   </data>
   <data name="S2_SyncStartFormat" xml:space="preserve">
-    <value>部分同步：已更新 {0}/{1} 个灯效来源</value>
+    <value>部分同步：已更新 {0}/{1} 个灯效目标</value>
   </data>
   <data name="S2_SyncFailedNoProviders" xml:space="preserve">
-    <value>同步失败：没有灯效来源被更新</value>
+    <value>同步失败：没有灯效目标被更新</value>
   </data>
   <data name="S2_SyncCompleteOne" xml:space="preserve">
     <value>同步完成：已更新 1 个灯效目标</value>
@@ -9923,10 +9923,10 @@
     <value>键盘灯效不可用；请检查后端检测结果，或查看“设置 > 硬件”。</value>
   </data>
   <data name="L2_SyncCompleteProviderOne" xml:space="preserve">
-    <value>同步完成：已更新 1 个灯效来源</value>
+    <value>同步完成：已更新 1 个灯效目标</value>
   </data>
   <data name="L2_SyncCompleteProvidersFormat" xml:space="preserve">
-    <value>同步完成：已更新 {0} 个灯效来源</value>
+    <value>同步完成：已更新 {0} 个灯效目标</value>
   </data>
   <data name="L2_NoRgbTargets" xml:space="preserve">
     <value>没有可用的灯效目标</value>
@@ -11415,5 +11415,149 @@
   </data>
   <data name="Main_KeyboardBrightnessHigh" xml:space="preserve">
     <value>高</value>
+  </data>
+  <data name="FanCalib_StatusUnavailableFormat" xml:space="preserve">
+    <value>校准不可用：{0}</value>
+  </data>
+  <data name="FanCalib_StatusNoDataFormat" xml:space="preserve">
+    <value>尚无 {0} 的校准数据。运行向导以建立档位→转速映射。</value>
+  </data>
+  <data name="FanCalib_StatusAvailableFormat" xml:space="preserve">
+    <value>已有 {0} 的校准数据（{1:g}），共 {2} 组风扇映射。</value>
+  </data>
+  <data name="FanCalib_ReasonNoService" xml:space="preserve">
+    <value>风扇验证服务在当前运行环境中未初始化。</value>
+  </data>
+  <data name="FanCalib_ReasonBackendInactiveFormat" xml:space="preserve">
+    <value>风扇验证后端未激活（当前风扇后端：{0}）。</value>
+  </data>
+  <data name="FanCalib_ReasonAvailable" xml:space="preserve">
+    <value>风扇验证可用。</value>
+  </data>
+  <data name="Opt_StatusVerifying" xml:space="preserve">
+    <value>正在验证优化状态…</value>
+  </data>
+  <data name="Opt_StatusVerifyCompleteFormat" xml:space="preserve">
+    <value>验证完成：{0}/{1} 项优化已生效</value>
+  </data>
+  <data name="Opt_StatusChecking" xml:space="preserve">
+    <value>正在检查优化状态…</value>
+  </data>
+  <data name="Opt_StatusCheckCompleteFormat" xml:space="preserve">
+    <value>检查完成：{0}/{1} 项优化已生效</value>
+  </data>
+  <data name="Opt_StatusRestorePoint" xml:space="preserve">
+    <value>正在创建系统还原点…</value>
+  </data>
+  <data name="Opt_StatusApplyingPower" xml:space="preserve">
+    <value>正在应用电源优化…</value>
+  </data>
+  <data name="Opt_StatusOptimizingServices" xml:space="preserve">
+    <value>正在优化服务…</value>
+  </data>
+  <data name="Opt_StatusApplyingNetwork" xml:space="preserve">
+    <value>正在应用网络调整…</value>
+  </data>
+  <data name="Opt_StatusOptimizingInput" xml:space="preserve">
+    <value>正在优化输入设置…</value>
+  </data>
+  <data name="Opt_StatusAdjustingVisual" xml:space="preserve">
+    <value>正在调整视觉效果…</value>
+  </data>
+  <data name="Opt_StatusConfiguringStorage" xml:space="preserve">
+    <value>正在配置存储…</value>
+  </data>
+  <data name="Opt_StatusCompleteFormat" xml:space="preserve">
+    <value>完成：已应用 {0}/{1} 项优化</value>
+  </data>
+  <data name="Opt_StatusCreatingBackup" xml:space="preserve">
+    <value>正在创建备份…</value>
+  </data>
+  <data name="Opt_StatusApplyingRecommended" xml:space="preserve">
+    <value>正在应用推荐优化…</value>
+  </data>
+  <data name="Opt_StatusRevertParallel" xml:space="preserve">
+    <value>[3-6/6] 正在并行还原网络、输入、视觉与存储设置…</value>
+  </data>
+  <data name="Opt_StatusRevertCompleteFormat" xml:space="preserve">
+    <value>还原完成：已恢复 {0}/{1} 项设置</value>
+  </data>
+  <data name="Opt_StatusRevertingFormat" xml:space="preserve">
+    <value>[{0}/{1}] 正在还原{2}…</value>
+  </data>
+  <data name="Opt_StatusRevertFailedFormat" xml:space="preserve">
+    <value>[{0}/{1}] 还原{2}失败：{3}</value>
+  </data>
+  <data name="Opt_StagePowerSettings" xml:space="preserve">
+    <value>电源设置</value>
+  </data>
+  <data name="Opt_StageServices" xml:space="preserve">
+    <value>服务</value>
+  </data>
+  <data name="Opt_StageNetworkTweaks" xml:space="preserve">
+    <value>网络调整</value>
+  </data>
+  <data name="Opt_StageInputSettings" xml:space="preserve">
+    <value>输入设置</value>
+  </data>
+  <data name="Opt_StageVisualEffects" xml:space="preserve">
+    <value>视觉效果</value>
+  </data>
+  <data name="Opt_StageStorageSettings" xml:space="preserve">
+    <value>存储设置</value>
+  </data>
+  <data name="Mem_StatusFlushingModifiedPageList" xml:space="preserve">
+    <value>正在刷新已修改页面列表…</value>
+  </data>
+  <data name="Mem_StatusCombiningPages" xml:space="preserve">
+    <value>正在合并内存页面…</value>
+  </data>
+  <data name="Mem_StatusFreedDeltaFormat" xml:space="preserve">
+    <value>已释放 {0} MB（成功 {1} 项，失败 {2} 项）</value>
+  </data>
+  <data name="Mem_StatusAutoCleanFormat" xml:space="preserve">
+    <value>自动清理：{0}…</value>
+  </data>
+  <data name="Mem_StatusAutoCleanScheduledFormat" xml:space="preserve">
+    <value>自动清理：每 {0} 分钟执行一次…</value>
+  </data>
+  <data name="Mem_ReasonPressureBelowThresholdFormat" xml:space="preserve">
+    <value>内存压力低于可执行阈值（{0}%）</value>
+  </data>
+  <data name="Mem_ReasonCooldownFormat" xml:space="preserve">
+    <value>冷却中，剩余 {0} 秒</value>
+  </data>
+  <data name="Mem_ReasonSustainedPressureFormat" xml:space="preserve">
+    <value>等待内存压力持续（{0} 秒）</value>
+  </data>
+  <data name="Mem_ReasonMemoryStateFormat" xml:space="preserve">
+    <value>内存占用 {0}%，可用 {1}%，提交 {2}%</value>
+  </data>
+  <data name="Lighting_PulseEffectLabel" xml:space="preserve">
+    <value>脉冲</value>
+  </data>
+  <data name="CorsairPreset_Red" xml:space="preserve">
+    <value>红色</value>
+  </data>
+  <data name="CorsairPreset_Green" xml:space="preserve">
+    <value>绿色</value>
+  </data>
+  <data name="CorsairPreset_Blue" xml:space="preserve">
+    <value>蓝色</value>
+  </data>
+  <data name="CorsairPreset_Purple" xml:space="preserve">
+    <value>紫色</value>
+  </data>
+  <data name="CorsairPreset_Cyan" xml:space="preserve">
+    <value>青色</value>
+  </data>
+  <data name="CorsairPreset_White" xml:space="preserve">
+    <value>白色</value>
+  </data>
+  <data name="DiagnosticsView_ModelNotesBoardIdentityOnly" xml:space="preserve">
+    <value>仅按主板身份登记：该型号来自其他开源 HP 项目（omen-fan-control README、Linux hp-wmi 主板表）的收录，OmenCore 尚无该主板的实测导出。在完成引导式风扇验证与 RGB 检查前，所有能力都保持保守默认值。</value>
+  </data>
+  <data name="DiagnosticsView_ModelNotesWmiQuirks2024" xml:space="preserve">
+    <value>2024 款机型——较旧 BIOS 版本可能存在 WMI 异常</value>
   </data>
 </root>

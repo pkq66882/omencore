@@ -186,6 +186,14 @@ namespace OmenCore.ViewModels
                 {
                     return Strings.DiagnosticsView_ModelNotesBoardUnverified;
                 }
+                if (notes != null && notes.StartsWith("Board identity only: listed as a supported board", StringComparison.Ordinal))
+                {
+                    return Strings.DiagnosticsView_ModelNotesBoardIdentityOnly;
+                }
+                if (notes == "2024 model - may have WMI quirks on older BIOS versions")
+                {
+                    return Strings.DiagnosticsView_ModelNotesWmiQuirks2024;
+                }
                 return notes ?? string.Empty;
             }
         }

@@ -764,16 +764,16 @@ namespace OmenCore.ViewModels
             {
                 if (!IsFanCalibrationAvailable)
                 {
-                    return $"Calibration unavailable: {FanCalibrationUnavailableReason}";
+                    return string.Format(Strings.FanCalib_StatusUnavailableFormat, FanCalibrationUnavailableReason);
                 }
 
                 var calibration = _fanCalibrationStorage.GetCalibration(_fanCalibrationModelId);
                 if (calibration == null)
                 {
-                    return $"No calibration data stored for {_fanCalibrationModelName}. Run the wizard to build a duty-to-RPM map.";
+                    return string.Format(Strings.FanCalib_StatusNoDataFormat, _fanCalibrationModelName);
                 }
 
-                return $"Calibration available for {calibration.ModelName} from {calibration.CreatedDate:g}. {calibration.FanCalibrations.Count} fan map(s) stored.";
+                return string.Format(Strings.FanCalib_StatusAvailableFormat, calibration.ModelName, calibration.CreatedDate, calibration.FanCalibrations.Count);
             }
         }
 
@@ -783,15 +783,15 @@ namespace OmenCore.ViewModels
             {
                 if (_fanVerificationService == null)
                 {
-                    return "fan verification service is not initialized in this runtime context.";
+                    return Strings.FanCalib_ReasonNoService;
                 }
 
                 if (!_fanVerificationService.IsAvailable)
                 {
-                    return $"fan verification backend is inactive (active fan backend: {_fanService.Backend}).";
+                    return string.Format(Strings.FanCalib_ReasonBackendInactiveFormat, _fanService.Backend);
                 }
 
-                return "fan verification is available.";
+                return Strings.FanCalib_ReasonAvailable;
             }
         }
 

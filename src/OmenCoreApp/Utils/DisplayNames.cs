@@ -403,6 +403,12 @@ namespace OmenCore.Utils
             {
                 "Sync Static" => Strings.CorsairPreset_SyncStatic,
                 "Sync Wave" => Strings.CorsairPreset_SyncWave,
+                "Red" => Strings.CorsairPreset_Red,
+                "Green" => Strings.CorsairPreset_Green,
+                "Blue" => Strings.CorsairPreset_Blue,
+                "Purple" => Strings.CorsairPreset_Purple,
+                "Cyan" => Strings.CorsairPreset_Cyan,
+                "White" => Strings.CorsairPreset_White,
                 _ => name ?? string.Empty
             };
         }
@@ -557,6 +563,14 @@ namespace OmenCore.Utils
             var text = effectId?.Trim() ?? string.Empty;
             if (text.StartsWith("color:", StringComparison.Ordinal))
                 return $"{Strings.Lighting_StaticEffectLabel} {text.Substring("color:".Length)}";
+            if (text.StartsWith("pulse:", StringComparison.Ordinal))
+            {
+                // "pulse:#RRGGBB:1000" - the interval is an implementation detail; show colour only.
+                var body = text.Substring("pulse:".Length);
+                var cut = body.LastIndexOf(':');
+                var hex = cut > 0 ? body.Substring(0, cut) : body;
+                return $"{Strings.Lighting_PulseEffectLabel} {hex}";
+            }
             if (text.StartsWith("preset:", StringComparison.Ordinal))
                 return CorsairPreset(text.Substring("preset:".Length));
 

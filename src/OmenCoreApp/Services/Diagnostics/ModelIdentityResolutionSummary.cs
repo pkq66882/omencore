@@ -5,6 +5,7 @@ using OmenCore.Hardware;
 using OmenCore.Models;
 using OmenCore.Services;
 using OmenCore.Services.KeyboardLighting;
+using OmenCore.Utils;
 
 namespace OmenCore.Services.Diagnostics
 {
@@ -281,7 +282,7 @@ namespace OmenCore.Services.Diagnostics
                 "High" => Strings.SettingsViewModel_ConfidenceHigh,
                 _ => c
             };
-            string Model(string m) => m == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : m;
+            string Model(string m) => m == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : DisplayNames.ModelName(m);
 
             var platformQualifier = summary.IsHpSystem
                     ? (summary.HasOmenVictusHint ? Strings.SettingsViewModel_PlatformHpOmen : Strings.SettingsViewModel_PlatformHp)

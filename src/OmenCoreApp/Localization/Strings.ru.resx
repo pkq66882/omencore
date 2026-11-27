@@ -11416,4 +11416,148 @@
   <data name="Main_KeyboardBrightnessHigh" xml:space="preserve">
     <value>Высокая</value>
   </data>
+  <data name="FanCalib_StatusUnavailableFormat" xml:space="preserve">
+    <value>Calibration unavailable: {0}</value>
+  </data>
+  <data name="FanCalib_StatusNoDataFormat" xml:space="preserve">
+    <value>No calibration data stored for {0}. Run the wizard to build a duty-to-RPM map.</value>
+  </data>
+  <data name="FanCalib_StatusAvailableFormat" xml:space="preserve">
+    <value>Calibration available for {0} from {1:g}. {2} fan map(s) stored.</value>
+  </data>
+  <data name="FanCalib_ReasonNoService" xml:space="preserve">
+    <value>fan verification service is not initialized in this runtime context.</value>
+  </data>
+  <data name="FanCalib_ReasonBackendInactiveFormat" xml:space="preserve">
+    <value>fan verification backend is inactive (active fan backend: {0}).</value>
+  </data>
+  <data name="FanCalib_ReasonAvailable" xml:space="preserve">
+    <value>fan verification is available.</value>
+  </data>
+  <data name="Opt_StatusVerifying" xml:space="preserve">
+    <value>Verifying optimization state...</value>
+  </data>
+  <data name="Opt_StatusVerifyCompleteFormat" xml:space="preserve">
+    <value>Verification complete: {0}/{1} optimizations active</value>
+  </data>
+  <data name="Opt_StatusChecking" xml:space="preserve">
+    <value>Checking optimization status...</value>
+  </data>
+  <data name="Opt_StatusCheckCompleteFormat" xml:space="preserve">
+    <value>Status check complete: {0}/{1} optimizations active</value>
+  </data>
+  <data name="Opt_StatusRestorePoint" xml:space="preserve">
+    <value>Creating system restore point...</value>
+  </data>
+  <data name="Opt_StatusApplyingPower" xml:space="preserve">
+    <value>Applying power optimizations...</value>
+  </data>
+  <data name="Opt_StatusOptimizingServices" xml:space="preserve">
+    <value>Optimizing services...</value>
+  </data>
+  <data name="Opt_StatusApplyingNetwork" xml:space="preserve">
+    <value>Applying network tweaks...</value>
+  </data>
+  <data name="Opt_StatusOptimizingInput" xml:space="preserve">
+    <value>Optimizing input settings...</value>
+  </data>
+  <data name="Opt_StatusAdjustingVisual" xml:space="preserve">
+    <value>Adjusting visual effects...</value>
+  </data>
+  <data name="Opt_StatusConfiguringStorage" xml:space="preserve">
+    <value>Configuring storage...</value>
+  </data>
+  <data name="Opt_StatusCompleteFormat" xml:space="preserve">
+    <value>Complete: {0}/{1} optimizations applied</value>
+  </data>
+  <data name="Opt_StatusCreatingBackup" xml:space="preserve">
+    <value>Creating backup...</value>
+  </data>
+  <data name="Opt_StatusApplyingRecommended" xml:space="preserve">
+    <value>Applying recommended optimizations...</value>
+  </data>
+  <data name="Opt_StatusRevertParallel" xml:space="preserve">
+    <value>[3-6/6] Reverting network, input, visual, and storage settings in parallel...</value>
+  </data>
+  <data name="Opt_StatusRevertCompleteFormat" xml:space="preserve">
+    <value>Revert complete: {0}/{1} settings restored</value>
+  </data>
+  <data name="Opt_StatusRevertingFormat" xml:space="preserve">
+    <value>[{0}/{1}] Reverting {2}...</value>
+  </data>
+  <data name="Opt_StatusRevertFailedFormat" xml:space="preserve">
+    <value>[{0}/{1}] Failed to revert {2}: {3}</value>
+  </data>
+  <data name="Opt_StagePowerSettings" xml:space="preserve">
+    <value>power settings</value>
+  </data>
+  <data name="Opt_StageServices" xml:space="preserve">
+    <value>services</value>
+  </data>
+  <data name="Opt_StageNetworkTweaks" xml:space="preserve">
+    <value>network tweaks</value>
+  </data>
+  <data name="Opt_StageInputSettings" xml:space="preserve">
+    <value>input settings</value>
+  </data>
+  <data name="Opt_StageVisualEffects" xml:space="preserve">
+    <value>visual effects</value>
+  </data>
+  <data name="Opt_StageStorageSettings" xml:space="preserve">
+    <value>storage settings</value>
+  </data>
+  <data name="Mem_StatusFlushingModifiedPageList" xml:space="preserve">
+    <value>Flushing modified page list...</value>
+  </data>
+  <data name="Mem_StatusCombiningPages" xml:space="preserve">
+    <value>Combining memory pages...</value>
+  </data>
+  <data name="Mem_StatusFreedDeltaFormat" xml:space="preserve">
+    <value>Freed {0} MB ({1} operations, {2} failed)</value>
+  </data>
+  <data name="Mem_StatusAutoCleanFormat" xml:space="preserve">
+    <value>Auto-clean: {0}...</value>
+  </data>
+  <data name="Mem_StatusAutoCleanScheduledFormat" xml:space="preserve">
+    <value>Auto-clean: scheduled every {0} minute(s)...</value>
+  </data>
+  <data name="Mem_ReasonPressureBelowThresholdFormat" xml:space="preserve">
+    <value>memory pressure below actionable threshold ({0}%)</value>
+  </data>
+  <data name="Mem_ReasonCooldownFormat" xml:space="preserve">
+    <value>cooldown active for {0}s</value>
+  </data>
+  <data name="Mem_ReasonSustainedPressureFormat" xml:space="preserve">
+    <value>waiting for sustained memory pressure ({0}s)</value>
+  </data>
+  <data name="Mem_ReasonMemoryStateFormat" xml:space="preserve">
+    <value>memory {0}% load, {1}% available, {2}% commit</value>
+  </data>
+  <data name="Lighting_PulseEffectLabel" xml:space="preserve">
+    <value>Pulse</value>
+  </data>
+  <data name="CorsairPreset_Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="CorsairPreset_Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="CorsairPreset_Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="CorsairPreset_Purple" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="CorsairPreset_Cyan" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="CorsairPreset_White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="DiagnosticsView_ModelNotesBoardIdentityOnly" xml:space="preserve">
+    <value>Board identity only: listed as a supported board by other open-source HP projects (omen-fan-control README, Linux hp-wmi board table); model name from those listings. No OmenCore export for this board yet, so every capability is left conservative until a Guided Fan Verification and an RGB check come back.</value>
+  </data>
+  <data name="DiagnosticsView_ModelNotesWmiQuirks2024" xml:space="preserve">
+    <value>2024 model - may have WMI quirks on older BIOS versions</value>
+  </data>
 </root>
