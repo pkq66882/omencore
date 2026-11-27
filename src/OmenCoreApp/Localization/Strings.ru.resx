@@ -9935,7 +9935,7 @@
     <value>Проверка RGB недоступна: активный бэкенд подсветки клавиатуры HP отсутствует.</value>
   </data>
   <data name="L2_ProbeSentFormat" xml:space="preserve">
-    <value>Проверка отправлена через {0}; отметьте, что изменилось, и сохраните. {1}</value>
+    <value>Проверка отправлена через {0}; отметьте, что изменилось, и сохраните.</value>
   </data>
   <data name="L2_ObservationCannotSave" xml:space="preserve">
     <value>Не удалось сохранить наблюдение RGB: конфигурация недоступна.</value>
@@ -11190,5 +11190,80 @@
   </data>
   <data name="KbdMap_StatusApplyToSend" xml:space="preserve">
     <value> Нажмите «Применить», чтобы отправить на клавиатуру.</value>
+  </data>
+  <data name="Lighting_ProviderOneDeviceFormat" xml:space="preserve">
+    <value>{0} (1 устройство)</value>
+  </data>
+  <data name="Lighting_ProviderDevicesFormat" xml:space="preserve">
+    <value>{0} ({1} устройств)</value>
+  </data>
+  <data name="Lighting_ProviderNoDevicesFormat" xml:space="preserve">
+    <value>{0} (нет устройств)</value>
+  </data>
+  <data name="Resume_MsgNoFreshSample" xml:space="preserve">
+    <value>Post-resume self-check could not confirm telemetry recovery because no fresh monitoring sample was available.</value>
+  </data>
+  <data name="DL2_KeyboardInstalledFormat" xml:space="preserve">
+    <value>{0} установлен. Эффект продолжает работать после закрытия OmenCore.</value>
+  </data>
+  <data name="SC2_BackendGeneric" xml:space="preserve">
+    <value>поставщик понижения напряжения CPU</value>
+  </data>
+  <data name="Mem_StatusCleaning" xml:space="preserve">
+    <value>Очистка памяти…</value>
+  </data>
+  <data name="Mem_StatusTrimmingWorkingSets" xml:space="preserve">
+    <value>Сжатие рабочих наборов процессов…</value>
+  </data>
+  <data name="Mem_StatusFlushingFileCache" xml:space="preserve">
+    <value>Сброс файлового кеша системы…</value>
+  </data>
+  <data name="Mem_StatusPurgingLowStandby" xml:space="preserve">
+    <value>Очистка списка ожидания низкого приоритета…</value>
+  </data>
+  <data name="Mem_StatusPurgingStandby" xml:space="preserve">
+    <value>Очистка списка ожидания…</value>
+  </data>
+  <data name="Brand_Corsair" xml:space="preserve">
+    <value>Corsair</value>
+  </data>
+  <data name="Brand_Logitech" xml:space="preserve">
+    <value>Logitech</value>
+  </data>
+  <data name="Brand_Razer" xml:space="preserve">
+    <value>Razer</value>
+  </data>
+  <data name="Brand_HPOmen" xml:space="preserve">
+    <value>HP Omen</value>
+  </data>
+  <data name="DeviceType_Keyboard" xml:space="preserve">
+    <value>клавиатура</value>
+  </data>
+  <data name="DeviceType_Mouse" xml:space="preserve">
+    <value>мышь</value>
+  </data>
+  <data name="DeviceType_Headset" xml:space="preserve">
+    <value>наушники</value>
+  </data>
+  <data name="DeviceType_MouseMat" xml:space="preserve">
+    <value>коврик для мыши</value>
+  </data>
+  <data name="DeviceType_Accessory" xml:space="preserve">
+    <value>аксессуар</value>
+  </data>
+  <data name="DeviceType_WirelessDongle" xml:space="preserve">
+    <value>беспроводной приёмник</value>
+  </data>
+  <data name="DeviceType_Keypad" xml:space="preserve">
+    <value>геймпад-клавиатура</value>
+  </data>
+  <data name="DeviceType_ChromaLink" xml:space="preserve">
+    <value>Chroma Link</value>
+  </data>
+  <data name="DeviceType_Speaker" xml:space="preserve">
+    <value>динамик</value>
+  </data>
+  <data name="DeviceType_Unknown" xml:space="preserve">
+    <value>неизвестно</value>
   </data>
 </root>

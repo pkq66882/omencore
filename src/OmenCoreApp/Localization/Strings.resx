@@ -9939,7 +9939,7 @@
     <value>RGB probe unavailable because no HP keyboard lighting backend is active.</value>
   </data>
   <data name="L2_ProbeSentFormat" xml:space="preserve">
-    <value>Probe sent via {0}; select what changed and save. {1}</value>
+    <value>Probe sent via {0}; select what changed and save.</value>
   </data>
   <data name="L2_ObservationCannotSave" xml:space="preserve">
     <value>RGB observation could not be saved because configuration is unavailable.</value>
@@ -11194,5 +11194,80 @@
   </data>
   <data name="KbdMap_StatusApplyToSend" xml:space="preserve">
     <value> Apply to send it to the keyboard.</value>
+  </data>
+  <data name="Lighting_ProviderOneDeviceFormat" xml:space="preserve">
+    <value>{0} (1 device)</value>
+  </data>
+  <data name="Lighting_ProviderDevicesFormat" xml:space="preserve">
+    <value>{0} ({1} devices)</value>
+  </data>
+  <data name="Lighting_ProviderNoDevicesFormat" xml:space="preserve">
+    <value>{0} (no devices)</value>
+  </data>
+  <data name="Resume_MsgNoFreshSample" xml:space="preserve">
+    <value>Post-resume self-check could not confirm telemetry recovery because no fresh monitoring sample was available.</value>
+  </data>
+  <data name="DL2_KeyboardInstalledFormat" xml:space="preserve">
+    <value>{0} installed. It keeps running with OmenCore closed.</value>
+  </data>
+  <data name="SC2_BackendGeneric" xml:space="preserve">
+    <value>CPU undervolt provider</value>
+  </data>
+  <data name="Mem_StatusCleaning" xml:space="preserve">
+    <value>Cleaning memory...</value>
+  </data>
+  <data name="Mem_StatusTrimmingWorkingSets" xml:space="preserve">
+    <value>Trimming process working sets...</value>
+  </data>
+  <data name="Mem_StatusFlushingFileCache" xml:space="preserve">
+    <value>Flushing system file cache...</value>
+  </data>
+  <data name="Mem_StatusPurgingLowStandby" xml:space="preserve">
+    <value>Purging low-priority standby list...</value>
+  </data>
+  <data name="Mem_StatusPurgingStandby" xml:space="preserve">
+    <value>Purging standby list...</value>
+  </data>
+  <data name="Brand_Corsair" xml:space="preserve">
+    <value>Corsair</value>
+  </data>
+  <data name="Brand_Logitech" xml:space="preserve">
+    <value>Logitech</value>
+  </data>
+  <data name="Brand_Razer" xml:space="preserve">
+    <value>Razer</value>
+  </data>
+  <data name="Brand_HPOmen" xml:space="preserve">
+    <value>HP Omen</value>
+  </data>
+  <data name="DeviceType_Keyboard" xml:space="preserve">
+    <value>Keyboard</value>
+  </data>
+  <data name="DeviceType_Mouse" xml:space="preserve">
+    <value>Mouse</value>
+  </data>
+  <data name="DeviceType_Headset" xml:space="preserve">
+    <value>Headset</value>
+  </data>
+  <data name="DeviceType_MouseMat" xml:space="preserve">
+    <value>Mouse mat</value>
+  </data>
+  <data name="DeviceType_Accessory" xml:space="preserve">
+    <value>Accessory</value>
+  </data>
+  <data name="DeviceType_WirelessDongle" xml:space="preserve">
+    <value>Wireless dongle</value>
+  </data>
+  <data name="DeviceType_Keypad" xml:space="preserve">
+    <value>Keypad</value>
+  </data>
+  <data name="DeviceType_ChromaLink" xml:space="preserve">
+    <value>Chroma Link</value>
+  </data>
+  <data name="DeviceType_Speaker" xml:space="preserve">
+    <value>Speaker</value>
+  </data>
+  <data name="DeviceType_Unknown" xml:space="preserve">
+    <value>Unknown</value>
   </data>
 </root>

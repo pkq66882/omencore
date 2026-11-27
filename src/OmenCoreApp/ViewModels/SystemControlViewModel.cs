@@ -298,7 +298,8 @@ namespace OmenCore.ViewModels
                     return string.Format(Strings.SystemControlViewModel_UndervoltBackend, intel.ActiveBackend);
                 }
 
-                return string.Format(Strings.SC2_BackendTypeFormat, provider.GetType().Name);
+                // Unknown implementations only exist in tests; never surface a raw type name in the UI.
+                return string.Format(Strings.SC2_BackendTypeFormat, Strings.SC2_BackendGeneric);
             }
         }
 

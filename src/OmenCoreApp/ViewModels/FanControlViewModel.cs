@@ -1548,12 +1548,14 @@ namespace OmenCore.ViewModels
             await _fanApplySemaphore.WaitAsync();
             try
             {
-                CurveApplyStatus = string.Format(Strings.FanControl_StatusApplyingPresetFormat, preset.Name);
+                // Status text shows the localized preset label; the canonical name stays in config/logs.
+                var presetDisplayName = DisplayNames.FanPresetName(preset.Name);
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusApplyingPresetFormat, presetDisplayName);
                 var immediateApply = ImmediateApplyOnApply || (preset.Curve?.Count > 0);
                 var applied = await Task.Run(() => _fanService.ApplyPreset(preset, immediate: immediateApply));
                 if (!applied)
                 {
-                    CurveApplyStatus = string.Format(Strings.FanControl_StatusPresetFailedVerifyFormat, preset.Name);
+                    CurveApplyStatus = string.Format(Strings.FanControl_StatusPresetFailedVerifyFormat, presetDisplayName);
                     _logging.Warn($"Preset '{preset.Name}' was not saved because fan service reported apply failure");
                     return;
                 }
@@ -1578,7 +1580,7 @@ namespace OmenCore.ViewModels
                     }
                     else
                     {
-                        CurveApplyStatus = string.Format(Strings.FanControl_StatusPresetAppliedFormat, preset.Name);
+                        CurveApplyStatus = string.Format(Strings.FanControl_StatusPresetAppliedFormat, presetDisplayName);
                     }
                 });
             }
@@ -1604,13 +1606,13 @@ namespace OmenCore.ViewModels
             try
             {
                 await RunCurveVerificationKickAsync(
-                    sourceLabel: string.Format(Strings.FanControl_SourcePresetFormat, preset.Name),
+                    sourceLabel: string.Format(Strings.FanControl_SourcePresetFormat, DisplayNames.FanPresetName(preset.Name)),
                     curvePoints: preset.Curve,
                     reapplyCurveAction: () => _fanService.ApplyPreset(preset, ImmediateApplyOnApply));
             }
             catch (Exception ex)
             {
-                CurveApplyStatus = string.Format(Strings.FanControl_StatusPresetApplyFailedFormat, preset.Name, ex.Message);
+                CurveApplyStatus = string.Format(Strings.FanControl_StatusPresetApplyFailedFormat, DisplayNames.FanPresetName(preset.Name), ex.Message);
                 _logging.Error($"Preset '{preset.Name}' verification kick failed", ex);
             }
             finally

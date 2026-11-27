@@ -1804,7 +1804,7 @@ namespace OmenCore.ViewModels
                 var latestSample = _hardwareMonitoringService?.Samples.LastOrDefault();
                 if (latestSample == null)
                 {
-                    _resumeRecoveryDiagnostics.Attention("Post-resume self-check could not confirm telemetry recovery because no fresh monitoring sample was available.");
+                    _resumeRecoveryDiagnostics.Attention(Strings.Resume_MsgNoFreshSample);
                     return;
                 }
 

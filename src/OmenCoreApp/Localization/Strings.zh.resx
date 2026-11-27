@@ -155,19 +155,19 @@
     <value>在系统托盘图标上实时显示 CPU/GPU 温度</value>
   </data>
   <data name="SettingsCorsairHidOnly" xml:space="preserve">
-    <value>Corsair：禁用 iCUE 回退（仅 HID 模式）</value>
+    <value>海盗船：禁用 iCUE 回退（仅 HID 模式）</value>
   </data>
   <data name="SettingsCorsairHidOnlyHelp" xml:space="preserve">
-    <value>对 Corsair 设备使用直接 HID 访问。并非所有设备都兼容；需要重启应用。</value>
+    <value>对 海盗船设备使用直接 HID 访问。并非所有设备都兼容；需要重启应用。</value>
   </data>
   <data name="SettingsCorsairHidOnlyWarning" xml:space="preserve">
-    <value>警告：仅 HID 模式可能降低与部分 Corsair 设备的兼容性。如果灯光控制失效，请重新启用 iCUE 回退或安装 iCUE。</value>
+    <value>警告：仅 HID 模式可能降低与部分 海盗船设备的兼容性。如果灯光控制失效，请重新启用 iCUE 回退或安装 iCUE。</value>
   </data>
   <data name="SettingsTelemetry" xml:space="preserve">
     <value>启用匿名灯光遥测</value>
   </data>
   <data name="SettingsTelemetryHelp" xml:space="preserve">
-    <value>匿名分享 Corsair 设备（按 PID 区分）的成功/失败次数汇总，帮助我们改进设备兼容性。不会收集任何可用于识别你设备的信息。</value>
+    <value>匿名分享 海盗船设备（按 PID 区分）的成功/失败次数汇总，帮助我们改进设备兼容性。不会收集任何可用于识别你设备的信息。</value>
   </data>
   <data name="DiagnosticExportControl_DiagnosticExport" xml:space="preserve">
     <value>诊断导出</value>
@@ -1808,7 +1808,7 @@
     <value>服务状态</value>
   </data>
   <data name="KeyboardDiagnosticsView_CorsairIcue" xml:space="preserve">
-    <value>Corsair iCUE：</value>
+    <value>海盗船 iCUE：</value>
   </data>
   <data name="KeyboardDiagnosticsView_LogitechGHub" xml:space="preserve">
     <value>罗技 G HUB：</value>
@@ -1922,25 +1922,25 @@
     <value>恢复键盘</value>
   </data>
   <data name="LightingView_RgbSurfaceObservation" xml:space="preserve">
-    <value>RGB 表面观测</value>
+    <value>RGB 区域观测</value>
   </data>
   <data name="LightingView_RecordThePhysicalRgbOrBacklightSurfaceThat" xml:space="preserve">
-    <value>记录探测后发生变化的物理 RGB 或背光表面</value>
+    <value>记录探测后发生变化的物理 RGB 或背光区域</value>
   </data>
   <data name="LightingView_ObservedRgbSurface" xml:space="preserve">
-    <value>观测到的 RGB 表面</value>
+    <value>观测到的 RGB 区域</value>
   </data>
   <data name="LightingView_ApplyASafeBrightProbeColorThroughTheActive" xml:space="preserve">
     <value>通过当前活动的 HP 键盘后端应用一个安全的明亮探测色</value>
   </data>
   <data name="LightingView_RunRgbSurfaceProbe" xml:space="preserve">
-    <value>运行 RGB 表面探测</value>
+    <value>运行 RGB 区域探测</value>
   </data>
   <data name="LightingView_SaveTheSelectedObservedRgbSurfaceForDiagno" xml:space="preserve">
-    <value>保存所选的观测 RGB 表面，用于诊断导出</value>
+    <value>保存所选的观测 RGB 区域，用于诊断导出</value>
   </data>
   <data name="LightingView_SaveObservedRgbSurface" xml:space="preserve">
-    <value>保存观测到的 RGB 表面</value>
+    <value>保存观测到的 RGB 区域</value>
   </data>
   <data name="LightingView_SyncCurrentColorAcrossAllConnectedRgbDevic" xml:space="preserve">
     <value>将当前颜色同步到所有已连接的 RGB 设备</value>
@@ -1982,13 +1982,13 @@
     <value>音频律动灵敏度</value>
   </data>
   <data name="LightingView_CorsairDevices" xml:space="preserve">
-    <value>Corsair 设备</value>
+    <value>海盗船设备</value>
   </data>
   <data name="LightingView_EnableOrDisableCorsairControlsInThisCard" xml:space="preserve">
-    <value>启用或禁用此卡片中的 Corsair 控件</value>
+    <value>启用或禁用此卡片中的海盗船控件</value>
   </data>
   <data name="LightingView_EnableCorsairDevicesCard" xml:space="preserve">
-    <value>启用 Corsair 设备卡片</value>
+    <value>启用 海盗船设备卡片</value>
   </data>
   <data name="LightingView_DiscoverDevices" xml:space="preserve">
     <value>发现设备</value>
@@ -2084,7 +2084,7 @@
     <value>启用雷蛇设备卡片</value>
   </data>
   <data name="LightingView_RequiresRazerSynapseToBeInstalledAndRunnin" xml:space="preserve">
-    <value>需要安装并运行 Razer Synapse</value>
+    <value>需要安装并运行 雷蛇 Synapse</value>
   </data>
   <data name="LightingView_LightingControl" xml:space="preserve">
     <value>灯效控制</value>
@@ -2378,7 +2378,7 @@
     <value>加载方案</value>
   </data>
   <data name="LightingView_UseCorsairIcueOrLogitechGHubSoftwareForAdv" xml:space="preserve">
-    <value>高级宏配置请使用 Corsair iCUE 或罗技 G HUB 软件。</value>
+    <value>高级宏配置请使用 海盗船 iCUE 或罗技 G HUB 软件。</value>
   </data>
   <data name="MainWindow_ApplyYourSavedFanPreset" xml:space="preserve">
     <value>应用你保存的风扇预设</value>
@@ -3284,10 +3284,10 @@
     <value>启用/禁用功能以减少资源占用</value>
   </data>
   <data name="SettingsView_CorsairIcueIntegration" xml:space="preserve">
-    <value>Corsair iCUE 集成</value>
+    <value>海盗船 iCUE 集成</value>
   </data>
   <data name="SettingsView_SupportForCorsairKeyboardsMiceHeadsets" xml:space="preserve">
-    <value>支持 Corsair 键盘、鼠标、耳机</value>
+    <value>支持 海盗船键盘、鼠标、耳机</value>
   </data>
   <data name="SettingsView_LogitechGHubIntegration" xml:space="preserve">
     <value>罗技 G HUB 集成</value>
@@ -4820,7 +4820,7 @@
     <value>未检测到活动的 RGB 控制器</value>
   </data>
   <data name="LightingViewModel_NoSurfaceObservation" xml:space="preserve">
-    <value>尚未记录 RGB 表面观测。</value>
+    <value>尚未记录 RGB 区域观测。</value>
   </data>
   <data name="LightingViewModel_NoSyncSession" xml:space="preserve">
     <value>本次会话尚未运行同步。</value>
@@ -5009,7 +5009,7 @@
     <value>激活：{0}</value>
   </data>
   <data name="LightingViewModel_IcueNotDetected" xml:space="preserve">
-    <value>未检测到 Corsair iCUE</value>
+    <value>未检测到 海盗船 iCUE</value>
   </data>
   <data name="LightingViewModel_Level" xml:space="preserve">
     <value>音频电平：{0}%</value>
@@ -5042,7 +5042,7 @@
     <value>你已选择跳过创建还原点</value>
   </data>
   <data name="LightingViewModel_IcueNotConfigured" xml:space="preserve">
-    <value>Corsair iCUE 未配置</value>
+    <value>海盗船 iCUE 未配置</value>
   </data>
   <data name="LightingViewModel_LogitechNotConfigured" xml:space="preserve">
     <value>罗技 G HUB 未配置</value>
@@ -7742,7 +7742,7 @@
     <value>无变化</value>
   </data>
   <data name="RgbSurface_Other" xml:space="preserve">
-    <value>其他或未知表面变化</value>
+    <value>其他或未知区域变化</value>
   </data>
   <data name="FanPreset_Gaming" xml:space="preserve">
     <value>游戏</value>
@@ -8894,10 +8894,10 @@
     <value>“{0}”不是已保存的模式，无处存储当前状态。</value>
   </data>
   <data name="Lighting_RestoreStatusFormat" xml:space="preserve">
-    <value>{0}表面：{1}。{2}</value>
+    <value>{0}区域：{1}。{2}</value>
   </data>
   <data name="Lighting_RestoredSavedFormat" xml:space="preserve">
-    <value>已恢复保存的键盘颜色。{0} 表面：{1}。</value>
+    <value>已恢复保存的键盘颜色。{0} 区域：{1}。</value>
   </data>
   <data name="Lighting_ObservationSaveFailedFormat" xml:space="preserve">
     <value>RGB 观察保存失败：{0}</value>
@@ -9890,10 +9890,10 @@
     <value>不执行操作（拦截该键）</value>
   </data>
   <data name="S2_SyncStartFormat" xml:space="preserve">
-    <value>部分同步：已更新 {0}/{1} 个提供程序</value>
+    <value>部分同步：已更新 {0}/{1} 个灯效来源</value>
   </data>
   <data name="S2_SyncFailedNoProviders" xml:space="preserve">
-    <value>同步失败：没有提供程序被更新</value>
+    <value>同步失败：没有灯效来源被更新</value>
   </data>
   <data name="S2_SyncCompleteOne" xml:space="preserve">
     <value>同步完成：已更新 1 个目标</value>
@@ -9908,7 +9908,7 @@
     <value>同步失败：没有目标被更新</value>
   </data>
   <data name="S2_DpiNotWritable" xml:space="preserve">
-    <value>OmenCore 无法真正把这些 DPI 设置写入设备——当前使用的 Corsair 连接方式（RGB.NET/iCUE）不支持 DPI 配置。鼠标上的设置没有任何变化。</value>
+    <value>OmenCore 无法真正把这些 DPI 设置写入设备——当前使用的 海盗船连接方式（RGB.NET/iCUE）不支持 DPI 配置。鼠标上的设置没有任何变化。</value>
   </data>
   <data name="S2_DpiSaveProfileTitle" xml:space="preserve">
     <value>保存 DPI 方案</value>
@@ -9923,7 +9923,7 @@
     <value>键盘灯效不可用；请检查后端检测结果，或查看“设置 > 硬件”。</value>
   </data>
   <data name="L2_SyncCompleteProviderOne" xml:space="preserve">
-    <value>同步完成：已更新 1 个提供程序</value>
+    <value>同步完成：已更新 1 个灯效来源</value>
   </data>
   <data name="L2_SyncCompleteProvidersFormat" xml:space="preserve">
     <value>同步完成：已更新 {0} 个灯效来源</value>
@@ -10751,7 +10751,7 @@
     <value>正在应用 OpenRGB 颜色…</value>
   </data>
   <data name="Lighting_StatusApplyingCorsair" xml:space="preserve">
-    <value>正在应用 Corsair 灯效…</value>
+    <value>正在应用 海盗船灯效…</value>
   </data>
   <data name="Lighting_StatusApplyingPreset" xml:space="preserve">
     <value>正在向系统应用灯效预设…</value>
@@ -11190,5 +11190,80 @@
   </data>
   <data name="KbdMap_StatusApplyToSend" xml:space="preserve">
     <value> 点“应用”即可发送到键盘。</value>
+  </data>
+  <data name="Lighting_ProviderOneDeviceFormat" xml:space="preserve">
+    <value>{0}（1 台设备）</value>
+  </data>
+  <data name="Lighting_ProviderDevicesFormat" xml:space="preserve">
+    <value>{0}（{1} 台设备）</value>
+  </data>
+  <data name="Lighting_ProviderNoDevicesFormat" xml:space="preserve">
+    <value>{0}（无设备）</value>
+  </data>
+  <data name="Resume_MsgNoFreshSample" xml:space="preserve">
+    <value>唤醒后的自检无法确认遥测是否恢复：没有新的监控采样。</value>
+  </data>
+  <data name="DL2_KeyboardInstalledFormat" xml:space="preserve">
+    <value>{0} 已安装。关闭 OmenCore 后仍会继续运行。</value>
+  </data>
+  <data name="SC2_BackendGeneric" xml:space="preserve">
+    <value>CPU 降压提供程序</value>
+  </data>
+  <data name="Mem_StatusCleaning" xml:space="preserve">
+    <value>正在清理内存…</value>
+  </data>
+  <data name="Mem_StatusTrimmingWorkingSets" xml:space="preserve">
+    <value>正在收缩进程工作集…</value>
+  </data>
+  <data name="Mem_StatusFlushingFileCache" xml:space="preserve">
+    <value>正在刷新系统文件缓存…</value>
+  </data>
+  <data name="Mem_StatusPurgingLowStandby" xml:space="preserve">
+    <value>正在清理低优先级备用内存…</value>
+  </data>
+  <data name="Mem_StatusPurgingStandby" xml:space="preserve">
+    <value>正在清理备用内存…</value>
+  </data>
+  <data name="Brand_Corsair" xml:space="preserve">
+    <value>海盗船</value>
+  </data>
+  <data name="Brand_Logitech" xml:space="preserve">
+    <value>罗技</value>
+  </data>
+  <data name="Brand_Razer" xml:space="preserve">
+    <value>雷蛇</value>
+  </data>
+  <data name="Brand_HPOmen" xml:space="preserve">
+    <value>HP OMEN</value>
+  </data>
+  <data name="DeviceType_Keyboard" xml:space="preserve">
+    <value>键盘</value>
+  </data>
+  <data name="DeviceType_Mouse" xml:space="preserve">
+    <value>鼠标</value>
+  </data>
+  <data name="DeviceType_Headset" xml:space="preserve">
+    <value>耳机</value>
+  </data>
+  <data name="DeviceType_MouseMat" xml:space="preserve">
+    <value>鼠标垫</value>
+  </data>
+  <data name="DeviceType_Accessory" xml:space="preserve">
+    <value>配件</value>
+  </data>
+  <data name="DeviceType_WirelessDongle" xml:space="preserve">
+    <value>无线接收器</value>
+  </data>
+  <data name="DeviceType_Keypad" xml:space="preserve">
+    <value>单手键盘</value>
+  </data>
+  <data name="DeviceType_ChromaLink" xml:space="preserve">
+    <value>Chroma Link</value>
+  </data>
+  <data name="DeviceType_Speaker" xml:space="preserve">
+    <value>音箱</value>
+  </data>
+  <data name="DeviceType_Unknown" xml:space="preserve">
+    <value>未知</value>
   </data>
 </root>

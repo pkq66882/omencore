@@ -155,7 +155,7 @@ namespace OmenCore.ViewModels
                         Brand = "HP Omen",
                         Model = Strings.KbdDiag_IntegratedKeyboard,
                         Type = Strings.KbdDiag_KeyboardType,
-                        Status = "Connected",
+                        Status = Strings.KbdDiag_DeviceConnected,
                         Backend = _keyboardLightingService.BackendType
                     });
                 }
@@ -226,7 +226,7 @@ namespace OmenCore.ViewModels
                 // Test Corsair devices
                 if (_corsairService != null && _corsairService.Devices.Any())
                 {
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestingBrandFormat, "Corsair"));
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestingBrandFormat, Strings.Brand_Corsair));
                     foreach (var device in _corsairService.Devices)
                     {
                         // Apply a rainbow pattern or simple test
@@ -238,7 +238,7 @@ namespace OmenCore.ViewModels
                 // Test Logitech devices
                 if (_logitechService != null && _logitechService.Devices.Any())
                 {
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestingBrandFormat, "Logitech"));
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestingBrandFormat, Strings.Brand_Logitech));
                     foreach (var device in _logitechService.Devices)
                     {
                         await Task.Delay(100);
@@ -249,7 +249,7 @@ namespace OmenCore.ViewModels
                 // Test Razer devices
                 if (_razerService != null && _razerService.Devices.Any())
                 {
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestingBrandFormat, "Razer"));
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogTestingBrandFormat, Strings.Brand_Razer));
                     foreach (var device in _razerService.Devices)
                     {
                         await Task.Delay(100);
@@ -308,21 +308,21 @@ namespace OmenCore.ViewModels
                 if (_corsairService != null)
                 {
                     // Reset to default
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearedBrandFormat, "Corsair"));
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearedBrandFormat, Strings.Brand_Corsair));
                 }
 
                 // Clear Logitech devices
                 if (_logitechService != null)
                 {
                     // Reset to default
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearedBrandFormat, "Logitech"));
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearedBrandFormat, Strings.Brand_Logitech));
                 }
 
                 // Clear Razer devices
                 if (_razerService != null)
                 {
                     // Reset to default
-                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearedBrandFormat, "Razer"));
+                    DiagnosticLogs.Insert(0, $"{DateTime.Now:HH:mm:ss} - " + string.Format(Strings.KbdDiag_LogClearedBrandFormat, Strings.Brand_Razer));
                 }
 
                 // Clear HP Omen keyboard
@@ -371,5 +371,9 @@ namespace OmenCore.ViewModels
         public string Type { get; set; } = "";
         public string Status { get; set; } = "";
         public string Backend { get; set; } = "";
+
+        // Display-only projections: Brand/Type keep canonical names for grouping and diagnostics.
+        public string BrandDisplay => DisplayNames.Brand(Brand);
+        public string TypeDisplay => DisplayNames.DeviceType(Type);
     }
 }

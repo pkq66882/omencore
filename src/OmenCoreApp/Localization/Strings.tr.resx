@@ -9935,7 +9935,7 @@
     <value>Etkin HP klavye aydınlatma arka ucu olmadığından RGB testi kullanılamıyor.</value>
   </data>
   <data name="L2_ProbeSentFormat" xml:space="preserve">
-    <value>{0} üzerinden test gönderildi; neyin değiştiğini seçip kaydedin. {1}</value>
+    <value>{0} üzerinden test gönderildi; neyin değiştiğini seçip kaydedin.</value>
   </data>
   <data name="L2_ObservationCannotSave" xml:space="preserve">
     <value>Yapılandırma kullanılamadığından RGB gözlemi kaydedilemedi.</value>
@@ -11190,5 +11190,80 @@
   </data>
   <data name="KbdMap_StatusApplyToSend" xml:space="preserve">
     <value> Klavyeye göndermek için Uygula'ya basın.</value>
+  </data>
+  <data name="Lighting_ProviderOneDeviceFormat" xml:space="preserve">
+    <value>{0} (1 cihaz)</value>
+  </data>
+  <data name="Lighting_ProviderDevicesFormat" xml:space="preserve">
+    <value>{0} ({1} cihaz)</value>
+  </data>
+  <data name="Lighting_ProviderNoDevicesFormat" xml:space="preserve">
+    <value>{0} (cihaz yok)</value>
+  </data>
+  <data name="Resume_MsgNoFreshSample" xml:space="preserve">
+    <value>Post-resume self-check could not confirm telemetry recovery because no fresh monitoring sample was available.</value>
+  </data>
+  <data name="DL2_KeyboardInstalledFormat" xml:space="preserve">
+    <value>{0} yüklendi. OmenCore kapalıyken de çalışmaya devam eder.</value>
+  </data>
+  <data name="SC2_BackendGeneric" xml:space="preserve">
+    <value>CPU undervolt sağlayıcısı</value>
+  </data>
+  <data name="Mem_StatusCleaning" xml:space="preserve">
+    <value>Bellek temizleniyor…</value>
+  </data>
+  <data name="Mem_StatusTrimmingWorkingSets" xml:space="preserve">
+    <value>İşlem çalışma kümeleri daraltılıyor…</value>
+  </data>
+  <data name="Mem_StatusFlushingFileCache" xml:space="preserve">
+    <value>Sistem dosya önbelleği boşaltılıyor…</value>
+  </data>
+  <data name="Mem_StatusPurgingLowStandby" xml:space="preserve">
+    <value>Düşük öncelikli bekleme listesi temizleniyor…</value>
+  </data>
+  <data name="Mem_StatusPurgingStandby" xml:space="preserve">
+    <value>Bekleme listesi temizleniyor…</value>
+  </data>
+  <data name="Brand_Corsair" xml:space="preserve">
+    <value>Corsair</value>
+  </data>
+  <data name="Brand_Logitech" xml:space="preserve">
+    <value>Logitech</value>
+  </data>
+  <data name="Brand_Razer" xml:space="preserve">
+    <value>Razer</value>
+  </data>
+  <data name="Brand_HPOmen" xml:space="preserve">
+    <value>HP Omen</value>
+  </data>
+  <data name="DeviceType_Keyboard" xml:space="preserve">
+    <value>klavye</value>
+  </data>
+  <data name="DeviceType_Mouse" xml:space="preserve">
+    <value>fare</value>
+  </data>
+  <data name="DeviceType_Headset" xml:space="preserve">
+    <value>kulaklık</value>
+  </data>
+  <data name="DeviceType_MouseMat" xml:space="preserve">
+    <value>fare altlığı</value>
+  </data>
+  <data name="DeviceType_Accessory" xml:space="preserve">
+    <value>aksesuar</value>
+  </data>
+  <data name="DeviceType_WirelessDongle" xml:space="preserve">
+    <value>kablosuz alıcı</value>
+  </data>
+  <data name="DeviceType_Keypad" xml:space="preserve">
+    <value>tuş takımı</value>
+  </data>
+  <data name="DeviceType_ChromaLink" xml:space="preserve">
+    <value>Chroma Link</value>
+  </data>
+  <data name="DeviceType_Speaker" xml:space="preserve">
+    <value>hoparlör</value>
+  </data>
+  <data name="DeviceType_Unknown" xml:space="preserve">
+    <value>bilinmiyor</value>
   </data>
 </root>

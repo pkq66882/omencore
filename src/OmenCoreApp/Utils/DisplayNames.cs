@@ -404,6 +404,38 @@ namespace OmenCore.Utils
                 _ => name ?? string.Empty
             };
         }
+        /// <summary>Brand label for peripheral cards; product/suite names (iCUE, G HUB) stay as-is.</summary>
+        public static string Brand(string? brand)
+        {
+            return brand?.Trim() switch
+            {
+                "Corsair" => Strings.Brand_Corsair,
+                "Logitech" => Strings.Brand_Logitech,
+                "Razer" => Strings.Brand_Razer,
+                "HP Omen" => Strings.Brand_HPOmen,
+                null or "" => string.Empty,
+                var other => other
+            };
+        }
+        /// <summary>Peripheral device type (enum name to label across the Corsair/Logitech/Razer enums).</summary>
+        public static string DeviceType(string? type)
+        {
+            return type?.Trim() switch
+            {
+                "Keyboard" => Strings.DeviceType_Keyboard,
+                "Mouse" => Strings.DeviceType_Mouse,
+                "Headset" => Strings.DeviceType_Headset,
+                "MouseMat" or "Mousemat" => Strings.DeviceType_MouseMat,
+                "Accessory" => Strings.DeviceType_Accessory,
+                "WirelessDongle" => Strings.DeviceType_WirelessDongle,
+                "Keypad" => Strings.DeviceType_Keypad,
+                "ChromaLink" => Strings.DeviceType_ChromaLink,
+                "Speaker" => Strings.DeviceType_Speaker,
+                "Unknown" => Strings.DeviceType_Unknown,
+                null or "" => Strings.DeviceType_Unknown,
+                var other => other
+            };
+        }
         /// <summary>Localized game-library platform filter (enum name to label; brands pass through).</summary>
         public static string PlatformFilter(object? value)
         {

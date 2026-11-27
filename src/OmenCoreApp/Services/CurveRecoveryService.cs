@@ -147,7 +147,7 @@ namespace OmenCore.Services
                             DispatcherHelper.RunOnUiThread(() =>
                             {
                                 System.Windows.MessageBox.Show(
-                                    string.Format(Strings.CurveRecovery_OverheatBodyFormat, OverheatThresholdC, SustainedOverheatSeconds / 60, _lastKnownGoodPreset.Name),
+                                    string.Format(Strings.CurveRecovery_OverheatBodyFormat, OverheatThresholdC, SustainedOverheatSeconds / 60, DisplayNames.FanPresetName(_lastKnownGoodPreset.Name)),
                                     Strings.CurveRecovery_Title,
                                     System.Windows.MessageBoxButton.OK,
                                     System.Windows.MessageBoxImage.Warning);

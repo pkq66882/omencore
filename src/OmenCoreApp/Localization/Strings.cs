@@ -4102,5 +4102,31 @@ namespace OmenCore.Localization
 
     public static string Settings_ModelNone => Get(nameof(Settings_ModelNone));
     public static string Settings_StateStopped => Get(nameof(Settings_StateStopped));
+
+    public static string Lighting_ProviderOneDeviceFormat => Get(nameof(Lighting_ProviderOneDeviceFormat));
+    public static string Lighting_ProviderDevicesFormat => Get(nameof(Lighting_ProviderDevicesFormat));
+    public static string Lighting_ProviderNoDevicesFormat => Get(nameof(Lighting_ProviderNoDevicesFormat));
+    public static string Resume_MsgNoFreshSample => Get(nameof(Resume_MsgNoFreshSample));
+    public static string DL2_KeyboardInstalledFormat => Get(nameof(DL2_KeyboardInstalledFormat));
+    public static string SC2_BackendGeneric => Get(nameof(SC2_BackendGeneric));
+    public static string Mem_StatusCleaning => Get(nameof(Mem_StatusCleaning));
+    public static string Mem_StatusTrimmingWorkingSets => Get(nameof(Mem_StatusTrimmingWorkingSets));
+    public static string Mem_StatusFlushingFileCache => Get(nameof(Mem_StatusFlushingFileCache));
+    public static string Mem_StatusPurgingLowStandby => Get(nameof(Mem_StatusPurgingLowStandby));
+    public static string Mem_StatusPurgingStandby => Get(nameof(Mem_StatusPurgingStandby));
+    public static string Brand_Corsair => Get(nameof(Brand_Corsair));
+    public static string Brand_Logitech => Get(nameof(Brand_Logitech));
+    public static string Brand_Razer => Get(nameof(Brand_Razer));
+    public static string Brand_HPOmen => Get(nameof(Brand_HPOmen));
+    public static string DeviceType_Keyboard => Get(nameof(DeviceType_Keyboard));
+    public static string DeviceType_Mouse => Get(nameof(DeviceType_Mouse));
+    public static string DeviceType_Headset => Get(nameof(DeviceType_Headset));
+    public static string DeviceType_MouseMat => Get(nameof(DeviceType_MouseMat));
+    public static string DeviceType_Accessory => Get(nameof(DeviceType_Accessory));
+    public static string DeviceType_WirelessDongle => Get(nameof(DeviceType_WirelessDongle));
+    public static string DeviceType_Keypad => Get(nameof(DeviceType_Keypad));
+    public static string DeviceType_ChromaLink => Get(nameof(DeviceType_ChromaLink));
+    public static string DeviceType_Speaker => Get(nameof(DeviceType_Speaker));
+    public static string DeviceType_Unknown => Get(nameof(DeviceType_Unknown));
     }
 }

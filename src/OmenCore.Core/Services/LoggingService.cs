@@ -21,7 +21,20 @@ namespace OmenCore.Services
     public sealed class LoggingService : IDisposable
     {
         private readonly BlockingCollection<string> _queue = new();
-        private readonly string _logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "OmenCore", "logs");
+        private readonly string _logDirectory = ResolveLogDirectory();
+
+        /// <summary>
+        /// Logs live beside the configuration when OMENCORE_CONFIG_DIR is set (portable builds),
+        /// otherwise under %LOCALAPPDATA%\OmenCore. Keeps a green build self-contained.
+        /// </summary>
+        private static string ResolveLogDirectory()
+        {
+            var overrideDir = Environment.GetEnvironmentVariable("OMENCORE_CONFIG_DIR");
+            var baseDir = string.IsNullOrWhiteSpace(overrideDir)
+                ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "OmenCore")
+                : overrideDir;
+            return Path.Combine(baseDir, "logs");
+        }
         private readonly string _fileName;
         private Thread? _writerThread;
         private bool _disposed;

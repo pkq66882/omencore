@@ -244,9 +244,10 @@ namespace OmenCore.ViewModels
             if (_keyboard == null || SelectedEffect == null) return;
 
             bool ok = await _keyboard.SetDeviceEffectAsync(FnCyclePlan.ToRecord(CurrentSlot()));
+            var effectDisplayName = DisplayNames.Fx(SelectedEffect.Name);
             Status = ok
-                ? $"{SelectedEffect.Name} installed. It keeps running with OmenCore closed."
-                : string.Format(Strings.DL2_KeyboardRefusedFormat, SelectedEffect.Name);
+                ? string.Format(Strings.DL2_KeyboardInstalledFormat, effectDisplayName)
+                : string.Format(Strings.DL2_KeyboardRefusedFormat, effectDisplayName);
         }
 
         /// <summary>
@@ -590,9 +591,12 @@ namespace OmenCore.ViewModels
                 (byte)BarBrightness,
                 custom ? new[] { ToRgb(BarColorHex) } : null);
 
+            // The option keeps the canonical English name for the WMI wire value; the status line
+            // must show the same localized effect name the picker shows.
+            var effectDisplayName = DisplayNames.Fx(SelectedBarEffect.Name);
             BarStatus = ok
-                ? string.Format(Strings.Lighting_BarAnimationStatusFormat, SelectedBarEffect.Name)
-                : string.Format(Strings.DL2_BarRefusedFormat, SelectedBarEffect.Name);
+                ? string.Format(Strings.Lighting_BarAnimationStatusFormat, effectDisplayName)
+                : string.Format(Strings.DL2_BarRefusedFormat, effectDisplayName);
         }
 
         private void LightBarOff()

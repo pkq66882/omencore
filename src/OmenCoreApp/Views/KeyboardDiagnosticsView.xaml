@@ -31,9 +31,9 @@
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
                                 <StackPanel Grid.Column="0">
-                                    <TextBlock Text="{Binding Brand}" FontWeight="SemiBold" />
+                                    <TextBlock Text="{Binding BrandDisplay}" FontWeight="SemiBold" />
                                     <TextBlock Text="{Binding Model}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" />
-                                    <TextBlock Text="{Binding Type}" FontSize="11" Foreground="{StaticResource TextMutedBrush}" />
+                                    <TextBlock Text="{Binding TypeDisplay}" FontSize="11" Foreground="{StaticResource TextMutedBrush}" />
                                 </StackPanel>
                                 <StackPanel Grid.Column="1" HorizontalAlignment="Right">
                                     <TextBlock Text="{Binding Status}" FontWeight="SemiBold" Foreground="{StaticResource SuccessBrush}" />

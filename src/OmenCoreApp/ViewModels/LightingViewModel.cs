@@ -474,8 +474,14 @@ namespace OmenCore.ViewModels
                 {
                     foreach (var p in providers)
                     {
-                        var deviceInfo = p.DeviceCount > 0 ? $"{p.DeviceCount} device{(p.DeviceCount == 1 ? "" : "s")}" : "no devices";
-                        parts.Add($"{p.ProviderName} ({deviceInfo})");
+                        // Provider names are product names and stay as-is; the device count must be
+                        // localized, otherwise the line reads "Corsair iCUE (2 devices)" in Chinese UI.
+                        var providerLabel = p.DeviceCount <= 0
+                            ? string.Format(Strings.Lighting_ProviderNoDevicesFormat, p.ProviderName)
+                            : p.DeviceCount == 1
+                                ? string.Format(Strings.Lighting_ProviderOneDeviceFormat, p.ProviderName)
+                                : string.Format(Strings.Lighting_ProviderDevicesFormat, p.ProviderName, p.DeviceCount);
+                        parts.Add(providerLabel);
                     }
                 }
 

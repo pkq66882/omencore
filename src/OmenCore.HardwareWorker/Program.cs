@@ -260,8 +260,11 @@ class Program
 
     private static string GetLogPath()
     {
-        var localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-        var logDir = Path.Combine(localAppData, "OmenCore");
+        // Portable builds point this at the extract folder so the worker log stays next to it.
+        var overrideDir = Environment.GetEnvironmentVariable("OMENCORE_CONFIG_DIR");
+        var logDir = string.IsNullOrWhiteSpace(overrideDir)
+            ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "OmenCore")
+            : Path.Combine(overrideDir, "logs");
         Directory.CreateDirectory(logDir);
         return Path.Combine(logDir, "HardwareWorker.log");
     }

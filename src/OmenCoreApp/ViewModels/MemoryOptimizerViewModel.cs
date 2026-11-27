@@ -87,7 +87,9 @@ namespace OmenCore.ViewModels
 
             _memoryService.StatusChanged += status =>
             {
-                Application.Current?.Dispatcher.BeginInvoke(() => SetStatusAction(status.TrimEnd('.')));
+                // Core reports progress in English; map it here and show it as-is (the localised
+                // strings already carry their own ellipsis).
+                Application.Current?.Dispatcher.BeginInvoke(() => StatusMessage = LocalizeOptimizerStatus(status));
             };
 
             _memoryService.CleanCompleted += result =>
@@ -1214,6 +1216,18 @@ namespace OmenCore.ViewModels
         private void SetStatusAction(string action)
         {
             StatusMessage = $"{action.Trim().TrimEnd('.')}...";
+        }
+
+        /// <summary>Maps the optimizer's own progress phrases; unknown text passes through.</summary>
+        private static string LocalizeOptimizerStatus(string status)
+        {
+            var trimmed = status.Trim();
+            if (string.Equals(trimmed, "Cleaning memory...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusCleaning;
+            if (string.Equals(trimmed, "Trimming process working sets...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusTrimmingWorkingSets;
+            if (string.Equals(trimmed, "Flushing system file cache...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusFlushingFileCache;
+            if (string.Equals(trimmed, "Purging low-priority standby list...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusPurgingLowStandby;
+            if (string.Equals(trimmed, "Purging standby list...", StringComparison.OrdinalIgnoreCase)) return Strings.Mem_StatusPurgingStandby;
+            return status;
         }
 
         private void SetStatusDone(string? details = null)
