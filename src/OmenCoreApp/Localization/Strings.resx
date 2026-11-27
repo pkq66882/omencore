@@ -11270,4 +11270,73 @@
   <data name="DeviceType_Unknown" xml:space="preserve">
     <value>Unknown</value>
   </data>
+  <data name="FanState_ThermalProtection" xml:space="preserve">
+    <value>Thermal protection (overriding)</value>
+  </data>
+  <data name="FanState_DiagnosticMode" xml:space="preserve">
+    <value>Diagnostic mode (curve suspended)</value>
+  </data>
+  <data name="FanState_CurveActiveFormat" xml:space="preserve">
+    <value>Fan curve active - {0}</value>
+  </data>
+  <data name="FanState_PresetFormat" xml:space="preserve">
+    <value>Preset: {0}</value>
+  </data>
+  <data name="FanState_BiosAuto" xml:space="preserve">
+    <value>BIOS auto control</value>
+  </data>
+  <data name="Resume_HealthUnknown" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="Resume_HealthHealthy" xml:space="preserve">
+    <value>normal</value>
+  </data>
+  <data name="Resume_HealthDegraded" xml:space="preserve">
+    <value>incomplete</value>
+  </data>
+  <data name="Resume_HealthStale" xml:space="preserve">
+    <value>stale</value>
+  </data>
+  <data name="Optimizer_StepProgressFormat" xml:space="preserve">
+    <value>Step {0}/{1}</value>
+  </data>
+  <data name="Optimizer_ApplyingItemFormat" xml:space="preserve">
+    <value>Applying {0}</value>
+  </data>
+  <data name="Tuning_PerCoreFormat" xml:space="preserve">
+    <value>Per-Core: {0} cores active | Avg {1} mV | {2} {3} mV</value>
+  </data>
+  <data name="Tuning_CoreLineFormat" xml:space="preserve">
+    <value>Core {0} mV | {1} {2} mV</value>
+  </data>
+  <data name="Tuning_CpuLineAmdFormat" xml:space="preserve">
+    <value>Core {0} mV eq., iGPU {1} mV eq.</value>
+  </data>
+  <data name="Tuning_CpuLineIntelFormat" xml:space="preserve">
+    <value>Core {0} mV, Cache {1} mV</value>
+  </data>
+  <data name="Tuning_GpuLineFormat" xml:space="preserve">
+    <value>Core {0} MHz | Memory {1} MHz | Power {2}% | Voltage {3} mV</value>
+  </data>
+  <data name="Tuning_AdjustCoreFormat" xml:space="preserve">
+    <value>core {0} -> {1}</value>
+  </data>
+  <data name="Tuning_AdjustMemoryFormat" xml:space="preserve">
+    <value>memory {0} -> {1}</value>
+  </data>
+  <data name="Tuning_AdjustPowerFormat" xml:space="preserve">
+    <value>power {0}% -> {1}%</value>
+  </data>
+  <data name="Tuning_AdjustVoltageFormat" xml:space="preserve">
+    <value>voltage {0} -> {1}</value>
+  </data>
+  <data name="SC_GuardrailsFormat" xml:space="preserve">
+    <value> | Guardrails: {0}</value>
+  </data>
+  <data name="CpuCoreNameFormat" xml:space="preserve">
+    <value>Core {0}</value>
+  </data>
+  <data name="Mem_MinutesFormat" xml:space="preserve">
+    <value>{0} min</value>
+  </data>
 </root>

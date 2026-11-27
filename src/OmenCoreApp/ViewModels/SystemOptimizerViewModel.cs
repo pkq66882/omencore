@@ -139,7 +139,7 @@ namespace OmenCore.ViewModels
         public bool HasOperationProgress => OperationTotalSteps > 0;
         public double OperationProgressValue => OperationCurrentStep;
         public double OperationProgressMaximum => OperationTotalSteps > 0 ? OperationTotalSteps : 1;
-        public string OperationProgressText => HasOperationProgress ? $"Step {OperationCurrentStep}/{OperationTotalSteps}" : string.Empty;
+        public string OperationProgressText => HasOperationProgress ? string.Format(Strings.Optimizer_StepProgressFormat, OperationCurrentStep, OperationTotalSteps) : string.Empty;
 
         public int ActiveOptimizationCount => _currentState?.ActiveCount ?? 0;
         public int TotalOptimizationCount => _currentState?.TotalCount ?? 0;
@@ -691,7 +691,7 @@ namespace OmenCore.ViewModels
                 {
                     var item = pendingItems[index];
                     OperationCurrentStep = index + 1;
-                    OperationProgressLabel = $"Applying {item.Name}";
+                    OperationProgressLabel = string.Format(Strings.Optimizer_ApplyingItemFormat, item.Name);
                     SetStatusAction(string.Format(Strings.SystemOptimizerViewModel_StatusApplying, item.Name));
 
                     var result = await _optimizerService.ApplyOptimizationAsync(item.Id);

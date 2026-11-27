@@ -4128,5 +4128,28 @@ namespace OmenCore.Localization
     public static string DeviceType_ChromaLink => Get(nameof(DeviceType_ChromaLink));
     public static string DeviceType_Speaker => Get(nameof(DeviceType_Speaker));
     public static string DeviceType_Unknown => Get(nameof(DeviceType_Unknown));
+    public static string FanState_ThermalProtection => Get(nameof(FanState_ThermalProtection));
+    public static string FanState_DiagnosticMode => Get(nameof(FanState_DiagnosticMode));
+    public static string FanState_CurveActiveFormat => Get(nameof(FanState_CurveActiveFormat));
+    public static string FanState_PresetFormat => Get(nameof(FanState_PresetFormat));
+    public static string FanState_BiosAuto => Get(nameof(FanState_BiosAuto));
+    public static string Resume_HealthUnknown => Get(nameof(Resume_HealthUnknown));
+    public static string Resume_HealthHealthy => Get(nameof(Resume_HealthHealthy));
+    public static string Resume_HealthDegraded => Get(nameof(Resume_HealthDegraded));
+    public static string Resume_HealthStale => Get(nameof(Resume_HealthStale));
+    public static string Optimizer_StepProgressFormat => Get(nameof(Optimizer_StepProgressFormat));
+    public static string Optimizer_ApplyingItemFormat => Get(nameof(Optimizer_ApplyingItemFormat));
+    public static string Tuning_PerCoreFormat => Get(nameof(Tuning_PerCoreFormat));
+    public static string Tuning_CoreLineFormat => Get(nameof(Tuning_CoreLineFormat));
+    public static string Tuning_CpuLineAmdFormat => Get(nameof(Tuning_CpuLineAmdFormat));
+    public static string Tuning_CpuLineIntelFormat => Get(nameof(Tuning_CpuLineIntelFormat));
+    public static string Tuning_GpuLineFormat => Get(nameof(Tuning_GpuLineFormat));
+    public static string Tuning_AdjustCoreFormat => Get(nameof(Tuning_AdjustCoreFormat));
+    public static string Tuning_AdjustMemoryFormat => Get(nameof(Tuning_AdjustMemoryFormat));
+    public static string Tuning_AdjustPowerFormat => Get(nameof(Tuning_AdjustPowerFormat));
+    public static string Tuning_AdjustVoltageFormat => Get(nameof(Tuning_AdjustVoltageFormat));
+    public static string SC_GuardrailsFormat => Get(nameof(SC_GuardrailsFormat));
+    public static string CpuCoreNameFormat => Get(nameof(CpuCoreNameFormat));
+    public static string Mem_MinutesFormat => Get(nameof(Mem_MinutesFormat));
     }
 }

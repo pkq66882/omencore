@@ -29,12 +29,12 @@ namespace OmenCore.ViewModels
             }
 
             var requested = isAmdCpu
-                ? $"{Strings.TuningStatus_RequestedPrefix}Core {requestedCoreMv:+0;-0;0} mV eq., iGPU {requestedCacheMv:+0;-0;0} mV eq."
-                : $"{Strings.TuningStatus_RequestedPrefix}Core {requestedCoreMv:+0;-0;0} mV, Cache {requestedCacheMv:+0;-0;0} mV";
+                ? $"{Strings.TuningStatus_RequestedPrefix}" + string.Format(Strings.Tuning_CpuLineAmdFormat, $"{requestedCoreMv:+0;-0;0}", $"{requestedCacheMv:+0;-0;0}")
+                : $"{Strings.TuningStatus_RequestedPrefix}" + string.Format(Strings.Tuning_CpuLineIntelFormat, $"{requestedCoreMv:+0;-0;0}", $"{requestedCacheMv:+0;-0;0}");
 
             var applied = isAmdCpu
-                ? $"{Strings.TuningStatus_AppliedPrefix}Core {status.CurrentCoreOffsetMv:+0;-0;0} mV eq., iGPU {status.CurrentCacheOffsetMv:+0;-0;0} mV eq."
-                : $"{Strings.TuningStatus_AppliedPrefix}Core {status.CurrentCoreOffsetMv:+0;-0;0} mV, Cache {status.CurrentCacheOffsetMv:+0;-0;0} mV";
+                ? $"{Strings.TuningStatus_AppliedPrefix}" + string.Format(Strings.Tuning_CpuLineAmdFormat, $"{status.CurrentCoreOffsetMv:+0;-0;0}", $"{status.CurrentCacheOffsetMv:+0;-0;0}")
+                : $"{Strings.TuningStatus_AppliedPrefix}" + string.Format(Strings.Tuning_CpuLineIntelFormat, $"{status.CurrentCoreOffsetMv:+0;-0;0}", $"{status.CurrentCacheOffsetMv:+0;-0;0}");
 
             string verified;
             if (status.HasExternalController)
@@ -86,8 +86,8 @@ namespace OmenCore.ViewModels
                 return Strings.TuningStatus_RequestedAppliedGpuNa;
             }
 
-            var requested = $"{Strings.TuningStatus_RequestedPrefix}Core {FormatSigned(requestedCore, "MHz")}, Mem {FormatSigned(requestedMemory, "MHz")}, Power {requestedPower}%, Voltage {FormatSigned(requestedVoltage, "mV")}";
-            var applied = $"{Strings.TuningStatus_AppliedPrefix}Core {FormatSigned(appliedCore, "MHz")}, Mem {FormatSigned(appliedMemory, "MHz")}, Power {appliedPower}%, Voltage {FormatSigned(appliedVoltage, "mV")}";
+            var requested = $"{Strings.TuningStatus_RequestedPrefix}" + string.Format(Strings.Tuning_GpuLineFormat, FormatSigned(requestedCore, "MHz"), FormatSigned(requestedMemory, "MHz"), requestedPower, FormatSigned(requestedVoltage, "mV"));
+            var applied = $"{Strings.TuningStatus_AppliedPrefix}" + string.Format(Strings.Tuning_GpuLineFormat, FormatSigned(appliedCore, "MHz"), FormatSigned(appliedMemory, "MHz"), appliedPower, FormatSigned(appliedVoltage, "mV"));
 
             string verified;
             if (!allWritesSucceeded)

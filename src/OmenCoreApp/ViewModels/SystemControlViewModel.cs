@@ -218,11 +218,13 @@ namespace OmenCore.ViewModels
                     var values = UndervoltStatus.CurrentPerCoreOffsetsMv.Where(x => x.HasValue).Select(x => x!.Value).ToArray();
                     var activeCores = values.Length;
                     var avgOffset = activeCores > 0 ? values.Average() : 0.0;
-                    return $"Per-Core: {activeCores} cores active | Avg {avgOffset:+0;-0;0} mV | {UndervoltSecondChannelLabel} {UndervoltStatus.CurrentCacheOffsetMv:+0;-0;0} mV";
+                    return string.Format(Strings.Tuning_PerCoreFormat, activeCores, $"{avgOffset:+0;-0;0}",
+                        UndervoltSecondChannelLabel, $"{UndervoltStatus.CurrentCacheOffsetMv:+0;-0;0}");
                 }
                 else
                 {
-                    return $"Core {UndervoltStatus.CurrentCoreOffsetMv:+0;-0;0} mV | {UndervoltSecondChannelLabel} {UndervoltStatus.CurrentCacheOffsetMv:+0;-0;0} mV";
+                    return string.Format(Strings.Tuning_CoreLineFormat, $"{UndervoltStatus.CurrentCoreOffsetMv:+0;-0;0}",
+                        UndervoltSecondChannelLabel, $"{UndervoltStatus.CurrentCacheOffsetMv:+0;-0;0}");
                 }
             }
         }
@@ -392,11 +394,11 @@ namespace OmenCore.ViewModels
         public string UndervoltSecondChannelSubtitle => IsAmdCpu ? Strings.SystemControlViewModel_RadeonGraphics : Strings.SystemControlViewModel_L3Cache;
 
         public string UndervoltRequestedChipText =>
-            $"{Strings.TuningStatus_RequestedPrefix}Core {RequestedCoreOffset:+0;-0;0} mV | {UndervoltSecondChannelLabel} {RequestedCacheOffset:+0;-0;0} mV";
+            $"{Strings.TuningStatus_RequestedPrefix}" + string.Format(Strings.Tuning_CoreLineFormat, $"{RequestedCoreOffset:+0;-0;0}", UndervoltSecondChannelLabel, $"{RequestedCacheOffset:+0;-0;0}");
 
         public string UndervoltConfirmedChipText => UndervoltStatus == null
             ? Strings.TuningStatus_ConfirmedNa
-            : $"{Strings.TuningStatus_ConfirmedPrefix}Core {UndervoltStatus.CurrentCoreOffsetMv:+0;-0;0} mV | {UndervoltSecondChannelLabel} {UndervoltStatus.CurrentCacheOffsetMv:+0;-0;0} mV";
+            : $"{Strings.TuningStatus_ConfirmedPrefix}" + string.Format(Strings.Tuning_CoreLineFormat, $"{UndervoltStatus.CurrentCoreOffsetMv:+0;-0;0}", UndervoltSecondChannelLabel, $"{UndervoltStatus.CurrentCacheOffsetMv:+0;-0;0}");
 
         // Set once an apply, test-apply or startup reapply has actually been attempted. A slider that
         // merely sits at a different value than the hardware is a draft, not a failed apply: GitHub
@@ -1538,7 +1540,8 @@ namespace OmenCore.ViewModels
         }
 
         public string GpuOcRequestedChipText =>
-            $"{Strings.TuningStatus_RequestedPrefix}Core {GpuCoreClockOffset:+0;-0;0} MHz | Memory {GpuMemoryClockOffset:+0;-0;0} MHz | Power {GpuPowerLimitPercent}% | Voltage {GpuVoltageOffsetMv:+0;-0;0} mV";
+            $"{Strings.TuningStatus_RequestedPrefix}" + string.Format(Strings.Tuning_GpuLineFormat,
+                $"{GpuCoreClockOffset:+0;-0;0}", $"{GpuMemoryClockOffset:+0;-0;0}", GpuPowerLimitPercent, $"{GpuVoltageOffsetMv:+0;-0;0}");
 
         public string GpuOcConfirmedChipText
         {
@@ -1549,7 +1552,9 @@ namespace OmenCore.ViewModels
                     return Strings.TuningStatus_ConfirmedNa;
                 }
 
-                return $"{Strings.TuningStatus_ConfirmedPrefix}Core {_nvapiService.CoreClockOffsetMHz:+0;-0;0} MHz | Memory {_nvapiService.MemoryClockOffsetMHz:+0;-0;0} MHz | Power {_nvapiService.PowerLimitPercent}% | Voltage {_nvapiService.VoltageOffsetMv:+0;-0;0} mV";
+                return $"{Strings.TuningStatus_ConfirmedPrefix}" + string.Format(Strings.Tuning_GpuLineFormat,
+                    $"{_nvapiService.CoreClockOffsetMHz:+0;-0;0}", $"{_nvapiService.MemoryClockOffsetMHz:+0;-0;0}",
+                    _nvapiService.PowerLimitPercent, $"{_nvapiService.VoltageOffsetMv:+0;-0;0}");
             }
         }
 
@@ -1796,24 +1801,24 @@ namespace OmenCore.ViewModels
             var adjustments = new List<string>();
             if (requestedCoreOffset != GpuCoreClockOffset)
             {
-                adjustments.Add($"core {FormatSignedValue(requestedCoreOffset, "MHz")} -> {FormatSignedValue(GpuCoreClockOffset, "MHz")}");
+                adjustments.Add(string.Format(Strings.Tuning_AdjustCoreFormat, FormatSignedValue(requestedCoreOffset, "MHz"), FormatSignedValue(GpuCoreClockOffset, "MHz")));
             }
 
             if (requestedMemoryOffset != GpuMemoryClockOffset)
             {
-                adjustments.Add($"memory {FormatSignedValue(requestedMemoryOffset, "MHz")} -> {FormatSignedValue(GpuMemoryClockOffset, "MHz")}");
+                adjustments.Add(string.Format(Strings.Tuning_AdjustMemoryFormat, FormatSignedValue(requestedMemoryOffset, "MHz"), FormatSignedValue(GpuMemoryClockOffset, "MHz")));
             }
 
             if (requestedPowerLimit != GpuPowerLimitPercent)
             {
                 adjustments.Add(GpuPowerLimitAvailable
-                    ? $"power {requestedPowerLimit}% -> {GpuPowerLimitPercent}%"
+                    ? string.Format(Strings.Tuning_AdjustPowerFormat, requestedPowerLimit, GpuPowerLimitPercent)
                     : string.Format(Strings.SC2_PowerLimitIgnoredFormat, requestedPowerLimit));
             }
 
             if (requestedVoltageOffset != GpuVoltageOffsetMv)
             {
-                adjustments.Add($"voltage {FormatSignedValue(requestedVoltageOffset, "mV")} -> {FormatSignedValue(GpuVoltageOffsetMv, "mV")}");
+                adjustments.Add(string.Format(Strings.Tuning_AdjustVoltageFormat, FormatSignedValue(requestedVoltageOffset, "mV"), FormatSignedValue(GpuVoltageOffsetMv, "mV")));
             }
 
             return adjustments.Count == 0 ? string.Empty : string.Join(", ", adjustments);
@@ -2069,7 +2074,7 @@ namespace OmenCore.ViewModels
 
                     if (!string.IsNullOrEmpty(guardrailNote))
                     {
-                        statusText += $" | Guardrails: {guardrailNote}";
+                        statusText += string.Format(Strings.SC_GuardrailsFormat, guardrailNote);
                     }
 
                     return new GpuOcApplyResult
@@ -3034,7 +3039,7 @@ namespace OmenCore.ViewModels
             {
                 var vm = new PerCoreOffsetViewModel
                 {
-                    CoreName = $"Core {i}",
+                    CoreName = string.Format(Strings.CpuCoreNameFormat, i),
                     CoreIndex = i,
                     OffsetMv = RequestedPerCoreOffsets != null && i < RequestedPerCoreOffsets.Length 
                         ? RequestedPerCoreOffsets[i] 

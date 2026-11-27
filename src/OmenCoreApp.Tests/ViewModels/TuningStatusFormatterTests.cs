@@ -135,17 +135,28 @@ namespace OmenCoreApp.Tests.ViewModels
             // The CacheMv model field carries the iGPU Curve Optimizer offset on AMD. Every
             // user-visible string for it has to say so - a status line reading "Cache -60 mV" on a
             // Ryzen part describes a domain OmenCore never writes there.
-            var status = new UndervoltStatus
+            // Pin the UI culture: the assertion is about the English wording, and localised builds
+            // legitimately say "核显" instead.
+            var original = System.Globalization.CultureInfo.CurrentUICulture;
+            System.Globalization.CultureInfo.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en");
+            try
             {
-                CurrentCoreOffsetMv = -80,
-                CurrentCacheOffsetMv = -60,
-                ControlledByOmenCore = true
-            };
+                var status = new UndervoltStatus
+                {
+                    CurrentCoreOffsetMv = -80,
+                    CurrentCacheOffsetMv = -60,
+                    ControlledByOmenCore = true
+                };
 
-            var text = TuningStatusFormatter.BuildUndervoltStatusText(-80, -60, status, isAmdCpu: true);
+                var text = TuningStatusFormatter.BuildUndervoltStatusText(-80, -60, status, isAmdCpu: true);
 
-            text.Should().Contain("iGPU");
-            text.Should().NotContain("Cache");
+                text.Should().Contain("iGPU");
+                text.Should().NotContain("Cache");
+            }
+            finally
+            {
+                System.Globalization.CultureInfo.CurrentUICulture = original;
+            }
         }
 
         [Fact]

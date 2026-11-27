@@ -98,9 +98,5 @@ test-build/
 test-build2/
 test-build3/
 
-# Local security-hook state
-.mimosa/
-
-# Tooling state
-.mimosa/
+# Local security-hook / tooling state
 **/.mimosa/

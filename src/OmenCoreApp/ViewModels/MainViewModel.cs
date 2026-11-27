@@ -1874,21 +1874,25 @@ namespace OmenCore.ViewModels
                 var hottestComponent = Math.Max(latestSample.CpuTemperatureC, latestSample.GpuTemperatureC);
                 var peakFanRpm = Math.Max(latestSample.Fan1Rpm, latestSample.Fan2Rpm);
 
+                // activeFanState stays canonical English for the pinned-fan check above; the sentences
+                // shown in Settings need a localized label instead of the raw Core description.
+                var fanStateDisplay = DisplayNames.FanControlState(activeFanState);
+
                 if (telemetryHealthy && !fansPinnedUnexpectedly)
                 {
-                    _resumeRecoveryDiagnostics.Complete(string.Format(Strings.M2_ResumeCompleteFormat, sampleAgeSeconds, activeFanState, peakFanRpm));
+                    _resumeRecoveryDiagnostics.Complete(string.Format(Strings.M2_ResumeCompleteFormat, sampleAgeSeconds, fanStateDisplay, peakFanRpm));
                 }
                 else
                 {
                     var issues = new StringBuilder();
                     if (!telemetryHealthy)
                     {
-                        issues.Append(string.Format(Strings.M2_ResumeTelemetryIssueFormat, sampleAgeSeconds, _hardwareMonitoringService?.HealthStatus));
+                        issues.Append(string.Format(Strings.M2_ResumeTelemetryIssueFormat, sampleAgeSeconds, DisplayNames.MonitoringHealth(_hardwareMonitoringService?.HealthStatus)));
                     }
 
                     if (fansPinnedUnexpectedly)
                     {
-                        issues.Append(string.Format(Strings.M2_ResumeFanIssueFormat, peakFanRpm, hottestComponent, activeFanState));
+                        issues.Append(string.Format(Strings.M2_ResumeFanIssueFormat, peakFanRpm, hottestComponent, fanStateDisplay));
                     }
 
                     _resumeRecoveryDiagnostics.Attention(string.Format(Strings.M2_ResumeAttentionFormat, issues.ToString().Trim()));

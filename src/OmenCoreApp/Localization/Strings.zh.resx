@@ -11266,4 +11266,73 @@
   <data name="DeviceType_Unknown" xml:space="preserve">
     <value>未知</value>
   </data>
+  <data name="FanState_ThermalProtection" xml:space="preserve">
+    <value>温度保护中（已接管）</value>
+  </data>
+  <data name="FanState_DiagnosticMode" xml:space="preserve">
+    <value>诊断模式（曲线已暂停）</value>
+  </data>
+  <data name="FanState_CurveActiveFormat" xml:space="preserve">
+    <value>风扇曲线生效中（{0}）</value>
+  </data>
+  <data name="FanState_PresetFormat" xml:space="preserve">
+    <value>预设：{0}</value>
+  </data>
+  <data name="FanState_BiosAuto" xml:space="preserve">
+    <value>BIOS 自动控制</value>
+  </data>
+  <data name="Resume_HealthUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Resume_HealthHealthy" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="Resume_HealthDegraded" xml:space="preserve">
+    <value>数据不全</value>
+  </data>
+  <data name="Resume_HealthStale" xml:space="preserve">
+    <value>数据过期</value>
+  </data>
+  <data name="Optimizer_StepProgressFormat" xml:space="preserve">
+    <value>步骤 {0}/{1}</value>
+  </data>
+  <data name="Optimizer_ApplyingItemFormat" xml:space="preserve">
+    <value>正在应用 {0}</value>
+  </data>
+  <data name="Tuning_PerCoreFormat" xml:space="preserve">
+    <value>每核：{0} 核活跃｜平均 {1} mV｜{2} {3} mV</value>
+  </data>
+  <data name="Tuning_CoreLineFormat" xml:space="preserve">
+    <value>核心 {0} mV｜{1} {2} mV</value>
+  </data>
+  <data name="Tuning_CpuLineAmdFormat" xml:space="preserve">
+    <value>核心 {0} mV（等效）｜核显 {1} mV（等效）</value>
+  </data>
+  <data name="Tuning_CpuLineIntelFormat" xml:space="preserve">
+    <value>核心 {0} mV｜缓存 {1} mV</value>
+  </data>
+  <data name="Tuning_GpuLineFormat" xml:space="preserve">
+    <value>核心 {0} MHz｜显存 {1} MHz｜功耗 {2}%｜电压 {3} mV</value>
+  </data>
+  <data name="Tuning_AdjustCoreFormat" xml:space="preserve">
+    <value>核心 {0} → {1}</value>
+  </data>
+  <data name="Tuning_AdjustMemoryFormat" xml:space="preserve">
+    <value>显存 {0} → {1}</value>
+  </data>
+  <data name="Tuning_AdjustPowerFormat" xml:space="preserve">
+    <value>功耗 {0}% → {1}%</value>
+  </data>
+  <data name="Tuning_AdjustVoltageFormat" xml:space="preserve">
+    <value>电压 {0} → {1}</value>
+  </data>
+  <data name="SC_GuardrailsFormat" xml:space="preserve">
+    <value>｜保护措施：{0}</value>
+  </data>
+  <data name="CpuCoreNameFormat" xml:space="preserve">
+    <value>核心 {0}</value>
+  </data>
+  <data name="Mem_MinutesFormat" xml:space="preserve">
+    <value>{0} 分钟</value>
+  </data>
 </root>

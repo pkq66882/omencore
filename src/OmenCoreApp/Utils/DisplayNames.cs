@@ -436,6 +436,36 @@ namespace OmenCore.Utils
                 var other => other
             };
         }
+        /// <summary>
+        /// Localized label for FanService.FanControlStateDescription. The canonical English text stays in
+        /// Core (it is also what the pinned-fan check inspects); only the display copy changes.
+        /// </summary>
+        public static string FanControlState(string? state)
+        {
+            if (string.IsNullOrWhiteSpace(state)) return Strings.FanState_BiosAuto;
+            if (state == "Thermal protection (overriding)") return Strings.FanState_ThermalProtection;
+            if (state == "Diagnostic mode (curve suspended)") return Strings.FanState_DiagnosticMode;
+            if (state == "BIOS auto control") return Strings.FanState_BiosAuto;
+
+            const string curvePrefix = "Fan curve active \u2014 ";
+            if (state.StartsWith(curvePrefix, StringComparison.Ordinal))
+                return string.Format(Strings.FanState_CurveActiveFormat, FanPresetName(state.Substring(curvePrefix.Length)));
+
+            const string presetPrefix = "Preset: ";
+            if (state.StartsWith(presetPrefix, StringComparison.Ordinal))
+                return string.Format(Strings.FanState_PresetFormat, FanPresetName(state.Substring(presetPrefix.Length)));
+
+            return state;
+        }
+
+        /// <summary>Localized monitoring health word used inside resume self-check sentences.</summary>
+        public static string MonitoringHealth(MonitoringHealthStatus? status) => status switch
+        {
+            MonitoringHealthStatus.Healthy => Strings.Resume_HealthHealthy,
+            MonitoringHealthStatus.Degraded => Strings.Resume_HealthDegraded,
+            MonitoringHealthStatus.Stale => Strings.Resume_HealthStale,
+            _ => Strings.Resume_HealthUnknown
+        };
         /// <summary>Localized game-library platform filter (enum name to label; brands pass through).</summary>
         public static string PlatformFilter(object? value)
         {

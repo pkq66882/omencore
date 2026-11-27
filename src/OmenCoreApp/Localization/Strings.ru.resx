@@ -11266,4 +11266,73 @@
   <data name="DeviceType_Unknown" xml:space="preserve">
     <value>неизвестно</value>
   </data>
+  <data name="FanState_ThermalProtection" xml:space="preserve">
+    <value>Тепловая защита (перехват управления)</value>
+  </data>
+  <data name="FanState_DiagnosticMode" xml:space="preserve">
+    <value>Режим диагностики (кривая приостановлена)</value>
+  </data>
+  <data name="FanState_CurveActiveFormat" xml:space="preserve">
+    <value>Кривая вентиляторов активна - {0}</value>
+  </data>
+  <data name="FanState_PresetFormat" xml:space="preserve">
+    <value>Профиль: {0}</value>
+  </data>
+  <data name="FanState_BiosAuto" xml:space="preserve">
+    <value>Автоуправление BIOS</value>
+  </data>
+  <data name="Resume_HealthUnknown" xml:space="preserve">
+    <value>неизвестно</value>
+  </data>
+  <data name="Resume_HealthHealthy" xml:space="preserve">
+    <value>норма</value>
+  </data>
+  <data name="Resume_HealthDegraded" xml:space="preserve">
+    <value>данные неполные</value>
+  </data>
+  <data name="Resume_HealthStale" xml:space="preserve">
+    <value>данные устарели</value>
+  </data>
+  <data name="Optimizer_StepProgressFormat" xml:space="preserve">
+    <value>Шаг {0}/{1}</value>
+  </data>
+  <data name="Optimizer_ApplyingItemFormat" xml:space="preserve">
+    <value>Применение: {0}</value>
+  </data>
+  <data name="Tuning_PerCoreFormat" xml:space="preserve">
+    <value>По ядрам: активно {0} | среднее {1} mV | {2} {3} mV</value>
+  </data>
+  <data name="Tuning_CoreLineFormat" xml:space="preserve">
+    <value>Ядро {0} mV | {1} {2} mV</value>
+  </data>
+  <data name="Tuning_CpuLineAmdFormat" xml:space="preserve">
+    <value>Ядро {0} mV экв., iGPU {1} mV экв.</value>
+  </data>
+  <data name="Tuning_CpuLineIntelFormat" xml:space="preserve">
+    <value>Ядро {0} mV, кеш {1} mV</value>
+  </data>
+  <data name="Tuning_GpuLineFormat" xml:space="preserve">
+    <value>Ядро {0} MHz | Память {1} MHz | Мощность {2}% | Напряжение {3} mV</value>
+  </data>
+  <data name="Tuning_AdjustCoreFormat" xml:space="preserve">
+    <value>ядро {0} -> {1}</value>
+  </data>
+  <data name="Tuning_AdjustMemoryFormat" xml:space="preserve">
+    <value>память {0} -> {1}</value>
+  </data>
+  <data name="Tuning_AdjustPowerFormat" xml:space="preserve">
+    <value>мощность {0}% -> {1}%</value>
+  </data>
+  <data name="Tuning_AdjustVoltageFormat" xml:space="preserve">
+    <value>напряжение {0} -> {1}</value>
+  </data>
+  <data name="SC_GuardrailsFormat" xml:space="preserve">
+    <value> | Ограничители: {0}</value>
+  </data>
+  <data name="CpuCoreNameFormat" xml:space="preserve">
+    <value>Ядро {0}</value>
+  </data>
+  <data name="Mem_MinutesFormat" xml:space="preserve">
+    <value>{0} мин</value>
+  </data>
 </root>

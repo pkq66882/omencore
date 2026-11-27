@@ -11266,4 +11266,73 @@
   <data name="DeviceType_Unknown" xml:space="preserve">
     <value>bilinmiyor</value>
   </data>
+  <data name="FanState_ThermalProtection" xml:space="preserve">
+    <value>Isıl koruma (kontrol devralındı)</value>
+  </data>
+  <data name="FanState_DiagnosticMode" xml:space="preserve">
+    <value>Tanılama modu (eğri askıda)</value>
+  </data>
+  <data name="FanState_CurveActiveFormat" xml:space="preserve">
+    <value>Fan eğrisi etkin - {0}</value>
+  </data>
+  <data name="FanState_PresetFormat" xml:space="preserve">
+    <value>Ön ayar: {0}</value>
+  </data>
+  <data name="FanState_BiosAuto" xml:space="preserve">
+    <value>BIOS otomatik kontrolü</value>
+  </data>
+  <data name="Resume_HealthUnknown" xml:space="preserve">
+    <value>bilinmiyor</value>
+  </data>
+  <data name="Resume_HealthHealthy" xml:space="preserve">
+    <value>normal</value>
+  </data>
+  <data name="Resume_HealthDegraded" xml:space="preserve">
+    <value>veri eksik</value>
+  </data>
+  <data name="Resume_HealthStale" xml:space="preserve">
+    <value>veri eski</value>
+  </data>
+  <data name="Optimizer_StepProgressFormat" xml:space="preserve">
+    <value>Adım {0}/{1}</value>
+  </data>
+  <data name="Optimizer_ApplyingItemFormat" xml:space="preserve">
+    <value>{0} uygulanıyor</value>
+  </data>
+  <data name="Tuning_PerCoreFormat" xml:space="preserve">
+    <value>Çekirdek başına: {0} çekirdek etkin | Ort. {1} mV | {2} {3} mV</value>
+  </data>
+  <data name="Tuning_CoreLineFormat" xml:space="preserve">
+    <value>Çekirdek {0} mV | {1} {2} mV</value>
+  </data>
+  <data name="Tuning_CpuLineAmdFormat" xml:space="preserve">
+    <value>Çekirdek {0} mV eşd., iGPU {1} mV eşd.</value>
+  </data>
+  <data name="Tuning_CpuLineIntelFormat" xml:space="preserve">
+    <value>Çekirdek {0} mV, önbellek {1} mV</value>
+  </data>
+  <data name="Tuning_GpuLineFormat" xml:space="preserve">
+    <value>Çekirdek {0} MHz | Bellek {1} MHz | Güç {2}% | Gerilim {3} mV</value>
+  </data>
+  <data name="Tuning_AdjustCoreFormat" xml:space="preserve">
+    <value>çekirdek {0} -> {1}</value>
+  </data>
+  <data name="Tuning_AdjustMemoryFormat" xml:space="preserve">
+    <value>bellek {0} -> {1}</value>
+  </data>
+  <data name="Tuning_AdjustPowerFormat" xml:space="preserve">
+    <value>güç {0}% -> {1}%</value>
+  </data>
+  <data name="Tuning_AdjustVoltageFormat" xml:space="preserve">
+    <value>gerilim {0} -> {1}</value>
+  </data>
+  <data name="SC_GuardrailsFormat" xml:space="preserve">
+    <value> | Koruma sınırları: {0}</value>
+  </data>
+  <data name="CpuCoreNameFormat" xml:space="preserve">
+    <value>Çekirdek {0}</value>
+  </data>
+  <data name="Mem_MinutesFormat" xml:space="preserve">
+    <value>{0} dk</value>
+  </data>
 </root>

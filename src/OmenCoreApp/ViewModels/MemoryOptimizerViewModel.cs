@@ -547,7 +547,7 @@ namespace OmenCore.ViewModels
                     return string.Format(Strings.L2_ProfileDefaultCooldownFormat, GetAutoCleanCooldownMinutes(profile));
                 }
 
-                return $"{AutoCleanCooldownMinutes} min";
+                return string.Format(Strings.Mem_MinutesFormat, AutoCleanCooldownMinutes);
             }
         }
 
