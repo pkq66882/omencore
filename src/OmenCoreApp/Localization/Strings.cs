@@ -4151,5 +4151,22 @@ namespace OmenCore.Localization
     public static string SC_GuardrailsFormat => Get(nameof(SC_GuardrailsFormat));
     public static string CpuCoreNameFormat => Get(nameof(CpuCoreNameFormat));
     public static string Mem_MinutesFormat => Get(nameof(Mem_MinutesFormat));
+    public static string Tuning_ChannelIgpu => Get(nameof(Tuning_ChannelIgpu));
+    public static string Tuning_ChannelCache => Get(nameof(Tuning_ChannelCache));
+    public static string Undervolt_ServiceInitFailed => Get(nameof(Undervolt_ServiceInitFailed));
+    public static string Undervolt_WarnXtuBlock => Get(nameof(Undervolt_WarnXtuBlock));
+    public static string Undervolt_WarnMsrUnavailable => Get(nameof(Undervolt_WarnMsrUnavailable));
+    public static string Undervolt_WarnCannotVerify => Get(nameof(Undervolt_WarnCannotVerify));
+    public static string Undervolt_WarnPerCoreIntel => Get(nameof(Undervolt_WarnPerCoreIntel));
+    public static string Undervolt_WarnPerCoreAmd => Get(nameof(Undervolt_WarnPerCoreAmd));
+    public static string Undervolt_WarnAmdSmuUnavailable => Get(nameof(Undervolt_WarnAmdSmuUnavailable));
+    public static string Undervolt_WarnRyzenAi9 => Get(nameof(Undervolt_WarnRyzenAi9));
+    public static string Undervolt_WarnUnknownAmdFamily => Get(nameof(Undervolt_WarnUnknownAmdFamily));
+    public static string Undervolt_WarnExternalFormat => Get(nameof(Undervolt_WarnExternalFormat));
+    public static string Undervolt_WarnCpuNoCurveOptimizerFormat => Get(nameof(Undervolt_WarnCpuNoCurveOptimizerFormat));
+    public static string Undervolt_WarnIgpuNoMessageFormat => Get(nameof(Undervolt_WarnIgpuNoMessageFormat));
+    public static string Undervolt_WarnIgpuSmuRefusedFormat => Get(nameof(Undervolt_WarnIgpuSmuRefusedFormat));
+    public static string Undervolt_WarnIgpuUnvalidatedFormat => Get(nameof(Undervolt_WarnIgpuUnvalidatedFormat));
+    public static string Undervolt_WarnIgpuNoConfirmedFormat => Get(nameof(Undervolt_WarnIgpuNoConfirmedFormat));
     }
 }

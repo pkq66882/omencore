@@ -466,6 +466,55 @@ namespace OmenCore.Utils
             MonitoringHealthStatus.Stale => Strings.Resume_HealthStale,
             _ => Strings.Resume_HealthUnknown
         };
+
+        // Canonical Core diagnosis sentences (CpuUndervoltProvider / AmdUndervoltProvider). They are
+        // matched by text so the Core classes stay untouched; unknown text is returned unchanged.
+        private const string UndervoltXtuBlock = "Intel XTU service detected. XTU blocks MSR access for other applications. To use OmenCore undervolting:\n1. Open Services (services.msc)\n2. Find 'Intel(R) Extreme Tuning Utility' service\n3. Stop the service and set to 'Disabled'\n4. Restart OmenCore";
+        private const string UndervoltMsrUnavailable = "MSR access backend is unavailable. Install PawnIO (Secure Boot compatible) and reboot to enable CPU undervolting.";
+        private const string UndervoltCannotVerify = "Cannot verify applied voltage offsets because the MSR backend is unavailable. Showing last requested values.";
+        private const string UndervoltPerCoreIntel = "Per-core voltage offsets were requested but were not written - this backend only applies the global Core/Cache offsets.";
+        private const string UndervoltPerCoreAmd = "Per-core voltage offsets were requested but were not written - the AMD Curve Optimizer path only applies a single all-core value.";
+        private const string UndervoltAmdSmuUnavailable = "AMD SMU backend is unavailable. Install PawnIO, run OmenCore as administrator, and reboot if the driver was just installed.";
+        private const string UndervoltRyzenAi9 = "Ryzen AI 9 Curve Optimizer path is experimental. Use conservative offsets and verify stability.";
+        private const string UndervoltUnknownAmdFamily = "Unknown AMD CPU family. SMU command addresses cannot be validated safely for Curve Optimizer writes.";
+
+        /// <summary>Localizes the undervolt provider's warning / runtime-block sentences for display.</summary>
+        public static string UndervoltDiagnostic(string? text)
+        {
+            if (string.IsNullOrWhiteSpace(text)) return text ?? string.Empty;
+
+            var result = text
+                .Replace(UndervoltXtuBlock, Strings.Undervolt_WarnXtuBlock)
+                .Replace(UndervoltMsrUnavailable, Strings.Undervolt_WarnMsrUnavailable)
+                .Replace(UndervoltCannotVerify, Strings.Undervolt_WarnCannotVerify)
+                .Replace(UndervoltPerCoreIntel, Strings.Undervolt_WarnPerCoreIntel)
+                .Replace(UndervoltPerCoreAmd, Strings.Undervolt_WarnPerCoreAmd)
+                .Replace(UndervoltAmdSmuUnavailable, Strings.Undervolt_WarnAmdSmuUnavailable)
+                .Replace(UndervoltRyzenAi9, Strings.Undervolt_WarnRyzenAi9)
+                .Replace(UndervoltUnknownAmdFamily, Strings.Undervolt_WarnUnknownAmdFamily);
+
+            result = Regex.Replace(result,
+                @"External undervolt detected via (.+?)\. OmenCore may conflict with this application\.",
+                m => string.Format(Strings.Undervolt_WarnExternalFormat, m.Groups[1].Value));
+            result = Regex.Replace(result,
+                @"CPU (.+?) does not expose a supported Curve Optimizer control path on this firmware\.",
+                m => string.Format(Strings.Undervolt_WarnCpuNoCurveOptimizerFormat, m.Groups[1].Value));
+            result = Regex.Replace(result,
+                @"The iGPU Curve Optimizer offset was requested but not written: there is no confirmed iGPU CO message for the (.+?) family, so only the all-core offset was applied\.",
+                m => string.Format(Strings.Undervolt_WarnIgpuNoMessageFormat, m.Groups[1].Value));
+            result = Regex.Replace(result,
+                @"The iGPU Curve Optimizer offset was requested but the SMU refused it \(status: (.+?)\)\. The all-core offset was applied\.",
+                m => string.Format(Strings.Undervolt_WarnIgpuSmuRefusedFormat, m.Groups[1].Value));
+            result = Regex.Replace(result,
+                @"The iGPU Curve Optimizer offset was requested but not written: the (.+?) family has an upstream iGPU CO message, but OmenCore has not validated it on (.+?) yet, so only the all-core offset was applied\.",
+                m => string.Format(Strings.Undervolt_WarnIgpuUnvalidatedFormat, m.Groups[1].Value, m.Groups[2].Value));
+            result = Regex.Replace(result,
+                @"The iGPU Curve Optimizer offset was requested but not written: there is no confirmed iGPU CO message for the (.+?) family \((.+?)\), so only the all-core offset was applied\.",
+                m => string.Format(Strings.Undervolt_WarnIgpuNoConfirmedFormat, m.Groups[1].Value, m.Groups[2].Value));
+
+            return result;
+        }
+
         /// <summary>Localized game-library platform filter (enum name to label; brands pass through).</summary>
         public static string PlatformFilter(object? value)
         {

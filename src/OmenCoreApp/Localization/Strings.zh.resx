@@ -5219,7 +5219,7 @@
     <value>当前：{0}W</value>
   </data>
   <data name="SystemControlViewModel_IgpuOffset" xml:space="preserve">
-    <value>IGPU 偏移</value>
+    <value>核显偏移</value>
   </data>
   <data name="SystemControlViewModel_CacheOffset" xml:space="preserve">
     <value>缓存偏移</value>
@@ -11334,5 +11334,56 @@
   </data>
   <data name="Mem_MinutesFormat" xml:space="preserve">
     <value>{0} 分钟</value>
+  </data>
+  <data name="Tuning_ChannelIgpu" xml:space="preserve">
+    <value>核显</value>
+  </data>
+  <data name="Tuning_ChannelCache" xml:space="preserve">
+    <value>缓存</value>
+  </data>
+  <data name="Undervolt_ServiceInitFailed" xml:space="preserve">
+    <value>降压服务初始化失败，可能是驱动文件缺失或权限不足。</value>
+  </data>
+  <data name="Undervolt_WarnXtuBlock" xml:space="preserve">
+    <value>检测到 Intel XTU 服务：XTU 会阻止其他程序访问 MSR。要使用 OmenCore 降压：① 打开“服务”（services.msc）；② 找到“Intel(R) Extreme Tuning Utility”服务；③ 停止该服务并设为“禁用”；④ 重启 OmenCore。</value>
+  </data>
+  <data name="Undervolt_WarnMsrUnavailable" xml:space="preserve">
+    <value>MSR 访问后端不可用。请安装 PawnIO（兼容安全启动）并重启，以启用 CPU 降压。</value>
+  </data>
+  <data name="Undervolt_WarnCannotVerify" xml:space="preserve">
+    <value>MSR 后端不可用，无法校验已写入的电压偏移；当前显示的是最后一次请求值。</value>
+  </data>
+  <data name="Undervolt_WarnPerCoreIntel" xml:space="preserve">
+    <value>已请求逐核电压偏移，但未能写入——此后端只应用全局的核心/缓存偏移。</value>
+  </data>
+  <data name="Undervolt_WarnPerCoreAmd" xml:space="preserve">
+    <value>已请求逐核电压偏移，但未能写入——AMD Curve Optimizer 路径只应用单一的全核值。</value>
+  </data>
+  <data name="Undervolt_WarnAmdSmuUnavailable" xml:space="preserve">
+    <value>AMD SMU 后端不可用。请安装 PawnIO、以管理员身份运行 OmenCore；若驱动刚刚安装，请重启。</value>
+  </data>
+  <data name="Undervolt_WarnRyzenAi9" xml:space="preserve">
+    <value>Ryzen AI 9 的 Curve Optimizer 路径为实验性功能，请使用保守偏移并验证稳定性。</value>
+  </data>
+  <data name="Undervolt_WarnUnknownAmdFamily" xml:space="preserve">
+    <value>无法识别 AMD CPU 家族，不能安全校验 Curve Optimizer 写入所需的 SMU 命令地址。</value>
+  </data>
+  <data name="Undervolt_WarnExternalFormat" xml:space="preserve">
+    <value>检测到外部降压工具：{0}。OmenCore 可能与它冲突。</value>
+  </data>
+  <data name="Undervolt_WarnCpuNoCurveOptimizerFormat" xml:space="preserve">
+    <value>CPU {0} 的当前固件不提供受支持的 Curve Optimizer 控制通道。</value>
+  </data>
+  <data name="Undervolt_WarnIgpuNoMessageFormat" xml:space="preserve">
+    <value>已请求核显 Curve Optimizer 偏移但未写入：{0} 家族没有已确认的核显 CO 消息，因此只应用了全核偏移。</value>
+  </data>
+  <data name="Undervolt_WarnIgpuSmuRefusedFormat" xml:space="preserve">
+    <value>已请求核显 Curve Optimizer 偏移，但 SMU 拒绝了该请求（状态：{0}）。全核偏移已应用。</value>
+  </data>
+  <data name="Undervolt_WarnIgpuUnvalidatedFormat" xml:space="preserve">
+    <value>已请求核显 Curve Optimizer 偏移但未写入：{0} 家族有上游核显 CO 消息，但 OmenCore 尚未在 {1} 上验证，因此只应用了全核偏移。</value>
+  </data>
+  <data name="Undervolt_WarnIgpuNoConfirmedFormat" xml:space="preserve">
+    <value>已请求核显 Curve Optimizer 偏移但未写入：{0} 家族（{1}）没有已确认的核显 CO 消息，因此只应用了全核偏移。</value>
   </data>
 </root>

@@ -339,14 +339,14 @@ namespace OmenCore.ViewModels
             get
             {
                 if (_undervoltService == null)
-                    return "Undervolt service failed to initialize. This may be due to missing driver files or insufficient permissions.";
+                    return Strings.Undervolt_ServiceInitFailed;
 
                 if (!UndervoltStatus.IsRuntimeReady && !string.IsNullOrWhiteSpace(UndervoltStatus.RuntimeBlockReason))
-                    return UndervoltStatus.RuntimeBlockReason;
-                
+                    return DisplayNames.UndervoltDiagnostic(UndervoltStatus.RuntimeBlockReason);
+
                 var warning = UndervoltStatus?.Warning;
                 if (!string.IsNullOrEmpty(warning))
-                    return warning;
+                    return DisplayNames.UndervoltDiagnostic(warning);
                 
                 // Check CPU type
                 var cpuVendor = Hardware.CpuUndervoltProviderFactory.DetectedVendor;
@@ -386,7 +386,7 @@ namespace OmenCore.ViewModels
         /// user-visible string for that channel goes through here so the two surfaces cannot
         /// drift apart again: the long status line said "iGPU" while these chips said "Cache".
         /// </summary>
-        public string UndervoltSecondChannelLabel => IsAmdCpu ? "iGPU" : "Cache";
+        public string UndervoltSecondChannelLabel => IsAmdCpu ? Strings.Tuning_ChannelIgpu : Strings.Tuning_ChannelCache;
 
         /// <summary>Header on the second offset slider. "L3 Cache" is not what AMD writes here.</summary>
         public string UndervoltSecondChannelHeader => IsAmdCpu ? Strings.SystemControlViewModel_IgpuOffset : Strings.SystemControlViewModel_CacheOffset;

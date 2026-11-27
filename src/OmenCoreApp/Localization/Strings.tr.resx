@@ -11335,4 +11335,55 @@
   <data name="Mem_MinutesFormat" xml:space="preserve">
     <value>{0} dk</value>
   </data>
+  <data name="Tuning_ChannelIgpu" xml:space="preserve">
+    <value>iGPU</value>
+  </data>
+  <data name="Tuning_ChannelCache" xml:space="preserve">
+    <value>önbellek</value>
+  </data>
+  <data name="Undervolt_ServiceInitFailed" xml:space="preserve">
+    <value>Undervolt hizmeti başlatılamadı: sürücü dosyaları eksik veya izinler yetersiz olabilir.</value>
+  </data>
+  <data name="Undervolt_WarnXtuBlock" xml:space="preserve">
+    <value>Intel XTU hizmeti algılandı: XTU diğer uygulamaların MSR erişimini engeller. OmenCore undervolt kullanmak için: 1) Hizmetler'i (services.msc) açın; 2) Intel(R) Extreme Tuning Utility hizmetini bulun; 3) hizmeti durdurup Devre Dışı yapın; 4) OmenCore'u yeniden başlatın.</value>
+  </data>
+  <data name="Undervolt_WarnMsrUnavailable" xml:space="preserve">
+    <value>MSR erişim arka ucu kullanılamıyor. CPU undervolt için PawnIO'yu (Secure Boot uyumlu) kurup yeniden başlatın.</value>
+  </data>
+  <data name="Undervolt_WarnCannotVerify" xml:space="preserve">
+    <value>MSR arka ucu kullanılamadığından uygulanan gerilim ofsetleri doğrulanamıyor. Son istenen değerler gösteriliyor.</value>
+  </data>
+  <data name="Undervolt_WarnPerCoreIntel" xml:space="preserve">
+    <value>Çekirdek başına ofsetler istendi ancak yazılmadı - bu arka uç yalnızca genel çekirdek/önbellek ofsetlerini uygular.</value>
+  </data>
+  <data name="Undervolt_WarnPerCoreAmd" xml:space="preserve">
+    <value>Çekirdek başına ofsetler istendi ancak yazılmadı - AMD Curve Optimizer yolu yalnızca tek bir tüm çekirdek değeri uygular.</value>
+  </data>
+  <data name="Undervolt_WarnAmdSmuUnavailable" xml:space="preserve">
+    <value>AMD SMU arka ucu kullanılamıyor. PawnIO'yu kurun, OmenCore'u yönetici olarak çalıştırın; sürücü yeni kurulduysa yeniden başlatın.</value>
+  </data>
+  <data name="Undervolt_WarnRyzenAi9" xml:space="preserve">
+    <value>Ryzen AI 9 Curve Optimizer yolu deneyseldir. Tutucu ofsetler kullanın ve kararlılığı doğrulayın.</value>
+  </data>
+  <data name="Undervolt_WarnUnknownAmdFamily" xml:space="preserve">
+    <value>Bilinmeyen AMD CPU ailesi. Curve Optimizer yazımları için SMU komut adresleri güvenle doğrulanamıyor.</value>
+  </data>
+  <data name="Undervolt_WarnExternalFormat" xml:space="preserve">
+    <value>{0} üzerinden harici undervolt algılandı. OmenCore bu uygulamayla çakışabilir.</value>
+  </data>
+  <data name="Undervolt_WarnCpuNoCurveOptimizerFormat" xml:space="preserve">
+    <value>CPU {0} donanım yazılımı desteklenen bir Curve Optimizer kontrol yolu sunmuyor.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuNoMessageFormat" xml:space="preserve">
+    <value>iGPU Curve Optimizer ofseti istendi ancak yazılmadı: {0} ailesi için doğrulanmış iGPU CO mesajı yok, yalnızca tüm çekirdek ofseti uygulandı.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuSmuRefusedFormat" xml:space="preserve">
+    <value>iGPU Curve Optimizer ofseti istendi ancak SMU reddetti (durum: {0}). Tüm çekirdek ofseti uygulandı.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuUnvalidatedFormat" xml:space="preserve">
+    <value>iGPU Curve Optimizer ofseti istendi ancak yazılmadı: {0} ailesi için upstream iGPU CO mesajı var, ancak OmenCore bunu {1} üzerinde doğrulamadı; yalnızca tüm çekirdek ofseti uygulandı.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuNoConfirmedFormat" xml:space="preserve">
+    <value>iGPU Curve Optimizer ofseti istendi ancak yazılmadı: {0} ailesi ({1}) için doğrulanmış iGPU CO mesajı yok; yalnızca tüm çekirdek ofseti uygulandı.</value>
+  </data>
 </root>

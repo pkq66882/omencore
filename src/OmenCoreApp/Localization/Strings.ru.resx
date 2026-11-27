@@ -11335,4 +11335,55 @@
   <data name="Mem_MinutesFormat" xml:space="preserve">
     <value>{0} мин</value>
   </data>
+  <data name="Tuning_ChannelIgpu" xml:space="preserve">
+    <value>iGPU</value>
+  </data>
+  <data name="Tuning_ChannelCache" xml:space="preserve">
+    <value>кеш</value>
+  </data>
+  <data name="Undervolt_ServiceInitFailed" xml:space="preserve">
+    <value>Не удалось инициализировать службу понижения напряжения: отсутствуют файлы драйвера или недостаточно прав.</value>
+  </data>
+  <data name="Undervolt_WarnXtuBlock" xml:space="preserve">
+    <value>Обнаружена служба Intel XTU: она блокирует доступ к MSR для других программ. Чтобы использовать понижение напряжения OmenCore: 1) откройте «Службы» (services.msc); 2) найдите службу Intel(R) Extreme Tuning Utility; 3) остановите её и задайте «Отключена»; 4) перезапустите OmenCore.</value>
+  </data>
+  <data name="Undervolt_WarnMsrUnavailable" xml:space="preserve">
+    <value>Бэкенд доступа к MSR недоступен. Установите PawnIO (совместим с Secure Boot) и перезагрузитесь.</value>
+  </data>
+  <data name="Undervolt_WarnCannotVerify" xml:space="preserve">
+    <value>Бэкенд MSR недоступен, поэтому применённые смещения напряжения не проверить. Показаны последние запрошенные значения.</value>
+  </data>
+  <data name="Undervolt_WarnPerCoreIntel" xml:space="preserve">
+    <value>Поканальные смещения были запрошены, но не записаны — этот бэкенд применяет только глобальные смещения ядра и кеша.</value>
+  </data>
+  <data name="Undervolt_WarnPerCoreAmd" xml:space="preserve">
+    <value>Поканальные смещения были запрошены, но не записаны — путь AMD Curve Optimizer применяет только одно общее значение.</value>
+  </data>
+  <data name="Undervolt_WarnAmdSmuUnavailable" xml:space="preserve">
+    <value>Бэкенд AMD SMU недоступен. Установите PawnIO, запустите OmenCore от имени администратора; если драйвер только что установлен, перезагрузитесь.</value>
+  </data>
+  <data name="Undervolt_WarnRyzenAi9" xml:space="preserve">
+    <value>Путь Curve Optimizer для Ryzen AI 9 экспериментальный. Используйте консервативные смещения и проверяйте стабильность.</value>
+  </data>
+  <data name="Undervolt_WarnUnknownAmdFamily" xml:space="preserve">
+    <value>Неизвестное семейство AMD CPU. Адреса команд SMU нельзя безопасно проверить для записи Curve Optimizer.</value>
+  </data>
+  <data name="Undervolt_WarnExternalFormat" xml:space="preserve">
+    <value>Обнаружено внешнее понижение напряжения через {0}. OmenCore может конфликтовать с этой программой.</value>
+  </data>
+  <data name="Undervolt_WarnCpuNoCurveOptimizerFormat" xml:space="preserve">
+    <value>Прошивка CPU {0} не предоставляет поддерживаемый путь управления Curve Optimizer.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuNoMessageFormat" xml:space="preserve">
+    <value>Смещение Curve Optimizer для iGPU было запрошено, но не записано: для семейства {0} нет подтверждённого сообщения iGPU CO, применено только общее смещение.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuSmuRefusedFormat" xml:space="preserve">
+    <value>Смещение Curve Optimizer для iGPU было запрошено, но SMU отклонил запрос (статус: {0}). Общее смещение применено.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuUnvalidatedFormat" xml:space="preserve">
+    <value>Смещение Curve Optimizer для iGPU было запрошено, но не записано: для семейства {0} есть upstream-сообщение iGPU CO, но OmenCore не проверял его на {1}, применено только общее смещение.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuNoConfirmedFormat" xml:space="preserve">
+    <value>Смещение Curve Optimizer для iGPU было запрошено, но не записано: для семейства {0} ({1}) нет подтверждённого сообщения iGPU CO, применено только общее смещение.</value>
+  </data>
 </root>

@@ -1,6 +1,7 @@
 using System;
 using OmenCore.Localization;
 using OmenCore.Models;
+using OmenCore.Utils;
 
 namespace OmenCore.ViewModels
 {
@@ -47,7 +48,7 @@ namespace OmenCore.ViewModels
             }
             else if (!string.IsNullOrWhiteSpace(status.Warning))
             {
-                verified = string.Format(Strings.TuningStatus_VerifiedWarning, status.Warning);
+                verified = string.Format(Strings.TuningStatus_VerifiedWarning, DisplayNames.UndervoltDiagnostic(status.Warning));
             }
             else
             {

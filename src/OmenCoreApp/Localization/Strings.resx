@@ -11339,4 +11339,55 @@
   <data name="Mem_MinutesFormat" xml:space="preserve">
     <value>{0} min</value>
   </data>
+  <data name="Tuning_ChannelIgpu" xml:space="preserve">
+    <value>iGPU</value>
+  </data>
+  <data name="Tuning_ChannelCache" xml:space="preserve">
+    <value>Cache</value>
+  </data>
+  <data name="Undervolt_ServiceInitFailed" xml:space="preserve">
+    <value>Undervolt service failed to initialize. This may be due to missing driver files or insufficient permissions.</value>
+  </data>
+  <data name="Undervolt_WarnXtuBlock" xml:space="preserve">
+    <value>Intel XTU service detected. XTU blocks MSR access for other applications. To use OmenCore undervolting: 1. Open Services (services.msc). 2. Find 'Intel(R) Extreme Tuning Utility' service. 3. Stop the service and set it to Disabled. 4. Restart OmenCore.</value>
+  </data>
+  <data name="Undervolt_WarnMsrUnavailable" xml:space="preserve">
+    <value>MSR access backend is unavailable. Install PawnIO (Secure Boot compatible) and reboot to enable CPU undervolting.</value>
+  </data>
+  <data name="Undervolt_WarnCannotVerify" xml:space="preserve">
+    <value>Cannot verify applied voltage offsets because the MSR backend is unavailable. Showing last requested values.</value>
+  </data>
+  <data name="Undervolt_WarnPerCoreIntel" xml:space="preserve">
+    <value>Per-core voltage offsets were requested but were not written - this backend only applies the global Core/Cache offsets.</value>
+  </data>
+  <data name="Undervolt_WarnPerCoreAmd" xml:space="preserve">
+    <value>Per-core voltage offsets were requested but were not written - the AMD Curve Optimizer path only applies a single all-core value.</value>
+  </data>
+  <data name="Undervolt_WarnAmdSmuUnavailable" xml:space="preserve">
+    <value>AMD SMU backend is unavailable. Install PawnIO, run OmenCore as administrator, and reboot if the driver was just installed.</value>
+  </data>
+  <data name="Undervolt_WarnRyzenAi9" xml:space="preserve">
+    <value>Ryzen AI 9 Curve Optimizer path is experimental. Use conservative offsets and verify stability.</value>
+  </data>
+  <data name="Undervolt_WarnUnknownAmdFamily" xml:space="preserve">
+    <value>Unknown AMD CPU family. SMU command addresses cannot be validated safely for Curve Optimizer writes.</value>
+  </data>
+  <data name="Undervolt_WarnExternalFormat" xml:space="preserve">
+    <value>External undervolt detected via {0}. OmenCore may conflict with this application.</value>
+  </data>
+  <data name="Undervolt_WarnCpuNoCurveOptimizerFormat" xml:space="preserve">
+    <value>CPU {0} does not expose a supported Curve Optimizer control path on this firmware.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuNoMessageFormat" xml:space="preserve">
+    <value>The iGPU Curve Optimizer offset was requested but not written: there is no confirmed iGPU CO message for the {0} family, so only the all-core offset was applied.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuSmuRefusedFormat" xml:space="preserve">
+    <value>The iGPU Curve Optimizer offset was requested but the SMU refused it (status: {0}). The all-core offset was applied.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuUnvalidatedFormat" xml:space="preserve">
+    <value>The iGPU Curve Optimizer offset was requested but not written: the {0} family has an upstream iGPU CO message, but OmenCore has not validated it on {1} yet, so only the all-core offset was applied.</value>
+  </data>
+  <data name="Undervolt_WarnIgpuNoConfirmedFormat" xml:space="preserve">
+    <value>The iGPU Curve Optimizer offset was requested but not written: there is no confirmed iGPU CO message for the {0} family ({1}), so only the all-core offset was applied.</value>
+  </data>
 </root>
