@@ -1,0 +1,4 @@
+﻿; English installer message overrides (moved verbatim from the .iss [Messages] section so
+; the other languages can carry their own WelcomeLabel2).
+[Messages]
+WelcomeLabel2=This will install [name/ver] on your computer.%n%nOmenCore is a premium control suite for HP OMEN and Victus systems.%n%nKey capabilities:%n- Advanced fan control with custom curve editor%n- Real-time CPU/GPU monitoring with health recovery%n- Performance and power profiles%n- Keyboard/RGB controls%n- Game-aware automation profiles%n%nClick Next to continue.

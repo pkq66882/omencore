@@ -1,0 +1,3 @@
+﻿; Turkish installer message overrides (translated from installer-en.ism).
+[Messages]
+WelcomeLabel2=Bu, [name/ver] uygulamasını bilgisayarınıza kuracak.%n%nOmenCore, HP OMEN ve Victus sistemleri için bir denetim paketidir.%n%nTemel yetenekler:%n- Özel eğri düzenleyicili gelişmiş fan denetimi%n- Gerçek zamanlı CPU/GPU izleme ve sağlık kurtarma%n- Performans ve güç profilleri%n- Klavye/RGB denetimi%n- Oyun duyarlı otomasyon profilleri%n%nDevam etmek için İleri düğmesine tıklayın.

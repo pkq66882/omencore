@@ -165,6 +165,47 @@ namespace OmenCore
         }
 
         /// <summary>
+        /// The installer writes the language chosen on its first page to
+        /// <c>installer-language.txt</c> next to the exe. Adopt it only while onboarding has not
+        /// completed and the user has not picked a language themselves ("auto" is the stock
+        /// system-follow default), so upgrades keep the user's own setting, hand-edited configs
+        /// win, and portable runs (no seed file) are untouched. Canonical codes only; a missing
+        /// or invalid seed falls back to the stock behavior.
+        /// </summary>
+        private static void ApplyInstallerLanguageSeed()
+        {
+            try
+            {
+                // Single-file publish: AppContext.BaseDirectory points at the runtime extraction
+                // folder (%TEMP%\.net\OmenCore\<hash>\), not at the exe. Environment.ProcessPath
+                // is the host exe itself, which is where setup drops the seed file.
+                var exeDirectory = Path.GetDirectoryName(Environment.ProcessPath) ?? AppContext.BaseDirectory;
+                var seedPath = Path.Combine(exeDirectory, "installer-language.txt");
+                if (!File.Exists(seedPath))
+                {
+                    return;
+                }
+
+                var seed = OmenCore.Localization.Language.Normalize(File.ReadAllText(seedPath).Trim());
+                var config = Configuration.Config;
+                if (seed == OmenCore.Localization.Language.SystemDefault
+                    || config.FirstRunCompleted
+                    || config.Language != OmenCore.Localization.Language.SystemDefault)
+                {
+                    return;
+                }
+
+                config.Language = seed;
+                Configuration.Save(config);
+                Logging.Info($"Installer language seed adopted: {seed}");
+            }
+            catch (Exception ex)
+            {
+                Logging.Warn($"Failed to apply installer language seed: {ex.Message}");
+            }
+        }
+
+        /// <summary>
         /// Force WPF into software rendering so RTSS/D3D hooks cannot corrupt the render channel.
         /// Called at startup when RTSS is detected or when the user enables the setting.
         /// </summary>
@@ -332,6 +373,12 @@ namespace OmenCore
             
             // Apply log level from configuration
             Logging.Level = Configuration.Config.LogLevel;
+
+            // Installer seed: setup writes the language chosen on its first page to
+            // {app}\installer-language.txt. Adopt it only on a genuine first run with no
+            // explicit user choice, so an upgrade keeps the user's own language setting and
+            // a portable run (no seed file next to the exe) behaves exactly as before.
+            ApplyInstallerLanguageSeed();
 
             // WP-32: UI language before any window exists, because XAML resolves the localized
             // strings as it loads. This sets the UI culture only - number formatting stays

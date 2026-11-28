@@ -1,4 +1,4 @@
-#define MyAppName "OmenCore"
+﻿#define MyAppName "OmenCore"
 #ifndef MyAppVersion
   #define MyAppVersion "5.0.3"
 #endif
@@ -30,20 +30,30 @@ OutputBaseFilename=OmenCoreSetup-{#MyAppVersion}
 PrivilegesRequired=admin
 WizardStyle=modern
 ArchitecturesInstallIn64BitMode=x64compatible
+; Always preselect English on the language dialog (matches the stock "auto"-follow app default
+; being presented in English first); users pick their language explicitly on the first page.
+LanguageDetectionMethod=none
 ; Modern look
 DisableWelcomePage=no
 LicenseFile=
 InfoBeforeFile=
 InfoAfterFile=
 
+; The four setup languages mirror the app's Language.Supported list (auto/en/ru/tr/zh, minus
+; "auto" which is the app-side system-follow default). The second MessagesFile per language
+; carries the OmenCore-specific WelcomeLabel2 override; everything else comes from the
+; stock/official .isl files so ru/tr keep native-quality wizard strings.
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "english"; MessagesFile: "compiler:Default.isl,installer-en.ism"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,installer-ru.ism"
+Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl,installer-tr.ism"
+Name: "chinesesimplified"; MessagesFile: "ChineseSimplified.isl,installer-zh.ism"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "startmenu"; Description: "Create Start Menu shortcut"; GroupDescription: "{cm:AdditionalIcons}"
-Name: "installpawnio"; Description: "Install PawnIO Driver (Recommended - Secure Boot compatible; enables MSR/EC access)"; GroupDescription: "Hardware Drivers:"
-Name: "autostart"; Description: "Start OmenCore with Windows"; GroupDescription: "Startup Options:"; Flags: unchecked
+Name: "startmenu"; Description: "{cm:TaskStartMenu}"; GroupDescription: "{cm:AdditionalIcons}"
+Name: "installpawnio"; Description: "{cm:TaskInstallPawnIO}"; GroupDescription: "{cm:GroupDrivers}"
+Name: "autostart"; Description: "{cm:TaskAutostart}"; GroupDescription: "{cm:GroupStartup}"; Flags: unchecked
 
 [Files]
 ; Self-contained app with embedded .NET runtime - no separate .NET installation needed
@@ -61,7 +71,7 @@ Name: "{autodesktop}\\{#MyAppName}"; Filename: "{app}\\{#MyAppExeName}"; Tasks: 
 
 [Run]
 ; Install PawnIO driver if bundled (PawnIO requires an explicit operation verb plus dash-style silent flag)
-Filename: "{tmp}\PawnIO_setup.exe"; Parameters: "-install -silent"; StatusMsg: "Installing PawnIO driver (Secure Boot compatible)..."; Flags: waituntilterminated runhidden; Tasks: installpawnio; Check: not IsPawnIOInstalled
+Filename: "{tmp}\PawnIO_setup.exe"; Parameters: "-install -silent"; StatusMsg: "{cm:StatusInstallingPawnIO}"; Flags: waituntilterminated runhidden; Tasks: installpawnio; Check: not IsPawnIOInstalled
 ; Create scheduled task for autostart if user selected it (runs with elevated privileges)
 Filename: "schtasks"; Parameters: "/create /tn ""OmenCore"" /tr ""\""{app}\\{#MyAppExeName}\"" --minimized"" /sc onlogon /rl highest /f"; Flags: runhidden; Tasks: autostart
 ; Launch OmenCore with elevation (shellexec verb=runas)
@@ -85,6 +95,36 @@ Filename: "schtasks"; Parameters: "/delete /tn ""OmenCore"" /f"; Flags: runhidde
 Type: dirifempty; Name: "{app}"
 
 [Code]
+// Maps the setup language chosen on the first dialog to the app's canonical language code
+// (Language.Supported: auto/en/ru/tr/zh). Written to {app}\installer-language.txt after the
+// files land; App.xaml.cs adopts it only on a genuine first run, so an upgrade keeps the
+// user's own language setting.
+function InstallerAppLanguage: String;
+var
+  L: String;
+begin
+  L := ExpandConstant('{language}');
+  if L = 'russian' then
+    Result := 'ru'
+  else if L = 'turkish' then
+    Result := 'tr'
+  else if L = 'chinesesimplified' then
+    Result := 'zh'
+  else
+    Result := 'en';
+end;
+
+procedure CurStepChanged(CurStep: TSetupStep);
+var
+  SeedPath: String;
+begin
+  if CurStep = ssPostInstall then
+  begin
+    SeedPath := ExpandConstant('{app}\installer-language.txt');
+    SaveStringToFile(SeedPath, InstallerAppLanguage + #13#10, False);
+  end;
+end;
+
 function ShouldRelaunchAfterUpdate: Boolean;
 begin
   Result := WizardSilent and (ExpandConstant('{param:RELAUNCH|0}') = '1');
@@ -172,5 +212,38 @@ begin
   Result := True;
 end;
 
-[Messages]
-WelcomeLabel2=This will install [name/ver] on your computer.%n%nOmenCore is a premium control suite for HP OMEN and Victus systems.%n%nKey capabilities:%n- Advanced fan control with custom curve editor%n- Real-time CPU/GPU monitoring with health recovery%n- Performance and power profiles%n- Keyboard/RGB controls%n- Game-aware automation profiles%n%nClick Next to continue.
+[CustomMessages]
+; WelcomeLabel2 lives in per-language .ism files (installer-en/zh/ru/tr.ism), referenced as
+; the second MessagesFile in [Languages], so each setup language carries its own
+; OmenCore-specific welcome copy; the stock .isl files supply the standard wizard strings.
+; Task-page strings below were previously hardcoded English in [Tasks]; the four language
+; prefixes mirror the [Languages] names. English values are the original strings verbatim.
+english.TaskStartMenu=Create Start Menu shortcut
+russian.TaskStartMenu=Создать ярлык в меню «Пуск»
+turkish.TaskStartMenu=Başlat menüsü kısayolu oluştur
+chinesesimplified.TaskStartMenu=创建开始菜单快捷方式
+
+english.TaskInstallPawnIO=Install PawnIO Driver (Recommended - Secure Boot compatible; enables MSR/EC access)
+russian.TaskInstallPawnIO=Установить драйвер PawnIO (рекомендуется; совместимо с Secure Boot; открывает доступ к MSR/EC)
+turkish.TaskInstallPawnIO=PawnIO sürücüsünü kur (önerilir - Secure Boot uyumlu; MSR/EC erişimi sağlar)
+chinesesimplified.TaskInstallPawnIO=安装 PawnIO 驱动（推荐——兼容安全启动；启用 MSR/EC 访问）
+
+english.TaskAutostart=Start OmenCore with Windows
+russian.TaskAutostart=Запускать OmenCore вместе с Windows
+turkish.TaskAutostart=OmenCore'u Windows ile başlat
+chinesesimplified.TaskAutostart=开机自动启动 OmenCore
+
+english.GroupDrivers=Hardware Drivers:
+russian.GroupDrivers=Драйверы оборудования:
+turkish.GroupDrivers=Donanım sürücüleri:
+chinesesimplified.GroupDrivers=硬件驱动：
+
+english.GroupStartup=Startup Options:
+russian.GroupStartup=Параметры запуска:
+turkish.GroupStartup=Başlatma seçenekleri:
+chinesesimplified.GroupStartup=启动选项：
+
+english.StatusInstallingPawnIO=Installing PawnIO driver (Secure Boot compatible)...
+russian.StatusInstallingPawnIO=Установка драйвера PawnIO (совместимо с Secure Boot)...
+turkish.StatusInstallingPawnIO=PawnIO sürücüsü kuruluyor (Secure Boot uyumlu)...
+chinesesimplified.StatusInstallingPawnIO=正在安装 PawnIO 驱动（兼容安全启动）...
