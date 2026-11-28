@@ -22,6 +22,10 @@ namespace OmenCoreApp.Tests.Utils
                 DisplayNames.ModelName("OMEN 15/17 (2017-2018 generation)").Should().Be("OMEN 15/17（2017–2018 款）");
                 DisplayNames.ModelName("OMEN (legacy/unknown generation)").Should().Be("OMEN（早期/未知代）");
                 DisplayNames.ModelName("OMEN by HP Gaming Laptop 16-xd0xxx").Should().Be("OMEN by HP Gaming Laptop 16-xd0xxx");
+
+                // The settings page appends the ProductId: "OMEN (2025 generation) (8D3F)".
+                DisplayNames.ModelName("OMEN (2025 generation) (8D3F)").Should().Be("OMEN（2025 款） (8D3F)");
+                DisplayNames.ModelName("OMEN (legacy/unknown generation) (84DA)").Should().Be("OMEN（早期/未知代） (84DA)");
             }
             finally
             {

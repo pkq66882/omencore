@@ -851,11 +851,16 @@ namespace OmenCore.ViewModels
                 "Creating backup..." => Strings.Opt_StatusCreatingBackup,
                 "Applying recommended optimizations..." => Strings.Opt_StatusApplyingRecommended,
                 "[3-6/6] Reverting network, input, visual, and storage settings in parallel..." => Strings.Opt_StatusRevertParallel,
+                "Administrator privileges are required to apply optimizer changes." => Strings.Opt_ErrorAdminApply,
+                "Administrator privileges are required to revert optimizer changes." => Strings.Opt_ErrorAdminRevert,
                 _ => null
             };
             if (exact != null) return exact;
 
-            var m = Regex.Match(text, @"^Verification complete: (\d+)/(\d+) optimizations active$");
+            var m = Regex.Match(text, @"^Unknown optimization: (.+)$");
+            if (m.Success) return string.Format(Strings.Opt_ErrorUnknownItemFormat, m.Groups[1].Value);
+
+            m = Regex.Match(text, @"^Verification complete: (\d+)/(\d+) optimizations active$");
             if (m.Success) return string.Format(Strings.Opt_StatusVerifyCompleteFormat, m.Groups[1].Value, m.Groups[2].Value);
 
             m = Regex.Match(text, @"^Status check complete: (\d+)/(\d+) optimizations active$");

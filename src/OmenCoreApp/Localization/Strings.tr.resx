@@ -11560,4 +11560,13 @@
   <data name="DiagnosticsView_ModelNotesWmiQuirks2024" xml:space="preserve">
     <value>2024 model - may have WMI quirks on older BIOS versions</value>
   </data>
+  <data name="Opt_ErrorAdminApply" xml:space="preserve">
+    <value>Administrator privileges are required to apply optimizer changes.</value>
+  </data>
+  <data name="Opt_ErrorAdminRevert" xml:space="preserve">
+    <value>Administrator privileges are required to revert optimizer changes.</value>
+  </data>
+  <data name="Opt_ErrorUnknownItemFormat" xml:space="preserve">
+    <value>Unknown optimization: {0}</value>
+  </data>
 </root>

@@ -11560,4 +11560,13 @@
   <data name="DiagnosticsView_ModelNotesWmiQuirks2024" xml:space="preserve">
     <value>2024 款机型——较旧 BIOS 版本可能存在 WMI 异常</value>
   </data>
+  <data name="Opt_ErrorAdminApply" xml:space="preserve">
+    <value>需要管理员权限才能应用优化更改。</value>
+  </data>
+  <data name="Opt_ErrorAdminRevert" xml:space="preserve">
+    <value>需要管理员权限才能还原优化更改。</value>
+  </data>
+  <data name="Opt_ErrorUnknownItemFormat" xml:space="preserve">
+    <value>未知的优化项：{0}</value>
+  </data>
 </root>

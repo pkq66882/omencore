@@ -4208,6 +4208,9 @@ namespace OmenCore.Localization
     public static string Opt_StageInputSettings => Get(nameof(Opt_StageInputSettings));
     public static string Opt_StageVisualEffects => Get(nameof(Opt_StageVisualEffects));
     public static string Opt_StageStorageSettings => Get(nameof(Opt_StageStorageSettings));
+    public static string Opt_ErrorAdminApply => Get(nameof(Opt_ErrorAdminApply));
+    public static string Opt_ErrorAdminRevert => Get(nameof(Opt_ErrorAdminRevert));
+    public static string Opt_ErrorUnknownItemFormat => Get(nameof(Opt_ErrorUnknownItemFormat));
     public static string Mem_StatusFlushingModifiedPageList => Get(nameof(Mem_StatusFlushingModifiedPageList));
     public static string Mem_StatusCombiningPages => Get(nameof(Mem_StatusCombiningPages));
     public static string Mem_StatusFreedDeltaFormat => Get(nameof(Mem_StatusFreedDeltaFormat));
