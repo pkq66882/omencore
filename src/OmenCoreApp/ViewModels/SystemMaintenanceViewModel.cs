@@ -299,7 +299,7 @@ namespace OmenCore.ViewModels
             {
                 var mode = _gpuSwitchService.DetectCurrentMode();
                 CurrentGpuMode = ModeName(mode);
-                _logging.Info($"Detected GPU mode: {CurrentGpuMode}");
+                _logging.Info($"Detected GPU mode: {CanonicalModeName(mode)}");
             }
             catch (Exception ex)
             {
@@ -493,6 +493,15 @@ namespace OmenCore.ViewModels
             GpuSwitchMode.Discrete => Strings.GpuSwitch_ModeDiscrete,
             GpuSwitchMode.Integrated => Strings.GpuSwitch_ModeIntegrated,
             _ => Strings.GpuSwitch_ModeUnknown
+        };
+
+        /// <summary>Upstream canonical GPU-mode names for file logs; the UI display uses <see cref="ModeName"/> so the exported log stays parseable.</summary>
+        private static string CanonicalModeName(GpuSwitchMode mode) => mode switch
+        {
+            GpuSwitchMode.Hybrid => "Hybrid (MSHybrid/Optimus)",
+            GpuSwitchMode.Discrete => "Discrete GPU Only",
+            GpuSwitchMode.Integrated => "Integrated GPU Only",
+            _ => "Unknown"
         };
 
         /// <summary>Maps Core's canonical English unsupported reasons (GpuSwitchService) to UI text.</summary>

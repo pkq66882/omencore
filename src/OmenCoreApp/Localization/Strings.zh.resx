@@ -680,7 +680,7 @@
     <value>应用 GPU 功耗提升档位</value>
   </data>
   <data name="AdvancedView_GpuSwitchingAdvancedOptimus" xml:space="preserve">
-    <value>Advanced Optimus 显卡切换</value>
+    <value>Advanced Optimus 动态显示切换</value>
   </data>
   <data name="AdvancedView_SwitchBetweenIntegratedAndDiscreteGpuForOp" xml:space="preserve">
     <value>在核显与独显之间切换，兼顾性能或续航。</value>
@@ -1181,7 +1181,7 @@
     <value>GPU 功耗提升（TGP）</value>
   </data>
   <data name="DiagnosticsView_AdvancedOptimusGpuSwitching" xml:space="preserve">
-    <value>Advanced Optimus 显卡切换</value>
+    <value>Advanced Optimus 动态显示切换</value>
   </data>
   <data name="DiagnosticsView_N4ZoneKeyboardRgb" xml:space="preserve">
     <value>四分区键盘 RGB</value>
@@ -8491,9 +8491,6 @@
   <data name="FanDiag_RgbFailedFormat" xml:space="preserve">
     <value>失败：{0}</value>
   </data>
-  <data name="AutomationRule_DefaultName" xml:space="preserve">
-    <value>新建自动化规则</value>
-  </data>
   <data name="Automation_ValidationReady" xml:space="preserve">
     <value>就绪</value>
   </data>
@@ -8964,9 +8961,6 @@
   </data>
   <data name="Settings_SecondsFormat" xml:space="preserve">
     <value>{0} 秒</value>
-  </data>
-  <data name="Settings_ScheduleNewRuleName" xml:space="preserve">
-    <value>新建规则</value>
   </data>
   <data name="Update_NowAvailableFormat" xml:space="preserve">
     <value>v{0} 现已可用</value>
@@ -11568,5 +11562,14 @@
   </data>
   <data name="Opt_ErrorUnknownItemFormat" xml:space="preserve">
     <value>未知的优化项：{0}</value>
+  </data>
+  <data name="Settings_ModelSourceModelNamePattern" xml:space="preserve">
+    <value>机型名匹配</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityAmbiguousProductId" xml:space="preserve">
+    <value>能力配置通过 WMI 机型名区分了共用的 ProductId。</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityModelNameInferred" xml:space="preserve">
+    <value>能力配置由 WMI 机型名推断而来，并非精确 ProductId 条目。</value>
   </data>
 </root>

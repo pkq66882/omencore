@@ -226,7 +226,7 @@ namespace OmenCore.ViewModels
             // Scheduler commands
             AddScheduleRuleCommand = new RelayCommand(_ =>
             {
-                ScheduleRules.Add(new ScheduleRule { RuleName = Strings.Settings_ScheduleNewRuleName });
+                ScheduleRules.Add(new ScheduleRule());
                 _config.ScheduleRules = ScheduleRules.ToList();
                 _configService.Save(_config);
                 UpdateScheduleTimerState();
@@ -260,13 +260,7 @@ namespace OmenCore.ViewModels
 
             // Load schedule rules from config
             foreach (var rule in _config.ScheduleRules)
-            {
-                if (rule.RuleName == "New Rule" || rule.RuleName == Strings.Settings_ScheduleNewRuleName)
-                {
-                    rule.RuleName = Strings.Settings_ScheduleNewRuleName;
-                }
                 ScheduleRules.Add(rule);
-            }
 
             foreach (var rule in _config.AutomationRules)
             {
@@ -3146,33 +3140,10 @@ namespace OmenCore.ViewModels
                 var systemInfo = _systemInfoService.GetSystemInfo();
                 var summary = ModelIdentityResolutionService.Build(systemInfo, _detectedCapabilities, _logging);
 
-                string LocalizeConfidence(string c) => c switch
-                {
-                    "Low" => Strings.SettingsViewModel_ConfidenceLow,
-                    "Medium" => Strings.SettingsViewModel_ConfidenceMedium,
-                    "High" => Strings.SettingsViewModel_ConfidenceHigh,
-                    _ => c
-                };
-                string LocalizeSource(string s) => s switch
-                {
-                    "No resolved capability profile" => Strings.SettingsViewModel_SourceNoResolvedProfile,
-                    "Exact ProductId" => Strings.SettingsViewModel_SourceExactProductId,
-                    "Family fallback" => Strings.SettingsViewModel_SourceFamilyFallback,
-                    "Default fallback" => Strings.SettingsViewModel_SourceDefaultFallback,
-                    "Runtime fallback" => Strings.SettingsViewModel_SourceRuntimeFallback,
-                    "No database match" => Strings.SettingsViewModel_SourceNoDatabaseMatch,
-                    "Ambiguous ProductId + model-name disambiguation" => Strings.SettingsViewModel_SourceAmbiguousProductId,
-                    "Model-name series match" => Strings.SettingsViewModel_SourceModelSeriesMatch,
-                    "Partial ProductId match" => Strings.SettingsViewModel_SourcePartialProductId,
-                    "Heuristic match" => Strings.SettingsViewModel_SourceHeuristic,
-                    _ => s
-                };
-                string LocalizeModelValue(string v) => v == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : v;
-
-                ModelIdentitySummary = summary.Summary;
-                ModelIdentityResolvedModel = summary.ResolvedModel == "Unknown" ? Strings.SettingsViewModel_ValueUnknown : DisplayNames.ModelName(summary.ResolvedModel);
-                ModelIdentityResolutionSource = LocalizeSource(summary.ResolutionSource);
-                ModelIdentityConfidence = LocalizeConfidence(summary.Confidence);
+                ModelIdentitySummary = ModelIdentityDisplay.BuildDisplaySummary(summary);
+                ModelIdentityResolvedModel = ModelIdentityDisplay.LocalizeResolvedModel(summary.ResolvedModel, summary.CapabilityProductId);
+                ModelIdentityResolutionSource = ModelIdentityDisplay.LocalizeSource(summary.ResolutionSource);
+                ModelIdentityConfidence = ModelIdentityDisplay.LocalizeConfidence(summary.Confidence);
                 ModelIdentityBadgeText = summary.BadgeText switch
                 {
                     "Unknown" => Strings.SettingsViewModel_BadgeUnknown,
@@ -3185,36 +3156,22 @@ namespace OmenCore.ViewModels
                     _ => summary.BadgeText
                 };
                 ModelIdentityBadgeTone = summary.BadgeTone;
-                ModelIdentityKeyboardModel = LocalizeModelValue(summary.KeyboardModel);
-                ModelIdentityKeyboardSource = LocalizeSource(summary.KeyboardResolutionSource);
-                ModelIdentityKeyboardConfidence = LocalizeConfidence(summary.KeyboardConfidence);
-                ModelIdentityRawSummary = summary.RawIdentitySummary;
+                ModelIdentityKeyboardModel = ModelIdentityDisplay.LocalizeModelName(summary.KeyboardModel);
+                ModelIdentityKeyboardSource = ModelIdentityDisplay.LocalizeSource(summary.KeyboardResolutionSource);
+                ModelIdentityKeyboardConfidence = ModelIdentityDisplay.LocalizeConfidence(summary.KeyboardConfidence);
+                ModelIdentityRawSummary = ModelIdentityDisplay.BuildDisplayRawIdentity(summary);
                 ModelIdentityCopySummary = summary.ClipboardSummary;
 
+                var capabilityWarning = ModelIdentityDisplay.LocalizeCapabilityWarning(summary.WarningText);
+                var keyboardWarning = ModelIdentityDisplay.LocalizeKeyboardWarning(summary.KeyboardWarningText);
                 var warningParts = new List<string>();
-                if (!string.IsNullOrWhiteSpace(summary.WarningText))
+                if (!string.IsNullOrWhiteSpace(capabilityWarning))
                 {
-                    warningParts.Add(summary.WarningText switch
-                    {
-                        "No resolved capability profile" => Strings.SettingsViewModel_SourceNoResolvedProfile,
-                        "Capability detection did not resolve a model profile." => Strings.SettingsViewModel_WarnCapabilityNoProfile,
-                        "Capability profile matched by ProductId, but the entry is not user-verified yet." => Strings.SettingsViewModel_WarnCapabilityUnverified,
-                        "No exact model or family entry matched; default capabilities are in use." => Strings.SettingsViewModel_WarnNoModelMatch,
-                        _ => summary.WarningText
-                    });
+                    warningParts.Add(capabilityWarning);
                 }
-                if (!string.IsNullOrWhiteSpace(summary.KeyboardWarningText))
+                if (!string.IsNullOrWhiteSpace(keyboardWarning))
                 {
-                    warningParts.Add(summary.KeyboardWarningText switch
-                    {
-                        "Keyboard profile could not be matched from the current ProductId or WMI model." => Strings.SettingsViewModel_WarnKeyboardNoMatch,
-                        "Keyboard ProductId is shared across models; the profile was selected using the WMI model context." => Strings.SettingsViewModel_WarnKeyboardSharedProductId,
-                        "Keyboard profile matched by ProductId, but the entry is not user-verified yet." => Strings.SettingsViewModel_WarnKeyboardUnverified,
-                        "Keyboard profile was inferred from the model series instead of an exact ProductId match." => Strings.SettingsViewModel_WarnKeyboardSeriesInferred,
-                        "Keyboard profile was selected from a partial ProductId match and should be treated as provisional." => Strings.SettingsViewModel_WarnKeyboardPartialProvisional,
-                        "Keyboard profile came from a heuristic fallback path and should be validated before relying on it." => Strings.SettingsViewModel_WarnKeyboardHeuristic,
-                        _ => summary.KeyboardWarningText
-                    });
+                    warningParts.Add(keyboardWarning);
                 }
 
                 ModelIdentityWarningText = string.Join(Environment.NewLine, warningParts);
@@ -5100,7 +5057,7 @@ namespace OmenCore.ViewModels
         public class AutomationRuleEditorItem : ViewModelBase
         {
             private string _id = Guid.NewGuid().ToString();
-            private string _name = Strings.AutomationRule_DefaultName;
+            private string _name = "New automation rule";
             private bool _enabled = true;
             private int _priority = 50;
             private TriggerType _trigger = TriggerType.Time;

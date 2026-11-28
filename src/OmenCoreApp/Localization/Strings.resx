@@ -8495,9 +8495,6 @@
   <data name="FanDiag_RgbFailedFormat" xml:space="preserve">
     <value>Failed: {0}</value>
   </data>
-  <data name="AutomationRule_DefaultName" xml:space="preserve">
-    <value>New automation rule</value>
-  </data>
   <data name="Automation_ValidationReady" xml:space="preserve">
     <value>Ready</value>
   </data>
@@ -8968,9 +8965,6 @@
   </data>
   <data name="Settings_SecondsFormat" xml:space="preserve">
     <value>{0} s</value>
-  </data>
-  <data name="Settings_ScheduleNewRuleName" xml:space="preserve">
-    <value>New Rule</value>
   </data>
   <data name="Update_NowAvailableFormat" xml:space="preserve">
     <value>v{0} is now available</value>
@@ -11572,5 +11566,14 @@
   </data>
   <data name="Opt_ErrorUnknownItemFormat" xml:space="preserve">
     <value>Unknown optimization: {0}</value>
+  </data>
+  <data name="Settings_ModelSourceModelNamePattern" xml:space="preserve">
+    <value>Model-name pattern</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityAmbiguousProductId" xml:space="preserve">
+    <value>Capability profile used the WMI model name to disambiguate a shared ProductId.</value>
+  </data>
+  <data name="SettingsViewModel_WarnCapabilityModelNameInferred" xml:space="preserve">
+    <value>Capability profile was inferred from the WMI model name instead of an exact ProductId entry.</value>
   </data>
 </root>

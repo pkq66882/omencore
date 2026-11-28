@@ -328,7 +328,7 @@ namespace OmenCore.Views
             // of an impression. Views are cached per tab (see EnsureTabContentCreated), so a switch
             // normally reports "reused" - what it costs is a layout pass over an existing page.
             TabContentPresenter?.UpdateLayout();
-            App.Logging.Info($"[Nav] {GetTabHeaderText(selectedTab)}: " +
+            App.Logging.Info($"[Nav] {GetTabCanonicalName(selectedTab)}: " +
                              $"{(created ? "created" : "reused")}, {stopwatch.Elapsed.TotalMilliseconds:F0} ms to layout");
         }
 
@@ -503,7 +503,7 @@ namespace OmenCore.Views
             catch (Exception ex)
             {
                 var tabName = GetTabHeaderText(tab);
-                App.Logging.Error($"[MainWindow] Failed to create tab '{tabName}': {ex}");
+                App.Logging.Error($"[MainWindow] Failed to create tab '{GetTabCanonicalName(tab)}': {ex}");
                 tab.Content = BuildTabLoadFailureContent(tabName, ex);
                 _initializedTabs.Add(tab);
             }
@@ -532,6 +532,26 @@ namespace OmenCore.Views
 
             return tab.Name?.Replace("TabItem", string.Empty) ?? "Unknown";
         }
+
+        /// <summary>
+        /// Canonical (upstream English) tab name for file logs. The visible header follows the UI language, but the
+        /// exported log must stay parseable for upstream regardless of the display language.
+        /// </summary>
+        private static string GetTabCanonicalName(TabItem? tab) => tab?.Name switch
+        {
+            "GeneralTabItem" => "General",
+            "OmenTabItem" => "Custom",
+            "TuningTabItem" => "Tuning",
+            "DiagnosticsTabItem" => "Diagnostics",
+            "MonitoringTabItem" => "Monitoring",
+            "OptimizerTabItem" => "Optimizer",
+            "MemoryTabItem" => "Memory",
+            "BloatwareTabItem" => "Bloatware",
+            "RgbTabItem" => "RGB",
+            "SettingsTabItem" => "Settings",
+            "GamesTabItem" => "Games",
+            _ => tab?.Name?.Replace("TabItem", string.Empty) ?? "Unknown"
+        };
 
         private static T? FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
         {

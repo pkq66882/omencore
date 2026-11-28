@@ -3146,7 +3146,6 @@ namespace OmenCore.Localization
     public static string Automation_ErrTimeRange => Get(nameof(Automation_ErrTimeRange));
     public static string Automation_ErrWifiSsid => Get(nameof(Automation_ErrWifiSsid));
     public static string Automation_ValidationReady => Get(nameof(Automation_ValidationReady));
-    public static string AutomationRule_DefaultName => Get(nameof(AutomationRule_DefaultName));
     public static string FanDiag_ErrInconclusiveFormat => Get(nameof(FanDiag_ErrInconclusiveFormat));
     public static string FanDiag_ErrNoBackend => Get(nameof(FanDiag_ErrNoBackend));
     public static string FanDiag_ErrServiceFalse => Get(nameof(FanDiag_ErrServiceFalse));
@@ -3340,7 +3339,6 @@ namespace OmenCore.Localization
     public static string App_DesktopWarningTitle => Get(nameof(App_DesktopWarningTitle));
     public static string App_GenericCrashBodyFormat => Get(nameof(App_GenericCrashBodyFormat));
     public static string App_NvmlCrashBodyFormat => Get(nameof(App_NvmlCrashBodyFormat));
-    public static string Settings_ScheduleNewRuleName => Get(nameof(Settings_ScheduleNewRuleName));
     public static string Settings_SecondsFormat => Get(nameof(Settings_SecondsFormat));
     public static string Trigger_LidState => Get(nameof(Trigger_LidState));
     public static string TuningView_ValidateDriver => Get(nameof(TuningView_ValidateDriver));
@@ -3963,6 +3961,8 @@ namespace OmenCore.Localization
     public static string SettingsViewModel_SourceNoResolvedProfile => Get(nameof(SettingsViewModel_SourceNoResolvedProfile));
     public static string SettingsViewModel_SourcePartialProductId => Get(nameof(SettingsViewModel_SourcePartialProductId));
     public static string SettingsViewModel_SourceRuntimeFallback => Get(nameof(SettingsViewModel_SourceRuntimeFallback));
+    public static string SettingsViewModel_WarnCapabilityAmbiguousProductId => Get(nameof(SettingsViewModel_WarnCapabilityAmbiguousProductId));
+    public static string SettingsViewModel_WarnCapabilityModelNameInferred => Get(nameof(SettingsViewModel_WarnCapabilityModelNameInferred));
     public static string SettingsViewModel_WarnCapabilityNoProfile => Get(nameof(SettingsViewModel_WarnCapabilityNoProfile));
     public static string SettingsViewModel_WarnCapabilityUnverified => Get(nameof(SettingsViewModel_WarnCapabilityUnverified));
     public static string SettingsViewModel_WarnKeyboardHeuristic => Get(nameof(SettingsViewModel_WarnKeyboardHeuristic));
@@ -4063,6 +4063,7 @@ namespace OmenCore.Localization
     public static string Settings_ModelSourceAmbiguousProductId => Get(nameof(Settings_ModelSourceAmbiguousProductId));
     public static string Settings_ModelSourceDefaultFallback => Get(nameof(Settings_ModelSourceDefaultFallback));
     public static string Settings_ModelSourceExactProductId => Get(nameof(Settings_ModelSourceExactProductId));
+    public static string Settings_ModelSourceModelNamePattern => Get(nameof(Settings_ModelSourceModelNamePattern));
     public static string Settings_ModelSourceFamilyFallback => Get(nameof(Settings_ModelSourceFamilyFallback));
     public static string Settings_ModelSourceHeuristic => Get(nameof(Settings_ModelSourceHeuristic));
     public static string Settings_ModelSourceModelSeriesMatch => Get(nameof(Settings_ModelSourceModelSeriesMatch));

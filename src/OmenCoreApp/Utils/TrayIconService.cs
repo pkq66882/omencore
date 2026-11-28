@@ -979,7 +979,7 @@ namespace OmenCore.Utils
             
             // Notify the main window to update
             StayOnTopChanged?.Invoke(newValue);
-            App.Logging.Info($"Stay on Top: {(newValue ? Strings.TrayIcon_Enabled : "Disabled")}");
+            App.Logging.Info($"Stay on Top: {(newValue ? "Enabled" : "Disabled")}");
         }
 
         public event Action<bool>? StayOnTopChanged;
